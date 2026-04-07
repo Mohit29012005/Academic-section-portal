@@ -1,0 +1,41 @@
+ADMIN DASHBOARD SUMMARY OF FEATURES (POST-UPDATE)
+=================================================
+
+1. Routing & Architecture
+-------------------------
+- Base: `/admin/dashboard`
+- Re-routed completely via `AdminLayout` with Sidebar, skipping old settings.
+- Legacy "Global Settings" (RBAC & Backup) completely removed.
+
+2. Student Management Module
+----------------------------
+- "Add Student": Now demands deep metrics (DOB, Guardian, Target Degree, Address).
+- "Manage Student": Displays expanded grid mapping and features mock-functional logic to "Suspend/Activate Account".
+
+3. Faculty HR Module
+--------------------
+- "Onboard Faculty": Form requires Administrative Role, Office Allocs, Verified Credentials, and Experience blocks.
+- "Manage Faculty": Renders a detailed identity matrix. Features mock functionality to "Log Temporary Leave" and tracking.
+
+4. Curriculum Matrix Module
+---------------------------
+- "Define Program": Dedicated modal capturing taxonomic rules (Duration, Credits, Typology).
+- "Manage Track": Expanded display rendering total graduation credits, with mock features to "Deactivate Root Track" and "View Syllabus Tree".
+
+5. Academic Cycle Module (New)
+------------------------------
+- `/admin/academic-cycle`
+- Manage Term Definitions & Term Activation logic.
+- Manage Academic Holidays / Suspensions.
+
+6. System Broadcasts (New)
+--------------------------
+- `/admin/notifications`
+- Targeted payload dispatching (Students vs Dept)
+- Delivery Channels (Push, DB Alert) and Priority toggles.
+- Includes a rolling grid log of recently fired dispatches.
+
+General Features
+----------------
+- Built-in Mock State Management (Arrays & State Hooks simulate DB actions via Dummy logic and Alerts). This perfectly bridges the gap until the Node.js backend connects.
+- UI locked dynamically to the AMPICS Dark/Gold aesthetic utilizing custom variable tokens (`--gu-gold`).

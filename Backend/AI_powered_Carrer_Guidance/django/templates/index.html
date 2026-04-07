@@ -1,0 +1,638 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Guidance</title>
+  <meta name="description"
+    content="AI-powered career copilot — analyze fit, get career recommendations, skill quizzes, learning paths, resume builder & internship suggestions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'styles.css' %}" />
+</head>
+
+<body>
+
+  <!-- Animated background -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#" onclick="showTab('fit')">
+        <span class="brand-icon">✦</span>
+        <span class="brand-name">Career Guidance</span>
+      </a>
+      <div class="nav-tabs">
+        <button class="nav-tab active" data-tab="fit" onclick="showTab('fit')">⚡ Fit Analyzer</button>
+        <button class="nav-tab" data-tab="career" onclick="showTab('career')">🎯 Career Paths</button>
+        <button class="nav-tab" data-tab="quiz" onclick="showTab('quiz')">🧠 Skill Quiz</button>
+        <button class="nav-tab" data-tab="learning" onclick="showTab('learning')">📚 Learning Hub</button>
+        <button class="nav-tab" data-tab="resume" onclick="showTab('resume')">📝 Resume Builder</button>
+        <button class="nav-tab" data-tab="internship" onclick="showTab('internship')">💼 Internships</button>
+        <button class="nav-tab" data-tab="activity" onclick="showTab('activity')">📊 My Activity</button>
+      </div>
+      <div class="nav-badge">Beta</div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════
+       TAB: FIT ANALYZER
+  ════════════════════════════════════════════════════════ -->
+  <section class="tab-section active" id="tab-fit">
+    <div class="hero">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        AI-Powered Resume Intelligence
+      </div>
+      <h1 class="hero-title">Know Your <span class="gradient-text">Fit Score</span><br />Before You Apply</h1>
+      <p class="hero-sub">Drop your resume &amp; job description — our ML pipeline scores your match, surfaces skill
+        gaps, and generates a personalized learning path.</p>
+
+      <div class="input-grid">
+        <div class="input-card">
+          <div class="card-header">
+            <div class="card-icon resume-icon">📄</div>
+            <div>
+              <div class="card-title">Your Resume</div>
+              <div class="card-hint">PDF, DOCX, TXT or plain text</div>
+            </div>
+          </div>
+          <div class="drop-zone" id="resumeDropZone">
+            <input type="file" id="resumeFile" accept=".pdf,.doc,.docx,.txt" />
+            <div class="drop-inner">
+              <div class="drop-icon">⬆</div>
+              <div class="drop-text">Drag &amp; drop or <label for="resumeFile" class="drop-link">browse file</label>
+              </div>
+              <div class="drop-sub" id="resumeFileName">No file selected</div>
+            </div>
+          </div>
+          <div class="divider-row"><span class="divider-line"></span><span class="divider-label">or paste
+              text</span><span class="divider-line"></span></div>
+          <textarea id="resumeText" class="text-input" placeholder="Paste your resume text here…" rows="5"></textarea>
+        </div>
+
+        <div class="input-card">
+          <div class="card-header">
+            <div class="card-icon job-icon">💼</div>
+            <div>
+              <div class="card-title">Job Description</div>
+              <div class="card-hint">PDF, DOCX, TXT or plain text</div>
+            </div>
+          </div>
+          <div class="drop-zone" id="jobDropZone">
+            <input type="file" id="jobFile" accept=".pdf,.doc,.docx,.txt" />
+            <div class="drop-inner">
+              <div class="drop-icon">⬆</div>
+              <div class="drop-text">Drag &amp; drop or <label for="jobFile" class="drop-link">browse file</label></div>
+              <div class="drop-sub" id="jobFileName">No file selected</div>
+            </div>
+          </div>
+          <div class="divider-row"><span class="divider-line"></span><span class="divider-label">or paste
+              text</span><span class="divider-line"></span></div>
+          <textarea id="jobText" class="text-input" placeholder="Paste the job description here…" rows="5"></textarea>
+        </div>
+      </div>
+
+      <div class="cta-area">
+        <button class="primary-btn" id="analyzeBtn">
+          <span class="btn-icon">⚡</span>
+          <span class="btn-text">Analyze My Fit</span>
+          <span class="btn-glow"></span>
+        </button>
+        <div class="status-bar" id="fitStatus"></div>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-section" id="fitResults">
+      <div class="score-banner" id="scoreBanner">
+        <div class="score-side">
+          <div class="score-label-top">Match Score</div>
+          <div class="score-ring-wrap">
+            <svg class="score-ring" viewBox="0 0 120 120">
+              <defs>
+                <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#52555b" />
+                  <stop offset="100%" stop-color="#e8eaed" />
+                </linearGradient>
+              </defs>
+              <circle class="ring-bg" cx="60" cy="60" r="52" />
+              <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="52" stroke-dasharray="326.7"
+                stroke-dashoffset="326.7" />
+            </svg>
+            <div class="score-center">
+              <div class="score-number" id="scoreNumber">0%</div>
+            </div>
+          </div>
+        </div>
+        <div class="score-meta">
+          <div class="fit-verdict" id="fitVerdict">Analyzing…</div>
+          <div class="fit-confidence" id="fitConfidence"></div>
+          <div class="fit-model" id="fitModel"></div>
+        </div>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-card-header"><span class="result-icon">✅</span>
+            <h3 class="result-title">Matched Skills</h3>
+          </div>
+          <div class="chips-area" id="matchedChips"></div>
+        </div>
+        <div class="result-card gap-card">
+          <div class="result-card-header"><span class="result-icon">⚠️</span>
+            <h3 class="result-title">Skill Gaps</h3>
+          </div>
+          <div class="chips-area" id="missingChips"></div>
+        </div>
+        <div class="result-card courses-card">
+          <div class="result-card-header"><span class="result-icon">🎓</span>
+            <h3 class="result-title">Smart Learning Path</h3><span class="result-badge">AI Curated</span>
+          </div>
+          <div class="courses-list" id="fitCoursesList"></div>
+        </div>
+        <div class="result-card preview-card">
+          <div class="result-card-header"><span class="result-icon">🔍</span>
+            <h3 class="result-title">Document Preview</h3>
+          </div>
+          <div class="preview-tabs">
+            <button class="tab-btn active" id="tabResume" onclick="switchPreviewTab('resume')">Resume</button>
+            <button class="tab-btn" id="tabJob" onclick="switchPreviewTab('job')">Job Description</button>
+          </div>
+          <pre class="preview-box" id="resumePreview"></pre>
+          <pre class="preview-box hidden" id="jobPreview"></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       TAB: CAREER RECOMMENDATION
+  ════════════════════════════════════════════════════════ -->
+  <section class="tab-section" id="tab-career">
+    <div class="hero hero-sm">
+      <div class="hero-eyebrow"><span class="eyebrow-dot"></span>AI Career Navigator</div>
+      <h1 class="hero-title">Find Your <span class="gradient-text">Dream Career</span></h1>
+      <p class="hero-sub">Select your areas of interest and let our AI map the best career paths, salary projections
+        &amp; learning roadmaps for you.</p>
+
+      <div class="career-form">
+        <div class="form-section-label">Choose your interests <span class="label-hint">(select one or more)</span></div>
+        <div class="interest-grid" id="interestGrid">
+          <label class="interest-chip"><input type="checkbox" value="web_development" /><span>🌐 Web
+              Development</span></label>
+          <label class="interest-chip"><input type="checkbox" value="ai_ml" /><span>🤖 AI / Machine
+              Learning</span></label>
+          <label class="interest-chip"><input type="checkbox" value="data_science" /><span>📊 Data
+              Science</span></label>
+          <label class="interest-chip"><input type="checkbox" value="cybersecurity" /><span>🛡️
+              Cybersecurity</span></label>
+          <label class="interest-chip"><input type="checkbox" value="mobile_dev" /><span>📱 Mobile Dev</span></label>
+          <label class="interest-chip"><input type="checkbox" value="devops_cloud" /><span>☁️ DevOps /
+              Cloud</span></label>
+          <label class="interest-chip"><input type="checkbox" value="ui_ux" /><span>🎨 UI / UX Design</span></label>
+          <label class="interest-chip"><input type="checkbox" value="blockchain" /><span>⛓️ Blockchain /
+              Web3</span></label>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Current Skills <span class="label-hint">(optional)</span></label>
+            <input type="text" id="careerSkills" class="form-input" placeholder="e.g. Python, React, SQL…" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Experience Level</label>
+            <select id="careerExp" class="form-select">
+              <option value="fresher">🎓 Fresher / Student</option>
+              <option value="junior">💼 Junior (0–2 yrs)</option>
+              <option value="mid">🚀 Mid-level (2–5 yrs)</option>
+              <option value="senior">⭐ Senior (5+ yrs)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cta-area" style="margin-top:24px">
+          <button class="primary-btn" id="careerBtn" onclick="getCareerRecommendations()">
+            <span class="btn-icon">🎯</span>
+            <span class="btn-text">Get My Recommendations</span>
+            <span class="btn-glow"></span>
+          </button>
+          <div class="status-bar" id="careerStatus"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-section" id="careerResults">
+      <div class="section-heading">Your Personalised Career Paths</div>
+      <div class="career-cards" id="careerCards"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       TAB: SKILL QUIZ
+  ════════════════════════════════════════════════════════ -->
+  <section class="tab-section" id="tab-quiz">
+    <div class="hero hero-sm">
+      <div class="hero-eyebrow"><span class="eyebrow-dot"></span>AI Skill Assessment</div>
+      <h1 class="hero-title">Test Your <span class="gradient-text">Skills</span></h1>
+      <p class="hero-sub">Select the skills you want to be quizzed on. Our AI generates a custom MCQ quiz and scores
+        your level instantly.</p>
+
+      <div class="career-form">
+        <div class="form-section-label">Select skills to be tested</div>
+        <div class="interest-grid" id="quizSkillGrid">
+          <label class="interest-chip"><input type="checkbox" value="python" /><span>🐍 Python</span></label>
+          <label class="interest-chip"><input type="checkbox" value="javascript" /><span>📜 JavaScript</span></label>
+          <label class="interest-chip"><input type="checkbox" value="react" /><span>⚛️ React</span></label>
+          <label class="interest-chip"><input type="checkbox" value="machine learning" /><span>🤖 Machine
+              Learning</span></label>
+          <label class="interest-chip"><input type="checkbox" value="sql" /><span>🗄️ SQL</span></label>
+          <label class="interest-chip"><input type="checkbox" value="docker" /><span>🐳 Docker</span></label>
+          <label class="interest-chip"><input type="checkbox" value="aws" /><span>☁️ AWS</span></label>
+          <label class="interest-chip"><input type="checkbox" value="data science" /><span>📊 Data
+              Science</span></label>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Number of Questions</label>
+            <select id="quizCount" class="form-select">
+              <option value="5">5 Questions (Quick)</option>
+              <option value="10" selected>10 Questions (Standard)</option>
+              <option value="15">15 Questions (Thorough)</option>
+              <option value="20">20 Questions (Deep Dive)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cta-area" style="margin-top:24px">
+          <button class="primary-btn" id="quizBtn" onclick="startQuiz()">
+            <span class="btn-icon">🧠</span>
+            <span class="btn-text">Generate Quiz</span>
+            <span class="btn-glow"></span>
+          </button>
+          <div class="status-bar" id="quizStatus"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-section" id="quizSection">
+      <!-- Quiz questions rendered here -->
+      <div id="quizContainer"></div>
+      <div id="quizSubmitArea" class="cta-area" style="display:none;margin-top:28px">
+        <button class="primary-btn" onclick="submitQuiz()">
+          <span class="btn-icon">📊</span>
+          <span class="btn-text">Submit &amp; See Results</span>
+          <span class="btn-glow"></span>
+        </button>
+      </div>
+      <div id="quizResults" class="quiz-results"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       TAB: LEARNING HUB
+  ════════════════════════════════════════════════════════ -->
+  <section class="tab-section" id="tab-learning">
+    <div class="hero hero-sm">
+      <div class="hero-eyebrow"><span class="eyebrow-dot"></span>AI Learning Engine</div>
+      <h1 class="hero-title">Your <span class="gradient-text">Learning Hub</span></h1>
+      <p class="hero-sub">Get AI-curated courses with direct links, hand-picked based on your interests and existing
+        skills.</p>
+
+      <div class="career-form">
+        <div class="form-section-label">Select topics you want to learn</div>
+        <div class="interest-grid">
+          <label class="interest-chip"><input type="checkbox" value="python" /><span>🐍 Python</span></label>
+          <label class="interest-chip"><input type="checkbox" value="javascript" /><span>📜 JavaScript</span></label>
+          <label class="interest-chip"><input type="checkbox" value="react" /><span>⚛️ React</span></label>
+          <label class="interest-chip"><input type="checkbox" value="machine learning" /><span>🤖 Machine
+              Learning</span></label>
+          <label class="interest-chip"><input type="checkbox" value="data science" /><span>📊 Data
+              Science</span></label>
+          <label class="interest-chip"><input type="checkbox" value="deep learning" /><span>🧠 Deep
+              Learning</span></label>
+          <label class="interest-chip"><input type="checkbox" value="docker" /><span>🐳 Docker</span></label>
+          <label class="interest-chip"><input type="checkbox" value="kubernetes" /><span>⚙️ Kubernetes</span></label>
+          <label class="interest-chip"><input type="checkbox" value="aws" /><span>☁️ AWS</span></label>
+          <label class="interest-chip"><input type="checkbox" value="sql" /><span>🗄️ SQL</span></label>
+          <label class="interest-chip"><input type="checkbox" value="typescript" /><span>📘 TypeScript</span></label>
+          <label class="interest-chip"><input type="checkbox" value="langchain" /><span>🔗 LangChain /
+              LLMs</span></label>
+          <label class="interest-chip"><input type="checkbox" value="system design" /><span>🏗️ System
+              Design</span></label>
+          <label class="interest-chip"><input type="checkbox" value="git" /><span>🌿 Git</span></label>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group" style="flex:2">
+            <label class="form-label">Paste resume for personalised suggestions <span
+                class="label-hint">(optional)</span></label>
+            <textarea id="learningResumeText" class="text-input" rows="3"
+              placeholder="Paste your resume to get skill-tailored resources…"></textarea>
+          </div>
+          <div class="form-group" style="flex:0 0 auto;align-self:flex-end">
+            <label class="form-label" style="display:flex;align-items:center;gap:8px;cursor:pointer">
+              <input type="checkbox" id="freeOnly" style="width:16px;height:16px;accent-color:var(--c-primary)" />
+              Free resources only
+            </label>
+          </div>
+        </div>
+
+        <div class="cta-area" style="margin-top:24px">
+          <button class="primary-btn" onclick="getLearningResources()">
+            <span class="btn-icon">📚</span>
+            <span class="btn-text">Get My Learning Path</span>
+            <span class="btn-glow"></span>
+          </button>
+          <div class="status-bar" id="learningStatus"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-section" id="learningResults">
+      <div class="section-heading">Curated Resources</div>
+      <div id="learningCards" class="learning-grid"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       TAB: RESUME BUILDER
+  ════════════════════════════════════════════════════════ -->
+  <section class="tab-section" id="tab-resume">
+    <div class="hero hero-sm">
+      <div class="hero-eyebrow"><span class="eyebrow-dot"></span>AI Resume &amp; Portfolio Builder</div>
+      <h1 class="hero-title">Build Your <span class="gradient-text">Resume</span></h1>
+      <p class="hero-sub">Fill in the form — we generate a professional, ATS-ready resume you can copy or download in
+        seconds.</p>
+    </div>
+
+    <div class="resume-builder-layout">
+      <!-- Form -->
+      <div class="resume-form-panel">
+
+        <!-- Personal Info -->
+        <div class="resume-section-card">
+          <div class="resume-section-title">👤 Personal Information</div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Full Name *</label><input type="text" id="rName"
+                class="form-input" placeholder="" /></div>
+            <div class="form-group"><label class="form-label">Email *</label><input type="email" id="rEmail"
+                class="form-input" placeholder="" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Phone</label><input type="text" id="rPhone"
+                class="form-input" placeholder="" /></div>
+            <div class="form-group"><label class="form-label">Location</label><input type="text" id="rLocation"
+                class="form-input" placeholder="" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">LinkedIn URL</label><input type="url" id="rLinkedin"
+                class="form-input" placeholder="" /></div>
+            <div class="form-group"><label class="form-label">GitHub URL</label><input type="url" id="rGithub"
+                class="form-input" placeholder="" /></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Professional Summary</label>
+            <textarea id="rSummary" class="text-input" rows="3"
+              placeholder=""></textarea>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="resume-section-card">
+          <div class="resume-section-title">⚡ Skills</div>
+          <div class="form-group">
+            <label class="form-label">Skills <span class="label-hint">(comma separated)</span></label>
+            <input type="text" id="rSkills" class="form-input" placeholder="" />
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="resume-section-card">
+          <div class="resume-section-title">💼 Work Experience</div>
+          <div id="expList"></div>
+          <button class="add-btn" onclick="addExp()">+ Add Experience</button>
+        </div>
+
+        <!-- Education -->
+        <div class="resume-section-card">
+          <div class="resume-section-title">🎓 Education</div>
+          <div id="eduList"></div>
+          <button class="add-btn" onclick="addEdu()">+ Add Education</button>
+        </div>
+
+        <!-- Projects -->
+        <div class="resume-section-card">
+          <div class="resume-section-title">🚀 Projects</div>
+          <div id="projList"></div>
+          <button class="add-btn" onclick="addProject()">+ Add Project</button>
+        </div>
+
+        <div class="cta-area" style="margin-top:24px">
+          <button class="primary-btn" onclick="buildResume()">
+            <span class="btn-icon">✨</span>
+            <span class="btn-text">Generate Resume</span>
+            <span class="btn-glow"></span>
+          </button>
+          <div class="status-bar" id="resumeStatus"></div>
+        </div>
+      </div>
+
+      <!-- Preview -->
+      <div class="resume-preview-panel" id="resumePreviewPanel">
+        <div class="preview-panel-header">
+          <span>Live Preview</span>
+          <div class="header-actions">
+            <button class="copy-btn" onclick="copyResume()" id="copyResumeBtn">📋 Copy text</button>
+            <button class="download-btn" onclick="downloadResumeHTML()" id="downloadResumeBtn">📥 Download HTML</button>
+          </div>
+        </div>
+        <div class="resume-output" id="resumeOutput">
+          <div style="color:var(--c-muted); text-align:center; padding: 40px; font-style:italic">Your beautiful resume
+            preview will appear here…</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       TAB: INTERNSHIP SUGGESTIONS
+  ════════════════════════════════════════════════════════ -->
+  <section class="tab-section" id="tab-internship">
+    <div class="hero hero-sm">
+      <div class="hero-eyebrow"><span class="eyebrow-dot"></span>AI Internship Finder</div>
+      <h1 class="hero-title">Find Your <span class="gradient-text">Internship</span></h1>
+      <p class="hero-sub">Tell us your preferences — location, skills, stipend range — and we'll surface the
+        best-matched internship opportunities for you.</p>
+
+      <div class="career-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Preferred Location</label>
+            <select id="internLocation" class="form-select">
+              <option value="any">🌍 Any / Anywhere</option>
+              <option value="bengaluru">Bengaluru</option>
+              <option value="hyderabad">Hyderabad</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="pune">Pune</option>
+              <option value="delhi">Delhi / NCR</option>
+              <option value="noida">Noida</option>
+              <option value="gurugram">Gurugram</option>
+              <option value="chennai">Chennai</option>
+              <option value="kolkata">Kolkata</option>
+              <option value="remote">🏠 Remote Only</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Domain</label>
+            <select id="internDomain" class="form-select">
+              <option value="">All Domains</option>
+              <option value="sde">Software Engineering</option>
+              <option value="ml">AI / ML</option>
+              <option value="data">Data Science</option>
+              <option value="devops">DevOps / Cloud</option>
+              <option value="mobile">Mobile Development</option>
+              <option value="design">UI / UX Design</option>
+              <option value="security">Cybersecurity</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Min Stipend (₹/month)</label>
+            <input type="number" id="internMinStipend" class="form-input" placeholder="0" value="0" min="0"
+              step="5000" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Max Stipend (₹/month)</label>
+            <input type="number" id="internMaxStipend" class="form-input" placeholder="100000" value="100000" min="0"
+              step="5000" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Your Skills <span class="label-hint">(comma separated — for better
+              matching)</span></label>
+          <input type="text" id="internSkills" class="form-input" placeholder="Python, React, ML, Docker…" />
+        </div>
+
+        <!-- Stipend range slider visual -->
+        <div class="stipend-bar-area">
+          <div class="stipend-labels">
+            <span>₹0</span><span>₹25K</span><span>₹50K</span><span>₹75K</span><span>₹1L+</span>
+          </div>
+          <div class="stipend-track">
+            <div class="stipend-fill" id="stipendFill"></div>
+          </div>
+        </div>
+
+        <div class="cta-area" style="margin-top:24px">
+          <button class="primary-btn" onclick="findInternships()">
+            <span class="btn-icon">💼</span>
+            <span class="btn-text">Find Internships</span>
+            <span class="btn-glow"></span>
+          </button>
+          <div class="status-bar" id="internStatus"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-section" id="internResults">
+      <div class="section-heading" id="internHeading">Available Opportunities</div>
+      <div class="intern-grid" id="internCards"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       TAB: ACTIVITY DASHBOARD
+  ════════════════════════════════════════════════════════ -->
+  <section class="tab-section" id="tab-activity">
+    <div class="hero hero-sm">
+      <div class="hero-eyebrow"><span class="eyebrow-dot"></span>Session Intelligence</div>
+      <h1 class="hero-title">Your <span class="gradient-text">Activity</span> Dashboard</h1>
+      <p class="hero-sub">Everything you've done this session — stored locally in our SQLite database and visualised
+        here in real time.</p>
+    </div>
+
+    <div class="activity-wrap">
+      <!-- Platform Stats Row -->
+      <div class="act-section-label">🌐 Platform Overview</div>
+      <div class="stats-grid" id="platformStats">
+        <div class="stat-card">
+          <div class="stat-val" id="st-sessions">—</div>
+          <div class="stat-label">Total Sessions</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="st-analyses">—</div>
+          <div class="stat-label">Fit Analyses</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="st-avg-score">—</div>
+          <div class="stat-label">Avg Match Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="st-quizzes">—</div>
+          <div class="stat-label">Quizzes Taken</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="st-avg-quiz">—</div>
+          <div class="stat-label">Avg Quiz Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="st-resumes">—</div>
+          <div class="stat-label">Resumes Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="st-careers">—</div>
+          <div class="stat-label">Career Searches</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="st-ai">—</div>
+          <div class="stat-label">AI Responses</div>
+        </div>
+      </div>
+
+      <!-- Refresh + Session ID -->
+      <div class="act-controls">
+        <div class="session-id-pill" id="sessionIdPill"></div>
+        <button class="act-refresh-btn" onclick="loadActivity()">
+          <span id="actRefreshIcon">↻</span> Refresh
+        </button>
+      </div>
+
+      <!-- History Timeline -->
+      <div class="act-section-label">🕑 My Session History</div>
+      <div id="activityTimeline" class="activity-timeline">
+        <div class="act-empty">Loading your activity…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">Evolvex<span>AI</span></span>
+      <span class="footer-copy">ML-powered talent intelligence · Built for the future of work</span>
+    </div>
+  </footer>
+
+  <script src="{% static 'app.js' %}"></script>
+</body>
+
+</html>

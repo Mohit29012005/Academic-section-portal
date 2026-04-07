@@ -1,0 +1,7 @@
+from django.apps import AppConfig
+
+
+class AiCareerConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'ai_career'
+    verbose_name = 'AI Career Guidance'

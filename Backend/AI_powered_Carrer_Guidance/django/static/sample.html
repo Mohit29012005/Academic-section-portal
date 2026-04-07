@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Guidance</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #6C63FF;
+    --accent-light: #EEF0FF;
+    --accent-dark: #4A43D4;
+    --green: #00C98D;
+    --green-light: #E6FAF4;
+    --orange: #FF7043;
+    --orange-light: #FFF0EB;
+    --yellow: #FFB703;
+    --bg: #0F0F1A;
+    --bg2: #161626;
+    --bg3: #1E1E35;
+    --card: #1C1C30;
+    --card2: #222240;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --text: #F0F0FF;
+    --muted: #8888BB;
+    --muted2: #5555AA;
+    --sidebar-w: 240px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    width: var(--sidebar-w);
+    background: var(--bg2);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    z-index: 100;
+    overflow-y: auto;
+  }
+
+  .logo-area {
+    padding: 24px 22px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--text);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-icon {
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, var(--accent), var(--green));
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+
+  .logo-sub {
+    font-size: 10px;
+    color: var(--muted);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .nav-group {
+    padding: 16px 14px 8px;
+  }
+
+  .nav-group-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--muted2);
+    text-transform: uppercase;
+    padding: 0 8px;
+    margin-bottom: 6px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.18s;
+    margin-bottom: 2px;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .nav-item:hover {
+    background: var(--bg3);
+    color: var(--text);
+  }
+
+  .nav-item.active {
+    background: rgba(108, 99, 255, 0.18);
+    color: #a9a3ff;
+  }
+
+  .nav-item.active .ni {
+    color: var(--accent);
+  }
+
+  .ni {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .nav-badge {
+    margin-left: auto;
+    background: var(--accent);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 20px;
+  }
+
+  .sidebar-footer {
+    margin-top: auto;
+    padding: 16px 14px;
+    border-top: 1px solid var(--border);
+  }
+
+  .user-tile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--bg3);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .user-tile:hover { background: var(--card2); }
+
+  .avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #9B5DE5);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; color: #fff; flex-shrink: 0;
+  }
+
+  .user-name { font-size: 12px; font-weight: 600; }
+  .user-role { font-size: 10px; color: var(--muted); }
+
+  /* ===== MAIN ===== */
+  .main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100vh;
+  }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; top: 0; z-index: 50;
+  }
+
+  .topbar-left h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .topbar-left p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 12px;
+    color: var(--muted);
+    width: 200px;
+    cursor: text;
+  }
+
+  .search-box input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-size: 12px;
+    font-family: 'Manrope', sans-serif;
+    width: 100%;
+  }
+
+  .icon-btn {
+    width: 36px; height: 36px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.15s;
+    color: var(--muted);
+  }
+
+  .icon-btn:hover { background: var(--card2); color: var(--text); }
+
+  .primary-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    cursor: pointer;
+    transition: all 0.18s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .primary-btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+  /* ===== CONTENT ===== */
+  .content {
+    padding: 24px 28px;
+    flex: 1;
+  }
+
+  /* ===== STATS GRID ===== */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+
+  .stat-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    opacity: 0.06;
+    background: currentColor;
+    transform: translate(30%, -30%);
+  }
+
+  .stat-icon {
+    width: 34px; height: 34px;
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .stat-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-sub {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .stat-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 6px;
+  }
+
+  /* ===== MAIN GRID ===== */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .panel-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .panel-link {
+    font-size: 11px;
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.15s;
+  }
+
+  .panel-link:hover { opacity: 1; }
+
+  /* ===== CAREER CARDS ===== */
+  .career-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .career-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    cursor: pointer;
+    transition: all 0.18s;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .career-card:hover {
+    border-color: rgba(108, 99, 255, 0.4);
+    background: rgba(108, 99, 255, 0.06);
+    transform: translateX(3px);
+  }
+
+  .career-emoji {
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .career-info { flex: 1; }
+  .career-name { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+  .career-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
+
+  .ctag {
+    font-size: 9px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: var(--bg3);
+    color: var(--muted);
+    letter-spacing: 0.3px;
+  }
+
+  .match-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .match-high { background: rgba(0,201,141,0.15); color: var(--green); }
+  .match-med { background: rgba(108,99,255,0.15); color: #a9a3ff; }
+  .match-low { background: rgba(255,112,67,0.15); color: var(--orange); }
+
+  /* ===== SKILL PANEL ===== */
+  .skill-header-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .ring-wrap { position: relative; width: 72px; height: 72px; flex-shrink: 0; }
+
+  .ring-wrap svg { transform: rotate(-90deg); }
+
+  .ring-pct {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .skill-header-info { }
+  .skill-readiness { font-size: 18px; font-weight: 700; font-family: 'Syne', sans-serif; }
+  .skill-readiness-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .skill-vs { font-size: 10px; color: var(--green); margin-top: 3px; font-weight: 600; }
+
+  .skill-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .skill-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .skill-lbl {
+    font-size: 11px;
+    color: var(--muted);
+    width: 120px;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+
+  .skill-bar-wrap {
+    flex: 1;
+    height: 5px;
+    background: var(--bg3);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .skill-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1.2s cubic-bezier(.4,0,.2,1);
+  }
+
+  .skill-pct {
+    font-size: 11px;
+    font-weight: 700;
+    width: 30px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* ===== BOTTOM GRID ===== */
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  /* ===== JOB CARDS ===== */
+  .job-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .job-card {
+    padding: 13px 14px;
+    border-radius: 11px;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+
+  .job-card:hover {
+    border-color: rgba(0,201,141,0.3);
+    background: rgba(0,201,141,0.04);
+  }
+
+  .job-meta { font-size: 10px; color: var(--muted); margin-bottom: 3px; display: flex; align-items: center; gap: 6px; }
+  .job-title { font-size: 12px; font-weight: 700; margin-bottom: 6px; }
+  .job-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+
+  .jtag {
+    font-size: 9px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 5px;
+  }
+
+  /* ===== QUIZ ===== */
+  .quiz-q { font-size: 12px; font-weight: 600; margin-bottom: 10px; color: var(--text); line-height: 1.5; }
+
+  .quiz-progress {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .qp-dot {
+    height: 3px;
+    flex: 1;
+    border-radius: 2px;
+    background: var(--bg3);
+    transition: background 0.3s;
+  }
+
+  .qp-dot.done { background: var(--accent); }
+  .qp-dot.active { background: rgba(108,99,255,0.5); }
+
+  .quiz-opts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .qopt {
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 9px 10px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.18s;
+    background: var(--bg2);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .qopt:hover { border-color: var(--border2); color: var(--text); background: var(--bg3); }
+  .qopt.selected { border-color: var(--accent); background: rgba(108,99,255,0.15); color: #c0bcff; }
+
+  .quiz-submit {
+    width: 100%;
+    padding: 10px;
+    border-radius: 9px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    cursor: pointer;
+    transition: all 0.18s;
+    letter-spacing: 0.3px;
+  }
+
+  .quiz-submit:hover { background: var(--accent-dark); }
+
+  /* ===== CHATBOT ===== */
+  .chat-body {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+  }
+
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg3) transparent;
+  }
+
+  .chat-messages::-webkit-scrollbar { width: 4px; }
+  .chat-messages::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 4px; }
+
+  .cmsg {
+    padding: 8px 11px;
+    border-radius: 10px;
+    font-size: 11px;
+    line-height: 1.6;
+    max-width: 88%;
+    animation: msgIn 0.2s ease;
+  }
+
+  @keyframes msgIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .cmsg.ai { background: var(--bg3); color: var(--text); align-self: flex-start; }
+  .cmsg.user { background: rgba(108,99,255,0.25); color: #c0bcff; align-self: flex-end; border: 1px solid rgba(108,99,255,0.3); }
+
+  .typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 10px 14px;
+    align-self: flex-start;
+    background: var(--bg3);
+    border-radius: 10px;
+  }
+
+  .typing-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--muted);
+    animation: typingBounce 1.2s ease-in-out infinite;
+  }
+
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes typingBounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-5px); opacity: 1; }
+  }
+
+  .chat-input-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .chat-input {
+    flex: 1;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 8px 12px;
+    font-size: 11px;
+    font-family: 'Manrope', sans-serif;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.18s;
+  }
+
+  .chat-input:focus { border-color: rgba(108,99,255,0.5); }
+  .chat-input::placeholder { color: var(--muted2); }
+
+  .chat-send {
+    width: 34px; height: 34px;
+    background: var(--accent);
+    border: none;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.18s, transform 0.15s;
+    flex-shrink: 0;
+  }
+
+  .chat-send:hover { background: var(--accent-dark); transform: scale(1.05); }
+
+  /* ===== LEARNING RESOURCES SECTION ===== */
+  .resources-section { margin-top: 16px; }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .resource-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.18s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .resource-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, currentColor, transparent);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .resource-card:hover { transform: translateY(-2px); border-color: var(--border2); }
+
+  .resource-type {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+
+  .resource-title { font-size: 12px; font-weight: 700; margin-bottom: 4px; line-height: 1.4; }
+  .resource-meta { font-size: 10px; color: var(--muted); }
+
+  .resource-duration {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  /* ===== RESUME BUILDER STRIP ===== */
+  .resume-strip {
+    background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,201,141,0.1));
+    border: 1px solid rgba(108,99,255,0.25);
+    border-radius: 16px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 16px;
+  }
+
+  .resume-strip-icon { font-size: 32px; flex-shrink: 0; }
+  .resume-strip-info { flex: 1; }
+  .resume-strip-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+  .resume-strip-sub { font-size: 12px; color: var(--muted); }
+  .resume-strip-actions { display: flex; gap: 8px; flex-shrink: 0; }
+
+  .outline-btn {
+    background: none;
+    border: 1px solid var(--border2);
+    border-radius: 9px;
+    padding: 9px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+
+  .outline-btn:hover { background: var(--bg3); }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .stat-card { animation: fadeUp 0.4s ease both; }
+  .stat-card:nth-child(1) { animation-delay: 0.05s; }
+  .stat-card:nth-child(2) { animation-delay: 0.1s; }
+  .stat-card:nth-child(3) { animation-delay: 0.15s; }
+  .stat-card:nth-child(4) { animation-delay: 0.2s; }
+
+  .panel { animation: fadeUp 0.4s ease 0.25s both; }
+
+  /* ===== TABS ===== */
+  .tab-row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    background: var(--bg3);
+    padding: 4px;
+    border-radius: 10px;
+  }
+
+  .tab-btn {
+    flex: 1;
+    padding: 7px 12px;
+    border-radius: 7px;
+    border: none;
+    background: none;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+
+  .tab-btn.active {
+    background: var(--card2);
+    color: var(--text);
+  }
+
+  /* ===== MISC ===== */
+  .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+  .dot-green { background: var(--green); }
+  .dot-orange { background: var(--orange); }
+  .dot-purple { background: var(--accent); }
+
+  .divider { height: 1px; background: var(--border); margin: 14px 0; }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 6px; }
+
+  .section-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-warn {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 900px) {
+    .mobile-warn { display: block; }
+    .sidebar, .main { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mobile-warn">Please view on a wider screen for the best experience.</div>
+
+<!-- ===== SIDEBAR ===== -->
+<nav class="sidebar">
+  <div class="logo-area">
+    <div class="logo">
+      <div class="logo-icon">🎯</div>
+      <div>
+        CareerAI
+        <div class="logo-sub">AI-Powered Career Portal</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Overview</div>
+    <a class="nav-item active"><span class="ni">⊟</span> Dashboard</a>
+    <a class="nav-item" onclick="showTab('careers')"><span class="ni">✦</span> Career Paths <span class="nav-badge">3</span></a>
+    <a class="nav-item"><span class="ni">◉</span> Skill Map</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Opportunities</div>
+    <a class="nav-item" onclick="showTab('jobs')"><span class="ni">💼</span> Jobs & Internships</a>
+    <a class="nav-item"><span class="ni">🌐</span> Networking</a>
+    <a class="nav-item"><span class="ni">📌</span> Saved Roles</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Tools</div>
+    <a class="nav-item"><span class="ni">📄</span> Resume Builder</a>
+    <a class="nav-item"><span class="ni">📚</span> Learning Paths</a>
+    <a class="nav-item" onclick="showTab('quiz')"><span class="ni">🧠</span> AI Quiz</a>
+    <a class="nav-item"><span class="ni">⚙️</span> Settings</a>
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="user-tile">
+      <div class="avatar">RK</div>
+      <div>
+        <div class="user-name">Rahul Kumar</div>
+        <div class="user-role">CSE · 3rd Year · IIT Gandhinagar</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<div class="main">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <h1>Good Morning, Rahul 👋</h1>
+      <p>3 new career matches · Your skill score improved by 4pts this week</p>
+    </div>
+    <div class="topbar-right">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="Search careers, skills, jobs...">
+      </div>
+      <div class="icon-btn">🔔</div>
+      <button class="primary-btn" onclick="document.getElementById('chat-input').focus()">
+        💬 Ask AI Advisor
+      </button>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- STATS -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon" style="background:rgba(108,99,255,0.15);">🎯</div>
+        <div class="stat-label">Profile Match</div>
+        <div class="stat-val" style="color:var(--accent)">87<span style="font-size:14px">%</span></div>
+        <div class="stat-sub">Top 12% of peers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:rgba(0,201,141,0.15);">⚡</div>
+        <div class="stat-label">Skills Verified</div>
+        <div class="stat-val" style="color:var(--green)">14</div>
+        <div class="stat-sub" style="color:var(--green)">+3 this month ↑</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:rgba(255,183,3,0.15);">📬</div>
+        <div class="stat-label">Applications</div>
+        <div class="stat-val" style="color:var(--yellow)">6</div>
+        <div class="stat-sub">2 shortlisted 🎉</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:rgba(255,112,67,0.15);">🔥</div>
+        <div class="stat-label">Learning Streak</div>
+        <div class="stat-val" style="color:var(--orange)">12<span style="font-size:14px">d</span></div>
+        <div class="stat-sub">Personal best!</div>
+      </div>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="main-grid">
+
+      <!-- CAREER RECOMMENDATIONS -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">🤖 AI Career Recommendations</span>
+          <a class="panel-link">View all →</a>
+        </div>
+
+        <div class="tab-row">
+          <button class="tab-btn active" onclick="switchCareerTab(this,'all')">All Paths</button>
+          <button class="tab-btn" onclick="switchCareerTab(this,'tech')">Tech</button>
+          <button class="tab-btn" onclick="switchCareerTab(this,'business')">Business</button>
+          <button class="tab-btn" onclick="switchCareerTab(this,'design')">Design</button>
+        </div>
+
+        <div class="career-list" id="career-list">
+          <div class="career-card">
+            <div class="career-emoji" style="background:rgba(108,99,255,0.15)">🤖</div>
+            <div class="career-info">
+              <div class="career-name">ML / AI Engineer</div>
+              <div style="font-size:11px;color:var(--muted);margin-bottom:4px">Model training, deployment, research</div>
+              <div class="career-tags">
+                <span class="ctag">Python</span><span class="ctag">PyTorch</span><span class="ctag">LLMs</span>
+              </div>
+            </div>
+            <span class="match-badge match-high">94% match</span>
+          </div>
+
+          <div class="career-card">
+            <div class="career-emoji" style="background:rgba(0,201,141,0.15)">💻</div>
+            <div class="career-info">
+              <div class="career-name">Full-Stack Developer</div>
+              <div style="font-size:11px;color:var(--muted);margin-bottom:4px">End-to-end product engineering</div>
+              <div class="career-tags">
+                <span class="ctag">React</span><span class="ctag">Node.js</span><span class="ctag">PostgreSQL</span>
+              </div>
+            </div>
+            <span class="match-badge match-high">88% match</span>
+          </div>
+
+          <div class="career-card">
+            <div class="career-emoji" style="background:rgba(255,183,3,0.15)">📊</div>
+            <div class="career-info">
+              <div class="career-name">Data Scientist</div>
+              <div style="font-size:11px;color:var(--muted);margin-bottom:4px">Analytics, ML modelling, insights</div>
+              <div class="career-tags">
+                <span class="ctag">Python</span><span class="ctag">SQL</span><span class="ctag">Tableau</span>
+              </div>
+            </div>
+            <span class="match-badge match-med">79% match</span>
+          </div>
+
+          <div class="career-card">
+            <div class="career-emoji" style="background:rgba(255,112,67,0.15)">🎯</div>
+            <div class="career-info">
+              <div class="career-name">Product Manager</div>
+              <div style="font-size:11px;color:var(--muted);margin-bottom:4px">Strategy, roadmap, stakeholders</div>
+              <div class="career-tags">
+                <span class="ctag">Analytics</span><span class="ctag">Figma</span><span class="ctag">Agile</span>
+              </div>
+            </div>
+            <span class="match-badge match-low">71% match</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: SKILL ASSESSMENT -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">📈 Skill Assessment</span>
+          <a class="panel-link">Retake →</a>
+        </div>
+
+        <div class="skill-header-row">
+          <div class="ring-wrap">
+            <svg width="72" height="72" viewBox="0 0 72 72">
+              <circle cx="36" cy="36" r="28" fill="none" stroke="#1E1E35" stroke-width="7"/>
+              <circle cx="36" cy="36" r="28" fill="none" stroke="#6C63FF" stroke-width="7"
+                stroke-dasharray="175.9" stroke-dashoffset="39"
+                stroke-linecap="round"/>
+            </svg>
+            <div class="ring-pct">78%</div>
+          </div>
+          <div class="skill-header-info">
+            <div class="skill-readiness">78% Ready</div>
+            <div class="skill-readiness-sub">Overall job readiness score</div>
+            <div class="skill-vs">↑ +4pts vs last week</div>
+          </div>
+        </div>
+
+        <div class="skill-list">
+          <div class="skill-row">
+            <span class="skill-lbl">Data Structures</span>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-fill" style="width:88%;background:var(--accent)"></div>
+            </div>
+            <span class="skill-pct" style="color:var(--accent)">88</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-lbl">Python & ML</span>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-fill" style="width:82%;background:var(--green)"></div>
+            </div>
+            <span class="skill-pct" style="color:var(--green)">82</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-lbl">System Design</span>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-fill" style="width:61%;background:var(--yellow)"></div>
+            </div>
+            <span class="skill-pct" style="color:var(--yellow)">61</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-lbl">SQL & Databases</span>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-fill" style="width:73%;background:var(--green)"></div>
+            </div>
+            <span class="skill-pct" style="color:var(--green)">73</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-lbl">Communication</span>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-fill" style="width:55%;background:var(--orange)"></div>
+            </div>
+            <span class="skill-pct" style="color:var(--orange)">55</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-lbl">Problem Solving</span>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-fill" style="width:91%;background:var(--accent)"></div>
+            </div>
+            <span class="skill-pct" style="color:var(--accent)">91</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <button class="quiz-submit" style="font-size:11px;padding:9px;" onclick="document.querySelector('[onclick*=quiz]').click()">
+          🧠 Retake Full Skill Assessment
+        </button>
+      </div>
+    </div>
+
+    <!-- BOTTOM GRID -->
+    <div class="bottom-grid">
+
+      <!-- JOBS -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">💼 Jobs & Internships</span>
+          <a class="panel-link">All →</a>
+        </div>
+
+        <div class="job-list">
+          <div class="job-card">
+            <div class="job-meta">
+              <span class="dot dot-green"></span>
+              Google · Remote
+            </div>
+            <div class="job-title">SWE Intern — AI/ML</div>
+            <div class="job-tags">
+              <span class="jtag" style="background:rgba(0,201,141,0.15);color:var(--green)">₹80K/mo</span>
+              <span class="jtag" style="background:var(--bg3);color:var(--muted)">Python</span>
+              <span class="jtag" style="background:var(--bg3);color:var(--muted)">Summer '25</span>
+            </div>
+          </div>
+
+          <div class="job-card">
+            <div class="job-meta">
+              <span class="dot dot-purple"></span>
+              Razorpay · Bangalore
+            </div>
+            <div class="job-title">Backend Engineering Intern</div>
+            <div class="job-tags">
+              <span class="jtag" style="background:rgba(108,99,255,0.15);color:#a9a3ff">₹60K/mo</span>
+              <span class="jtag" style="background:var(--bg3);color:var(--muted)">Node.js</span>
+              <span class="jtag" style="background:var(--bg3);color:var(--muted)">Jan '25</span>
+            </div>
+          </div>
+
+          <div class="job-card">
+            <div class="job-meta">
+              <span class="dot dot-orange"></span>
+              Zepto · Mumbai
+            </div>
+            <div class="job-title">Data Science Intern</div>
+            <div class="job-tags">
+              <span class="jtag" style="background:rgba(255,183,3,0.15);color:var(--yellow)">₹50K/mo</span>
+              <span class="jtag" style="background:var(--bg3);color:var(--muted)">SQL</span>
+              <span class="jtag" style="background:var(--bg3);color:var(--muted)">Open</span>
+            </div>
+          </div>
+
+          <div class="job-card">
+            <div class="job-meta">
+              <span class="dot dot-green"></span>
+              Anthropic · Remote
+            </div>
+            <div class="job-title">AI Safety Research Intern</div>
+            <div class="job-tags">
+              <span class="jtag" style="background:rgba(0,201,141,0.15);color:var(--green)">₹1.2L/mo</span>
+              <span class="jtag" style="background:var(--bg3);color:var(--muted)">ML</span>
+              <span class="jtag" style="background:var(--bg3);color:var(--muted)">Summer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">🧠 Career Interest Quiz</span>
+          <a class="panel-link" id="quiz-step-lbl">Step 1/4</a>
+        </div>
+
+        <div class="quiz-progress" id="quiz-progress">
+          <div class="qp-dot active"></div>
+          <div class="qp-dot"></div>
+          <div class="qp-dot"></div>
+          <div class="qp-dot"></div>
+        </div>
+
+        <div id="quiz-area">
+          <div class="quiz-q" id="quiz-question">Which work style excites you most?</div>
+          <div class="quiz-opts-grid" id="quiz-opts">
+            <div class="qopt" onclick="selectQ(this)">Building systems at scale</div>
+            <div class="qopt" onclick="selectQ(this)">Analysing patterns in data</div>
+            <div class="qopt" onclick="selectQ(this)">Designing user experiences</div>
+            <div class="qopt" onclick="selectQ(this)">Leading product strategy</div>
+          </div>
+          <button class="quiz-submit" id="quiz-btn" onclick="nextQuizQ()">Next Question →</button>
+        </div>
+      </div>
+
+      <!-- CHATBOT -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">💬 AI Career Advisor</span>
+          <span style="font-size:10px;color:var(--green);font-weight:700">● Online</span>
+        </div>
+
+        <div class="chat-body">
+          <div class="chat-messages" id="chat-messages">
+            <div class="cmsg ai">👋 Hi Rahul! I'm your AI career advisor. Ask me anything about career paths, skills, or interviews.</div>
+            <div class="cmsg user">What skills should I focus on for ML?</div>
+            <div class="cmsg ai">For ML, prioritize: Python, NumPy/Pandas, scikit-learn, then PyTorch. Strong math (linear algebra + stats) is essential. Build 2–3 Kaggle projects to show recruiters! 🚀</div>
+          </div>
+          <div class="chat-input-row">
+            <input class="chat-input" id="chat-input" placeholder="Ask about careers, skills, interviews..." onkeydown="if(event.key==='Enter')sendMsg()">
+            <button class="chat-send" onclick="sendMsg()">↑</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEARNING RESOURCES -->
+    <div class="resources-section">
+      <div class="section-heading">
+        📚 AI-Curated Learning Resources
+        <a class="panel-link">Browse all →</a>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card" style="border-color:rgba(108,99,255,0.25)">
+          <span class="resource-type" style="background:rgba(108,99,255,0.15);color:#a9a3ff">Course</span>
+          <div class="resource-title">Fast.ai: Practical Deep Learning for Coders</div>
+          <div class="resource-meta">fast.ai · Free · Beginner friendly</div>
+          <div class="resource-duration">⏱ 40 hours · 7 lessons</div>
+        </div>
+        <div class="resource-card" style="border-color:rgba(0,201,141,0.2)">
+          <span class="resource-type" style="background:rgba(0,201,141,0.15);color:var(--green)">Roadmap</span>
+          <div class="resource-title">System Design Primer — GitHub</div>
+          <div class="resource-meta">donnemartin · Open Source</div>
+          <div class="resource-duration">📌 Pinned · High priority for you</div>
+        </div>
+        <div class="resource-card" style="border-color:rgba(255,183,3,0.2)">
+          <span class="resource-type" style="background:rgba(255,183,3,0.15);color:var(--yellow)">Project</span>
+          <div class="resource-title">Build a Recommendation Engine from Scratch</div>
+          <div class="resource-meta">Kaggle Notebook · Intermediate</div>
+          <div class="resource-duration">⏱ 6 hours · Portfolio-worthy</div>
+        </div>
+        <div class="resource-card" style="border-color:rgba(255,112,67,0.2)">
+          <span class="resource-type" style="background:rgba(255,112,67,0.15);color:var(--orange)">Interview</span>
+          <div class="resource-title">LeetCode Top 150 — Interview Prep</div>
+          <div class="resource-meta">LeetCode · 150 problems</div>
+          <div class="resource-duration">✅ 48/150 completed</div>
+        </div>
+        <div class="resource-card" style="border-color:rgba(108,99,255,0.2)">
+          <span class="resource-type" style="background:rgba(108,99,255,0.12);color:#a9a3ff">Article</span>
+          <div class="resource-title">How to crack Google SWE internship — Full guide</div>
+          <div class="resource-meta">Medium · 12 min read</div>
+          <div class="resource-duration">📖 Highly recommended for you</div>
+        </div>
+        <div class="resource-card" style="border-color:rgba(0,201,141,0.2)">
+          <span class="resource-type" style="background:rgba(0,201,141,0.12);color:var(--green)">Certificate</span>
+          <div class="resource-title">Google Data Analytics Professional Certificate</div>
+          <div class="resource-meta">Coursera · 6 months · Paid</div>
+          <div class="resource-duration">🏆 Industry recognized</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESUME STRIP -->
+    <div class="resume-strip">
+      <div class="resume-strip-icon">📄</div>
+      <div class="resume-strip-info">
+        <div class="resume-strip-title">Your AI-Powered Resume Builder</div>
+        <div class="resume-strip-sub">Generate a tailored resume for each job in seconds. ATS-optimized with AI suggestions.</div>
+      </div>
+      <div class="resume-strip-actions">
+        <button class="outline-btn">View Resume</button>
+        <button class="primary-btn">✨ Build with AI</button>
+      </div>
+    </div>
+
+    <div style="height:30px"></div>
+
+  </div>
+</div>
+
+<script>
+  // ===== QUIZ LOGIC =====
+  const questions = [
+    {
+      q: "Which work style excites you most?",
+      opts: ["Building systems at scale", "Analysing patterns in data", "Designing user experiences", "Leading product strategy"]
+    },
+    {
+      q: "Which subject do you enjoy the most?",
+      opts: ["Mathematics & Statistics", "Computer Programming", "Psychology & Behaviour", "Business & Economics"]
+    },
+    {
+      q: "What kind of problems do you love solving?",
+      opts: ["Technical & algorithmic", "Data & insights", "Creative & visual", "Strategic & organizational"]
+    },
+    {
+      q: "Where do you see yourself in 5 years?",
+      opts: ["Building AI products", "At a top research lab", "Founding a startup", "Leading a product team"]
+    }
+  ];
+
+  let currentQ = 0;
+  let answers = [];
+
+  function selectQ(el) {
+    document.querySelectorAll('.qopt').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+
+  function nextQuizQ() {
+    const selected = document.querySelector('.qopt.selected');
+    if (!selected) {
+      selected || alert('Please select an option!');
+      return;
+    }
+    answers.push(selected.textContent);
+    currentQ++;
+
+    const dots = document.querySelectorAll('.qp-dot');
+    dots.forEach((d, i) => {
+      d.classList.remove('done', 'active');
+      if (i < currentQ) d.classList.add('done');
+      else if (i === currentQ) d.classList.add('active');
+    });
+
+    if (currentQ >= questions.length) {
+      document.getElementById('quiz-area').innerHTML = `
+        <div style="text-align:center;padding:20px 0;">
+          <div style="font-size:32px;margin-bottom:10px">🎉</div>
+          <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:6px">Quiz Complete!</div>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:14px">AI is analysing your answers...</div>
+          <div style="background:rgba(108,99,255,0.15);border:1px solid rgba(108,99,255,0.3);border-radius:10px;padding:12px;margin-bottom:12px;font-size:12px;color:#c0bcff;line-height:1.6;">
+            Based on your answers, you're best suited for an <strong>ML Engineer</strong> or <strong>Data Scientist</strong> role. You love technical problem-solving with a data focus! 🤖
+          </div>
+          <button class="quiz-submit" onclick="resetQuiz()">Retake Quiz</button>
+        </div>`;
+      document.getElementById('quiz-step-lbl').textContent = 'Done ✓';
+      return;
+    }
+
+    const q = questions[currentQ];
+    document.getElementById('quiz-question').textContent = q.q;
+    document.getElementById('quiz-step-lbl').textContent = `Step ${currentQ+1}/4`;
+    const optsEl = document.getElementById('quiz-opts');
+    optsEl.innerHTML = q.opts.map(o => `<div class="qopt" onclick="selectQ(this)">${o}</div>`).join('');
+  }
+
+  function resetQuiz() {
+    currentQ = 0;
+    answers = [];
+    document.getElementById('quiz-step-lbl').textContent = 'Step 1/4';
+    document.querySelectorAll('.qp-dot').forEach((d,i) => {
+      d.classList.remove('done','active');
+      if(i===0) d.classList.add('active');
+    });
+    const q = questions[0];
+    document.getElementById('quiz-area').innerHTML = `
+      <div class="quiz-q" id="quiz-question">${q.q}</div>
+      <div class="quiz-opts-grid" id="quiz-opts">
+        ${q.opts.map(o=>`<div class="qopt" onclick="selectQ(this)">${o}</div>`).join('')}
+      </div>
+      <button class="quiz-submit" id="quiz-btn" onclick="nextQuizQ()">Next Question →</button>`;
+  }
+
+  // ===== CHATBOT =====
+  const responses = {
+    "ml": "For ML Engineering, focus on: Python, PyTorch/TensorFlow, linear algebra, probability, and building real projects. Try fast.ai for a practical start! 🚀",
+    "resume": "A strong tech resume: one page, quantify impact (e.g. '30% faster inference'), include 2–3 solid projects, list relevant skills. Use our Resume Builder for ATS optimization! 📄",
+    "internship": "Top internship sources: LinkedIn, Internshala, AngelList, and directly on company career pages. Apply early — most deadlines are Oct–Dec for summer. 🎯",
+    "salary": "For SWE internships in India: ₹40K–₹1.5L/month. Google/Microsoft/top startups pay top range. Tier-1 companies also offer PPO (pre-placement offers) 💰",
+    "interview": "Tech interviews typically have: DSA round (LeetCode medium), system design, and HR. Practice 2–3 problems/day for 60 days. Use STAR method for HR. 💪",
+    "default": "Great question! As your AI advisor, I recommend exploring the career paths section for tailored guidance. You can also check out our curated learning resources below. 😊"
+  };
+
+  function sendMsg() {
+    const inp = document.getElementById('chat-input');
+    const val = inp.value.trim();
+    if (!val) return;
+
+    const msgs = document.getElementById('chat-messages');
+
+    const userDiv = document.createElement('div');
+    userDiv.className = 'cmsg user';
+    userDiv.textContent = val;
+    msgs.appendChild(userDiv);
+    inp.value = '';
+    msgs.scrollTop = msgs.scrollHeight;
+
+    // Typing indicator
+    const typing = document.createElement('div');
+    typing.className = 'typing-indicator';
+    typing.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+    msgs.appendChild(typing);
+    msgs.scrollTop = msgs.scrollHeight;
+
+    setTimeout(() => {
+      msgs.removeChild(typing);
+      const key = Object.keys(responses).find(k => val.toLowerCase().includes(k)) || 'default';
+      const aiDiv = document.createElement('div');
+      aiDiv.className = 'cmsg ai';
+      aiDiv.textContent = responses[key];
+      msgs.appendChild(aiDiv);
+      msgs.scrollTop = msgs.scrollHeight;
+    }, 1200);
+  }
+
+  // ===== CAREER TABS =====
+  function switchCareerTab(btn, tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  // ===== NAV ACTIVE STATE =====
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', function() {
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

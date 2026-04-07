@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/c/Academic-module/Backend/venv/Scripts/python.exe:*)",
+      "Bash(python3 /c/Academic-module/Backend/manage.py check)",
+      "Bash(npm --version)",
+      "Bash(npm run:*)",
+      "Read(//c/Users/Admin/OneDrive/Documents/Evolvex-AI/Evolvex-AI--main/Evolvex-AI//**)",
+      "Read(//c/Users/Admin/OneDrive/Documents/Evolvex-AI//**)",
+      "Read(//c/Users/Admin/**)",
+      "Bash(timeout 10 python manage.py runserver 8000)",
+      "Bash(python:*)"
+    ]
+  }
+}

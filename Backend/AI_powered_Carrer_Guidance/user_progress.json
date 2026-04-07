@@ -1,0 +1,39 @@
+{
+  "user_id": "default_user",
+  "created_at": "2025-09-14T11:31:21.875201",
+  "total_sessions": 177,
+  "skills_assessed": 88,
+  "resumes_analyzed": 88,
+  "interviews_practiced": 1,
+  "courses_started": 0,
+  "courses_completed": 0,
+  "career_paths_explored": 0,
+  "learning_hours": 0,
+  "achievements": [
+    {
+      "id": "first_session",
+      "name": "Getting Started",
+      "description": "Completed your first session",
+      "earned_at": "2025-09-14T11:44:56.397861",
+      "icon": "\ud83c\udf89"
+    },
+    {
+      "id": "resume_master",
+      "name": "Resume Master",
+      "description": "Analyzed 3 resumes",
+      "earned_at": "2025-09-14T11:45:22.461014",
+      "icon": "\ud83d\udcdd"
+    },
+    {
+      "id": "skill_assessor",
+      "name": "Skill Assessor",
+      "description": "Completed 5 skill assessments",
+      "earned_at": "2025-09-14T12:49:51.163669",
+      "icon": "\ud83d\udcca"
+    }
+  ],
+  "weekly_goals": [],
+  "monthly_goals": [],
+  "streak_days": 0,
+  "last_activity": "2026-03-14T15:16:51.461094"
+}
