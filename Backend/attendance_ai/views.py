@@ -30,7 +30,8 @@ Endpoints:
 """
 import os
 import logging
-from datetime import date, datetime, timezone as dt_timezone
+from datetime import date, datetime, timedelta, timezone as dt_timezone
+from urllib.parse import quote_plus, urlparse
 
 from django.conf import settings
 from django.utils import timezone
@@ -49,7 +50,7 @@ from .serializers import (
     AttendanceRecordSerializer, AttendanceAnomalySerializer,
     AttendanceNotificationSerializer
 )
-from .face_engine import register_face_encodings, recognize_face
+from .face_engine import FACE_RECOGNITION_AVAILABLE, register_face_encodings, recognize_face
 from .utils import generate_qr_code
 
 logger = logging.getLogger(__name__)
@@ -90,6 +91,26 @@ def _student_subject_stats(student, subject):
             break
 
     return total, present, consecutive
+
+
+def _frontend_base_url_from_request(request):
+    """Best-effort frontend base URL from Origin/Referer, fallback to SITE_DOMAIN."""
+    origin = request.headers.get('Origin', '').strip()
+    if origin:
+        parsed = urlparse(origin)
+        if parsed.scheme and parsed.netloc:
+            return f"{parsed.scheme}://{parsed.netloc}"
+
+    referer = request.headers.get('Referer', '').strip()
+    if referer:
+        parsed = urlparse(referer)
+        if parsed.scheme and parsed.netloc:
+            return f"{parsed.scheme}://{parsed.netloc}"
+
+    domain = getattr(settings, 'SITE_DOMAIN', 'localhost:5173')
+    if domain.startswith('http://') or domain.startswith('https://'):
+        return domain.rstrip('/')
+    return f"http://{domain}".rstrip('/')
 
 
 # ─── Student: Registration Status ────────────────────────────────────────────
@@ -177,6 +198,15 @@ def register_face(request):
     if not images or len(images) < 5:
         return Response({'success': False, 'message': 'Please provide exactly 5 face images.'}, status=400)
 
+    if not FACE_RECOGNITION_AVAILABLE:
+        return Response(
+            {
+                'success': False,
+                'message': 'Face engine is unavailable on server. Please contact admin.',
+            },
+            status=503,
+        )
+
     try:
         student_profile = request.user.student_profile
         student_id = str(student_profile.student_id)
@@ -202,7 +232,7 @@ def register_face(request):
     encoding_path = result['encoding_path']
     fe, _ = FaceEncoding.objects.get_or_create(student=request.user)
     fe.encoding_path = encoding_path
-    fe.encoding_count = result.get('count', 5)
+    fe.encoding_count = result.get('encoding_count', 0)
     fe.save()
 
     # Update StudentProfile
@@ -272,10 +302,19 @@ def mark_attendance_qr(request):
         return err
 
     qr_token = request.data.get('qr_token', '').strip()
-    frame_b64 = request.data.get('frame') # Optional but recommended for extra verification
+    frame_b64 = request.data.get('frame')
     
     if not qr_token:
         return Response({'success': False, 'message': 'QR token is required.'}, status=400)
+
+    if not FACE_RECOGNITION_AVAILABLE:
+        return Response(
+            {'success': False, 'message': 'Face engine is unavailable on server. Please contact admin.'},
+            status=503,
+        )
+
+    if not frame_b64:
+        return Response({'success': False, 'message': 'Live face frame is required.'}, status=400)
 
     try:
         session = LectureSession.objects.select_related('subject').get(qr_token=qr_token)
@@ -292,54 +331,45 @@ def mark_attendance_qr(request):
     if AttendanceRecord.objects.filter(session=session, student=request.user).exists():
         return Response({'success': False, 'message': 'You are already marked present for this session.'}, status=400)
 
-    # Face verification (if frame provided)
+    # Face verification is mandatory for QR attendance marking.
     confidence = None
     snapshot_path = ''
-    if frame_b64:
-        # Verify against THIS student specifically
-        encodings_map = {}
+    # Verify against THIS student specifically
+    encodings_map = {}
+    try:
+        fe = FaceEncoding.objects.get(student=request.user)
+        # Fetch users.Student for the name
         try:
-            fe = FaceEncoding.objects.get(student=request.user)
-            # Fetch users.Student for the name
-            try:
-                name = request.user.student_profile.name
-                roll_no = request.user.student_profile.enrollment_no
-            except:
-                name = request.user.email
-                roll_no = ''
-                
-            encodings_map[str(request.user.user_id)] = {
-                'encoding_path': fe.encoding_path,
-                'user': request.user,
-                'name': name,
-                'roll_no': roll_no,
-            }
-            from .face_engine import recognize_face
-            res = recognize_face(frame_b64, encodings_map)
-            if not res.get('recognized'):
-                 return Response({'success': False, 'message': 'Face verification failed. Please try again.'}, status=403)
-            confidence = res.get('confidence')
-            
-            # Save snapshot
-            snap_dir = os.path.join(settings.MEDIA_ROOT, 'attendance_snapshots', str(date.today()))
-            os.makedirs(snap_dir, exist_ok=True)
-            snap_file = os.path.join(snap_dir, f"qr_{request.user.user_id}.jpg")
-            try:
-                img_data = base64.b64decode(frame_b64.split(',')[-1])
-                with open(snap_file, 'wb') as f:
-                    f.write(img_data)
-                snapshot_path = f"attendance_snapshots/{date.today()}/qr_{request.user.user_id}.jpg"
-            except: pass
-        except FaceEncoding.DoesNotExist:
-            return Response({'success': False, 'message': 'Face registration incomplete.'}, status=403)
-    else:
-        # If no frame provided, still check if registered
+            name = request.user.student_profile.name
+            roll_no = request.user.student_profile.enrollment_no
+        except Exception:
+            name = request.user.email
+            roll_no = ''
+
+        encodings_map[str(request.user.user_id)] = {
+            'encoding_path': fe.encoding_path,
+            'user': request.user,
+            'name': name,
+            'roll_no': roll_no,
+        }
+        res = recognize_face(frame_b64, encodings_map)
+        if not res.get('recognized'):
+            return Response({'success': False, 'message': res.get('message', 'Face verification failed. Please try again.')}, status=403)
+        confidence = res.get('confidence')
+
+        # Save snapshot
+        snap_dir = os.path.join(settings.MEDIA_ROOT, 'attendance_snapshots', str(date.today()))
+        os.makedirs(snap_dir, exist_ok=True)
+        snap_file = os.path.join(snap_dir, f"qr_{request.user.user_id}.jpg")
         try:
-            ai_profile = StudentProfile.objects.get(user=request.user)
-            if not ai_profile.is_face_registered:
-                return Response({'success': False, 'message': 'Face registration required.'}, status=403)
-        except StudentProfile.DoesNotExist:
-             return Response({'success': False, 'message': 'Onboarding incomplete.'}, status=403)
+            img_data = base64.b64decode(frame_b64.split(',')[-1])
+            with open(snap_file, 'wb') as f:
+                f.write(img_data)
+            snapshot_path = f"attendance_snapshots/{date.today()}/qr_{request.user.user_id}.jpg"
+        except Exception:
+            pass
+    except FaceEncoding.DoesNotExist:
+        return Response({'success': False, 'message': 'Face registration incomplete.'}, status=403)
 
     ip_address = request.META.get('REMOTE_ADDR', '')
     record = AttendanceRecord.objects.create(
@@ -395,9 +425,21 @@ def create_lecture(request):
     # Parse date and compute qr_expires_at
     try:
         session_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+        start_dt = make_aware(datetime.strptime(f"{date_str} {start_time}", '%Y-%m-%d %H:%M'))
         end_dt = make_aware(datetime.strptime(f"{date_str} {end_time}", '%Y-%m-%d %H:%M'))
     except ValueError as e:
         return Response({'error': f'Date/time format error: {e}'}, status=400)
+
+    current_time = now()
+    if session_date < current_time.date():
+        return Response({'error': 'Past date is not allowed for a new session.'}, status=400)
+    if end_dt <= start_dt:
+        return Response({'error': 'End time must be after start time.'}, status=400)
+
+    # Avoid immediate QR expiry when faculty creates a session after configured end_time.
+    qr_expires_at = end_dt
+    if session_date == current_time.date() and end_dt <= current_time:
+        qr_expires_at = current_time + timedelta(hours=2)
 
     session = LectureSession.objects.create(
         subject=subject,
@@ -407,26 +449,34 @@ def create_lecture(request):
         end_time=end_time,
         total_students=int(total_students),
         session_type=session_type,
-        qr_expires_at=end_dt,
+        qr_expires_at=qr_expires_at,
     )
 
-    # Generate QR code
+    # Generate QR code with the same frontend host/port currently in use.
+    frontend_base_url = _frontend_base_url_from_request(request)
     domain = getattr(settings, 'SITE_DOMAIN', 'localhost:5173')
+    fallback_qr_image_url = ''
     try:
-        rel_path, attendance_url = generate_qr_code(session.id, str(session.qr_token), domain)
+        rel_path, attendance_url = generate_qr_code(
+            session.id,
+            str(session.qr_token),
+            domain=domain,
+            frontend_base_url=frontend_base_url,
+        )
         session.qr_image_path = rel_path
         session.save(update_fields=['qr_image_path'])
     except Exception as e:
         logger.error(f"QR generation failed: {e}")
-        attendance_url = f"http://{domain}/student/mark-attendance/{session.qr_token}/"
+        attendance_url = f"{frontend_base_url}/student/mark-attendance/{session.qr_token}/"
         rel_path = ''
+        fallback_qr_image_url = f"https://api.qrserver.com/v1/create-qr-code/?size=320x320&data={quote_plus(attendance_url)}"
 
-    qr_image_url = f"{settings.MEDIA_URL}{rel_path}" if rel_path else ''
+    qr_image_url = f"{settings.MEDIA_URL}{rel_path}" if rel_path else fallback_qr_image_url
 
     return Response({
         'session_id': session.id,
         'qr_token': str(session.qr_token),
-        'qr_image_url': request.build_absolute_uri(qr_image_url) if qr_image_url else '',
+        'qr_image_url': request.build_absolute_uri(qr_image_url) if qr_image_url.startswith('/') else qr_image_url,
         'attendance_link': attendance_url,
         'total_students': session.total_students,
         'expires_at': session.qr_expires_at,
@@ -604,6 +654,9 @@ def mark_attendance_face(request):
 
     if not session_id or not frame_b64:
         return Response({'error': 'session_id and frame are required.'}, status=400)
+
+    if not FACE_RECOGNITION_AVAILABLE:
+        return Response({'recognized': False, 'message': 'Face engine is unavailable on server. Contact admin.'}, status=503)
 
     try:
         session = LectureSession.objects.select_related('subject').get(id=session_id, is_active=True)

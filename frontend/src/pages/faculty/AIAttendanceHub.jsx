@@ -393,11 +393,19 @@ function LiveFaceTab() {
       try {
         const res = await attendanceAI.markAttendanceFace(selectedSession, frame);
         setLastResult(res.data);
+        if (res.data.recognized) {
+          setError('');
+        } else {
+          setError(res.data?.message || 'Face not recognized. Adjust camera and try again.');
+        }
+
         if (res.data.recognized && !res.data.already_marked) {
           setScanLog(prev => [{ student_name: res.data.student_name, roll_no: res.data.roll_no, confidence: res.data.confidence_score, time: new Date().toLocaleTimeString(), recognized: true }, ...prev.slice(0, 19)]);
           fetchStatus();
         }
-      } catch {}
+      } catch (err) {
+        setError(err?.response?.data?.error || err?.response?.data?.message || 'Face scan failed. Please check camera and session.');
+      }
     };
     scan(); scanIntervalRef.current = setInterval(scan, 3000);
   }, [selectedSession, captureFrame]);
@@ -456,6 +464,12 @@ function LiveFaceTab() {
                 <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2 bg-green-900/90 text-green-300 text-xs font-semibold px-3 py-2 rounded-lg">
                   <CheckCircle className="w-4 h-4 shrink-0" />
                   {lastResult.already_marked ? `${lastResult.student_name} — Already Marked` : `✓ ${lastResult.student_name} (${lastResult.confidence_score}%)`}
+                </div>
+              )}
+              {lastResult && !lastResult.recognized && (
+                <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2 bg-red-900/90 text-red-300 text-xs font-semibold px-3 py-2 rounded-lg">
+                  <AlertCircle className="w-4 h-4 shrink-0" />
+                  {lastResult.message || 'Face not recognized. Try better lighting and camera angle.'}
                 </div>
               )}
               {!cameraActive && (

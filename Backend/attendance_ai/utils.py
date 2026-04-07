@@ -2,10 +2,16 @@
 QR Code generation utility for AI Attendance System.
 """
 import os
+from urllib.parse import urlparse
 from django.conf import settings
 
 
-def generate_qr_code(session_id: int, qr_token: str, domain: str = None):
+def generate_qr_code(
+    session_id: int,
+    qr_token: str,
+    domain: str = None,
+    frontend_base_url: str = None,
+):
     """
     Generate a QR code PNG for the student attendance link.
 
@@ -23,10 +29,20 @@ def generate_qr_code(session_id: int, qr_token: str, domain: str = None):
     except ImportError:
         raise RuntimeError("qrcode library not installed. Run: pip install qrcode[pil]")
 
-    if domain is None:
-        domain = getattr(settings, 'SITE_DOMAIN', 'localhost:5173')
+    attendance_url = None
 
-    attendance_url = f"http://{domain}/student/mark-attendance/{qr_token}/"
+    if frontend_base_url:
+        base = frontend_base_url.strip().rstrip('/')
+        if base and '://' not in base:
+            base = f"http://{base}"
+        parsed = urlparse(base)
+        if parsed.scheme and parsed.netloc:
+            attendance_url = f"{parsed.scheme}://{parsed.netloc}/student/mark-attendance/{qr_token}/"
+
+    if not attendance_url:
+        if domain is None:
+            domain = getattr(settings, 'SITE_DOMAIN', 'localhost:5173')
+        attendance_url = f"http://{domain}/student/mark-attendance/{qr_token}/"
 
     qr = qrcode.QRCode(
         version=1,

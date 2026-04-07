@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
-  QrCode, CheckCircle, XCircle, AlertCircle, Loader2,
+  QrCode, CheckCircle, XCircle, AlertCircle, Loader2, Camera,
   BookOpen, User, Clock, Shield, ChevronRight
 } from 'lucide-react';
 import { attendanceAI, authAPI } from '../../services/api';
-import Logo from '../../components/Logo';
 
 export default function MarkAttendanceQR() {
   const { qr_token } = useParams();
   const navigate = useNavigate();
+
+  const PREV_AUTH_KEY = 'qr_prev_auth_state';
 
   const [phase, setPhase] = useState('verifying'); // 'verifying'|'session_info'|'login'|'success'|'error'
   const [sessionInfo, setSessionInfo] = useState(null);
@@ -24,17 +25,74 @@ export default function MarkAttendanceQR() {
 
   // Success info
   const [successInfo, setSuccessInfo] = useState(null);
+  const [restoredAuthRole, setRestoredAuthRole] = useState('');
 
   // Face capture
   const [cameraActive, setCameraActive] = useState(false);
+  const [cameraLoading, setCameraLoading] = useState(false);
   const [capturing, setCapturing] = useState(false);
+  const [cameraDevices, setCameraDevices] = useState([]);
+  const [selectedCameraId, setSelectedCameraId] = useState('');
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const streamRef = useRef(null);
+  const manualStopRef = useRef(false);
+  const autoRetryRef = useRef(false);
+
+  const backupCurrentAuth = () => {
+    const existingAccess = localStorage.getItem('access_token');
+    const existingRefresh = localStorage.getItem('refresh_token');
+    const existingUser = localStorage.getItem('user');
+    const existingProfile = localStorage.getItem('profile');
+
+    if (!existingAccess && !existingRefresh && !existingUser && !existingProfile) {
+      return;
+    }
+
+    const payload = JSON.stringify({
+      access_token: existingAccess,
+      refresh_token: existingRefresh,
+      user: existingUser,
+      profile: existingProfile,
+    });
+    sessionStorage.setItem(PREV_AUTH_KEY, payload);
+  };
+
+  const restorePreviousAuth = () => {
+    const raw = sessionStorage.getItem(PREV_AUTH_KEY);
+    if (!raw) return '';
+
+    try {
+      const prev = JSON.parse(raw);
+      const previousRole = prev?.user ? (JSON.parse(prev.user)?.role || '') : '';
+
+      if (prev.access_token) localStorage.setItem('access_token', prev.access_token);
+      else localStorage.removeItem('access_token');
+
+      if (prev.refresh_token) localStorage.setItem('refresh_token', prev.refresh_token);
+      else localStorage.removeItem('refresh_token');
+
+      if (prev.user) localStorage.setItem('user', prev.user);
+      else localStorage.removeItem('user');
+
+      if (prev.profile) localStorage.setItem('profile', prev.profile);
+      else localStorage.removeItem('profile');
+
+      sessionStorage.removeItem(PREV_AUTH_KEY);
+      setRestoredAuthRole(previousRole);
+      return previousRole;
+    } catch {
+      sessionStorage.removeItem(PREV_AUTH_KEY);
+      return '';
+    }
+  };
 
   useEffect(() => {
     verifySession();
-    return () => stopCamera();
+    return () => {
+      stopCamera();
+      restorePreviousAuth();
+    };
   }, [qr_token]);
 
   const verifySession = async () => {
@@ -57,22 +115,111 @@ export default function MarkAttendanceQR() {
     }
   };
 
-  const startCamera = async () => {
+  const startCamera = async (isAutoRetry = false) => {
+    if (cameraLoading) return;
+    setCameraLoading(true);
+    setLoginError('');
+    stopCamera();
+    if (!isAutoRetry) {
+      autoRetryRef.current = false;
+    }
+
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      setLoginError('Camera API not supported in this browser. Use latest Chrome/Edge.');
+      return;
+    }
+
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 640, height: 480, facingMode: 'user' } });
+      let stream = null;
+      try {
+        const preferredVideo = selectedCameraId
+          ? { deviceId: { exact: selectedCameraId }, width: { ideal: 640 }, height: { ideal: 480 } }
+          : { width: { ideal: 640 }, height: { ideal: 480 } };
+
+        stream = await navigator.mediaDevices.getUserMedia({ video: preferredVideo, audio: false });
+      } catch {
+        stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+      }
+
       streamRef.current = stream;
+      const activeTrack = stream.getVideoTracks?.()[0];
+      if (activeTrack) {
+        const startedAt = Date.now();
+        activeTrack.onended = () => {
+          if (manualStopRef.current) return;
+          setCameraActive(false);
+          if (Date.now() - startedAt < 3000 && !autoRetryRef.current) {
+            autoRetryRef.current = true;
+            setLoginError('Camera disconnected quickly. Retrying with default camera...');
+            setSelectedCameraId('');
+            setTimeout(() => {
+              startCamera(true);
+            }, 250);
+            return;
+          }
+          if (Date.now() - startedAt < 3000 && selectedCameraId) {
+            setLoginError('Selected camera was unstable. Switched to default camera, tap Start Camera again.');
+          } else {
+            setLoginError('Camera stream ended unexpectedly. Tap Start Camera again.');
+          }
+        };
+      }
+
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
-        videoRef.current.onloadedmetadata = () => setCameraActive(true);
+        await videoRef.current.play().catch(() => {});
       }
+
+      setCameraActive(Boolean(activeTrack));
+      try {
+        const devices = await navigator.mediaDevices.enumerateDevices();
+        const vids = devices.filter((d) => d.kind === 'videoinput');
+        setCameraDevices(vids);
+      } catch {
+        // ignore device listing failure
+      }
+    } catch (err) {
+      stopCamera();
+      setCameraActive(false);
+      const isSecureContextError = window.location.protocol !== 'https:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+      const errName = err?.name || '';
+      if (isSecureContextError) {
+        setLoginError('Camera blocked: open this page on HTTPS or localhost only.');
+      } else if (errName === 'NotAllowedError' || errName === 'SecurityError') {
+        setLoginError('Camera permission blocked. Allow camera in browser Site Settings and Windows Privacy settings.');
+      } else if (errName === 'NotReadableError' || errName === 'TrackStartError') {
+        setLoginError('Camera is busy in another app (Zoom/Meet/Camera). Close it and retry.');
+      } else if (errName === 'NotFoundError' || errName === 'DevicesNotFoundError') {
+        setLoginError('No camera device found. Connect webcam and retry.');
+      } else if (errName === 'OverconstrainedError' || errName === 'ConstraintNotSatisfiedError') {
+        setLoginError('Selected camera is unavailable. Pick another camera and retry.');
+      } else {
+        setLoginError(`Camera unavailable. Close other apps using camera, then tap Start Camera again. (${errName || 'UnknownError'})`);
+      }
+    } finally {
+      setCameraLoading(false);
+    }
+  };
+
+  const loadCameraDevices = async () => {
+    if (!navigator.mediaDevices?.enumerateDevices) return;
+    try {
+      const devices = await navigator.mediaDevices.enumerateDevices();
+      const vids = devices.filter((d) => d.kind === 'videoinput');
+      setCameraDevices(vids);
     } catch {
-      setLoginError('Camera access denied. Face verification is required.');
+      // ignore
     }
   };
 
   const stopCamera = () => {
+    manualStopRef.current = true;
     streamRef.current?.getTracks().forEach(t => t.stop());
+    streamRef.current = null;
     setCameraActive(false);
+    setTimeout(() => {
+      manualStopRef.current = false;
+    }, 0);
   };
 
   const captureFrame = () => {
@@ -98,16 +245,17 @@ export default function MarkAttendanceQR() {
         return;
       }
 
-      // Store tokens temporarily
-      const prevToken = localStorage.getItem('access_token');
+      // Store previous session and switch to student auth only for QR marking flow.
+      backupCurrentAuth();
       localStorage.setItem('access_token', access);
       localStorage.setItem('refresh_token', refresh);
       localStorage.setItem('user', JSON.stringify(user));
       localStorage.setItem('profile', JSON.stringify(profile));
 
-      // Move to Face Check instead of direct marking
+      // Move to Face Check; user starts camera manually for a stable flow.
       setPhase('face_check');
-      await startCamera();
+      await loadCameraDevices();
+      setLoginError('Tap Start Camera to continue face verification.');
     } catch (err) {
       const msg = err?.response?.data?.error || err?.response?.data?.message || 'Login failed.';
       setLoginError(msg);
@@ -128,6 +276,7 @@ export default function MarkAttendanceQR() {
       const markRes = await attendanceAI.markAttendanceQR(qr_token, frame);
       if (markRes.data.success) {
         setSuccessInfo(markRes.data);
+        restorePreviousAuth();
         setPhase('success');
         stopCamera();
       } else {
@@ -302,6 +451,13 @@ export default function MarkAttendanceQR() {
           <p className="text-gray-400 text-sm mt-1">Look into the camera to mark attendance</p>
         </div>
 
+        {loginError && (
+          <div className="flex items-center gap-2 p-3 mb-4 bg-red-50 border border-red-200 rounded-lg">
+            <AlertCircle className="w-4 h-4 text-red-500 shrink-0" />
+            <p className="text-red-600 text-sm">{loginError}</p>
+          </div>
+        )}
+
         <div className="relative aspect-[4/3] bg-black rounded-2xl overflow-hidden mb-6 border-4 border-gray-100 shadow-inner">
            <video ref={videoRef} autoPlay muted playsInline className="w-full h-full object-cover scale-x-[-1]" />
            <canvas ref={canvasRef} className="hidden" />
@@ -318,9 +474,48 @@ export default function MarkAttendanceQR() {
                </div>
              </div>
            )}
+
+           {!cameraActive && (
+             <div className="absolute inset-0 bg-black/55 flex items-center justify-center">
+               <p className="text-white/90 text-sm font-semibold">Camera not started</p>
+             </div>
+           )}
         </div>
 
         <div className="space-y-3">
+          {cameraDevices.length > 0 && (
+            <div>
+              <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Camera Device</label>
+              <select
+                value={selectedCameraId}
+                onChange={(e) => setSelectedCameraId(e.target.value)}
+                className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[var(--gu-red)] bg-white"
+              >
+                <option value="">Auto (Recommended)</option>
+                {cameraDevices.map((d, idx) => (
+                  <option key={d.deviceId || idx} value={d.deviceId}>
+                    {d.label || `Camera ${idx + 1}`}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+          {!cameraActive && (
+            <button onClick={startCamera} disabled={cameraLoading}
+              className="w-full flex items-center justify-center gap-2 border border-[var(--gu-red)] text-[var(--gu-red)] font-semibold py-3 rounded-xl hover:bg-[rgba(185,28,28,0.06)] transition-colors">
+              {cameraLoading ? <><Loader2 className="w-4 h-4 animate-spin" /> Starting Camera...</> : <><Camera className="w-4 h-4" /> Start Camera</>}
+            </button>
+          )}
+          {cameraActive && (
+            <button onClick={startCamera} disabled={cameraLoading}
+              className="w-full flex items-center justify-center gap-2 border border-[var(--gu-red)] text-[var(--gu-red)] font-semibold py-3 rounded-xl hover:bg-[rgba(185,28,28,0.06)] transition-colors">
+              <Camera className="w-4 h-4" /> Restart Camera
+            </button>
+          )}
+          <button onClick={loadCameraDevices}
+            className="w-full flex items-center justify-center gap-2 border border-gray-200 text-gray-600 font-semibold py-2.5 rounded-xl hover:bg-gray-50 transition-colors text-sm">
+            Refresh Camera List
+          </button>
           <button onClick={handleFaceMark} disabled={!cameraActive || capturing}
             className="w-full flex items-center justify-center gap-2 bg-[var(--gu-red)] text-white font-bold py-3.5 rounded-xl hover:bg-[var(--gu-red-hover)] disabled:opacity-50 transition-all shadow-lg">
             {capturing ? <><Loader2 className="w-4 h-4 animate-spin" /> Please wait...</> : <><Camera className="w-5 h-5" /> Capture & Mark Attendance</>}
@@ -333,6 +528,17 @@ export default function MarkAttendanceQR() {
     );
   }
   if (phase === 'success') {
+    const goToPath = restoredAuthRole === 'faculty'
+      ? '/faculty/ai-attendance'
+      : restoredAuthRole === 'admin'
+      ? '/admin/dashboard'
+      : '/student/dashboard';
+    const goToLabel = restoredAuthRole === 'faculty'
+      ? 'Back to Faculty Dashboard'
+      : restoredAuthRole === 'admin'
+      ? 'Back to Admin Dashboard'
+      : 'Go to Dashboard';
+
     return (
       <CardWrapper>
         <div className="text-center py-4">
@@ -355,9 +561,9 @@ export default function MarkAttendanceQR() {
             ))}
           </div>
 
-          <button onClick={() => navigate('/student/dashboard')}
+          <button onClick={() => navigate(goToPath)}
             className="w-full bg-[var(--gu-red)] text-white font-bold py-3 rounded-xl hover:bg-[var(--gu-red-hover)] transition-colors">
-            Go to Dashboard
+            {goToLabel}
           </button>
         </div>
       </CardWrapper>

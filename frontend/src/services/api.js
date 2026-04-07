@@ -220,8 +220,8 @@ export const attendanceAI = {
   verifySession: (qrToken) =>
     api.get(`/attendance-ai/verify-session/${qrToken}/`),
 
-  markAttendanceQR: (qrToken) =>
-    api.post('/attendance-ai/mark-attendance-qr/', { qr_token: qrToken }),
+  markAttendanceQR: (qrToken, frame = null) =>
+    api.post('/attendance-ai/mark-attendance-qr/', { qr_token: qrToken, frame }),
 
   // ── Faculty: Session CRUD ───────────────────────────────────────────────────
   createLecture: (data) =>

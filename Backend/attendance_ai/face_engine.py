@@ -25,7 +25,7 @@ except ImportError:
     FACE_RECOGNITION_AVAILABLE = False
     logger.warning(
         "face_recognition / OpenCV not installed. "
-        "Face-recognition endpoints will return mock responses."
+        "Face-recognition endpoints are disabled until dependencies are installed."
     )
 
 TOLERANCE = 0.6          # face_recognition distance threshold (0.5 is strict, 0.6 is standard)
@@ -85,16 +85,11 @@ def register_face_encodings(student_id: str, b64_images: list) -> dict:
         {"success": bool, "encoding_count": int, "message": str, "encoding_path": str}
     """
     if not FACE_RECOGNITION_AVAILABLE:
-        # Mock response for dev environment without dlib
-        pkl_path = _encoding_path(student_id)
-        mock_enc = [np.zeros(128) for _ in b64_images]
-        with open(pkl_path, 'wb') as f:
-            pickle.dump(mock_enc, f)
         return {
-            "success": True,
-            "encoding_count": len(b64_images),
-            "message": "Mock encodings saved (face_recognition not installed).",
-            "encoding_path": f"face_encodings/{student_id}.pkl",
+            "success": False,
+            "encoding_count": 0,
+            "message": "Face engine unavailable on server. Contact admin.",
+            "encoding_path": None,
         }
 
     encodings = []
@@ -179,22 +174,11 @@ def recognize_face(b64_frame: str, encodings_map: dict = None) -> dict:
         }
     """
     if not FACE_RECOGNITION_AVAILABLE:
-        # Mock: always return the first enrolled student if any exist
-        if encodings_map:
-            sid = list(encodings_map.keys())[0]
-            abs_path, rel_path = _snapshot_path(sid)
-            return {
-                "recognized": True,
-                "student_id": sid,
-                "confidence": 92.0,
-                "snapshot_rel_path": rel_path,
-                "message": "Mock recognition (face_recognition not installed).",
-            }
         return {
             "recognized": False,
             "student_id": None,
             "confidence": 0.0,
-            "message": "No enrolled students found.",
+            "message": "Face engine unavailable on server. Contact admin.",
         }
 
     try:
