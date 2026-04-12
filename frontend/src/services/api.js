@@ -173,9 +173,20 @@ export const academicsAPI = {
   createCourse: (data) => api.post('/academics/courses/', data),
   updateCourse: (courseId, data) => api.put(`/academics/courses/${courseId}/`, data),
   subjects: (params) => api.get('/academics/subjects/', { params }),
+  rooms: (params) => api.get('/academics/rooms/', { params }),
   timetable: (params) => api.get('/academics/timetable/', { params }),
   createTimetableSlot: (data) => api.post('/academics/timetable/', data),
   deleteTimetableSlot: (slotId) => api.delete(`/academics/timetable/${slotId}/`),
+  // Admin Timetable Management
+  generateTimetable: (branch, clear) => api.post('/academics/admin/timetable/generate/', { branch, clear }),
+  timetableStats: () => api.get('/academics/admin/timetable/stats/'),
+  // ONE-CLICK PDF Generation
+  generateTimetablePDF: (courseCode = null, semester = null) => {
+    return api.post('/academics/admin/timetable/pdf/', 
+      { course_code: courseCode, semester },
+      { responseType: 'blob' }
+    );
+  },
 };
 
 export default api;
@@ -208,6 +219,9 @@ export const attendanceAI = {
   // ── Student: Setup ──────────────────────────────────────────────────────────
   getRegistrationStatus: () =>
     api.get('/attendance-ai/registration-status/'),
+
+  getActiveSessions: () =>
+    api.get('/attendance-ai/student/active-sessions/'),
 
   fillDetails: (data) =>
     api.post('/attendance-ai/fill-details/', data),

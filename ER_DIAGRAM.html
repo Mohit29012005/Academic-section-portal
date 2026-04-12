@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Academic Module - ER Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #1a1a2e; color: #fff; min-height: 100vh; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header p { opacity: 0.9; }
+        .container { max-width: 1600px; margin: 0 auto; padding: 30px; }
+        .diagram-section { background: #16213e; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .diagram-section h2 { color: #667eea; margin-bottom: 20px; font-size: 1.5em; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+        .mermaid { background: #fff; border-radius: 10px; padding: 20px; }
+        .tables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .table-card { background: #0f3460; border-radius: 10px; padding: 20px; border-left: 4px solid #667eea; }
+        .table-card h3 { color: #667eea; margin-bottom: 10px; font-size: 1.1em; }
+        .table-card ul { list-style: none; }
+        .table-card li { padding: 5px 0; color: #ccc; font-size: 0.9em; }
+        .table-card .pk { color: #4ade80; font-weight: bold; }
+        .table-card .fk { color: #fbbf24; }
+        .table-card .uk { color: #f472b6; }
+        .relationship { background: #0f3460; border-radius: 10px; padding: 20px; margin-top: 20px; }
+        .relationship h3 { color: #667eea; margin-bottom: 15px; }
+        .rel-item { display: flex; align-items: center; padding: 10px; background: #16213e; margin: 5px 0; border-radius: 5px; }
+        .rel-item .arrow { color: #667eea; margin: 0 15px; }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+        .summary-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; padding: 25px; text-align: center; }
+        .summary-card .count { font-size: 3em; font-weight: bold; }
+        .summary-card .label { opacity: 0.9; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎓 Academic Module - ER Diagram</h1>
+        <p>Complete Entity Relationship Diagram with 30 Tables</p>
+    </div>
+    
+    <div class="container">
+        <!-- Summary -->
+        <div class="summary">
+            <div class="summary-card">
+                <div class="count">30</div>
+                <div class="label">Total Tables</div>
+            </div>
+            <div class="summary-card">
+                <div class="count">7</div>
+                <div class="label">Core Tables</div>
+            </div>
+            <div class="summary-card">
+                <div class="count">8</div>
+                <div class="label">Timetable Tables</div>
+            </div>
+            <div class="summary-card">
+                <div class="count">4</div>
+                <div class="label">Exam Tables</div>
+            </div>
+            <div class="summary-card">
+                <div class="count">4</div>
+                <div class="label">AI Tables</div>
+            </div>
+        </div>
+
+        <!-- Main ER Diagram -->
+        <div class="diagram-section">
+            <h2>📊 Entity Relationship Diagram</h2>
+            <div class="mermaid">
+erDiagram
+    USERS ||--o| STUDENTS : "1:1"
+    USERS ||--o| FACULTY : "1:1"
+    USERS ||--o| ADMINS : "1:1"
+    
+    USERS {
+        uuid user_id PK
+        string email UK
+        string password
+        string role
+        timestamp created_at
+    }
+    
+    STUDENTS ||--o{ TIMETABLE_SLOTS : "attends"
+    STUDENTS ||--o{ SEMESTER_RESULTS : "has"
+    STUDENTS ||--o{ AI_FACE_ENCODINGS : "has"
+    
+    STUDENTS {
+        uuid student_id PK
+        uuid user_id FK UK
+        string enrollment_no UK
+        string name
+        string email
+        uuid course_id FK
+        integer current_semester
+        decimal cgpa
+    }
+    
+    FACULTY ||--o{ TIMETABLE_SLOTS : "teaches"
+    FACULTY ||--o{ EXAMS : "creates"
+    
+    FACULTY {
+        uuid faculty_id PK
+        uuid user_id FK UK
+        string employee_id UK
+        string name
+        string department
+    }
+    
+    ADMINS {
+        uuid admin_id PK
+        uuid user_id FK UK
+        string employee_id UK
+        string name
+    }
+    
+    COURSES ||--o{ SUBJECTS : "has"
+    COURSES ||--o{ STUDENTS : "enrolls"
+    COURSES ||--o{ TIMETABLE_SLOTS : "schedules"
+    
+    COURSES {
+        uuid course_id PK
+        string code UK
+        string name
+        integer total_semesters
+        string department
+        string shift
+    }
+    
+    SUBJECTS ||--o{ TIMETABLE_SLOTS : "scheduled"
+    SUBJECTS ||--o{ EXAMS : "exam_of"
+    SUBJECTS ||--o{ SEMESTER_RESULTS : "results"
+    
+    SUBJECTS {
+        uuid subject_id PK
+        string code UK
+        string name
+        uuid course_id FK
+        integer semester
+        integer credits
+    }
+    
+    ROOMS ||--o{ TIMETABLE_SLOTS : "allocated"
+    ROOMS {
+        uuid room_id PK
+        string room_number UK
+        string building
+        string room_type
+        integer capacity
+    }
+    
+    SHIFTS ||--o{ TIME_SLOTS : "contains"
+    SHIFTS {
+        uuid shift_id PK
+        string name
+        string code UK
+    }
+    
+    TIME_SLOTS ||--o{ TIMETABLE_SLOTS : "time_of"
+    TIME_SLOTS {
+        uuid slot_id PK
+        string name
+        time start_time
+        time end_time
+        boolean is_break
+    }
+    
+    TIMETABLE_SLOTS {
+        uuid slot_id PK
+        uuid course_id FK
+        integer semester
+        string day_of_week
+        uuid time_slot_id FK
+        uuid subject_id FK
+        uuid faculty_id FK
+        uuid room_id FK
+    }
+    
+    EXAMS ||--o{ QUESTIONS : "contains"
+    EXAMS ||--o{ EXAM_RESULTS : "results"
+    EXAMS {
+        uuid exam_id PK
+        uuid subject_id FK
+        string title
+        date exam_date
+        integer duration_minutes
+        integer total_marks
+    }
+    
+    QUESTIONS {
+        uuid question_id PK
+        uuid exam_id FK
+        text question_text
+        integer marks
+    }
+    
+    STUDENTS ||--o{ EXAM_RESULTS : "appears"
+    EXAM_RESULTS ||--o{ STUDENT_ANSWERS : "contains"
+    EXAM_RESULTS {
+        uuid result_id PK
+        uuid student_id FK
+        uuid exam_id FK
+        decimal marks_obtained
+    }
+    
+    STUDENT_ANSWERS {
+        uuid answer_id PK
+        uuid exam_result_id FK
+        uuid question_id FK
+        string selected_option
+    }
+    
+    SEMESTER_RESULTS ||--o{ SUBJECT_RESULTS : "contains"
+    SEMESTER_RESULTS {
+        uuid result_id PK
+        uuid student_id FK
+        integer semester
+        decimal sgpa
+    }
+    
+    SUBJECT_RESULTS {
+        uuid subject_result_id PK
+        uuid semester_result_id FK
+        uuid subject_id FK
+        integer total_marks
+    }
+            </div>
+        </div>
+
+        <!-- Tables List -->
+        <div class="diagram-section">
+            <h2>📋 All Tables Overview</h2>
+            <div class="tables-grid">
+                <div class="table-card">
+                    <h3>👤 users</h3>
+                    <ul>
+                        <li class="pk">user_id (PK)</li>
+                        <li class="uk">email (UK)</li>
+                        <li>password</li>
+                        <li>role</li>
+                        <li>created_at</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>🎓 students</h3>
+                    <ul>
+                        <li class="pk">student_id (PK)</li>
+                        <li class="fk">user_id (FK)</li>
+                        <li class="uk">enrollment_no (UK)</li>
+                        <li>name, email, phone</li>
+                        <li class="fk">course_id (FK)</li>
+                        <li>current_semester, cgpa</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>👨‍🏫 faculty</h3>
+                    <ul>
+                        <li class="pk">faculty_id (PK)</li>
+                        <li class="fk">user_id (FK)</li>
+                        <li class="uk">employee_id (UK)</li>
+                        <li>name, email, phone</li>
+                        <li>department</li>
+                        <li>designation</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>🛡️ admins</h3>
+                    <ul>
+                        <li class="pk">admin_id (PK)</li>
+                        <li class="fk">user_id (FK)</li>
+                        <li class="uk">employee_id (UK)</li>
+                        <li>name, email</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>📚 courses</h3>
+                    <ul>
+                        <li class="pk">course_id (PK)</li>
+                        <li class="uk">code (UK)</li>
+                        <li>name</li>
+                        <li>total_semesters</li>
+                        <li>department, shift</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>📖 subjects</h3>
+                    <ul>
+                        <li class="pk">subject_id (PK)</li>
+                        <li class="uk">code (UK)</li>
+                        <li>name</li>
+                        <li class="fk">course_id (FK)</li>
+                        <li>semester</li>
+                        <li>credits</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>🏫 rooms</h3>
+                    <ul>
+                        <li class="pk">room_id (PK)</li>
+                        <li class="uk">room_number (UK)</li>
+                        <li>building</li>
+                        <li>room_type</li>
+                        <li>capacity</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>⏰ shifts</h3>
+                    <ul>
+                        <li class="pk">shift_id (PK)</li>
+                        <li class="uk">code (UK)</li>
+                        <li>name</li>
+                        <li>start_time, end_time</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>⏱️ time_slots</h3>
+                    <ul>
+                        <li class="pk">slot_id (PK)</li>
+                        <li>name</li>
+                        <li>start_time, end_time</li>
+                        <li class="fk">shift_id (FK)</li>
+                        <li>is_break</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>📅 timetable_slots</h3>
+                    <ul>
+                        <li class="pk">slot_id (PK)</li>
+                        <li class="fk">course_id (FK)</li>
+                        <li class="fk">time_slot_id (FK)</li>
+                        <li class="fk">subject_id (FK)</li>
+                        <li class="fk">faculty_id (FK)</li>
+                        <li class="fk">room_id (FK)</li>
+                        <li>day_of_week, semester</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>📝 exams</h3>
+                    <ul>
+                        <li class="pk">exam_id (PK)</li>
+                        <li class="fk">subject_id (FK)</li>
+                        <li class="fk">created_by (FK)</li>
+                        <li>title, exam_type</li>
+                        <li>exam_date, duration</li>
+                        <li>total_marks</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>❓ questions</h3>
+                    <ul>
+                        <li class="pk">question_id (PK)</li>
+                        <li class="fk">exam_id (FK)</li>
+                        <li>question_text</li>
+                        <li>question_type</li>
+                        <li>marks, options</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>📊 exam_results</h3>
+                    <ul>
+                        <li class="pk">result_id (PK)</li>
+                        <li class="fk">student_id (FK)</li>
+                        <li class="fk">exam_id (FK)</li>
+                        <li>marks_obtained</li>
+                        <li>is_absent</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>✍️ student_answers</h3>
+                    <ul>
+                        <li class="pk">answer_id (PK)</li>
+                        <li class="fk">exam_result_id (FK)</li>
+                        <li class="fk">question_id (FK)</li>
+                        <li>answer_text</li>
+                        <li>selected_option</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>📈 semester_results</h3>
+                    <ul>
+                        <li class="pk">result_id (PK)</li>
+                        <li class="fk">student_id (FK)</li>
+                        <li>semester</li>
+                        <li>sgpa, percentage</li>
+                        <li>grade, status</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>📉 subject_results</h3>
+                    <ul>
+                        <li class="pk">subject_result_id (PK)</li>
+                        <li class="fk">semester_result_id (FK)</li>
+                        <li class="fk">subject_id (FK)</li>
+                        <li>internal_marks</li>
+                        <li>external_marks</li>
+                        <li>total_marks</li>
+                    </ul>
+                </div>
+                <div class="table-card">
+                    <h3>🔔 notifications</h3>
+                    <ul>
+                        <li class="pk">notification_id (PK)</li>
+                        <li class="fk">user_id (FK)</li>
+                        <li>title, message</li>
+                        <li>is_read</li>
+                        <li>created_at</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Relationships -->
+        <div class="diagram-section">
+            <h2>🔗 Key Relationships</h2>
+            <div class="relationship">
+                <div class="rel-item">
+                    <span>USERS</span>
+                    <span class="arrow">1:1</span>
+                    <span>STUDENTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>USERS</span>
+                    <span class="arrow">1:1</span>
+                    <span>FACULTY</span>
+                </div>
+                <div class="rel-item">
+                    <span>USERS</span>
+                    <span class="arrow">1:1</span>
+                    <span>ADMINS</span>
+                </div>
+                <div class="rel-item">
+                    <span>COURSES</span>
+                    <span class="arrow">1:N</span>
+                    <span>SUBJECTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>COURSES</span>
+                    <span class="arrow">1:N</span>
+                    <span>STUDENTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>COURSES</span>
+                    <span class="arrow">1:N</span>
+                    <span>TIMETABLE_SLOTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>SUBJECTS</span>
+                    <span class="arrow">1:N</span>
+                    <span>EXAMS</span>
+                </div>
+                <div class="rel-item">
+                    <span>SUBJECTS</span>
+                    <span class="arrow">1:N</span>
+                    <span>SEMESTER_RESULTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>FACULTY</span>
+                    <span class="arrow">1:N</span>
+                    <span>TIMETABLE_SLOTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>FACULTY</span>
+                    <span class="arrow">1:N</span>
+                    <span>EXAMS</span>
+                </div>
+                <div class="rel-item">
+                    <span>ROOMS</span>
+                    <span class="arrow">1:N</span>
+                    <span>TIMETABLE_SLOTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>TIME_SLOTS</span>
+                    <span class="arrow">1:N</span>
+                    <span>TIMETABLE_SLOTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>SHIFTS</span>
+                    <span class="arrow">1:N</span>
+                    <span>TIME_SLOTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>EXAMS</span>
+                    <span class="arrow">1:N</span>
+                    <span>QUESTIONS</span>
+                </div>
+                <div class="rel-item">
+                    <span>EXAMS</span>
+                    <span class="arrow">1:N</span>
+                    <span>EXAM_RESULTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>STUDENTS</span>
+                    <span class="arrow">1:N</span>
+                    <span>EXAM_RESULTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>STUDENTS</span>
+                    <span class="arrow">1:N</span>
+                    <span>SEMESTER_RESULTS</span>
+                </div>
+                <div class="rel-item">
+                    <span>SEMESTER_RESULTS</span>
+                    <span class="arrow">1:N</span>
+                    <span>SUBJECT_RESULTS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'dark',
+            er: {
+                useMaxWidth: true,
+                layoutDirection: 'TB'
+            }
+        });
+    </script>
+</body>
+</html>

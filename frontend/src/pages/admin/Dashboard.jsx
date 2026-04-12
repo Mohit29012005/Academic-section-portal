@@ -31,6 +31,8 @@ const AdminDashboard = () => {
         
         const processedStats = [
           { label: "Total Students", value: data.total_students || 0, icon: Users, color: "text-[#4ade80]" },
+          { label: "Assigned", value: data.students_with_course || 0, icon: Users, color: "text-[#60a5fa]" },
+          { label: "Unassigned", value: data.students_without_course || 0, icon: Users, color: "text-[#f59e0b]" },
           { label: "Active Faculty", value: data.total_faculty || 0, icon: UserCheck, color: "text-[#c084fc]" },
           { label: "Active Courses", value: data.total_courses || 0, icon: Activity, color: "text-[#60a5fa]" },
           { label: "System Health", value: data.system_health?.database === 'connected' ? '100%' : '50%', icon: Server, color: "text-[var(--gu-gold)]" }
@@ -88,7 +90,7 @@ const AdminDashboard = () => {
         )}
 
         {/* Stats Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
           {stats.map((stat, i) => (
             <div key={i} className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-6 rounded-sm relative overflow-hidden group hover:border-[var(--gu-gold)] transition-colors">
               <div className="flex justify-between items-start z-10 relative">

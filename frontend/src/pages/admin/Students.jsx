@@ -5,10 +5,44 @@ import { adminAPI, academicsAPI } from '../../services/api';
 
 const Students = () => {
     const [students, setStudents] = useState([]);
+    const [allStudents, setAllStudents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [courses, setCourses] = useState([]);
     const [courseFilter, setCourseFilter] = useState('');
+    const [semesterFilter, setSemesterFilter] = useState('');
+    const [rollSearch, setRollSearch] = useState('');
+
+    // Get selected course details
+    const selectedCourse = courses.find(c => c.course_id === courseFilter);
+    const maxSemesters = selectedCourse?.total_semesters || 8;
+    
+    // Debug - log filter changes
+    useEffect(() => {
+        console.log('=== FILTER DEBUG ===');
+        console.log('Course filter:', courseFilter);
+        console.log('Semester filter:', semesterFilter, 'Type:', typeof semesterFilter);
+        console.log('Total students:', allStudents.length);
+        
+        if (allStudents.length > 0) {
+            // Show sample by semester
+            const bySem = {};
+            allStudents.forEach(s => {
+                const sem = s.current_semester || s.semester || 'unknown';
+                bySem[sem] = (bySem[sem] || 0) + 1;
+            });
+            console.log('Students by semester:', bySem);
+            
+            // Show sample student
+            const sample = allStudents[0];
+            console.log('Sample student:', {
+                enrollment_no: sample.enrollment_no,
+                current_semester: sample.current_semester,
+                semester: sample.semester,
+                course_id: sample.course_id
+            });
+        }
+    }, [courseFilter, semesterFilter, allStudents.length]);
 
     // Modal States
     const [showAddModal, setShowAddModal] = useState(false);
@@ -19,7 +53,6 @@ const Students = () => {
             try {
                 setLoading(true);
                 setError(null);
-                // Fetch courses for dropdowns
                 try {
                     const coursesRes = await academicsAPI.courses();
                     setCourses(coursesRes.data);
@@ -27,19 +60,64 @@ const Students = () => {
                     console.warn("Failed to fetch courses", err);
                 }
 
-                // Fetch students
-                const response = await adminAPI.students(courseFilter ? { course_id: courseFilter } : {});
-                setStudents(response.data);
+                // Fetch all students - no params needed, filtering done on frontend
+                const response = await adminAPI.students();
+                setAllStudents(response.data || []);
+                setStudents(response.data || []);
             } catch (error) {
                 console.error("API Connection Failed.", error);
                 setError("System failed to sync student directory from the central database.");
                 setStudents([]);
+                setAllStudents([]);
             } finally {
                 setLoading(false);
             }
         };
         fetchStudents();
-    }, [courseFilter]);
+    }, []);
+
+    // Clear semester when course changes
+    const handleCourseChange = (courseId) => {
+        setCourseFilter(courseId);
+        setSemesterFilter(''); // Reset semester when course changes
+    };
+
+    // Filter students based on course, semester and roll search
+    useEffect(() => {
+        const filtered = allStudents.filter(s => {
+            // Course filter - strict match
+            if (courseFilter) {
+                const studentCourseId = s.course_id || (s.course && s.course.course_id);
+                if (studentCourseId !== courseFilter) return false;
+            }
+            
+            // Semester filter - convert both to Number for comparison
+            if (semesterFilter) {
+                const targetSem = Number(semesterFilter);
+                const studentCurrentSem = Number(s.current_semester || s.semester);
+                if (studentCurrentSem !== targetSem) return false;
+            }
+            
+            // Roll search - exact or partial match
+            if (rollSearch) {
+                const search = rollSearch.toLowerCase().trim();
+                const rollMatch = s.enrollment_no?.toLowerCase().includes(search);
+                const nameMatch = s.name?.toLowerCase().includes(search);
+                if (!rollMatch && !nameMatch) return false;
+            }
+            
+            return true;
+        });
+        
+        // Sort by roll number - proper numeric sort
+        filtered.sort((a, b) => {
+            const rollA = a.enrollment_no || '';
+            const rollB = b.enrollment_no || '';
+            return rollA.localeCompare(rollB, undefined, { numeric: true, sensitivity: 'base' });
+        });
+        
+        setStudents(filtered);
+    }, [allStudents, courseFilter, semesterFilter, rollSearch]);
 
     const handleAddSubmit = async (e) => {
         e.preventDefault();
@@ -93,24 +171,14 @@ const Students = () => {
         <AdminLayout>
             <div className="animate-fade-in max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="border-b border-[var(--gu-gold)] pb-6 mb-8 flex justify-between items-end">
-                    <div>
-                        <h1 className="font-serif text-3xl md:text-4xl text-white mb-2 word-wrap break-words">Student Lifecycle</h1>
-                        <p className="text-[var(--gu-gold)] text-xs md:text-sm uppercase tracking-wider font-semibold">
-                            Admissions, Enrollments & Directory
-                        </p>
-                    </div>
-                    <div className="flex gap-4">
-                        <select 
-                            className="bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2 text-sm focus:border-[var(--gu-gold)] outline-none"
-                            value={courseFilter}
-                            onChange={(e) => setCourseFilter(e.target.value)}
-                        >
-                            <option value="">All Courses</option>
-                            {courses.map(c => (
-                                <option key={c.course_id} value={c.course_id}>{c.name}</option>
-                            ))}
-                        </select>
+                <div className="border-b border-[var(--gu-gold)] pb-6 mb-6">
+                    <div className="flex flex-wrap justify-between items-end gap-4">
+                        <div>
+                            <h1 className="font-serif text-3xl md:text-4xl text-white mb-2">Student Lifecycle</h1>
+                            <p className="text-[var(--gu-gold)] text-xs md:text-sm uppercase tracking-wider font-semibold">
+                                Admissions, Enrollments & Directory
+                            </p>
+                        </div>
                         <button 
                             onClick={() => setShowAddModal(true)}
                             className="bg-[var(--gu-gold)] text-[#1A0505] px-4 py-2 text-sm font-bold uppercase tracking-widest flex items-center hover:bg-[#e6c949] transition-colors rounded-sm shadow-[0_0_15px_rgba(212,175,55,0.3)]"
@@ -120,27 +188,102 @@ const Students = () => {
                     </div>
                 </div>
 
+                {/* Filters */}
+                <div className="bg-[var(--gu-red-card)] border border-[var(--gu-gold)] p-4 mb-6 rounded-sm">
+                    <div className="flex flex-wrap gap-4 items-end">
+                        {/* Search */}
+                        <div className="flex-1 min-w-[250px]">
+                            <label className="block text-[var(--gu-gold)] text-xs uppercase tracking-wider mb-2">Search</label>
+                            <div className="relative">
+                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                <input 
+                                    type="text"
+                                    placeholder="Search by Roll No or Name..."
+                                    value={rollSearch}
+                                    onChange={(e) => setRollSearch(e.target.value)}
+                                    className="w-full bg-black border border-[rgba(212,175,55,0.3)] text-white pl-10 pr-4 py-2.5 text-sm focus:border-[var(--gu-gold)] outline-none rounded-sm"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Course Filter */}
+                        <div className="w-64">
+                            <label className="block text-[var(--gu-gold)] text-xs uppercase tracking-wider mb-2">Course</label>
+                            <select 
+                                className="w-full bg-black border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none rounded-sm"
+                                value={courseFilter}
+                                onChange={(e) => handleCourseChange(e.target.value)}
+                            >
+                                <option value="">All Courses</option>
+                                {courses.map(c => (
+                                    <option key={c.course_id} value={c.course_id}>{c.name} ({c.student_count || 0})</option>
+                                ))}
+                            </select>
+                        </div>
+
+                        {/* Semester Filter */}
+                        <div className="w-40">
+                            <label className="block text-[var(--gu-gold)] text-xs uppercase tracking-wider mb-2">
+                                Semester {courseFilter ? `(${maxSemesters} Sem)` : '(Select Course First)'}
+                            </label>
+                            <select 
+                                className="w-full bg-black border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none rounded-sm disabled:opacity-50"
+                                value={semesterFilter}
+                                onChange={(e) => setSemesterFilter(e.target.value)}
+                                disabled={!courseFilter}
+                            >
+                                <option value="">All Semesters</option>
+                                {courses.length > 0 && Array.from({ length: maxSemesters }, (_, i) => i + 1).map(sem => (
+                                    <option key={sem} value={sem}>Sem {sem}</option>
+                                ))}
+                            </select>
+                        </div>
+
+                        {/* Clear Button */}
+                        {(courseFilter || semesterFilter || rollSearch) && (
+                            <button 
+                                onClick={() => { setCourseFilter(''); setSemesterFilter(''); setRollSearch(''); }}
+                                className="px-4 py-2.5 text-sm text-[var(--gu-gold)] hover:text-white border border-[var(--gu-gold)] rounded-sm flex items-center gap-2"
+                            >
+                                <X className="w-4 h-4" /> Clear
+                            </button>
+                        )}
+                    </div>
+                </div>
+
+                {/* Results Count */}
+                <div className="mb-4">
+                    <p className="text-gray-400 text-sm">
+                        Showing <span className="text-[var(--gu-gold)] font-bold">{students.length}</span> of {allStudents.length} students
+                    </p>
+                </div>
+
                 <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm overflow-hidden overflow-x-auto">
-                    <table className="w-full text-left min-w-[800px]">
+                    <table className="w-full text-left min-w-[1200px]">
                         <thead>
                             <tr className="bg-[#3D0F0F] border-b border-[var(--gu-border)]">
-                                <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Student ID</th>
-                                <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Name</th>
-                                <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Course & Sem</th>
-                                <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Status</th>
-                                <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold text-right">Actions</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Roll No</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Name</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Father Name</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Mobile</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Address</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Course</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Sem</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Batch</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Status</th>
+                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold text-right">Actions</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-[rgba(255,255,255,0.05)]">
                             {loading ? (
                                 <tr>
-                                    <td colSpan="5" className="py-8 text-center text-[var(--gu-gold)]">
+                                    <td colSpan="10" className="py-8 text-center text-[var(--gu-gold)]">
                                         <Loader className="w-8 h-8 animate-spin mx-auto" />
                                     </td>
                                 </tr>
                             ) : error ? (
                                 <tr>
-                                    <td colSpan="5" className="py-8 text-center bg-[rgba(239,68,68,0.05)] border-y border-[rgba(239,68,68,0.2)]">
+                                    <td colSpan="10" className="py-8 text-center bg-[rgba(239,68,68,0.05)] border-y border-[rgba(239,68,68,0.2)]">
                                         <AlertTriangle className="w-8 h-8 mx-auto mb-3 text-red-500" />
                                         <p className="text-red-400 font-semibold mb-1">Database Connectivity Interrupted</p>
                                         <p className="text-red-300 text-xs opacity-80">{error}</p>
@@ -148,15 +291,32 @@ const Students = () => {
                                 </tr>
                             ) : students.length === 0 ? (
                                 <tr>
-                                    <td colSpan="5" className="py-8 text-center text-gray-500">No students found.</td>
+                                    <td colSpan="10" className="py-8 text-center text-gray-500">No students found.</td>
                                 </tr>
                             ) : (
                                 students.map((student, i) => (
                                     <tr key={i} className="hover:bg-[rgba(255,255,255,0.02)] transition-colors">
-                                        <td className="py-4 px-6 font-mono text-sm text-[var(--gu-gold)]">{student.enrollment_no}</td>
-                                        <td className="py-4 px-6 text-white font-medium">{student.name}</td>
-                                        <td className="py-4 px-6 text-sm text-gray-300">{student.course_name}</td>
-                                        <td className="py-4 px-6">
+                                        <td className="py-4 px-4 font-mono text-sm text-[var(--gu-gold)]">{student.enrollment_no}</td>
+                                        <td className="py-4 px-4 text-white font-medium">{student.name}</td>
+                                        <td className="py-4 px-4 text-gray-300 text-sm">{student.father_name || '-'}</td>
+                                        <td className="py-4 px-4 text-gray-300 text-sm">{student.phone || '-'}</td>
+                                        <td className="py-4 px-4 text-gray-300 text-sm max-w-[150px] truncate" title={student.address || ''}>{student.address || '-'}</td>
+                                        <td className="py-4 px-4 text-sm">
+                                            <span className="text-gray-300">{student.course_name || '-'}</span>
+                                        </td>
+                                        <td className="py-4 px-4">
+                                            <span className="text-gray-300">Sem {student.current_semester || student.semester || '-'}</span>
+                                        </td>
+                                        <td className="py-4 px-4">
+                                            <span className={`inline-flex items-center px-2 py-1 text-xs font-bold uppercase tracking-widest rounded-sm ${
+                                                student.batch === 'A' ? 'text-blue-400 bg-blue-400/10 border border-blue-400/20' : 
+                                                student.batch === 'B' ? 'text-purple-400 bg-purple-400/10 border border-purple-400/20' :
+                                                'text-gray-400 bg-gray-400/10 border border-gray-400/20'
+                                            }`}>
+                                                {student.batch || 'N/A'}
+                                            </span>
+                                        </td>
+                                        <td className="py-4 px-4">
                                             <span className={`inline-flex items-center px-2 py-1 text-xs font-bold uppercase tracking-widest rounded-sm ${
                                                 student.status === 'Active' ? 'text-green-400 bg-green-400/10 border border-green-400/20' : 
                                                 student.status === 'Suspended' ? 'text-red-400 bg-red-400/10 border border-red-400/20' :
@@ -165,7 +325,7 @@ const Students = () => {
                                                 {student.status}
                                             </span>
                                         </td>
-                                        <td className="py-4 px-6 text-right">
+                                        <td className="py-4 px-4 text-right">
                                             <button 
                                                 onClick={() => setSelectedStudent(student)}
                                                 className="text-[var(--gu-gold)] text-xs font-semibold uppercase tracking-widest hover:text-white transition-colors border border-[rgba(212,175,55,0.3)] px-3 py-1 rounded-sm"
@@ -299,14 +459,19 @@ const Students = () => {
                             {/* Detailed Grid Map */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                                 <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Course & Progression</p>
-                                    <p className="text-white text-base">{selectedStudent.course.split(' - ')[0]}</p>
-                                    <p className="text-gray-400 text-sm mt-0.5">{selectedStudent.course.split(' - ')[1] || "Term Pending"}</p>
+                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Course & Semester</p>
+                                    <p className="text-white text-base">{selectedStudent.course_name || '-'}</p>
+                                    <p className="text-gray-400 text-sm mt-0.5">Semester: {selectedStudent.current_semester || selectedStudent.semester}</p>
                                 </div>
                                 <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Parental / Guardian Mapping</p>
-                                    <p className="text-white text-base">{selectedStudent.parent || "Data not on file"}</p>
-                                    <p className="text-gray-400 text-sm mt-0.5">Relation: Parent</p>
+                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Batch & Gender</p>
+                                    <p className="text-white text-base">Batch: {selectedStudent.batch || 'N/A'}</p>
+                                    <p className="text-gray-400 text-sm mt-0.5">{selectedStudent.gender || 'Not specified'}</p>
+                                </div>
+                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
+                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Father / Guardian</p>
+                                    <p className="text-white text-base">{selectedStudent.father_name || selectedStudent.parent || "Data not on file"}</p>
+                                    <p className="text-gray-400 text-sm mt-0.5">Relation: Father</p>
                                 </div>
                                 <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">System Comm Email</p>
@@ -318,11 +483,11 @@ const Students = () => {
                                 </div>
                                 <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Date of Birth</p>
-                                    <p className="text-white text-sm">{selectedStudent.dob || "Unknown"}</p>
+                                    <p className="text-white text-sm">{selectedStudent.date_of_birth || selectedStudent.dob || "Unknown"}</p>
                                 </div>
-                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
+                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm md:col-span-2">
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Declared Address</p>
-                                    <p className="text-white text-sm line-clamp-2">{selectedStudent.address || "No address traced."}</p>
+                                    <p className="text-white text-sm">{selectedStudent.address || "No address traced."}</p>
                                 </div>
                             </div>
                             

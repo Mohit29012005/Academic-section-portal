@@ -1,239 +1,209 @@
-"""
-Face Recognition Engine for AI Attendance System.
-
-Uses face_recognition (dlib-based) + OpenCV.
-All image I/O is via base64 strings to stay API-friendly.
-"""
 import os
-import pickle
 import base64
-import logging
 import numpy as np
-from datetime import date
+import cv2
+from PIL import Image
+from deepface import DeepFace
 from django.conf import settings
 
-logger = logging.getLogger(__name__)
+ENCODINGS_DIR = os.path.join(settings.MEDIA_ROOT, "face_encodings")
+SNAPSHOTS_DIR = os.path.join(settings.MEDIA_ROOT, "attendance_snapshots")
+MODEL_NAME = "VGG-Face"
+SIMILARITY_THRESHOLD = 0.40
 
-# ── Try importing face_recognition & cv2 (may not be installed in dev) ──
-try:
-    import face_recognition
-    import cv2
-    FACE_RECOGNITION_AVAILABLE = True
-except ImportError:
-    face_recognition = None
-    cv2 = None
-    FACE_RECOGNITION_AVAILABLE = False
-    logger.warning(
-        "face_recognition / OpenCV not installed. "
-        "Face-recognition endpoints are disabled until dependencies are installed."
+os.makedirs(ENCODINGS_DIR, exist_ok=True)
+os.makedirs(SNAPSHOTS_DIR, exist_ok=True)
+
+
+def decode_base64_image(b64_string):
+    """Convert base64 string from browser to numpy RGB array."""
+    try:
+        if "," in b64_string:
+            b64_string = b64_string.split(",")[1]
+        img_bytes = base64.b64decode(b64_string.strip())
+        np_arr = np.frombuffer(img_bytes, dtype=np.uint8)
+        bgr = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+        if bgr is None:
+            return None
+        return cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+    except Exception as e:
+        print(f"[face_engine] decode_base64_image error: {e}")
+        return None
+
+
+def get_embedding(rgb_image):
+    """
+    Extract face embedding using DeepFace VGG-Face model.
+    Returns 4096D embedding vector.
+    """
+    import tempfile
+
+    temp_path = None
+    try:
+        pil_img = Image.fromarray(rgb_image)
+        with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
+            temp_path = tmp.name
+            pil_img.save(tmp, format="JPEG")
+
+        result = DeepFace.represent(
+            img_path=temp_path,
+            model_name=MODEL_NAME,
+            enforce_detection=True,
+            detector_backend="opencv",
+        )
+
+        if result and len(result) > 0:
+            embedding = np.array(result[0]["embedding"], dtype=np.float32)
+            embedding = embedding / np.linalg.norm(embedding)
+            return embedding
+        return None
+    except Exception as e:
+        print(f"[face_engine] get_embedding error: {e}")
+        return None
+    finally:
+        if temp_path and os.path.exists(temp_path):
+            try:
+                os.unlink(temp_path)
+            except:
+                pass
+
+
+def cosine_similarity(vec1, vec2):
+    """Cosine similarity between two vectors."""
+    norm1 = np.linalg.norm(vec1)
+    norm2 = np.linalg.norm(vec2)
+    if norm1 == 0 or norm2 == 0:
+        return 0.0
+    return float(np.dot(vec1, vec2) / (norm1 * norm2))
+
+
+def register_face(student_id, base64_images):
+    """
+    Registration flow:
+    1. Take 3-5 base64 images from browser webcam
+    2. Extract face embedding from each using VGG-Face
+    3. Average all valid embeddings into one master vector
+    4. Save as {student_id}.npy in ENCODINGS_DIR
+    """
+    embeddings = []
+    failed_indices = []
+
+    for idx, b64 in enumerate(base64_images):
+        rgb = decode_base64_image(b64)
+        if rgb is None:
+            failed_indices.append(idx + 1)
+            continue
+
+        embedding = get_embedding(rgb)
+        if embedding is None:
+            failed_indices.append(idx + 1)
+            continue
+
+        embeddings.append(embedding)
+        print(
+            f"[face_engine] Registered sample {idx + 1}: embedding shape {embedding.shape}"
+        )
+
+    if len(embeddings) < 2:
+        return {
+            "success": False,
+            "message": f"Only {len(embeddings)} valid face(s) found. Ensure good lighting and face clearly visible.",
+            "encoding_count": len(embeddings),
+            "failed_indices": failed_indices,
+        }
+
+    master_embedding = np.mean(embeddings, axis=0)
+    master_embedding = master_embedding / np.linalg.norm(master_embedding)
+
+    npy_path = os.path.join(ENCODINGS_DIR, f"{student_id}.npy")
+    np.save(npy_path, master_embedding)
+    print(
+        f"[face_engine] Saved embedding for {student_id} with {len(embeddings)} samples"
     )
-
-TOLERANCE = 0.6          # face_recognition distance threshold (0.5 is strict, 0.6 is standard)
-MIN_CONFIDENCE = 40.0    # 1.0 - 0.6 = 0.4 (40%)
-ENCODING_DIR = os.path.join(settings.MEDIA_ROOT, 'face_encodings')
-REG_PHOTO_DIR = os.path.join(settings.MEDIA_ROOT, 'registered_faces')
-SNAPSHOT_BASE = os.path.join(settings.MEDIA_ROOT, 'attendance_snapshots')
-os.makedirs(ENCODING_DIR, exist_ok=True)
-os.makedirs(REG_PHOTO_DIR, exist_ok=True)
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Helpers
-# ─────────────────────────────────────────────────────────────────────────────
-
-def _b64_to_file(b64_string: str, path: str):
-    """Save base64 string directly to an image file."""
-    if ',' in b64_string:
-        b64_string = b64_string.split(',', 1)[1]
-    img_bytes = base64.b64decode(b64_string)
-    with open(path, 'wb') as f:
-        f.write(img_bytes)
-    return True
-
-def _b64_to_np(b64_string: str) -> np.ndarray:
-    """Decode a base64 image string to a NumPy RGB array."""
-    if ',' in b64_string:
-        b64_string = b64_string.split(',', 1)[1]
-    img_bytes = base64.b64decode(b64_string)
-    img_array = np.frombuffer(img_bytes, dtype=np.uint8)
-    img_bgr = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-    if img_bgr is None:
-        raise ValueError("Could not decode image from base64 data.")
-    return cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
-
-
-def _encoding_path(student_id: str) -> str:
-    return os.path.join(ENCODING_DIR, f"{student_id}.pkl")
-
-
-def _snapshot_path(student_id: str) -> str:
-    today = date.today().isoformat()
-    directory = os.path.join(SNAPSHOT_BASE, today)
-    os.makedirs(directory, exist_ok=True)
-    return os.path.join(directory, f"{student_id}.jpg"), f"attendance_snapshots/{today}/{student_id}.jpg"
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Registration
-# ─────────────────────────────────────────────────────────────────────────────
-
-def register_face_encodings(student_id: str, b64_images: list) -> dict:
-    """
-    Extract face encodings from 5 base64 images and save as .pkl.
-
-    Returns:
-        {"success": bool, "encoding_count": int, "message": str, "encoding_path": str}
-    """
-    if not FACE_RECOGNITION_AVAILABLE:
-        return {
-            "success": False,
-            "encoding_count": 0,
-            "message": "Face engine unavailable on server. Contact admin.",
-            "encoding_path": None,
-        }
-
-    encodings = []
-    errors = []
-
-    for idx, b64 in enumerate(b64_images):
-        try:
-            rgb = _b64_to_np(b64)
-            locs = face_recognition.face_locations(rgb, model='hog')
-            if not locs:
-                errors.append(f"Image {idx + 1}: No face detected.")
-                continue
-            enc_list = face_recognition.face_encodings(rgb, known_face_locations=locs)
-            if enc_list:
-                encodings.append(enc_list[0])
-            else:
-                errors.append(f"Image {idx + 1}: Could not encode face.")
-        except Exception as e:
-            errors.append(f"Image {idx + 1}: {str(e)}")
-
-    if not encodings:
-        return {
-            "success": False,
-            "encoding_count": 0,
-            "message": f"No valid face encodings extracted. Errors: {'; '.join(errors)}",
-            "encoding_path": None,
-        }
-
-    pkl_path = _encoding_path(student_id)
-    with open(pkl_path, 'wb') as f:
-        pickle.dump(encodings, f)
-
-    msg = f"Saved {len(encodings)} face encodings."
-    if errors:
-        msg += f" Warnings: {'; '.join(errors)}"
 
     return {
         "success": True,
-        "encoding_count": len(encodings),
-        "message": msg,
-        "encoding_path": f"face_encodings/{student_id}.pkl",
+        "message": f"Face registered with {len(embeddings)} samples.",
+        "encoding_count": len(embeddings),
+        "encoding_path": npy_path,
+        "failed_indices": failed_indices,
     }
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Recognition
-# ─────────────────────────────────────────────────────────────────────────────
+def recognize_face(b64_frame, session_id=None):
+    """Compare face against stored embeddings and return best match."""
+    rgb = decode_base64_image(b64_frame)
+    if rgb is None:
+        return {"status": "error", "message": "Cannot decode frame"}
 
-def _load_all_encodings() -> dict[str, list]:
-    """
-    Load all stored .pkl files from ENCODING_DIR.
-
-    Returns:
-        {student_id: [encoding_array, ...]}
-    """
-    all_enc = {}
-    if not os.path.isdir(ENCODING_DIR):
-        return all_enc
-    for fname in os.listdir(ENCODING_DIR):
-        if fname.endswith('.pkl'):
-            sid = fname[:-4]
-            try:
-                with open(os.path.join(ENCODING_DIR, fname), 'rb') as f:
-                    all_enc[sid] = pickle.load(f)
-            except Exception as e:
-                logger.error(f"Failed to load encoding for {sid}: {e}")
-    return all_enc
-
-
-def recognize_face(b64_frame: str, encodings_map: dict = None) -> dict:
-    """
-    Identify a face in a live camera frame.
-
-    Returns:
-        {
-            "success": bool,
-            "student_id": str | None,
-            "confidence_score": float,   # 0-100
-            "status": "present" | "unknown",
-            "snapshot_rel_path": str | None,
-            "error": str | None,
-        }
-    """
-    if not FACE_RECOGNITION_AVAILABLE:
+    live_embedding = get_embedding(rgb)
+    if live_embedding is None:
         return {
+            "status": "no_face",
+            "message": "No face detected in frame",
             "recognized": False,
-            "student_id": None,
-            "confidence": 0.0,
-            "message": "Face engine unavailable on server. Contact admin.",
         }
 
-    try:
-        rgb = _b64_to_np(b64_frame)
-    except Exception as e:
-        return {"recognized": False, "student_id": None, "confidence": 0.0, "message": str(e)}
+    best_student_id = None
+    best_score = 0.0
 
-    locs = face_recognition.face_locations(rgb, model='hog')
-    if not locs:
-        return {"recognized": False, "student_id": None, "confidence": 0.0, "message": "No face detected."}
+    npy_files = [f for f in os.listdir(ENCODINGS_DIR) if f.endswith(".npy")]
 
-    live_enc = face_recognition.face_encodings(rgb, known_face_locations=locs)
-    if not live_enc:
-        return {"recognized": False, "student_id": None, "confidence": 0.0, "message": "Could not encode face."}
-
-    live = live_enc[0]
-
-    # Build comparison data from encodings_map or from disk
-    if encodings_map:
-        compare_data = {
-            sid: pickle.load(open(os.path.join(settings.MEDIA_ROOT, info['encoding_path']), 'rb'))
-            for sid, info in encodings_map.items()
-            if os.path.exists(os.path.join(settings.MEDIA_ROOT, info['encoding_path']))
+    if not npy_files:
+        return {
+            "status": "error",
+            "message": "No registered students found.",
+            "recognized": False,
         }
-    else:
-        compare_data = _load_all_encodings()
 
-    best_sid = None
-    best_distance = 1.0
-
-    for sid, stored_list in compare_data.items():
-        distances = face_recognition.face_distance(stored_list, live)
-        if len(distances) == 0:
-            continue
-        min_dist = float(np.min(distances))
-        if min_dist < best_distance:
-            best_distance = min_dist
-            best_sid = sid
-
-    confidence = max(0.0, (1.0 - best_distance) * 100.0)
-    matched = (best_sid is not None) and (best_distance <= TOLERANCE) and (confidence >= MIN_CONFIDENCE)
-
-    snapshot_rel = None
-    if matched:
-        abs_path, snapshot_rel = _snapshot_path(best_sid)
+    for filename in npy_files:
+        student_id = filename.replace(".npy", "")
+        fpath = os.path.join(ENCODINGS_DIR, filename)
         try:
-            bgr = cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
-            cv2.imwrite(abs_path, bgr)
+            stored_embedding = np.load(fpath)
         except Exception as e:
-            logger.warning(f"Snapshot save failed: {e}")
+            print(f"[face_engine] Failed to load {fpath}: {e}")
+            continue
+
+        score = cosine_similarity(live_embedding, stored_embedding)
+        print(
+            f"[face_engine] Compared with {student_id}: score={score:.4f}, threshold={SIMILARITY_THRESHOLD}"
+        )
+
+        if score > best_score:
+            best_score = score
+            best_student_id = student_id
+
+    print(f"[face_engine] Best match: {best_student_id} with score {best_score:.4f}")
+    confidence = round(best_score * 100, 2)
+
+    if best_score < SIMILARITY_THRESHOLD:
+        return {
+            "status": "unknown",
+            "message": "Face not recognized",
+            "confidence": confidence,
+            "recognized": False,
+        }
+
+    from datetime import date
+
+    today = date.today().strftime("%Y-%m-%d")
+    snap_dir = os.path.join(SNAPSHOTS_DIR, today)
+    os.makedirs(snap_dir, exist_ok=True)
+
+    if session_id:
+        snap_path = os.path.join(snap_dir, f"{best_student_id}_{session_id}.jpg")
+    else:
+        snap_path = os.path.join(snap_dir, f"{best_student_id}.jpg")
+
+    bgr = cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
+    cv2.imwrite(snap_path, bgr)
 
     return {
-        "recognized": matched,
-        "student_id": best_sid if matched else None,
-        "confidence": round(confidence, 2),
-        "snapshot_rel_path": snapshot_rel,
-        "message": "Recognized" if matched else "Face not recognized.",
+        "status": "recognized",
+        "student_id": best_student_id,
+        "confidence": confidence,
+        "snapshot_path": f"attendance_snapshots/{today}/{os.path.basename(snap_path)}",
+        "message": "Student recognized",
+        "recognized": True,
     }

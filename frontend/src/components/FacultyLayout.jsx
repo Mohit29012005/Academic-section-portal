@@ -29,6 +29,9 @@ const FacultyLayout = ({ children }) => {
   const userName = profile?.name || user?.name || user?.email || "Faculty";
   const getInitials = (name) => name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'F';
   const initials = getInitials(userName);
+  const avatarUrl = profile?.avatar || user?.avatar 
+    ? (profile?.avatar || user?.avatar) 
+    : `https://ui-avatars.com/api/?name=${encodeURIComponent(userName)}&background=D4AF37&color=8B0000&size=128&font-size=0.4&bold=true`;
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -77,7 +80,7 @@ const FacultyLayout = ({ children }) => {
     { name: "Dashboard", icon: LayoutDashboard, path: "/faculty/dashboard" },
     { name: "AI Attendance", icon: Camera, path: "/faculty/attendance" },
     { name: "Timetable", icon: Calendar, path: "/faculty/timetable" },
-    { name: "Exam Papers", icon: FileText, path: "/faculty/exam-papers" },
+    { name: "PYQs", icon: FileText, path: "/faculty/pyqs" },
     { name: "Profile", icon: User, path: "/faculty/profile" },
   ];
 
@@ -142,9 +145,13 @@ const FacultyLayout = ({ children }) => {
             <div className="relative flex-shrink-0" ref={profileRef}>
               <button
                 onClick={() => setShowProfileMenu(!showProfileMenu)}
-                className="w-9 h-9 min-w-9 rounded-full bg-[var(--gu-gold)] text-[var(--gu-red-deep)] flex items-center justify-center font-bold text-sm"
+                className="w-9 h-9 min-w-9 rounded-full overflow-hidden bg-[var(--gu-gold)] flex items-center justify-center"
               >
-                {initials}
+                <img 
+                  src={avatarUrl} 
+                  alt={userName} 
+                  className="w-full h-full object-cover"
+                />
               </button>
               {showProfileMenu && (
                 <div className="absolute right-0 mt-2 w-48 bg-[var(--gu-red-card)] border border-[var(--gu-gold)] shadow-2xl z-50 py-1">

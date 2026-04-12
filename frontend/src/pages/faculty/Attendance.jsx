@@ -34,11 +34,23 @@ const Attendance = () => {
                 ]);
                 const subjects = dashRes.data.subjects || [];
                 setFacultySubjects(subjects);
-                setCourses(courseRes.data);
+                
+                // Filter courses to only those associated with the faculty's assigned subjects
+                const assignedCourseIds = new Set(subjects.map(s => s.course_id));
+                const allCourses = courseRes.data;
+                const assignedCourses = allCourses.filter(c => assignedCourseIds.has(c.course_id));
+                
+                // Default to all courses if for some reason nothing is assigned (admin override) or no course_id was passed
+                setCourses(assignedCourses.length > 0 ? assignedCourses : allCourses);
 
                 // If faculty has only one subject, auto-select it
                 if (subjects.length === 1) {
                     setSelectedSubject(subjects[0].subject_id);
+                }
+                
+                // If faculty has only one course, auto-select it
+                if (assignedCourses.length === 1) {
+                    setSelectedCourse(assignedCourses[0].course_id);
                 }
             } catch (err) {
                 console.error('Failed to fetch initial data:', err);

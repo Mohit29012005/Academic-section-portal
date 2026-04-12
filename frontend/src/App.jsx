@@ -11,6 +11,7 @@ import AdminCourses from './pages/admin/Courses';
 import AdminTimetable from './pages/admin/Timetable';
 import AcademicCycle from './pages/admin/AcademicCycle';
 import Notifications from './pages/admin/Notifications';
+import AdminPYQs from './pages/admin/PYQs';
 
 import Academics from './pages/Academics';
 import About from './pages/About';
@@ -23,10 +24,11 @@ import StudentProfile from './pages/student/Profile';
 import StudentPYQs from './pages/student/PYQs';
 import CareerGuidance from './pages/student/Career_Guidance';
 import AIAttendancePage from './pages/student/AIAttendancePage';
-import MarkAttendanceQR from './pages/student/MarkAttendanceQR';
+import AttendanceCamera from './pages/student/AttendanceCamera';
+import QRAttendance from './pages/student/QRAttendance';
 
 import FacultyDashboard from './pages/faculty/Dashboard';
-import FacultyExams from './pages/faculty/Exams';
+import FacultyPYQs from './pages/faculty/PYQs';
 import FacultyTimetable from './pages/faculty/Timetable';
 import FacultyProfile from './pages/faculty/Profile';
 import FacultySchedule from './pages/faculty/Schedule';
@@ -66,11 +68,13 @@ function App() {
           <Route path="/admin/timetable" element={<AdminTimetable />} />
           <Route path="/admin/academic-cycle" element={<AcademicCycle />} />
           <Route path="/admin/notifications" element={<Notifications />} />
+          <Route path="/admin/pyqs" element={<AdminPYQs />} />
           <Route path="/admin/student-face-status" element={<StudentFaceStatus />} />
 
-          {/* AI Attendance Onboarding & Public QR */}
+          {/* AI Attendance */}
           <Route path="/student/attendance-setup" element={<StudentRoute><AIAttendancePage /></StudentRoute>} />
-          <Route path="/student/mark-attendance/:qr_token" element={<MarkAttendanceQR />} />
+          <Route path="/student/attendance-camera" element={<StudentRoute><AttendanceCamera /></StudentRoute>} />
+          <Route path="/student/mark-attendance/:qr_token" element={<QRAttendance />} />
 
           {/* Student Routes — guarded */}
           <Route path="/student/dashboard" element={<StudentRoute><StudentDashboard /></StudentRoute>} />
@@ -85,7 +89,7 @@ function App() {
           <Route path="/faculty/dashboard" element={<FacultyDashboard />} />
           <Route path="/faculty/attendance" element={<AIAttendanceHub />} />
           <Route path="/faculty/ai-attendance" element={<AIAttendanceHub />} />
-          <Route path="/faculty/exam-papers" element={<FacultyExams />} />
+          <Route path="/faculty/pyqs" element={<FacultyPYQs />} />
           <Route path="/faculty/timetable" element={<FacultyTimetable />} />
           <Route path="/faculty/schedule" element={<FacultySchedule />} />
           <Route path="/faculty/profile" element={<FacultyProfile />} />

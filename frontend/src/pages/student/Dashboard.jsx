@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import StudentLayout from "../../components/StudentLayout";
-import { CheckCircle, Calendar, Award, Clock, Bell, BookOpen, AlertCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, Calendar, Award, Clock, Bell, BookOpen, AlertCircle, ArrowRight, Camera } from "lucide-react";
 import { studentAPI, attendanceAI } from "../../services/api";
 import { Link } from "react-router-dom";
 
@@ -90,6 +90,46 @@ const Dashboard = () => {
               <span>&middot; Enrollment: {data.student?.enrollment_no}</span>
             </p>
             <p className="text-white opacity-60 text-sm">{today}</p>
+          </div>
+
+          {/* Quick Actions */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <Link to="/student/attendance-camera" className="group">
+              <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-5 rounded-sm hover:border-emerald-500/50 transition-all flex flex-col items-center text-center gap-2">
+                <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors">
+                  <Camera className="w-5 h-5 text-emerald-400" />
+                </div>
+                <span className="text-white text-sm font-medium">Mark Attendance</span>
+                <span className="text-white/40 text-xs">AI Face Recognition</span>
+              </div>
+            </Link>
+            <Link to="/student/attendance-setup" className="group">
+              <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-5 rounded-sm hover:border-[var(--gu-gold)]/50 transition-all flex flex-col items-center text-center gap-2">
+                <div className="w-10 h-10 bg-[var(--gu-gold)]/20 rounded-lg flex items-center justify-center group-hover:bg-[var(--gu-gold)]/30 transition-colors">
+                  <Camera className="w-5 h-5 text-[var(--gu-gold)]" />
+                </div>
+                <span className="text-white text-sm font-medium">AI Setup</span>
+                <span className="text-white/40 text-xs">Face Registration</span>
+              </div>
+            </Link>
+            <Link to="/student/attendance" className="group">
+              <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-5 rounded-sm hover:border-[var(--gu-gold)]/50 transition-all flex flex-col items-center text-center gap-2">
+                <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+                  <CheckCircle className="w-5 h-5 text-blue-400" />
+                </div>
+                <span className="text-white text-sm font-medium">Attendance</span>
+                <span className="text-white/40 text-xs">View Records</span>
+              </div>
+            </Link>
+            <Link to="/student/timetable" className="group">
+              <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-5 rounded-sm hover:border-[var(--gu-gold)]/50 transition-all flex flex-col items-center text-center gap-2">
+                <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
+                  <Calendar className="w-5 h-5 text-purple-400" />
+                </div>
+                <span className="text-white text-sm font-medium">Timetable</span>
+                <span className="text-white/40 text-xs">Class Schedule</span>
+              </div>
+            </Link>
           </div>
 
           {/* AI Attendance Setup Banner */}

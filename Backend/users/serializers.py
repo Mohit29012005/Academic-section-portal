@@ -5,8 +5,8 @@ from .models import User, Student, Faculty, Admin, Notification
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['user_id', 'email', 'role', 'is_active', 'created_at', 'updated_at']
-        read_only_fields = ['user_id', 'created_at', 'updated_at']
+        fields = ["user_id", "email", "role", "is_active", "created_at", "updated_at"]
+        read_only_fields = ["user_id", "created_at", "updated_at"]
 
 
 class LoginSerializer(serializers.Serializer):
@@ -15,63 +15,135 @@ class LoginSerializer(serializers.Serializer):
 
 
 class StudentSerializer(serializers.ModelSerializer):
-    course_code = serializers.CharField(source='course.code', read_only=True)
-    course_name = serializers.CharField(source='course.name', read_only=True)
+    course_code = serializers.CharField(
+        source="course.code", read_only=True, allow_null=True
+    )
+    course_name = serializers.CharField(
+        source="course.name", read_only=True, allow_null=True
+    )
+    course_id = serializers.SerializerMethodField()
 
     class Meta:
         model = Student
         fields = [
-            'student_id', 'enrollment_no', 'name', 'email', 'phone',
-            'course', 'course_code', 'course_name', 'semester',
-            'current_semester', 'total_semesters', 'cgpa', 'status', 'avatar',
-            'is_face_registered',
-            'created_at', 'updated_at'
+            "student_id",
+            "enrollment_no",
+            "name",
+            "email",
+            "phone",
+            "course",
+            "course_id",
+            "course_code",
+            "course_name",
+            "semester",
+            "current_semester",
+            "total_semesters",
+            "cgpa",
+            "status",
+            "avatar",
+            "is_face_registered",
+            "date_of_birth",
+            "gender",
+            "father_name",
+            "address",
+            "batch",
+            "admission_year",
+            "branch",
+            "created_at",
+            "updated_at",
         ]
-        read_only_fields = ['student_id', 'created_at', 'updated_at']
+        read_only_fields = ["student_id", "created_at", "updated_at"]
+
+    def get_course_id(self, obj):
+        return str(obj.course.course_id) if obj.course else None
 
 
 class StudentProfileUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ['name', 'phone', 'avatar']
+        fields = [
+            "gender",
+            "avatar",
+        ]
 
 
 class FacultySerializer(serializers.ModelSerializer):
     subjects_list = serializers.SerializerMethodField()
+    subjects_count = serializers.SerializerMethodField()
 
     class Meta:
         model = Faculty
         fields = [
-            'faculty_id', 'employee_id', 'name', 'email', 'phone',
-            'department', 'status', 'subjects', 'subjects_list', 'avatar',
-            'created_at', 'updated_at'
+            "faculty_id",
+            "employee_id",
+            "name",
+            "email",
+            "phone",
+            "department",
+            "status",
+            "subjects",
+            "subjects_list",
+            "subjects_count",
+            "working_shift",
+            "avatar",
+            "gender",
+            "date_of_birth",
+            "address",
+            "designation",
+            "qualification",
+            "experience_years",
+            "branch",
+            "created_at",
+            "updated_at",
         ]
-        read_only_fields = ['faculty_id', 'created_at', 'updated_at']
+        read_only_fields = ["faculty_id", "created_at", "updated_at"]
 
     def get_subjects_list(self, obj):
-        return [{'subject_id': str(s.subject_id), 'code': s.code, 'name': s.name} for s in obj.subjects.all()]
+        subjects = obj.subjects.all()
+        return [
+            {
+                "subject_id": str(s.subject_id),
+                "code": s.code,
+                "name": s.name,
+                "semester": s.semester,
+                "course": s.course.code if s.course else None,
+                "campus_branch": s.campus_branch,
+            }
+            for s in subjects
+        ]
+
+    def get_subjects_count(self, obj):
+        return obj.subjects.count()
 
 
 class FacultyProfileUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Faculty
-        fields = ['name', 'phone', 'avatar']
+        fields = [
+            "gender",
+            "avatar",
+        ]
 
 
 class AdminSerializer(serializers.ModelSerializer):
     class Meta:
         model = Admin
         fields = [
-            'admin_id_pk', 'admin_id', 'name', 'email', 'phone',
-            'created_at', 'updated_at'
+            "admin_id_pk",
+            "admin_id",
+            "name",
+            "email",
+            "phone",
+            "created_at",
+            "updated_at",
         ]
-        read_only_fields = ['admin_id_pk', 'created_at', 'updated_at']
+        read_only_fields = ["admin_id_pk", "created_at", "updated_at"]
 
 
 class CreateUserSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField(write_only=True)
-    role = serializers.ChoiceField(choices=['student', 'faculty', 'admin'])
+    role = serializers.ChoiceField(choices=["student", "faculty", "admin"])
     name = serializers.CharField()
     phone = serializers.CharField(required=False, allow_blank=True)
     # Student fields
@@ -93,4 +165,4 @@ class PasswordResetSerializer(serializers.Serializer):
 class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notification
-        fields = '__all__'
+        fields = "__all__"

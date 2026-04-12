@@ -112,7 +112,8 @@ const Courses = () => {
                             <tr className="bg-[#3D0F0F] border-b border-[var(--gu-border)]">
                                 <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Track ID</th>
                                 <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Program Nomenclature</th>
-                                <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Base Duration</th>
+                                <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Students</th>
+                                <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Duration</th>
                                 <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Type</th>
                                 <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Status</th>
                                 <th className="py-4 px-6 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold text-right">Actions</th>
@@ -121,13 +122,13 @@ const Courses = () => {
                         <tbody className="divide-y divide-[rgba(255,255,255,0.05)]">
                             {loading ? (
                                 <tr>
-                                    <td colSpan="6" className="py-8 text-center text-[var(--gu-gold)]">
+                                    <td colSpan="7" className="py-8 text-center text-[var(--gu-gold)]">
                                         <Loader className="w-8 h-8 animate-spin mx-auto" />
                                     </td>
                                 </tr>
                             ) : error ? (
                                 <tr>
-                                    <td colSpan="6" className="py-8 text-center bg-[rgba(239,68,68,0.05)] border-y border-[rgba(239,68,68,0.2)]">
+                                    <td colSpan="7" className="py-8 text-center bg-[rgba(239,68,68,0.05)] border-y border-[rgba(239,68,68,0.2)]">
                                         <AlertTriangle className="w-8 h-8 mx-auto mb-3 text-red-500" />
                                         <p className="text-red-400 font-semibold mb-1">Database Connectivity Interrupted</p>
                                         <p className="text-red-300 text-xs opacity-80">{error}</p>
@@ -135,7 +136,7 @@ const Courses = () => {
                                 </tr>
                             ) : coursesData.length === 0 ? (
                                 <tr>
-                                    <td colSpan="6" className="py-8 text-center text-gray-500">No programs mapped.</td>
+                                    <td colSpan="7" className="py-8 text-center text-gray-500">No programs mapped.</td>
                                 </tr>
                             ) : (
                                 coursesData.map((course, i) => (
@@ -144,6 +145,15 @@ const Courses = () => {
                                         <td className="py-4 px-6 text-white font-medium">
                                             {course.name}
                                             <div className="text-xs text-gray-400 font-normal mt-0.5">{course.department}</div>
+                                        </td>
+                                        <td className="py-4 px-6">
+                                            <span className={`inline-flex items-center px-2.5 py-1 text-sm font-bold rounded-sm ${
+                                                (course.student_count || 0) > 0 
+                                                    ? 'bg-green-400/10 text-green-400' 
+                                                    : 'bg-gray-400/10 text-gray-400'
+                                            }`}>
+                                                {course.student_count || 0}
+                                            </span>
                                         </td>
                                         <td className="py-4 px-6 text-sm text-gray-300">{course.duration} Years</td>
                                         <td className="py-4 px-6 text-sm text-gray-300">{course.level || "N/A"}</td>

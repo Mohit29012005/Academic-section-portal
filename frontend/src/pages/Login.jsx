@@ -73,18 +73,7 @@ const Login = () => {
       }
 
       if (user.role === "student") {
-        const isFaceRegistered = profile?.is_face_registered === true;
-        localStorage.setItem("face_registered", isFaceRegistered ? "true" : "false");
-
-        if (!isFaceRegistered) {
-          // ✅ Show face registration as Step 2 — INLINE in login page
-          setPendingStudentId(profile?.student_id || null);
-          setStep(2);
-          setLoading(false);
-          // Start camera immediately
-          await startCamera();
-          return;
-        }
+        // Face registration requirement removed - skip directly to dashboard
         navigate("/student/dashboard", { replace: true });
       } else if (user.role === "faculty") {
         navigate("/faculty/dashboard", { replace: true });
