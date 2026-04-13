@@ -97,20 +97,62 @@ const FacultyPYQs = () => {
       const response = await academicsAPI.pyqSearch({ subject_id: subjectId });
       const dbQuestions = response.data;
       
-      const formatText = (text) => {
-          if (!text) return "";
-          let clean = text;
-          // Add line breaks before bullet markers like [A], (B), a) to break up giant scraped paragraphs
-          clean = clean.replace(/\s(\[[a-zA-Z0-9]\]|\([a-zA-Z0-9]\)|[a-zA-Z0-9]\))/g, '\n$1');
-          clean = clean.replace(/\s(Q[0-9]+(\.|\-))/gi, '\n\n$1');
-          return clean.trim();
+      const processRawText = (text) => {
+          if (!text) return [];
+          
+          // 1. Initial cleanup of high-level headers
+          let clean = text.replace(/SECTION-[I|V]+|Answer the following|Any [a-zA-Z0-9]+ out of [a-zA-Z0-9]+|GANPAT UNIVERSITY|END OF THE PAPER|\[06\]|MARKS\s*\d+/gi, "");
+          
+          // 2. Split by markers: [A], (B), {C}, 1), Q1, etc.
+          const markerRegex = /\s*(\[[a-zA-Z0-9]\]|\([a-zA-Z0-9]\)|\{[a-zA-Z0-9]\}|[a-zA-Z0-9][\)\.\]]|Q-[0-9]+|Q[0-9]+)\s*/g;
+          let segments = clean.split(markerRegex);
+          
+          let subQuestions = [];
+          for (let seg of segments) {
+              let s = seg.trim();
+              if (!s || s.length < 5) continue;
+              
+              // Skip if it's just a marker
+              if (s.match(/^(\[[a-zA-Z0-9]\]|\([a-zA-Z0-9]\)|\{[a-zA-Z0-9]\}|[a-zA-Z0-9][\)\.\]]|Q-[0-9]+|Q[0-9]+)$/)) continue;
+
+              // 3. Further split segments by Question Marks followed by Capital Letters
+              let subParts = s.split(/\?\s+(?=[A-Z])/);
+              for (let part of subParts) {
+                  let p = part.trim();
+                  if (p.endsWith("?")) p = p.slice(0, -1); // Temporarily remove for further processing
+                  
+                  // 4. Split by start-keywords if string is still very long
+                  // Look for "Explain", "What is", "Write a", "Discuss", "Describe", "Draw" in the middle
+                  let keywords = p.split(/\s+(?=Explain|What is|Write a|Discuss|Describe|Draw|Define|List out|State the)/);
+                  
+                  for (let kwPart of keywords) {
+                      let finalQ = kwPart.trim();
+                      if (finalQ.length > 15) {
+                          // Add back question mark if it was there or looks like a question
+                          if (finalQ.toLowerCase().startsWith("what") || finalQ.toLowerCase().startsWith("how")) {
+                              if (!finalQ.endsWith("?")) finalQ += "?";
+                          }
+                          subQuestions.push(finalQ);
+                      }
+                  }
+              }
+          }
+
+          return subQuestions.filter(q => q.length > 20 && !q.match(/^Any [a-zA-Z]+$/i));
       };
       
       let questions = [];
       if (Array.isArray(dbQuestions) && dbQuestions.length > 0) {
-        questions = dbQuestions.map(q => formatText(q.question_text));
+        questions = dbQuestions.flatMap(q => processRawText(q.question_text));
       } else {
-        questions = fallbackQuestions.general.map(q => formatText(q));
+        questions = fallbackQuestions.general;
+      }
+
+      // Final unique questions check
+      questions = [...new Set(questions)];
+
+      if (questions.length < 5) {
+          questions = [...questions, ...fallbackQuestions.general];
       }
 
 
@@ -324,7 +366,7 @@ const FacultyPYQs = () => {
                   <label className="text-[10px] uppercase tracking-widest text-white/50">Semester</label>
                   <select value={semester} onChange={handleSemesterChange} disabled={!course} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none disabled:opacity-30">
                     <option value="">Select Sem...</option>
-                    {Array.from({ length: courses.find(c => c.course_id === course)?.total_semesters || 10 }, (_, i) => i + 1).map((s) => (
+                    {Array.from({ length: Math.max(0, (courses.find(c => c.course_id === course)?.total_semesters || 10) - 1) }, (_, i) => i + 1).map((s) => (
                       <option key={`sem-${s}`} value={s}>
                         Semester {s}
                       </option>
@@ -333,25 +375,33 @@ const FacultyPYQs = () => {
                </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="mb-8">
                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-white/50">Subject</label>
-                  <select value={subjectId} onChange={(e) => setSubjectId(e.target.value)} disabled={!semester} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none disabled:opacity-30">
+                  <label className="text-[10px] uppercase tracking-widest text-white/50">Subject Selection</label>
+                  <select 
+                    value={subjectId} 
+                    onChange={(e) => setSubjectId(e.target.value)} 
+                    disabled={!semester} 
+                    className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none disabled:opacity-30"
+                  >
                     <option value="">Select Subject...</option>
                     {subjects.map((s) => (
                       <option key={`sub-${s.subject_id}`} value={s.subject_id}>
-                        [{s.code}] {s.name}
+                        {s.code} - {s.name}
                       </option>
                     ))}
                   </select>
                </div>
-               <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-white/50">Exam Type</label>
+            </div>
+
+            <div className="mb-8">
+                <div className="space-y-2">
+                  <label className="text-[10px] uppercase tracking-widest text-white/50">Exam Mode</label>
                   <select value={examType} onChange={(e) => setExamType(e.target.value)} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none">
-                    <option value="external">External (60)</option>
-                    <option value="internal">Internal (30)</option>
+                    <option value="external">External (60 Marks)</option>
+                    <option value="internal">Internal (30 Marks)</option>
                   </select>
-               </div>
+                </div>
             </div>
 
             <button 

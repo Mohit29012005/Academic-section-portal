@@ -160,6 +160,9 @@ class Faculty(models.Model):
     is_class_teacher = models.BooleanField(
         default=False, help_text="Whether this faculty is a class teacher"
     )
+    is_hod = models.BooleanField(
+        default=False, help_text="Whether this faculty is Head of Department"
+    )
     class_course = models.ForeignKey(
         "academics.Course",
         on_delete=models.SET_NULL,
