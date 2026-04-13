@@ -1,0 +1,41 @@
+{
+  "Coursera_Python_for_Data_Science": {
+    "course_title": "Python for Data Science",
+    "platform": "Coursera",
+    "url": "https://coursera.org/python-ds",
+    "status": "In Progress",
+    "progress_percentage": 75,
+    "start_date": "2025-09-12T07:59:48.063236",
+    "completion_date": null,
+    "notes": "Great course, almost done!",
+    "estimated_completion": null,
+    "actual_hours_spent": 15,
+    "rating": 4
+  },
+  "Udemy_React_Complete_Guide": {
+    "course_title": "React Complete Guide",
+    "platform": "Udemy",
+    "url": "https://udemy.com/react-complete",
+    "status": "Completed",
+    "progress_percentage": 100,
+    "start_date": null,
+    "completion_date": "2025-09-12T07:59:48.063939",
+    "notes": "Excellent course, highly recommend!",
+    "estimated_completion": null,
+    "actual_hours_spent": 25,
+    "rating": 5
+  },
+  "Coursera_AWS_Fundamentals": {
+    "course_title": "AWS Fundamentals",
+    "platform": "Coursera",
+    "url": "https://coursera.org/aws-fundamentals",
+    "status": "Not Started",
+    "progress_percentage": 0,
+    "start_date": null,
+    "completion_date": null,
+    "notes": "",
+    "estimated_completion": null,
+    "actual_hours_spent": 0,
+    "rating": null
+  }
+}

@@ -499,43 +499,46 @@ const Exams = () => {
     // ─────────────────────────────────────────────
     return (
         <FacultyLayout>
-            <div className="animate-fade-in max-w-5xl mx-auto">
+            <div className="animate-fade-in max-w-7xl mx-auto space-y-10 relative z-10 px-4">
 
-                {/* Page Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-[var(--gu-gold)] pb-6 mb-8 gap-4">
-                    <div className="min-w-0">
-                        <h1 className="font-serif text-2xl md:text-3xl text-white mb-2">Exam Papers</h1>
-                        <p className="text-[var(--gu-gold)] text-xs md:text-sm uppercase tracking-wider font-semibold">
-                            Create and manage examination papers
-                        </p>
+                {/* Header Section */}
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-[var(--gu-red-deep)]/40 p-10 rounded-3xl border border-[var(--gu-gold)]/10 backdrop-blur-md shadow-2xl relative overflow-hidden group">
+                    <div className="relative z-10">
+                        <h1 className="font-serif text-4xl md:text-5xl text-white mb-3 tracking-tight">
+                            Assessment Intelligence
+                        </h1>
+                        <div className="flex flex-wrap items-center gap-4 text-[var(--gu-gold)] text-[10px] uppercase font-black tracking-[0.4em] opacity-80">
+                            <span>GANPAT UNIVERSITY</span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]/30"></span>
+                            <span>Evaluation Architecture</span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]/30"></span>
+                            <span>Cognitive Engine v4.0</span>
+                        </div>
                     </div>
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--gu-gold)]/5 rounded-full blur-3xl -mr-32 -mt-32 group-hover:bg-[var(--gu-gold)]/10 transition-colors duration-1000"></div>
                 </div>
 
-                {/* Tabs */}
-                <div className="flex gap-0 mb-8 border-b border-[var(--gu-border)]">
+                {/* Cinematic Tabs */}
+                <div className="flex flex-wrap gap-4 p-2 bg-black/40 backdrop-blur-md border border-white/5 rounded-3xl w-fit">
                     <button
                         onClick={() => setActiveTab('list')}
-                        className={`px-6 py-3 text-sm font-bold uppercase tracking-widest border-b-2 transition-colors ${activeTab === 'list'
-                            ? 'border-[var(--gu-gold)] text-[var(--gu-gold)]'
-                            : 'border-transparent text-white opacity-60 hover:opacity-100'
+                        className={`flex items-center gap-3 px-8 py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeTab === 'list'
+                            ? 'bg-[var(--gu-gold)] text-black shadow-lg shadow-[var(--gu-gold)]/20'
+                            : 'text-white/40 hover:text-white hover:bg-white/5'
                         }`}
                     >
-                        <span className="flex items-center gap-2">
-                            <BookOpen size={15} />
-                            Exam List
-                        </span>
+                        <BookOpen className="w-4 h-4" />
+                        Archived Repositories
                     </button>
                     <button
                         onClick={() => setActiveTab('generator')}
-                        className={`px-6 py-3 text-sm font-bold uppercase tracking-widest border-b-2 transition-colors ${activeTab === 'generator'
-                            ? 'border-[var(--gu-gold)] text-[var(--gu-gold)]'
-                            : 'border-transparent text-white opacity-60 hover:opacity-100'
+                        className={`flex items-center gap-3 px-8 py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeTab === 'generator'
+                            ? 'bg-[var(--gu-gold)] text-black shadow-lg shadow-[var(--gu-gold)]/20'
+                            : 'text-white/40 hover:text-white hover:bg-white/5'
                         }`}
                     >
-                        <span className="flex items-center gap-2">
-                            <Sparkles size={15} />
-                            AI Paper Generator
-                        </span>
+                        <Sparkles className="w-4 h-4" />
+                        Cognitive Synthesis
                     </button>
                 </div>
 
@@ -543,60 +546,94 @@ const Exams = () => {
                 {/* TAB 1: EXAM LIST */}
                 {/* ══════════════════════════════════════════════════════ */}
                 {activeTab === 'list' && (
-                    <div>
-                        {/* Exams list */}
-                        <div className="flex justify-between items-center mb-6">
-                            <h2 className="font-serif text-white text-xl border-l-4 border-l-[var(--gu-gold)] pl-3">Your Examination Papers</h2>
+                    <div className="space-y-8 animate-fade-in">
+                        <div className="flex justify-between items-center px-4">
+                            <div className="space-y-1">
+                                <h2 className="text-white font-serif text-2xl tracking-tight">Active Repositories</h2>
+                                <p className="text-[10px] font-black uppercase tracking-widest text-white/20">System contains {examsList.length} verified assessment vectors</p>
+                            </div>
                             <button
                                 onClick={() => setActiveTab('generator')}
-                                className="flex items-center gap-2 bg-[var(--gu-gold)] text-[var(--gu-red-deep)] px-5 py-2 text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-[#e6c949] transition-colors"
+                                className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-3 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] transition-all flex items-center gap-3"
                             >
-                                <Plus size={14} /> Generate New Paper
+                                <Plus className="w-4 h-4 text-[var(--gu-gold)]" />
+                                Synthesize New
                             </button>
                         </div>
 
-                        <div className="grid grid-cols-1 gap-4">
-                            {examsList.length === 0 ? (
-                                <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-12 text-center rounded-sm">
-                                    <FileText className="w-12 h-12 text-white/20 mx-auto mb-4" />
-                                    <p className="text-white opacity-60">No exam papers generated yet.</p>
+                        {listLoading ? (
+                            <div className="py-40 flex flex-col items-center justify-center gap-6">
+                                <div className="relative">
+                                    <div className="w-16 h-16 rounded-full border-4 border-[var(--gu-gold)]/10 animate-ping absolute inset-0"></div>
+                                    <div className="w-16 h-16 rounded-full border-4 border-t-[var(--gu-gold)] animate-spin"></div>
                                 </div>
-                            ) : (
-                                examsList.map((exam) => (
-                                    <div key={exam.id} className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 transition-all hover:border-[var(--gu-gold)]/50 group">
-                                        <div className="min-w-0 flex-1">
-                                            <div className="flex items-center gap-3 mb-2 flex-wrap">
-                                                <h3 className="text-white font-serif text-lg">{exam.title}</h3>
-                                                <span className="bg-white/10 text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-sm border border-white/20">{exam.course}</span>
-                                                <span className={`px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-sm ${exam.status === 'Upcoming' ? 'bg-[var(--gu-gold)] text-[var(--gu-red-deep)]' : 'bg-[#4ade80] text-[var(--gu-red-deep)]'}`}>
-                                                    {exam.status}
-                                                </span>
-                                            </div>
-                                            <div className="text-white opacity-80 text-sm font-medium mb-1">{exam.subject}</div>
-                                            <div className="flex flex-wrap gap-x-4 gap-y-1 text-[var(--gu-gold)] text-xs">
-                                                <div className="flex items-center"><Calendar className="w-3 h-3 mr-1" />{exam.date} {exam.time !== "N/A" && `at ${exam.time}`}</div>
-                                                <span className="text-white opacity-60">Duration: {exam.duration}</span>
-                                                <span className="text-white opacity-60">Marks: {exam.total_marks}</span>
-                                            </div>
+                                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Indexing Archives...</span>
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {examsList.length === 0 ? (
+                                    <div className="col-span-full py-40 glass-panel flex flex-col items-center justify-center text-center space-y-6">
+                                        <div className="w-20 h-20 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-white/20">
+                                            <FileText className="w-10 h-10" />
                                         </div>
-                                        <div className="flex w-full lg:w-auto gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                                            <button 
-                                                onClick={() => handleViewPaper(exam)}
-                                                className="flex-1 lg:flex-none flex items-center justify-center gap-2 bg-white/5 border border-[var(--gu-gold)] text-[var(--gu-gold)] px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-[var(--gu-gold)] hover:text-[var(--gu-red-deep)] transition-all"
-                                            >
-                                                <Eye size={14} /> View
-                                            </button>
-                                            <button 
-                                                onClick={() => handleDeleteExam(exam)}
-                                                className="flex-1 lg:flex-none flex items-center justify-center gap-2 bg-white/5 border border-red-500/50 text-red-400 px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-red-500 hover:text-white transition-all"
-                                            >
-                                                <X size={14} /> Delete
-                                            </button>
-                                        </div>
+                                        <p className="text-white/20 text-[10px] font-black uppercase tracking-[0.4em]">Repository Empty</p>
                                     </div>
-                                ))
-                            )}
-                        </div>
+                                ) : (
+                                    examsList.map((exam) => (
+                                        <div key={exam.id} className="glass-panel p-8 group hover:border-[var(--gu-gold)]/40 transition-all duration-500 overflow-hidden relative">
+                                            <div className="relative z-10">
+                                                <div className="flex justify-between items-start mb-6">
+                                                    <div className="space-y-3">
+                                                        <div className="flex items-center gap-3">
+                                                            <span className="text-[10px] font-black uppercase tracking-widest text-[var(--gu-gold)] bg-[var(--gu-gold)]/10 px-3 py-1 rounded-lg border border-[var(--gu-gold)]/20">
+                                                                {exam.course}
+                                                            </span>
+                                                            <span className="text-[10px] font-black uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-lg border border-emerald-500/20">
+                                                                {exam.status}
+                                                            </span>
+                                                        </div>
+                                                        <h3 className="text-white font-serif text-2xl tracking-tight leading-tight group-hover:text-[var(--gu-gold)] transition-colors">{exam.title}</h3>
+                                                    </div>
+                                                    <div className="flex gap-2">
+                                                        <button 
+                                                            onClick={() => handleViewPaper(exam)}
+                                                            className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-[var(--gu-gold)] hover:border-[var(--gu-gold)]/40 transition-all"
+                                                        >
+                                                            <Eye className="w-5 h-5" />
+                                                        </button>
+                                                        <button 
+                                                            onClick={() => handleDeleteExam(exam)}
+                                                            className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-red-400 hover:border-red-400/40 transition-all"
+                                                        >
+                                                            <X className="w-5 h-5" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div className="space-y-4 pt-4 border-t border-white/5">
+                                                    <div className="text-white/60 text-xs font-bold tracking-tight">{exam.subject}</div>
+                                                    <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+                                                        <div className="flex items-center gap-2">
+                                                            <Calendar className="w-3.5 h-3.5 text-[var(--gu-gold)] opacity-40" />
+                                                            <span className="text-[10px] font-black uppercase tracking-widest text-white/40">{exam.date}</span>
+                                                        </div>
+                                                        <div className="flex items-center gap-2">
+                                                            <Clock className="w-3.5 h-3.5 text-[var(--gu-gold)] opacity-40" />
+                                                            <span className="text-[10px] font-black uppercase tracking-widest text-white/40">{exam.time}</span>
+                                                        </div>
+                                                        <div className="flex items-center gap-2">
+                                                            <Award className="w-3.5 h-3.5 text-[var(--gu-gold)] opacity-40" />
+                                                            <span className="text-[10px] font-black uppercase tracking-widest text-white/40">{exam.total_marks} MARKS</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--gu-gold)]/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                        </div>
+                                    ))
+                                )}
+                            </div>
+                        )}
                     </div>
                 )}
 
@@ -604,197 +641,128 @@ const Exams = () => {
                 {/* TAB 2: AI EXAM PAPER GENERATOR */}
                 {/* ══════════════════════════════════════════════════════ */}
                 {activeTab === 'generator' && (
-                    <div>
+                    <div className="space-y-10 animate-fade-in">
                         {/* Info banner */}
-                        <div className="bg-[var(--gu-red-card)] border border-[var(--gu-gold)]/30 rounded-sm p-4 mb-8 flex gap-3 items-start">
-                            <Sparkles className="text-[var(--gu-gold)] mt-0.5 flex-shrink-0" size={18} />
-                            <div>
-                                <p className="text-white font-semibold text-sm mb-0.5">AI-Powered Exam Paper Generator</p>
-                                <p className="text-white/60 text-xs leading-relaxed">
-                                    Select your course, semester and subject. The system will generate a structured exam paper following the Ganpat University CBCS format, analyse question frequency, and allow you to download a ready-to-print PDF.
+                        <div className="bg-gradient-to-r from-purple-900/40 to-[var(--gu-red-deep)]/40 backdrop-blur-md border border-white/5 p-10 rounded-[2.5rem] flex flex-col md:flex-row gap-8 items-center group relative overflow-hidden shadow-2xl">
+                            <div className="w-24 h-24 rounded-[2rem] bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-1000 relative z-10 shadow-2xl">
+                                <Sparkles className="w-10 h-10 text-[var(--gu-gold)]" />
+                                <div className="absolute inset-0 bg-[var(--gu-gold)]/20 blur-2xl rounded-full scale-50 group-hover:scale-100 transition-transform"></div>
+                            </div>
+                            <div className="flex-1 text-center md:text-left relative z-10">
+                                <h3 className="text-white font-serif text-3xl tracking-tight mb-3">Cognitive Synthesis Engine</h3>
+                                <p className="text-white/40 text-[10px] font-black uppercase tracking-[0.3em] leading-relaxed max-w-2xl">
+                                    Utilize neural evaluation architecture to synthesize structured assessment vectors following GUNI-CBCS standards.
+                                    The engine analyzes question density, difficulty distribution, and pedagogical alignment.
                                 </p>
                             </div>
+                            <div className="absolute bottom-[-50px] left-[-50px] w-64 h-64 bg-purple-500/10 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
                         </div>
 
-                        <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm p-6 md:p-8 space-y-8">
-
-                            {/* ── Row 1: Course + Semester ── */}
-                            <div>
-                                <h3 className="text-[var(--gu-gold)] text-xs uppercase tracking-widest font-bold mb-4 flex items-center gap-2">
-                                    <BookOpen size={14} /> Step 1 — Select Course &amp; Semester
-                                </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">
-                                            Course <span className="text-red-400">*</span>
-                                        </label>
-                                        <select
-                                            value={genCourse}
-                                            onChange={e => setGenCourse(e.target.value)}
-                                            className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] transition-colors appearance-none"
-                                        >
-                                            <option value="">Select Course</option>
-                                            {COURSES.map(c => <option key={c} value={c}>{c}</option>)}
-                                        </select>
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                            {/* Generator Controls */}
+                            <div className="lg:col-span-8 space-y-8 h-full">
+                                <div className="glass-panel p-10 space-y-12">
+                                    {/* Track Selection */}
+                                    <div className="space-y-8">
+                                        <div className="flex items-center gap-4 border-b border-white/5 pb-4">
+                                            <div className="w-8 h-8 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 text-purple-400">
+                                               <BookOpen className="w-4 h-4" />
+                                            </div>
+                                            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Domain Intelligence</h4>
+                                        </div>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                            <div className="space-y-3">
+                                                <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">Program Protocol</label>
+                                                <select
+                                                    value={genCourse}
+                                                    onChange={e => setGenCourse(e.target.value)}
+                                                    className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none transition-all appearance-none cursor-pointer hover:bg-white/10 shadow-lg"
+                                                >
+                                                    <option value="" className="bg-[#1A0505]">Select Academic Track</option>
+                                                    {COURSES.map(c => <option key={c} value={c} className="bg-[#1A0505]">{c}</option>)}
+                                                </select>
+                                            </div>
+                                            <div className="space-y-3">
+                                                <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">Cycle Segment</label>
+                                                <select
+                                                    value={genSemester}
+                                                    onChange={e => setGenSemester(e.target.value)}
+                                                    disabled={!genCourse || semLoading}
+                                                    className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none transition-all appearance-none cursor-pointer hover:bg-white/10 shadow-lg disabled:opacity-20"
+                                                >
+                                                    <option value="" className="bg-[#1A0505]">
+                                                        {semLoading ? 'Syncing...' : genCourse ? 'Select Segment' : 'Lock Active'}
+                                                    </option>
+                                                    {availableSemesters.map(s => <option key={s} value={s} className="bg-[#1A0505]">Semester {s}</option>)}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="space-y-3 pt-4">
+                                            <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">Curriculum Vector</label>
+                                            <select
+                                                value={genSubjectCode}
+                                                onChange={handleSubjectChange}
+                                                disabled={!genSemester || subLoading || availableSubjects.length === 0}
+                                                className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none transition-all appearance-none cursor-pointer hover:bg-white/10 shadow-lg disabled:opacity-20"
+                                            >
+                                                <option value="" className="bg-[#1A0505]">
+                                                    {subLoading ? 'Identifying Vectors...' : !genSemester ? 'Lock Active' : availableSubjects.length === 0 ? 'Null Result' : 'Select Subject Module'}
+                                                </option>
+                                                {availableSubjects.map(s => (
+                                                    <option key={s.code} value={s.code} className="bg-[#1A0505]">{s.code} — {s.name}</option>
+                                                ))}
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">
-                                            Semester <span className="text-red-400">*</span>
-                                        </label>
-                                        <select
-                                            value={genSemester}
-                                            onChange={e => setGenSemester(e.target.value)}
-                                            disabled={!genCourse || semLoading}
-                                            className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] transition-colors appearance-none disabled:opacity-50"
-                                        >
-                                            <option value="">
-                                                {semLoading ? 'Loading...' : genCourse ? 'Select Semester' : 'Select course first'}
-                                            </option>
-                                            {availableSemesters.map(s => <option key={s} value={s}>Semester {s}</option>)}
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
 
-                            {/* ── Row 2: Subject ── */}
-                            <div>
-                                <h3 className="text-[var(--gu-gold)] text-xs uppercase tracking-widest font-bold mb-4 flex items-center gap-2">
-                                    <FileText size={14} /> Step 2 — Select Subject
-                                </h3>
-                                <div>
-                                    <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">
-                                        Subject <span className="text-red-400">*</span>
-                                    </label>
-                                    <select
-                                        value={genSubjectCode}
-                                        onChange={handleSubjectChange}
-                                        disabled={!genSemester || subLoading || availableSubjects.length === 0}
-                                        className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] transition-colors appearance-none disabled:opacity-50"
-                                    >
-                                        <option value="">
-                                            {subLoading ? 'Loading subjects...' : !genSemester ? 'Select semester first' : availableSubjects.length === 0 ? 'No subjects found' : 'Select Subject'}
-                                        </option>
-                                        {availableSubjects.map(s => (
-                                            <option key={s.code} value={s.code}>{s.code} — {s.name}</option>
-                                        ))}
-                                    </select>
-                                    {genSubjectCode && genSubjectName && (
-                                        <p className="text-[var(--gu-gold)] text-xs mt-1 opacity-80">
-                                            Selected: <strong>{genSubjectName}</strong> ({genSubjectCode})
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
+                                    {/* Parameters Tuning */}
+                                    <div className="space-y-8">
+                                        <div className="flex items-center gap-4 border-b border-white/5 pb-4">
+                                            <div className="w-8 h-8 rounded-xl bg-orange-500/10 flex items-center justify-center border border-orange-500/20 text-orange-400">
+                                               <Award className="w-4 h-4" />
+                                            </div>
+                                            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Evaluation Parameters</h4>
+                                        </div>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                            <div className="space-y-3">
+                                                <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">Assessment Mode</label>
+                                                <select
+                                                    value={genExamType}
+                                                    onChange={e => setGenExamType(e.target.value)}
+                                                    className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none transition-all appearance-none cursor-pointer hover:bg-white/10"
+                                                >
+                                                    {EXAM_TYPES.map(t => (
+                                                        <option key={t.value} value={t.value} className="bg-[#1A0505]">{t.label} ({t.marks} Marks)</option>
+                                                    ))}
+                                                </select>
+                                            </div>
+                                            <div className="space-y-3">
+                                                <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">Complexity Index</label>
+                                                <select
+                                                    value={genDifficulty}
+                                                    onChange={e => setGenDifficulty(e.target.value)}
+                                                    className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none transition-all appearance-none cursor-pointer hover:bg-white/10"
+                                                >
+                                                    {DIFFICULTIES.map(d => <option key={d} value={d} className="bg-[#1A0505]">{d}</option>)}
+                                                </select>
+                                            </div>
+                                        </div>
 
-                            {/* ── Row 3: Exam Configuration ── */}
-                            <div>
-                                <h3 className="text-[var(--gu-gold)] text-xs uppercase tracking-widest font-bold mb-4 flex items-center gap-2">
-                                    <Award size={14} /> Step 3 — Configure Exam
-                                </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <div>
-                                        <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">Exam Type</label>
-                                        <select
-                                            value={genExamType}
-                                            onChange={e => setGenExamType(e.target.value)}
-                                            className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] transition-colors appearance-none"
-                                        >
-                                            {EXAM_TYPES.map(t => (
-                                                <option key={t.value} value={t.value}>{t.label} ({t.marks} Marks)</option>
-                                            ))}
-                                        </select>
-                                        {selectedExamType && (
-                                            <p className="text-white/50 text-xs mt-1">
-                                                <Clock size={10} className="inline mr-1" />Duration: {selectedExamType.time}
-                                            </p>
-                                        )}
+                                        <div className="space-y-3">
+                                            <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">Heuristic Instructions (Optional)</label>
+                                            <textarea
+                                                value={genCustomInstructions}
+                                                onChange={e => setGenCustomInstructions(e.target.value)}
+                                                placeholder="Inject specific constraints or thematic focus..."
+                                                rows="3"
+                                                className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none transition-all resize-none hover:bg-white/10"
+                                            />
+                                        </div>
                                     </div>
-                                    <div>
-                                        <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">Difficulty</label>
-                                        <select
-                                            value={genDifficulty}
-                                            onChange={e => setGenDifficulty(e.target.value)}
-                                            className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] transition-colors appearance-none"
-                                        >
-                                            {DIFFICULTIES.map(d => <option key={d} value={d}>{d}</option>)}
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">No. of Questions</label>
-                                        <input
-                                            type="number"
-                                            value={genNumQuestions}
-                                            onChange={e => setGenNumQuestions(Math.max(5, Math.min(20, Number(e.target.value))))}
-                                            min={5} max={20}
-                                            className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] transition-colors"
-                                        />
-                                        <p className="text-white/50 text-xs mt-1">Range: 5 – 20 questions</p>
-                                    </div>
-                                </div>
 
-                                {/* University & Instructions */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                                    <div>
-                                        <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">University Name</label>
-                                        <input
-                                            type="text"
-                                            value={genUniversity}
-                                            onChange={e => setGenUniversity(e.target.value)}
-                                            className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] transition-colors"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">Custom Instructions (Optional)</label>
-                                        <input
-                                            type="text"
-                                            value={genCustomInstructions}
-                                            onChange={e => setGenCustomInstructions(e.target.value)}
-                                            placeholder="e.g. Focus on Unit 3 topics"
-                                            className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] transition-colors"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Error message */}
-                            {genError && (
-                                <div className="bg-red-900/30 border border-red-500/40 text-red-400 p-4 rounded-sm flex items-center gap-3">
-                                    <AlertCircle size={18} className="flex-shrink-0" />
-                                    {genError}
-                                </div>
-                            )}
-
-                            {/* Action buttons */}
-                            <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-[var(--gu-border)]">
-                                <button
-                                    onClick={handleGenerate}
-                                    disabled={isGenerating || !genCourse || !genSemester || !genSubjectCode}
-                                    className={`flex items-center justify-center gap-2 bg-[var(--gu-gold)] text-[var(--gu-red-deep)] px-8 py-3 font-serif text-lg font-bold rounded-sm hover:bg-[#e6c949] transition-colors ${(isGenerating || !genCourse || !genSemester || !genSubjectCode) ? 'opacity-60 cursor-not-allowed' : ''}`}
-                                >
-                                    {isGenerating
-                                        ? <><Loader2 size={18} className="animate-spin" /> Generating...</>
-                                        : <><Sparkles size={18} /> Generate Exam Paper</>
-                                    }
-                                </button>
-
-                                {generatedPaper && (
-                                    <>
-                                        <button
-                                            onClick={() => setShowPreview(true)}
-                                            className="flex items-center justify-center gap-2 bg-transparent border border-[var(--gu-gold)] text-[var(--gu-gold)] px-8 py-3 font-bold tracking-widest rounded-sm hover:bg-[rgba(207,181,59,0.1)] transition-colors text-sm uppercase"
-                                        >
-                                            <Eye size={16} /> Preview Paper
-                                        </button>
-                                        <button
-                                            onClick={handleDownloadPDF}
-                                            disabled={isDownloading}
-                                            className={`flex items-center justify-center gap-2 bg-transparent border border-white/30 text-white px-8 py-3 font-bold tracking-widest rounded-sm hover:bg-white/5 transition-colors text-sm uppercase ${isDownloading ? 'opacity-60' : ''}`}
-                                        >
-                                            {isDownloading
-                                                ? <><Loader2 size={16} className="animate-spin" /> Downloading...</>
-                                                : <><Download size={16} /> Download PDF</>
-                                            }
-                                        </button>
+                                    {/* Action Panel */}
+                                    <div className="pt-8 flex flex-col sm:flex-row gap-6">
                                         <button
                                             onClick={handleGenerate}
                                             disabled={isGenerating}

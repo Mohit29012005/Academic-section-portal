@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import FacultyLayout from "../../components/FacultyLayout";
-import { FileText, Download, Loader2, AlertCircle, BookOpen } from "lucide-react";
+import { FileText, Download, Loader2, AlertCircle, BookOpen, Sparkles } from "lucide-react";
 
 const courseData = {
   BCA: {
@@ -509,126 +509,162 @@ const FacultyPYQs = () => {
 
   return (
     <FacultyLayout>
-      <div className="animate-fade-in max-w-4xl mx-auto">
-        {/* Page Header */}
-        <div className="border-b border-[var(--gu-gold)] pb-6 mb-8">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 bg-[var(--gu-gold)]/20 rounded-lg flex items-center justify-center">
-              <BookOpen className="w-5 h-5 text-[var(--gu-gold)]" />
+      <div className="animate-fade-in max-w-7xl mx-auto space-y-10 relative z-10 px-4">
+        
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-[var(--gu-red-deep)]/40 p-10 rounded-3xl border border-[var(--gu-gold)]/10 backdrop-blur-md shadow-2xl relative overflow-hidden group">
+            <div className="relative z-10">
+                <h1 className="font-serif text-4xl md:text-5xl text-white mb-3 tracking-tight">
+                    Instructional Archive
+                </h1>
+                <div className="flex flex-wrap items-center gap-4 text-[var(--gu-gold)] text-[10px] uppercase font-black tracking-[0.4em] opacity-80">
+                    <span>GANPAT UNIVERSITY</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]/30"></span>
+                    <span>Legacy Repositories</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]/30"></span>
+                    <span>PYQ Synthesis v2.0</span>
+                </div>
             </div>
-            <h1 className="font-serif text-2xl md:text-3xl text-white">
-              Previous Year Question Papers
-            </h1>
-          </div>
-          <p className="text-[var(--gu-gold)] text-xs md:text-sm uppercase tracking-wider font-semibold">
-            Generate PYQ papers in official university format
-          </p>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--gu-gold)]/5 rounded-full blur-3xl -mr-32 -mt-32 group-hover:bg-[var(--gu-gold)]/10 transition-colors duration-1000"></div>
         </div>
 
         {error && (
-          <div className="bg-red-900/50 border border-red-500 text-red-200 p-4 rounded-sm mb-6 flex items-center gap-3">
+          <div className="bg-red-500/10 border border-red-500/20 text-red-400 p-6 rounded-2xl flex items-center gap-4 text-xs font-bold tracking-tight animate-shake">
             <AlertCircle className="w-5 h-5 flex-shrink-0" />
             <span>{error}</span>
           </div>
         )}
 
         {!generatedPaper ? (
-          <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-6 md:p-8 rounded-sm mb-8 shadow-lg overflow-hidden box-border">
-            <h2 className="font-serif text-white text-xl mb-6 border-b border-[var(--gu-border)] pb-3 flex items-center gap-2">
-              <FileText className="w-5 h-5 text-[var(--gu-gold)]" />
-              Generate PYQ Paper
-            </h2>
-
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                {/* Course Selection */}
-                <div>
-                  <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">
-                    Select Course
-                  </label>
-                  <select
-                    value={course}
-                    onChange={handleCourseChange}
-                    className="w-full box-border bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] appearance-none"
-                  >
-                    <option value="" disabled>Select a course</option>
-                    {Object.keys(courseData).map((c) => (
-                      <option key={c} value={c}>{c} - {courseData[c].name}</option>
-                    ))}
-                  </select>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            {/* Main Selection Area */}
+            <div className="lg:col-span-8 space-y-8">
+              <div className="glass-panel p-10 space-y-10">
+                <div className="flex items-center gap-4 border-b border-white/5 pb-4">
+                   <div className="w-8 h-8 rounded-xl bg-[var(--gu-gold)]/10 flex items-center justify-center border border-[var(--gu-gold)]/20 text-[var(--gu-gold)]">
+                      <FileText className="w-4 h-4" />
+                   </div>
+                   <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Paper Synthesis Parameters</h2>
                 </div>
 
-                {/* Semester Selection */}
-                <div>
-                  <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">
-                    Select Semester
-                  </label>
-                  <select
-                    value={semester}
-                    onChange={handleSemesterChange}
-                    disabled={!course}
-                    className="w-full box-border bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] disabled:opacity-50 disabled:cursor-not-allowed appearance-none"
-                  >
-                    <option value="" disabled>Select semester</option>
-                    {availableSemesters.map((sem) => (
-                      <option key={sem} value={sem}>Semester {sem}</option>
-                    ))}
-                  </select>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {/* Course Selection */}
+                  <div className="space-y-3">
+                    <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">
+                      Academic Track
+                    </label>
+                    <select
+                      value={course}
+                      onChange={handleCourseChange}
+                      className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none appearance-none cursor-pointer hover:bg-white/10 transition-all shadow-lg"
+                    >
+                      <option value="" className="bg-[#1A0505]">Select Track...</option>
+                      {Object.keys(courseData).map((c) => (
+                        <option key={c} value={c} className="bg-[#1A0505]">{c} - {courseData[c].name}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Semester Selection */}
+                  <div className="space-y-3">
+                    <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">
+                      Curriculum Phase
+                    </label>
+                    <select
+                      value={semester}
+                      onChange={handleSemesterChange}
+                      disabled={!course}
+                      className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none appearance-none cursor-pointer hover:bg-white/10 transition-all shadow-lg disabled:opacity-20"
+                    >
+                      <option value="" className="bg-[#1A0505]">Select Phase...</option>
+                      {availableSemesters.map((sem) => (
+                        <option key={sem} value={sem} className="bg-[#1A0505]">Semester {sem}</option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {/* Subject Selection */}
+                  <div className="space-y-3">
+                    <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">
+                      Subject Module
+                    </label>
+                    <select
+                      value={subjectCode}
+                      onChange={(e) => setSubjectCode(e.target.value)}
+                      disabled={!semester}
+                      className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none appearance-none cursor-pointer hover:bg-white/10 transition-all shadow-lg disabled:opacity-20"
+                    >
+                      <option value="" className="bg-[#1A0505]">Identify Module...</option>
+                      {availableSubjects.map((s) => (
+                        <option key={s.code} value={s.code} className="bg-[#1A0505]">[{s.code}] {s.name}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Exam Type */}
+                  <div className="space-y-3">
+                    <label className="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] ml-1 opacity-60">
+                      Assessment Weight
+                    </label>
+                    <select
+                      value={examType}
+                      onChange={(e) => setExamType(e.target.value)}
+                      className="w-full bg-white/5 border border-white/10 text-white px-6 py-4 rounded-2xl text-xs focus:border-[var(--gu-gold)]/30 outline-none appearance-none cursor-pointer hover:bg-white/10 transition-all shadow-lg"
+                    >
+                      <option value="external" className="bg-[#1A0505]">External Terminal (60 Marks)</option>
+                      <option value="internal" className="bg-[#1A0505]">Internal Mid-Term (30 Marks)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button
+                  onClick={handleGenerate}
+                  disabled={!course || !semester || !subjectCode || loading}
+                  className="w-full bg-[var(--gu-gold)] text-black py-5 rounded-2xl text-[11px] font-black uppercase tracking-[0.3em] hover:bg-white transition-all shadow-xl shadow-[var(--gu-gold)]/10 disabled:opacity-20 disabled:cursor-not-allowed flex items-center justify-center gap-4"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      Synthesizing Archive...
+                    </>
+                  ) : (
+                    <>
+                      <Sparkles className="w-5 h-5" />
+                      Initialize PYQ Synthesis
+                    </>
+                  )}
+                </button>
               </div>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                {/* Subject Selection */}
-                <div>
-                  <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">
-                    Select Subject
-                  </label>
-                  <select
-                    value={subjectCode}
-                    onChange={(e) => setSubjectCode(e.target.value)}
-                    disabled={!semester}
-                    className="w-full box-border bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] disabled:opacity-50 disabled:cursor-not-allowed appearance-none"
-                  >
-                    <option value="" disabled>Select a subject</option>
-                    {availableSubjects.map((s) => (
-                      <option key={s.code} value={s.code}>[{s.code}] {s.name}</option>
-                    ))}
-                  </select>
-                </div>
+            {/* Side Metrics/Info */}
+            <div className="lg:col-span-4 space-y-8">
+               <div className="glass-panel p-8 space-y-6">
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] opacity-60 border-b border-white/5 pb-4">Selection Context</h3>
+                  <div className="space-y-6">
+                      <div className="flex justify-between items-center">
+                          <span className="text-white/20 text-[9px] font-black uppercase tracking-widest">Target Marks</span>
+                          <span className="text-white text-sm font-bold">{examType === 'external' ? '60' : '30'}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                          <span className="text-white/20 text-[9px] font-black uppercase tracking-widest">Duration</span>
+                          <span className="text-white text-sm font-bold">{examType === 'external' ? '3 Hours' : '1.5 Hours'}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                          <span className="text-white/20 text-[9px] font-black uppercase tracking-widest">CBCS Compliance</span>
+                          <span className="text-emerald-400 text-[10px] font-black">VERIFIED</span>
+                      </div>
+                  </div>
+               </div>
 
-                {/* Exam Type */}
-                <div>
-                  <label className="block text-white opacity-80 text-xs uppercase tracking-widest font-semibold mb-2">
-                    Exam Type
-                  </label>
-                  <select
-                    value={examType}
-                    onChange={(e) => setExamType(e.target.value)}
-                    className="w-full box-border bg-[#3D0F0F] border border-[var(--gu-border)] text-white p-3 rounded-sm focus:outline-none focus:border-[var(--gu-gold)] appearance-none"
-                  >
-                    <option value="external">External (60 Marks)</option>
-                    <option value="internal">Internal (30 Marks)</option>
-                  </select>
-                </div>
-              </div>
-
-              <button
-                onClick={handleGenerate}
-                disabled={!course || !semester || !subjectCode || loading}
-                className="w-full box-border mt-6 bg-[var(--gu-gold)] text-[var(--gu-red-deep)] font-serif py-3 md:py-4 text-base md:text-lg font-bold rounded-sm flex items-center justify-center hover:bg-[#e6c949] transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-              >
-                {loading ? (
-                  <>
-                    <Loader2 className="w-5 h-5 md:w-6 md:h-6 mr-3 flex-shrink-0 animate-spin" />
-                    Generating...
-                  </>
-                ) : (
-                  <>
-                    <FileText className="w-5 h-5 md:w-6 md:h-6 mr-3 flex-shrink-0" />
-                    Generate PYQ Paper
-                  </>
-                )}
-              </button>
+               <div className="glass-panel p-8 bg-gradient-to-br from-[#450A0A]/20 to-transparent">
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 mb-4">GUNI Standard</h3>
+                  <p className="text-[10px] text-white/60 leading-relaxed font-bold">
+                      The instructional archive utilizes a weighted randomization engine to synthesize papers that reflect legacy examination patterns.
+                  </p>
+               </div>
             </div>
           </div>
         ) : (

@@ -67,7 +67,7 @@ WSGI_APPLICATION = "ampics.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "ampics_db",
+        "NAME": "Academic-module",
         "USER": "postgres",  # ya 'ampics_user'
         "PASSWORD": "2901",
         "HOST": "localhost",

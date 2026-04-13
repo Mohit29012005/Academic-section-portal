@@ -11,7 +11,7 @@ export default function Logo({ size = "md" }) {
     <img
       src="/idZR0Cnb5m_1772794169518.png"
       alt="Ganpat University"
-      className={`${sizes[size]} w-60 object-contain`}
+      className={`${sizes[size]} w-60 object-contain animate-fade-in`}
       onError={(e) => {
         e.target.style.display = "none";
         e.target.nextSibling.style.display = "flex";

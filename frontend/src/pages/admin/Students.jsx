@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AdminLayout from '../../components/AdminLayout';
-import { Users, Search, Filter, Plus, Loader, X, AlertTriangle } from 'lucide-react';
+import { Users, Search, Filter, Plus, Loader, X, AlertTriangle, ChevronRight } from 'lucide-react';
 import { adminAPI, academicsAPI } from '../../services/api';
 
 const Students = () => {
@@ -169,347 +169,343 @@ const Students = () => {
 
     return (
         <AdminLayout>
-            <div className="animate-fade-in max-w-7xl mx-auto">
-                {/* Header */}
-                <div className="border-b border-[var(--gu-gold)] pb-6 mb-6">
-                    <div className="flex flex-wrap justify-between items-end gap-4">
-                        <div>
-                            <h1 className="font-serif text-3xl md:text-4xl text-white mb-2">Student Lifecycle</h1>
-                            <p className="text-[var(--gu-gold)] text-xs md:text-sm uppercase tracking-wider font-semibold">
-                                Admissions, Enrollments & Directory
-                            </p>
+            <div className="animate-fade-in max-w-7xl mx-auto space-y-8 relative z-10 px-4">
+                
+                {/* Header Section */}
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-[var(--gu-red-deep)]/40 p-8 rounded-2xl border border-[var(--gu-gold)]/10 backdrop-blur-sm shadow-2xl">
+                    <div>
+                        <h1 className="font-serif text-4xl md:text-5xl text-white mb-2 tracking-tight">
+                            Student Lifecycle
+                        </h1>
+                        <div className="flex flex-wrap items-center gap-3 text-[var(--gu-gold)] text-[10px] uppercase font-black tracking-[0.3em] opacity-80">
+                            <span>Admissions</span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]/30"></span>
+                            <span>Enrollments</span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]/30"></span>
+                            <span>Global Directory</span>
                         </div>
-                        <button 
-                            onClick={() => setShowAddModal(true)}
-                            className="bg-[var(--gu-gold)] text-[#1A0505] px-4 py-2 text-sm font-bold uppercase tracking-widest flex items-center hover:bg-[#e6c949] transition-colors rounded-sm shadow-[0_0_15px_rgba(212,175,55,0.3)]"
-                        >
-                            <Plus className="w-4 h-4 mr-2" /> Add Student
-                        </button>
                     </div>
+                    <button 
+                        onClick={() => setShowAddModal(true)}
+                        className="group relative bg-[var(--gu-gold)] text-black px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all flex items-center gap-2 overflow-hidden"
+                    >
+                        <Plus className="w-4 h-4" /> 
+                        <span className="relative z-10">Add Student</span>
+                        <div className="absolute inset-0 bg-white/40 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    </button>
                 </div>
 
-                {/* Filters */}
-                <div className="bg-[var(--gu-red-card)] border border-[var(--gu-gold)] p-4 mb-6 rounded-sm">
-                    <div className="flex flex-wrap gap-4 items-end">
-                        {/* Search */}
-                        <div className="flex-1 min-w-[250px]">
-                            <label className="block text-[var(--gu-gold)] text-xs uppercase tracking-wider mb-2">Search</label>
-                            <div className="relative">
-                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                {/* Intelligent Filters Console */}
+                <div className="glass-panel p-8 rounded-2xl animate-reveal-down">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
+                        {/* Search Input */}
+                        <div className="md:col-span-6 relative">
+                            <label className="block text-[10px] font-black uppercase tracking-widest text-white/30 mb-3 ml-1">Search Registry</label>
+                            <div className="relative group">
+                                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20 group-focus-within:text-[var(--gu-gold)] transition-colors" />
                                 <input 
                                     type="text"
                                     placeholder="Search by Roll No or Name..."
                                     value={rollSearch}
                                     onChange={(e) => setRollSearch(e.target.value)}
-                                    className="w-full bg-black border border-[rgba(212,175,55,0.3)] text-white pl-10 pr-4 py-2.5 text-sm focus:border-[var(--gu-gold)] outline-none rounded-sm"
+                                    className="w-full bg-white/5 border border-white/5 text-white pl-12 pr-6 py-4 rounded-xl text-xs focus:border-[var(--gu-gold)]/50 focus:bg-white/10 outline-none transition-all"
                                 />
                             </div>
                         </div>
 
-                        {/* Course Filter */}
-                        <div className="w-64">
-                            <label className="block text-[var(--gu-gold)] text-xs uppercase tracking-wider mb-2">Course</label>
+                        {/* Course Selector */}
+                        <div className="md:col-span-3">
+                            <label className="block text-[10px] font-black uppercase tracking-widest text-white/30 mb-3 ml-1">Program</label>
                             <select 
-                                className="w-full bg-black border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none rounded-sm"
+                                className="w-full bg-white/5 border border-white/5 text-white px-6 py-4 rounded-xl text-xs focus:border-[var(--gu-gold)]/50 focus:bg-white/10 outline-none appearance-none transition-all"
                                 value={courseFilter}
                                 onChange={(e) => handleCourseChange(e.target.value)}
                             >
-                                <option value="">All Courses</option>
+                                <option value="" className="bg-[var(--gu-red-deep)]">All Programs</option>
                                 {courses.map(c => (
-                                    <option key={c.course_id} value={c.course_id}>{c.name} ({c.student_count || 0})</option>
+                                    <option key={c.course_id} value={c.course_id} className="bg-[var(--gu-red-deep)]">
+                                        {c.name}
+                                    </option>
                                 ))}
                             </select>
                         </div>
 
-                        {/* Semester Filter */}
-                        <div className="w-40">
-                            <label className="block text-[var(--gu-gold)] text-xs uppercase tracking-wider mb-2">
-                                Semester {courseFilter ? `(${maxSemesters} Sem)` : '(Select Course First)'}
-                            </label>
+                        {/* Semester Selector */}
+                        <div className="md:col-span-2">
+                            <label className="block text-[10px] font-black uppercase tracking-widest text-white/30 mb-3 ml-1">Phase</label>
                             <select 
-                                className="w-full bg-black border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none rounded-sm disabled:opacity-50"
+                                className="w-full bg-white/5 border border-white/5 text-white px-6 py-4 rounded-xl text-xs focus:border-[var(--gu-gold)]/50 focus:bg-white/10 outline-none appearance-none disabled:opacity-20 transition-all"
                                 value={semesterFilter}
                                 onChange={(e) => setSemesterFilter(e.target.value)}
                                 disabled={!courseFilter}
                             >
-                                <option value="">All Semesters</option>
-                                {courses.length > 0 && Array.from({ length: maxSemesters }, (_, i) => i + 1).map(sem => (
-                                    <option key={sem} value={sem}>Sem {sem}</option>
+                                <option value="" className="bg-[var(--gu-red-deep)]">Core Stage</option>
+                                {Array.from({ length: maxSemesters }, (_, i) => i + 1).map(sem => (
+                                    <option key={sem} value={sem} className="bg-[var(--gu-red-deep)]">Sem {sem}</option>
                                 ))}
                             </select>
                         </div>
 
-                        {/* Clear Button */}
+                        {/* Clear Action */}
                         {(courseFilter || semesterFilter || rollSearch) && (
-                            <button 
-                                onClick={() => { setCourseFilter(''); setSemesterFilter(''); setRollSearch(''); }}
-                                className="px-4 py-2.5 text-sm text-[var(--gu-gold)] hover:text-white border border-[var(--gu-gold)] rounded-sm flex items-center gap-2"
-                            >
-                                <X className="w-4 h-4" /> Clear
-                            </button>
+                            <div className="md:col-span-1">
+                                <button 
+                                    onClick={() => { setCourseFilter(''); setSemesterFilter(''); setRollSearch(''); }}
+                                    className="w-full h-[52px] flex items-center justify-center text-white/40 hover:text-white transition-colors"
+                                    title="Reset Filters"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
                         )}
                     </div>
                 </div>
 
-                {/* Results Count */}
-                <div className="mb-4">
-                    <p className="text-gray-400 text-sm">
-                        Showing <span className="text-[var(--gu-gold)] font-bold">{students.length}</span> of {allStudents.length} students
+                {/* Dashboard Metrics Bar */}
+                <div className="flex justify-between items-center px-2 animate-fade-in">
+                    <p className="text-[10px] font-black uppercase tracking-widest text-white/30">
+                        Synchronized Records: <span className="text-[var(--gu-gold)]">{students.length}</span> <span className="mx-2">/</span> Total Capacity: {allStudents.length}
                     </p>
                 </div>
 
-                <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm overflow-hidden overflow-x-auto">
-                    <table className="w-full text-left min-w-[1200px]">
-                        <thead>
-                            <tr className="bg-[#3D0F0F] border-b border-[var(--gu-border)]">
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Roll No</th>
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Name</th>
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Father Name</th>
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Mobile</th>
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Address</th>
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Course</th>
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Sem</th>
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Batch</th>
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold">Status</th>
-                                <th className="py-4 px-4 text-[var(--gu-gold)] text-xs uppercase tracking-widest font-semibold text-right">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-[rgba(255,255,255,0.05)]">
-                            {loading ? (
-                                <tr>
-                                    <td colSpan="10" className="py-8 text-center text-[var(--gu-gold)]">
-                                        <Loader className="w-8 h-8 animate-spin mx-auto" />
-                                    </td>
+                {/* Registry Table */}
+                <div className="glass-panel rounded-2xl overflow-hidden border border-white/5 shadow-2xl animate-slide-up">
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-left min-w-[1000px]">
+                            <thead>
+                                <tr className="bg-white/5 border-b border-white/5">
+                                    {['Roll ID', 'Identity', 'Contact Phase', 'Module Mapping', 'Status', 'Operations'].map((head, i) => (
+                                        <th key={i} className={`py-6 px-8 text-[10px] font-black uppercase tracking-[0.2em] text-white/40 ${head === 'Operations' ? 'text-right' : ''}`}>
+                                            {head}
+                                        </th>
+                                    ))}
                                 </tr>
-                            ) : error ? (
-                                <tr>
-                                    <td colSpan="10" className="py-8 text-center bg-[rgba(239,68,68,0.05)] border-y border-[rgba(239,68,68,0.2)]">
-                                        <AlertTriangle className="w-8 h-8 mx-auto mb-3 text-red-500" />
-                                        <p className="text-red-400 font-semibold mb-1">Database Connectivity Interrupted</p>
-                                        <p className="text-red-300 text-xs opacity-80">{error}</p>
-                                    </td>
-                                </tr>
-                            ) : students.length === 0 ? (
-                                <tr>
-                                    <td colSpan="10" className="py-8 text-center text-gray-500">No students found.</td>
-                                </tr>
-                            ) : (
-                                students.map((student, i) => (
-                                    <tr key={i} className="hover:bg-[rgba(255,255,255,0.02)] transition-colors">
-                                        <td className="py-4 px-4 font-mono text-sm text-[var(--gu-gold)]">{student.enrollment_no}</td>
-                                        <td className="py-4 px-4 text-white font-medium">{student.name}</td>
-                                        <td className="py-4 px-4 text-gray-300 text-sm">{student.father_name || '-'}</td>
-                                        <td className="py-4 px-4 text-gray-300 text-sm">{student.phone || '-'}</td>
-                                        <td className="py-4 px-4 text-gray-300 text-sm max-w-[150px] truncate" title={student.address || ''}>{student.address || '-'}</td>
-                                        <td className="py-4 px-4 text-sm">
-                                            <span className="text-gray-300">{student.course_name || '-'}</span>
-                                        </td>
-                                        <td className="py-4 px-4">
-                                            <span className="text-gray-300">Sem {student.current_semester || student.semester || '-'}</span>
-                                        </td>
-                                        <td className="py-4 px-4">
-                                            <span className={`inline-flex items-center px-2 py-1 text-xs font-bold uppercase tracking-widest rounded-sm ${
-                                                student.batch === 'A' ? 'text-blue-400 bg-blue-400/10 border border-blue-400/20' : 
-                                                student.batch === 'B' ? 'text-purple-400 bg-purple-400/10 border border-purple-400/20' :
-                                                'text-gray-400 bg-gray-400/10 border border-gray-400/20'
-                                            }`}>
-                                                {student.batch || 'N/A'}
-                                            </span>
-                                        </td>
-                                        <td className="py-4 px-4">
-                                            <span className={`inline-flex items-center px-2 py-1 text-xs font-bold uppercase tracking-widest rounded-sm ${
-                                                student.status === 'Active' ? 'text-green-400 bg-green-400/10 border border-green-400/20' : 
-                                                student.status === 'Suspended' ? 'text-red-400 bg-red-400/10 border border-red-400/20' :
-                                                'text-blue-400 bg-blue-400/10 border border-blue-400/20'
-                                            }`}>
-                                                {student.status}
-                                            </span>
-                                        </td>
-                                        <td className="py-4 px-4 text-right">
-                                            <button 
-                                                onClick={() => setSelectedStudent(student)}
-                                                className="text-[var(--gu-gold)] text-xs font-semibold uppercase tracking-widest hover:text-white transition-colors border border-[rgba(212,175,55,0.3)] px-3 py-1 rounded-sm"
-                                            >
-                                                Manage
-                                            </button>
+                            </thead>
+                            <tbody className="divide-y divide-white/5">
+                                {loading ? (
+                                    <tr>
+                                        <td colSpan="6" className="py-20 text-center">
+                                            <div className="inline-flex flex-col items-center gap-4">
+                                                <Loader className="w-8 h-8 animate-spin text-[var(--gu-gold)]" />
+                                                <span className="text-[10px] font-black uppercase tracking-widest text-white/20">Accessing Vault...</span>
+                                            </div>
                                         </td>
                                     </tr>
-                                ))
-                            )}
-                        </tbody>
-                    </table>
+                                ) : students.length === 0 ? (
+                                    <tr>
+                                        <td colSpan="6" className="py-20 text-center text-white/20 italic font-serif text-xl">No entities matched the search criteria.</td>
+                                    </tr>
+                                ) : (
+                                    students.map((student, i) => (
+                                        <tr key={i} className="group hover:bg-white/5 transition-all duration-300">
+                                            <td className="py-6 px-8">
+                                                <span className="font-mono text-xs text-[var(--gu-gold)] opacity-60 group-hover:opacity-100 transition-opacity">{student.enrollment_no}</span>
+                                            </td>
+                                            <td className="py-6 px-8">
+                                                <div className="flex flex-col">
+                                                    <span className="text-white font-bold text-sm tracking-tight group-hover:text-[var(--gu-gold)] transition-colors">{student.name}</span>
+                                                    <span className="text-[10px] text-white/30 font-bold uppercase tracking-widest mt-0.5">{student.father_name || 'Guardian Unknown'}</span>
+                                                </div>
+                                            </td>
+                                            <td className="py-6 px-8">
+                                                <div className="flex flex-col gap-1">
+                                                    <span className="text-white/40 text-[10px] font-bold">{student.email || 'No Primary Mail'}</span>
+                                                    <span className="text-white/20 text-[9px] font-black uppercase tracking-widest">{student.phone || 'Silent Mode'}</span>
+                                                </div>
+                                            </td>
+                                            <td className="py-6 px-8">
+                                                <div className="flex items-center gap-3">
+                                                    <span className="text-white font-bold text-xs">{student.course_name?.split(' ')[0] || '-'}</span>
+                                                    <span className="w-1 h-1 rounded-full bg-white/10"></span>
+                                                    <span className="bg-white/5 text-white/40 text-[9px] font-black px-2 py-1 rounded-full border border-white/5">SEM {student.current_semester || student.semester || '-'}</span>
+                                                </div>
+                                            </td>
+                                            <td className="py-6 px-8">
+                                                <span className={`inline-flex items-center px-3 py-1 text-[9px] font-black uppercase tracking-widest rounded-full border ${
+                                                    student.status === 'Active' ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 
+                                                    student.status === 'Suspended' ? 'text-red-400 bg-red-500/10 border-red-500/20' :
+                                                    'text-blue-400 bg-blue-500/10 border-blue-500/20'
+                                                }`}>
+                                                    {student.status}
+                                                </span>
+                                            </td>
+                                            <td className="py-6 px-8 text-right">
+                                                <button 
+                                                    onClick={() => setSelectedStudent(student)}
+                                                    className="inline-flex items-center gap-2 text-[var(--gu-gold)] text-[9px] font-black uppercase tracking-widest hover:text-white border border-[var(--gu-gold)]/20 px-4 py-2 rounded-full transition-all hover:bg-[var(--gu-gold)]/10"
+                                                >
+                                                    Access Profile <ChevronRight className="w-3 h-3" />
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))
+                                )}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-            {/* Modals outside flow */}
+            {/* Enrollment Modal */}
             {showAddModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto pt-[10vh]">
-                    <div className="bg-[#1A0505] border border-[var(--gu-gold)] rounded-sm w-full max-w-3xl overflow-hidden shadow-2xl animate-fade-in my-auto relative">
-                        <div className="p-4 border-b border-[var(--gu-gold)] flex justify-between items-center bg-[#2D0A0A] sticky top-0 z-10">
-                            <h2 className="text-[var(--gu-gold)] font-serif text-xl flex items-center"><Plus className="w-5 h-5 mr-2" /> New Student Enrollment</h2>
-                            <button onClick={() => setShowAddModal(false)} className="text-gray-400 hover:text-white transition-colors">
-                                <X className="w-6 h-6" />
+                <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md p-6 animate-fade-in">
+                    <div className="glass-panel border-white/10 rounded-3xl w-full max-w-4xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col max-h-[90vh]">
+                        <div className="p-8 border-b border-white/5 bg-white/5 flex justify-between items-center">
+                            <div>
+                                <h2 className="text-white font-serif text-3xl tracking-tight flex items-center gap-4">
+                                    <div className="w-10 h-10 rounded-xl bg-[var(--gu-gold)]/10 flex items-center justify-center">
+                                        <Plus className="w-5 h-5 text-[var(--gu-gold)]" />
+                                    </div>
+                                    Portal Enrollment
+                                </h2>
+                                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--gu-gold)] mt-1 opacity-60">System Identity Creation</p>
+                            </div>
+                            <button onClick={() => setShowAddModal(false)} className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center text-white/20 hover:text-white hover:border-white/20 transition-all">
+                                <X className="w-5 h-5" />
                             </button>
                         </div>
-                        <form onSubmit={handleAddSubmit} className="p-6 space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {/* Academic Information */}
-                                <div className="space-y-4">
-                                    <h3 className="text-white text-sm font-bold uppercase tracking-widest border-b border-[rgba(255,255,255,0.1)] pb-2">Academic Mapping</h3>
-                                    <div>
-                                        <label className="block text-xs uppercase tracking-widest text-[var(--gu-gold)] mb-1">Target Degree / Program</label>
-                                        <select name="course" required className="w-full bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none">
-                                            <option value="">Select Degree Plan...</option>
-                                            {courses.map(c => (
-                                                <option key={c.course_id} value={c.course_id}>{c.name}</option>
-                                            ))}
-                                            {courses.length === 0 && (
-                                                <>
-                                                    <option value="B.Tech Computer Science - Sem 1">B.Tech Computer Science - Sem 1</option>
-                                                    <option value="BCA - Sem 1">BCA - Sem 1</option>
-                                                    <option value="BBA - Sem 1">BBA - Sem 1</option>
-                                                    <option value="B.Sc Information Tech - Sem 1">B.Sc Information Tech - Sem 1</option>
-                                                </>
-                                            )}
-                                        </select>
+                        <form onSubmit={handleAddSubmit} className="flex-1 overflow-y-auto p-10 custom-scrollbar">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                {/* Program Context */}
+                                <div className="space-y-6">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="w-1 h-4 bg-[var(--gu-gold)]"></div>
+                                        <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">Academic Context</h3>
                                     </div>
-                                    <div>
-                                        <label className="block text-xs uppercase tracking-widest text-[var(--gu-gold)] mb-1">Date of Admission</label>
-                                        <input name="admissionDate" required type="date" className="w-full bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none" />
+                                    <div className="space-y-4">
+                                        <div>
+                                            <label className="block text-[9px] font-black uppercase tracking-widest text-white/30 mb-2 ml-1">Degree Mapping</label>
+                                            <select name="course" required className="w-full bg-white/5 border border-white/5 text-white px-5 py-3 rounded-xl text-xs focus:border-[var(--gu-gold)]/30 outline-none appearance-none">
+                                                <option value="" className="bg-[var(--gu-red-deep)]">Program Selector...</option>
+                                                {courses.map(c => (
+                                                    <option key={c.course_id} value={c.course_id} className="bg-[var(--gu-red-deep)]">{c.name}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label className="block text-[9px] font-black uppercase tracking-widest text-white/30 mb-2 ml-1">Commencement Date</label>
+                                            <input name="admissionDate" required type="date" className="w-full bg-white/5 border border-white/5 text-white px-5 py-3 rounded-xl text-xs focus:border-[var(--gu-gold)]/30 outline-none" />
+                                        </div>
                                     </div>
                                 </div>
 
-                                {/* Personal Information */}
-                                <div className="space-y-4 md:col-start-2 md:row-start-1 md:row-span-2">
-                                    <h3 className="text-white text-sm font-bold uppercase tracking-widest border-b border-[rgba(255,255,255,0.1)] pb-2">Personal Identity</h3>
-                                    <div className="flex space-x-3">
-                                        <div className="w-1/2">
-                                            <label className="block text-xs uppercase tracking-widest text-[var(--gu-gold)] mb-1">First Name</label>
-                                            <input name="firstName" required type="text" placeholder="e.g. Rahul" className="w-full bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none" />
-                                        </div>
-                                        <div className="w-1/2">
-                                            <label className="block text-xs uppercase tracking-widest text-[var(--gu-gold)] mb-1">Last Name</label>
-                                            <input name="lastName" required type="text" placeholder="e.g. Sharma" className="w-full bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none" />
-                                        </div>
+                                {/* Identity Block */}
+                                <div className="space-y-6">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="w-1 h-4 bg-[var(--gu-gold)]"></div>
+                                        <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">Primary Identity</h3>
                                     </div>
-                                    <div>
-                                        <label className="block text-xs uppercase tracking-widest text-[var(--gu-gold)] mb-1">Date of Birth</label>
-                                        <input name="dob" required type="date" className="w-full bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none" />
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs uppercase tracking-widest text-[var(--gu-gold)] mb-1">Parent/Guardian Name</label>
-                                        <input name="parent" required type="text" placeholder="e.g. Rajeev Sharma" className="w-full bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none" />
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="col-span-1">
+                                            <label className="block text-[9px] font-black uppercase tracking-widest text-white/30 mb-2 ml-1">Given Name</label>
+                                            <input name="firstName" required type="text" className="w-full bg-white/5 border border-white/5 text-white px-5 py-3 rounded-xl text-xs focus:border-[var(--gu-gold)]/30 outline-none" placeholder="First" />
+                                        </div>
+                                        <div className="col-span-1">
+                                            <label className="block text-[9px] font-black uppercase tracking-widest text-white/30 mb-2 ml-1">Surname</label>
+                                            <input name="lastName" required type="text" className="w-full bg-white/5 border border-white/5 text-white px-5 py-3 rounded-xl text-xs focus:border-[var(--gu-gold)]/30 outline-none" placeholder="Last" />
+                                        </div>
+                                        <div className="col-span-2">
+                                            <label className="block text-[9px] font-black uppercase tracking-widest text-white/30 mb-2 ml-1">Guardian Sequence</label>
+                                            <input name="parent" required type="text" className="w-full bg-white/5 border border-white/5 text-white px-5 py-3 rounded-xl text-xs focus:border-[var(--gu-gold)]/30 outline-none" placeholder="Father/Mother Full Name" />
+                                        </div>
                                     </div>
                                 </div>
 
-                                {/* Contact Information */}
-                                <div className="space-y-4 md:col-span-2">
-                                    <h3 className="text-white text-sm font-bold uppercase tracking-widest border-b border-[rgba(255,255,255,0.1)] pb-2 mt-2">Contact Directory</h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {/* Contact Matrix */}
+                                <div className="md:col-span-2 space-y-6 pt-4">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="w-1 h-4 bg-[var(--gu-gold)]"></div>
+                                        <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">Neural Reach (Contact)</h3>
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div>
-                                            <label className="block text-xs uppercase tracking-widest text-[var(--gu-gold)] mb-1">Primary Email (System Comms)</label>
-                                            <input name="email" required type="email" placeholder="student@example.com" className="w-full bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none" />
+                                            <label className="block text-[9px] font-black uppercase tracking-widest text-white/30 mb-2 ml-1">System Endpoint (Email)</label>
+                                            <input name="email" required type="email" className="w-full bg-white/5 border border-white/5 text-white px-5 py-3 rounded-xl text-xs focus:border-[var(--gu-gold)]/30 outline-none" placeholder="student@university.edu" />
                                         </div>
                                         <div>
-                                            <label className="block text-xs uppercase tracking-widest text-[var(--gu-gold)] mb-1">Mobile Contact</label>
-                                            <input name="phone" required type="tel" placeholder="+91 XXXXX XXXXX" className="w-full bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none" />
+                                            <label className="block text-[9px] font-black uppercase tracking-widest text-white/30 mb-2 ml-1">Signal Link (Phone)</label>
+                                            <input name="phone" required type="tel" className="w-full bg-white/5 border border-white/5 text-white px-5 py-3 rounded-xl text-xs focus:border-[var(--gu-gold)]/30 outline-none" placeholder="+91 XXXX" />
                                         </div>
                                         <div className="md:col-span-2">
-                                            <label className="block text-xs uppercase tracking-widest text-[var(--gu-gold)] mb-1">Permanent Residential Address</label>
-                                            <textarea name="address" required rows="2" placeholder="Street layout, city, postal logic..." className="w-full bg-[#3D0F0F] border border-[rgba(212,175,55,0.3)] text-white p-2.5 text-sm focus:border-[var(--gu-gold)] outline-none resize-none"></textarea>
+                                            <label className="block text-[9px] font-black uppercase tracking-widest text-white/30 mb-2 ml-1">Spatial coordinates (Residential Address)</label>
+                                            <textarea name="address" required rows="2" className="w-full bg-white/5 border border-white/5 text-white p-5 rounded-xl text-xs focus:border-[var(--gu-gold)]/30 outline-none resize-none" placeholder="Registered residence details..."></textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div className="pt-6 flex justify-end space-x-3 mt-4 border-t border-[rgba(255,255,255,0.1)]">
-                                <button type="button" onClick={() => setShowAddModal(false)} className="px-5 py-2.5 text-sm text-gray-400 hover:text-white uppercase tracking-wider font-bold transition-colors">Cancel</button>
-                                <button type="submit" className="bg-[var(--gu-gold)] text-[#1A0505] px-8 py-2.5 text-sm font-bold uppercase tracking-widest hover:bg-[#e6c949] transition-colors rounded-sm shadow-xl shadow-[var(--gu-gold)]/20">Finalize Enrollment &rarr;</button>
-                            </div>
                         </form>
+                        <div className="p-8 border-t border-white/5 bg-white/5 flex gap-4 justify-end">
+                             <button type="button" onClick={() => setShowAddModal(false)} className="px-8 py-3 text-[10px] font-black uppercase tracking-widest text-white/40 hover:text-white transition-all">Abort Enrollment</button>
+                             <button type="submit" onClick={() => document.querySelector('form').dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }))} className="bg-[var(--gu-gold)] text-black px-10 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all shadow-[0_0_30px_rgba(212,175,55,0.2)]">Finalize Identity Record</button>
+                        </div>
                     </div>
                 </div>
             )}
 
-            {/* Manage Student Modal */}
+            {/* Profile Management Console */}
             {selectedStudent && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
-                    <div className="bg-[#1A0505] border border-[var(--gu-gold)] rounded-sm w-full max-w-3xl my-8 overflow-hidden shadow-2xl animate-fade-in relative">
-                        <div className="p-4 border-b border-[var(--gu-gold)] flex justify-between items-center bg-[#2D0A0A] sticky top-0 z-10">
-                            <div className="flex items-center space-x-4">
-                                <div className="w-14 h-14 rounded-sm bg-[var(--gu-gold)] text-[#1A0505] flex items-center justify-center font-bold text-2xl uppercase shadow-md shadow-black">
-                                    {selectedStudent.name.replace(/[^a-zA-Z]/g, '').substring(0,2)}
+                <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl p-6 animate-fade-in">
+                    <div className="glass-panel border-white/10 rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl relative">
+                        <div className="h-32 bg-gradient-to-r from-[var(--gu-red-deep)] via-[#7B0D0D] to-[var(--gu-red-dark)] relative overflow-hidden">
+                             <div className="absolute inset-0 opacity-20 pointer-events-none" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(212,175,55,1) 1px, transparent 0)', backgroundSize: '24px 24px'}}></div>
+                             <button onClick={() => setSelectedStudent(null)} className="absolute top-6 right-6 w-10 h-10 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white/60 hover:text-white transition-all backdrop-blur-md">
+                                <X className="w-5 h-5" />
+                             </button>
+                        </div>
+                        <div className="px-10 pb-10">
+                            <div className="relative -mt-16 mb-8 flex items-end gap-6">
+                                <div className="w-32 h-32 rounded-3xl bg-[var(--gu-red-deep)] border-4 border-[#1A0505] shadow-2xl flex items-center justify-center text-white font-serif text-5xl font-black relative overflow-hidden">
+                                     {selectedStudent.name.charAt(0)}
+                                     <div className="absolute inset-x-0 bottom-0 h-1 bg-[var(--gu-gold)]"></div>
                                 </div>
-                                <div>
-                                    <div className="flex items-center space-x-3 text-white font-serif text-2xl leading-none pt-1">
-                                        <h2>{selectedStudent.name}</h2>
-                                        <span className={`px-2 py-0.5 text-[10px] uppercase font-sans tracking-widest rounded flex items-center h-5 ${selectedStudent.status === 'Active' ? 'bg-green-500/20 text-green-400 border border-green-500/30' : selectedStudent.status==='Graduating' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' : 'bg-red-500/20 text-red-400 border border-red-500/30'}`}>
-                                            {selectedStudent.status} {selectedStudent.status === 'Suspended' && <AlertTriangle className="w-3 h-3 ml-1" />}
+                                <div className="pb-2">
+                                    <h2 className="text-white font-serif text-3xl tracking-tight">{selectedStudent.name}</h2>
+                                    <div className="flex items-center gap-2 mt-1">
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-[var(--gu-gold)]">{selectedStudent.enrollment_no}</span>
+                                        <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                                        <span className={`text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full border ${selectedStudent.status === 'Active' ? 'text-emerald-400 border-emerald-500/20' : 'text-red-400 border-red-500/20'}`}>
+                                            {selectedStudent.status}
                                         </span>
                                     </div>
-                                    <span className="text-[var(--gu-gold)] text-xs font-mono tracking-widest mt-1 block">{selectedStudent.enrollment_no} • Enrolled {new Date(selectedStudent.admissionDate || new Date()).getFullYear()}</span>
                                 </div>
                             </div>
-                            <button onClick={() => setSelectedStudent(null)} className="text-gray-400 hover:text-white transition-colors bg-black/20 p-2 rounded-full hover:bg-black/50">
-                                <X className="w-6 h-6" />
-                            </button>
-                        </div>
-                        <div className="p-6">
-                            
-                            {/* Detailed Grid Map */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Course & Semester</p>
-                                    <p className="text-white text-base">{selectedStudent.course_name || '-'}</p>
-                                    <p className="text-gray-400 text-sm mt-0.5">Semester: {selectedStudent.current_semester || selectedStudent.semester}</p>
-                                </div>
-                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Batch & Gender</p>
-                                    <p className="text-white text-base">Batch: {selectedStudent.batch || 'N/A'}</p>
-                                    <p className="text-gray-400 text-sm mt-0.5">{selectedStudent.gender || 'Not specified'}</p>
-                                </div>
-                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Father / Guardian</p>
-                                    <p className="text-white text-base">{selectedStudent.father_name || selectedStudent.parent || "Data not on file"}</p>
-                                    <p className="text-gray-400 text-sm mt-0.5">Relation: Father</p>
-                                </div>
-                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">System Comm Email</p>
-                                    <p className="text-white text-sm break-all">{selectedStudent.email || "N/A"}</p>
-                                </div>
-                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Primary Phone / Mobile</p>
-                                    <p className="text-white text-sm">{selectedStudent.phone || "N/A"}</p>
-                                </div>
-                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm">
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Date of Birth</p>
-                                    <p className="text-white text-sm">{selectedStudent.date_of_birth || selectedStudent.dob || "Unknown"}</p>
-                                </div>
-                                <div className="bg-[#3D0F0F] p-4 border border-[rgba(255,255,255,0.05)] rounded-sm md:col-span-2">
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--gu-gold)] font-bold mb-1 opacity-80">Declared Address</p>
-                                    <p className="text-white text-sm">{selectedStudent.address || "No address traced."}</p>
+
+                            <div className="grid grid-cols-2 gap-4 mb-8">
+                                {[
+                                    { label: 'Academic Path', val: selectedStudent.course_name || 'General Stream' },
+                                    { label: 'Current Phase', val: `Semester ${selectedStudent.current_semester || student.semester}` },
+                                    { label: 'Neural Link', val: selectedStudent.email || 'No Sync' },
+                                    { label: 'Signal Hub', val: selectedStudent.phone || 'Silent' }
+                                ].map((info, i) => (
+                                    <div key={i} className="bg-white/5 border border-white/5 p-4 rounded-2xl group hover:bg-white/10 transition-all">
+                                        <p className="text-[9px] font-black uppercase tracking-[0.2em] text-white/20 mb-1">{info.label}</p>
+                                        <p className="text-white text-xs font-bold truncate">{info.val}</p>
+                                    </div>
+                                ))}
+                                <div className="col-span-2 bg-white/5 border border-white/5 p-4 rounded-2xl">
+                                    <p className="text-[9px] font-black uppercase tracking-[0.2em] text-white/20 mb-1">Last Traced Origin</p>
+                                    <p className="text-white text-xs leading-relaxed italic opacity-80">{selectedStudent.address || 'Location Hidden'}</p>
                                 </div>
                             </div>
-                            
-                            {/* Operations */}
-                            <div className="pt-6 border-t border-[rgba(255,255,255,0.1)] flex flex-wrap justify-end gap-3 rounded-sm">
-                                {selectedStudent.status === 'Active' || selectedStudent.status === 'Graduating' ? (
+
+                            <div className="flex gap-4">
+                                {selectedStudent.status === 'Active' ? (
                                     <button 
                                         onClick={() => handleSuspend(selectedStudent.enrollment_no, selectedStudent.user_id)}
-                                        className="border border-red-500 text-red-400 px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-red-500 hover:text-white transition-colors rounded-sm flex items-center"
+                                        className="flex-1 bg-red-500/10 text-red-500 border border-red-500/20 py-3 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-red-500 hover:text-white transition-all"
                                     >
-                                        <AlertTriangle className="w-4 h-4 mr-2" /> Suspend Account
+                                        Revoke Core Access
                                     </button>
                                 ) : (
                                     <button 
                                         onClick={() => handleActivate(selectedStudent.enrollment_no, selectedStudent.user_id)}
-                                        className="border border-green-500 text-green-400 px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-green-500 hover:text-white transition-colors rounded-sm flex items-center"
+                                        className="flex-1 bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 py-3 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-emerald-500 hover:text-white transition-all"
                                     >
-                                        Activate Profile
+                                        Restore Phase Link
                                     </button>
                                 )}
-                                <button className="border border-[var(--gu-gold)] text-[var(--gu-gold)] px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-[var(--gu-gold)] hover:text-[#1A0505] transition-colors rounded-sm shadow-md cursor-not-allowed opacity-50">
-                                    Edit Core Data
+                                <button className="flex-1 bg-white/5 text-white/40 border border-white/10 py-3 rounded-full text-[10px] font-black uppercase tracking-widest hover:text-white hover:bg-white/10 transition-all">
+                                    Modify Core Metadata
                                 </button>
                             </div>
                         </div>
@@ -517,6 +513,7 @@ const Students = () => {
                 </div>
             )}
         </AdminLayout>
+
     );
 };
 

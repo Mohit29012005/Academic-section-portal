@@ -77,174 +77,142 @@ const Dashboard = () => {
 
   return (
     <StudentLayout>
-      <div className="relative">
-        <div className="fixed inset-0 z-0" style={{ backgroundImage: "url(/maxresdefault.jpg)", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", opacity: 0.3 }}></div>
-        <div className="animate-fade-in relative z-10">
-          <div className="border-b border-[var(--gu-gold)] pb-6 mb-8 break-words word-wrap">
-            <h1 className="font-serif text-2xl md:text-3xl text-white mb-2">
-              Welcome back, {data.student?.name || "Student"}!
+      <div className="animate-fade-in max-w-7xl mx-auto space-y-10 relative z-10">
+        
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-[var(--gu-red-deep)]/40 p-8 rounded-2xl border border-[var(--gu-gold)]/10 backdrop-blur-sm shadow-2xl">
+          <div>
+            <h1 className="font-serif text-4xl md:text-5xl text-white mb-2 tracking-tight">
+              Astraea Student Portal
             </h1>
-            <p className="text-[var(--gu-gold)] text-xs md:text-sm mb-1 uppercase tracking-wider font-semibold flex flex-wrap gap-2">
-              <span>{data.student?.course_code || data.student?.course_name}</span>
-              <span>&middot; Semester {data.student?.current_semester || data.student?.semester}</span>
-              <span>&middot; Enrollment: {data.student?.enrollment_no}</span>
-            </p>
-            <p className="text-white opacity-60 text-sm">{today}</p>
-          </div>
-
-          {/* Quick Actions */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <Link to="/student/attendance-camera" className="group">
-              <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-5 rounded-sm hover:border-emerald-500/50 transition-all flex flex-col items-center text-center gap-2">
-                <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors">
-                  <Camera className="w-5 h-5 text-emerald-400" />
-                </div>
-                <span className="text-white text-sm font-medium">Mark Attendance</span>
-                <span className="text-white/40 text-xs">AI Face Recognition</span>
-              </div>
-            </Link>
-            <Link to="/student/attendance-setup" className="group">
-              <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-5 rounded-sm hover:border-[var(--gu-gold)]/50 transition-all flex flex-col items-center text-center gap-2">
-                <div className="w-10 h-10 bg-[var(--gu-gold)]/20 rounded-lg flex items-center justify-center group-hover:bg-[var(--gu-gold)]/30 transition-colors">
-                  <Camera className="w-5 h-5 text-[var(--gu-gold)]" />
-                </div>
-                <span className="text-white text-sm font-medium">AI Setup</span>
-                <span className="text-white/40 text-xs">Face Registration</span>
-              </div>
-            </Link>
-            <Link to="/student/attendance" className="group">
-              <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-5 rounded-sm hover:border-[var(--gu-gold)]/50 transition-all flex flex-col items-center text-center gap-2">
-                <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
-                  <CheckCircle className="w-5 h-5 text-blue-400" />
-                </div>
-                <span className="text-white text-sm font-medium">Attendance</span>
-                <span className="text-white/40 text-xs">View Records</span>
-              </div>
-            </Link>
-            <Link to="/student/timetable" className="group">
-              <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-5 rounded-sm hover:border-[var(--gu-gold)]/50 transition-all flex flex-col items-center text-center gap-2">
-                <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
-                  <Calendar className="w-5 h-5 text-purple-400" />
-                </div>
-                <span className="text-white text-sm font-medium">Timetable</span>
-                <span className="text-white/40 text-xs">Class Schedule</span>
-              </div>
-            </Link>
-          </div>
-
-          {/* AI Attendance Setup Banner */}
-          {!regStatus.profile_complete && (
-            <Link to="/student/attendance-setup" className="block mb-8 group">
-              <div className="bg-gradient-to-r from-[var(--gu-red-dark)] to-[#7B0D0D] border border-[var(--gu-gold)]/30 rounded-xl p-5 flex items-center justify-between hover:border-[var(--gu-gold)] transition-all shadow-lg">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[var(--gu-gold)]/20 rounded-full flex items-center justify-center">
-                    <AlertCircle className="text-[var(--gu-gold)] w-6 h-6 animate-pulse" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-serif font-semibold text-lg md:text-xl">Complete AI Attendance Setup</h3>
-                    <p className="text-white/60 text-sm md:text-base">
-                      {!regStatus.is_details_filled
-                        ? "Your personal details are missing. Setup is required for attendance tracking."
-                        : "Your face is not registered yet. Complete biometric setup to mark attendance."}
-                    </p>
-                  </div>
-                </div>
-                <div className="hidden sm:flex items-center gap-2 text-[var(--gu-gold)] font-bold group-hover:translate-x-1 transition-transform">
-                  Setup Now <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
-            </Link>
-          )}
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm relative overflow-hidden flex flex-col justify-between box-border">
-              <div className="flex justify-between items-start mb-4">
-                <span className="text-white opacity-70 text-xs uppercase tracking-spaced font-semibold">Attendance</span>
-                <CheckCircle className="text-[var(--gu-gold)] w-7 h-7 flex-shrink-0" />
-              </div>
-              <div className="font-serif text-3xl md:text-4xl text-[#4ade80] font-bold">{data.attendance_percentage}%</div>
-              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[var(--gu-gold)]"></div>
-            </div>
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm relative overflow-hidden flex flex-col justify-between box-border">
-              <div className="flex justify-between items-start mb-4">
-                <span className="text-white opacity-70 text-xs uppercase tracking-spaced font-semibold">Subjects</span>
-                <BookOpen className="text-[var(--gu-gold)] w-7 h-7 flex-shrink-0" />
-              </div>
-              <div className="font-serif text-3xl md:text-4xl text-[var(--gu-gold)] font-bold">{data.total_subjects || 6}</div>
-              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[var(--gu-gold)]"></div>
-            </div>
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm relative overflow-hidden flex flex-col justify-between box-border">
-              <div className="flex justify-between items-start mb-4">
-                <span className="text-white opacity-70 text-xs uppercase tracking-spaced font-semibold">Latest SGPA</span>
-                <Award className="text-[var(--gu-gold)] w-7 h-7 flex-shrink-0" />
-              </div>
-              <div className="font-serif text-3xl md:text-4xl text-white font-bold">{data.latest_sgpa || "—"}</div>
-              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[var(--gu-gold)]"></div>
-            </div>
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm relative overflow-hidden flex flex-col justify-between box-border">
-              <div className="flex justify-between items-start mb-4">
-                <span className="text-white opacity-70 text-xs uppercase tracking-spaced font-semibold">CGPA</span>
-                <Clock className="text-[var(--gu-gold)] w-7 h-7 flex-shrink-0" />
-              </div>
-              <div className="font-serif text-3xl md:text-4xl text-[#4ade80] font-bold">{data.cgpa || "—"}</div>
-              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[var(--gu-gold)]"></div>
+            <div className="flex flex-wrap items-center gap-3 text-[var(--gu-gold)] text-[10px] uppercase font-black tracking-[0.3em] opacity-80">
+              <span>{data.student?.name || "Student Core"}</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]/30"></span>
+              <span>{data.student?.course_code || "MCA"}</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]/30"></span>
+              <span>Semester {data.student?.current_semester || 2}</span>
             </div>
           </div>
+          <div className="bg-white/5 border border-white/10 py-3 px-6 rounded-full backdrop-blur-md flex items-center gap-3">
+             <Calendar className="w-4 h-4 text-[var(--gu-gold)]" />
+             <span className="text-white text-[10px] font-black uppercase tracking-widest">{today}</span>
+          </div>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Academic Calendar */}
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-6 rounded-sm overflow-hidden box-border">
-              <h2 className="font-serif text-white text-lg md:text-xl pb-4 border-b border-[var(--gu-border)] border-l-3 border-l-[var(--gu-gold)] pl-3 mb-6 flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-[var(--gu-gold)]" />
-                Academic Calendar
-              </h2>
-              <div className="space-y-3">
-                {(data.academic_calendar || []).map((event) => (
-                  <div key={event.id} className="bg-[#3D0F0F] border border-[var(--gu-border)] p-4 rounded-sm flex justify-between items-center hover:border-[var(--gu-gold)] transition-colors overflow-hidden">
-                    <div className="flex flex-col min-w-0">
-                      <span className="text-white font-semibold text-sm md:text-base mb-1 word-wrap break-words">{event.event}</span>
-                      <span className={`text-xs font-semibold ${getEventColor(event.type)}`}>
-                        {new Date(event.date).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" })}
-                      </span>
-                    </div>
-                    <span className={`text-xs px-2 py-1 rounded uppercase font-bold ${getEventBadge(event.type)}`}>
-                      {event.type}
+        {/* AI Attendance Setup Banner */}
+        {!regStatus.profile_complete && (
+          <Link to="/student/attendance-setup" className="block group animate-reveal-down">
+            <div className="bg-gradient-to-r from-[var(--gu-red-dark)] via-[#7B0D0D] to-[#4A0505] border border-[var(--gu-gold)]/30 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between hover:border-[var(--gu-gold)] transition-all shadow-[0_0_30px_rgba(139,0,0,0.3)] gap-4">
+              <div className="flex items-center gap-6">
+                <div className="w-14 h-14 bg-[var(--gu-gold)]/20 rounded-2xl flex items-center justify-center border border-[var(--gu-gold)]/20 group-hover:scale-110 transition-transform">
+                  <AlertCircle className="text-[var(--gu-gold)] w-7 h-7 animate-pulse" />
+                </div>
+                <div>
+                  <h3 className="text-white font-serif font-bold text-2xl mb-1 tracking-tight">Biometric Registration Required</h3>
+                  <p className="text-white/60 text-sm italic font-serif">
+                    {!regStatus.is_details_filled
+                      ? "Establish your digital twin for AI attendance tracking."
+                      : "Your face biometric signature is missing. Complete setup to begin."}
+                  </p>
+                </div>
+              </div>
+              <div className="bg-[var(--gu-gold)] text-black px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] group-hover:px-10 transition-all flex items-center gap-2">
+                Initialize Setup <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+          </Link>
+        )}
+
+        {/* Quick Actions Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up">
+          {[
+            { to: "/student/attendance-camera", icon: Camera, label: "Mark Session", desc: "AI Face Sync", color: "text-emerald-400" },
+            { to: "/student/attendance-setup", icon: Camera, label: "Face Setup", desc: "Biometric ID", color: "text-[var(--gu-gold)]" },
+            { to: "/student/attendance", icon: CheckCircle, label: "View Records", desc: "Logs & Trends", color: "text-blue-400" },
+            { to: "/student/timetable", icon: Calendar, label: "Schedule", desc: "Weekly Cycle", color: "text-purple-400" }
+          ].map((action, i) => (
+            <Link key={i} to={action.to} className="group glass-panel p-8 rounded-2xl hover:scale-[1.02] transition-all flex flex-col items-center text-center gap-4 relative overflow-hidden" style={{ animationDelay: `${i * 0.1}s` }}>
+              <div className={`w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center border border-white/5 group-hover:bg-white/10 transition-all ${action.color}`}>
+                <action.icon className="w-6 h-6" />
+              </div>
+              <div>
+                <span className="text-white text-sm font-black uppercase tracking-widest block mb-1">{action.label}</span>
+                <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest">{action.desc}</span>
+              </div>
+              <div className="absolute inset-x-0 bottom-0 h-1 bg-[var(--gu-gold)] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up animate-stagger-1">
+          {[
+            { label: "Attendance Status", val: `${data.attendance_percentage}%`, icon: CheckCircle, color: "text-[#4ade80]" },
+            { label: "Active Subjects", val: data.total_subjects || 6, icon: BookOpen, color: "text-[var(--gu-gold)]" },
+            { label: "Semester SGPA", val: data.latest_sgpa || "—", icon: Award, color: "text-white" },
+            { label: "Cumulative CGPA", val: data.cgpa || "—", icon: Clock, color: "text-[#4ade80]" }
+          ].map((stat, i) => (
+            <div key={i} className="glass-panel p-8 rounded-2xl flex flex-col justify-between h-40 group">
+              <div className="flex justify-between items-start">
+                <span className="text-white/30 text-[10px] font-black uppercase tracking-[0.2em]">{stat.label}</span>
+                <stat.icon className={`w-5 h-5 opacity-40 group-hover:opacity-100 group-hover:rotate-12 transition-all duration-500 ${stat.color}`} />
+              </div>
+              <div>
+                <div className={`font-serif text-4xl font-bold tracking-tighter ${stat.color}`}>{stat.val}</div>
+                <div className="w-10 h-1 bg-white/10 mt-3 group-hover:w-full transition-all duration-700"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Info Blocks */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-slide-up animate-stagger-2">
+          {/* Calendar Block */}
+          <div className="glass-panel rounded-2xl overflow-hidden flex flex-col">
+            <div className="p-6 border-b border-white/5 bg-white/5 flex items-center gap-3">
+              <Calendar className="w-5 h-5 text-[var(--gu-gold)]" />
+              <h2 className="font-serif text-xl text-white tracking-tight">Academic Milestones</h2>
+            </div>
+            <div className="p-8 space-y-4 overflow-y-auto max-h-[400px]">
+              {(data.academic_calendar || []).map((event) => (
+                <div key={event.id} className="bg-white/5 border border-white/5 p-5 rounded-2xl flex justify-between items-center group hover:bg-white/10 hover:border-[var(--gu-gold)]/20 transition-all">
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-white font-bold text-base mb-1 group-hover:text-[var(--gu-gold)] transition-colors">{event.event}</span>
+                    <span className={`text-[10px] font-black uppercase tracking-widest flex items-center gap-2 ${getEventColor(event.type)}`}>
+                      <span className="w-1 h-1 rounded-full bg-current"></span>
+                      {new Date(event.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
                     </span>
                   </div>
-                ))}
-                {(!data.academic_calendar || data.academic_calendar.length === 0) && (
-                  <p className="text-white opacity-50 text-sm">No upcoming events</p>
-                )}
-              </div>
+                  <span className={`text-[9px] px-3 py-1.5 rounded-full uppercase font-black tracking-widest border ${getEventBadge(event.type)}`}>
+                    {event.type}
+                  </span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/* Announcements */}
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-6 rounded-sm overflow-hidden box-border">
-              <h2 className="font-serif text-white text-lg md:text-xl pb-4 border-b border-[var(--gu-border)] border-l-3 border-l-[var(--gu-gold)] pl-3 mb-6 flex items-center gap-2">
-                <Bell className="w-5 h-5 text-[var(--gu-gold)]" />
-                Announcements
-              </h2>
-              <div className="space-y-3">
-                {(data.announcements || []).map((announcement) => (
-                  <div key={announcement.id} className="bg-[#3D0F0F] border border-[var(--gu-border)] p-4 rounded-sm hover:border-[var(--gu-gold)] transition-colors overflow-hidden">
-                    <div className="flex items-start justify-between mb-2">
-                      <span className="text-white font-semibold text-sm md:text-base word-wrap break-words flex-1">
-                        {announcement.priority === "important" && (
-                          <span className="inline-block w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></span>
-                        )}
-                        {announcement.title}
-                      </span>
-                      <span className="text-white opacity-40 text-xs ml-2 flex-shrink-0">
-                        {new Date(announcement.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
-                      </span>
+          {/* Announcements Block */}
+          <div className="glass-panel rounded-2xl overflow-hidden flex flex-col">
+            <div className="p-6 border-b border-white/5 bg-white/5 flex items-center gap-3">
+              <Bell className="w-5 h-5 text-[var(--gu-gold)]" />
+              <h2 className="font-serif text-xl text-white tracking-tight">Campus Newsroom</h2>
+            </div>
+            <div className="p-8 space-y-4 overflow-y-auto max-h-[400px]">
+              {(data.announcements || []).map((ann) => (
+                <div key={ann.id} className="bg-white/5 border border-white/5 p-6 rounded-2xl group hover:bg-white/10 transition-all">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      {ann.priority === "important" && <span className="w-2.5 h-2.5 bg-red-500 rounded-full animate-ping"></span>}
+                      <span className="text-[var(--gu-gold)] text-[10px] font-black uppercase tracking-widest">Broadcast</span>
                     </div>
-                    <p className="text-white opacity-70 text-xs md:text-sm">{announcement.message}</p>
+                    <span className="text-white/20 text-[10px] font-bold">
+                      {new Date(ann.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                    </span>
                   </div>
-                ))}
-                {(!data.announcements || data.announcements.length === 0) && (
-                  <p className="text-white opacity-50 text-sm">No announcements</p>
-                )}
-              </div>
+                  <h4 className="text-white font-bold text-base mb-2 group-hover:text-[var(--gu-gold)] transition-colors tracking-tight">{ann.title}</h4>
+                  <p className="text-white/50 text-sm leading-relaxed font-serif italic">{ann.message}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

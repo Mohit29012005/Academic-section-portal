@@ -433,23 +433,24 @@ const Login = () => {
           }}
         />
 
-        <div className="w-full shadow-lg shadow-black translate-z-0 hover:shadow-xl hover:scale-102 transition-transform hover:shadow-black transition-shadow duration-300 max-w-md bg-white border border-[rgba(185,28,28,0.2)] rounded-2xl animate-slide-up overflow-hidden box-border relative z-10">
-          <div className="flex justify-center mb-4 bg-red-800 py-8 rounded-t-2xl">
+        <div className="w-full max-w-md glass-card-light rounded-2xl shadow-2xl relative z-10 overflow-hidden transform transition-all duration-500 hover:scale-[1.01]">
+          <div className="flex justify-center mb-0 bg-[var(--gu-red-dark)] py-8 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-10 bg-white"></div>
             <Logo size="xl" />
           </div>
 
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 p-1 bg-gray-100/50 backdrop-blur-sm">
             <button
               onClick={() => { setRole("student"); setMessage(""); }}
-              className={`py-4 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 truncate border-b border-[rgba(185,28,28,0.2)] ${role === "student" ? "bg-[var(--gu-red)] text-white border-b-transparent" : "bg-white text-[var(--gu-red)] border-[var(--gu-red)] hover:bg-[rgba(185,28,28,0.05)] border-r-0"}`}
+              className={`py-3 text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-xl ${role === "student" ? "bg-white text-[var(--gu-red-dark)] shadow-sm" : "text-gray-500 hover:text-[var(--gu-red)]"}`}
             >
-              Student
+              Student Portal
             </button>
             <button
               onClick={() => { setRole("faculty"); setMessage(""); }}
-              className={`py-4 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 truncate border-b border-[rgba(185,28,28,0.2)] ${role === "faculty" ? "bg-[var(--gu-red)] text-white border-b-transparent" : "bg-white text-[var(--gu-red)] border-[var(--gu-red)] hover:bg-[rgba(185,28,28,0.05)] border-l border-[rgba(185,28,28,0.2)]"}`}
+              className={`py-3 text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-xl ${role === "faculty" ? "bg-white text-[var(--gu-red-dark)] shadow-sm" : "text-gray-500 hover:text-[var(--gu-red)]"}`}
             >
-              Faculty
+              Faculty Portal
             </button>
           </div>
 
@@ -458,14 +459,6 @@ const Login = () => {
               {role === "student" ? "Student Login" : "Faculty Login"}
             </h2>
 
-            {role === "faculty" && (
-              <div className="mb-6 p-4 bg-[rgba(185,28,28,0.08)] border-l-4 border-red-700 flex items-start gap-2">
-                <span className="flex-shrink-0 mt-0.5 text-[var(--gu-red)]">⚠</span>
-                <p className="text-[var(--gu-red)] text-sm italic font-serif flex-1 break-words leading-relaxed">
-                  Faculty credentials only. Student IDs will be rejected.
-                </p>
-              </div>
-            )}
 
             <form onSubmit={handleLogin} className="space-y-6">
               <div>
@@ -499,13 +492,20 @@ const Login = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full py-3 px-6 text-base font-bold uppercase tracking-widest transition-colors duration-200 rounded-2xl min-w-fit whitespace-nowrap ${
+                className={`w-full py-3.5 px-6 text-sm font-bold uppercase tracking-widest transition-all duration-300 rounded-2xl shadow-lg hover:shadow-xl btn-shine ${
                   role === "student"
                     ? "bg-[var(--gu-red)] text-white hover:bg-[var(--gu-red-hover)]"
                     : "bg-[var(--gu-red-dark)] text-white hover:bg-[#5c0000]"
-                } ${loading ? "opacity-60 cursor-not-allowed" : ""}`}
+                } ${loading ? "opacity-60 cursor-not-allowed" : "hover:-translate-y-0.5"}`}
               >
-                {loading ? "Signing In..." : `Sign In as ${role === "student" ? "Student" : "Faculty"}`}
+                {loading ? (
+                  <div className="flex items-center justify-center gap-2">
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Authenticating...</span>
+                  </div>
+                ) : (
+                  `Sign In to ${role === "student" ? "Student" : "Faculty"} Portal`
+                )}
               </button>
             </form>
 

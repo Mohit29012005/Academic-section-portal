@@ -2,23 +2,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gu-red: #B91C1C;
-  --color-gu-red-dark: #7F1D1D;
-  --color-gu-red-deep: #450A0A;
-  --color-gu-red-card: #5C1515;
-  --color-gu-red-hover: #991B1B;
+  --color-gu-red: #8B0000;
+  --color-gu-red-dark: #660000;
+  --color-gu-red-deep: #2D0A0A;
+  --color-gu-red-card: rgba(85, 12, 12, 0.85);
+  --color-gu-red-hover: #A52A2A;
   --color-gu-gold: #D4AF37;
-  --color-gu-gold-light: rgba(212, 175, 55, 0.2);
+  --color-gu-gold-light: rgba(212, 175, 55, 0.15);
+  --color-gu-gold-subtle: rgba(212, 175, 55, 0.05);
   --color-gu-white: #FFFFFF;
-  --color-gu-cream: #FDF8F0;
-  --color-gu-text: #1A0A0A;
+  --color-gu-cream: #FDFBF7;
+  --color-gu-text: #1A0E0E;
   --color-gu-muted: rgba(255, 255, 255, 0.65);
-  --color-gu-muted-dark: rgba(255, 255, 255, 0.40);
-  --color-gu-border: rgba(212, 175, 55, 0.25);
-  --color-gu-border-red: rgba(185, 28, 28, 0.4);
-  --color-gu-success: #16A34A;
-  --color-gu-error: #DC2626;
-  --color-gu-warning: #D97706;
+  --color-gu-muted-dark: rgba(26, 14, 14, 0.60);
+  --color-gu-border: rgba(212, 175, 55, 0.20);
+  --color-gu-border-red: rgba(139, 0, 0, 0.25);
+  --color-gu-success: #15803D;
+  --color-gu-error: #B91C1C;
+  --color-gu-warning: #B45309;
 
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
@@ -81,10 +82,52 @@ h1, h2, h3, h4, h5, h6 {
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  .animate-stagger-1 { animation-delay: 0.1s; }
-  .animate-stagger-2 { animation-delay: 0.2s; }
-  .animate-stagger-3 { animation-delay: 0.3s; }
-  .animate-stagger-4 { animation-delay: 0.4s; }
+  .animate-stagger-1 { animation-delay: 0.1s; animation-fill-mode: both; }
+  .animate-stagger-2 { animation-delay: 0.2s; animation-fill-mode: both; }
+  .animate-stagger-3 { animation-delay: 0.3s; animation-fill-mode: both; }
+  .animate-stagger-4 { animation-delay: 0.4s; animation-fill-mode: both; }
+  .animate-stagger-5 { animation-delay: 0.5s; animation-fill-mode: both; }
+
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0) 40%,
+      rgba(255,255,255,0.4) 50%,
+      rgba(255,255,255,0) 60%,
+      rgba(255,255,255,0) 100%
+    );
+    transform: rotate(45deg);
+    transition: all 0.3s;
+    opacity: 0;
+  }
+  .btn-shine:hover::after {
+    left: 100%;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.7s;
+  }
 }
 
 @keyframes fadeIn {
@@ -139,18 +182,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ═══ GLASSMORPHISM UTILITIES ═══ */
+.glass-panel {
+  background: rgba(45, 10, 10, 0.65);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 .glass-card {
-  background: rgba(92, 21, 21, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .glass-card-light {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(185, 28, 28, 0.1);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* ═══ CARD HOVER EFFECTS ═══ */
