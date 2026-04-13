@@ -1,0 +1,35 @@
+What are the different types of Assembly?
+Explain Link Button control with properties and Events
+Write a short note on Theme
+Explain the ADO.NET architecture
+What is Skin file?
+Explain the types of Skin file
+Explain Dynamic Compilation in detail
+Explain Textbox control with properties
+Explain Range Validator with its use and properties
+What is Stored Procedures?
+Write a advantages of using Stored Procedures
+Answer the following: (Attempt any Six Out of Eight) What is DAS?
+Explain the advantages of DAS
+Explain IP Storage Network Scenario in detail
+Explain data replication in brief
+Write a short note on Tactical Goals
+Explain External Storage in detail
+Explain Primary Offensive and Defensive Strategies in brief. zoo = Bs FS A Explain Metropolitan Area Storage and Wide Area Storage Network. 2
+What is NAS?
+Describe NAS system in detail
+Write a note on Storage Policy Management. 3
+Explain Availability within the Data Center in brief
+Explain in brief
+What is MAN and WAN Services
+Explain Sizing Link Bandwidth for Long-Distance Storage gement Simplicity
+Describe OSPF and its characteristics in details. 3 Explain EIGRP packet types in details. as) Le Explain these keywords : Distance Vector Routing Protocol, CIDR 5 What is Redistribution?
+Explain route redistribution between OSPF and EIGRP. 6 Describe OSPFV3 in details. ai Explain difference between IPv4 and IPv6
+Explain K values in EIGRP. 2
+Describe these terminologies : Successor, Feasible Successor, EIGRP Route States 1) s Q3
+Describe OSPF network types. 2
+Explain these keywords : Backbone area, Stub Area, NSSA Q4
+What is BGP?
+Describe BGP attributes in details
+Explain IPv6 and its naming convention. 2
+Describe IPv6 headers. [

@@ -1,0 +1,60 @@
+SECTION.I 1. .(A) f)escribe tlre inheritance concept of Cl#.(B) \lrhat is Access lr4odifiersl)(C) \\/hat is Coliection? l,isr oLit the pro;:erries of Array List.(D) what is a constructor? what are tlre various types of constructors?2
+ANy TWO ) (A) what is Poll'morphism'2 Hxplain tlre Methoil o'erloading in c#.(B) Il.xplain the Hrceprion handling in C#.(c) what is Array?
+Explain the jagged array with suitable example. 3
+ANY TWO )(A) Whar is LINQ?
+Explain it wirh suitable example.(B) what is ASP.n-ET core?
+Erplairr rhe Acrvantage of ASp.NET core.(C) Write a short note on Razor Svntax^ SECTION.II .(A) What is an ASP.NET Core MVC?(B) What is Routing?(C) Describe the model in asp.net core rnvc
+ANy TWO ) (A) Explain the MVC Design panern in ASp.NET Core MVC.(B) what is Action Result?
+List the different kind of action results.(C) What is Views?
+Write a shorl note on Layout Views
+ANy TWO )(A) Write a step to add a controller and view in asp.net core mvc.(B) What is Entity frameworl<?
+Write down step to perform CURD operation using Entity Framework Core.(C) Describe the tenn validation on ASp.NET core MVC
+Explain Javascript operators in detail.b
+What do you mean by Javascript?
+Why should one use l:._^.^:^,1:,. and explain Javascript event handling giving (ANy 2 )a, Explain Javascript objects in detail.b, Explain Javascript functions giving examples..: What do you mean by DOM HTMa DOM 'CSS?
+State and explain JSON data types.b
+What do you mean by JSON stringify.c
+Explain the need for ISON parse giving examples
+Explain Bootstrap Typography giving examples.b
+Explain Bootstrap spinners & paginalion.c
+Explain Bootstrap Tables & Images giving examples.6. / I M,C.A
+Write each section in sepai-ate answer book. 3
+SECTION.I Write al,.or,it BulteredWriter ? method used for ?Vihat are flushQ and void rvlite(int Expiain join0 & isAiive$ rnerthods, Stale features of En'irmSet
+Expl ain fo llou,ing methods of FiielnputStream' , (i) protected void finalize$throws IoException {} and blic int rearl r) thro.ars IOException Dillerence i:etween an array zuiei Ar:raylist in Java?
+Ansrver the following (ANY TWO) lVrite a proglam shorving rnultiple threads working upon single object Vvrtie a ja..,a program t* rear.l a lext frle iine b,v line, assuming the filename is i:inumca.txt (P.r.0)Answer the lbllowi*g I i08) Wh*n to use Java TrecSet?
+Explain
+W-l'ite a java program to ct:nvert an Ama,r*List to Array,1 (1) (2) (3) (4) 7 (1 1) (1) (2) (3) t (1 1) (1) t2) tr) Ia (3) i-{rr slver the foil0rving Differentiate between examples.SECTION.II Statement and PreParedStatement by taking END OF PAPERare the advantages ofcookies? ffiricservlet and HttPSeryi-{ e*w*u thcr 1'ollmvirrg {ANY'['WO)(r)Tf iin at least'two JDBC Discuss JSF application life cycle' i tYPes of Session Tracking E**et the fotlorving (ANY TWO) 1t)-ilExplain life cYcle of iSP' ffiifecycleof servlet
+SECTION:I 1 (ANY FOUR) (1) Find LCM of 16, 24,36,54 (2) +, *. , 1t , X , ft nrranse in ascendins order' (3) ir =L =0.2689 is given then what is the value ofrr 3 718 (4) On dividin g L24OI by a certain number' we get 76 and 13 as-remainder' What is the divisor? rc\ r89i-'786t]- rSgi--8or- \J/ SimplifY@ Find the value of P 8.s - {s+ - (tl+ 2.8 - p)\ x 4.25 + (0'2)2 : (ANY TWO)(8) 2A 28 (1)3060.000371 8 as quotient is 15 Years
+If the age increases bY 3(3) (8) The average age of a class of 39 students of the teacher included, then the average months' Find the age of the teacher' (2) Hiral,s ugu u?tu|. six-years will be three-seventh of his father's age
+Ten y;;; ago, the ratio of their ages was 1:5' What is Hiral's father's age at Present?
+If 7 .5o/o of one number is L2.5o/o of the other number, find the two numbers' 3A Find square root of 0'900087 up to 3 places of decimal' 38 (ANY TWO) (8) (i) A person incurs 5% toss -by selling a watch for Rs. 1140' At what\ / price shoutO the watch be sold to earn 5olo Profit?
+What is the share of B?
+If A alone can dar7s, in how many daYs can B in 2 minutes 30 certain rate for 3 Years' would have fetched Rs'day?(4) A and B together can comPlete comPlete the same work in 12 alone comPlete the work?
+A cyclist covers a distance of 750 metres seconds' What is the sPeed in km/hr? 5AIftheWagesof6menfor15daysbeRs.2lO0,thenfindthe wages of 9 men f or !2 daYs' 58 (ANY TWO) (1)AsumofRs.BO0amountstoRs.g2Oin3yearsatsimple interest
+If the interest rate is increased by 3o/o, it would amount to how much?
+A sum was put at simple interest at a Had it been put at 2o/o higher rate, it 360 more, Find the sum, (3) In how many ways, a committee of 5 members can from 6 men and 5ladles, consistrng of 3 men and 2 6A2menand3boyscandoaworkjnl0dayswhile3menand2 boys can do the same work in 8 days' In how many days can 2 men and 1 boY do the work? 68 (ANY TWO) (1) Two unbiased coins are tossed, what is the probability of getting at most one head?
+In a simultaneous throw of a pair of dice, find the probability of getting a total more than 7' (3) FinO tt'.r. odd man out: 10, L4, L6,78,27,24' 26' Give proper exPlanation.(3) (8) be selected ladies?
+Write each section in separate answer book. 3
+S) (1) What is Firewall authentication?
+List out Types of Server
+What are the appropriate uses of MIME ?
+What do you mean by Subnet Masks ?. 2
+Define Network Topologies and discuss advantage and disadvantage of Bus Network Topologies
+Discuss VLAN conf,guration in switch. 3
+Describe the various field of TCP segment
+What is IP?
+Discuss IP Address Classes
+P.r.o) I L /1 (1) (2) (3) (4)SECTION-II What is tc?wrappers
+Define ICMP
+Describe importance of iptables
+What is the purpose of DHCp ?
+Discuss Domain Name System (DNS)
+Explain vfutualization architecture
+Ansrver the follorving (1) Define Big Data AnalYtics' A; What is Business Process Management?
+Statehowcloudcomputingacceleratedthepaceofbigdataadoption?
+What do you undelstand by Key Performance Indicators?
+Answer the follo'rving (AnY Trvo) (1)Discussdescriptiveu*tytit'anddiagnosticDataanall'tics' i;; Discuss why is big data analltics important? ir) Discuss any four characteristics of Big Data' 3
+Any Tlvo) -n: -:1^, r\^+^ (11) (1)DefineDigitalDataanddiscussdifferenttypesofDigitalData. @Explaini,,a.tuit,aboutQuantitativeanalysisandQualitativeanalysisof big data technique with suitable examples' (3) Diicuss uto"'Sig Outu Analyics Applications Types' SECTION.II Anslver the following (1) What is Data Serialization ?
+Averagenumberofcttstomersrn,hOarelike}yt0returntheitenrs (e}Thevarianceandthestandarddeviatiorralthenltmberolreturns. ,4,SECTION-TI " (i) What is co-relation anaiysis'l Explain it n'ith suitable positive anci negative cofrelation' (ii) V,/hat is ,i*ti''U"?'Jf Erpiain rhe aclvantages of'using it?(8) example
+Also exPlain (11) 5.(A) (i) (ii) (iii)Arusrver the follorving: {Any Tlvo} WhatissimpleL,inearR.egression?Exoiainthestepstobuiidthesimple r{:.,grsssion Model' ExpieinditTereritdistancemeasufesrrsedfordiagnosingtheoutliers. lixpiainthemetho,lsofvariahleselectiorrirrRegressiorrlv{odelBuiiding. {r"(A) (Any Two) (11) (i) Explain the methods of visual representation of data' (ii)ExplainSpearmanrankcorrelation.pointBi.serialcorrelatiorrandPrjl- Coetficient iiii) Whet is mnltiPle Itegressi0n lVtodelLinear regression?
+Explain the steps for Multiple Linear Building. f"tgc & "t 1

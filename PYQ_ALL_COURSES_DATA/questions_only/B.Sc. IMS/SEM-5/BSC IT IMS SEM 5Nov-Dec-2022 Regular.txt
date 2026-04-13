@@ -1,0 +1,84 @@
+Answer the following: (ANY THREE) What is migration toolkit in virtual server 2005(VSMT)?
+Explain in brief
+Describe the steps to create the virtual machine using script
+Explain the types of Virtual Disk
+Write a short note on LPT port
+Explain the Start and Stop actions of Virtual Server 2005
+Answer the following: (ANY ONE) What is Virtual machine remote console (VMRC)?
+State differences between Virtual Server 2005 and Virtual Server 2005 R2
+Write a short note on Microsoft Loopback Adapter
+What is ADS?
+Explain the components which ADS uses
+Answer the following: (ANY ONE) How to troubleshoot automated deployment services?
+Write down the steps to create the virtual hard disk using script
+Describe the key components of SmartDeshboard
+Explain Edge Support for CLM in NGX
+Write a short note on IP compression
+Describe IP fragments in brief
+Explain dedicated server installation
+Write a short note on TACACS authentication in brief
+Explain the use of sysconfig command
+Explain the features of new smart portal. 2. — State the options available in cpconfig
+Write a short note on firewall security design. 2
+Write a short note on client authentication
+Write a short note on Route Based VPN. 2
+Describe SIP protocol in brief
+Explain Peer-to-Peer Applications in brief. 2
+Write a short note on Cluster Control Protocol
+Answer the following: (Any 3) [15] 4, What is file?
+Explain types of file in detail
+What is data frame?
+Explain any two ways to creating data frame with example. @ 3
+Explain show(), figure(), plot(), savefig(), xlabel(), ylabel() with suitable example. 4
+Discuss various applications of ML. 5. | What is node in KNIME Tool?
+Discuss the execution state of node. 2
+Explain use of following functions with syntax and example: open(, close(), read() and write() 2
+Explain following methods of re module. 1. searchQ) 2. findall() 3
+Answer the following: (Any 1) [04] 4, | Write down the use of Matplotlib?
+Explain the graph which organizes into bin of the ranges
+Explain bar chart using example. e 4
+What is Machine Learning?
+Explain different types of Machine Learning. 2. | What is ANN?
+Explain architecture of ANN in detail 5
+What is workspace and workflow?
+Explain in detail. 2
+Draw the KNIME workflow which shows the use of column filter and row filter
+How does routing work?
+Describe framing and quoting in brief
+What is the difference between encode/decode in Python?
+Describe Python Function in brief
+Write the difference POP and IMAP
+Explain deadlock in python
+Describe the data types of Python. 2
+Write a short note on python programming language
+What is IP Address?
+How IP Address works? 2
+What is client and server in python-based socket programming?
+Describe the IP fragmentation
+What is Server Architecture?
+Explain in brief. 2
+Describe HTTP server in brief
+Answer the following: (Any Five) What is use of File Upload Control?
+Explain with property
+How you can set UICulture and Culture properties in web configuration file
+How to perform custom authentication with Login control using web configuration file?
+Write down the step to Data Bindings Between Controls and the LINQ to SQL Classes
+Explain ChangePassword control with Properties
+Culture name having how many parts?
+Explain with example
+Explain <%@ Register %> directive with three attributes
+Answer the following: (Any One) What is use of MultiView control?
+Explain with commands
+What is use of Calendar control?
+Explain property of LoginStatus control with possible and default value
+What is the use of Validate(), EndEdit(),SubmitChanges() methods in LINO to SQL?
+Explain Web Services Infrastructure
+C. — Whatare the roles of DBA?
+What is Importing, Exporting, Loading, and Unloading Data?
+Describe Orderby and Groupby
+Define: Redo Log Files 2
+Describe the applications of DBMS. 3
+Describe features of SQL
+Define the archifecture of Oracle 10g
+Define these keywords: Schema, Foreign Key, instance 5
+Answer the following: (ANY 1) (3) A. — What is back up.and recovery fundamentals?

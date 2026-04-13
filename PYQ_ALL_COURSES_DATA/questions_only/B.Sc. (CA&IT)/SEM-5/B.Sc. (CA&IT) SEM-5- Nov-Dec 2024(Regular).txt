@@ -1,0 +1,10 @@
+How can reports be generated in an ASP.NET application?
+How one can declare a 06 Col BTLS5 variable in PHP?
+Discuss the types of variable, rules and main characteristics of PHP variable. 2| What different types of error can be reported in PHP?| 06 Co2 BTLS Explain custom error handler with suitable example. 3 | Explain and compare different array sorting functions in 06 col BTL4 PHP with example. 4 | Differentiate : WordPress posts vs. pages 06 Cco4 BTL4 5 | What is MySQL?
+Discuss the advantages and features of | 06 col BTL3 PHP. 2 | What is session?
+How do you manage session in PHP? 06 CcO2 BTL4 State the difference between cookie and session. 3 | Discuss and compare the use of following: 06 Cco2 BTL4 1) include () 3) require() 2) _include_once() 4) require_once() Q-3_ | Answer the following: (Any Two) 12 1/ In the context of MySQLi, what are the various 06 CO3 BTL6 approaches for fetching records from the result set obtained after executing a SELECT query and how these methods are used? 2 | Write an HTML code to design a flight booking form and 06 CO3 BTL6 PHP code to insert flight booking records in MySQL table. 3 | What is WordPress?
+What are the key features that it 06 Co4 BTL3 offers?
+How these features can be described?
+Q-4_ | Answer the following: (Any One) 06 1 | What is Joomla?
+What are the advantages and drawbacks | 06 COS BTL5 of Joomla?
+Explain Deadlock Characterization. 06 Co4 BTL6 3 | Define Segmentation. 06 C04 BTL5 Q.4_ | Answer the following: (Any One) 06 1 | Explain Type of Shell. 06 CO4 BTL4 2 | Discuss any six shell Command with example. 06 Cco4 BTL6 ** End of the Paper ** Time

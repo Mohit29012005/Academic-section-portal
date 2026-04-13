@@ -1,0 +1,57 @@
+Explain Command Class with methods
+Describe a Control trees
+What is use of Panel Control?
+Explain properties of panel control
+What is CLR?
+Explain in Detail
+Explain CompareValidator with properties
+What is use of ImageButton Control?
+Explain with Properties
+Any One) What is Dynamic Compilation?
+How to work?
+Load and Prerender event?
+Explain Button control with properties and Events
+Explain RequiredField Validator with properties
+Any One) What is Skin file? xplain the types of Skin file with example. [ What is DataReader Class?
+Explain with its methods. b
+Explain the ADO.NET architecture in detail
+Explain various level of RAID
+Explain storage virtualization in brief
+Discuss placing storage intelligence in brief Discuss balancing offensive and defensive strategies
+Write a short note on corporate system
+Discuss storage need for business continue
+Explain Data management policy in detail
+Explain service level agreement in detail
+Explain Storage Networking Roadmap
+What is HBA?
+Describe the history and evolution of storage
+ANY TWO) Why Modern Network use layered proiocol?
+Explain metropolitan and wide arca storage networking
+What is RPO?
+Explain qualifying and quantifying IT department
+Explain strategic objectives in detail
+State tactical goals in brief
+What is OSPF?
+Explain the network types of OSPE. 2
+Describe packet types in brief. 3
+List out OSPF LSA types. 4
+State the characteristics of BGP. 5
+Why EIGRP is considered as a hybrid routing protocol? 6
+Explain BGP states in detail. 7
+Explain IPv6 address types
+Write a short note on Routed Protocols. 2
+Describe the types of OSPF routers. 2
+Give the full form of following terms: DR, ABR, NSSA, LSDB
+Write a short note on BGP Altributes
+Write a short note on Routing Protocol Metrics
+What is mail server and discuss the process of mail dclivery Explain send conncetor with its usage types
+Explain the term: OAB, mail enabled user, distribution group What is backup?
+Explain with its types
+Explain different types of mailbox and its usage
+Explain the database supported by exchange server
+Write note on: mailbox delegation
+List out different roles of exchange server and explain in detail
+Explain Email address policy with its steps
+Explain address list in detail
+What is accepted domain and remote domain? [ (Any One) Explain database availability groups
+Explain how to recovering exchange server

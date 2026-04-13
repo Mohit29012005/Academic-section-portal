@@ -1,0 +1,76 @@
+Define MIS
+Mention the usefulness of MIS
+Explain Closed System and Open System with example for each
+Mention the roles and responsibilities of bottom level management
+Mention working functionalities of payroll management system. 2
+Answer the following: (ANY TWO OUT OF THREE) (10) Which major problems are encountered with MIS? > B
+What is communication with regards to MIS?
+Discuss methods of communication in brief
+Explain the concept of system boundaries in detail. 3
+Explain Seven-S Model in brief
+Write a short note on decision support system. bg C
+Discuss working of management information system. 4
+Explain the process of planning for problems
+Discuss programmed and non-programmed decisions in brief
+How IT supports management information system?
+What is M-commerce?
+How it is different from E-commerce?
+State any two applications of M-commerce
+Discuss the case in detail for bus ticket booking system
+What is JIT?
+Explain types of JIT
+Explain Value and Reference data types in details
+What is an Array?
+Explain in detail
+Explain Textbox control with property and example
+Explain checkbox in detail
+Write down difference between radio and checkbox
+Explain ADO.NET architecture in detail
+Explain Data Provider in detail
+Explain Manage code and Un-Manage code in detail
+Explain if and else if statement in detail with example
+IL What is inheritance?
+Answer the following: (Any Five) Write steps to install WordPress in local machine Discuss the different WordPress Theme customization options What is HTML?
+Explain the features of HTML
+Explain the features of WordPress-SEO-Plugin-by-Yoast
+What is WordPress?
+Explain the different features of WordPress
+Explain the importance of Google Analytics Plugin. 27h SO w Pp Explain the different types of List in HTML with corresponding tag and syntax H
+What is PHP?
+Explain the features of PHP 2
+Explain in brief about Post in WordPress
+Explain WordPress Admin Dashboard C
+Explain WordPress as a Content Management System & 3
+Explain the different features of BuddyPress Explain Primary Menu and Social Menu in brief & C
+Explain in brief
+Explain the advantages of CSS inside HTML = Explain the structure of HTML document C
+Explain the features of MySQL
+What is Google Android SDK?
+Which are the tools placed in Android SDK?
+Explain a code of sending SMS in android
+Explain the Context menu with Syntax
+Explain types of animation in detail
+Explain the SQLiteOpenHelper class in detail
+Explain various methods of SQLiteOpenHelper class in detail
+Discuss Advantages and Disadvantages of Android
+Discuss about android Manifest file
+What is Resource?
+Explain types of resources in detail
+Answer the following: (Any Two) What is a Theme?
+Explain with a suitable example
+Explain ArrayAdapter with an example
+Differentiate between style and theme
+Discuss different types of storage available in android
+Explain elements of environment
+Give the classification along with examples
+What is ecosystem?
+What are the components of Ecosystem?
+Write a short note on: Noise Pollution What is global warming?
+Explain the different causes of global warming Explain in brief: Tsunami What are the impact of Technology on the Environment?
+Explain in brief: Man-made Disasters Answer the following: (Any One) (04) Explain in brief: Scope of Environment — Atmosphere, Lithosphere Explain in brief: Scope of Environment — Hydrosphere, Biosphere Answer the following: (Any One) (04) Explain in brief: Producer, Consumer and Decomposer What are the types of ecosystem?
+Answer the following: (Any One) (08) Explain the common sources ‘of air pollution?
+How can we control air pollution?
+Explain the common sources of water pollution?
+How can we control water pollution?
+What is Disaster?
+What are the different types of Hazards?

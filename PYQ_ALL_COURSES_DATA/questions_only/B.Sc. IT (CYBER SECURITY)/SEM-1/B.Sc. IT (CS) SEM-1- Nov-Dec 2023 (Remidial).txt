@@ -1,0 +1,28 @@
+Explain various symbol used in 06 CO1 BTL3 flowchart
+Discuss advantage and disadvantage of Flowchart.2 Break down the importance of the 'C' Language in the 06 CO2 BTL4 field ofprogramming. 3 What is 'C Tokens'?
+Define types of 'C Tokens'
+Explain 06 COz BTL3 it in brief.4 List out types of operators in C
+Provide examples of 06 CO3 BTLI . arithmetic and logical operators in C.5 What is looping?
+Define its rules
+Any One) 06 1 What is arrays?
+Explain one-dimensional arrays in brief. 06 CO5 BTL3 2 What is String?
+How to adO CSS in frtmt pageZ 06c04 BTL3 5What is variable?
+Why to use java script?
+Describe its advantages.06co5 BTL3 2Explain pop-up box with proper example. 06cos BTL2 ** End of the Paper **I ( I
+Explain the type of system call 06co4 BTL4 7What is Deadlock?
+Describe the History of the Windows Operating System.06co1 BTL4 Paoe 1 af ) 2Dfferentiate FAT32 and NTFS 06co1 BTL4 aJDscuss the DIR command with all options. 06c02 BTL6 Q.3 (Any Two) t2 iList out Process Scheduling Algorithm and Explain any one in detail.06co4 BTL5 2What is Process?
+Define Process State Diagram. 06c04 BTL4 aJExplain the Following Privacy Protecting Option Carrera, Location, Microphone06co3 BTL2 Q.4 (Any One) 06 1Write a short note on Paging. 06co5 BTL4 2Discuss Logical and Physical Address Space. 06cos" BTL6 End of the Paper ** --l r
+Describe its types in details. 06co1 BTL3 2What is the meaning the security threat in information system?
+List out the top information security threats.06coz BTL3 JDefine these keywords: encryption, decryption, plain text 06co3BTLl 4What is physical security in terms of information security?
+Why it is important?06co4 BTL3 5What is a VPN service?
+Describe SDLC Waterfall methodology. 06col BTL3 JWhat is email security?
+Why it is important?
+Describe the benefits of email security.06co2 BTL3 Q.3 (Any Two) t2 1What is cryptography in computer security?
+Explain its importance in information security.06co3 BTL3 2Describe inbrief: Symmetric Key Encryption, Asymmetric Key Cryptography06c03 BTLZ JWhat is network security?
+Describe types of network security.06c04 BTL3 Q.4 (Any One) 06 1Describe in brief: Firewall, Access Control 06cos BTL2 2Define these keywords: IDS, IPS, Remote Desktop Connection06cosBTLl ** End of the Paper **
+Find the degree of each vertex and veriff the sum of degree is twice the number of edges
+Find the number of people who read at least one of the tfueemagazines
+Find the number of people who read exactly one magazine
+One-One function (B) Onto function (c) equal function (d) Identity function (e) diagonal matrix (f) Constant function Which of the above graphs are isomorphic?
+Explain the characteristics of a good listener. 4 Discuss various purposes and types of reading 06 comprehension. 5 What do you mean by prefixes, Suffixes and phrasal 06 Verbs? 6 Imagine you have participated in afl elocution competition and would like to share your ideas on a given topic
+How will you deliver your speech efficiently?7 Explain the communication process with a diagram.06 COl BTL 4 06 CO3 BTL2 COl BTL 3 CO3, BTL3 06 COl, BTL 6 2 06 CO1 BTL 6 l.l-'Section _ II.\nst'er the following (Any Two) 3l br c) d) e) 1 2Do as directed

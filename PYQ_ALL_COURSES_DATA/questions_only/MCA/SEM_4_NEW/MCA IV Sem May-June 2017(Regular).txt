@@ -1,0 +1,69 @@
+Role of PHP GD LibrarY" {2} Defitre : setCookie0 flrnction (3i How to access PHP OOPS class Members?
+i How $-POST is differ frorn $-GET' Ansrver the follorving Questions.(Any'Iwo) What is PHP?
+Describe Features of PHP Script' Explain include and include-once Function with exampie' wilut urc types of pHp anayr Describe any five Anay frmctions
+Define: checkdate0 functionTime: 3 Hoursl lnstructions: 1.(A) 3.(A) Questions'(Any Two) ' til Explain $-SESSION super global.variable' pi Deicribe PHP File Reading Functions' (3i Write a PHP script to Inherit OOPS class' ,1' "ir'i"ritff tllllli"f;eters orphp.ini are required to ser ror win{ow confieulation?
+SECTION-II2.(A) (l) a) (3) (B) 4.(A) 6.(A)(08) (10) (01) (10) (01) Do as Directed'(i) Rote of PDO' );{ ii"* il.pr" API for XML read xml file? ili \\rhat is Web Service? io) What is XML Parser?
+Questions'(Any Two) ff"* C*"fgP MVC works? write a pHp sffipt * ;;reEl, D:parfin:lts data using PDO' How DOM APt is Work?
+Give ExamPte' ,ii'Ti,'1il'*ffi,fii; t, bv defaurt weu-formed xML file.(True/False) AnsrverthefollowingQ.uestions'(11-v-L::") Describe CakePlIP Nim-ing Conventions with example' Explain PDO PreparedStatement with example' itJ* pCJit usetul i* xr'tl
+File?
+Give Example' Answer lhe followine' (1) Define to**? : cake bake Model(08) (10) s.(A) (1) (2) (3) (B)(01) (10) (1) Q) (3) (B)(01) ,s"o*e.r *-'r{J;rmen t No
+List or-rt ASP.NET Iv{VC Version history, in brief
+iii) Define the ter:m : ViewData and'tr'empData (iv) What is Fornrs?
+List out tlrc http rnethotls Lrsing Forrns. i(A) Anslver the follorving: (Any'Ts,o) (i) Wliat is r\SP.NEI MVC?
+ii) Wirat is Razrir Vicrv Engines'?
+RaclioFlLrtton ancl D ro p Do rvn L i s t e I eme nt u s i ng,. q-?) I I t m 1 H e I pe r'7 (ii) S/hat is Data Annotations?
+what is controller? write dou,r.r step to creating Action Metlrocl (ii) l.ist out the Actior-r Result 1'vpes
+Anslver the follorving: (,,{ny Tlro} a(i) What is Scaflblding'7 Expiain tr,pe-s ot'scalliriding oprions, (ii) What is Routing?
+iii) what is an Area in N4vc?
+I-{ow ro creare Area in vrvc application, (B) What is Global Filter'? 6
+ii) What is Filters?
+Explain Action.and Frxception Filte rs in detail
+Give exampre of erroipage and iii.?Jrpug". 3.(A) (Any One)(1) What is jsp:forward anA jsp,inctuOtZ(2) Exampre of executeQuery and executeUpdate. 3.(B) Answer the foliowing (Any One)(1) Give two uses declaratlons in;.rp.-'(2) Example of MVC with RequestDispatcher.(s) (s) (6) (s) (6) (P,T.o) I SECTION.II 4.(A) (3)(1) Give two development environments for JSF.(2) Expression language syntax in lSF.(3) Use of <ui:remove> 4.(B) Explain ISF framework services
+Syntax of text fields, text area and buttons in jsf. 5.(B) (Any One) (6) (1) Example of dynamic navigation and static navigation.(2) Explain template with facelets. 6.(A) (Any One) (5) (1) Example of action event in lSF. \ (2) Your own example of inserting record in database using JSF. 6.(8) (Any One) (6) (1) What do you mean by editing data tables in jsf?
+List out any four request headers. 2
+Give any two rriethods that can specify status code in servlet'i 3
+I{ow to send clier.rt data to server?
+Explain. 2
+Horv to rxanage session?
+Describe. i 3
+What is MVC'?
+Explain it with suitable example. 2
+Describe: types of scope in sharing bean. 3
+What is the purpose of ui:debug ancl ui:remove./ Explarn.3' What is ,avigation?
+List out all Standarcl Validators and Converters. t Ansn,er the lbllorving
+Explain its all phases of Life Cycle
+Explain Value Change Event with suitable example, -----X-END OF PA PER___x_____(0r) (llr. {12) I P,g- 2 oF 2-(r0) 'C:o*o'. t{lo9i2o{ ?
+Answer fhe followingI List out type of Sampling.II Define Term: Drill down and Roll_Up.m What is Data Integration?IV Differentiate between Data warehouse and Data Mart
+Describe Data Warehouse Design and Usage in aetails.c' Explain Data warehouse with piop* charaiteristics.SECTION-I SECTION-II -..- .-.-(08) (1 1) (08)3
+ANy Two )A' what is Missing oataz ilow to Handle Missing Data?
+Describe Data Reduction Strategies in details.c' ilLHIJ'e different steps of .{ttribut"-oriented Inductio, with proper example 4
+Why Data Mining?
+C.6.W_hat is Frequent pattern Analysis?
+What is Classification?
+List out its typical applications.Define : Information Gain
+Define: SOA (2) What is UDDI?
+i What is MEPS?
+Define: Standard v/s Specifications i Ansrver the following Questions'(Any Two) Explain Service Roles?
+Describe WS-AtomicTransaction Framework' What is WS-BPEL?
+Describe Orchestration' ' (1) What is ActivitY?(01) (10) (01)7 I 4.(A) s.(A)SECTION-II Do as Directed.(1) Define: Services are Autonomous(2) Why use Orchestration Service Layers?
+I?] List out phases of SOA delivery Lifecycle.(4) Types of Business Services. r .euestions.(Any Trvo)Horvloose coupling piir.ipt", lnt"r-."tut" with other principles?Describe Service Layer Abitraction
+What are Components of SOA and How they Inter_relate?
+Answer the follorving.(1) What is XML Schema file?
+Describe any four WsDllanguage Elements. .(1) Define :service Interface Design Tool.(1) (2) (3) (B) (01) (10)(10) (01)6.(A) (1) O) (3) (B) Page2ot2 Hourrl GANPAT UNWERSITY MCA SEM-rV EXAMTNATTON (CBCS) P14A5DES ELECTIVE-IY DATA ENCRYPTION AND DATA SECURTTY April -.fune ZAfi 1
+Q-2 (A) s.(Any Trvo)1) Explain the model for internetwork securify.2) Discuss the TCp session hijacking in brief.3) Write a short note on Digital signature.(B) What is the UDP hijacking?
+Q-3 (A) Ansrver the followings.(Any Twb)1) Explain the public key cryptography principles in brief.2) Discuss the x.509 directory authenticationiervice in detail.3) Explain the cipher block modes of operation in brief.(B) What is the use of encryption algorithm?[Total Marla:60 (08) (10) (01) (10) (01) (08)SECTION-IT i Q-4 s
+Discuss the nature of virus. s
+Write the short note on secure electronic transaction
+Discuss the pretty good privacy in brief
+What is a trusted system? s
+Discuss the firewall design principles in deep
+Explain various security services in detail
+Discuss security attacks in brief
+What is the UDP hijacking?
+What is the use of encryption algorithm?
+Give the IP Security overvierv in brief
+Discuss the natttre of virus
+Write the short note on transport layer security What is an intruder?(A) (B) (10) (01) (10) Q-6 (A) r) 2) 3) (B) End ofPaper(01) M.C
+Explain any List-out the types of E-Commerce business mbdt four
+Explain any three phases of it. titi ort the myths of ERP
+Explain any four myths' Explain Enterprise Application Integration' Explain the following (ANY TWO ) Hidden Cost Material Management Module HR Module 1'

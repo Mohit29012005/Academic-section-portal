@@ -1,0 +1,10 @@
+Explain the types of it. 06 Cco2 BTLI 2 | Write down algorithm for Deque operations. 06 Co3 BTL3 3 | Write down algorithm to insert a node at the beginning of 06 C03 BTL2 the doubly link list
+Explain its types in detail. 06 co2 BTL4 3 | Explain thread life cycle and Thread Priorities with 06 Co2 BTLS example. 4 | What is generic?
+Explain bounded types, and generic 06 C03 BTL4 hierarchies in detail
+How to implements lambda expression in java? 06 Cco4 BTL6 6 | Which are the access modifiers in java?
+Discuss benefits of DBMS. 06 col BTL3 2 | Explain External level and Internal level of Database 06 col BTL2 System Architecture. 3 | Write a short note on SNF. 06 CO2 BTLS 4 | What is SQL?
+Describe and analyze the components of 06 C03 BTL4 SQL. 5 | Differentiate Delete Vs
+Truncate command. 06 CO3 BTLS 6 | What is scalar function?
+Discuss benefits of DBMS. 06 Col BTL3 2 | Explain External level and Internal level of Database 06 Col BTL2 System Architecture. 3 | Write a short note on SNF. 06 CO2 BTL5S 4 | What is SQL?
+Describe and analyze the components of 06 Cco3 BTL4 SQL. 5 eon Delete Vs
+Find the optimal sequence, the total minimum elapsed time and idle time for either machine

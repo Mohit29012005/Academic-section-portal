@@ -1,0 +1,30 @@
+Discuss rules for preparing Algorithm with example.06co1 BTL4 2Discuss Basic Structure of C Program with example. 06co2 BTL5 aJHow to define Symbolic Constants in C Language?
+Explain rules to define Symbolic Constants.06coz BTL5 4Explain Increment and Decrement operators and Bitwise operator with example.06co3 BTL3 5What is looping?
+Explain For loop with proper example. 06co4 BTL4 6Describe the use of switch case statement in 'C' language?
+Discuss various Flowchart Symbols.06co1 BTL5 2Discuss Branching Type of Algorithm with example of hnding the largest number among three numbers.06co1 BTL6 aJWrite a shorl note on C Tokens. 06co2 BTL3 Paqe L of 2 Answer the followins: (AnY Two) t2Q.3 06co3 BTL4 1Discuss type conversion in'C' language with example' 2@atement with proper example. -----_-------.--06co4 BTL5 J@output functions with example
+Write a Shortcut key of MS Word.a
+Describe the purpose of cell references (e.g., retative absolute) in formulas
+Illustrate the features of Spreadsheet
+What is the purpose of the picture Tool, Fo"xul tub?
+How do you create a chart in r*C@ useful in a worksheet?
+How do you freeze panes in Excel?
+How do you sort data in Excel?
+What is the purpose of the Filter feature in Excel?
+Explain the purpose of the SUM function in Excel
+What does the "Wrap Text" option do in Excel?a. b. c. d. e. f.06co4BTLl 2What is the purpose of pivot tables in spreadsheet software?06co3 BTL6 JHow can workbook data be sorled?
+Explain in detail 06co4 BTL5 Q.4 (Any One) 06 1How can you add hyperlinks to a PowerPoint presentation? 06co5 BTL6 2Here's a set of true/false statements related to Microsoft PowerPoint a
+Explain the structure of URL in brief. 06col BTL2 2Discuss the Text formatting Tags with Example. 06co2 BTL6 JExplain the Types of Websites in brief. 06co1 BTL3r Q.3 (AnY Two) t2 1Explain the CSS Box Model with figure. 06co3 BTL5 ZElaborate the use of Google site with its f-eatures. 06co4 BTL6 JElaborate the CSS Selectors with example. 06co3 BTL6 Q.4 (AnY One) 06 1 t, and how is it different from other data types?06cos BTL3 2f,"ptui, tt e concept of variables and data types in JavaScript
+Explain types of Software in detail.06co4 BTL3 2Classifz Low-Level Language in detail 06co3 BTL5 JExplain Direct Memory Access(DMA) in detail. 06co4 BTL4 Q.4 (Any One) 06 1Define the following terms: a
+Find the degree of each vertex and veriS the sum of degree is twice the number of edges
+Find the number n of distinct permutations that can be formed from all the letters of each word: (a) DELHI; (b) APPLE; (c) SOCIOLOGICAL.CO2 BTL3, BTL4, BTL6 Section - II Q-2 (Any Two) (Any Two) Define domain,co-domain and range of the function
+If A = {1,,3,5,6,7}, B : {2,4,5,6,8} Find (t).4 x B (ti)B x A (itt)(Ax B) n (B x A) Define diagonal matrix.Also prove that 06 A.(B-C):A.B-A.C where [-r s 2l t-q 7 3l I- | -4 -sl .n=l s 4 -ql&,r=lg -4 -+l*,c=l-u -s -?l[o -s s] l, 2 -4) [-, -4 -6.l In a survey of 170 people, it was found that: 58 read 06 Newsweek magazine,45 read Time, 52 read Fortune ,29 read both Newsweek and Time, 27 rcad both Newsweek and Fortune, 2l read both Time and Fortune, 7 read all threemagazines.(a) Find the number of people who read at least one of the tfuee magazines
+Find the number n of ways to: (a) Select a 5-member committee from the students
+Any 5) I What is communication?
+Explain the types of communication. 2 Discuss the types of collocation with the example of each.3 Give difference between formal and informal 6 7communication
+Discuss the modes of listening
+How interpersonal is significant to effective oral communication
+How principles of communication important?
+Explain techniques for effective reading
+large/major) I don?t like to fl.ln _ swim
+How tone, stress and voice modulations is important for the speaking skill
+Explain the process of listening

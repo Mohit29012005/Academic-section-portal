@@ -1,0 +1,48 @@
+Explain different data types in PHP
+Explain creating session with example
+Explain creating cookies with example' What is function overriding?
+Write steps to create table,insert,update ,delete in to table with example
+Explain Prepared PDO statement with example
+What is constructor?
+B What is CRUD?
+S 8to1-MX^4MINATIOI{ {CBCS) Pl4rt2Gtil?: GLi{ PH.OGR{MMING * II Hoursl APril- June 2S18[ 1. 2
+SECTION.T 1. , (i) What is ASP.NET MVC?
+List outthe advantage of ASP"NET lvIVC
+iv) What is Partial View?
+iii) What is Razor?
+Explain Unencoded Code Expressions and Code Delimeter
+What is ViewData?
+What is Data Annotations?
+Explain any two Validation Annotations with example. iB) Describe the Strongly Types Helper
+List out the types of Action Result R.etum type
+iii) What is AJAX?
+Answer the fcllowing: (Any Two) (i) what is scairoHing?
+Describe the types of scaffolding options" (ii) what is Model?
+Explain explicit moder binding with example
+iii) What is an i\itvC Area?
+Write down step to create Area in MVC application
+What is Filters?
+List out the different types filters
+Any Two) (i) What is Routing?
+Explain both the fype ofRoute
+Write down the difference between GET andPOST method "What is servlet?
+List out its advantages. tr*ist out attributcs of Fage directives.Write down the name oF inrplieit objects inAnswer tfie f'eiltrowEng (AmV fwoiExplain life cyele of Servlet. ' List out session tracking techniques" Exprain any one withexample
+Write a servletJo display current date and time.Answer the fbllswing (Any One)List .out any five mEtnoci wni[n show standard cGIvariables
+List out names of web server and appiication server.Answer the foltrowing (Any fwoiExplain life cycle of JSp
+Exp.lain scripting elements in J$F with example.write a js? pr.gram tc insert data into student tabre.Answer the tollowlng (Any One)List out standard action of :Sp
+Give different categories of status codes.lsp"(o8) (10) (ou (10) (ox) (P.T.0) Paqe I of 2v 4,{A} (l )/')\\L) {3) 4.(B) s.(A) (1) {}\\-./ (3) s.(B) t'1 \!*,/ \/) 6"tA) (1) {2) (3) 6.(B) (1)()\\*./SECTION-II Answer tlte fellowing What is navigation?
+List c,ut types erf navigation. !^,/nite dcrwn expression language syntax in l5F. l-ist out basic htrnl tag in JSF
+Explain life cycle of ISF in detall
+AnY Two) what is Bear-i?
+Explain @ManagedBean rvith exannple
+What is Data warehouse?
+Explain characteristics of data warehouse
+What are the reasons for incomplete, noisy and inconsistent Data.(s) X+ (l 1) 3
+Explain the security and security services in brief" Write the short note on Kerberos
+Explain the model f,or internetwork security
+Explain the various cipher block modes of operation in brief
+What is the man in the middle attack? s.(Any Two) Discuss seeurity attacks in brief
+Discuss the TCPQession hijaeking in brief. lYrite a short note on Digital signature
+What is the X.509 Directory Authentication Service?
+Discuss the prefty"good privacy in brief. iA) .{nslver ftrr$ fc}llowings
+What is a TSL?

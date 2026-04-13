@@ -1,0 +1,42 @@
+Each section should be written in a separate answer book SECTION-I Answer the following: (Any Five) (30) What is color space?
+Explain types of color space in details
+Write a short note on Resolution
+Explain Transformation in Photoshop
+Describe the Corel draw interface with figure
+Write steps to move Circle from top to bottom in animation (Synfig studio)
+Describe the Animation package (Synfig studio) toolbox in details
+Write a short note on HSB (Hue, Saturation and Brightness) or HSL
+State the importance of Gradient tools in animation synfig studio
+Any One) (06) What is multimedia?
+Discuss any two elements of multimedia
+Describe important panel and their functions in Animation tool
+Write a short note on Methods of Accounting. 2
+Discuss the Branches of Accounting in detail. 4
+Write down the difference between Trial Balance and Balance Sheet. 5
+Write down advantages of Accounting Ratio. 6
+Discuss the advantages of Marginal Costing. 7
+Discuss voucher types available in Tally
+Write down future of accounting. 2
+Discuss the Subsidiary Books in detail
+Calculate interest on capital at 5% per annum
+Write a short note on Breakeven Point
+Write down futures of Tally Accounting Software
+Answer the following: (Any Five) (30) () Doas directed. a) Convert (120.80)1o = (2)g b) Convert (10001101)2 = (?)i0 c) Convert (101110.001001)) = (?)i6 (II) How to represent Integer Number?
+Discuss it with example
+Explain various characteristics of RISC Machines
+IV) What is Micro controller?
+Discuss any one Application of Micro controller
+Discuss Array Computers Method of Processor Level Parallelism
+Any Two) (12) () _Doas directed. a) Convert (125)i9 = (?)2 b) Subtract (1011): — (0011), using simple method. ©) Multiply (1101); * (1101), using simple method
+Explain Excess-3 Code with example
+Discuss about Traps
+SECTION-I A: Answer the following: (Any 5) [30] (A) What is OS?
+Write down various functionality of operating system
+Explain how hardware and software work together with suitable example
+Write a short note on hyper threading processor (D) What is software?
+Explain various software in brief (E) Discuss how File Compression Makes Files Smaller (F) Explain how computer perform addition (G)_ Write a short note on Operating system registry
+Write down steps to install various operating systems in brief
+Q-3 Answer the following: (Any 2) [12] (A) What is register?
+use proper verb form of ‘run’) lask a question?
+Discuss Information gathering stage of presentation G
+Q.3 (A) What are the types/modes of delivery of presentation?

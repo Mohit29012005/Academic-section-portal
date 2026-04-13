@@ -187,6 +187,7 @@ export const academicsAPI = {
       { responseType: 'blob' }
     );
   },
+  pyqSearch: (params) => api.get('/academics/pyq/search/', { params }),
 };
 
 export default api;

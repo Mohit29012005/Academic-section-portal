@@ -1,0 +1,87 @@
+Explain Button control with properties and Events. ‘6
+What is Skin file?
+Explain the types of Skin file. d
+Explain Textbox control with properties and Events. e
+Explain the ADONET architecture in detail
+Explain CompareValidator in detail. g
+Whatis Dynamic Compilation?
+Explain in brief. 2
+What isaCLR? b
+What are the different types of Assembly? 3
+Explain RequiredField Validator with its use and properties. 5
+What is Stored Procedures?
+Describe the hybrid characteristics of EIGRP, Explain EIGRP packet types in brief
+Describe the link state characteristics of OSPR, What is BGP?
+When to use BGP?
+Describe IPv4 vs IPv6 with proper example
+Describe these keywords: routing protocol, Touted protocol, route redistribution > Na wPF YN Explain the major difference between router, Switch, hub and access point
+Explain different tables in EIGRP with telated commands, 2
+Explain EIGRP Metrics in brief
+Describe LSA types in OSPF in brief. 2
+Explain OSPF area types
+What is BGP attributes?
+Describe some subcategories of it. 2
+What is BGP peers?
+Explain in details, QS
+Explain naming convention of IPV6 in brief
+Describe basics of redistribution between BIGRP and OSPF
+Describe the types of files in Exchange database server. 2
+Write a short note on Single Copy Clustering. 3
+Explain firewall configuration in Exchange Server 2010. 4
+Describe the process to manage Mailbox Database? 5
+Explain properties tabs to configure POP and IMAP. 6
+Write a short-note on Offline Address Books (OAB). 7
+What is exchange Server?
+Explain the benefits of Exchange Server
+Define the keywords: TCP, UDP. 2
+Describe the roles and features of Exchange Server 2010?
+Describe different types of Address List. 2
+Explain the public folder database in Exchange Server
+Give the full forms of following terms: SNMP, EMS, EMC, ICMP
+Explain the types of backup in mail server. 2
+Describe the methods to recover mailbox
+Describe the hybrid characteristics of EIGRP
+Explain EIGRP packet types in brief
+Describe the link state characteristics of OSPF
+What is BGP?
+Describe IPv4 vs IPv6 with proper example. | Describe these keywords: routing protocol, routed protocol, route redistribution XN 2wrR YD Explain the major difference between router, switch, hub and access point
+Explain different tables in EIGRP with related commands. 2
+Explain EIGRP Metrics in brief. 04 Q3
+Describe some subeategories of it. 2
+What is BGP Peers?
+Explain in details
+Explain naming convention of IPV6 in brief. 2
+Describe basics of redistribution between EIGRP and OSPF
+Write a short note on WMI filter with Proper example. 2
+What is groups ? explain the type of groups . 4
+What is the difference between computer group policy and user group policy with proper example? 5
+Discuss the FSMO with proper example. 6
+Write a short note on ADCS. 7 Write a short note on difference between server core and enterprise version
+Discuss the Five Different Commands of server core
+Write a short note on MMC with Proper example
+Write a short note on DFS. 2
+Write a short note on DORA process
+Discuss on Global catalogue. 2
+Define the term Domain Tree Forest
+Write a short note on RODC. 2
+Write a short note on ADRMS
+What is groups ? explain the type of groups . 4 What is the difference between computer group policy and user group policy with proper example? 5
+Write a short note on ADCS. 7
+Write a short note on difference between server core and enterprise version
+Discuss the Five Different Commands of server core. ) 2
+Explain the Keywords: JBOD, RAID. a Describe Storage Management Network in brief
+Explain the scenario of IP storage Network
+Describe Storage Service Deliverables in brief
+Write a short note on Outsourced Storage
+Explain Storage Building Blocks in brief
+Write a short-note on Network Control Points
+Explain Storage Networking Roadmap in brief. 2
+Describe the comparison between SAN and NAS. 3, Write a short note on Direct Area Storage
+Explain building blocks of distributed system. 2
+Describe the types of Storage Service. 3
+Describe Network based Storage Services in brief. 4
+Any Two) (07) Why Modern Network use layered protocol?
+Describe the Services of MAN and WAN. 2. 3
+Write the full forms of following terms: MAC, VPN, SONET, SDH, DAS. 5
+What are the effects of TCP on Application Performance?
+Define the keywords: Tactical Goals, strategic objectives

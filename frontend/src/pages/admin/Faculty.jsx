@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AdminLayout from '../../components/AdminLayout';
-import { UserCheck, Search, Filter, Plus, Loader, X, FileMinus, AlertTriangle, BookOpen, Check } from 'lucide-react';
+import { UserCheck, Search, Filter, Plus, Loader, X, FileMinus, AlertTriangle, BookOpen, Check, ChevronRight } from 'lucide-react';
 import { adminAPI, academicsAPI } from '../../services/api';
 
 const Faculty = () => {

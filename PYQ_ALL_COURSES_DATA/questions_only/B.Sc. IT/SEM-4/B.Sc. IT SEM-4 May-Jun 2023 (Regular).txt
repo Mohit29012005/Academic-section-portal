@@ -1,0 +1,62 @@
+What is MIS?
+State any three annlication areas of MI
+Write a note on Transaction Processing System
+Discuss the role of Executive Support System. at iS Tormal planning?
+Mention the benefits of formal planning
+Discuss descriptive decision model for decision making
+What is E-Commerce?
+Mention advantages of E-commerce: Discuss key fumctionalities of railway ticket reservation system
+State the major challenges for MIS implementation
+Explain the process of Decoupling
+Discuss Seven-S Model in brief. [ (ANY TWO OUT OF THREE) Explain the working of typical decision support system
+Explain the working of management information system
+ANY TWO OUT OF THREE) What is planning?
+Explain infornmal planning in detail
+Discuss functional levels of decision making in MIS
+Discuss the need of IT supports for MIS
+Explain M-Commeree with example
+Explain case study of payroll for employee nanagement
+Write down Features of Net Framework examples
+Explain Date'TimcControl and MonthlyCaalendar conttol in detail witli IV
+Explain switch and if conditional statement using example
+Explain two major component of ADO.net
+VI, What is class?
+Explain auto implement property and filed of the class
+Explain function overloading and overriding with example I
+Differentiate: Boxing v/s Unboxing What is Namespace?
+Explain it in details
+What is inheritance?
+Explain types of inheritancc. [ II
+Whatl is exception?
+How to handle cxception?
+Explain using example
+ANY SIX) Describe the current major challenges of Environment?
+Explain Ecology in Detail
+Why Environment Studies in important?
+Describe the steps require to reduce the Air-Pollution?
+Write short note on Green Ilouse Elfect in brief Explain Cyclone and Flood in detail
+What is required awareness and planning to fight What is Depletion of Ozone Layer?
+Explain the reason for it
+ANY ONE) Describe the elemnents of Environment?
+What is Environment?
+Explain Scope of Environment
+Describe how Producers, Consumers and Decomposers are related
+Explain the common sources of noise pollution?
+Explain control step for noise pollution?
+Describe Acid Rain in brief
+Compare hazard Vs disaster
+Any Six) EXplain the step by step process of WordPress installation in your local machine ?
+What are the major differences between WordPress.com and WordPress.org ?
+Discuss the WordPress widgets for developing website
+What is WooCommerce?
+What are the features of WooCommerce?
+Explain in brief: Primary Menu, Social Link Menu What is MySql ?
+Explain the features of MySQL
+Explain in brief: Client Server Architecture (Any Two) Explain the role of CMS -Content Management System for developing website
+Discuss the various features of the WordPress franework
+How to use HTML table tag in WordPress ?
+Write a short note on: WordPress Theme What is CSS ?
+Explain internal and external CSS with suitable example
+Any One) What is Array ?
+Explain the different type of Array in PHP
+What are the differences between GET and POST method ?

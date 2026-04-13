@@ -1,0 +1,36 @@
+Answer the following: (ANY SIX OUT OF EIGHT) (30) What is WordPress?
+Explain the different features of WordPress. © What is Post in WordPress?
+Explain in brief Explain the features of WordPress-SEO-Plugin-by-Yoast
+What is HTML?
+Explain the features of HTML What are the features of WordPress Theme?
+Explain in brief What is PHP?
+Explain the features of PHP What is an Array?
+Explain in brief
+Explain the importance of Google Analytics Plugin. 2
+What is BuddyPress in WordPress?
+Answer the following: (ANY TWO) What is CSS?
+Explain the advantages of CSS
+Define the Terms with Syntax: 1) Span 2) Check Box 3) Frame 4) Font 5) Text Box 6) Link 7) Image 8) Div C
+Write a Short note on WordPress Theme Editor Q:5
+Explain different between Get and Post methods. 2
+What is Operator?
+Explain Any Two PHP Operators
+State the importance of AndroidManifest.xml with its Content
+Define Services
+Explain life cycle of Service
+State built in layout Classes and describe their unique features
+Describe Style tag with example?
+Differentiate Themes from style
+How one can send and receive SMS in Android mobile?
+Give example
+Define different phone call states with example
+Discuss its role with Intent-Filter
+Describe Activity with its life cycle stages
+Define Context
+How do you retrieve an object of context?
+What is a toast?
+Explain its usage with an example
+Explain SQLiteOpenHelper class with its method
+Differentiate ArrayAdapter from CursorAdapter
+How one can Read and Write a File to the Application Directory?
+Explain with example

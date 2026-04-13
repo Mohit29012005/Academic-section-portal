@@ -1,0 +1,55 @@
+Explain Magento Architecture in detail
+Explain Attribute set with example
+Explain any one in detail
+Write down and explain steps for checkout process
+Howto use catalog price rules ?
+Explain it with suitable example F
+What is quick search ?
+Explain in brief G
+Explain concept of Customer Group in detail
+Explain how to create order from admin side with all steps. 2
+Explain Cross Sell and Up Sell in detail
+Explain how to create categories in detail. ‘J C. _ List out types of Products
+Explain any two in detail. 3
+Write a short note on Newsletter
+Explain Customer Personalization in brief Answer the following: (ANY TWO) Write a short note on Types of Customers in Magento
+Explain update order in detail
+Write a short note on metacharacters
+What is Data Frame?
+What is data visualization?
+Explain the plotting libraries
+Discuss different categories of Machine Learning
+Draw and explain architecture of ANN in detail
+What is node in KNIME Tool?
+Discuss the execution state of node
+Explain any two methods of re module
+What is file?
+Explain types of file in detail
+Answer the following: (Any 2) [12] Which are the functions are used to check the missing values?
+Explain in detail
+List out types of plots
+Discuss various applications of Al
+Discuss any four category of node repository
+Splitting complex requirements into smaller components to understand the System is known as Options (a) Requirement Analysis (b) Ambiguity Review () Test Design (d)Requirement Itemization Q.2 | Answer the following: (Any 1) 2.1 | Explain Negative testing with examples @| 2.2 | What are the typical challenges in SW testing?
+Why exhaustive testing jg not Possible)?
+Answer the following: (ANY SIX) What is System?
+Explain the characteristics of System
+Write short note on Fact finding techniques
+Explain the roles of System Analyst
+Explain Managing Quality Assurance in detail
+Write a short note on Input design
+Explain Post implementation Review in brief
+Explain all symbols used in DFD in detail
+Which are System Concepts essential for any system building?
+Explain all types of users in brief
+Differentiate: Physical DFD v/s Logical DFD
+Explain the principle of Form design
+Which are testing techniques available?
+Answer the following: (Any Six) (30) If A={1,2,3,4,5} B ={X/x? -7x + 10 = 0} C={x/x? - 8x + 15 = 0} Then verify that A U (B % C)= (AUB)N (A UC). 2-5 ya); || nd ae A Compute: (A) 12!/9!
+Write a short note on Set Theory
+Write a short note on Graph. 1 0 A= 2 then find (a) AA (bo) A7A 3-2 5 Answer the following: (Any Two) (10) Find the number of mathematics students at a college taking at least one of languages French, German and Russian given the following data: 65 study French 20 study French and German 45 study German 25 study French and Russian 42 study Russian 15 study German and Russian. 8 study all three languages
+Prove any one De Morgan’s laws
+How many different license plates can be printed?
+Plate number like ex : GJ 1 68 How many ways can the letters can be arranged?
+Explain Bipartite graph in detail
+Answer the following: (Any Two) (08) 2 2 =5 5-7 6 A= d B= find F -3 a [; -5 jen " (A) -24-3B (B) A?

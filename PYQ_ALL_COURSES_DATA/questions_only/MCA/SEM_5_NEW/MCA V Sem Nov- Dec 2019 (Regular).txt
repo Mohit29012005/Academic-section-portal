@@ -1,0 +1,47 @@
+SECTION.I 1.(A) Do as directed.(1) TPC-A and TPC-B(2) 2PC (3) Anomalies(4) Data Consistency 2.(A) Questions.(Any Trvo)(l) Describe BCNFwith exarnple.(2) How index is useful for search Query?
+Describe with proper example.(3) Explairr Architecture for Parallel Database. 3.(A) Ansrver the follorving Questions.(Any Trvo) ( l) Describe Conceptual schema Tuning.(2) How to update Distributed data with Replication.(3) What is Functional Dependency?
+Explain in brief.(08) (l l) (l l) SECTION.II 1.(A) Do as Directed
+What is Exception?
+Give suitable exarnple of it.(3) What is Cursor?
+Explain Expticit Cursor. 6.(A) euestions.(Any Two) ( l) What is PL/SQL Trigger?
+Explain rypes of Trigger.(2) Explain components of pLlSeL packages.(3) write a PLlsQL procedure whicrr gets number.fli"om user and send square of number to calling block.(08) (l l) (l l) (P.r.o)1. 2. i )\ (3) (1) t2i {3) M.C.A
+SECTION-I Answer the foltrowing (1) What is UML and where can the UML be used?
+What do you understand by Multipliciry?
+Define Iterative and incremental Process
+State the putposes of making a model
+Explain interface, type and role with suitable example
+Discuss UML basic building blocks in detail. /rnslver the fcrliorving i.{ny Two) Bxpiain the Ci;mmoir l'{eciutrisms in the UL4t Discuss the stereotypes rhat can be aprplied to ctrepeiidency relationship amotig ctrass diagram, packages and use cases. w'irat a.re the pu{poses of class tliagrarn
+Draw a class diagram ot Library M*ragement System.{1U (I I)(s8) T' SECTION.II Answer the followiag (1) What is Forking ? @ Define swimlane
+Define Pattems
+What do you understand by Framework
+Any Two) (1) What do you understand by Use Case Diagram?
+Draw a Use Case Diagram for Online Course Regishation System
+What do you understand by Sequence Diagram?
+Draw a Sequence Diagram showiag the flow of control involved ia initiating a simple, two- party phone cal1.(3) Discuss collaboration diagram with a suitable example
+Answer the fallowing (Any Two) (1) What do you understand by Activity Diagram?
+Discuss Activity Diagram with a suitable example
+What is component?
+Discuss types of component aad compcnent diagram in detail
+Discuss deployrnent diagram with a suitable example
+END SF FAPER.t?r (s) 2(08) (11) (11) M.C.A
+I[ours] Q-1. 1 1 J 4 Q-2 Q.3SECTION-I What do You mean by intent?
+Give names of toots available in SDK List out all dialogs Explain options menu. .(Any TWO) Explain and Draw,diagram of activity iifecycle Describe : Auto compl eteTextview and MultiAutocompl eteTextvi ew Short note on: Architecture of Android OS .(Any TWO) List out types of animation?
+Explain Frame by Frame with suitable example
+What do you mean by resource?
+Explain arrays and Boolean types
+Write a difference between style & theme(8) 1 1 1 5 1 1 J 1 J lPageP.T.OI Q-4.SECTION-II Write the permission for the followings: 1
+USE Internet How to read and write a data inrfrom fire in android?
+Explain (Attempt any Two ) Implement cRtrD operation on follou,ing table with data t1,pes assumptions Table_Exam (Paper No, Paper_Name, Total_Marks, Obtain_Marks) Show different ways of loading data in web view. what is Preferences? where preferences are stored?
+Explain with code (Attempt any Two ) List out all content Provider and Explain contact provider in detail
+Implement the code for Sending the SMS in Android using JAVA What is NDK?
+Write down merits and demerits of NDK(8) 3 Q-s5 (1 1) 5% (11) Q.62 aJ 1 2 J5% 5% 5% 5% 5% ili;ee -- Hoursl Q-21. . 2
+Explain any one with example in JavaScript. 3 Explain different data types with example in JavaScript 4 Explain types of Popup Boxes with example
+List out types of loops in Java Script
+Explain any two with example in Java Script
+Explain Location object with properties and methods using example. .(AnY TWO) Explain different form validation with proper example Explain getEl ementByld and getElementsByCl as sName wiih proper example
+Explain covered queries and Analyze queries in brief
+Explain Data types of MongoDB. what is Relationships?
+Explain Embedded Relationships and Referenced Relationships with proper example
+Answer the fo"llowing(Attempt any Two ) Vi hat is Covered Query?
+Explain it with proper example. write a short note on ensurelndexO and aggregateO and sort 0 Method With proper Example
+What is conditional operator available in MongoDB ?

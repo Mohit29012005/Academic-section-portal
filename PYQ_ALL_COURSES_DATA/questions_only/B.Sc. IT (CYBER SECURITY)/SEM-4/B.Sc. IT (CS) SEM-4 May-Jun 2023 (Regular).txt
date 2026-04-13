@@ -1,0 +1,53 @@
+What is file system?
+Discuss types of file system in detail
+Explain system logging and logoff activity in detail
+Write a short note on prefetch file
+Describe data destruction in detail
+List out types of user account and Explain it in detail
+Define following terms: (I) stored password (II) history (III) bookmark SECTION-ID Answer the following: (Any Two) Write a short note on MFT
+List out types of link file and Explain it in detail
+Discuss pagefile.sys and hiberfil.sys in detail
+What is windows registry?
+Define structure of windows registry in detail
+Discuss all operations to edit windows registry using command prompt
+Write a short note on cookies
+Explain ACID properties in detail
+Discuss generic block of PL/SQL What is a Procedure?
+Describe procedure with an example
+Explain the general architecture of moving data
+What is SQL *Loader?
+Explain various SQL *Loader commands
+What do you mean by Deadlock?
+Describe ways to detect and prevent Deadlock. 2
+Explain conditional statements in PL/SQL. 3
+What is a cursor?
+What makes Functions different from Procedures?
+Explain Functions with an appropriate example. 2
+State the Advantages of the Data pump
+Explain command line export and import clients. 3
+Discuss SQL *Loader Data types. 2
+Describe fixed-width columns with suitable example
+SECTION-I A (30) What Which are the mouse events supported by jQuery to handle user input?
+Explain in : the following: (Any Five) jQuery?
+Explain features of jQuery. detail with syntax and example
+Explain PHP array in detail
+How cookie is different from session?
+Explain cookies in detail
+Explain in detail file handling modes in php
+Which are the database related errors possible?
+Explain in brief and provide error handling solution
+What is Pentesting?
+Explain types of Pentesting
+Describe usage of any 12-string handling function with syntax and example
+Differentiate between $_GET, $_POST Answer the following: (Any Two) (12) Which are the different ways to extract data from mysqli?
+Explain in detail Which functions are use to get the metadata information of database, table and row of mysqli Explain in brief $_SESSION
+Discuss cross site scripting and modify form fields
+Write a short note on Virtual Private Network
+Explain the features of the active directory in brief
+Discuss the domain controllers in brief
+Discuss the server virtualization in brief
+Explain the Routing Information Protocol in brief
+Discuss the firewall in brief
+Explain the proxy server with its various types
+Explain the various types of routing in brief
+Explain Group Policy in detail

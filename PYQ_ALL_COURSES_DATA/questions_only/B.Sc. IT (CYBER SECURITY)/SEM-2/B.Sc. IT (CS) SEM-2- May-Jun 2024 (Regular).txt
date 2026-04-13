@@ -1,0 +1,23 @@
+Describes its advantage. 06 COS BTLI | 2 | Write a program in C to find the maximum and minimum 06 col BTL6 i element in an Array. | 3 | What do you mean by recursive function?
+Explain with | 06 co2 BTIL4 | example. | 4| Define union
+Give the difference between Structure and 06 Cco3 BTL4 ae | Union. | 5 | What is macro in C?
+State advantages and disadvantages 06 COS BTL1 | of macro in C. | 6 | What is pointer?
+Explain single and multi-dimensional | 06 col BTL4 | array with example. >> 2 | What is function?
+Give the example of User Defined 06 co2 BTL3 | Function and Library Function. 3 | Describes these functions categories. 06 co2 BTL2 nO) Function with argument and with retum value | (ii) __ Function with argument and no return value | Q.3_| Answer the following: (Any Two) 12 ~ 1 | What is nested structure?
+How do we declare and access; 06 CO3 BTL2 | structure variables? 2 | Write a program to access array elements using pointer | 06 co4 BTL6 and array index. _ 3 | Explain array of structure with example. 06 CO3 BTL4s a Q.4_| Answer the following: (Any One) 06 _| 1 | Describe these keywords. : Constructor, Polymorphism, | 06 cos BTL2 Class. 2 | Define these terminologies: Object, Compiler, Interpreter, 06 COs BTLI | Inheritance. ** End of the Paper **
+How does the Internet work? [06 | COl | BTLI i 2 | What is variable in Java Script?
+How should Iname the | 06 C02] BTLI | | variables in my JavaScript code? | | L 3 | Describe form validation with example in Java Script. 06, CO3| BTL6E |; 4 | What is phishing attack?
+Describe any five types of 06 =| CO4 BTL6 | { phishing attack. { i | 5 | What is pentesting?
+BTLI 2 | Differentiate: Client side scripting vs Server side scripting r 06 | col BIL4 | 3 | Describe function with suitable example in JavaScript. | 06 “| C02 i BTL6 | T i } | Q3 | Answer the following: (Any Two) 12. | i | 1 | Describe file type and size validation in JavaScript. 06 | CO3 BTL6 4 | 2 | What is XSS?
+Describe in brief. 06 | CO4} BTLI 3 | What is SQL injection?
+Explain Decimal and Octal 06 col BTLI number system with appropriate example. 2 Write a short note on Microcontroller with its application. 06 Cco2 BTL3 3 What is parity bit?
+Which word is a one-word substitute for "a person who is extremely idealistic, unrealistic, and impractical."? a) Quixotic b) biologist c) philanthropist d) bibliographer ii
+Which of the following sentences uses a modal verb correctly? a) She cans speak French fluently. b) He may to arrive late due to traffic. c) They must to finish the project by Friday. d) We should bring an umbrella in case it rains. iv
+In the conditional sentence "If I had studied harder,I__ the exam," what should be the correct word in the blank? a) will pass b) pass c) would have passed d) passed y
+may/can) b)___ you help me with this task?
+would not have/could not have) 06 3 Write your opinions on any TWO topics: a) What risks are associated with sharing our photos on social : media platforms? b) How can we better connect what we know about cybersecurity with our actions? 06 c) How does the rapid engineering of responses enhance Chat GPT's capabilities?
+COL BIL2¢ C03 BTL23 C04 BTL36 COS BTL1,2 CO4 BTL2,6 co2 BTLI,3 co Bloom’s Taxonomy COl BTLI1,3 COl_ BTLI,3 Co2 BTL2,4 Q3 w Q4 Answer the following: (Any Two) Why is it important to analyze the audience when customizing presentations to fulfil the requirements and anticipations of various audience members?
+Discuss, Write an email to the student body of , inviting them to participate in a Coding Competition- Hackathon organized by the Computer Science department, providing details about registration, rules, and prizes
+Write a letter to the workshop organizers expressing appreciation for the valuable insights gained and any feedback or suggestions for improvement
+Answer the following: (Any One) What are some common mistakes to avoid when participating in a group discussion, and how can they be mitigated? : : What are the prerequisites necessary for conducting an effective group discussion?
+Explain each prerequisite in detail. ** End of the Paper ** 12 06 06 06 06 06 06 C03 BTL2,4 CO4 BTL2,6 CO4 BTL2,6 COS BTL2,3 COS BTL3,6

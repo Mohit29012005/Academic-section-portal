@@ -1,0 +1,49 @@
+Explain if...else statement with example
+What is variable?
+Explain declaration and initialization of a variable
+Explain all arithmetic operator
+Write the short note on “Define Symbolic Constants” Explain break and continue statement with example
+What are the importance of C language?
+Explain it Explain the use of toupper() and tolower() with example
+Explain Basic Structure of ‘C’ language
+What is type casting?
+Explain it with example
+Explain any three character set functions
+Explain relational operators
+Write a ‘C’ program to find the factorial of the given number
+Explain switch case statement with example
+Give the differences between while and do..while loop
+What is an array?
+Explain Declaration and Initialization of one dimensional array with example
+What is recursion?
+Explain it with suitable example
+What is the difference between array and structure?
+Write the syntax of structure and explain it with example
+Explain modules of an ERP package giving examples. | C. — Explain control flow statements in python giving examples
+What do you mean by user defined functions in python
+Explain giving examples
+State and explain the steps to build an Odoo module
+Explain ERP for an educational institution giving example. ig C
+How could one deal Human Resources problem using ERP? 3
+Explain the terms inheritance, polymorphism with respect to python giving examples. 4
+What do you mean by model inheritance in Odoo
+Answer the following: (ANY SIX OUT OF EIGHT) (30) What is file?
+Discuss the file modes supported in Python
+What is Regular Expression?
+Discuss the special characters and quantifier. is} Discuss following two methods: 1. pieQ 2. barQ) Write a short note on Tuple with example
+Explain the applications of Al
+What is Machine Learning?
+Why it is important?
+Write a short note on Workflow in detail
+What is the use of Binary file?
+Write a python code to open and read binary file
+Write a short note on Data Frame
+Explain the process of Data Cleansing. 4
+What is Supervised Machine Learning?
+Explain in detail
+Discuss the types of user in brief
+Write a short note on Decision Tree
+Write a short note on Input design
+Explain file organization methods in brief
+Explain Post implementation Review in brief
+Explain conversion in details

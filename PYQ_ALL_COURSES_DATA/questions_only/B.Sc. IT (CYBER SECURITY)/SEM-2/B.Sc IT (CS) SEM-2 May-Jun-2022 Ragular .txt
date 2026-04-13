@@ -1,0 +1,82 @@
+Explain in brief active attacks, What is use of proxy server?
+Explain in detail
+What is Phishing?
+Explain Digital forensics life cycle. rN aAwes YP NS Describe are the challenges exist in India with regard to the law and cybercrime scenario in India
+Explain the Cyber Crime Trends in detail. 2
+Explain in brief passive attacks. 3
+Explain security measurements on portable devices, 3
+What are the categories of phishing?
+Differentiate between virus and worms in detail, Explain in detail Steganography. 4
+Explain the Impact of IT Amendments on Information Technology Organizations. 2
+Describe steps in mental preparation for an effective presentation
+Whatare the steps in writing a formal email?
+Explain the use of various modals with examples, D
+Describe various ways in which help can be asked for or can be offered
+Explain in detail the optional parts of a formal letter, F
+What are the suggestions for writing an effective press release?
+What are the pre requisites of Group Discussion?
+Describe the steps in writing the Head of a Memo
+Write one-word substitute for: A game in which no One wins
+Explain in detail the boredom factors of presentation
+Write a note the attention grabbers in presentation. « i 06) Answer the following: (Any One) oa ( Shree Kids and Toys writes a letter to Leo Toys Ltd inquiring about the new range of Toys and discounts on them
+Write a note on Dos and Don’ts in Group Discussion
+What is Group Discussion and what are the objectives of group discussion?
+Answer the following : (Any Five) (A) Write a short note on Two-Dimensional] Array. [30] (B) Explain getchar( ), gets( ), putchar( ), ang Puls() functions (C)_ What is Recursion?
+Explain it with prope; example, (@) Discuss Array of Structure with example, (E) Explain the concept of call by value ang call by refere (F) Discuss fopen() and fcloseQ functions With example, i itution?
+List oUt Ma
+What is Macro Substitution tO Substituti . detail. “ution and explain any one in Nee with example
+Answer the following : (AY Two) (A) Write a short note on Structure: [12] . tages (B)_ What is Pointer?
+Discuss advantages of Poi 5 inter, . functions Wit (C) Discuss getw() and putw(), th example One 4
+Explain Arithmetic and Logical Operators of Java script with suitable example
+Write a Short note on JavaScript Form Validation
+Explain in detail DoS and DDoS Attacks
+Write short note on “Testing for Client side URL Redirect” Explain How to Modify HTML with Javascript SECTION-II Answer the following (Attempt any Two) (12) Explain given terms: i ) HTTP ii) WWW iii) URL What is Java Script?
+Explain Advantages of Java Script
+Explain different types of Dialog boxes used in java script. ‘Answer the following (Attempt any Two) (12) Which are the Key Events used in JavaScript?
+Explain with example
+Write a short note on Phishing Attacks, Explain JavaScript Button Events with example Answer the following (Attempt any One) (06) What is Pen Testing?
+List out tools used for Pen testing
+Briefly explain: What is Click jacking?
+What is RPM?
+How to manage software using RPM?
+Explain Linux components
+What is shell?
+Explain types of sheil D
+Write down command and use of chmod ipasswd,pwd,ping,tracert ¥
+Explain Linux Hierarches structure
+Explain If statement with proper example
+Write note on Firewall
+What is Malware?
+Explain different types of malware in brief
+Explain Vi editor command and its modes
+Explain grep command with example
+What is Loop?
+Explain any while loop with example
+What is computer Network?
+Explain components of network. wi
+Explain any 3 networking command Q-4 Answer the following: (Any One) (06) A
+What is Packet analyzer?
+Explain any one tool
+SECTION-I Answer the following : (Any Five) [30] Write a short note on Two-Dimensional Array. explain getchar( ), gets(), Putchar(), and puts() functions. ‘What is Recursion?
+Explain it with proper example
+Discuss Array of Structure with example
+Explain the concept of call by value and call by reference with example
+Discuss fopen() and felose() functions with example
+What is Macro Substitution?
+List out Macro Substitution and explain any one in detail
+List out various category of UDF
+Discuss any one category with example
+Write a C program to arrange accepted numbers in ascending order using single dimension array
+What is Pointer?
+Discuss advantages of Pointer
+Discuss getwO and putw() functions with example
+Explain Syntax error, Run time error, Logical error and Latent error
+List out types of number systems
+Explain octal number system in brief
+What is parity bit?
+Explain checksum method in brief
+Write a short note on Microcontroller
+Discuss the 8085 microprocessor Block diagram in brief
+State the difference between Microcontroller & Microprocessor
+Discuss difference between RISC V/S CISC
+Describe the 8085 Microprocessor pin diagram with figure

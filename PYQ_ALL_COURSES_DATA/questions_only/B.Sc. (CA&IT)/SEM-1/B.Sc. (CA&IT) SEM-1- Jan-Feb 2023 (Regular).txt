@@ -1,0 +1,75 @@
+What is Algorithm?
+Explain Branching Type of Algorithm with example
+Create an Algorithm and draw a Flowchart to find sum of all the integers greater than 100 and less than 200 that are divisible by 5
+How to define Symbolic Constants in C Language?
+Explain rules to define Symbolic Constants
+What is Operator?
+Explain Increment and Decrement operators with example
+Explain Nested if... else statement with proper example
+What is looping?
+Explain for loop with proper example
+Any Two) (12) What is Flowchart?
+Illustrate General Rules for creating Flowchart
+Write a short note on C Tokens
+Discuss various properties of Algorithm
+Write a C Program to find smallest number from given three numbers
+Discuss switch case statement with proper example
+Define Terms: Header, Footer, Footnote, Endnote, Drop cap, Watermark
+Discuss Any five Date-Time Function in MS Excel
+What is MS PowerPoint?
+Discuss Slide Transition
+What is MS-Access?
+Describe steps to creating Database in MS-Access
+Explain MS-Access Object
+Compare Word, Excel and PowerPoint
+SECTION-II Answer the following: (Any Two) (12) What is Mail Merge?
+Define step of Mail Merge
+What is Batch file?
+Discuss with an example
+What is DOS?
+Explain any five Internal Commands of DOS
+Write a short note on Custom Animation
+Define Terms: Naming Range, Pivot Table, Goal Seek Answer the following: (Any One) (06) Describe MS-Access Data Types
+How to filtering Data in MS-Access?
+SECTION-I Ly Answer the following: (Any Five) What is the URL?
+Explain the structure of the URL in brief
+Explain the HTML Drag and drop features with examples
+Describe the CSS Font properties in detail
+Explain the JavaScript operators in detail
+Discuss the Table tag with its all elements and examples
+State the difference between Internets, Intranet & Extranet, 2
+Explain the Element of List Tag in detail with an example. 3
+Explain New Semantic Tags in HTML 5 2
+Explain CSS background properties with proper examples. 3
+Write an HTMLS code to create audio and video. 4, Answer the following: (Any One) 1
+How can we perform looping in JavaScript?
+Explain with examples. 2
+SECTION-I Answer the following: (Any 5) Discuss DMA in brief What is Information?
+Explain Characteristics of Information in brief
+Give difference between High Level Language and Low Level Language
+What is software?
+Explain System Software and Application Software
+List out basic software problem and Discuss various method to fix
+Explain Scanner with types
+Explain Printer with types In detail Answer the following: (Any 2) Write down difference between machine level & assembly language Write a short note on Scripting Language
+Discuss usage of Compiler, Interpreter and Assembler
+Find (i) A UB (ii)A n B (iii) A’ and (iv) B’ 2
+Find (i) The number of students selected for sports
+Discuss the Homeorphic Graph in details
+Define the following terms in context of graph theory with suitable example: Graph, Simple graph, Pendent vertex, Closed Walk, Paths. 2-3 4 3 1 -2 IfA4=/5 0 1/andB=|-5 1 1 | then find BA and AB. gait 4.3.1 7
+How many different license plates can be made if each plat contains a Sequence of two uppercase English letters followed by three digits?
+Justify your answer
+Then evaluate AB if B = [+ 1 Define the following set by Roaster method (DA = {x/x isa 2 digit natural such that the sum ofits digits is 5} (i)B = (x/x € N,x? < 25} (i)C = {x/ x? - 3 = 0,xeR} Answer the following: (Any Two) Determine whether the following functions are one-one or many one @P:N ON, f(x) =x43 (ii) f:R>R, f(x) = lx] +7 Discuss application of graph theory in computer science, State True or False (A function is one to one when distinct elements of domain maps to distinct elements of its codomain
+If f:Z>R Wo) =x? — ox then codomain of given function is R
+How many different ways can gold, silver, and bronze medals be awarded in an Olympic event with 12 athletes competing?
+Define the term ‘communication’ and explain its process with a diagram
+Explain any five conjunctions and give examples
+What do you mean by reading comprehension?
+Discuss any three types of feading
+Write about the several types of formal letters
+Explain the characteristics of a good speaker
+Write your expressions for the following situations: Greeting people, Introducing yourself and congratulating people on their success
+Define barriers
+Explain various types of it. 1 out of 2 Q.3 Q.4 Attempt Any TWO: What are the qualities of a good listener?
+Discuss intensive and extensive reading types with illustrations
+Write a cover letter to the H R Manager, TCS Pvt

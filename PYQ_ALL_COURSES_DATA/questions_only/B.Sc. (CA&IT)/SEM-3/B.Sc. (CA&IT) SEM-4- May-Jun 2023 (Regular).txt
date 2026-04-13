@@ -1,0 +1,58 @@
+What is code window?
+Discuss C# program structure with example
+Describe Check List Box control with its property, methods, and event
+Short Note : A) Execute Reader, B) Execute Non Query, C) Execute Scalar What is MDI-Form?
+Discuss briefly
+Explain Solution Explorer and Server Explorer in detail
+Answer the following: (Any Two) What is Inheritance?
+Discuss its types with example
+Explain any two Dialog Control in detail with example
+Discuss Jagged Array briefly with example
+Write a C# code to perform insert operation into a database
+What is recovery?
+Explain recovery types. 2
+Discuss twelve problem of distributed database. 3
+Explain Package with its Advantages. 4
+Illustrate general architecture of Moving Data. 5
+Explain any six SQL* loader commands. 6
+What is procedure?
+Explain is with suitable example. 7
+Discuss conditional statements in PL/SQL with syntax
+Describe deadlock control mechanism. 2
+Explain The Generic PL/SQL block. 3
+What is cursor?
+Explain Explicit cursor with example. 3
+What is exception?
+Explain User defined exception with example. 2
+Discuss types of trigger with cxample. 3
+Define data pump?
+Explain import and export. 4
+What is SQL*loader?
+Explain SQL*loader datatypes. 2
+Describe fixed-width columns in SQL*loader
+What is the difference between jQuery and JavaScript?
+Discuss the features and advantages of jQuery
+Explain different CSS properties for the same
+What is the use of text(), htmlQ and val() in jQuery?
+Explain with example
+Explain various classes of Bootstrap to create different styles of table
+What is the use of jQuery utility function?
+Discuss any five utility functions with example
+What is callback function?
+Explain the use of callback function with example
+What is media query?
+Explain different uses of media queries and break point with example
+What is Ajax?
+What are the different methods to send an Ajax request in JQuery?
+What is the use of selector in jQuery?
+Discuss any four selectors with example
+Write a short note on Bootstrap Grid system
+Explain different border properties of CSS3
+Discuss different classes to create navigation menu and navigation bar in Bootstrap
+Explain the OSI model in brief
+Write the short note on IPV-+ Discuss the pure ALOHA and slotted ALOHA in brief
+Explain the concept of message switching in brief
+Discuss the TCP connection in brief. 7 — Give the introduction to cryptography
+Discuss any two network-connecting devices in detail
+Explain the flow control and error control in brief. wn Q-3
+Explain the SMTP with all its components in brief

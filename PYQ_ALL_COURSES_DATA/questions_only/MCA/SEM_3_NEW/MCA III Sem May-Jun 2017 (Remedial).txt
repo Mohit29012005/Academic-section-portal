@@ -1,0 +1,53 @@
+What is Package?
+WhY? 3
+List out all states of Thread Lif-e cycle' 3'WhatiSabstractclass?Explainitwithsuitableexample
+Any TWO) 1' Why Dynamic Dispatch Methods in java?
+How to implernent?(08) ,,,)i ;,'liQ-'4
+Explain all advantage of String Bu[[er class to String class. t-i ',,/ Answer the follorving
+What is.constructor?
+Explain the tenns try, catch, throw/s apd finally with suitable example' (1 1) 2, List out alltypes and explain any two inheritances with suitable example' 3
+What is deadlocl<?
+How to irnplement in JAVA?
+Explain' iI ''' Pape I of 2 'l."SECTION _ II i ,, Answe*the foilowing
+Write aeode to display protocol, port and 2
+Describe: Files and Directori... "' ' j 3
+List out all methods of component class. 4
+Write syntax of applet tag
+Write a short note on Random Access File class. 2. write a database code to search record from tabre:stud(\ro,Name,Address). i, $" List qp' all layout managers and exprain any two in detairs
+Any TWO) 1' Describe: Drawing and firing srrapes using Graprrici crass. - 1 ' ' 2' which are benefits of appret?
+How to ru, appret in browser?
+How to connect database in JAVA?
+Describe all steps
+SECTION-I Do as directed.(1) Define: Software Engineering(2) What is Prototyping ? - (3) Direct measure v/s Indirect measLrre(4) Define: FAST Answer the follorving euestions.(Any Trvo) Describe Software Applications
+What is a role of process pattern?
+Compare RAD model with Waterlall moclel. .(l) What is CMMI? euestions.(Any Trvo) Explain Function-ori ented Metrics
+Explain COCOMO-II Moclel
+Describe WebApp's Design for Content Architecture
+Ansrver the lbllorving.(1) What is WebApp,s Aesthetic design?(08) 2.(A) (1) (2) (3) (B) 3.(A) (1) (l) (3) (B)(10) (01) (10) (01) 4.(A) s.(A) 6.(A)SECTION.II Do as Directed
+Define: Timeline Charls izl What is Software Review? i:) Define : Behavioral Testing i;i What is WebApp's Performance Testing?
+Anslver the following Questions'(An1' Trvo) Explain Risk Expos"tt Gp) :P I C with example' p.i.riU" basic piinciples for Software Project Scheduling' What is SQA?
+Explain SQA Activities' ' (1) What is RMMM Plan?
+Questions'(Any Two) what is a white Box Testing?
+Explain cyclomatic cornplexity rvith example" Describe Web Application's Navigation Testing' E;lri, Software Reengineering Process Models' ' (1) Define: BPR. i:1(10) (1) (2) (3) (B) (1) (2) (3) (B)(01) (10) (01)(o8r Enrolment No
+How should one plan one's presentation to make it effective?
+Define 'PLrblic Speaking' and discuss its pltrposes' (ZjOir.us the characteristics of Successful Group DiscLrssion' OR (1) What is the difference between Group Discussion and Debate? iZiO.nn. the term 'lnterview' and discuss its types in brief' (1) What are tlte discussiorr strategies of Group Discussion'/ (2) Discuss tlie types of speech in context of Public Spealiing' OR (1)SignificarrceofAnalyzingAudienceandLocaleinoralPresentation (2) Failure factors of interviervMAXM HRS Q.2 Q.3 Q.3(08) (06) (0s) (06) (0s) (06) (0s) (06) (0s) y2 SECTION - II .I Q.4 Ms
+Explain the Structure of Job Application and Resume
+What is oProposal'?
+Discuss the objectives of Proposals in short
+How does a research paper help spread knowledge of newer developments?
+What isthe present agc of Ra.ieev?
+tlreir. ages are iri thelespective ratio ol7:9. l.lorv old is At.Lrn?
+If e is 4 years ordthan P, what rviil be trre ratio ofihe ages of p and e aner 4 years?(1) Fincl (SqLrare roor of) .iCB-l by long clivision nrethod. tBl Ansrver thc follorving(Any One) (l) Find (SclLrare root of) /OOg+ by long clivision merhocl.(2) What percent of 6.5 Iitres is I 30nil. rl2.(02) a-s1a1 Arrswer lt,( t) o'"..it,'Ll,e,I"o.llorr irrg (,\rrr 't'trrec) , i r-i,,a r,i. g,1;:1]::lil:i:: ;: ' ior lts r0 a,d sorcr ,r rt2t a u""i",irr':;;,,'?,:: {:::'i -"'v Jvr(r (rrer}r ar -l rbl lts' 6. 25'75''1't" "t"o1lf lbr lts'27"i ri itl (r ) r,,. oou,,,n,[';::i * ,l;,: i;,; l,UXi:i ::;'" j'ri:]l::: l:lX lo, ,,, per annum, yea rs be rb r erVha t *i r i"o., i : ;Jr.;;l?;J,.[Ji TT:],1 g;rg, 1,,,y) (4) Q-3 p1Sa.nr purchased 20 d,oro ,.o.r, ,;""ii,,:f.:,,';:,,?;: :,f ,,i: ,i,; ",i[i; 't":t:,":In: fouorving (An,, one) (l) Find Sp whentzi Pi''i;; ';;::l !'l =' *' Bo ro a,tr LossSt-, ., Its. 51.70 arrd Loss _375 per clozens
+g) Ho$ tnanl riords can be fbrmeci rrl:,"*g all letters olthe rvord ,lNDIA.? ;::J[i:i:,.:f ro,, .on,..,,ti, e *,.,,,,.',",uers is 27
+hree)In ho* rrar\ \\a-\s a cornnrittee of! r,ernbers can be serected fi.orn 6 rnerr (09) and -s ladies. consisting of 3 rren and'jlaOi.s?A ba-e contains 2 red. -3 gr..,., ",rJ;lI.,; bars
+Trvo bars are drawn ar random' what is the protrabirity trrrt nor. ortn. bails rJrawn is brue?
+A can finish a *'ork in rg days andB r;;do the same rvork in rrarf of trre:fitrffr',1'rtr;"" 'uorking tog"tl"'' "tlat paft "i,i,. ,1,,,. rvork they A can do a piece of 'vorr< in r0 days and B can cro ir in r5 days In Ho*, tnany'days they together rvill do ttr. ,o,r. ,"orf.,ZAnsryer the follorving(z\ny Onc) -'-'-- rY vr I\ I $Z)Horv nrany words r'vithor ilithout rneaning. can be fbr,ed by,sing a, the Ietters of rhe word ,DELrJI,. ,,ri;;;;;;,';Juer exactty once. ffi::X3;"sed coins are rossed. what is the probabilir.v.of ge*ing ar rrost Q-6 tAl .,\nsrver the follorving(Any .l.hree)(l) ln a box. rrrereare s rea, zftu. ur.i6 green bars. o,e ba, is picked up (0g) ra'dorrry. what is trre probabirity thaiit is neit,er r.a no,. green?
+lil,:i,t;,',?,,l,r.o,.ill""?lf,::.T; ,;:;,i;,Tr.:',.: ar rhe rare orsi,npre(3) How rnucrr tir,e rviil it take rolru,., a,rount of Rs. 450 to yierd Rs
+Br as interest at 4.5%o per altnLillt ois;nrpte interest?
+Wirat is Grici-Vien,?
+Explain u,ith exantple
+What is vierv-porl?
+What is Angular.lS'/ Iixplain N4VC architcctttLe
+l) 1 Which methocl usecl to get attributes of an eletuent r-rsing.iQtrerl .' 2 l{ow to get the inpLrt Value of an elenretrt trsing.iQrrerv'? 3 Which is bootstrap sty'le of button merkes tlre button size snrall'l 4 Which buiit-in methocl returns the length ol tlie string" lBl (0't) 1 Diftbrence between jQuery and JavaScript. 2 What is grid system in bootstLap'/ 5 tAl Answer the fbllorving(An,v- 'I'l'o) r i0) I Write program to apply iQuery ou str-tclent lorln' (Str:dent fbrm contain str:clent enrclltnent tro, stttcletlt llal'tle. -rtr-lclctlL crlrrii - studellt phone) 2 llxplair-r.iQr-rery AJAX get() and ancl post() witir exanrl:le' 3 What is jQuery?
+Explain any thlee jQuery elibcts' lBl What are the basic selectot's in iQuerl'?
+IBI what are ciiff'ererrt types of lavout available in Bootstrap?

@@ -1,0 +1,62 @@
+Discuss Non-Linear data structure in detail
+Differentiate: Stack v/s Linked List
+Describe various types of Queue with example
+Write down algo for Deletion in Simple Queue
+Explain different representation of Binary tree
+Explain the different representation of Graph?
+Write down algo for sequential Search Answer the following: (ANY ONE) Describe Primitive data structure
+Write a short note on Linear data structure Answer the following:(ANY TWO) Write down algo for Stack push and Pop operation
+Explain all types of linked list with example
+Write down algo for Insertion in Circular Queue
+Write down algo for In-order tree Traversal
+What is Graph?
+Explain terminology of Graph
+Write down algo for Binary search
+List out ERP Myths and explain any three of them Write a short note on features of Python
+Explain Arithmetic and Logical Operators of python
+Explain python List and its methods with appropriate example Explain ‘__init__’ special method with suitable example
+What is Inheritance?
+Explain How to inherit a class with example
+Write a short note on Odoo Directory Structure Answer the following (Attempt any One) List out Common Functional Modules of ERP software and explain any two of them
+Write short note on sub-system of HR Module
+Answer the following (Attempt any One) What is Dictionary in python programming?
+Explain it with example
+Write a short note on python Exception Handling
+Answer the following (Attempt any One) What is Quotation?
+Explain various payment terms used in Quotations
+Explain the components of SGA
+Differentiate: SYSTEM table space. v/s SYSAUX table space
+Describe storage structure of database with different five files used for physical storage structure
+Explain the process of storing data into table
+What is Trigger?
+Discuss it with proper example
+Discuss Management Framework in detail
+Explain exception handling in PL/SQL Explain if...else with example Answer the following: (ANY 2) Explain Logical Storage Structure of the database with the use of Tablespaces, Segments, Extents and Data Blocks
+Explain any four actions with table space with usability
+Write a short note on grid computing
+Answer the following: Which command is used to starting and stopping database control?
+Write a note on space management in detail Discuss anatomy of data block
+Answer the following: (ANY 2) What is cursor?
+Explain various types of cursor with example
+Explain procedure with suitable example
+Explain PL/SQL Block structure
+Answer the following: (ANY SIX) (30) What is operating system?
+Explain OS structure in detail
+List out and explain types of Schedulers in detail
+Explain Critical Section Problem with characteristics
+Explain Interprocess Communication in detail
+What is Deadlock?
+Explain with characteristics Explain fixed and variable size partitioning with example
+Differentiate Logical and Physical Address
+Explain any two in detail
+Explain Process States in detail List out types of Scheduling algorithms
+Explain any one with example
+What is PCB?
+Explain Cooperating and Pre emptive process in detail
+What is Semaphore?
+Explain with different types of Semaphore
+Attempt the following: 06 What is multiplexing?
+OR R.4 Attemp ok 2) Attempt the following: 08 ¥. 3 DNS?
+How fi works?
+Explain with a suitable example
+Discuss cryptographic atiack. & us Rye OR note on cryptography End af Paper

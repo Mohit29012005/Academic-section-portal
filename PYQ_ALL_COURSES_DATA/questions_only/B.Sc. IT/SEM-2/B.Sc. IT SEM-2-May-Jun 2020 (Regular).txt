@@ -1,0 +1,27 @@
+What is normalization?
+Explain any two normal form in detail Explain the architecture of database system in short
+What is the use of Join?
+List out different types of Join
+Discuss any one with example
+Which are different types of data types?
+Explain in detail
+Discuss the use of PRIMARY KEY, FOREIGN KEY and UNIQUE key
+What is the use of view?
+Discuss advantages of views
+Define types of view
+Write down to create syntax to create a view
+Write a short note on sub query
+Answer the following: (ANY ONE) (7) What is DBMS?
+Explain structure of database system in detail with appropriate figure
+What is the meaning of RDBMS?
+Discuss any five Codd’s rules in detail
+What is transaction?
+Explain the different ACID properties of transaction
+Write a short note on INDEX
+Whatis String class ?
+Explain all the methods of string class. 4 B
+What is an Array?
+Explain Declaration and Initialization of an Array
+Write the short note on: Interface Q-6
+What is package?
+Explain it in details

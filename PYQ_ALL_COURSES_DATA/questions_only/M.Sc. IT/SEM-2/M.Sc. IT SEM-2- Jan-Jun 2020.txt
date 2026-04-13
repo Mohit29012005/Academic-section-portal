@@ -1,0 +1,42 @@
+Explain with C# code to upload .zip file
+Describe types of column fields supported by GridView control
+Explain Login, LoginStatus and LoginName controls
+Explain SOAP and REST protocols in brief
+State differences between Web Service and WCF Service
+Explain Timer and UpdateProgress controls with their important properties and events
+Answer the following: (ANY TWO) How to use MultiView control to create multipart form?
+Describe the technique to store image file in the database with code
+Write down steps to create web user control in ASP.NET
+Write down steps to bound GridView control with database table
+Explain components and fundamental concepts of WCF in brief
+Differentiate server side AJAX vs client side AJAX
+What is AJAX?
+Explain advantages of AJAX
+Answer the following: (ANY SIX OUT OF EIGHT) Why is it important to have integrated management information?
+Explain with example Write short note on data mining What are the business benefits of Supply Chain Management What are the common problems with typical ROI calculations What are the uses of OLAP?
+What are the functions of Customer Relationship Management?
+What is the hybrid approach?
+What are its advantage and disadvantages?
+Write steps in ERP Implementation Life Cycle Answer the following: (ANY 2) List and Explain in brief common myths of ERP Explain the advantages of ERP What are the risks of the ERP implementation?
+Why is it important to have integrated management information?
+What are the risks of the ERP implementation? ® 3
+Explain in brief about different phases of Business Process Reengineering Explain the factors influencing the business intelligence kg C
+Explain typical data warehouse architecture 4
+Write short note on Human Resources Management module Explain in brief about Inventory Management » C
+Discuss how you will choose an implementation strategy
+List and explain any one ERP Implementation Strategies C
+How old is Kiran?
+A. 23.5 B. 25 C. 24.5 D. 24 @ 2 What is the percentage increase in the area of a rectangle, if each of its sides is increased by 20%?
+What is the average number of visitors per day in a month of 30 days beginning with a Sunday?
+What will be the remainder if 2n is divided by 4 ? @ A.2 B.3 Ca D.4 6 What is the probability of drawing a "Queen" from a deck of 52 cards?
+Uncle He is the son of the only son of my hotograph related to Anjali?
+What is the actual distance travelled by him?
+What number should come next?
+A. 22 B. 24 C. 25 D. 26 Which word does NOT belong with the others?
+COM device Which of the following is not an output device of a computer?
+asterisk) B) | (pipeline) ame" C) - (hyphen) D) _ (underscore) HTML stands for?
+Hyper Text Markup Language B) High Text Markup Language C) Hyper Tabular Markup Language D) None of these How can one add a row using SQL ina database with which of the following?
+Find out the different one. way while the rest on A) Teacher B) Principal C) Student D) Lecturer JAK, KBL, LCM, MDN, A) OEP B) NEO C) MEN D) PFQ The length of the bridge, which a train 130 metres long and travelling at 45 km/hr can cross in 30 seconds, is: A) 200m B) 225m C) 245m
+m Microphone: Loud: Microscope : ? ; A) Elongate B) Investigate C) Magnify D) Examine SQL data definition commands make up a(n) A) DDL B) DML o) HIM! a photograph of a boy soresh i “He is the son of the only son ne inti er How is Suresh related to that boy?
+Poi C. co il sandeep said, "She is the daughter of the only sister of my inting js sandeep related to the girl? ; father.” How?
+VEZ 38 Which of the following is used in pencils?

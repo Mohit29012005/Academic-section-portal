@@ -1,0 +1,19 @@
+Explain relationship of E-R-diagram BTL2/BTL4 in details. 3 | What is normalization?
+Analyze first and second normal 06 CO2 | BTL2/BTL4 form in details Q.3_| Answer the following: (Any Two) 12 1 | What are constraints?
+Explain with example. 06 CO3 BTLS 4 | Explain the Hashtable class in Java. 06 CO3 BTL1 Write a simple Java program using ServerSocket to listen 06 CO4 BTL6 for and accept connections from clients. 6 Describe the process of passing Lambda Expressions as 06 Co4 BTLI arguments to methods in Java with example. 7 Discuss different uses of final keyword with suitable 06 Col BTL3 example
+Collection interface?
+Discuss
+CO3 3 | Explain URLConncetion and HupURLConnection. 06 co4 BTLI Q.4 | Answer the following: (Any Onc) 06 1 What is functional interface?
+How docs Lambda 06 co2, BTL3 on is used to implement it?
+Explain. co4 2 Pha Lambda expression?
+What are the different types 06 co2 BTL2 of it?
+How do they work in ensuring access control in a network? 6 | Compare the functions of UDP and TCP in network 06 CO3 BTL3 communication. 7 | Analyze the rolé of firewalls in network security and 06 Cco4 BTL1 explain how they protect against cyber threats
+What are the critical aspects to consider when managing logs for evidence collection? 2 | Discuss the types of network device evidence that can be 06 Co3 BTLS collected during a network investigation
+How do switches, routers, and firewalls contribute to evidence gathering? 3 | Explain the importance of preparation in host-based 06 | Coa BIL3 evidence collection
+What are the key steps that must be taken before evidence acquisition begins?
+Answer the following: (Any One) 06 1 | What is forensic imaging, and why is it crucial in digital 06 cos BTLS forensics?
+Discuss how it preserves the integrity of digital evidence. 2 | Provide an overview of forensic documentation
+How can 06 Co3 BTL3 we control air pollution? 2 | Explain the common sources of noise pollution?
+How can 06 C03 BTL3 we control noise pollution? 3 | Give the classification of Hazards
+List and brief five 06 CO4 BTL4 hazards in each of the category
+Answer the following: (Any One) 06 1 | How do social, economic, and cultural factors influence 06 COS BTL4 disaster recovery efforts? 2 | How can insurance companies, police, and media 06 CO5 BTL4 collaborate effectively to enhance disaster preparedness and fecovery efforts in local communities? ** End of the Paper **__

@@ -1,0 +1,70 @@
+What are the challenges in wireless network forensics?
+What is the difference between digital forensics and network forensics?
+Write any three techniques used for carrying out investigation?
+What is dynamical network forensics?
+How is it implemented?
+What is the role of forensic agent in it?
+Explain Kismet in brief
+SECTION-II Answer the following: (Any Two) (12) What are the various phases in multi-tier and hierarchical process model?
+Which are the recent trends in network forensic?
+What are the various classifications of network forensics?
+Discuss merits and demerits of Wireshark
+What does HIPAA stands for?
+What are the four main purposes of HIPAA? 2
+Discuss various types of IPR in detail. 3
+What is the purpose behind development of ISO 27001?
+Discuss a planning process of | ISO 27001 specification in detail. 4
+Discuss organizational responsibilities for monitoring and maintaining ISMS. 5
+What is information security?
+Describe several schemes used for levels of information classification with example. 6
+Define various approaches to determine the context of your organization ISMS in relation to ISO 27001
+Discuss ISMS security objectives
+What is information risk management?
+Discuss Key elements of the ISO 27001 risk assessment procedure. 33 What is information security policy?
+Discuss various components of any security policy
+Discuss various objectives of PCI-DSS. 2
+Justify statement organization should conduct intemal ISMS audits at planned intervals
+Q-4 | What is information ethics?
+Define need for ethics in information security, (06) OR Q-4 | Discuss various IPR in India
+SECTION-I Answer the following: (Any Five) (30) What is Snapshot?
+What are Pros and Cons of taking Snapshot during Malware Analysis Process?
+What do you mean by Persistence Mechanism?
+Discuss different Methods to achieve persistence behavior
+Write a short note on Process Explorer
+Write a note on Inetsim and Wireshark
+Write a note on Sandbox?
+Also mention Pros and Cons of using Sandbox for Malware Analysis?
+Give at least 3 examples of Sandbox
+Discuss goals for malware analysis and thumb rules for malware analysis
+What do you understand by term Malware?
+Discuss about various types of Malware (At least 8 different types)?
+What are the four main purposes of HIPAA?
+Bi Discuss various types of IPR in detail. = 3s What is the purpose behind development of ISO 27001?
+Discuss a planning process of ISO 27001 specification in detail. 4, Discuss organizational responsibilities for monitoring and maintaining ISMS. 5: What is information security?
+Define various approaches to determine the context of your organization ISMS in relation to ISO 27001. 7
+Discuss HIPAA rules and regulations
+Discuss Key elements of the ISO 27001 risk assessment procedure. 3
+What is information security policy?
+Discuss various objectives of PCI-DSS. 2 Justify statement organization should conduct internal ISMS audits at planned intervals. 3 Discuss Communications and operations security management in detail
+Answer the following: (Any Two) (12) Write a note on virtual Machine with diagram?
+Discuss various types of Network available with the virtual machine, Write a Note on Process Monitor Write a Note on Faking a Network, tools used and its significance, Answer the following: (Any One) (06) Write a Note on Credential Stealer?
+Also explain what Hash Dumping is? ; Explain what Reverse Shell in detail
+How android o/s works?
+Explain its architecture
+Describe any five control of android
+How Burp suite works?
+Describe in detail
+Describe android startup process
+What is Content Provider Leakage?
+How to identify it?
+Which are possible ways to extract sensitive files with packet capture?
+What is an Activity?
+Describe its lifecycle. 2
+What is the use of Android Manifest file?
+Define with example
+Describe Android Debug Bridge (ADB) in detail. we ai Answer the following: (Any Two) (12) 1
+How APKTool works to reverse an android application? 2
+What is passive analysis? 3
+Define HTTPS Proxy interception. 4
+Explain android filesystem partition. 2
+How to logging the logcat?

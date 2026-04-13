@@ -1,0 +1,103 @@
+Que 3. a teilou SECTION-I Answer the following What do You mean by intent?
+List out all gradient’s types
+Give names of Tools available in SDK
+What is Layout?
+Explain any two layouts in details Answer the following (Any Two) What is Android?
+Explain Lifecycle Activity with Diagram
+What is AVD?
+How to configure AVD?
+Explain
+Explain about the following basic view A) Image Button B) Check Box C) Toggle Button D) Radio Group E) Radio Button
+List out any four types of layouts built-in to the Android SDK
+iii) Define the term: Constructor and Destructor (iv) What is an inheritance’?
+Write down a syntax inheritance. 2
+iii) | What is conditional Statement?
+Explain the Switch Statement with an example. 3
+ii) What is Collection?
+Explain HashTable with example
+i) Describe the advantage and disadvantages of ASP.NET Core MVC, (ii) What is View Engine?
+List out the type of View Engine
+iii) What is Routing?
+Answer the following: (Any Two) dl) (i) What is View?
+Explain Layouts View in ASP.NET Core MVC
+ii) What is validation?
+Explain the various type of validation in asp.net core mve
+iii) What is an Action Result?
+Explain various types of action results and return types. 6
+ii) What is URL Route?
+Explain the types of routing systems
+Discuss the generic process framework for the software engineering. 2
+Explain the essence of software engineering process. 3
+Write a short note on spiral model with example and diagram. 3. ‘Answer the following (Any two) ey 1
+Discuss the generic concept and principles that apply to the framework activity. 2
+Explain various categories of risk with proper justification. 3
+Write a short note.on (Risk Mitigation, Monitoring and Management) RMMM
+what do you mean by UML(Unified Modeling Language)?
+Explain where 4 UML can be used
+Explain the Common Mechanisms in the UML. 4 Oy ‘Answer the following (Any two) ll 1
+Discuss with suitable example using UME diagram for (i) Association (ii) Dependency (iii) Aggregation and (iv) Generalization 2
+Explain interface, type and role with suitable example. 3
+Draw Use Case Diagram of Online student management system. 6. ‘Answer the following (Any two) 11 1
+Draw a Class Diagram, Sequence Diagram and Activity Diagram of Online Purchase System 2
+Discuss collaboration diagram with a suitable example. 3._ Explain Swimlane diagram with a suitable example. _.--- XX ---End of the Paper ---XX
+Explain Integration testing and System testing. 2 Answer the following
+Explain the V-Model of software testing using appropriate diagram. 3
+Explain any 2 of them with appropriate examples
+Explain static White Box testing
+Discuss dynamic Black Box testing
+What are the different ways in which an external tool can access a bug tracking tool?
+Which of them is used by Mantis?
+Explain in brief. 5
+What do you mean by Stress testing and Load testing?
+Explain its significance
+Discuss the simple search and Advance Search options of Bugzilla
+List the steps for reporting an issue in Mantis Bug Tracker
+Answer the following (8) (A) What is Cyber Security?
+Describe CIA Triads
+Write a suitable example of Rail fence encryption. 2
+What is virus?
+Describe any three System based attack
+What is Cryptography?
+Describe any two technique of Modern (Encryption) Cryptography. as Answer the following (Any Two ) (i) (A) _ Describe any two substitution techniques of classical cryptography
+Write a short note on: Public key infrastructure (PKI) (C) Explain Social Engineering
+Define : Nmap , Metasploit Framework. 5
+Explain SQL injection input validation testing
+Describe counter measures for web application attacks. 6
+Answer the following (Any Two) (il) (A) What is Vulnerability Assessment?
+How vulnerability assessment is differ from Pentesting?
+Explain various stages of Penetration Testing
+i) Define the term : Datasets (ii) | What is Semantic analysis?
+Answer the following: (Any Two) ay (i) | What is Big Data?
+List out the advantage of Big Data (ii) Write a short note on Key Performance Indicators
+Define the term ; Name node and Data node (ii) What ts Data Serialization?
+iii) What is Apache Hadoop?
+Explain the advantages of Hadoop 6
+Explain the Map Reduce Distributed Processing
+What is Artificial Intelligence (AD ?
+Why AI is important? 3 (b) Write a short note on development of AI Languages. 2
+Explain intelligent Agent with examples and property of environments. 2
+Discuss Sub area of Artificial Intelligence (AI). 3
+What is prolog list?
+Explain Components of AI Program. 2
+Discuss Advantages and disadvantage of Prolog programming. 3
+List out and discuss Applications of Al
+Define Actuators and discuss types of Actuators. 8 5
+Discuss Depth-First Search with a suitable. 2
+Explain A* algorithm in detail with a suitable example. 3
+Explain components of Robotics. 6
+Explain uninformed search strategies. 2
+Discuss applications of Robotics. 3
+Write a short note on Continuous Path Control of Robot. wees XX ---End of the Paper ---XX ---—
+Answer the following (8) (A) What is Automation Testing?
+What is Selenium IDE?
+Describe Selenium IDE Features. is Answer the following (Any Two ) (11) (A) What are the types of manual testing & how manual testing is performed?
+Write short note on (any 2) automation testing tools: a) Katalon Studio b) Selenium c) Appium 5 Answer the following (Any Two ) ql) (A) Write down steps to configure selenium Webdriver (Java or Python)
+Discuss Architecture of Selenium Web Driver with a neat diagram
+Write short note on Selenium RC
+How it is different from Selenium Webdriver
+Answer the following (8) (A) What are various navigate() commands in Selenium Java Webdriver?
+Write down step to configure Selenium web driver to PyCharm IDE. ce Answer the following (Any Two ) (en) (A) Write down the steps to handle dynamic table in Selenium Java Webdriver?
+Explain steps to read Configurations from Property File in Selenium Java ?
+Write steps to generate reports using Selenium Java Webdriver? 6
+Answer the following (Any Two ) (059) (A) How to Locating Elements by ID, Name, XPath and class name using Selenium Python?
+Write a short note on Implicit and Explicit wait for Selenium Python?

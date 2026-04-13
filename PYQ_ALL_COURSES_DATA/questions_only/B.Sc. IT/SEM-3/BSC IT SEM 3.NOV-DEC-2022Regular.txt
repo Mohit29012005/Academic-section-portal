@@ -1,0 +1,70 @@
+Answer the Following(Any seven) 1 What is Data Structure?Explain it. 2
+Explain Double Linklist with Any five Algorithms. , 3.'Explain Polish Notation (Prefix, Infix, Postfix). °, - Explain Non Linear Data Structure
+Explain Explain, Height Balanced Tree (AVL)
+What is stack?
+Explain the algorithm of push and pop. 7
+Explain Insertion Sorting. ; 8.Explain Graph Traversal Algorithms — BFS . 9.Explain circular Queue With Algorithms . 10.Explain Sequential Searching
+Explain Linear Data Structure
+Explain Recursion in Linear Data Structure
+Write a Short note on Binary Tree and its Representation poye Po SeatNo. 30 05 10 10 2 .Explain B Tree and B++ Tree. 3.write a short note on Height Balanced Tree
+Answer the following: (ANY SIX) (30) What are the various misconceptions of ERP?
+List out the benefits of ERP to the organization
+Discuss different features of Python
+How does List differ from Tuple?
+BSA > What is Exceptions?
+Explain handling an exception condition with suitable example
+F, What is Python Module?
+Explain creation and use of module with suitable Example. 2 Explain different steps of creating a Database in Odoo
+Write a short note on Model Fields. 2
+Briefly explain about Functional Modules of ERP software?
+Discuss various challenges of ERP implementation. 3 Answer the following: (ANY ONE) (06) A. — Write a code: “To print Even Numbers in given range of 2 to 40”
+Explain any three functions of String
+Explain it with suitable example
+What is Constructor?
+Explain how to declare and use constructor in python program
+Explain any three Structure tools used to design E-Commeree/WEB-SITI Answer the following: (ANY ONE) What is View?
+Explain Tree/Form/Search Views with Example
+Discuss about Model Inheritance in detail
+Discuss the features of Oracle 10g
+What are the steps to start SQL* plus?
+What is the use of it?
+Differentiate between locally managed and Dictionary managed tablespaces
+Discuss the block structure of pl/sql program
+What is System Global Area (SGA)?
+Discuss various parts of SGA
+Explain Enterprise Manager in detail
+Write a note on: Table spaces in Preconfigured databases
+Discuss User defined exception handling with example
+Give the difference between SGA and PGA
+Discuss SYSTEM and SYSAUX table spaces in short
+Write a note on: Oracle Instance Management
+Which commands are used to start and stop the database control?
+Answer the following: (Any Two) (10) What is cursor?
+Which are the types of cursors?
+Explain in detail. - II Discuss the use of procedure with suitable example
+IM What is trigger?
+Explain its types with suitable example
+Whati is OSI Model? ‘Explain the funeis and Protocols find services of each layer
+What are the types of multiplexing?
+Explain ail in brief. - = “Explain Data Communi tion. and
+Data Flow. : What is s Security?
+Explain Types of Security: What i is s VLAN?
+Describe its Advantages: Explain cryptography attacks
+What is domain name system?
+How it works?
+Define Frame tagging
+Differentiate Circuit Switching and Packet Switching. sa © PNOG ER wd 0
+Define Baseband Connection and Broadband Connection
+What is TCP/IP Model?
+Explain the functions and protocols and services of each layer. 2
+Explain all transmission media Q-3
+Describe cisco three layer hierarchical model. 2
+Explain Ethernet and Explain all Types of Ethernet cabling. 3
+Explain Ethernet Datalink Layer & Ethernet Physical Layer
+Explain VLAN Membership with its Methods. : 3. what is computer Network?
+Explain with figure. poge 2 oF x (10) (08)
+Compute: (1) () (2) | Write a short note on Non-Singular Matrix with an example -5 ya-|? | int an 4 Answer the following: (Any Two) Ina joint family of 12 persons,7 takes tea , 6 take milk and 2 take neither ;How many members take both tea and milk ?
+Prove that De Morgan’s laws Explain Cartesian Product of Two Sets with an example Answer the following: (Any One) How many ways can the letters can be arranged?
+HIPPOPOTAMUS (b) CALCULATOR In how many different ways can the letters of the word 'INDIAN' be arranged?
+Answer the following: (Any Two) Define Terms: Matrix, Vector, Square Matrix, Zero Matrix «| Then find out 1) AA and 2) F(A), where F(x) =x? -2x?
+If af} "| |?

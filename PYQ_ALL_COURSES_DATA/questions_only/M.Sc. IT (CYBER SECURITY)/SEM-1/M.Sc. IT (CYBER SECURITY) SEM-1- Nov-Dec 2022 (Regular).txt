@@ -1,0 +1,33 @@
+What is Social Engineering?
+Explain in detail
+What is VPN?
+How is it works?
+Write Cryptographic Functions in detail
+Illustrate is Digital Signature?
+How it works?
+Create EDRM model
+Discuss Mobile Forensic in detail
+Create Cryptographic Trust Models in detail
+How the Tor Network works?
+Explain in Detail
+Discuss cyber-crime issues in Pornography and Software Piracy
+Describe Network Forensic Tools in detail
+Each section should be written in a separate answer book 3. a > SECTION-I - is Answer the following: (Any Five) 7 (30) How Banner Grabbing can be useful in information gathering?
+Discuss CSRF Attack briefly
+Describe any five commands of Nmap tool-for gathering-information-from target: Explain Cross-Site Scripting in detail
+List out component of Metasploit and explain briefly
+What is a Web Application?
+Explain the components of the Web Application a briefly. 2
+Explain Password guessing attacks with its countermeasures. 3
+Describe HTTP Request and Response Header briefly. 3: Answer the following: (Any Two) : : (12) 1
+Discuss SQL Injection briefly. 2
+How user input can be captured?
+Describe IPV4 and IPV6 in brief
+Discuss the Linux directory structure in brief. eS) Discuss the types of firewalls in brief
+Write the short note on the root. 2
+Write the features of Linux operating system. 3
+Explain the Shell with its types. 3
+Give the overview of LVM in detail. tv Write a short note on the samba server. 3
+Give the introduction to the cron. 4
+Explain the attack techniques in brief. 2
+Describe the virtualization in detail

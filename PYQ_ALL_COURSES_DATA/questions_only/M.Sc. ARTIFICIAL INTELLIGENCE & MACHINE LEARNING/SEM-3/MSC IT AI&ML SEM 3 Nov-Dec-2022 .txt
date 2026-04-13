@@ -1,0 +1,54 @@
+II What is meant by the semantics of a natural language?
+Explain with some example
+IV What is the tokenization in NLP?
+Why do we need tokenization?
+V_— What is Text Mining?
+What is the difference between text mining and NLP?
+VI Why and how is a n-gram useful in NLP?
+VII What is a corpus?
+Give few examples of corpus
+Answer the following.(Any Two) (08) I What is frequency distribution?
+How the class FreqDist works?
+II What is bigram and trigram in NLP?
+Ill What are POS tags in NLP?
+What is the purpose of using Named Entity Recognition (NER)? 3
+Il What is the confusion matrix?
+Choose the correct answer from the following choice (01) What is Machine translation?
+Answer the following: (ANY SIX OUT OF EIGHT) Why clustering is used in machine learning?
+Explain in brief. eo) Explain k-means clustering algorithm in detail
+What is overfitting?
+Explain the technique that is used to solved the overfitting problem
+What is variance?
+Explain voting-based ensemble learning in brief, Write a short note on recommend system
+Explain collaborative filtering system in detail
+Explain the DBSCAN clustering algorithm with the figure in detail
+Write a short note on semi-supervised learning
+Answer the following: (ANY ONE) (06) What is dendrogram?
+Explain Mini-batch k-means clustering algorithm
+List down the linkage methods in hierarchical clustering
+Explain any three methods in brief
+What is bias?
+Explain bagging ensemble learning with proper example
+Write down the steps for performing the AdaBoost algorithm
+What is content-based filtering technique?
+Explain in detail
+Write down the diff. between the supervised and semi-supervised learning
+Explain the types of real-world applications of semi-supervised learning
+Answer the following: (ANY SLX OUT OF EIGHT) (30) A. | What is Reinforcement learning?
+Explain the key features of Reinforcement Learning
+Explain how does Reinforcement Learning Work?
+How bell-man equation is used in RL to find optimal policy?
+List out an activation functions used in ANN and explain any 2 in details
+F. _ Whatis the role of optimizers in ANN?
+List down all and explain any three optimizers in details
+Discuss the approaches to implement Reinforcement Learning
+Explain the elements of Reinforcement Learning. 3
+Explain Q-learning algorithm in detail
+Explain how Markov decision problems is used in Reinforcement Learning. 4
+Howto decide which activation function should be used in output layer?
+What is ANN?
+Explain the architecture of an artificial neural network. 5
+What is Deep Learning?
+Why Deep Learning?
+Explain RNN algorithm in brief
+Explain Auto-encoders algorithm in brief

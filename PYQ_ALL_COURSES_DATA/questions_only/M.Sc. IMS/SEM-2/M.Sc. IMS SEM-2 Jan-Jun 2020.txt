@@ -1,0 +1,43 @@
+What does Hacker mean'J Explain the types of Hacker. 2
+Describe Malware Detection Techniques in brief. 3
+Explain the types ofSocial Engineering Attack. 4
+Describe port scanning in Network Infrastructure Attack. 5
+Write a short-note on ARP Spoofing Attack. 6
+What is Malware?
+Explain in brief. 7
+Describe the advantage and dis-advantage ofhacking. 8
+Explain the process to perform social engineering attack
+What is Hacking?
+Explain the types of Hacking 2
+Describe the process ofEthical Hacking. 3
+How to determine which systems to hack?
+What is Social Engineering Attack'l Explain with example. 2
+Write a short-note on Dumpster Driving Method. 3
+Explain the rulnerabilities of Password
+Explain WPS in detail. 3
+Define the terms: NeIBIOS, War Dialing
+Describe the keywords: Tarpitting, E- Mai[ Firewall, Perimeter Protection 2
+Explain Web Application Vulnerabilities in briet'. 3
+Describe Message System Vulnerabilities in brief
+What is BGP?
+Why to use BGP? 2
+Describe OSPF network types in brief-. 3
+What is VLAN?
+Explain VLAN in brief. 4
+What is HSRP?
+Explain in detail. 5
+Explain the types ofpacket in EIGRP. 6
+Write a short-note on Routing Metrics. 7
+Explain the types ofIPv6
+Describe the terms: DR
+Explain EIGRP load balancing
+Write a short-note on IPv6. 2
+Describe RIPng protocol in brief
+What is Route Redistribution?
+Explain in brief
+Q-l Questions' (Any Five) 1 Discuss lf...Else leader in Java Script with proper example. 2 What is URL?
+Explain the schema of the URL ln detail? 3 Explain the basic structure ofjava script program. 4 What is HTML?
+Explain the Advantage and Dis-advantage of HTML. 5 Discuss the DML with its all Gommand with proper syntax. 6 Discuss th,ree basic command oflinux which useful to novice user to operate Linux Editor. / Explain the switch case injava script with proper example
+Explain For... loop injava Script with its syntax and example
+What is LINTX?
+Explain the history and requirements of Linux with Hardware ' Explain the example to enter dala r.sing echo command and also explain move and sort command with examPle

@@ -1,0 +1,79 @@
+II What is the meaning of planning?
+List out the different components of planning
+Explain any one in detail
+VIII What is AI?
+Discuss the history of AI. 2
+Answer the following: (Any Two) (8) I What is an agent?
+List different types of agents
+Explain Simple reflex agent with proper example
+Il What is the meaning of AI?
+Discuss the different properties of task environment
+Answer the following: (Any Two) (8) I What is uninformed search?
+Discuss Breadth first search in detail
+Ill What is Knowledge based agent?
+Discuss the different approaches to knowledge representation
+Discuss different application of Expert system
+II What is NLP?
+Discuss different steps of natural language processing
+List out the features of Bootstrap
+Explain Toast Components in Bootstrap with example
+Explain Bootstrap Dropdowns with example
+Write a short note on Box Model
+Write a short note on Bootstrap
+Explain Jumbotron Components in Bootstrap with example
+Write a short not on JQuery
+Explain CSS z-index Property in details
+Write a short note on Bootstrap Grids
+Write a short note on Basic Pagination in Bootstrap
+Explain Spinner Icons Bootstrap with example
+Explain Advantages and disadvantages of PHP. "2
+What are the differences between Client Side and Server Side Scripting language?. 3
+Explain PHP Sessions. 4
+Explain Function Overloading and-Overriding in PHP... .- - ‘5
+Explain the features of MySQL Database. 6
+Explain Private, Protected and Public in PHP in brief. 7
+Explain Interface in brief. : : . 8
+Explain in brief Static class and Final class in brief
+Explain the different type of Array with suitable example using PHP Script. 2
+Explain PHP Operators in brief
+Explain the different features of OOP. 2 .Explain the concept of Client Side Validation and Server Side Validation. 3
+Explain Abstract in PHP
+Explain MySQL Functions. 2
+What is MySQL Database? 3.Explain in brief: Insert Multiple Records 2 oF 2
+What is collection?
+Write a short note on collection framework
+Write a short note on Buffered Writer class
+What is event?
+Explain Event Delegation Model in details
+Explain text field and button with its properties and methods?
+What is synchronization?
+How many ways in which threads can be implemented
+Explain any one way with proper example. ‘What is JDBC?
+What are the steps to connect to the database in java?
+Write down the differences between Statement and PreparedStatement interface?
+Explain the types of methods of ArrayList class in detail. wp 3
+What is file?
+Explain FileInputStream class in detail
+Explain Character Stream class in detail. 4
+Answer the following: (ANY TWO) (10) Write down the difference between swing and awt?
+What is the use of Layout Manager class
+Explain any one with example
+Write a short note on JFrame
+Explain types of JDBC driver in brief
+What is use of Calendar control?
+Explain any five property (with possible values) of it with example
+Explain Paging-Setting property of Gridview with example
+What is LINQ?
+Explain various sources that we can connect using LINQ
+What is use of UpdtaePanel Control?
+Explain following property of UpdatePanel control with default and possible values. 1 IsInPartialRendering 2.Triggers. 3
+Explain ABCs of WCF service
+Explain Range validator control with some property and possible values of it
+Answer the following: (Any Two) What is use of file upload control?
+Explain any five property of it using example
+What is use of MultiView control?
+Explain some of the property of it and also explain following commands. a
+What is Entity framework?
+Explain different kind of approach of it
+Explain JSON
+Explain WSDL in detail

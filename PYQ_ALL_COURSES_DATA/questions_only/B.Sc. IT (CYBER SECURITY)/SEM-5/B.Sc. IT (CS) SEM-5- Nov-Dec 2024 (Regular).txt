@@ -1,0 +1,13 @@
+Explain Constraint Layout in detail. 06 3 BTL-5 [ 5 | What is Shared Preference?
+Answer the following: (Any One) 06 1 | How do prepared statements in PDO enhance security 06 co2 BTL3 against SQL injections? 2| Describe how: WordPress manages user roles and 06 co4 BTLI permissions, and the significance of role-based access. ** End of the Paper ** . ; / B.Sc
+Bloom’s Taxonomy Based Assessment Pattern: awe Section —1 Q-1 Answer the following: (Any 5) What do you understand by CMMI?
+Explain in brief
+Write a short note on RAD Model
+Explain Waterfall Model in detail
+Discuss the System Modeling in depth
+Explain the Validation testing in brief
+Discuss Data Modeling concepts in brief
+Define the term Software?
+Why Software is important? 3
+Discuss the incremental model in brief
+Explain Business Process Engineering. 3, Discuss Flow Oriented Modeling in detail

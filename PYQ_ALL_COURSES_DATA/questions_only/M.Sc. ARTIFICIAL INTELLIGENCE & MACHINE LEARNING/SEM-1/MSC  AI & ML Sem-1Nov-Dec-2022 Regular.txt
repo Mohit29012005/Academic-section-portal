@@ -1,0 +1,41 @@
+Any Five) 30 1) _ Discuss the key features of Python? 2) Explain various ways of commenting in python programming. 3) Explain input () and print() function with proper syntax and example in python 4) List out and Explain Decision making statements in Python. 5) (a) Differentiate List and Tuple in Python
+What is negative indexes and how they are used in Python? 6) Explain types of class inheritance with example in python. 712 Write a python program to implement Iterative and recursive factorial function of given number. 8) Write program in python that read number and check if a number is Armstrong or not
+Any Two) 12 1) _ List the different types of operators in python language?
+Explain membership and identity operators with examples. 2) Explain for loop with else and continue statements with example. 3) Write a python program to implement Fibonacci series up to Nth term
+Any Two) 12 1) Explain Lambda Function in python with example. 2) What is dictionary in Python?
+Explain any four built-in dictionary methods with example. 3) Read 15 integer numbers from user and store them in a list
+Any One) 6 1) What is Exception Handling?
+Discuss analysis model for Web Apps
+Describe the System Design Patterns in depth
+Discuss the SDLC in depth
+Write a short note on Object-Oriented Paradigm
+Define the term:[i] Class [ii] Object [iii] Superclass 3
+Discuss the web engineering team in brief
+Explain forward and reverse engineering
+Discuss the Building Blocks of UML in brief
+List out different views of modeling a Software System’s Architecture. 5
+Answer the following: (ANY TWO) A. — What is fork and join in Activity Diagram?
+Explain it with suitable example
+Discuss the Collaboration diagram in brief
+Explain methods to handle missing values in data
+Describe ANOVA in Detail
+Explain Pie chart and Scatter plot with example
+Discuss about Descriptive Statistics Explain Hypothesis Testing with Example
+Data science is known as multidisciplinary?
+Explain in brief
+Discuss SPSS software in brief
+List out any two application of time series, (1) 4
+Write a short note on Measures of Central Tendency in Data B. _List out Probability Distribution
+Explain different types of variables What do you understand by Research?
+Explain motivation of Tesearch, Which research design is applied in the case manipulation is present but there is no randomization or no control?
+Discuss in detail
+Write down the end to end Process of doing research?
+Write a difference between Basic Research and Applied Research Explain the following terminology the researcher should know. a)Google scholar _) i10-index ¢) Journals d) Plagiarism Discuss any two types of sampling in which samples are selected by choice only not by chance
+SECTION-IL Answer the following: (Any 2) [12] Which research design examines human behavior?
+Discuss two types in detail
+Explain significance of Quasi experimental research design with example
+What do you mean by hypothesis?
+Explain any three types of hypothesis
+Discuss sampling error in detail
+Write down following definitions for sampling: a)Sampling b)Sample c)Population d)Sample size e.)Statistics f)Parameters What is sampling?
+Explain three types of sampling in which population has known, nonzeron probability of selection

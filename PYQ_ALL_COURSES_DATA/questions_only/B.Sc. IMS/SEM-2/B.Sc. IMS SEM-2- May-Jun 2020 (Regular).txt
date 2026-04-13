@@ -1,0 +1,48 @@
+Any Six) (30) 1 Discuss the Different types of Roll of DBA. 2 What is DDL?
+Explain the 3 command of DDL with proper syntax. 3 Explain BCNF with example. 4 Discuss the basic structure of DBMS. 5 List out different types of joins
+Explain inner and self join with example. 6 — Explain serializability of transaction. 7 Explain how to create new user, assign password, change password with example. 8 Discuss the sequence with example
+Any Two) (07) 1 Explain Recovery with Proper Example. 2 What is normalization?
+Explain 1st and 2nd normal form with Proper example. 3 Explain SQL with naming rules and convention
+Explain DML with its 3 commands with proper syntax
+Discuss the Revoke with Proper example
+Discuss the set command with example
+Explain index with its all options
+Any Two) (08) 1 : 2 3 What is view?
+Explain with suitable example
+What is Computer Network?
+Explain the use of Computer Network. 2
+Write a short- note on wireless network. 3
+Describe OSI Model in brief. 4
+Define the terms: HTTP and HTTPs, SSH 5
+What is WWW?
+Explain in brief. 6. | Write a short-note on Line Configuration. 7
+Describe Twisted Pair Cable in brief. 8
+What is Subnetting?
+Explain in brief
+Describe the types of Computer Network. 2
+What is Topology?
+Explain the types of Topology
+Any Two) (08) 1, What is IP Address?
+Explain the class of IPv4 Address. 2
+Describe the difference between TCP and UDP. 3
+Explain TCP/IP Model in brief
+Describe the term Intranet and Extranet. 2
+Give the full forms: STP, UTP, SMF, NIC. 3. | Write a short-note on Ethernet Card
+Explain Computer Network Architecture in brief. 3
+Describe the difference between ICMP and IGMP
+Answer the following: (Any Five) What is Active directory service?
+Write purpose of Active directory
+Explain FQDN and DNS namespace with figure
+Write down limitation of IPV4
+What is permission and explain its types
+What is terminal services?
+Explain modes of terminal service
+Explain routing, types of routing and router
+Describe Windows Server Update Services and its operation
+Explain DNS server with its lookup types
+Write note on Group policy
+Answer the following: (Any One) What is FSRM?
+Explain disk quota with example
+Explain Hyper-V with its requirement
+Answer the following: (Any One) How VPN server work?
+Write down the components used in VPN

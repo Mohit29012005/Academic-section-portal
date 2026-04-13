@@ -1,0 +1,54 @@
+Explain diff-erent adornments of Association relationship
+What is roor and leaf class?
+Explain how to dralv a class cliagram for a system rvith its corrrron uses. 3
+Explain Actor and Usecase
+Explain Forking and Joining
+Explain Arrifacr and Node
+How relationship of a, interface and a crass can be srrown in UML?
+Explain activity diagram with suitable exarnple
+Draw sequence diagram for onrinepurchasing system.(b) Explain Deployrnent diagram with suitable exarnple
+ANY TWO) , !1,- --.---,^ (11) (1) Explain nr-ray object,w-nn properties-and methods with example' iri Explain ttrree kind of lq?.'p boxes with example' (3) Exptain g"tEt"runteyrd0 and getElementsByClassNameo methods with examPle' 3
+Howcan*".hung"htmlelements?Explainitbyfollowing' element. attribute ele ment. stYl e
+P ro PertY(oB) !, ( 11) (P.r.o) ' SECTION.II (1) Explain ensurelndexO rnethod with use, syntax and examples.(2) Explain LimitO method with use, syntax and examples.(3) Explain SaveO method with use, syntax and example.(4) Explain comma.nd to create and drop MongoDB Collection.(oB) ( 11) with their use, syntax data of some specific proper example. aggregateO Method with (ANY TWO)(1) Explain following conditional operations and examples.o Less Thano Less Than Equalso Not Equals(2) What is Projection?
+How can we display fields using findQ method?
+Explain with(3) Explain $sum and gavg expressions of use and examples
+ANY TWO)(1) What is MongoDB?
+Explain Collection, Document and Field with proper example
+What is Objectld?
+Explain it with proper example
+Explain Insert Document and Delete Document with example, -----x-----x-----(11) (2) (3) 2
+Draw an Android architecture. 2
+Any TWO) l. \\/hat is.{ctii,ity'?
+Discuss allthe events of android activity life cycle. 2
+Give exanrple of Options ancl Context menu in your activity. 3
+What is Dialog box?
+List out types and Explain any one.Remedial APril- June 2018 (08) (1 1) (l 1) SECTION - II Q - 4 Ansrver the following. l
+I{ow to send data fi.om one activity to another activity?
+Explain. 2" What is pennission?
+Explain its types with suitable example" Q - 5 Altsrver the lbllorving
+Describe: Cohtent ['rovider 2
+What is WebView?
+Explain all ways to browse data frorn WebView. 3
+Write a short note on Android NDI(' Q - 6 Attsrver the follon'ing
+How to r.eacl ancl rvrite a data in/tl'orn file in android?
+Explain, 3
+Holv call yoLt sencl / receive SMS frorn your application?
+Explain
+SECTION-I Ansrver the follorving: (i) What is Norrnal Forms?
+List out the Nonual Forms
+ii) What is Decomposition?
+Explain in brief
+iii) Define term : Clustering,lndexing (iv) What is Physical Database Design?
+Explain Choices in Tuning the Conceptual Schema
+What is Database Workloads?
+Explain the Distributed Concurrency control
+Write a short note on Distributed Recovery
+Wirat is a deadlock?
+Anslver the follorving: (i) Give the difference between SeL and pLlSeL(ii) Explain the Data Type of pL/SeL in brief.(iii) What is cursor?
+List out tlie attributes of cursor"(iv) List out built in Exception handling.rF QI (8) s
+What is Eror Handling?
+Explain types of Error Handling in pLlSeL
+Explain The Generic pLlSeL Block structure with example
+Define term: Save point and Rollback.(10) (1) (1 0) (1)(A) Ansryer the following: (Any Trvo)(i) What is a trigger?
+Explain trigger rvith suitable exanrple.(ii) What is a package?
+Explain package with exarnple"(iii) what is procedure?

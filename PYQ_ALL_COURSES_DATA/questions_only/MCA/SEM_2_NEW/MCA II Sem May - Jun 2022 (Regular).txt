@@ -1,0 +1,112 @@
+Q3 wn SECTION-I Answer the following What is HTML?
+List the Features of HTMLS
+What is CSS?
+Give the Syntax of CSS syntax
+What are tags? 2
+Write Down Code For x? 2y- y Answer the following.(Any TWO) What are an Attributes?
+Explain Any 5 common Attributes of all the tag
+What is Use form Elements?
+Explain any five Input type with Examples GIVE the full FORM of CSS
+Explain the following With Context to CSS Backgrounds Borders Margins Padding Height Width yPodye Answer the following.(Any TWO) What s the use of Selector in CSS
+Explain different type of Selector available in CSS with Proper Example
+What is Bootstrap?
+Explain the following with examples
+What are the key components of Bootstrap?
+Discuss TCP/IP Reference model Answer the following
+Discuss persistent and Non persistent HTTP
+Discuss IP Address Classes and blocks
+What are the responsibilities of Transport layer ?
+Explain TCP Header
+Write a short note on IPv6
+ALL) What was the problem in IP that ICMP was developed?
+Discuss ICMP Protocol in brief
+Explain Link-State Routing Protocol with a suitable example
+Explain Linux Directory Structure in brief
+Discuss attack techniques
+Explain Virtualization Architecture
+Write a short note on Physical Layer X.25
+Draw and Describe all methods of Activity Life cycle with its skeleton. 2
+Write a short note on Android Architecture. 2
+Describe: Date and Time Pickers. 2
+How to use integer and integer array resources?
+Explain. 3
+What is Layout?
+Explain its Any four Layouts. 3
+What is Dialog?
+Explain its any two types. 2
+What is Log?
+How does it differ from Toast?
+Write a program to change background color of Android Activity
+Answer the following. 1, What is File?
+How to write file in Android? 2
+Describe Frame by Frame animation with example. 5
+What is firebase?
+Explain its features. 3
+What is menu?
+How to use context menu in Android?
+Explain. 6
+How to perform CRUD operations using SQLite?
+Explain. 2
+What is shared preference?
+How to read and write record from it. 3
+Write a short note on Types of storage in Android OS
+Explain any four Common matching symbols with example
+List all built-in Java annotations and explain any 2 of them in brief. 2s Answer the following
+ANY TWO) (1) What is the significance of JDBC?
+Explain all the four types of drivers available in JDBC
+What is a Servlet?
+Explain the lifecycle methods of a servlet
+List all the implicit objects available in JSP and explain any 2 of them in detail. 3
+ANY TWO) (1) Explain the various methods of ResultSet of java.sql Package (2) What are the different ways of managing a session?
+Explain each of them using proper code
+List the various scripting elements of JSP
+Explain each of them along with their syntax
+What are Java Beans?
+Explain the role of beans in MVC, (2) Explain any four JSF tags with example. 4 Answer the following
+Differentiate between Statement and PreparedStatement
+Show the syntax of using both the Statement and PreparedStatement
+Explain C# Array in detail
+What is inheritance?
+Explain types of inheritance
+Explain MVC architecture in detail
+What are strong types of helper method?
+Explain in detail
+How you can send a data from controller to view?
+Which is base class of every user defined controller class?
+Explain types of Action Results & Return Type in detail
+Explain anyone conditional statement of Razor engine with example
+What is Routing?
+Explain URL routing in detail
+Can we bind a multiple model to strong type of view?
+Explain implicit Razor expression in one or two lines
+Define Key Performance Indicators (KPI)
+Differentiate between descriptive analysis and predictive analysis
+Differentiate between structured and unstructured data
+Define terms: Data Mining, Machine Learning Answer the following (ANY TWO ) (1) Explain the different types of digital data
+Define Big Data
+Explain the characteristics of Big Data
+Explain about the architecture of Big Data
+Write down the Unix commands related to file creation & permissions
+Write down the steps to install Hadoop system on Ubuntu OS
+Explain terms: NameNode and DataNode (2) What is Data Replication?
+What is Hadoop Yarn resource manager?
+What is Data Serialization?
+Explain about specific file types in Hadoop
+Explain about Apache Hadoop and its advantages
+Answer the following (ANY TWO ) (1) What is Map-reduce?
+Explain the characteristics of MapReduce
+Discuss various configuration files used in Hadoop installation
+Explain about the Hadoop Yarn Architecture
+Explain LDAP injection with Suitable example
+What is Cross-site scripting attack (XSS) and what are the reasons for the XSS attacks?
+Explain the in brief the types of Cross-site Scripting (XSS). a: Answer the following (Any Two ) (653) (A) What is SQL injection?
+How SQL injection can be performed?
+Explain in detail Penetration testing phases. 5
+Answer the following (Any Two) dab (A) What is Vulnerability and Vulnerability Scanner?
+Explain in detail the tools used for Vulnerability Assessment
+What is Metasploit?
+Explain Metasploit framework structure
+Explain the factors that make the organization vulnerable to Social Engineering attack. 6
+Explain the types of Social Engineering attacks in detail
+Explain how users can be attacked by different ways of capturing user inputs
+Explain different types of Cyber Attacks in detail

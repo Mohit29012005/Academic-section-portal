@@ -1,0 +1,67 @@
+Be precise and to thc point in your answer April -June 2023 State the types of scope in Group Policy?
+Any One) What is IPv4?
+Explain the classes of IPv4
+Explain event log in brief
+Describe the advantages of filc server
+List out the editions of Windows Server 2008 R2
+Give the full forms of following terms: DFSR, HTTPS, RAM, NTFS
+Any One) What is zone?
+Explain the primary zone of DNS
+What is computer nctwork?
+Explain local area network in brief
+What is DHCP?
+Describe the feature of DHCP
+Write a short note on FTP
+Write a short note on Microsoft Remote Desktop Web Access
+Describe the uses of Hyper-V
+Describe the features of WSUS? . | (15) (04) (04) (03) (04) Hrs.) Iustructions: (). 7
+Discuss the lub Sivitch and Router in Network Terminology
+Explain the physical, Data-ink and Network Layer of OST mode
+Discuss the Asynchronous Iransfer Mode (ATM ) in Network Terminology Q-2
+What is computer Network?
+Explain the need and advantage of Computer Network
+Explain the internet Intranet and Extranet in detail with proper example
+Write a short note on LAN and MAN. 0-3
+Explain the Mash and Star Topology in detail
+Explain the Design issue of Layers in computer network
+Discuss the Presentation and Application Layer in Detail
+Write down a short note on X.25 Protocol
+Explain the terms of Bridge Repeaters and Gateways
+Discuss the concept of wired and wireless network with example. | Q-5
+Any Tvo) What is lP Address?
+Explain the different class of IP with its range
+Explain the FTP and SMTP protocols with its proper use
+Discuss the Client Server Model with its advantage of it. tND oF PAPEe (30) (05) (08) (08) (09) 1
+Explain Arithnietic Operators and Logical Operator in java
+List out data type of java and explain it
+Give the differences between while loop and do...while loop
+Explain try, catch and finally block in Exception. exan1ple of to implementing interfaces
+What is Intertace?
+How to Defining and extending interfaces?
+Explain the following terms: (ANY 1) What is Method Overloading?
+Explain it with suitable example
+What is Type Casting?
+Explain it with example
+Write a short note on JDK in details
+Explain switch statement with example
+What is Method Overriding?
+What is Constructor?
+What is an Inheritance?
+Explain the types of inheritance
+ANY 1) What is an array?
+How to create and initialize an array?
+What is package?
+Explain it ENp What is Exception?
+Explain types of error with example
+Give difference between DBMS and RDBMS
+Differentiate TRUNCATE Vs DELETE What is Constraints?
+Explain Primary Key and Unique Key with example
+Explain any five String Functions with example
+How to create a new User using SQL?
+Explain GROUP BY and HAVING clause with example?
+II What is TRANSACTION'? explain ACID properties of Transaction
+List out problems of concurrent execution of transactions?
+Give Full Forms: II List all DML commands and explain with appropriate example. i) DCL ii) DQL i) SQL (ANY ONE)
+II What is JOIN?
+Explain Inner JOIN with example
+What is Sequence?

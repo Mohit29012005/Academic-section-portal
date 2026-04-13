@@ -1,0 +1,32 @@
+List applications of machine learning
+What is ‘training Set' and 'test Set' in a Machine Learning Model?
+Answer the following: (Any Two) Explain classification algorithm: k-Nearest Neighbour (KNN) Discuss how random forest work?
+Explain strengths and weaknesses of random forest model
+What are the three stages of building a model in Machine Learning?
+What is predictive analytics?
+Type II error?
+Write a short note on Logistic Regression
+What are Parametric and Non-Parametric Models?
+What is confusion matrix?
+SECTION-0 Answer the following: Define the components of Time-Series data, What is over-fitting?
+How can you avoid it?
+Answer the following: (Any Two) How would you evaluate a time series forecasting model?
+Explain Support Vector Machine model
+Define the Prescriptive Analytics, Answer the following: (Any Two) What is the difference between ARMA and ARIMA?
+Explain the Regression Model for Forecasting
+Explain the Croston’s Forecasting in detail
+When will you use classification over regression?
+What is cluster analysis?
+Explain all types of clustering in brief
+Discuss how random forest work?
+What is regression analysis? ql) Answer the following: (Any Two) (10) Explain gradient decent algorithm with all types
+Write a short note on Scikit-Learn library for machine learning
+Write short note on the k-Means Method with example
+Explain support and confidence in brief
+What is recommender system?
+Explain all types of recommender system
+Explain collaborative filter with advantages and disadvantages
+What is stop word?
+Write a short note on Matrix Factorization
+What are the challenges in text Analytics?
+What is Bag-of-words model?

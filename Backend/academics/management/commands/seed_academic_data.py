@@ -168,27 +168,50 @@ class Command(BaseCommand):
             except Exception as e:
                 self.stdout.write(self.style.ERROR(f"Error creating faculty {fname}: {e}"))
 
-        # --- 5. CREATE STUDENTS (~500 limit based on 20 faculty) ---
-        self.stdout.write("Generating ~500 Students balanced across courses...")
+        # --- 5. CREATE STUDENTS (~500 limit) ---
+        self.stdout.write("Generating ~500 Students with proper GUNI format and full academic history...")
         
-        # Distribute 500 across 11 courses
+        # Course to GUNI Program Code mapping
+        program_codes = {
+            "B.Sc. (CA&IT)": "032431",
+            "B.Sc. IMS": "032432",
+            "B.Sc. IT": "032433",
+            "B.Sc. IT (CYBER SECURITY)": "032434",
+            "B.Sc. IT (DATA SCIENCE)": "032435",
+            "INTE. DUAL DEGREE (BCA)-(MCA)": "032436",
+            "M.Sc. ARTIFICIAL INTELLIGENCE & MACHINE LEARNING": "032437",
+            "M.Sc. IMS": "032438",
+            "M.Sc. IT": "032439",
+            "M.Sc. IT (CYBER SECURITY)": "032440",
+            "MCA": "032441"
+        }
+
         student_count = 0
+        from academics.models import SemesterResult, SubjectResult
+        
         for course in courses_db:
+            p_code = program_codes.get(course.name, f"0325{random.randint(0,99):02}")
             active_sems = course.total_semesters
             
-            # For each semester
             for sem in range(1, active_sems + 1):
                 # Generates ~8 students per semester class
-                num_students = random.randint(6, 10) 
+                num_students = random.randint(6, 12) 
+                # Year prefix based on semester (assuming 2 sems per year)
+                # If sem 1-2: current batch
+                # If sem 3-4: 1 year older
+                year_offset = (sem - 1) // 2
+                batch_year = timezone.now().year - year_offset
+                year_prefix = str(batch_year)[2:]
                 
-                for _ in range(num_students):
+                for i in range(1, num_students + 1):
                     try:
                         fname = fake.first_name()
                         lname = fake.last_name()
-                        year_prefix = str(timezone.now().year - (course.total_semesters - sem) // 2)[2:]
                         
-                        unique_id = uuid.uuid4().hex[:6].upper()
-                        enroll_no = f"{year_prefix}{course.code[:3]}_{unique_id}"
+                        # Format: Yr + ProgramCode + 3-digit Roll
+                        # Ensure uniqueness by using semester and current loop index
+                        roll_no_val = (sem * 100) + i
+                        enroll_no = f"{year_prefix}{p_code}{roll_no_val:03}"
                         email = f"{enroll_no}@gnu.ac.in"
                         
                         user = User.objects.create_user(
@@ -198,7 +221,7 @@ class Command(BaseCommand):
                             is_active=True
                         )
                         
-                        Student.objects.create(
+                        student = Student.objects.create(
                             user=user,
                             enrollment_no=enroll_no,
                             name=f"{fname} {lname}",
@@ -206,14 +229,48 @@ class Command(BaseCommand):
                             phone=fake.phone_number()[:15],
                             course=course,
                             semester=sem,
-                            cgpa=round(random.uniform(5.5, 9.8), 2),
+                            current_semester=sem,
+                            cgpa=0.0, # Will be updated after results
                             is_face_registered=False,
                             batch=random.choice(["A", "B"]),
-                            admission_year=int(f"20{year_prefix}"),
+                            admission_year=batch_year,
                             branch="Main Campus"
                         )
+
+                        # --- GENERATE HISTORY (Previous Semesters) ---
+                        total_sgpa = 0
+                        for prev_sem in range(1, sem):
+                            sgpa = round(random.uniform(6.5, 9.8), 2)
+                            total_sgpa += sgpa
+                            res = SemesterResult.objects.create(
+                                student=student,
+                                semester=prev_sem,
+                                sgpa=sgpa,
+                                total_marks=500,
+                                obtained_marks=int(sgpa * 50),
+                                percentage=sgpa * 10,
+                                status='completed',
+                                year=batch_year + (prev_sem - 1) // 2
+                            )
+                            
+                            # Add some subject results for this semester
+                            subs = Subject.objects.filter(course=course, semester=prev_sem)
+                            for sub in subs:
+                                marks = random.randint(60, 98)
+                                SubjectResult.objects.create(
+                                    semester_result=res,
+                                    subject=sub,
+                                    total_marks=marks,
+                                    is_passed=True,
+                                    grade='A+' if marks > 90 else 'A' if marks > 80 else 'B'
+                                )
+                        
+                        if sem > 1:
+                            student.cgpa = round(total_sgpa / (sem - 1), 2)
+                            student.save()
+
                         student_count += 1
                     except Exception as e:
                         self.stdout.write(self.style.ERROR(f"Error creating student {enroll_no}: {e}"))
 
-        self.stdout.write(self.style.SUCCESS(f"Successfully generated 27 Rooms, 2 Shifts, 11 Courses, 20 Faculties, and {student_count} Students!"))
+        self.stdout.write(self.style.SUCCESS(f"Successfully generated 27 Rooms, 2 Shifts, 11 Courses, 20 Faculties, and {student_count} Students with full academic history!"))

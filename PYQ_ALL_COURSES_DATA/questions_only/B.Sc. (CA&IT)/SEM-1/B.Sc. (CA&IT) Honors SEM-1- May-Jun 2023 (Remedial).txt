@@ -1,0 +1,83 @@
+Write an Algorithm to print "DCS-GNU" ten times using loops
+Write a short note on Primary Data Types
+Explain Increment and Decrement operators with example
+Explain Nested if... else statement with proper example
+What is looping?
+Explain tor loop with proper example
+Write 2 C Program to find sum of all the numbers between 100 to 200 which are divisible by 3
+Any Two) (12) What is Flowchart?
+Discuss various Flowchart Symbols
+Discuss basic structure of C Program with example
+Write a short note on Symbolic Constants
+Any Two) (12) What is Logical Operator?
+Write a C program to find largest number among three numbers
+What is switch case statement?
+Explain it with proper example
+Explain goto statement with example
+Discuss break and continue statement with example
+Discuss the difference between CUI Vs.GUI. 2, Define terms: Header, Footer, Footnote, Endnote, Drop cap, Watermark. 3
+Discuss Any five Mathematical Function in Excel. 4
+Write a short note on Custom Animation. 5
+Define terms: Naming Range, Pivot Table, Goal Seek 6
+Describe Access Data types. 7
+Compare Word, Excel and PowerPoint
+What is DOS?
+Explain any five Internal commands of DOS. 2
+What is Batch file?
+Discuss with an example. 3
+What is Mail Merge?
+Define step to create Mail Merge. 3
+Discuss Any five Date-Time Functions in Excel. 2
+What is PowerPoint?
+Discuss features of MS PowerPoint. 3
+Discuss different types of Charts in PowerPoint. 4, Answer the following: (Any One) (06) 1
+Explain MS-Access Object. 2
+How to Filtering data in MS-Access?
+Whatis Website?
+Describe various text formatting taps of HIME, 4
+Differentiate canvas and SVG, 5
+Explain <audio® and <video™ tay with required attributes, 6
+Explain different types of selectors in CSS, 7
+Create a function indi Script to check whether the given number is positive or not
+What is Internet?
+Discuss the usage of Internet, N Define Term a) WWW, b) Search Engine, eo) HTTP 3
+Which tag is used to create hyperlink in ITTML?
+Explain with an example
+What is CSS?
+Explain different ways to use CSS
+Discuss different border properties of CSS, Answer the following: (Any One) (06) 1
+Explain arithmetic operators and logical operators in JavaScript. 2
+Discuss the advantages and features of JavaScript
+Discuss any five Input and Output Devices. 2
+What is Computer?
+Explain Block Diagram of Computer. 3
+List out type of port and Explain it in detail. 4
+Write a short note on registry. 5
+Explain Scripting Language in detail. 6
+Discuss type of sofiware in detail. 7
+Define Data Bus and Address Bus
+Write a short note on Data and Information. 2
+Discuss BIOS in detail. 3
+Explain Modem in detail. 3
+Discuss Low Level Language in detail. 2. | Write down difference between Compiler and Interpreter. 3
+Write a short note on Programmed 1/0. 4
+Differentiate between RAM and ROM. 2
+Explain Architecture of Micro Processor
+Find (i) AU B (ii)A OB (iii) A’ (iv) B’ and(v) AUBUC There are 60 students in a class
+Find (i) The number of students who play cricket but not play football (ii) The number of students who play football (iii) The number of students who play football but not play cricket. _(2+3x,x20 If f= (pr Feo Then find f(2) + f(0) + f(—2) + f(3) — F(5) Discuss Isomorphic Graph in detail
+Define the following terms in context of graph theory with suitable example: Graph, Connected graph, Pendent vertex, Closed Walk, Paths 21 4 1 0 2 WfA=]0 3 4) andB= [-2 4 isl then find BA and AB. 5 2 12 -5 3 4 How many different license plates can be made if each plat contains a sequence of two uppercase English letters followed by two digits?
+Justify your answer
+Then evaluate AB if B= |} 1 Define the following set by Roaster method (i)A = {x/x isa single digited prime number} inp ={x/x=— (i)B = {xpx Say EN ns a} (iii)C = {x/ x? —5 = 0,xeR} Answer the following: (Any Two) (12) Determine whether the following functions are one-one or many one (NON, fx) =xt+5 (ii) f:R > R, f(x) = |x] +3 Disc ation of graph theory in computer science. appli State True or False (iA function is onto when its range and codomain are equal (ii) Function cannot return more than one value at a time (iii) If f: Z > Z, f(x) = x then given function is called constant function
+How many different ways can gold, silver, and bronze medals be awarded in an Olympic event with 12 athletes competing?
+Define the term ‘communication’ and explain its features. 2
+Explain any five conjunctions and give examples
+Discuss the effective modes of listening. 4
+What do you mean by reading comprehension?
+Discuss the techniques of effective reading. 5
+Write about the several types of formal letters. 6
+Explain the characteristics of a good speaker. 7
+Write your expressions for the following situations: Greeting people, Introducing your-self, and congratulating people on their success
+Define barriers
+Explain its various types
+Attempt Any TWO: (12) 1, What are the qualities of a good listener? 2
+Discuss intensive and extensive reading types with illustrations. 3

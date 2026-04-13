@@ -1,0 +1,42 @@
+Any Two )(A) Compare while statement Vs do statement.(B) What is array?
+Explain two-dimensional array with example.(C) Explain recursion with example.1. 2
+Define Symbolic constant with example, State whether the following variable name is valid or not with[ O ( 11) ( 11) (B)(A) (B) 6.(r1) questions in brief
+Any Two ) (11) Write a short note on: Comparison of Structures What is user-defined function?
+Explain the benefits of it
+Explain array within structures with example
+D.4.GAI{PAT U]\IVERSITY 1\{ cA S EM_r EXAM^rNA rroxiir cslINTRODUCTION TO DATA N'iIi"SrSMANAGEMENT Itqv- Dec 2AL?
+Define Watennark
+Define Drop cap
+Write down its steps. lYrite a Sh&t Note printing Docrrments A"osner the following:(Al\ty T'WO) Write a short note on Spreadsheets
+Discuss the IWenus of Open Office-IVdath with figure
+List out functions cattexample. :gory and explain Logical function any three with SECTION-II Anstyer the following: Define the term Tables
+Define the term Data
+How to ereating a New presentation?
+Write down its steps
+Write a shoft note on Master Teinpl:tes
+SECTION - I Attstt'er the follorving: Explain generation of computer in detail' $zirat is Softrvare?
+Explain different types of software in detail' Ansrver the follorving: (ANY TWO) Ex1-r1:rin the Set Architecture(ISA) in details' Dellne tlie term coir.iputer and explain it block diagram with figure' llxplaiil Data and Information with proper example' Anst e r the follot'ing: ('.L"iY O\IE) Dr:=::-:-:::?eis:'ll"'CctltputerandsuperComputer' ;r,., ^.,,:. :^l:.r::teristics ol computer in detail'(08) A
+Explain all computer languages in brief' B
+Write a short note on Language processor' c
+Give thc dilference between compiler and Interpreter' 3.7
+Explain types of Hard disk in detail. ,insrycr- the 1bllorvilg: _is very useful for tests with objective t),pe quesrions.(A) N,{ICR (B) OCR (C) oMR 1o;s.u*
+T\\ O) A. i lol to ilrotect vou: s\ stem from unauthorized access?B
+Explain the Disk n.lrnaserrent in details
+Define the following: (i) Structure of O.S
+Explain process state (life cycle) dlagram?
+Give brief of each of (05) the process state.(08) (03) (03) (03)B
+Any 2) (i) Explain any three different computing environments?(ii) Explain Upgrading and Migrating?(iii) How to do remote desktop access using windows 7. - oi Co^ ,'.-f-3\i"'3
+What are Hardware requirements to install Windows 7?
+Explain (05) Key.features of Windows 7?
+Explain Disk management and configuring device drivers in windows 7
+Any 2) (i) what is IP Address?
+Explain difference between lpv4 andIPv6?
+Define the following: 1) Authorization2) Mobile Computing3) wi-Fi 4) Internet protocol(08) (0s)5
+B. ffiIffi:.Tlt"tr:;'ffil?';#!';'' pernrission rnher*ance?
+s) (i) what is Remote desktop?
+List few of its applications
+ils',' the devicei ano ineir rore to confisure wireress (03) 6
+Any 2)(i) Explain the Name resolution process?(ii) Give step$to configure ipv4 connectivity.(iii) Explain windows firewall.(03) (03) (03) Timc': ,r F{
+Be plccise and to the point in your answer SECTION _ I Ausri,cr thc {bllon,ing: what is co,u,unication?
+List out types of listening ,Explain any one with example
+Change the voice) eZ)Kamal said. "I have done my homewo.k'. lchunge speech to indirect) iori llave )'ou packed,r.our luggages?.(Conect th.,.rit.nr.) e2)1. 1A B A B U A B3

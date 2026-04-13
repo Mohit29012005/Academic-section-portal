@@ -1,0 +1,83 @@
+State the importance of Facebook Privacy settings in details
+Explain the paid Lead generation campaign in Facebook
+Discuss the IT Act 2000 in details
+Explain Stalking and harassment with example
+State the importance of Social media Group and Forum
+Discuss the Market place listing with example
+Write steps to create Event in Facebook in details Answer the following: (Any Two) (12) State the importance of Facebook traffic campaign in details
+Describe the top ten social media challenges in current scenario
+Explain the basic social media security in brief
+Describe Software Testing Life Cycle
+Explain Black Box Testing
+Differentiate b/w Stress and Load Testing
+What is Test Strategy? explain Unit Testing with Example
+Differentiate b/w Validation and Verification Testing. 2
+Describe Role of Tester. 3
+Explain Required Based Testing, 3
+Explain Database Testing 2
+Define Decision Table with suitable Example. 3
+Explain Regression Testing... 4
+Explain Defect Life Cycle. 2
+Explain Defect template Report
+Describe Software Testing Life Cycle, Explain Black Box Testing
+Differentiate b/w Stress and Loag 7, esting
+What is Test Strategy? explain Unit ‘Testing with Example
+Describe Role of Tester
+Explain Required Based Testing Answer the following: (Any Two) a) Explain Database Testing Define Decision Table with Suitable Ex sting., ‘ample
+Explain Regression Te ‘Answer the following: (Any One) (06) Explain Defect Life cycle
+Explain Defect template Repon, ND O E) Fp APER Pagey ofa oe
+Answer the following: (Any Five) (30) What is ACID?
+Explain Transaction recovery in detail
+List out twelve distributed database objectives
+Explain PL/SQL advantages and draw generic structure of block
+What is trigger?
+Explain it in detail
+What is Data Pump?
+Explain fine grained object selection in detail
+Draw and discuss moving data general architecture
+What is Data encryption?
+Explain in brief to protect data. 2
+Explain with example iterative control structure of PL/SQL
+What is cursor?
+Explain implicit cursor with example. 3
+List out and give short description of any twelve export-import parameters
+What is difference in procedure vs function?
+Explain Advantages of using procedure. 4
+Differentiate between Loading Methods in SQL * Loader. 2
+Explain in brief any six SQL * Loader command line parameters with description
+PMENT AND SECURITY April - June 202?
+What is php function?Explain user define function with example
+Explain session with example. fener What is mysqli ?how to connect with database using php code with example. w What is cross site scripting?Explain its type. 6
+Write different between web browser and web server? 7, What is an Array Explain types of array with example?
+What is Jquery ?Explain Jquery selector. 2
+What is string ?explain Any five String Function?. 3
+Explain CSS method with example. 3
+What is cookie?
+How to create and delete cookie with example. 2
+How to display the query in table give an example
+Explain file exception with example. 4, Answer the following: (Any One) 1
+What is pen testing ?explain any five pen testing tools. 2
+Explain SQL injection with example
+Discuss the booting process in detail. 2
+Discuss the Slack space in brief. 4, Explain User Group policy in detail. 5
+Discuss cookies and history in detail 6
+Explain MFT in detail
+Explain Pagefile.sys and Hiberfil.sys in brief
+What is the NTFS in detail. 3
+Explain the thumbnail cache files 3
+Discuss the Data Destruction and Defragmentation in brief. 2
+Explain the concept of User Account in detail. 4
+Explain the Skype Stored Data in brief. 2
+Explain active directory with its features in brief
+Describe the domain controllers and forest in brief
+Explain the server virtualization in brief
+Discuss the VLAN with its various types. rau FRE Explain the various types of servers in brief
+Write a short note on RIP. 2
+Discuss the proxy server with its various types. 3
+What do you mean by firewall?
+Explain in details. 3
+Discuss the Backup and recovery in windows 2019 server
+Write the short note on DNS
+Explain group policy. 4
+Explain the Mobile IP in brief. 2
+Discuss the virtual private network in detail

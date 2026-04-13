@@ -1,0 +1,53 @@
+SECTION-I i Answer the following: (Any Five out of Seven) (30) [A] Elaborate the Web browser and Web server in details. {[B] State the difference between Block and Inline element with its example, iC] Explain New Semantic Tags in HTML 5. {D} State the importance of CSS with its advantage. {E{ Explain the JavaScript operators in details. [F] State the importance of Web Designing principles. [G} What is cookie?
+Write the syntax to create, read and delete a cookie using JavaScript
+Explain CSS background properties with proper example
+What is Algorithm?
+Discuss Looping Type of Algorithm with example. 2
+What is C Token?
+How it is useful in C Language? ____3.__ Discuss Relational operator with example in C Language... aan 4
+Discuss data types with storage rang in detail with example. 5
+Can we Create Switch without Break and Default?
+Explain Switch with example in C Language, 6
+Discuss ELSE IF ladder with example in C Language. 7
+Explain Exit Control Loop with example in C Language
+Discuss various Flowchart Symbols
+What is Variable?
+How to declare Variable?
+Discuss various Variable declaration rules
+Write Algorithm & Flowchart to generate first 25 Fibonacci terms 0,1,1,2,3,5...n (n=25)
+Write a C program to find MAX number from 3 variables using turnery (? :) operator
+What is Information?
+Explain characteristics of Information, B
+Explain scanner with different types, C
+Discuss: BIOS, Windows Registry, Msconfig D
+Differentiate: Compilers V/S Interpreter E
+Explain different types of ROM
+Write a short note on DMA
+Explain Internal Structure of Microprocessor
+Explain Modem in brief
+Write a short note on printer, C
+Write steps to schedule automatic disk clean up
+Write a short note on Assembly language
+Explain different types of software in detail, C
+What is interrupt?
+Explain different types of interrupts
+Write a short note on an Ideal Microcomputer, B
+Effective skills of communication are part and parcel of everybody’s life. 2, What do you mean by the word of ‘Communication’?
+Explain the Process of communication with diagram, 3
+How does Hearing differ from Listening?
+Explain traits of good listening, 4
+Discuss simple present tense and perfect present tense with an example. 5
+What are the reasons for Poor comprehension?
+How can it be improved? a. 6.__Discuss_the_ Date. and-Complimentary~Close-as- the-compulsory~parts“6f “léttay writing. 7
+What are the characteristics of an erudite speaker?
+What is Noise?
+What is speaking?
+What kind of points should we keep in our mind while speaking? 3
+Differentiate between skimming and scanning with explanation and example. 4
+Write a letter to your friend congratulating him/her on his/her success in class 12 board exam
+Write a short note on One to One Function The population of a town is 7000 persons out of these 3400 persons read Gujarat Samachar and 2700 Persons read the Times of India, There are 700 persons read the both paper
+Find the number of persons who do not read any of those two papers?
+Write a short note on Hamiltonian graphs
+Explain Domain and Range of function with example
+Define the term with suitable figure : (A) Bipartite Graph (B) Regular Graph Answer the following: (Any One) (06) Write a short note on ordered and unordered partitions
+Write 4 short note on factorial notation with example

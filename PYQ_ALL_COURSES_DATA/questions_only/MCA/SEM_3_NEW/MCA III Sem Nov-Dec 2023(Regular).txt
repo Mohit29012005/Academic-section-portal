@@ -1,0 +1,44 @@
+Section - fh CO Blooms arks Quest Answer the following, Ma Taxono jon my Pattern 103 BYL2 Q.L A) Why does PDO use prepared statements?
+In Co BIL2 QL How is the route file used in Laravel?
+QC Whatis the role of migration in Laravel?
+QED Whatare some of the popular frameworks in PHP? 02 C04 BIL 02 C04 BTL Answer the following: (Any ‘Two) Explain various PDO data fetching styles with syntax. calures of Laravel, co4 BLS Q.2.C Write a php script showing the use of controller,routes and co4- BTLG view in laravel. co3
+How PHP PDO provide security from SQL injection attack?
+What is the role of middleware in Laravel?
+Which are popular frameworks in PHP?
+What are the benefits of PDO prepared statement?
+Describe PHP PDO methods with an example
+How is MVC design implemented in Laravel?
+Explain all the types of scope. col BTL3 Write a short note on IOC container
+COl BTLS Answer the following: (Any Two) 11 Write a short note on Spring type conversion. cO2.— BIL4 What is resource loader?
+How it works?
+Explain
+Q-1D | What is REST? 2 Co2| BTLI1 Q.2. | Answer the following
+Explain their purposes, characteristics, and when they should be used in web communication
+QA Q1B Qic Q.2 Q2 Q2B Section —1 Answer the following Define the term Apache HBasc?
+List out the advantage of HBase
+List out the common commands for table management in HBase
+How do Apache Pig and MapReduce differ in terms of their approaches and capabilitics for processing and analyzing datasets?" What is a Hadoop Pig?
+Write a short note on Data What are the different types of job execution modes available in Apache Pig, and when is it appropriate to use each mode for data processing tasks Section - 1] Answer the following What is Hive?
+What are some of the common data types Lin Hive?
+List out the categories of built-in functions are available in Hive
+What is Spark ?
+List out the Spark Shell Commands to Interact with Spark-Scala
+Explain the purpose and use of RDD transformation functions Union and Intersection in Spark, Answer the following: (Any Two) How does Hive work in Hadoop?
+Explain it
+Explain the Apache hive Architecture in details
+Write a short note on Hive view and Hive Index with example
+Answer the following: (Any Two) What is Apache Spark?
+Explain the Apache Spark Architecture
+Explain the Map and Flat Map RDD Transformation Function with example
+What is Tntrusion Detection Systems (IDS)?
+Also explain tt in detatl, Compare and contrast. symmetric and Asymmetric encrypuion, Answer the following What is the difference between Internal audit and external audite , What is Information security framework?
+List outits names, Explain PECB and BST In brief
+List out supporting standard of ISO 27001, Answer the following: (Any Two) Describe any five steps for implementing ISO 27001
+Discuss any three clauses of ISO 27001
+Explain preaudit Check list
+Bloom's Taxonomy Based Assessment Pattern: BTL1-Remember; BYL2- Understand: BTL3- Apply; BTL4- “Analyzes BYL5- Evaluate; BTL6-Create. “SECTION a : Bloom’s | Taxono Q.1 ANSWER THE FOLLOWING 08 co Pa Pattern Q.1A | What is machine learning?
+List out the applications of 04 col | BIL4 | machine learning
+Explain with 05 Cco2 BIL4 | example. | Q.3C | How would you evaluate a time series forecasting model? 05 cO2} BIL4 Q.3[H] | Time series are usually decomposed into} O01 co2 BTLI [A] Trend Component [B] Cyclical Component [C] Seasonal Component [D] Random Component [E] All of the above pode 3 ot % 7 SECTION I QA | ANSWER THE FOLLOWING. 08 ; Oud A_| Write a short note on K-M clustering. 04 _ CO3 BTLI i Qu B | Write a short note on sci-kit learn library for Machine 04 CO4 BIL1 _ earning _ a _ Q.5|I]_ | ANSWER THE FOLLOWING. [ANY TWO] 10 - Qs A. | Whatis clustering?
+Explain all categories of clustering 05 | CO3 BTL2 ~Q5B | Explain distance and dissimilarity measures used in 05 co3 | BTL __| clustering
+C | Describe the steps of clustering algorithm. 05 CO3 BTL5S Q.5| 1] Which of the following is finally produced by OL C03 BTL2 Hierarchical Clustering? a) final estimate of cluster centroids b) tree showing how close things are to each other ¢) assignment of each point to clusters | d) all of the mentioned __ | Q.6[1] | ANSWER THE FOLLOWING. [ANY TWO] 10 - “Q.6 A_ | What is gradient decent algorithm?
+Explain its types

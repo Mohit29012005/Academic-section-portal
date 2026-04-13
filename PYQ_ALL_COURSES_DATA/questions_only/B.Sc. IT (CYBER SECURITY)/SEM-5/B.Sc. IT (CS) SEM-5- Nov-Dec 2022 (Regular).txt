@@ -1,0 +1,45 @@
+Illustrate the Android SDK with their codenames
+Write a short note on List View
+Explain Linear Layout with suitable example
+What is Shared Preference?
+How to use it?
+Ss: Re ee What is reverse engineering?
+Discuss the android application resources in detail. 2
+What is the use of Android Manifest file?
+Define with example. 3
+Explain Edit Text with all its types. 3
+What is Layout?
+Explain Constraint Layout with all attributes. 2
+Write a short note on Grid View. 3
+Create a program to insert and update the student’s record in SQLite. 4, Answer the following: (Any One) (06) 1
+How to extract the details from APK file? 2
+How to modify the code in android APK file?
+Answer the following: (Any Five) (30) a) How to define class and call member function in PHP?
+Discuss it with example. b) Explain inheritance in PHP with example. c) Discuss Abstract Class in PHP with example. d) Write a short note on PHP Namespaces. e) Differentiate PDO Vs
+MySQLi. f) What is WordPress?
+Discuss advantages and disadvantages of WordPress. g) Explain various user roles available in WordPress
+WordPress Post. c) What is CMS?
+Discuss features of CMS. 4
+Discuss managed code and unmanaged code with execution process
+Justify the use of radiobuttonlist and checkboxlist with its properties and example
+Discuss detailview and formview with example
+What do you understand by SQL injection?
+Explain it with ASP.NET application
+SECTION-II Answer the following: (any two) (12) What is class and object?
+Discuss advantages of OOPs
+What do you understand by Just In Time compiler?
+Explain its types
+Answer the following: (any two) (12) What is session?
+Explain session in ASP.NET
+Discuss skin file, theme and stylesheet with example
+Discuss available .net data provider
+Explain cross site request forgery with ASP.NET application
+SECTION-I Qi Answer the following: (Any Five) (30) A) What is Software?
+Explain various types of software in brief
+Discuss Waterfall model in brief
+Explain Business Process Engineering in brief D) Discuss Data Modeling concepts in brief E) Explain Spiral model in detail
+Explain process pattern in brief
+List out various software myths and explain any one in detail
+Write a short note on RAD model Q.3 Answer the following: (Any 2) (12) A) Explain Requirement Engineering Process in brief B) Discuss Flow Oriented Modeling and Class Based modeling in brief
+Explain various Requirement Engineering Tasks in brief Q.4 Answer the following: (Any 1) (06) A) Discuss Unit Testing and Integration Testing with suitable example
+Discuss various design models in brief

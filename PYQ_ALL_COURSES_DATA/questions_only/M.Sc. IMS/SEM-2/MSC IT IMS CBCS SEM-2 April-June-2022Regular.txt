@@ -1,0 +1,11 @@
+Explain the <image> with its proper example. 2
+Discuss the <OL> with proper example. 3
+Explain the string method in JavaScript. 4 Explain the conditional statements in java scripts 5 Explain the Constrains in MYSQL. 6
+Explain the DDL statements in MYSQL. 7 Write a short note on PHP Variable
+Write a short note on URL with its cOMMon schemes. 2
+Explain the <marquee> with its attribute and values
+Write a short note on java script with its type. 2
+Explain the for
+Explain the DML commands in MySQL, 2
+Explain the difference between primary key and unique key
+Explain the For... loop with prope! €Xample in PHP. 2

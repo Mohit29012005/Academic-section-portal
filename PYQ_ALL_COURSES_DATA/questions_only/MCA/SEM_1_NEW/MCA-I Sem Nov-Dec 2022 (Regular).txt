@@ -1,0 +1,84 @@
+SECTION-I - Answer the following (8) » (A) Define : Data Abstraction , Polymorphism (B) How super keyword and this keyword works? 2
+Answer the following (Any Two ) ay (A) | What is class and object?
+Give example of constructor overloading with suitable example
+What is Bytecode?
+Explain use of static and instance methods with example and state how both differ with each other. 3
+Answer the following (Any Two ) (11) (A) What is Abstract class?
+Give example of abstract class with exception handling
+What is Package?
+Give example of package and class with various access modifiers
+Define : Tree ,Graph 5
+Explain Bubble sort algorithm with example
+How binary search and sequential search differ with each other?
+Explain sequential search algorithm with example. 5 Answer the following (Any Two) ay (A) Explain stack operations algorithms with example
+What is Circular Queue?
+Explain algorithm of Circular Queue
+Write an algorithm to perform insertion operation of single linked list
+List out any six features of Python. 2
+What is an Array?
+Describe its types. 3
+How Date & Time will display in Python?
+Explain. 4
+Write a difference between Break and Continue
+Write a short note on Data types of Python. 2
+What is Recursive function?
+Explain Function and its types in Python. se Answer the following (ANY Two) (11) 1
+How lambda function works?
+Write a small program to multiply two numbers using lambda function. 2
+What is Flow Control?
+Explain any three statements. 3
+What is-String?
+Describe Six methods with suitable example
+How to handle exception?
+Describe with example. 2
+How to convert (1) CSV (2) Dictionary (3) List into Data frame with suitable example. 3
+What is Inheritance?
+What is Matplotlib?
+Draw a Line graph with line width as 20.5 and values are [3, 8, 1, 10]. 2
+What is Chart?
+Write a different operation on Frame with suitable example
+What is Functional dependencies?
+Explain it in detail. 2
+Discuss 1NF and 2NF With Example. 2. [A] Answer the following (ANY TWO) (10) 1
+Explain Query Processing with diagram. 2
+Write a note on DBMS and SQL performance tuning in detail. 3
+Write a short note on Database Query Optimization Modes. [B] What is Normalization?
+What is Deadlock?
+Discuss Deadlock Prevention in detail. 2
+Discuss Concurrency control with Locking Methods. 3
+Explain Timestamp-Based Protocols in Concurrency. [B] What is Concurrency control?
+Give the difference between procedure and function in PL/SQL. 2
+Explain pre-defined exception handling with example. 5. [A] Answer the following (ANY TWO) (10) 1
+What is PL/SQL?
+Write down the block structure of PL/SQL. 2
+Explain IF ...ELSE.... with example. 3
+What is cursor?
+Discuss the types of cursor. [B] What is full form of DDL?
+What is Trigger?
+Explain it with proper example 2
+Discuss the use of procedure with suitable example. 3
+Explain how to Create, Invoke and Alter Package in PL/SQL? [B] What is Package?
+Find the probability that a child picked at random, has a sibling. 2
+Answer the following (Any Two ) dil) (A) | Prove that (A M B)’ =A’U B’.(De Morgan’s theorem) (B) If ™' P3: "P4=1: 6, then what is the value of n?
+How many people speak both?
+How many speak only English?
+How many speak only Hindi? 3
+Answer the following (Any Two ) (11) (A) _ Find the stationary points, maximum value and minimum value of the curve given by f(x) = 2x? - 9x7 + 12x —3 in the two dimensional Cartesian plane and in the closed interval 0 <x <3
+Prove that if A and B are sets, then P(A = B) =P(A) x P(B) where P stands for the power set
+What is the probability that only one of them is selected?
+Find the age of eacher
+What are their ages? », toss by selling & swatch for Rs. id to earn 5% profit?
+At the end of the yea? the profit « Rs. 6600, What are the shares of A, Band C? office at the rate of 25 ar from his village 10 the post- 4 the rate of 4 janph
+Explain purpose, syntax and usage of the Linux commands: cut and paste. < Answer the following
+Write a C program to copy a text file to another file
+Explain the Linux commands: we and sort 5 Answer the following
+What is purpose of the Linux commands pipe and tee?
+What is role of signal in Linux?
+Explain any two signals
+Explain usage of: msgget and msgsnd
+ANY TWO) (11) (1) What is zombie process?
+Explain purpose, syntax and usage of wait and waitpid in Linux
+Explain purpose, syntax and usage of fork and vfork
+How do the Linux system calls execl and execv differ? s Answer the following
+Explain purpose and usage of semget, semop and semcti in Linux
+Explain purpose and usage Of socket, sendmsg and recvmsg in Linux

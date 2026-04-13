@@ -1,0 +1,6 @@
+Demonstrate about System Recovery. 06 col BTL3 2 | Explain any six objectives of Distributed Database. 06 col BTL6 3 | Discuss for loop in PL/SQL with example. 06 Cco2 BTL2 Q.3 | Answer the following: (Any Two) 12 1 | Explain components of Package with proper example. 06 CO3 BTL2 2| Demonstrate any one Oracle’s Named Exception] 06 CO3 BTL3 Handlers with example. 3 | Discuss various benefits of Data Pump. 06 co4 BTLS Q.4_ | Answer the following: (Any One) 06 1 | Explain SQL *Loader architecture in detail. 06 CO5 BTL2 2 | What is Control File?
+Illustrate it with proper example. 06 COS BTL4 ** End of the Paper **
+Explain jQuery features. 06 Col 2 | Describe jQuery Selector with example 06 Col 3 | Illustrate jQuery Plugins. 06 Cco2 4 | Compare CSS3 with CSS. 06 Cco3 5 | Explain Text/Typography with example. 06 Co4 6 | Describe the Bootstrap grid system. 06 Cco4 7 | List out Navbar types and describe any 2 types with 06 COs Example
+Describe Typical Device 06 co4 Breakpoints with example
+Discuss 06 CO4 BTL4 elements of the analysis model. 6 | What is sofiware testing?
+Define Scope of testing. 06 cos BTL3 7 | Give a state different between alpha testing and beta 06 Cos BTL4 testing

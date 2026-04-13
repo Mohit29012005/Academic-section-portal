@@ -1,0 +1,64 @@
+What is communication?
+Write short note on Communication System and methods
+Explain Seven-s Model in Brief Write Roles of all three Management Levels
+Write difference between M-commerce and E-Commerce ‘Section-2 Answer the following Questions [Any One] 10] Explain characteristics of Good information
+Describe knowledge requirement for MIS
+Write any four Benefits and Limitations of Expert Systems. [04] Answer the following Questions
+What is Decision Making?
+Explain Programmed and non programmed decision making
+Answer the following: (Any Six) What is Input/Output buffering?
+Explain its types with example
+Explain RAID (Redundant Array of Independent Disks) in brief
+Explain in detail about security threats
+What is the shell script?
+Explain Read and Test statement in brief
+Explain conditional statement in detail
+Write a short note on types of intruders, What is loop?
+Explain for and while loop with example
+Explain file organization of Linux in detail
+Explain secondary storage management in details
+Write a shell script program to check given number is odd or even
+Explain Vi editor with its mode
+Discuss following commands with attributes/parameters
+What is polymorphism?
+Explain method overloading
+Explain ArrayList with its benefits over Array
+Explain MessageBox.Show() method with its overload options
+Explain Button, TextBox and Label control with its important properties
+Explain DataGridView control in brief
+What is inheritance?
+Explain types of inheritance supported by C#
+Explain DateTimePicker control with example
+How to works with Menu control in windows form application?
+Answer the following: (Any Six) G0) 1) What is WordPress ?
+What are the advantages of WordPress ? 2) Write a short note on : CMS — Content Management System 3) What is Post in WordPress ?
+Explain it with suitable example. 4) Write a short note on : WordPress plugin - BuddyPress 5) What is HTML ?
+Explain table tag with suitable example. 6) What is CSS ?
+Answer the following: (Any Two) (08) 1) How to install WordPress in your local machine ?
+Explain it with suitable example. 3
+Answer the following: (Any Two) (08) 1) Explain in brief : WordPress Theme 2) Difference between Client and Server Side Technology ? 3) What is MySQL ?
+Explain the features of MySQL. 5
+Answer the following: (Any One) (07) 1) What is PHP ?
+What are the features of PHP ? 2) What is Array ?
+Explain the different type of Array in PHP
+What is android manifest file?
+Explain in brief
+What is code name?
+Discuss versions of android
+Write down the difference between JVM and DVM
+List out the types of menu
+Explain any one in detail
+Explain EditText in detail
+Explain properties and methods of DatePicker. er awsr wpe Explain android application component in brief. 2
+Define: Android
+Explain advantages of it. 2
+What is OHA?
+Explain it briefly. 3
+Write a short note on android resources. 2
+Draw architecture and explain any two stack. 4
+List out types of layout
+Discuss any one in detail. 2
+Explain CheckBox with all attributes. 3
+Write a short note on Action Bar. 5
+Explain the concepts which is used to move from one application to another application. 2
+Write short note on SeekBar

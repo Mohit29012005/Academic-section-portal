@@ -1,0 +1,59 @@
+Define Assemblies with its Elements
+List out Category of Toolbox Control and Explain Common Control
+Discuss advantages of OOPs
+Define Inheritance in detail
+Explain Text Box with Property, Methods and Event
+Discuss .Net Data Provider
+Write down steps to create Windows Application in C# and vb.net
+Define JIT in detail. 3
+Define Delegates in detail
+Explain Checkbox Control with Property, Method and Event. 4
+Discuss Execute Reader, Execute Non Query, Execute Scalar in detail
+SECTION-I Answer the following: (Any FIVE) What is Locking mechanism?
+Explain Two phase Commit in detail
+What are the advantages of PL/SQL Block?
+What is OLAP?
+Explain in detail
+Answer the following: (Any FIVE) [A] | What is Locking mechanism?
+Explain Two phase Commit in detail. [B] What are the advantages of PL/SQL Block? [C] | What is OLAP?
+Explain in detail. [D] How to handle errors in PL/SQL?
+Explain Named System Exceptions with example. [E] Why trigger is most powerful object in DATABASE?
+Create trigger for Update event in PL/SQL. [F] Write a PL/SQL program to display all data from CUSTOMER table using cursor. [G] Difference between Data Warehouses and Data marts
+Any TWO) [A] What is transaction?
+Explain failure classification in detail. [B] What is Cursor?
+Explain explicit Cursor in detail [C] What are the objectives of Distributed Database? 3
+Any ONE) [A] _ Explain advantages of Distributed Database System? [B] Explain Client/Server system in detail
+Discuss <form> along with different types of input elements
+What is CSS?
+What are the advantages of using it?
+What is JavaScript?
+Discuss the difference between SVG and Canvas
+What is DOM?
+Explain various methods of accessing and manipulating HTML elements into JavaScript
+Discuss alert (), confirm () and prompt ()
+What is document.ready() event in jQuery. moo am SECTION-II 2
+Attempt Any Two: (A) What is HTML?
+Explain HTML document structure
+Discuss <audio> and <video> with example. 3: Attempt Any Two: (A) _ What CSS selector?
+Discuss ID selector & Class Selector with suitable example
+Write down the steps to create a table using CSS, 4
+Attempt Any One: (A) What is jQuery?
+Discuss FadeIn & FadOut effects with example
+Explain the various types of switching
+Explain the addressing in mobile IP in detail
+Discuss wired and wireless computer networks
+Explain the routing methods in brief, YAM RW SECTION-II Q-2
+Explain wireless LAN protocol in brief
+Answer the following: (Any Five out of Seven) (30) What is MIS?
+Discuss problems with MIS
+Describe Communication System with an example
+What is Planning?
+Discuss Planning Terms (Elements)
+Write a short note on Level of Planning
+Write a short note on Seven S-Model
+Describe Types of Information System and explain any one in brief, Qs oa w p> Write a short note on Digital Signature
+SECTION-II (30) 2: Answer the following: (Any Two) (12) A What is Communication?
+Discuss different Communication methods. wo What is System?
+Define Open and Closed System with an example
+C_ What is Decision Making?
+Define Phases of Decision Making. 3

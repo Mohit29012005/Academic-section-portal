@@ -1,0 +1,114 @@
+What is computer network?
+Explain any three types of computer network with example? 2
+Describe the types of scope in Group Policy? 3
+Describe the services provided by Active Directory Domain Services? 4
+What is DHCP?
+Explain the feature of DHCP. 5
+What is Microsoft Remote Desktop Web Access?
+Explain in brief. 6
+Write a short note on disk quotas. 7
+What is event log?
+Explain in brief
+Describe IPv4 in brief with its classes. 2
+What is DNS?
+Explain the Hierarchy of DNS in brief
+Write a short note on FTP?
+Describe Active Directory Domain Services in brief?
+Write a shot note on terminal server. 2
+What is Virtualization?
+What is remote desktop?
+Explain on brief. 2
+Describe the features of WSUS
+Any Five) (15) What i's computer network?
+Explain any three types of . . . com) ample?
+Describe the types of scope in Group Policy? puter network with example’ 1 2. 3
+Describe the services provided by Active Direct . : 4
+Explain the feature of DHCP, Dain Services? 5
+Explain in brief, 6
+Write a short note on FTP? 2
+Describe Active Directory Domain Services in brieg) Write a shot note on terminal server
+Explain on brief
+Explain Relational Operators and Logical Operator in java. 3
+What is Constructor?
+Explain it with suitable example. 4
+What is Type Casting?
+Explain it with example. 5
+Explain try, catch and finally block in Exception. 6
+What is Method Overloading?
+Explain it with suitable example. 1 What is Interface?
+How to Defining and extending interfaces?
+Write the short note on StringBuffer class
+Explain the following terms: (ANY 1) (07) , 1
+List out data type of java and explain it
+Explain while loop with example. 2
+Explain nested if statement with example
+Explain final keyword in detail with suitable example. 2
+What is an Inheritance?
+Explain the types of inheritance
+What is the use of super keyword?
+Explain it with example. 2
+Explain any four methods of Vector class, . ray? [B}
+What is an array?
+How to create and initialize an array’ Q-6
+Answer the following: (ANY 1) What is package?
+Explain it i le
+What is Exception?
+Explain types of error with examp!
+What are the characteristics of good notice writing?
+Write a brief note on the various components of presentation
+What are the Dos and Don’ts in the group discussion?
+Explain equation A+I = E in context to the Business letters
+Define Homophones and Homonyms with suitable examples
+What is the importance or function of a memorandum?
+Explain Synonyms and Antonyms with appropriate examples
+Do as Directed: (06) Which one is a modal auxiliary verb?
+is, would, are) OR To be, to have and to do are main auxiliary verbs?
+If that boy is so innocent, why does he look so guilty?
+Any Two) w is it useful?
+What are SW 1H techniques in presentation?
+Ho ; What are the objectives of roup discussion? in presentation skill?
+What is presentation?
+Explain boredom factors in P (08) Answer the foll. ‘ . . ‘i t a very good Owing questions
+Explain <canvas> Element with suitable example
+Explain Audio Element with Example. c
+List out property of multi column layout
+Explain any one with examples
+Explain new Form Elements with suitable example
+What is SVG?
+Write down the advantages of SVG
+What is 2D transform?
+Explain any one method of 2D transform
+Explain jQuery in brief. _ 2
+List out the new features of HTMLS
+Draw Structural Elements in HTMLS and explain it
+Give the full form: PNG (01) 3
+OR A. — What is API?
+Explain geolocation in detail
+What is Hoverable Table?
+Discuss it in detail with suitable example
+Explain styling tables with Pseudo-classes in depth
+Discuss the CSS3 in brief. 5
+Whatis jQuery selector?
+Explain any one with proper examples
+Discuss jQuery html() methods with example
+Explain roles of Database Administrator Define term ‘TRANSACTION’ and explain properties of Transaction
+Explain data types used in SQL
+Explain any five eggregate function with example. meeogse List the steps for creating a new User and assign ‘CREATE ANY TABLE’ system privileges to that user
+Explain ALTER TABLE and RENAME commands h
+What is the use of DUAL table?
+Explain with Example. me 2
+Differentiate DBMS Vs RDBMS. c
+What is database?
+Discuss the benefits of using database approach. 3
+What are the problems of concurrent execution of Transactions?
+Explain in detail. c
+What is Normalization?
+Explain Benefits of Normalization. 4
+Explain DML commands with their syntax and example. b
+What is Constraints?
+Explain Primary Key, Unique Key and CHECK constraint with example. c
+Explain how TRUNCATE, DELETE and DROP commands are differ from each other?
+Answer the following: (Any Two) What is the use of GROUP BY and HAVING clause in SQL?
+What is JOIN?
+Explain Inner JOIN with example
+Explain any five String Functions with example

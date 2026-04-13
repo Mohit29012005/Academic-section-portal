@@ -1,0 +1,58 @@
+Explaintlredifferencebetweencompilerandlnterpreter (ii) What is C Tokens?
+iii) Write output for the following code' void mainO{ int a,b,c,d; a:1 5; b:10; c: t*a -b, d: b++ + a; pttntf(" a:Yod b:o/od c:o/od d:70d"'a'b'c'd) ; }, (iv) Wlrat is variable?
+Write down the rules for nanring a variable
+ii) Write short Note on C operators' (iii) Explain the execution process of C program' (A) (AnY Two) (i) Explain if statement with its different forms' (ii) Explain Switch statement with suitable example' (iii) Explain brief history of c ancl advantages of c programming language'(8) -1. -{n-srr er rhe follorr ing.SECTIO\-iI controiled .loop.(, Exptain the u(i, what is;J:::-:':ak and continue in roop.rsron?
+Explain it wirh suitable.**pt
+Answer the followir wl.rar;^ r n8: (AnY |Yo)\4}at js ioo.,?
+i) 6' (A) (t(ii) (iii)write short note on ,,C 411ur,, suitable .*unroi.lVhal is user_definec ;u jtabre .*urrii."'"d function?
+Any Four) (8)(A) Define: Operating System(B) What do you mean by open source operating system?(C) What is clean and image based installation?(D) Explain shared folder in windows 7?(E) Explain authentication in windows 7?2
+Any Two)(A) Explain evolution of operating system,(B) Explain how can we install device drivers in windows 7?(C) Explain File Compression in Windows 7?3
+Any Two)(A) Explain thetasks performed by an operating system.(B) Explain the key features of Windows 7?(C) Explain how can we configure ipv4 connectivity?(1r) ( 11) SECTION.II4. questions in brief
+Any Four)(A) Explain name resolution in brief.(B) What is Bitlocker?(C) Explain the role of Print Management in brief.(D) What do you mean by remote desktop?(E) Explain branch cache in brief.5. questions
+Any Two)(A) Explain how can we implement APIPA?(B) What is EFS?
+Explain it in detail.(C) Write a short note on Bitlocker.5. questions
+Any Two)(A) What is Direct Access?
+Explain it in detail.(B) Explain VPN in detail.(C) Explain Wireless Network in detail
+Q-3.EnrollmentNo' SECTION.I Explain Mail Melge with all necessary steps' Explain Drop cap Effect with all necessary steps' (AnY Trvo) Wlite a short note on Macro' Explain types of charts rvitii exanipie' Write a shorl note on drawing tools' (AnY Two) Explain style with different options in writer Write a short note on Spreadsheets' How to select an application package?
+Explain with steps'(08) L II
+Write a short note on Slide Transation
+List out advantages of open office- IMPRESS il
+Write a short note on Folmula Editor Math
+Write and explain steps to create database and table with example
+Explain the Toolbars of Open Office-Math in detail
+List oLrt advantages of OPEN OFFICE BASE
+What is Computer?
+Explain any four characteristics. 2, Differentiate between low level and high level language' 2
+Write a short note on Hard Disk Drive. 2
+What is Port?
+Explain any three types of port. 3
+Why communication devices are used?
+Explain. 3
+Write a short note on Flbppy Disk & its types' SECTION.II 4, .A,nswer the following' 1
+What is operating system?
+Explain how to install windows 10. 2, What is driver?
+How to instal.l printer?
+Describe' 5
+Af'{Y Two) 1, Describe backup and restore feature, 2, What is Virus?
+How to protect our computer?
+Explain' 3
+What is input device?
+Explain any two input devices' 6
+What is output device?
+Explain any one output device' 2
+What i5 memory?
+Explain computer memory types' 3
+What is data?
+How it differ from information?
+What are the 7Cs' of communication?
+write any four) What is conjunction?
+What are the various functional sentence types?
+What are the three main'levels of communication barriers' What are the principles of communication?
+write any three) When is oral communication recommended?
+What is the first stage in the process of communication?
+Ansrver the follorving: Differentiate between formal and informal communication with example' OR What are the rnain functions of communication?
+Discuss with examples' What is communication?
+Describe the process of communication with diagram
+What is listening?
+Explain the process of listening' OR Whatarethecharacteristicsofagoodlistener?
+What are the purpose andbenefits of reading and comPrehension?

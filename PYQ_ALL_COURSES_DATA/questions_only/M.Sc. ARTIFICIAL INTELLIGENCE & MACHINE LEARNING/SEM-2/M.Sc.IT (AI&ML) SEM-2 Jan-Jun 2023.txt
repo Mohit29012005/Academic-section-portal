@@ -1,0 +1,44 @@
+State different File Object Methods and explain any two with example
+Discuss the Python Regular Expression Special Sequences with example
+List the different operation performed on Data Frame
+Explain isnull(), fillna() and replacc() with suitable example
+Discuss XML Processing using python module
+How to access MySQL database using phpmyadmin?
+Explain in brief
+What is Data Frame?
+Explain the data frame creation from following with suitable examples
+What is MySQL?
+What are the different features of MySQL?
+Write a python code to perform following cperations using appropriate python module. a) Create Database b) Insert Record c) Select Record What is quantifier?
+Explain the various quantifiers in regular expressions
+Discuss Data cleaning in brief
+Explain moving average and exponential moving average with example in excel
+Describe any three IO nodes in KNIME Explain correlation example with EXCEL data analysis tool pack
+Explain regression model with example in KNIME
+Explain preprocessing example in WEKA
+Write a short note on association rule
+Explain use of what if analysis in EXCEL with example. |BÊ Give full fom of ANOVA
+Describe various Data formats
+Write a short note on PIE and BAR chart in EXCEL
+ANY ONE) How many states a node have in KNIME?
+Describe any classification example with KNIME in detail (ANY TWO) Explain WEKA environment in detail
+Explain any clustering example in WEKA
+Explain any five filters in WEKA
+What is conlusion natriN?
+T Explain naive bayes alyorithm in briet. e Explain polynoial regression in detail with proper example. 8 What is KNN?
+Explain KNN in detail with proper example
+ANY ONE) a What is machine learning?
+Explain supervised machine learning in detail. b Explain the terns: Overlitting, Underlitting, Bias, Variance Lnollcnt No (ANY TWO) b Explain ROC curve and AUC in detail
+What is lincar regression?
+Explain lincar regression in detail. c Explain any tw0-cvaluation parameter of regression in brief!
+ANY ONE) [ What is regularization?
+Explain LASSO technique in detail
+What is regression?
+Explain multi linear regression in detail
+ANY TWo) b Explain support vector machine algorithm in detail. a What is validation technique?
+Explain any two-validation technique in brief. c Explain decision tree algorithm in detail
+Figures to the right indicate full maks a How does Al work?
+Explain probability axioms in Al. f Explain Reasoning with Uncertain Knowledge in AI
+Write note on Fuzzy logic. h Write a note on learning
+Explain in detail Depth-limited search (DLS). b| Explain A* search
+Explain joint probability distributions in Al. . [ (ANY TWO) b| Explain First order predicate calculus (FOPL) with example. a Explain the case studies of MYCIN. c Discuss the knowledge acquisition in detail. b Explain the expert system shells and Vidwan framework

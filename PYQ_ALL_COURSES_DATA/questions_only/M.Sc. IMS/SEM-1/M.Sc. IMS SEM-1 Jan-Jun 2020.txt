@@ -1,0 +1,63 @@
+Explain the NTFS file system features
+Explain in depth partitioning of disk
+Explain disk quota and disk defragmenter
+What is a shared folder?
+Explain the methods of Sharing folders
+What is malicious software?
+State the difference between remote desktop and remote assistance
+List and describe the types of OS
+Answer the following: (ANY ONE) What are the functions of disk management?
+List and explain the editions of windows 7
+Answer the following: (ANY ONE) Explain the network and sharing center What is IP address and IP address classes?
+Which tools are used to configure mobile computer and device settings?
+State different types of array and Explain any one type of array with declaration and initialization code
+Define book class and Write down following LINQ queries to fetch information from generic list of book class
+iii) To Print all books in group of AuthorName. 9 When run time error occurred in program?
+How to handle run time error?
+How to declare and use enumerators?
+Explain importance of enumerators in -net framework
+Explain the control that used to represent hierarchical list of items in windows in details, F
+Explain different list controls in brief
+Write down steps to add database, table and LINQ to SQL Classes
+Explain different ways to bind control with LINQ to SQL Classes. 2
+Explain join clauses of LINQ query in details B
+How to create anonymous type in LINQ query?
+Explain with suitable example C
+Explain Lambda Expression in brief. ai Answer the following (ANY ONE) (6) A
+Explain any two non-generic collections with its major methods and properties
+Explain MDI form in details
+Explain GroupBox and Panel controls
+Answer the following (ANY TWO) (8) How to use LINQ To SQL For Retrieving Data From SQL Server Database?
+Write down C# code to perform insert and update operation on Book table
+Explain the compilation process of android application
+I Whatis R.java?
+Explain any two android resources in detail
+IV What is Activity?
+Explain the lifecycle of Activity in brief
+V_— Whatis Intent?
+Discuss in brief
+VI Whats the use of Dialog?
+Explain the Alert Dialog with example. e@ VII_ What is the use of Telephony Manager?
+Explain in detail
+What is Android?
+Explain the versions of android
+Explain android architecture in detail
+I What is menu?
+Explain any one in detail. 5
+Write a short note on following.(Any Onc) (04) I Data Storage in File with Example
+Answer the following: (ANY SIX OUT OF EIGHT) (30) Give a difference between swing and awt?
+What is event?
+Explain Event Delegation Model in details
+What is cookie?
+How to create, delete and get cookie with example
+Give a difference between ServletConfig and ServletContext
+Write a step with example to sending mail using java mail API. @) i Explain RMI Exception in details
+Write a short note on XML Schemas. moO 2
+Answer the following: (ANY TWO) (08 ) A. — What is dialog box?
+List out types dialog box and explain any one type of dialog box in details?
+Write a short note on JFrame
+Discuss JButton and JTextfield components. 3
+Describe various implicit objects in JSP
+Give suitable example
+What is XML?
+List out rules for valid and well-formed XML Documents Write a short note on DTD

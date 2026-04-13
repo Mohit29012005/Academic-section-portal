@@ -1,0 +1,48 @@
+Give real-life examples of the Stack' -..cwnit is Queue? fxfiiain the operations that we can perform on queue
+WhatisaLinkedList?Listoutthedifferenttypesoflinkedlist
+What is a stack? e*pf ti" ihe pustr and pop operations of the(8) ( 11) (8) ( 11) (11)-!^ ^1.5LdLK., Write an algorithm tofind the factorial of given number using recursion
+Explain array in detail. questions' (Any Two) Explain Circular Queue with example' Explain PrioritY Queue in detail' Explain any one type of linked list with example' SECTION.II 4
+Answdr the following questions in brief' (A) Define the terms related to treel Height' Degree (g) What is a full binarY tree? -(ai Explain the terms: Internal Sort and In Place Sort' (D) Explain tne idvantages of sequential representation of a binary tree.5. questions' (Any Two) (A) Explain.the properties of a binary tree'- iui E*'ptuin the different representations of tree data structure. ici Explain preorder traversal of a binary search tree' 6.* ' Answer the fotlowing questions' (Any Two) (A) fxptain theEinary Seaictr with example' igi wiite an algorithm for Bubble Sort' iCi Write an algorithm for S-election Sortt -- EnrollmentNo
+Discuss features of JAVA" Discuss type conversion in brief' ( ' Explain arithmetic and relational operators *iih p'op"r example' \\,'hat is variable in Java?
+Define its rules' Ansrver the following: (AnY Two) Discuss g\vitch statement with suitable example' Whatisaconstructor?Explainwithproperexample' Explain method overloading and method overiding with example' What is inheritance?
+List out all types of inheritance'Q-2.L tr. tAl I
+Explain use of try" 'catch blocks for exception handling' tAl (AnY Two) I.Listouttypesofarray.Explainonedimensioqalarraywithproperexample
+Discuss interface with suitable example' 'i III
+Explain string buffer class in details' tBl What is an arraY?(08) (10) (01) (10) Q-6. tAl (Any Two) L Discuss different types of exceptions in java' U
+ExPlain java Package in brief' fiI
+Write a short on use of finally block' ^f arrnr in Iava-(01)/ I (08) (10) cANpAT uNl\r,Rsrr#*o'*ent No' M.c.A. sEM-rr EXAMTNATTON (CBCS) PI2A3IWDT:INTRODUCTION To wEB DEVELOPMENT TooL Hoursl Q-1
+Discuss new Form elements with suitable example
+Explain HTML5 media elements in brief
+Explain <canvas> element with suitable example
+List out the new features of HTML5
+Draw the Structurar Erements in HTML5 and exprain it
+Define the term ApI and explain geolocation iir detail
+What is SVG?
+Write down advantages of SVG. ![I
+List out SVG shape erements and explain any one erement with exampre
+Explain Murti column properties in cSS3 with suitable exampre
+List out event methods in jquery and explain any one
+Any Two) r' what is 2D transform?
+Discuss the making links printabre with : and,after in details
+what is Hoverable Table?
+Discuss it in detail ri,ith suitabre exampre
+Ansrver the following: (Any Two) I' Define the term iquery.Exprain loadingiquery to web pages in brief. ,,' what isiquery serector?
+J. e1. . 1 Explain in details : OSI Layers 2 what is computer Networks? what is the need behind computer Networks?
+Describe advantages of Computer Networks. lA] Ansu,er the following
+Any One) 1 what is Network Model? what are the main benefits of Network Model? 2 Explain in brief : LAN, MAN, WAN lB] Do as dirbcted : (Any One) 1 Define tirese keywords: Internetwork, Inteinet, Extranet 2 Describe these keywords: X.25 Protocol, NiC, Gateway lA] Answer the follorving
+Any One) 1 Explain in brief : TCP/IP Model 2 What is ATM?
+How ATM Network wor.ks?(08) (04) (07) (04)(07)2. 3. 1 ) IAI 1 2 3 IB] IAI 1 2 J tBlSECTION - II Ansn er the following
+Describe IPv4 Address, Classes and its Classifications Define these terms: Network Address
+Describe in brief : Loopback IPv4 Addresses, HTTP, SMTP Explain in details : Unicast, Multicast, Broadcast, WWW, BOOTP Give the full form : ICMP,IGMP question.(Any Two) What is DNS?
+How does it work?
+What is DHCP?
+Give the full form these keywords : ARP, IARP, FTP, TFTP, HTTPS (10) 6.(01) (10) What is Telnet?
+Explain lNF,2NF, BCNF u'ith exampie' Explain structure of DBMS in brief
+What is Entity in database?
+AnY Two) Explain transaction with its properties' Write a short note on System Recovery' Explain Two Phase Commit protocol with example' What is DDBMS?(8)1. 2) 3)(10) (10)(1) 3.A 1) 2) 5) (1)I I , ISECTIO\-II 1
+Explain how to create ,update view rvith exampie
+Explain like operator in oracle with example
+Explain types of set operators with example" Explain group by clause with having, ro,up and cube operator
+B What is Dump Function?
+What you should do and don't while writing formal letters?
+Him Can talk for a minute?

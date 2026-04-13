@@ -1,0 +1,63 @@
+Answer the folowing Questions, (Any Six) (30) What is the. usé éof traversal methods?
+Describe parent(), parents(), parentsUntil 0. «methods i in brief
+Describe textQ and valQ) methods in details. * Explain sliding ‘methods of Query to create simple animation effects on image. : What are the features of React?
+Explain each in brief
+Describe react components with suitable example
+Explain form handling with React JS with suitable example
+Explain jQuery selectors with suitable example. 2
+Explain jQuery post() methods with all parameters of post() method
+What is ajax?
+Explain ajax form helper method in brief
+Write down steps to install ReactJS on personal computer. 3
+What is the virtual DOM?
+How virtual DOM improve performance of web application?
+Explain reacts events by creating click event for button to ‘show alert message. 2
+Describe case study of Facebook in respective of React JS. 3
+How to create list with map()?
+Explain with example
+Answer the following: (ANY SIX OUT OF EIGHT) What is Spring Framework?
+What is a Spring Configuration file?
+What do you understand by Dependency Injection?
+Explain the difference between constructor and setter injection?
+What is Spring Bean?
+What are the bean scopes available in Spring?
+What do you understand by Bean Wiring?
+Explain the advantages of using Spring Boot for application development
+Answer the following: (ANY 1) What are the uses of @RequestMapping and @RestController annotation in Spring Boot?
+What is ContextLoaderListener and what does it do?
+Answer the following: (ANY 1) What are the features of Spring Boot?
+What are the types of Spring MVC Dependency Injection?
+Answer the following: (ANY 1) What is Spring Aspect Oriented Programming?
+Explain Bean life cycle in Spring Bean Factory Container
+Answer the following: (ANY 1) What is auto wiring?
+Name the different modes of it?
+Explain the difference between JDBC and Spring JDBC?
+What is Laravel?
+Explain in brief. 2.Explain Passing data to views term with Suitable Example. 3.Write a short note on: Laravel Session. 4
+Explain loops in Blade Directives. 5
+Write a short note on: Laravel Tinker:~ 6
+Write a short note on: Laravel File Upload. 7
+Explain the Laravel Route with Regular Expression with suitable example. 8.Write a short note on: Laravel Migration.- : ; : Q.2 Answer the Following(Any one) 08 1.Explain the directory structure of Laravel Application. 2
+How to install Laravel in your local machine?
+Explain the creating project using Laravel
+Write short note on: Laravel Middleware 3.Explain Laravel Named Routes: Q.4 Answer the Following(Any two) 08 1
+Explain in brief: Blade Template Inheritance. 2.Explain in brief: Laravel Forms. 3.Explain If Statemement Blade Directives
+Explain in detail: Laravel Eloquent 2.Explain in brief: Laravel Relationship. 3.Explain in brief: Laravel crud
+SORT BY (C) ORDER BY (B) ALIGN BY (@D) GROUP BY | Q.3 SQL data definition commands make up a(n) | (A) DDL (C) HTML | (®) DML @) XML | Q.4 Which is a valid keyword in java?
+Find the average weights of all the boys in the class
+C) 71 @) 61 @) 91 Introducing a boy, a girl said, "He is the son of the daughter of the father of my uncle." How is the boy related to the girl? : (A) Brother (C) Uncle (B) Nephew (@®) Son-in-law Look at this series: 7, 10,-8, 11, 9, 12,2 (A) 7 (C) 12 @) 10 @) 13 Look at this series: 36, 34, 30, 28, 24, ?
+The monthly income of P is: (A) 3500 (©) 4050 (B) 4000 @) 5000 Which of these is a search engine?
+The greatest of them is?
+B) 322 (@) 324 (112 x 54) =?
+B) 70000 @) 77200 8597 - 2= 7429 - 4358 (A) 5426 (C) 5526 (B) 5706 @) 5476 ADG, XVT, BEH, WUS, ?
+L (QM @) Oo @) K AZBYC?
+D (QC U- @) X @)E 2, 3, 5, 10, 20, 40, 2 (A) 65 : (©) 60 (B) 75 @) 80 Pointing to a photograph of a boy Suresh said, "He is the son of the only son of my mother." How is Suresh related to that boy?
+Brother (C) Cousin (B) Uncle (D) Father Introducing a boy, a girl said, "He is the son of the daughter of the father of my uncle." How is the boy related to the girl?
+Brother (C) Uncle (B) Nephew (D) Son-in-law A is the father of C and D is son of B E is brother of A If C is sister of D, how is B related to E?
+What is the selling price of the cycle?
+What was the day of the week Jan 1, 2010?
+Sunday (C) Friday (B) Saturday (D) Wednesday What was the day of the week on 17" June, 1998?
+Monday (C) Wednesday (B) Tuesday (D) Thursday What will be the day of the week 15" August, 2010?
+How much is to be paid to C?
+If both together can do the work in how many days?
+Find in how many days can C alone do it?

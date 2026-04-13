@@ -1,0 +1,54 @@
+Write the full form of VPN
+Why is it important for privacy?
+Why is evidence preservation critical in digital forensics?
+What is the use of hashing in digital signature
+Define phishing and explain the various types of phishing attacks?
+How the TOR Network works ?
+Explain in detail with diagram
+Write a short note on Social Engineering
+Discuss digital evidence collection procedure
+Explain different types of cryptography in detail
+Define software piracy
+Why is analyzing audio and video files important in forensic cases?
+What does DNS stand for?
+Explain its significance in secure communication
+Explain ransomware, spyware, adware, dos and ddos
+Explain cloud forensics in detail
+Write a short note on WIFI security (war-driving)
+How does a UNION-based SQL injection work to extract sensitive data? [2] 12, 3] it} [2] B
+Why is canonicalization used in web attacks?
+C, What is the role of the search command in Metasploit?
+Why are fake login prompts used in phishing attacks?
+How would you define Footprinting, and what are its different types with examples?
+What are password guessing attacks, and what countermeasures can be implemented to prevent them? [5] 2,4] tl [5] G
+Explain SQL Injection in detail, including its various techniques and the countermeasures to protect against it
+Describe the Metasploit interface and its components in detail. 15] U1,2,4] Ul [6] I
+What is the difference between Passive and Active Information Gathering?
+What is TabNabbing, and how does it work in phishing attacks?
+Explain with details
+How are Metasploit utilities like msfvenom used in penetration testing? 2) 12,4] tl (21 2 L
+Provide a samples of payload for an XSS attack on a vulnerable search bar? 1 na how does robots.txt function, and in what ways can it be exploited? 2) (1) N
+What are the steps involved in exploiting the SSH port using Metasploit? [4] [2,4] tl 15] P
+Describe the different types of penetration testing and their applications? 15] {1 I [5] Q
+How does a Gmail phishing attack work, and what are the ways to protect against it? [5] 12, 4, 5] fl [5] Que-6 Answer the following
+Describe how Nmap functions with various arguments and their specific purposes. [5] 11, 4] it] 16) S
+Discuss the concept of authentication in security and the different mechanisms used to implement it. . 14] U1, 2, 4] if} 16] T
+Define touch command with example
+Give the introduction to the RAM. a >, Use of DNS in the network. )
+Explain the RAID protocol with its all levels
+Show the steps to configuring FTP Server
+Discuss the user administration
+Discuss the use of DHCP server
+List out the logs with various types of log files, Uy] PI fl 16] T
+What is Jurisdiction?
+Explain the Cyber Jurisdiction in brief
+Discuss the Software Piracy issues in India
+Describe the Indian Legal System in details
+Explain the Intellectual Property and its Rights in brief
+State the important role of Interpol in current scenario
+Define the Role of UNCITRAL in details
+Describe the role of United Nations (UN) in details
+State the difference between Indian Cyber Laws with Other Countries
+What is Patent?
+Describe the important key aspects of patents
+What is Net Neutrality?

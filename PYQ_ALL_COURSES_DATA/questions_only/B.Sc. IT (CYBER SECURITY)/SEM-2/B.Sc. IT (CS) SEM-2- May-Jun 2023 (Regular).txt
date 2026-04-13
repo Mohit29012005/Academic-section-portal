@@ -1,0 +1,59 @@
+Any Five) (30) 1) What is array?
+How can you initialize two dimension arrays at compile and runtime?
+Il) What is UDF?
+List out various categories of UDF
+Explain any one of them with suitable example
+What is Pointer?
+Discuss advantages of pointer
+Any Two) (12) 1) What is String?
+Explain different string manipulation functions with suitable example
+Write a C program to arrange accepted numbers in descending order using single dimension array
+I11) What is recursion?
+Discuss it with suitable example. 3
+Any Two) (12) 1) What is Structure?
+Discuss array of structure with example
+Any One) 1) What is macro substitution?
+Discuss Simple macro substitution with example
+Write a short note on Key Events used in JavaScript?
+What are DoS and DDoS Attacks?
+Explain in brief Explain given Terms: i) Virus ii) Trojans iii) Spyware Write short note on “Testing for Client side URL Redirect” How to Modify HTML using Javascript?
+SECTION-II Answer the following (Attempt any Two) Give difference between Web Browser Vs Web Server?
+What is Java Script?
+Explain Advantages of Java Script
+Write a short note on java script Dialog boxes
+Answer the following (Attempt any Two) Discuss How to perform Form Validation with java script?
+Explain any two form validation
+What is Phishing Attacks?
+Explain in detail
+Explain JavaScript Button Events with example Answer the following (Attempt any One) What is Pen Testing?
+List out tools used for Pen testing
+Write a short note on Click jacking
+Discuss find command in brief Discuss grep command with example Create shell script for string Compa De Discuss any five network configuration command 6 Write a short note on LVM 7 Explain firewall in brief SECTION-I Answer the following(Any Two) 1 Discuss Linux file system in brief. wn Windows OS v/s Linux OS De Discuss various methods for Recalling Commands with example Answer the following: (Any Two) 1 Discuss command line arguments with suitable example i) Write a short note on remote desktop connection Explain various types of computer network Q-4
+Write a short note on Processor Level Parallelism
+Convert the following terms: (1) (436.92)10 = (2)2 (2) (625)s = (?)10 Write a short note on Excess-3 Code and Gre Answer the following: (Any Two) What is Parallelism?
+Explain Pipelining Parallelism in brief
+Describe the Architecture of 8085 Microprocessor
+Explain the Following terms in brief
+What is Social Engineering?
+Explain in detail What is Identity Theft?
+How To Prevent Identity Theft
+Explain Life Cycle of Digital Forensic Define Steganography with proper example
+Explain the Impact of IT Amendments on Information Technology Organizations
+Describe the specific challenges that exist in India with regard to the law and cybercrime scenario in India
+ANY THREE) (12) What is Cybercrime?
+Explain Basics of cybercrime
+What is cyber stalking?
+How to prevent it?
+Explain the Cyber Crime Trend in detail
+Define Information Security. : ANSWER THE FOLLOWING QUESTIONS
+ANY TWO) (12) What is Phishing?
+Explain its types
+What is Digital Forensic?
+Explain types of Digital Forensic
+Explain Computer Forensic Challenges
+Describe the strength and limitation of India IT Act 2000
+What do you understand by the salient feature of Indian IT Act?
+Discuss the forms of Oral Communication
+Discuss the boredom factures in presentation
+Write a resignation letter to the director of the company
+Give its proper heading

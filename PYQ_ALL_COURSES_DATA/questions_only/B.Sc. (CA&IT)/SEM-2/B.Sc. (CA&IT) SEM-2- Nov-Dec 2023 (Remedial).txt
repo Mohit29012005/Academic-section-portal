@@ -1,0 +1,35 @@
+SECTION-I Answer the following: (Any Five) [A] Describe the use of any three tools of photoshop in detail. [B] — Explain various color modes of Photoshop in brief. [C] Discuss the Transformation in Photoshop with example. [D] Write steps to create brush preset with different methods. [E] — Elaborate the workspace of Corel Draw with figure. [F] | Explain any three tools of Corel Draw in brief. {G] | What is multimedia?
+Discuss any four elements of multimedia
+Write a short note on Methods of Accounting
+Define Terms: a) Cash book b) Trial Balance —_¢) Balance Sheet Write a short note on Trading A/C and Profit & Loss A/C
+What is Accounting Ratio?
+Define Classification of Accounting Ratio in detail
+Find out Profit Volume Ratio and Break Even Point from Following Information Variable Costs per Unit is Rs. 400 Selling price per Unit is Rs. 550 Fixed costs are Rs. 40000 Total Sales of Units: 300 Unit What is Voucher?
+Discuss Any two Vouchers with an example
+SECTION-I Answer the following: [12] a) What is a Subsidiary Book?
+Discuss types of Subsidiary Book in detail. b) What is Accounting?
+Discuss Types of Account with an example
+From the following information, To calculate a) Gross Profit Ratio b) Net Profit Ratio ¢) Stock Turnover Ratio Opening Stock 200000 Closing Stock 300000 Total Sales 1100000 Sales Return 200000 Cost of Goods Sales 400000 Gross Profit 500000 Net Profit 80000 (3) What is Marginal Costing?
+Discuss Advantage of it, Answer the following : (Any One) [06] (1) What is Tally?
+Discuss features and advantages of Tally
+List the types of number system
+Explain Octal number system in detail. 2
+Discuss Checksum method in detail. 3
+Discuss Excess 3 code with suitable example. 4
+What is Microcontroller?
+Discuss the applications of Microcontroller. 5
+What is Microprocessor?
+Discuss features of Microprocessor. 7
+Microprocessor? 3
+State the difference between RISC Vs
+Explain the Addressing modes in details with example
+Write a short note on Processor Level Parallelism. 3
+Discuss 8085 Microprocessor pin Diagram in brief
+Illustrate Computer Booting Process
+What is System Registry Describe in Detail
+Explain Clock Speed and Over Clocking
+How Computer Interpreter Work
+Illustrate File Compression
+How Plug and Play Works
+What is Software and Describe types of Software in Detail
+Give the definition of Group Discussion and Explain the process of Group Discussion. -: End of the Paper :- Daca 2 nf?

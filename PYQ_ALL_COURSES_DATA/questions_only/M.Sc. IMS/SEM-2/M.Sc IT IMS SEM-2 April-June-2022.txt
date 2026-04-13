@@ -1,0 +1,67 @@
+Any Five) 5) Fe ne tone ok?
+Explain the types of computer network with example?
+Wri te on FTP?
+Deine itterence between Windows Server 2019 Essential and Standard Edition?
+Describe the process to Create and set up a virtual machine using Hyper-V. icy?
+Describe types of scope in Group Policy” Write a short note on DFS Replication
+What is ADRMS?
+Explain in brief
+Write a short note on PowerShell. 2019. 2
+List out the roles of Windows Serve!
+APP ONS ith detail. ad 2 What is DNS?
+Explain the Hierare’ DNS in client side
+Describe the process to implement
+Describe the class and types of IP an Hyper-V: Explain the use Virtual Networks * One) (03) : o Os
+What is a file system?
+Define the keywords: DR, BDR. 2
+What is EIGRP?
+Describe the principles of EIGRP? 3
+Difference between IPv4 and IPv6? 4
+Explain Redistribution in RIP Protocol? 5
+What is IPv6?
+Explain the features of IPv6. 6
+Write a short note on STP protocol. 7
+Define the keyword: hop count, Autonomous system
+Write a short note on EIGRP Metrics. 2
+Explain types of packet in EIGRP?
+Explain BGP Peer Message? . 4 2
+Describe the command of BGP summarization?
+What is routing metrics?
+Explain the use of Routing Metrics? 2
+Explain Redistributing in EIGRP Protocol? : - Q-5
+Describe VTP Protocol in detail? 2
+Explain the <image> ‘with its proper example. 2
+Discuss the <OL> with proper example. 3
+Explain the string method in JavaScript. 4
+Explain the conditional statements in java scripts 5
+Explain the Constrains in 6 Explain the DDL statements in MYSQL. 7
+Write a short note on PHP Variable
+Write a short note on URL with its common schemes, 2
+Explain the <marquee> with its attribute and values
+Explain the for
+Explain the DML commands in MySQI-. 2
+Explain the difference between Primary key and unique key
+Explain the For... loop with prope? example in PHP, 2
+What is oT?
+Explain in brief. > (15) in the characteristics of IoT in brief
+Write a short note on IoT enabling Technologies, What is home automation in JoT?
+Explain in brief, Write a short note on Python Data Structure, Describe the oT applications in smart health and life style
+Describe the components of IoT
+What is date and time operations in Python?
+Explain, 2
+Describe the functions of Python- ‘ons
+Write a short note on Networ 2
+Describe the Functional Bloc Q-4
+Write a short note on smart enet8Y system. 2
+Explain IoT applications in smatt retail systems, Q-5
+Explain building blocks of an JoT device. 2
+Write note on 5G network and its works
+Explain 5G data drivers
+Explain the process of download link of NOMA in a single cell
+Describe the security features of SG G) Discuss in brief: How to enhance security for 5G? e following: (Any One) A) Explain 802.11 wireless standards
+Explain Wireless channel path types and its characteristics. 3 Answer the following: (Any One) A) Discuss Architecture of - B) Write short note on Radio 4
+Answer the following: (Any One) A) What is OFDM?
+Describe riel
+Write a short note on mobile backhaul network, 5
+Answer the following: (Any One ‘A) What is QoS?
+Explain the QoS model in brief B) Discuss the Network Security Leveraging SDN with logical planes. 2

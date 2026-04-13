@@ -1,0 +1,83 @@
+Answer the following: (ANY SIX OUT OF EIGHT) (30) What are the steps for preparing effective physical presentation?
+What is Group Discussion and what are the characteristics of effective group discussion?
+Explain its various types of conditionals with example
+Explain various types of Concords with examples
+What are the steps in writing a formal email?
+Describe the format of a press release and explain its various parts in brief
+Explain the characteristics of a good Notice
+Describe the steps in writing the body of a Memo
+What is a presentation?
+What are the components of a presentation?
+What are the pre requisites of Group Discussion?
+Write a detailed note on the compulsory parts of a formal letter. 2 oF 2
+Answer the following: (Any Six) (30) What is Java?
+Explain features of JAVA. f) = Discuss any two operators with example in JAVA
+Explain class and method with proper example
+What is Inheritance?
+Explain with suitable example
+Define types of loop
+Explain FOR loop with example
+Discuss wrapper classes in details
+Explain different types of exceptions in java
+Write a short note on use of finally block. np SESS<288 Q- Answer the following: (Any One) (05) Explain java tokens in detail, Discuss basic concepts of OOPs. [B] Give the full Form: [1] JVM [2] JDK (02) Q-3
+Discuss switch statement with example
+Explain IF ELSE statement with example in JAVA
+What is a constructor?
+Explain with example
+Explain method overloading and method overriding in java. [B] Define term garbage collection
+What is Interface?
+Explain with appropriate example in JAVA
+Explain string buffer class in details
+What is an array?
+List out types of Array
+Explain One-Dimensional array with suitable example, Q-6
+Discuss java package in brief, Il
+Explain use of try...catch for exception handling
+Answer the following: (ANY SIX) What is CANVAS?
+Explain all CANVAS elements with suitable example
+Discuss Geolocation in brief
+Explain Media Queries in detail with proper example
+Discuss Hide and Show effect on content with example
+Define the term HTMLS and list out its new features of HTMLS
+Write down the advantages of SVG
+Define 2D transform
+Explain any one method of 2D transform
+List out event methods and explain any one in detail
+Answer the following: (ANY ONE) List out the removed elements in htm15?
+Explain it in detail
+What is Audio Element?
+Explain Audio Element with Example
+Discuss Drag and Drop elements with example
+Answer the following: (ANY TWO) What is hoverable table?
+Discuss jt in detail List out property of multi column layout
+Explain any two with examples
+Explain any two method of 3p transform
+Explain any one method with example
+How can you load jquery into the webpage?
+Explain in brief
+Explain any five Codd’s Rules for RDBMS
+Explain ACID properties of transactions What is normalization?
+Explain 1" and 2" normal form in brief
+Explain SQL components DDL, DML in detail
+Explain DROP and TRUNCATE query with proper example
+Explain different type of JOIN in detail
+What is Index?
+Explain it with example
+List out all types of User of DBMS. @ Auswer the following:(ANY ONE) Describe BCNF normal form with proper example
+Explain all recovery methods in detail
+What is constraint?
+Explain PRIM
+Explain GRANT and REVOKE statement in detail
+Discuss any four built in functions in SQL with syntax
+Describe SET operator in detail
+Answer the following: (ANY 6) (30) What is computer network?
+Explain its advantages
+Write a short note on NIC card. © S AAA aw NPE Explain Categories of computer network
+Explain OSI model in detail
+Explain Mesh and Star Topology, Explain SNMP and SMTP protocol, Explain TCP and UDP protocol in details
+Explain Line configuration in detail
+Explain about X.25 Protocol
+Explain Repeater and Gateway
+Explain ARP Protocol
+Explain ICMP and IGMP protocol
+Write a short note on DNS

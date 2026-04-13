@@ -1,0 +1,68 @@
+Discuss responsibilities of Database Administrator
+Explain IDML Commands with example
+Briefly discuss about Problems of concurrent cxecution of Transactions What is Constraints?
+Explain Primary Key, Foreign Key and CHECK constraint with example
+Explain following SQL terms: Explain any five String Functions with example
+TABLE (ANY ONE) Explain use of GROUP BY and HAVING clause with appropriate example?
+Define: i) Candidate Key ii) Alternate Key I What is database?
+Discuss the benefits of using database approach
+ANY ONE) I What is Normalization?
+Explain Benefits of Normalization
+Give Full Forms: i )BCNF ii) ACID (ANY ONE) I Explain all DDL commands with appropriate example
+Differentiate DELETE Vs TRUNCATE Lnrollmnent No (ANY ONE) I Explain Numeric Functions with suitable example
+ANY 6) What is Java?
+How it is different from C Language
+What is Method Overloading?
+Explain it with suitable example
+What is Constructor?
+Explain try, catch and finally block in Exception
+What is package?
+Explain package with suitable example
+Explain Relational Operators and Logical Operator in java What is the purpose of break and continue statement?
+Explain it with proper example
+Explain the following terms: (ANY 1) Explain difference between String and String Buffer class
+Write a short note on JVM,JDK,JRE
+Explain features of JAVA language
+What is the use of super keywoxd? [ What is an Inheritance?
+Explain Multilevel and Hierarchical Inheritance with suitable example
+What is use of wrapper class?
+Explain it with example
+ANY 1) What is Interface?
+Explain Interface with appropriate example
+What is an array?
+How to create and initialize an array?
+Write a different between throw and thrOws keyword
+END o What is Exception?
+ANY SIX) What is Internet?
+Explain various internet connections in brief
+Discuss <FRAMESET> tag with suitable example
+List out types of formatting tags
+Explain any five formatting tags with suitable example
+Explain Order List and Unordered List with example
+What is JavaScript?
+Discuss for loop with suitable example in JavaScript
+Explain URL and Search engines in details
+ANY ONE) What is CSS?
+List out types of CSS
+Explain any one type with proper example
+Discuss and write a step for Inserting Table in Dreamweaver with its all properties
+Write a full form: [1] IMAP |2] WwW . [5] SMTP [4] POP What is E-Mail?
+How does the E-Mail works explain in brief?
+Explain all basic tags with suitable example
+Discuss <FORM> tag with suitable example
+How to add audio/video in HTML?
+Describe it's with suitable example. 3] ISP (ANY ONE) List out operators in JavaScript
+Explain any two operators with proper example. |6] FTP Define the term table?
+Explain <TABLE> tag with suitable example
+Explain Line configuration in detail
+Give the difference between TCP/IP Vs OSI Model
+Explain layered architecture of OSI model
+Explain connection oriented and Connection less
+Explain Bridge and Hub
+Explain ICMP and IGMP protocol
+Explain different classes of IP addresses. .(Any One) Explain Advantage of computer network
+Explain LAN, MAN and WAN in detail. .(Any One) Explain TCP/IP model in detail
+Explain Physical, Datalink and Network layer of OSI model. question.(Any Two) Explain Intranet and Extranet Network Explain Repeater and Switch
+Explain wireless network in detail. .(Any Two) Explain FTP and TFTP protocol
+Explain ARP and RARP protocol
+Explain Client server model

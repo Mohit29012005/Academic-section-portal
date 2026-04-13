@@ -1,0 +1,63 @@
+What are the difference between Client and Server Side Technology ?
+What is CSS ?
+Explain the advantages of CSS inside HTML What are the differences between Get and Post methods
+Write a short note on : Google Analytics Plugin
+What is PHP ?
+Explain the features of PHP (Any Two) What are the differences between WordPress.com and WordPress.org ?
+Explain it with suitable example
+Any One) Explain the different features of WordPress Admin Dashboard ?
+Write a short note on: WordlPress Plugin: BuddyPress Write a short note on: Yoast SEO | (Any Two) Explain in brief -WordPress Theme: Site Identity, Menus, Widgets Explain HTML Tag in brief: Table, Text Box, Image (Any One) What is WooCommerce?
+What are the features of WooCommerce?
+What is MySql ?
+Explain the features of MySQL
+What is an Array ?
+Explain different types of Array in PHP with Example
+Explain the exception handling with IndexOutORange:xception. in detail: (ANY ONE) Managed Code What is polymorphism?
+Explain constructor overloading with suitable example
+ANY TWO) A) How to show MessageBox with different button options on windows forn?
+Explain DateTimePicker control with example
+What is use of dialog controls?
+Explain ColorDialog and FontDialog controls in brief
+Explain DataTable and Data Set classes in brief
+Write C# code to perform insert operation on student table using SqlCommand object
+Discuss types of resources in detail Write a short note on components of android
+What do vou understand by intent Explan any onc tvpe of intent with example List out the types of nenu
+Explain anv onc in dctail. | (Any One) 3 Which control is used to take input from the user?
+Explain all attributes and methods of it
+Explain attribute of Relative Lavout
+What is the use of ListView?
+Explain it with all attributes
+What is Information?
+Explain the characteristics of the Information
+Any six) What is MIS?
+Explain the Usefulness (Benefits) of MIS
+What is Communication?
+Explain the different Communication Methods
+What do you mean by Level of Management?
+Explain the role and functions of each level of management
+Write a short note on: MCainsey's 7'S Model. [ What is Planning?
+Explain the planning problems
+Define the term Decision Making
+Differentiate between Programmed Decision Vs Non -Programmed Decision
+What is E-Commerce?
+Explain the benefits of E-Commerce
+Discuss M-commerce and compare it with E-commerce
+Discuss the sources of the Planning Information
+List out only the major types of Systems in Organizations
+Explain KWS in brief
+Discuss the business models of E-Commerce
+Write a note on UNIX file management
+Explain secondary storage management in UNIX
+Write a note on 1/0 buffering
+Describe expr and test commands with a suitable Script
+Describe redirection with a suitable example
+Discuss various navigation options for words and lines in vi editor
+Write a note on RAID
+Discuss various security threats
+Describe wWC and Is commands with their syntax, example and options. [ (B) Mention different types of decision-making statements in Linux/Unix
+Explain the if-elif-fi statement with its syntax and a suitable script
+Mention different types of loop constructs in Linux/Unix
+Explain anyone with an illustration
+Explain pipelining with a suitable code
+Explain cut and paste filters with a suitable example
+Discuss various modes in vi editor

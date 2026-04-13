@@ -1,0 +1,42 @@
+SEMESTER-V EXAF{TNATTSN {eBcs) I ;OrqS:ELECTM-V(ADVANCEDATABASEMANAGEMENTsYsr=il) Hoursl 2.(A) (1) (2) (3):r;G':,rlttfl?etal ffiarks: S# i-S-lril*trai '-5 - 'r.lr'ile iuillital"ku : ,....\..;., . it::i :t::).lrJ.ie:rjls\i. i :. ;,'--..' i-t: ''iiriisn !n !i Sepiifi : :.- * i -, ii-,C I ,tli'1r. ifr \'f,;1lf '-l1lSi\ L'f $trflTI#N- X :'-'rr'red" . -, i'1..:,jr.ii tdiino,' : i'hat is iiaLrir;l:ie Tirnii's'i + i '''n i,al is Di;'rtrihuieu Ilitiiibr;se '{jl'r:liem?
+Answer the follorving Questions'(Any Two) ;;iri" Armstrong's Axioms that are used to prove FD' f)escribe 3NF with ExamPle' Ho* trro** is useful ftr search Query?
+Justiff with Example'{{}8i (1{}) (B) ' (1) What is Benchnrarking? 3.(A) Questions'(Any Two) -- :(1) How vertical Decompositionis aiftering from Horizontal Decomposition?
+How Fragmen-tation and Replication arJuseful for Distributed Database system? i:i Explain Conceptual Schema Tuning' (B) ' (i) What is 2PC?(01) (10) {sr) (3) (+) (1) a) (3)SECTION-II 4
+Do as Directed.(1) Examples of Imrrlir.it r.\^n ^--r n does not exisis.Ioy XrrPe and %RowT1.pe works?Define: Transaction s.(A) Answer the foltowi Ex pl ai n Gen e ri ^ o,-.Tf
+Q-' *1t1o-':t-' $ny Twc) Explain Generic S,."t r4ussrrurlS'(Anv 'I'w0 How Fw^ri^i+ rr._ u:ly.* of pl/SeL btoct<.5:y trf,,cit Cursor Works?Write a pLlSeL block to r*uO Ernployer ,u::** .e*.*piio,l Ie"t,on handre ,*" .,;f1ro,1:',, $er and diryh-s I:::* :.*.*piion i"",i;; ffiil'^l;:r;' s Eno rrom user and diryh-s does not exisis. - 'ATA-.Found Excepti"n iid{{,"5i : i!
+A),{ns1er the follorvin g.(1) Whaf is return value of Sel%Found? . eu estions.(Any, Two) H ow Ro w Tri gger I s..d:fr, ;;i"i',Hi{.nt rri gger
+Be precise and to the point in your ansr/rer 2" ? 't/- ) /1\\ J-/()\ I <t (1) (2) (3) (Any Two) What do you mean by resources in Android?List out menus available and explain any one.Give dif-ference between styre and theme using exampre
+Create animation using rotaie, alpha and scale.Give example of seek bar and progress bar.r3) (s) { 1r} { 11} {3} (s) (1 1)4.(A) (1) (2) (3) 4.(B) 5.SECTION-II List out types of preferences
+What is the use of file output stream?
+Where preferences are stored?
+Give example of inserting record in SQLite database
+What is AsyncTask?
+Explain its methodsl Can you create your own content provider?
+Justify
+Show different ways of loading data in web view
+Write and explain SMS receiving code.6. {Lr} Eustruetions: 1.(A) I II TI IV .GANPAT UIVIVERSI"Y M"C.A
+What is Intelligent Agent?
+What is local maximum?
+What are difference between BFS and DFS algorithm?
+Answer the follorving (Aliy Tro )what is hiil ciimbing,'Es.plain sreep*r-ascint hill climbing algorithm. ?.fu: AI?
+A.usn-er tLe foloring (ANI'Txo )Ltplain &e Best-Firsr-Search procedure with example. \v"bar is Natural ranguage processing?
+Exprain eact step of NLp.Describe Applications of predicate L;gic in details. r - * SECTION.II What is Red Cut List Prolog Fiie operations?
+Write a Prolog Code to find nth Element from the given List.List out real time expert system
+Write a short note on: Hopfield Networks.write a sho,t note on "Applications of Artificiar Neurar Networks
+Describe the Types of Agents in details. -.--- ....A
+Explain for in loop in javascript r'. ith e xample
+Explain everyQ and filterQ method of Array object Explain variable scope with example. l\nsrver the following (ANY TWO ) (11) Explain Math object with properties and methods using example.Explain getElementsByClassName0, q uerySelectorAll0 metl:uds rviih example
+Explain Location object with properties and methods using example. 3
+Explain foiiowing metnods of Array object sort|, filter$, concatQ, pop0 Expiain addEventlisrener0, removeEventListenerQ methods with example
+SECTION.II(11) 5.Ansrver the fo!lowing.(1) Explain creareCollection0 and dropCollection0 methods in !'--^^nDi',url!ULJJ.'.2'. i>:: : r pr-eii;'0 method with use, syntax and example. :3) l>rpla;n skip0 method with use, syntax and examples.:', ','.':,at is l'longoDB?
+Write down the advantages of MongoDB over R.D 3 i'l S.(08) inrurul. ti;e following (ANY TWO ) (11) Explain Data types of l"longoDB" Expla r sort0 and ensurelndexQ method with proper example. \'/hat is Relaiionships?
+Explain Embedded Relationships and Referenced Relationships with proper example. 6
+Ansrver the following (ANY TWO )(1) Vi hat is Covered Query?
+Explain it with proper example
+What is Text Search?
+How to enable, create, use and delete Text index?
+Explain it with proper examples
+Discuss forward and reverse engineering in brief' Ansrver the following: (AnY Two) Discuss UML basic building blocks in detail' What is class?
+Explain class attributes and operations in details' Discuss the detail architecture of Uh{L' G Answer the"iollowing: (An,v Two) Draw a class diagram of B2C for online shopping system' Explain'6is-4" kind of relationship with suitable sxample' Exp la in i nterf acer, E p e and t" t- :--tth lllib J-t, t t:Tg:" : - SncrIoN-lI Answer the follorving: Discuss action state and activity state in depth' Explain common rnodeling techniques in details' (AnY Two) L Discuss use case diagram with suitable example' tr
+Explain activity diagram in depth' ilI.Whatisforkingandjoining?Explainitwithsuitableexample' Answer the follorving: (AnY Two) L Discuss deplo,vment diagram rvith suitable example' U
+Write a short note on patterns and framern'ork' ul.Explaincollaborationcliagramindetailr,vithsuitabieexample'I" IT I

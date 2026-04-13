@@ -1,0 +1,76 @@
+Discuss rules for preparing Algorithm with example. 5 2
+Discuss Basic Structure of C Program with example. . : ' 3
+How to define Symbolic Constants in C Language?
+Explain rules to define Symbolic Constants ; 7 4, What is the use of switch case statement in ‘C’ language?
+Explain with proper e imple. ; 5
+Explain while loop with proper example. " " " " BI I] Ul 15] 6
+What is Array?
+Discuss types of array
+What is Character Array?
+Explain Declaration and Initialization of String Variables. [6] 15] ll [5] Que-2 Answer the following
+Discuss goto statement with example. 12] I] ii} Sd] 9
+What is Variable?
+How to declare Variable? 12) I 11 10
+Write a C program for calculate a factorial of given number. 6) 4] Ul 13] Que-3 Answer the following. 11
+Discuss Branching Type of Algorithm with example. 15] i] Ul 15] Que-4 Answer the following
+Write short note on Input/output functions with example. [printfQ) ,scanf(), getchar(),putcharQ] 1S] 15] it I] 13
+What is looping?
+Explain For loop with proper example. \4] I4] I I] 14
+Write a C program for display a largest number among three numbers. {6] \4] Ul {41 Que-5 Answer the following
+Discuss compile time initialization of one dimensional array with example
+Explain Logical Operators with example. . ‘ IS] 13] it} [3] 17
+Describe the operation of the alert, confirm and prompt method. 31 {s] ii} {5] 3, Explain types of websites (e.g., personal, commercial, educational, social media) and their purposes
+Give examples of each type. [3] 1 l {5} 4
+Explain the following basic HTML tags with an example:<p>, <pre>, <br >, <sub>, <sup>, <b>, <i>, <u>, <hr />, <em>, <blockquote>, <strong> (6) Ry} i 1s] a 5
+Explain the table tag and its various attributes with an example. {6] ip] {l (5] 7
+Explain the style specification formats of various level style sheet in CSS. [6] i] iH {5} Que-2 Answer the following
+Discuss the Web Designing Principles in brief. 13] uy tl [3] 9, Explain any five types of selectors in CSS. 13] 13] it} [3] 10
+Explain the different font properties in detail. 13] 2] ll 31 Que-3 Answer the following. 11
+Explain the various controls used in designing the form with one example With CSS. [6] we 2, (5] Que-4 Answer the following
+Explain the concept of scope in JavaScript with respect to var, let, and const
+Explain the CSS color property with example. [3] 13] ii} 13] 17
+Write’a note on JavaScript operators
+Explain the use of Mail Merge and explain with example
+What are the uses of charts in Excel?
+Explain the use of pivot tables in Excel and provide an example of how they summarize data. 15] [4] 5
+How does the Freeze Panes feature work, and why is it useful in large datasets?
+What are the basic features of Google Docs that make it an effective tool for document creation? 15] 15] 7
+Describe how to apply slide transitions and custom animations in PowerPoint. 13] 15] Que-2 Answer the following
+Explain the applications of word processing in various fields. 14] ie] 9, What are the key benefits of using Excel for data management and analysis? \4] 13] 10
+What is the purpose of using statistical functions in Excel? 15] I4] Que-3 Answer the following. 11
+How do you set up a slideshow in PowerPoint for a smooth presentation? 16] 15] Que-4 Answer the following
+Explain the differences between CUI and GUI. 14] 1] 13
+How do you insert a table into a Word document?
+How to create a batch file?
+Discuss with an example 16] a Que-5 Answer the following
+Describe the process of sorting and filtering data in a worksheet to analyze information effectively. t4] 13] 16
+How do you upload a file to Google Drive and share it with others? 81 15] 17
+Who was Swamishree Krishnatirthaji, and what is his contribution to mathematics? 1] i] i 15] 2
+What is a digital root, and how is it calculated? [2] 22] i] 15] 3
+What are the Sutras of Vedic Mathematics, and how are they useful? i) 1, 2] if} 15] 4
+Find addition of polynomials X2+X+ land x8-x-2. 15] [5] tl 15] 6
+How does the sulfa method simplify multiplication? \4] 13,4] i] 15] Que-4 Answer the following
+Define the term communication
+Differentiate between formal and informal communication. 1] i] tl [5] 2
+Explain remedies to overcome communication barriers
+Describe the process of listening and differentiate between listening and hearing
+Explain how TED Talks can help improve listening skills
+Define reading, Explain the types of reading with examples, Bl i oS) 8
+Explain techniques for effective reading comprehension. 13] [4] it} 15] Que-5 Answer the following
+Any One) 1, What is Computer? computer hardware components with their function. 2
+What is BIOS/UEFI, and how does it help fix computer problems?
+How can you use system tools to check if your computer is working properly? 4, What is file management, and why do we need it in a computer?
+What is a motherboard, and why is it important ina computer? 6
+Why is disk cleanup important for your computer?
+What is the difference between LAN and WAN?
+Give an example of each
+Why is it important to use strong passwords? 10
+Difference between RAM and ROM BT/CL [2] 13] 14] 15] 13] 15] ant for your computer’s performance?
+What are the key principles covered in the Eighteen Chapters, and how do they guide life management?
+OR What are the main themes discussed in the eighteen chapters of theBhagavad Gita? 13] fi] Ul 15] Que-2 Answer the following
+How can the teachings of the Bhagavad Gita be applied to improve work-life balance and enhance work efficiency?
+OR How can one become an effective leader by applying the teachings of the Shrimad Bhagavad Gita?
+Discuss in detail about Ethical decision making, Strategic thinking in Shrimad Bhagavat Gita
+What is the connection between the teachings of the Bhagavad Gita and management practices?
+OR How does the Bhagavad Gita incorporate principles of strategic thinking and planning?
+How does the Bhagavad Gita provide value education for young leaders?

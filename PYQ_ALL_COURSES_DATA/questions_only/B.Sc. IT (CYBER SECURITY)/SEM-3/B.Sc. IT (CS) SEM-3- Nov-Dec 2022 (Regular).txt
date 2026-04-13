@@ -1,0 +1,71 @@
+Discuss component of Linux Operating System
+Give difference between Linux and Unix
+Explain all Filters in detail
+What is Shell?
+Write down advantages and disadvantages of Shell Script
+Discuss File Globbing in detail
+Differentiate YUM V/S RPM
+Explain Shadow file in detail
+What is RAID?
+Explain any two level of RAID in detail. 2
+Write a short note on Network IP Address
+Discuss Manual Pages with all options in brief
+Explain all commands which are working with file content. 2
+Discuss Absolute and Relative Paths in brief. 3
+Discuss Encryption with crypt in detail. 2
+Write a short note on User Account
+SECTION-I de Answer the following: (Any Five) (30) What is data model?
+Explain Hierarchical Data model
+What is E-R model?
+Explain various component of E-R model
+What are constraints?
+Explain all constraints
+Define the categories of Data Manipulation Language with example Explain any five-aggregate function with example What are indexes?
+Explain any types of indexes. wah Ff eS Write a short note on SNF
+Write different between RDBMS and DBMS. 2
+What is normalization?
+Explain 1NF with example. 3
+Explain the Dr
+Define categories of Transaction control language with example. 2
+What is joins?
+Explain types of joins. 3
+Explain having by and group by with example. 4, Answer the following: (Any One) (06) 1
+Discuss grant and revoke permission with example. 2
+Explain view with example
+Explain type conversation and type casting with example
+What is multi thread?
+Explain different way to implements thread
+What is inheritance?
+Explain in detail
+Explain ArrayList with example
+Explain InetAddress class with example
+What is lambda expression?
+Explain advantages of it
+SECTION- II 2 Answer the following in detail: (ANY TWO) (12) A) Why is Java called platform independent?
+Differentiate between abstract classes with interface
+List any six exception handler name and give cause of occur. 5 Answer the following in detail: (ANY TWO) (12) A) Explain java.util
+Explain TCP/IP Server Socket with example
+Explain in brief java security manager. 4 Answer the following: (ANY ONE) (06) A) Explain method and constructor reference of lambda expression
+Explain Generic functional interface of lambda expressions
+Discuss various Network Topologies in brief
+Explain OSI Model in brief
+Write down difference between IPV4 and IPV6
+Explain sliding window protocol in brief
+Write a short note on switching
+Write a short note on ARP and RARP
+Describe Different Tools of digital forensic Configure Logs and log management Draw Network Diagram and elaborate network device Evidence
+Illustrate Evidence Acquisition
+Explain incident response Framework in detail. 2
+Explain the Digital Forensic process. 3
+Explain Way to Acquiring Host based Evidence Volatility. 2
+What is Packet Capture?
+Describe in Detail. 3
+Explain Onion Security. 4
+Illustrate Types of Documentation. 2
+Explain Dead Imaging
+Explain the Classification of Ecosystem. is Water Pollution?
+Discuss the Source, Classification and Preventing from Water Pollution 4, Discuss Current Environmental Global Issues
+State word Disaster? ustrate the Disaster Management Cycle
+SECTION-IL Anawer ‘he following: ( Any Two) (12) about Environment?
+Discuss the Scope of Environment. 2
+Describe the Components of Ecosystem. ss The Hydrologic Cycle. y the following: (Any Two) (42) the Air Pollution in brief. 2 Discuss the Source, Effects and the way of control the Noise (8) ance of Police as a Local Institutions in Rehabilitation ernment in Rehabilitation

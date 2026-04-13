@@ -1,0 +1,6 @@
+List out the android versions with features. 06 col BTL3 3 | Explain various Edit Text in android. 06 CO2 BTL6 4 | What is Layout?
+Describe its common attributes in detail. 06 CO3 BTL1 5 | Explain Grid View in detail. 06 CO3 BTL6 6 | How to update a record in SQLite database? 06 Cco4 BTL6 7 | Demonstrate the sensitive information extraction from} 06 COS BTL3 APK file
+How to use APK Tool? 06 COS BTLS 2 | Write a short note on Dex2Jar. 06 COS BTL4 ** End of the Paper ** Po“ye & oF Time
+Discuss the 06 col BTL2, concepts of OOP
+Analyze the principles of method overloading in PHP, 06 co2 BTL4 and synthesize examples of its application in real-world scenarios, Q.3 | Answer the following: (Any Two) 12 Apply the knowledge of Prepared Statements in PDO to 06 CO3 BTL3 insert records into a database What is Wordpress?
+List and discuss the advantages of | 06 Cco4 BTLI, using Wordpress

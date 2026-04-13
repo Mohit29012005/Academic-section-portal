@@ -1,0 +1,70 @@
+Discuss java tokens in detail
+What is Inheritance?
+List out types of Inheritance
+Explain any two Inheritances with suitable example
+List out types of loops in JAVA
+Discuss FOR loop with example
+Discuss method overloading and method overriding with example
+Explain wrapper classes in brief
+List out string methods in JAVA
+Explain any two with proper example
+Write a short note on different types of exceptions in JAVA. fo) N
+Answer the following: (Any One) What is Java?
+Discuss features of JAVA in brief
+Discuss arithmetic and relational operators with example in JAVA
+Discuss switch statement with suitable example in JAVA
+Explain IF ELSE statement with proper example
+Discuss NEW and FINAL keywords with suitable example in JAVA
+What is a constructor?
+Explain with proper example
+What is an Array?
+List out types of Array
+Explain One-Dimensional array with suitable example
+Discuss Interface concept with appropriate example in JAVA
+Write a short on string buffer class in JAVA
+Discuss java package in details
+What is Computer Network?
+Explain advantages of it
+List out Network Topology?
+Explain any one in detail
+Differentiate OSI Model with TCP/IP Model
+Write down short note on ATM
+Write a short note on Wireless Network
+What is Extranet?
+Write a short note on Extranet
+Explain Classes of IP Addressing
+Explain ARP Protocol in detail
+Explain any three layer of OSI Model
+Explain communication procedure between the layers
+Draw TCP/IP model and explain each layer in detail
+Explain various issues in designing of layers
+Explain the necessity of layered reference models
+Explain Connectionless and connection oriented services
+List out the Network Component
+Explain aay one in brief
+Discuss the functionalities of Protocols
+Write a short note on ICMP
+Write a full form of FTP
+Write a short note on I/O devices
+Explain echo command with suitable example
+Discuss Date command with its attributes
+Explain Vi Editor with its modes in details
+Discuss Who command with its attributes. e mas BPO pp Explain if then fi with example. 2
+Explain it in brief. fs) Explain Read statement with example. 4
+How to create new shell script program? is the extension of shell script program
+What is code name?
+Discuss versions of android
+Explain life cycle of an android activity
+Write short note on android Manifest file
+Explain EditText in detail with example
+Write a short note on Intent
+Explain CheckBox with all attributes
+Write a short note on Action Bar
+Answer the following: (Any One) What is DVM?
+Explain the difference between JVM and DVM
+Explain Android Architecture in brief
+Explain the android application component in brief
+Explain DatePicker in detail
+Write short note on SeekBar
+Discuss any one in detail
+Explain ListView in detail

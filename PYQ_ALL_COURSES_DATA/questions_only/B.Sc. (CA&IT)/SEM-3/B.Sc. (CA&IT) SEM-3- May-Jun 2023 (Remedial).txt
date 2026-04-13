@@ -1,0 +1,48 @@
+SECTION- I 1 Answer the following: (ANY FIVE) (30) A) Why is Java called platform independent?
+Explain in detail
+Explain type conversation and type casting with example
+What is Thread?
+Explain different ways to implements thread with example
+Explain benefit of generic?
+Explain generic in detail
+Explain dynamic array with example
+Explain in brief lambda expressions
+What is phaser?
+Differentiate between abstract classes with interface
+What is exception?
+Explain in detail. 3 Answer the following in detail: (ANY TWO) (12) A) Explain in brief collection framework
+What is package?
+Explain in detail C) What is method and constructor reference in lambda expressions? 4 Answer the following: (ANY ONE) (06) A) What is executer?
+Explain with example to implements parallel programming fork/join framework?
+What is DBA?
+Explain DBA
+Explain any five-aggregate function with example
+Define having by and group by with example
+What is indexes?
+Explain benefits of indexes
+Explain the Dr
+Write different between RDBMS and DBMS
+What is E-R model?
+Explain E-R diagram with example
+Write a short note on normalization? per
+Explain SQL Logical Operators with example
+Write difference between unique Key and primary key
+Differentiate EXIST and NOT EXIST operator. a)
+Explain view with example. 2
+Write short note on spooling
+SECTION-I Answer the following: (Any Five out Seven) What is System?
+Discuss the Element of the System
+Write a short note on System Development Life Cycle
+Write a short note on Fact Finding Techniques
+What is DFD?
+Describe the different symbols & rules of DFD
+Discuss Data Capture and Data Validation of Input Design
+Write a short note on Form Design with its types and guideline
+SECTION-II Answer the following: ( Any Two) Who is System Analyst?
+Discuss the role of System Analyst
+Explain characteristics of System
+Define Terms: Structured English, Decision Table, Decision Tree
+Differentiate White Box Testing & Black Box Testing
+What is Testing?
+Describe the Level of Testing
+Discuss the case study on Project Management System

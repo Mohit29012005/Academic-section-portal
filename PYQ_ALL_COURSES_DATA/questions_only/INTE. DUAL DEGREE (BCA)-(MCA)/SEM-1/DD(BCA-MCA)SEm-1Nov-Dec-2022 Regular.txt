@@ -1,0 +1,74 @@
+List out and explain features of C Language
+Write Steps to execute a C Program
+List out and explain Data Types in C
+Explain Type Conversion with example
+Explain Nesting of IF ELSE with example
+List out types of Array
+Explain any two with example
+Explain Scope, Visibility and Lifetime of a variable in user defined function Explain Comparison of Structures with example. eSrNAYNPwhd Q-2
+Explain the following: Source Program, Object Program, Linker, Loader 2
+Explain C Tokens in detail. 3
+Explain Basic Structure of C Programming Language
+Explain Assignment and Increment Decrement Operator with example. 2
+Explain formatted Input in detail. 3
+Explain Operator Precedence with example
+Differentiate Entry and Exit Controlled Loop with Example. 2
+Explain goto statement with example. 3
+Explain Switch Statement with example
+Explain Overflow and Underflow in array in detail. 2
+Explain Recursion with example. 3
+Explain Nesting of Function in detail
+What is Structure?
+Explain how to assign values to it. 2
+Explain Array within Structure with example. 3
+Explain Array of Structure with example
+How to add audio/video in HTML?
+Describe it’s with proper example
+Discuss spanning Rows and Columns
+Broo Discuss <FRAMESET> tag with suitable example. 2 What is JavaScript?
+List out operators in JavaScript
+Explain any two operators with proper example. 2
+Explain LAN, WAN and MAN in details
+Explain Ecommerce, E-learning and E-banking services in brief. 3
+Explain control statements in J avaScript
+Explain for loop and while loop with suitable example. 4, Answer the following: (ANY TWO) (08) A. _ List out basic tags
+Explain any three formatting tags with proper example
+Explain all attributes of < MARQUEE > tag. 5
+Explain any three input tags with example
+Answer the following: (Any Five) Write a short note on: Mail Merge What is Macro ?
+Explain macro with suitable example
+What are the different type of Charts ?
+Explain any one with suitable example
+Discuss the various print options for Printing the Document
+What is Primary Key ?
+Explain the usage of Query using suitable example
+What are the features of OPEN OFFICE -BASE ?
+How to creating a new attractive Presentation?
+Explain it with suitable example
+Answer the following: (Any Two) How to create table ?
+What is use of watermark ?
+Explain the different parameters of Watermark
+Explain in brief : Drop Cap, Drawing Tools Answer the following: (Any Two) Explain the Relative and Absolute References using suitable example
+What is Spreadsheets ?
+What are the features of Spreadsheets ?
+Explain the different OpenOffice Calc Formulas using suitable example
+Explain in brief : Creating New Database and Table Explain the Toolbars of Open Office-Math in detail
+How to apply Slide Transition ?
+Explain USB, Serial, Parallel and PS2 port in depth
+How to securing our system from virus and unauthorized user?
+Explain characteristics of computer in details
+Define the term Software
+Explain it in depth
+Draw the block diagram of computer and explain it
+Write a short note on Assembly Language. 3
+Discuss Touch Screen in brief
+Explain CRT with figure in brief. 4
+Howto install any drivers in computer?
+Describe any five conjunctions with examples
+How should a good listener be?
+Explain Skimming and scanning
+Write at least five points of differences between Listening and Hearing
+Would you my pet for me this weekend?
+Discuss various types of non-verbal communication
+B. — What are the reasons for poor listening skills?
+What are the several purposes of reading comprehension?

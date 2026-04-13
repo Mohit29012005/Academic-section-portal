@@ -1,0 +1,62 @@
+Explain the TAG, ATTRIBUTE and VALUE with proper example
+Write a short note on PHP
+Write a short note on URL with its common schemes. 2 Q-2
+Any One) What is variable?
+Explain the rules of variable declaration with example
+Explain the <marquee> with its attribute and values. 1 Explain the while... lop in java script
+Any One) What are conditional statements in JS?
+Explain any one
+Explain the for...loop detail in PHP with proper example. 2 Explain the Basic Structure of PHP with one simple example Q-5
+Explain ADRMS in brief. 5
+Describe the working of DNS in Windows Server 2019. 1 2
+What is Network Load Balancer?
+Explain in brief!. 2
+Write a short note on Group policy object. 6
+What is IPv4?
+Explain the classes of IPy4. 7
+Write a short note on PowerShell
+State the DORA process in brief
+List out the roles of Windows Server 2019
+State the difference between Windows Server 2019 Essential and Standard Edition
+What is zone in DNS?
+Explain the types of zones in DNS
+Describe the features of DHCP
+Any One) Write a short note on DFS? 2
+Explain WDS in brief. 1
+Write down the steps to create and set up a virtual machine in Hyper-V. 2
+Explain the prerequisites for installing Hyper-V
+What is loT?
+Explain the characteristics ofloT in brief. 6
+Explain Functional Blocks of loT in brief. 2. 4
+Write down the full forms of the following terms: HTTP, CoAP, MQTT, DDS
+Describe loT based smart logistic system in brief
+What is the class in Python?
+Explain in brief
+Explain the date and time operations in Python
+Write a short note on building blocks of an loT device
+Explain the loT applications in smart health and life style
+Explain the components of loT
+Write a short note on Python Data Structure
+Write a short note on Network Layer of IoT
+Describe the loT applications for Smart Home. 2
+Explain the difference between IoT and M2M
+Write a short note on Raspberry Pi
+State IoT design methodology in brief
+Any Five) What is EIGRP?
+Describe hybrid characteristics of it
+Define these terminologies: Hello Packets, Update Packets, Query Packets Give the true or false of following statements: Explain the core features of lPv6 and naming convention of IPv6
+Explain OSPF routing protocol in details. pye (15) (04) Q3
+Any One) Why use Route Redistribution?
+Explain disadvantages to route redistribution
+List out the various commands to verify route redistribution Define these keywords: VLAN, VTP Describe Spanning Tree Protocol in brief. pege (04) (04) (03) 5. 2. 3. 4. 1
+Explain MIMO and importance of MIMO for users (Any Five) C) Draw building block of 5G roadmap and explain any 2 in detail
+Explain TDMA with its advantages and disadvantages
+Explain 5G data drivers
+Describe the security features of 5G
+Write note on OFDM Explain QoS model in brief
+Explain 802.11 Architecture and its components with proper figure
+Explain Wireless channel path types and its characteristics
+Write note on network slicing
+Any One) What is GFDM?
+Describe in brief
+Explain the process of download link of NOMA in a single cell

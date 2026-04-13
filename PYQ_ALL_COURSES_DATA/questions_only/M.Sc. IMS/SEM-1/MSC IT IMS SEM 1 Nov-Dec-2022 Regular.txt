@@ -1,0 +1,77 @@
+State the difference between Linux and Windows
+Describe Linux File System Structure in brief
+What Is Linux?
+Describe the features of Linux
+What is physical volume in LVM?
+Explain in brief
+Discuss the features of Open SSH. a oe Write a short-note on history of Linux
+Write a short-note on Linux Bash
+Discuss the Types of Linux File System in brief. 2
+Write a short-note on Linux File System
+Define the keywords: pwd, Is, cd. 2
+Explain the difference between rmdir and mkdir
+Write a short-note on Logical Volume Management (LVM). 2
+How to Create Volume Groups and Logical Volumes
+Discuss Open SSH in brief. 2
+How Does SSH Work?
+Explain the different types of DDoS attack. 2
+Discuss the principal of information security. 3
+Define these terms: foot printing, Wi-Fi Eavesdropping, Traceroute 4
+Describe application-level threats in brief. 5
+Define the keywords: Phishing, Spear Phishing, Ransomware 6
+Explain the taxonomy of cybercrime in brief. 7
+How to use advanced search in google?
+Discuss Information Security Vectors in brief
+Define the keywords: TLD, ccTLD, Stld 2
+What is nslookup?
+Describe these keywords: Packet Filtering, Gateway, Proxy, VPN 2
+Define the terms: Port, Port Mapping, Port Forwarding Qs
+Discuss the RIP in brief
+Write a short note on Security Life Cycle
+Discuss the Layer Approach-OSI in brief Describe FTP in brief
+Explain EIGRP with an example
+Explain the Cisco network architecture in detail
+Write a short note on HTTP and HTTPs
+What is DHCP?
+Describe in brief
+Explain anyone in detail
+Describe Cisco technologies’ security vulnerabilities in detail
+Explain high level voice and video architecture in detail
+Answer the following: (ANY FIVE ) (15) What is Python Keywords?
+Explain any 3 Keywords in detail
+What is Python comments?
+How you can do comments in python code?
+Explain in detail with example
+Explain arithmetic operators with proper example in python
+Explain If-else statement and Write code to print the largest of the three numbers
+What is Tuple?
+Write Advantages and difference between Tuples and List
+What is Set?
+Write code to create Set, adding item, and update Set
+Write note on Python Inheritance
+What is Variable?
+Explain Variable with example
+Answer the following: (ANY ONE) (04) Whiat is use of pass keyword in code?
+Explain with proper example
+Describe for loop with example
+Explain the datatypes to which is store the data in a key-value pair format Answer the following: (ANY ONE) Explain Python Exception with its common types
+What do you mean by Class and Object?
+Write code that create an instance of the class
+Write a short note on external device. 2
+What is Disk Storage?
+Explain the component of disk? 3
+What is ROM?
+Explain the types of ROM. 4
+What is cache memory?
+Explain the advantages & disadvantages of it? 5
+Write a short note on IP-Address. 6
+Explain DORA process in detail. 7
+Write a short note on ADDS
+Write a short note on different types of Ports available in network. 2
+Write a short note on Input device of network
+Explain the types of software error? 2
+What is secondary memory?
+Explain the characteristics of it?
+Write a short not on intranet internet and extranet with proper example
+Write a short note on four different command of DHCP with its proper use. 2
+Whatis the difference between computer group policy and user group policy with proper example?

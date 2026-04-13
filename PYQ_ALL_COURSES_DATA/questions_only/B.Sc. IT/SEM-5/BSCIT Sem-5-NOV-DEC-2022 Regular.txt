@@ -1,0 +1,79 @@
+Answer the following: (ANY SLX OUT OF EIGHT) What is Magento?
+Write down the complete installation steps to install Magento in your local machine
+List out and explain any 4 menu options available in sidebar of the admin store panel
+Explain configurable product with example in Magento
+How to configure Cart Price Rules?
+Explain it with suitable example
+Explain Free shipping and Flat rate shipping method in detail
+Explain Check / Money Order and Bank Transfer Payment methods in Magento
+Discuss Sales Reports and Review Reports in brief
+Explain Content Blocks and Widgets in Magento
+Explain Website, Store and Store View in brief with diagram
+Define the terms: Admin dashboard, Logo, Favicon, Store Demo Notice
+Explain Up-sell, Cross-sell and Related products in Magento
+Discuss the Inventory Management in Magento
+Write a short not on Orders and Invoices management by Admin in Magento
+Explain Zero Subtotal Checkout payment method in Magento
+Write a short not on Manage Customer and Customer Groups in Magento
+Explain the following terms : (Any Six) (30) I
+What is Regular Expression?
+Explain Sequence character of Regular Expression using example
+How to handle binary files in python?
+How to create data frame using Pandas?
+Explain the process of data cleansing using suitable example
+Discuss various Operations, sorting and indexing on the Data Frame
+Answer the following: (Any Two) (05) 1 Write down in detail why Al is required?
+Write down applications of Al
+What is NN?
+Explain architecture of NN in detail
+Define fragmentation
+Explain types of fragmentation in detail
+What is deadlock?
+Explain deadlock prevention schemes
+Explain Memory Management in Linux
+Explain Looping statements in shell scripts. ‘Write a short note on real time processing and batch processing
+Answer the following: (Any Two) (08) © moN What is Operating System?
+Explain the functions of Operating System
+What is PCB?
+Explain each part of PCB in detail
+Explain Monolithic Structure of Operating Systems
+Answer the following: (Any One) (06) What is Fixed Partition?
+Explain Multiprogramming with fixed Partitioning technique
+Boe ° o ~ IL What is critical section?
+Write down implementation of two process algorithm
+Discuss following commands with attributes/parameters
+Explain importance of software testing
+Explain black box testing techniques with example
+Discuss V model with diagram in brief
+Describe field level validation and inter-field dependencies in brief
+Explain performance and load testing in brief
+Describe various types of ambiguity in detail
+Discuss usability and exploratory testing in brief
+Explain risk based testing in brief
+Write a short note on levels of software testing
+Explain verification and validation in brief
+Differentiate between desk checking, walkthrough and inspection
+Discuss white box testing in details
+Explain state transition technique with example
+What is testing?
+Discuss system testing in detail
+Explain functional and non-functional testing in brief
+Write a note on regression testing
+Explain test case design in depth
+Discuss defect management tools in brief
+Explain test design coverage in brief
+Discuss test automation process in details
+List out Roles of system analyst
+Explain in brief
+Discuss the types of user in brief
+Write a short note on Decision Tree
+Explain file organization methods in brief
+Explain Post implementation Review in brief
+Explain conversion in details
+Which are testing techniques available?
+Explain in detail
+Explain System Development Life Cycle (SDLC)
+Explain any two in detail
+Write a short note on Input design
+Discuss benefits of computer assisted tools
+Draw a DFD for Inventory Management System

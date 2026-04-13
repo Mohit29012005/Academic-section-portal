@@ -1,0 +1,68 @@
+Describe the main difference between IPv4 and IPv6
+Define these keywords: Routing, Routing table, MAC table E. — Give the full form: DR, BDR, BGP, LSA, CIDR F
+Define network security and its threat
+Describe VLAN and its usage in brief
+Explain subnetting with suitable example. 2
+Answer the following: (ANY 2) (6) What is link-state routing protocol?
+Explain any one with example
+Describe: Port vs Socket C. — Explain OSI layer in brief 3
+Define these terminologies: LAN, WAN, WLAN B
+Describe: Router vs Switch vs Hub C
+Define : Static route, Default route, Ethernet 4, Answer the following: (ANY 1) (5) A. — Explain naming convention of IPv6
+Define these keywords: VPN, ACL C. — Explain NAT and its type
+Write a short note in DNS hierarchy in detail with proper example
+Explain the client server architecture in detail with proper example
+Explain DORA process in detail
+What is the difference between symmetric Key v/s Asymmetric Key Discuss the L2TP and PPTP Protocol of VPN
+Write a short note on type of windows firewall profile
+Write a short note on DNS zone types. 2
+Write a short note on IP-Address
+What are the differences between IPv4 and IPv6 protocols?
+Describe SELinux in brief. ay Pp S How to configure Samba service?
+What is DNS?
+How DNS server Works?
+Explain SMTP, IMAP and POP3 Email protocols in brief
+What is encryption?
+Explain encryptions with Redhatlinux. 2
+Answer the following: (ANY ONE) (05) Explain Netfilter architecture in brief. e Qs & > What is the importance of file permission?
+How to change file permission?
+Explain with example. 3
+What is DHCP?
+Explain DHCP configuration in brief
+Discuss features of Apache HTTP server. 4
+Explain basic configuration of mail server. @ B
+What is the role of the NSS?
+How to identifying files in Linux? 2
+Discuss the Linux Execution Environment. 3
+Describe if...fi statement and if...else...fi statement with example. 4
+Describe [d, rwx, rwx, rwx, +] characters in Linux. 5
+Explain Recursion function with example. 6
+List out BASH keywords. 7
+Explain Linux Components in brief
+What is Linux?
+Describe its features. 2
+Explain these commands: pwd, Is, cd, mkdir, rmdir Q-3
+Describe for loop with example. 2
+Explain Arithmetic Expression
+Discuss the commands: touch, rm, cp, mv, rename. 2
+Explain these keywords: exec Q-5
+Give the full-form of these keywords: CGI, YUM, CLI, psql, TCP, UDP yr ) 2
+Describe Client-Server and Peer-to-peer terminology
+Discuss the Advantages and Disadvantages of wireless Communication. 2
+Explain a cellular system in detail. 3
+Write a short note on ISM band. 4, Discuss about the different types of UNII band in detail. 5
+Explain Progression of WLAN architecture. 6
+Define about Active scanning and passive scanning in brief. 7
+Explain WLAN topologies. 8
+List out major wireless attacks
+Explain any one in brief
+Discuss about wireless Communication and Discuss its types. 2
+Define the term of radio frequency and Explain its characteristics. [B] List out different antenna types
+Discuss FHSS in brief. 2
+Discuss various access point configuration mode. [B] Full form of DSSS
+Discuss any two in brief
+Il What is Patch Terminology?
+Why should we install patch?
+Ill Explain perimeter security in firewall. 4, Answer the following: (Any two) (8) I What is GNOME?
+Explain in brief
+Explain it

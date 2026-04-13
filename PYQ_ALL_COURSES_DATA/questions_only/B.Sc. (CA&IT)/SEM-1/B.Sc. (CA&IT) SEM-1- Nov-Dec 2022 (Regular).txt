@@ -1,0 +1,59 @@
+Answer the following: (Any Five) (30) a) What is Flowchart?
+Illustrate General Rules for creating Flowchart. b) Explain basic structure of C Program with example. c) Create an Algorithm and draw a Flowchart to find sum of all the integers greater than 100 and less than 200 that are divisible by 7. d) How to define Symbolic Constants in C Language?
+Explain rules to define Symbolic Constants. e) Explain Conditional and Special Operators with proper example. f) Discuss switch case statement with proper example. g) Demonstrate break and continue statement with example
+Any Two) (12) a) What is Algorithm?
+Explain Branching Type of Algorithm with example. b) Write a short note on C Tokens. c) Discuss various properties of Algorithm. 3
+Any Two) (12) a) What is Operator?
+Explain Increment and Decrement operators with example. b) Explain Nested if... else statement with proper example. c) Write a C Program to find smallest numbers among three numbers. 4, Answer the following
+Any One) (06) a) Write a c program to find sum of first 100 natural odd numbers and even numbers. b) What is looping?
+Explain for loop with proper example
+SECTION-I Answer the following: (Any Five) What is DOS?
+Explain any five Internal commands of DOS
+Define terms: Header, Footer, Footnote, Endnote, Drop cap, Watermark
+Discuss Any five Mathematical Function in MS Excel
+Write a short note on Custom Animation
+What is MS-Access?
+Describe steps to creating Database in MS-Access
+Describe MS-Access Data types
+Compare Word, Excel and PowerPoint
+SECTION-IL Answer the following: (Any Two) What is Batch file?
+Discuss with an example
+What is Mail Merge?
+Define step of Mail Merge
+What is MS PowerPoint?
+Discuss features of MS PowerPoint
+Define terms: Naming Range, Pivot Table, Goal Seek Answer the following: (Any One) Explain MS-Access Object
+How to Filtering data in MS-Access?
+Write a short note on Internet. 2
+Explain various background properties of CSS. 3
+Which tag is used to create hyperlink in HTML?
+Explain it with suitable example. 4
+Discuss various text formatting tags of HTML. 5
+Explain the use of drag and drop API of HTMLS. 6
+Discuss the advantages and features of JavaScript. 7
+Give the output of the following code and explain it. <script> var x = 20; var temp = function () { console.log(x); var x = 18; B tempQ); </script> SECTION-IL 2
+What is web site?
+State the difference between static and dynamic website. 2
+Discuss any three Input and Output Devices
+Discuss Internet Access in detail
+Write a short note on Scripting Language
+Write down steps for formatting computer
+Discuss Language Processor: Compiler, Interpreter and Assembler
+Discuss Block Diagram of Micro Computer in detail
+Explain BIOS in detail. 3
+What is Port?
+Explain types of port in details. 3
+Write a short note on Programmed 1/0
+Discuss Interrupt in detail. 4, Answer the following: (Any One) (06) 1
+Differentiate between RAM and ROM. 2
+Define the following set by Roaster method. @) A= {x /x isa single digited prime number} (ii) B -{s/x= ne nnsah n+l (iii) C = {x/x? -7=0,xe R} 2
+Discuss Isomorphic Graph in detail. 5
+Define: Domain, Co Domain and Range of the Function. 6
+Discuss The Pigeonhole Principle in detail. 7, Find the number of different words that can be formed with the letters of the word ‘BUTTER’ so that the vowels are always together
+Define the non-verbal communication in details with its sub parts
+Discuss the techniques of reading with an example
+Describe the difference between hearing and listening Explain communication with various definitions and support your answer with an example. 7C’s plays a vital role in communication, justify this statement 7 Define the barriers of listening with an example in your own words
+Discuss the articulation, voice modulation in your own words. 2
+Explain any two standard definitions of communication and Give appropriate example of that. 3
+Discuss the extrapersonal and intrapersonal communication
+All are compulsory) 1 Who initiate the communication process?

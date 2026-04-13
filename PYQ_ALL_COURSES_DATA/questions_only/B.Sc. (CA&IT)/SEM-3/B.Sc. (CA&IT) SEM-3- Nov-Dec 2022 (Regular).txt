@@ -1,0 +1,78 @@
+What is data structure?
+What is Stack?
+List out the operations of Stack
+Write algorithm to Push an Itinto the Stack
+What is simple Queue?
+Write an algorithm to Insert and Delete Operations of simple Queue. §
+Explain AVL tree with example
+What is DFS?
+Explain the algorithm for DFS. 7
+Write down the algorithm of Quick sort, and short the following sequence Number using quick sort: 5, 3,8, 1,4, 6, 2 and 7 SECTION-IL 2
+List out the stack applications, and Write a recursive algorithm that finds the Fibonacci no. 2
+Describe singly linked list, write an algorithm for search operation. 3
+What is Tree?
+Explain types of Tree data structure with example. 3; Answer the following: (Any 2) [12] 1
+Write down the Pre-Order algorithm and example for BST
+Explain BFS traversal and write algorithm for BFS
+Explain types of linked list data structure and explain any one linked list in detail. 4
+Answer the following: (Any 1) [06] 1, What is sorting?
+Explain the Bubble Sort with suitable Example. 2, What is queue?
+Explain types of queue with example
+How StringBuffer class is different from String class?
+Discuss any two methods that is not available in String class
+What is Throwable?
+Explain try, catch finally, throw and throws
+What is method overloading?
+Explain with example Explain with example Vector class
+What is the use of Lambda expression?
+In Which Version of jdk Oracle introduced this features?
+Explain in brief block lambda expression
+Explain phaser in detail
+SECTION-IT Answer the following: (Any Two) (12) Why java is platform independent language?
+Explain JDK,JRE, JRE, JIT Which are the ways to implements thread in java?
+Explain with example
+Explain access specifier in java
+Answer the following: (Any Two) (12) How to create object of Calendar class?
+List out any six constants of Calendar
+Explain method reference in lambda expression
+Differentiate HashTable and Vector
+Explain HashTable in detail Answer the following: (Any One) (06) Discuss fork/join framework Explain executer in detail
+Discuss Dr
+What is E-R Model?
+Explain components of E-R Model
+Explain 2NF and 3NF
+Explain Oracle Data Types
+What is Join?
+Explain with example and list out types of it
+What is Sequence?
+Explain keywords and parameters of Sequence
+Discuss Role of Database Administrator
+Explain Fifth Normal Form in detail
+Answer the following: (Any Two) What is Constraints?
+List out types of it and discuss any two Constraints
+SECTION-I Answer the following: (Any Five out Seven) Who is System Analyst?
+Discuss the role of system analyst
+Write a short note on structured English
+Discuss the fact finding techniques: - Interviews and Questionnaires
+Discuss the difference between physical DFD vs. logical DFD
+Draw as well as explain elements of DFD in detail
+Explain principles of code design in brief
+Explain characteristics of system in brief
+Discuss seven phases of the System Development Life Cycle
+Discuss difference between White Box Testing Vs
+Discuss Level of Testing in detail
+Discuss Case Study of “Hotel Management System”
+Discuss the structure of Linear Programming Problem. 2
+Find the optimal allocation of the sales persons to different region. 5
+Define Terms: a) Unbalanced Transportation Problem b) Who invented the term of Operations Research? c) What is RIM Condition? d) MODI Method is also known as 5 e) Which method used to find out Penalty? f) M+N - 1= Allocation is known as 6
+Discuss mathematical model of Assignment Problem
+Discuss the step of Processing N Jobs on 2 Machines
+SECTION-I ie Answer the following: (Any Five) (30) a) What is Environment?
+Define the Scope of Environment. b) Define Terms: Ecology and Ecosystem. c) What is Water Pollution?
+Define different effects of Water Pollution. d) What is Air Pollution?
+Describe classification of Air Pollution. e) Write a short note on Global Warming & Green Houses Effects f) What is Disaster?
+Discuss Disaster Management Cycle. g) Explain the role of Insurance Company in Rehabilitation
+Answer the following: (Any Twe) (12) a) What is Noise Pollution?
+Define sources of Noise Pollution. b) What is Acid Rain?
+Discuss effect and solution of Acid Rain c) What is Hazard?
+Explain types of Hazards. 4, Answer the following: (Any One) (06) a) Describe the role of Police in Rehabilitation. b) Define the role of Non Government in Rehabilitation

@@ -1,0 +1,27 @@
+What is E-R diagram?
+Explain components of it
+What is normalization?
+Explain Boyce/Codd normalization in details
+Answer the following: (Any Two) Define constraints?
+Explain primary key and foreign key in detail
+Describe different types of Joins in SQL
+Calculate string Functions with example
+Can you provide a simple 06 CO3 BTL6 example of how to obtain and use InetAddress in a Java program?
+Explain URLConnection and HttpURLConnection. 06 CO3 BTLI Describe the process of passing Lambda Expressions as 06 col BTLI1 arguments to methods in Java with example
+Answer the following: (Any Two) 12 1 How do you implement and work with generic types in| 06 Cco2 BTL5 Java, and how does it contribute to code reusability and type safety? 2 Explain the Hashtable class in Java and how it differs | 06 CO3 BTLI from other data structures in the java.util package. 3 | What is the role of Server Sockets in Java for TCP/IP 06 Cco3 BTL3 communication?
+Explain with example
+What are the advantages and 06 col BTLI, usages of computer networking?
+Discuss
+BTL2 2 | What is subnetting?
+Justify the statement “ subnetting can | 06 Cco3 BTLS improve your networking experience.” 3 | What is routing?
+Explain three types of routing and 06 Co3 BTL4 distinguish static and dynamic routing. 4| What are the different ways to secure a computer 06 CO5 BTL3, network?
+How do you implement and evaluate various BTL6 strategies to enhance security of a computer network?
+What is address resolution protocol (ARP)?
+How does it 06 work?
+Co4 BTL2, BTL3 06 cos BYL4 06 col BTL4 What is firewall?
+Explain and compare different 06 ag network topologies. 2 3 | What is switching?
+Explain different types of switching 06 co2 are techniques
+Answer the following: (Any Two) 12 1 | Differentiate the MAC address with the IP address. 06 CO3 BTL4 2 | Differentiate TCP with UDP protocol. 06 Co4 BTL4 3 | Define: 06 CO3 BTLI 1) Unicasting 2) Anycasting 2) Multicasting 4)Broadcasting Q-4_ | Answer the following: (Any One) 06 1 | What is Encryption?
+Why do we need Encryption?
+How 06 COS BTL2, does Asymmetric Encryption works?
+BTL4 2 | What is computer virus?

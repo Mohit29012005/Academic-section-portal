@@ -1,0 +1,68 @@
+Write an algorithm and draw a flowchart to find area of rectangle. 2
+What is the use of flowchart?
+Discuss various flowchart symbols. _ 3
+What is an identifier?
+Write down naming rules of identifiers. 4
+Discuss arithmetic operators in detail. 5
+Explain reading and writing character with example. 6
+What is looping?
+Explain for loop with example. 7
+Explain break and continue statement with example
+Write down types of Algorithms
+Discuss anyone in detail with example. 2
+Write a short note on rules for creating F! lowehart. 3
+Draw and explain basic structure of C program. 3
+What is Operator?
+Explain Logical Operators with example. 2. | Which header file contain the character function?
+Explain character set functions with its use. 3
+Write down the difference between while loop and do-while loop. 4, Answer the following: (Any 1) [06] 1
+Explain if... else statement with example. 2
+Discuss switch statement in detail
+Write a short note on HTTP protocol. 2
+Explain different text formatting tags of HTML
+Discuss the different ways an HTML element can be accessed in a JavaScript code. 4
+What is the use of geolocation API?
+Explain it with different methods. 6
+Explain it with suitable example. 7
+What are the pop-up boxes available in JavaScript?
+List out various DOS command and explain any five with example
+Write a short note on Active Directory
+What is Registry?
+Explain Structure of Registry
+Explain Round Robin Scheduling Algorithm with example
+Write a short note on Process Control Block (PCB)
+Explain distributed operating system in detail
+Discuss DIR Command with all attributes
+Explain tracert and nslookup command
+What is process?
+Explain Process State Diagram in detail
+Differentiate Logical and Physical Address Space
+SECTION-I Answer the following: (Any Five out Seven) What is Computer Network?
+Discuss Advantages and Disadvantages of Computer Network
+Explain Ring & Star Network topologies in detail with suitable figure
+Discuss Computer Threats in brief
+What is Cryptography?
+Explain Concept of Cryptography
+What is Authentication?
+Discuss different ways of Authentications
+Discuss three main methods of authentication that are used on today's wireless LANs
+Discuss Basic Security Tips for Remote Desktop
+Discuss advantages & disadvantages of computer Security
+Discuss Network Attack: - Denial-of-Service Attack and Sniffer Attack
+Explain Plaintext and Cipher text with suitable example
+What is Password?
+Discuss tips to create secure password
+Discuss the concept of Intrusion Detection and Prevention Systems
+Find (i) A U B (ii)A 0 B (iii) A’ and (iv) B’ 2
+Find (i) The number of students who play cricket but not play football (ii) The number of students who play football (iii) The number of students who play football but not play cricket. 3. _(243x,x20 if F@) ={ 737 x<0 Then find f(2) + f(0) + f(-2) + f(3) — FG) Discuss Isomorphic Graph in detail. 5
+Define the following terms in context of graph theory with suitable example: Graph, Connected graph, Pendent vertex, Closed Walk, Paths 21 4 10.2 IfA= f 3 - | and B = Ls 4 il then find BA and AB. 5212 —-5 3 1 7, How many different license plates can be made if each plat contains a sequence of two uppercase English letters followed by three digits?
+Discuss the barriers to effective communication with examples
+Explain the articles, ‘A’, ‘An’. ‘The’ with examples
+How is listening different from hearing?
+What do you mean by Reading comprehension?
+Discuss intensive reading skills
+Discuss various parts of formal letters in detail
+Whatare the characteristics of a good listener?
+Discuss the challenges faced during speaking in front of the public
+How to overcome the fear of public speaking?
+Discuss any three types of non-verbal communication skills. 1 out of 2

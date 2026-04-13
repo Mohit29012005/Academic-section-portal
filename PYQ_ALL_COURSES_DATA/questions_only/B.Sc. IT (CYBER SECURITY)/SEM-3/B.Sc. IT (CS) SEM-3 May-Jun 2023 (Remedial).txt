@@ -1,0 +1,57 @@
+SECTION-I Answer the following: (Any Five) (30) What is RAID?
+Explain any two level of RAID in detail
+Write a short note on Network IP Address
+Discuss Manual Pages with all options in brief
+What is Shell?
+Write down advantages and disadvantages of Shell Script
+Discuss all commands which are working with file content
+Differentiate YUM V/S RPM
+Explain Shadow file in detail
+Give difference between Linux and Unix
+Explain all Filters in detail
+Discuss Absolute and Relative Paths in brief
+Write a short note on User Account
+What is Three Levels of the Architecture?
+Explain any type. 2
+Write a short note on 3NF. 3
+Explain SQL Logical Operators with example. 4
+Explain any five-scalar function with example. 5
+Write difference between unique and primary key. 6
+Write a short note on cluster. 7
+Explain the Dr
+Explain 2NF with example. 2. what is RDBMS? 3
+Write a short note on normalization? 2
+What is joins?
+Explain types of joins. 2
+What is subquery?
+Explain with example 3
+Differentiate primary key and foreign key. 3
+Write a difference between index and view. 2
+List out types of indexes
+Explain in brief JDK, JRE, JVM, JIT
+What is multi thread?
+Explain different way to implements thread
+List out types of inheritance?
+Explain any two with example
+Explain TCP/IP server sockets with example
+Differentiate between abstract classes with interface
+Write in brief try, catch, throw, throws, finally. 3 Answer the following in detail: (ANY TWO) (12) A) Explain in brief Set and List
+Explain URL, URLConnection with example
+Explain in brief java security manager. 4 Answer the following: (ANY ONE) (06) A) What is lambda expression?
+Explain advantages of it
+Explain method and constructor reference of lambda expression. ceeseeee -------- MALE AL UINIVERSEPY f B
+EXPLAIN IN DETAIL DIFFERENCE BETWEEN IPV4 AND IPV6
+EXPLAIN DELIVRY & ROUTING OF IP PACKET
+EXPLAIN PROCESS TO PROCESS COMMUNICATION IN TCP
+WHAT IS CRYPTOGRAPHY?
+EXPLAIN SYMETRIC ENCRYPTION
+DISCUSS FUNCTION OF RARP PROTOCOL. yu nu Ss w WHAT IS COMPUTER NETWORK?
+EXPLAIN APPLICATIONS OF COMPUTER NETWORK
+EXPLAIN OS!
+DISCUSS SELECTIVE REPEAT ARQIN DETAIL. 3
+EXPLAIN CSMA/CD PROTOCOL IN DETAIL
+WHAT IS SUBNETTING?
+EXPLAIN RULES FOR SUBNETTING WITH EXAMPLE. 2
+DISCUSS TCP CONNECTION ESTABLISHMENT PHASE IN DETAIL. 3
+DISCUSS IP DATAGRAM HEADER FORMAT IN DETAIL
+EXPLAIN SMTP PROTOCOL IN DETAIL

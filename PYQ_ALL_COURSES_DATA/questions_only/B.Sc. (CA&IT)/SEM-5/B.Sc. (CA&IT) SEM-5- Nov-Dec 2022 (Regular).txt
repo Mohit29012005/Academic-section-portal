@@ -1,0 +1,74 @@
+List out validation controls
+Explain any two in detail with its key properties
+Explain listbox and dropdownlist controls with example
+Explain gridview control with properties, events and methods
+What is web service?
+How to implement it in ASP.NET application
+Explain theme and skin file in designing perspective of ASP.NET
+Differentiate application and session state management techniques
+Explain fileupload control with example
+Answer the following: (any two) What is AJAX?
+Explain the basic control of AJAX
+What is stored procedure?
+Describe its advantages in application
+Explain detailview and formview controls with example
+Answer the following: (any one) What is state management?
+Explain viewstate and querystring techniques
+Explain the use of cookies
+Discuss its types
+Explain the advantages of PHP
+Explain the purpose of $_GET, $ POST and $ REQUEST with suitable example
+Give the difference between session and cookie
+How can you create and use cookie in PHP?
+Explain with example
+How can you handle errors in PHP?
+Explain different PHP-MySQL data fetching methods
+How can you create posts in WordPress?
+Explain Joomla architecture in brief
+SECTION-II Answer the following (ANY 2) What is the difference between index array and associative array in PHP?
+Explain different associative array sorting functions with example
+How can you read contents from .csv file in PHP?
+Give the difference between include(), require(), include_once() and require_once()
+Explain the advantages of MySQL
+Explain the roles and responsibilities of Admin, Editor and Author users of WordPress
+How it is differed from WordPress?
+Explain backend user groups of Joomla
+Create a sample site in Joomla and customize it
+Write down steps to do so. [ (30) (12) (12) (06)
+Answer the following: (Any 5) [30] (A) What is Process?
+Explain Process State Diagram in detail
+Explain Critical Section Problem in detail
+What is Deadlock?
+Explain Deadlock Characterization
+Discuss Swapping
+Write a short note on Paging
+Discuss Reader-Writer Problem in detail
+Explain Safe State Diagram with example
+Define Segmentation. 4, Answer the following: (Any 1) [06] (A) Explain Type of Shell
+Explain ls Command and we Command with Example
+Explain Active directory lightweight directory services in brief
+Write down difference between static routing and dynamic routing
+Explain Active directory certificate services in brief
+Discuss remote desktop sharing with suitable example
+Write down steps how to add new users to Active Directory. aaw fF Wn Discuss Distance vector routing with its limitations
+Write a short note proxy server. ne Explain various types server in detail in VLAN with types in brief. hud Exp) 1 Explain various DHCP allocation methods in detail. 2 Explain domain and forest in brief. 3
+Write a short note on Server Virtualization
+Answer the following: (Any Five) What are the roles and responsibilities of Business Analyst?
+Explain RASCI matrix technique of analyzing Stakeholders
+Explain Elements of Questionnaires
+What are the various sources of data?
+Explain in brief
+How to deal with missing data?
+Explain methods for it
+Discuss Knowledge areas in Business Analysis. 2
+What is Stakeholder?
+Explain various categories of Stakeholders. 3
+What is Business Analytics?
+Explain its types. 3, Answer the following: (Any Two) 1
+Explain Workshop process in detail. 2
+Explain Brainstorming Technique in detail. 3
+What is Data Classification?
+Explain its methods. 4, Answer the following: (Any One) 1
+Explain various tools for Business Analytics. 2
+What is data validation?
+Write down the steps to solve data validation problems using Excel

@@ -134,12 +134,25 @@ def rooms_list(request):
 def subject_list(request):
     course_id = request.query_params.get("course_id")
     semester = request.query_params.get("semester")
-    subjects = Subject.objects.all().select_related("course")
+
+    subjects = Subject.objects.all()
     if course_id:
-        subjects = subjects.filter(course_id=course_id)
+        # Check if course_id is a UUID or a name
+        from django.core.exceptions import ValidationError
+        try:
+            # Try UUID match
+            subjects = subjects.filter(course_id=course_id)
+        except (ValidationError, ValueError):
+            # Fallback to name match
+            subjects = subjects.filter(course__name=course_id)
+
     if semester:
-        subjects = subjects.filter(semester=semester)
-    return Response(SubjectSerializer(subjects, many=True).data)
+        try:
+            subjects = subjects.filter(semester=int(semester))
+        except (ValueError, TypeError):
+            pass
+
+    return Response(SubjectSerializer(subjects.select_related("course"), many=True).data)
 
 
 @api_view(["GET", "POST"])
@@ -581,6 +594,17 @@ def admin_generate_timetable(request):
             {"success": False, "error": str(e)},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
         )
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def pyq_search(request):
+    subject_id = request.query_params.get('subject_id')
+    if not subject_id:
+        return Response({"error": "subject_id is required"}, status=400)
+    
+    questions = Question.objects.filter(exam__subject_id=subject_id).values('question_id', 'question_text', 'marks', 'exam__title')
+    return Response(list(questions))
 
 
 @api_view(["GET"])

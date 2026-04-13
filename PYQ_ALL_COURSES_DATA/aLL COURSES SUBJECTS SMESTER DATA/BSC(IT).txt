@@ -1,0 +1,69 @@
+BSC(IT)
+
+sem 1
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Algorithm Development and Introduction to Programming -I	Open	U21A1ADP1	4		Read More
+Introduction to Data Analysis and Data Management	Open	U21A2DADM	4		Read More
+Multimedia and Animation	Open	U21B3MA	4	EL-1	Read More
+Introduction to Web Development – I	Open	U21B3WD1	4	EL-1	Read More
+Introduction to Digital Electronics	Open	U21C4IDE	4		Read More
+Communication Skill-I	Open	U21D5CS1	2		Read More
+Information Technology And System Maintenance	Open	U21E6ITS	2		Read More
+Environmental Studies	Open	U21F7ENS	2		Read More
+
+
+sem 2
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Algorithm Development and Introduction to Programming -II	Open	U22A1ADP2	4		Read More
+Database Management System-I	Open	U22A2DM1	4		Read More
+Introduction to web development – II	Open	U22B3WD2	4	EL-2	Read More
+Microprocessor Programming	Open	U22B3MP	4	EL-2	Read More
+Computer Organization and Architecture	Open	U22C4COA	4		Read More
+Communication Skill-II	Open	U22D5CS2	4		Read More
+Basic of Computer Networks	Open	U22E6BCN	2		Read More
+Indian Values and Ethics	Open	U22G7IVE	2		Read More
+
+
+sem 3 
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Object Oriented Programming Concepts	Open	U23A1OOP	4		Read More
+Database Management System-II	Open	U23A2DM2	4		Read More
+Application Development Tool-I	Open	U23A3DT1	4		Read More
+Fundamental Mathematics for IT	Open	U23C4FMI	4		Read More
+Employability Skills-I	Open	U23D5ES1	2		Read More
+Advanced Computer Networks	Open	U23E6ACN	2		Read More
+Principles of Management – Bhagavad Gita	Open	U23G7PMB	2		Read More
+
+sem 4
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Application development Tool-II	Core	U24A1DT2	3		Read More
+ENVIRONMENT DISASTER MANAGEMENT	Core	U24B2EDM	3		Read More
+Application development Tool-III	Core	U24A3DT3	5		Read More
+(Elective - I) Mobile Applications Development-1	Core	U24A4MA1	5		Read More
+(Elective - I) Web Programming with PHP	Core	U24A4WP	5		Read More
+(Elective - I) Server Management	Core	U24A4SM	5		Read More
+Management Information System	Core	U24A5MIS	3		Read More
+
+
+sem 5
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+(Elective-II) Web Programming Framework	Core	U25A1WPF	5		Read More
+(Elective - II) Internetwork Implementation	Core	U25A1NIN	5		Read More
+(Elective - III) Advance Mobile Application Development	Core	U25A2IMA	5		Read More
+(Elective - III) CMS Project	Core	U25A2CMS	5		Read More
+(Elective - III) Network Security	Core	U25A2NSE	5		Read More
+(Elective – III ) Introduction to Machine Learning	Core	U25A2IML	5		
+Operating System	Core	U25A3OPS	5		Read More
+Software Testing & Quality Assurance	Core	U25A4STQ	3		Read More
+System Analysis and Design	Core	U25A5SAD	3		Read More
+Read More
+
+sem 6
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+INDUSTRIAL PROJECT	Core	U26A1PRJ	24		Read More

@@ -1,0 +1,87 @@
+Any Six) Q-2 0} (i) (mm) (Iv) vy) (vp (vil) vin (A) (8) (A) (B) Why Activity is required in Android?
+How activities are implemented?
+Demonstrate using proper code and explanation. ; Why Android is so popular?
+Justify its popularity features wise. js id in details, Explain hist. f android in ; ; Why layout ” required in Android?
+Illustrate relative layout with suitable Why edepter is required in Listview?
+Demonstrate with proper example. i two controls with suitable example. i ??
+Explain any eat ‘sul nan . eS application or API available to send SMS?
+What i ot 7 Show how to use alert dialog with proper code. at is dialog?
+Explain the architecture of ot oid Activity Life Cycle?
+List out all life cycle methods vy we Need to control Any two methods of your choice in brief. of Android Activity, Descti Wh: tener iS required in android?
+Explain the OnClick listener at is listener?
+Why liste with suitable example
+What is fragment?
+Why frag) Explain fragment in detail W! ment is Tequired to be reused for common UI space? th proper example
+Doas directed, es of methods with proper example. at is SQLite?
+Explain the tyP store data of App?
+How many alternatives the aes Android use file sy ee y to saV° Your app data?
+What is AngularJS Module?
+Explain how to create a Module?
+Explain AngularJS Form Validation with appropriate example
+Write a short note on Animate in HTML, element
+Differentiate: One-way bin ding v/s two-way binding
+Explain controller with suitable example
+Write a short note on Shttp and Stimeout
+Discuss the HTML DOM in brie Answer the following: (ANY TWo) Explain MVC architecture of Angularls with appropriate example
+Discuss the AngularJS Object with Suitable example
+What is Data Binding in Aneularygy Explain with appropriate example
+Explain built-in Angula)S filters with Suitable examples. . ic Discuss the Events: oe Write a short note 02 APS Answer the following ( How can you integrate A™ : + bet D Sin seuss AngularlS C5°™ 30 Explain ity ; ; Jat With appropriate example. ‘2 APER What is Routing in AD” END OF k and Mouse, JS $e . ane PN eNt object, TWo) gular!
+Answer the following: (ANY SIX OUT OF EIGHT) (30) What is MongoDB?
+Discuss the advantages of MongoDB
+What is NoSQL?
+Discuss the use of NoSQL in Industry Discuss aggregateO in MongoDB with example in details
+How to Create and Drop Database and Collection in MongoDB Explain Relationships in MongoDB
+Explain MapReduee in Mongo
+Explain Column and Bar Charts in MongoDB
+Discuss Text Charts in MongoDB. 2
+Explain the types of NoSQL- databases in detail
+Explain MongoDB Query Language in detail. the following: (ANY TWO) (08) Answer o A. — Explain the us¢ of pretty0: limit(, sort, ensureIndex() in MongoDB. * ain B
+Explain Insert, update and Delete Document in MongoDB with example. » Explain Insert, ‘GQ sD i terms: Database, Collection, Document, ObjectID . efine the ing: (ANY Tw (08) ‘ Answer the followine" © 0) A
+Explain Regular expression with example in MongoDB. - Explain Re; — BE: i. in Covered Queries with example in MongoDB
+Xplain Cov! . . c a in nt earch with example jn MongoDB. . lain Te: . 5. owing?
+Discuss SDLC in brief
+Discuss the five views (architecture) of a system with suitable diagram
+Explain association and realization with example
+Discuss aggregation and composition with suitable example E. _Incontext of class diagram explain visibility and multiplicity in the diagram
+F What is interface?
+How it is rendered in UML give suitable example. ® C Fora Library management system, Draw sequence diagram for the use case “ login” and “issue book”, H
+Explain sequential and conditional flow in activity diagram. 2
+Answer the following: (ANY 1) (06) AL Lista the building block of UML, and explain any one of the building . lown B Wee i an by common mechanism?
+Discuss extensibility mechanism . lo you with suitable example. . 3
+Answer the following?
+How could you model the associane ane zation relationship?
+Be Whatis a elation ship?
+Define dependency
+Explain the stereotypes used in dependen, cy. sagt 1 e 4
+Answer the followi0S* ON te ” A. i : classes, ‘utes and relationships for Bank 5, B Whatis package?
+Explain visib’ D "porting and exporting of package. 8)
+Answer the following: (Any Six) (30) Explain MVC pattern in detail, How to send a data from action method to view?
+Explain in brief
+Explain razor code expressions, Explain data context class in detai), Explain following attributes which impacts on the schema of the database. 1
+Foreign Key How WEBAPI Routing config work?
+Explain ActionResult type in brieg
+What is use of WEBAPI?
+Explain benefit of WEBAPI
+Explain Helper method in detail
+What is view engine?
+Write down difference between razor view engine and web form view engine
+Explain code first and database first approach in detail
+Answer the following: (4°Y one) (06) Explain model binding technique in detail, : fil ‘ What is filter?
+Explain any ° "Mts in detaiy VT) Answer the following: (ABY wo) (08) . ail
+Explain HTTP verbs in) deta! gom WE)
+How to return JSON data f" YFBAPI controller?
+Explain using example. sing J How to Consume WEBAP! using QUERY ajax(y?
+Answer the following: (ANY SIX OUT OF EIGHT) (30) Explain methods of HTTPServiet class What is JSP?
+Write down advantages of Servlet
+What is navigation in JSF?
+Explain any one
+What is hibernate?
+Write down advantages of it Write a servlet program which show the use of handling POST request Write down the difference between CGT ang Servlet
+Write a short note on implicit objects in JSP mas noo w P Write a short note on hibernate query language 2
+Answer the following: (ANY 1) 6) List out session tracking techniques, Differentiate session tracking with cookie and using HttpSession with an examp|e, Which interface is used to include the content o¢ another resource?
+Explain in detail »D 3
+Explain different phases of JSF life cycle. i « ts in J B. _ List out different types of even'S SF
+Explain any one in detail. 4
+Discuss standard validations 7 JSF in detaiy, B
+Explain in detail the standard 9°80" '98s in gp, , Y1 5
+Write a hibernate program for inse Paate/detete/display operation. . “4 ite B

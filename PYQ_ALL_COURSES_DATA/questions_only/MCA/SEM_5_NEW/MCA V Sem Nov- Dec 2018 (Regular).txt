@@ -1,0 +1,62 @@
+Normalization (2) DBMS Benchmarking (3) Fragmentation (4) Define: Parallel Database System. 2.( \ Questions.(Any Two) (1) What is FD?
+Describe Armshong's Axioms to derive FD
+Explain Conceptual Schema Tuning
+Explain Distributed DBMS Architecture. 3.(A) Questions.(Any Two) (1) Explain Databaso Queries and View Tuning with Example
+Describe BCNF with example
+Explain Two Phase Commit.Nov- Dec 2018 (08) (1 1) (1 1) 4
+Explain PL/SQL.In built Exception with Example
+Write a PL/SQL that show the use of any loop structure
+Explain Advantages of PL/SQL Packages. write a PL/SQL procedure which get user name and display length of name to calling block.(08) (1 1) (1) (2) (3) (1 1)
+Write a difference between style & theme
+What is auto complete text view?
+How it's different from multi auto complete text view?
+List out all dialogs
+List out all gradients types. .(Any TWO) Short note on: Architecture of Android OS What is resource?
+How to access integer, Boolean and String value from JAVA file?
+Explain
+What is Layout?
+Describe all built-in layout classes' .(Any TWO) How to organized screen into tabs?
+How to draw shapes in android?
+Describe any 5 shape methods
+List out types of animation?
+Explain Frame by Frame with suitable example.(t 1)Q-1
+What is Service?
+Explain" How shared preference works?
+Describe
+Implement the code for reading data from fire using Android apprication.Explain the difference between phone Dialing & Calling
+Write short note on phone calls
+Explain how to perform database operations on Selite database
+Answer the foilowing.(Any TWO) Implement the code for Sending the SMS in Android using JAVA.How browsing the web with WebView Control?
+What is NDK?
+Write down merirs and demerits of NDK. -----X_END oF PAPER___X-____1. 2. 3
+Explain different data types with example in JavaScript' tr
+Discuss adding events handlers with suitable example in JavaScript Q-2. tA] (Any Two) (10) L List out types of loops in Java Script
+Explain any two with example in Java ScriPt
+Explain different form validation with proper example' m
+Define types of decision making statements
+Q-2. tBI What is JSON?
+Explain getElementByldQ and getElementsByClassNameQ with proper r. ;.ffi#;roendchildQ and replacechildQ with suitable example. m
+Explain navigator and popup boxes in JavaScript with example
+IBI What is cookies?
+Discuss collection and document in details
+Explain covered queries in brief
+Explain create and drop database in MongoDB with suitable example
+Discuss about findQ and prettyQ with proper example. m
+Explain insert and update document in VtongiDe wittr suitable example
+Discuss about auto-increment sequence in depth. '!
+Write a short note on regular expression in advanced MongoDB
+List outtypes of loops in Java Script' Explain any two with example in Java tr. iili:t, different form validation with proper example' III
+Define types of decision making statements' Explain any hilo with example in Java ScriPt' What is JSON?
+AnY Two) Explain getElementBy'dQ and getElementsByClassNameQ with proper ffi i'*rendchildganarelral:lli:,:l:,::'*f "ffiJExplain navigator and popup boxes in JavaScript with example' What is cookies?
+Explain covered queries in brief' tAI Answbr t\e fotlowing: (Any Two) - nh --.:+L .,ii+a' (10) L Explain create and drop database in MongoDB with suitable example' IL .Discuss about findQ and prettyO with proper example' m
+Discuss about auto-increment sequence in depth' ru.WriteashortnoteonregularexpressioninadvancedMongoDB. tBl What is relationships in advanced MongoDB ? ' 01) [Total l\{arks: 60 ITime: 3 Hoursl Q-1
+Discuss the basic building bloclcs of UML
+Draw the architecture of software and explair.r it in detail
+Draw a class diagram for railway reservation system
+Discuss the generalization relationship with suitable example. m
+Explain interface,_type and role_in brief
+Discuss common rnodeling techniqr-res iri details
+Discuss Use case diagram with suitabl".*u,rpi
+Explain Activity diagram in details
+Explain Collaboration diagram in detailwitli suitable example. [
+Discuss patterns and fiarnework in brief.Q-1

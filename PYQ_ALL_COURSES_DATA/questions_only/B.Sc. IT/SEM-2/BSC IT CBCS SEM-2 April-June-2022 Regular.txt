@@ -1,0 +1,61 @@
+Explain basic concepts of OOPs
+Discuss arithmetic and relational operators with example in JAVA. 1
+Explain any two Inheritances with suitable example
+Discuss switch statement with suitable example in JAVA. ¥
+What is a constructor?
+Explain with proper example
+Explain wrapper classes in brief
+List out string methods in JAVA
+Explain any two with proper example
+What is Java?
+Discuss features of JAVA in brief. es If, Discuss java tokens in detail. [B] Give the full Form: [1] JDK [2] JRE (02) Q-3
+List out types of loops in JAVA
+Discuss FOR loop with example
+Explain IF ELSE statement with proper example
+Discuss NEW and FINAL keywords with suitable example in JAVA, [B] | What is Inheritance?
+List out types of Inheritance
+Write a short on string buffer class in JAVA, 1, What isn Array?
+List out types of Array
+Explain One-Dimensional array with suitable example
+Discuss Interface concept with appropriate example in JAVA
+Write a short note on different types of exceptions in JAVA
+Discuss the statement with the characteristics of GD
+Explain the following terms with examples: Prefixes, Suffixes and One Word Substitution
+Explain synonyms and antonyms with examples
+Explain the types of a formal letter with examples
+What do you mean by boilerplate in a press release?
+Discuss the types of press release in detail. ‘ What are the Do’s and Don’ts of writing a formal email?
+What is a MEMO?
+What are the advantages of writing a MEMO?
+Should/ Would/ Had) Meera, ____! borrow your new pen?
+Am/Is/ Are) 1 of 2 T jo t o6ed WddVd 40 GNA -somodoid Te Sit WIM JoAvomuUTealg UT [qe SunLesuy 103 doys w OpLIM Pur ssnosiqd “a “yr urejdxo pur soAvomutearg Jo sovdsy10\ JO jnokey] aBeg SupUsISsed & meq °W oo (ANO ANY) :Surmoyjoy oup 1048 "by yduogeare ur ojdurexo aqeims yim dooj Joy ssnosiq, gduogeaes st run ‘O -aydurexa ojqeims ym Be) <WuOd> UeIXA “A -gidurexe oyquyins ym Be} <LASHNV a> ssnosiq “WV (on) (OAL ANY) ‘Surmorioy 2% JOMSTY y -ojdurexa sodoad yim s8ej Suppeusoy moy haw ureldxq =“ -) ‘opdurexe o]qenms MIM S11 AqUIOSOC E-TWLLH Ul Oapra/o1pne Ppe OF MOH “quaUINoop "TALLH JO HOR TOAS OH ssnosiq “VW (80) (OML ANY) :SurMopfoy a3 FOMSTY € dOd [9] AAA Is] da lr] asi [¢] 4.Ws [7] SNC [1] m0 TINY BOHN“ “steep ut sourBus yoreag pue TaN ueldxg “W (90) (ANO ANV) :Sa1asoyoy ou) Jamsay 4 “JOABOMUILAIC Ul SoBeuUT Surasut 0} sarrodoad sy puw sdoys UMOP SIN H ‘9[durexo sodoid yim ody suo Aue ureydxg “gga Jo sodéy no ISTT ESSO S} PUM . ‘Teed Uo sjou poys BoA ‘o[durexe mI jsI’] pazopsou) pure Ist] JepIO urjdxg “a ‘o[durexo sedord wim sioyeredo omy Aue uredxg “jduogeaes ur ssoyerodo yno 3st] “E ‘a]durexo opqerins yun Sey <aTAVL> Urerdxg Larges we} amp Sue ‘Oo ‘gjdurexe yim Imoy Aue uredxe pue s8vy o1seq noIs!y “TL ‘FoUNG Ut suOHoaUUOD youLaIUT sNopeA UTE[dXe IOUT] SE IEA Vv (os) (XIS ANV) ‘Suyaoypoy 97 2oMsuy T Jamsue mo ur yutod ay} 0} pue astooid ogy “7 sxreUL []Ny oyeorput YSL ou} O} somnsiy “T :stOINAysUy 09 ‘syaByA] [e707] [sanoy ¢ oun, SNTWWVEI0Nd GIM ‘aaMmeve7n (SOD) NOLLVNIAVXG D-WaS (LD?S'd ALISUHAINN LVINVD
+B] Write down the difference between the DBMS and RDBMS C] — What is normalization?
+Explain 1NF and 2NF in detail
+E] Explain how TRUNCATE, DELETE and DROP commands are differ from each other?
+G] What is function?
+Explain any five String Functions with proper example
+H] What is the use of GROUP BY and HAVING clause in SQL? 2
+II What is database?
+Explain roles of Database Administrator in brief
+JI What is Transaction?
+Explain the properties of Transaction in brief
+I What is datatype?
+Explain types of data types used in SQL
+What is JOIN?
+Answer the following.(Any Six) (30) What is computer network?
+Explain its advantage
+Explain types of network model
+Give the difference between OSI Vs TCP/IP models
+Explain ATM in detail
+Explain X.25 protocol in brief
+Explain NIC card
+Explain TCP and UDP protocol
+Explain different classes of IP addresses
+Explain Intranet and Extranet Network, 5
+Discuss the statement with the Explain the following terms with examples: Prefixes, Suffixes and One Word Substitution
+Discuss the types of press release in detail. u What are the Do’s and Don’ts of writing a formal email?
+Should/ Would/ Had) Meera, ___ I borrow your new pen?
+What do you mean by Visual Aids?
+Discuss it with examples. ffecti What is a presentation?
+Discuss the steps for making an effective resentation. it ws What do you mean by Group Discussion?
+Discuss the types of it with examples

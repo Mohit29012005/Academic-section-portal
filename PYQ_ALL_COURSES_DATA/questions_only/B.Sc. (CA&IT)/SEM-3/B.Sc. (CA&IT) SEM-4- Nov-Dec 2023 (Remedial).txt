@@ -1,0 +1,71 @@
+Explain Solution Explorer and Server Explorer in detail. 3
+Describe SaveFileDialog and ColorDialog briefly. 4
+Discuss Jagged Array briefly with example. 5, Elaborate the concept of constructor and destructor in detail. 6
+What is ADO.NET?
+Discuss its architecture. 7
+Explain TextBox and ListBox controls with its property, methods, and event
+Discuss .Net Framework Architecture in detail. 2
+What is Error List Window?
+Explain Ci program structure with example. 3
+What is MDI-Form?
+Discuss bricfly. 4, Answer the following: (Any One) (06) 1
+Write a C# code to perform insert operation into a database
+Explain The Generic PL/SQL block
+What is exception?
+Explain User defined exception with cxample
+Describe fixed-width columns in SQL* loader
+What is procedure?
+Explain is with suitable example. 2a °° = What is cursor?
+Explain Implicit cursor with example
+What is recovery?
+Explain recovery types. 2
+Describe deadlock control mechanism. 3
+Discuss conditional statements in PL/SQL with syntax. 3
+Illustrate general architecture of Moving Data. 2
+Explain Package with its Advantages. 3
+Define data pump?
+Explain import and export. 4
+What is SQL*loader?
+Explain SQL*loader datatypes. 2
+Explain any six SQL* loader commands
+How can we set the viewport? 2 Each section should be written in a separate answer book 3
+SECTION-I 1. ‘Answer the following: (Any Five) (30) 1. | List out the selectors in jQuery and explain any six of them. 6 2. | Explain $.ajax() and its all properties with proper example. 6 3, | What is the use of transition property in CSS?
+Discuss all properties with example 6 4. | Differentiate Adaptive v/s Responsive Web Design. 6 - “5, | How one can create an alternate and a striped progress bar in Bootstrap?
+Discuss 6 different classes for the same. [ 6. | Explain different classes to create navigation menu and navigation bar in 6 Bootstrap. 7, | What is media-query?
+Discuss various device break-points of media query. 6 SECTION-II 2
+Also, 6 differentiate html () and text(). 19, | What is an AJAX?
+Discuss various technologies involved in AJAX. 6 in 3. | What is callback function?
+Explain the use of callback function with suitable 6 example “3. | | Answer the following: (Any Two) (12) lite) Explain flexbox layout and different filters of CSS3. 6 J 2. | What is the use of container?
+Explain different classes to create different types of 6 containers in Bootstrap. | 6 Answer the following: (Any One) (06) 1
+Define Software Engineering
+Describe the characteristics of Software
+Discuss about Prototyping Model. 3
+Discuss the advantage and disadvantage of waterfall model. 4
+Discuss various consequences of NOT ‘esting a Software. 5
+Explain in detail about Software Maintenance. 6
+Discuss about Verification & Validation. 7
+Write a short note on CMMI
+Discuss various challenges of software engineering. 2
+Explain Process Pattern with its type. 3
+Discuss software myths with an example
+Discuss the components of Requirement engincering proc! 2, Write a short note on business process enginecring. 3
+Explain flow oriented requirement modeling
+What is Design Model?
+Discuss Data Design Elements 1
+Discuss in detail about alpha and beta
+SECTION-I Answer the following: (Any Five) (30) What is Software Testing?
+Define advantage of Software Testing
+Describe RTM in detail
+Write a short note on Black box and White box Testing
+Discuss Performance and Security Testing in detail
+Write a short note on TPI model
+Write a short note on Web based Testing
+What is Defect?
+Describe origins of Defect
+Write a short note on STLC
+Discuss Form level validation and Filed level validation
+Define Test Strategy and Test Plan in details
+List out Testing Types
+Answer the following: (Any One) (06) What is Software Quality?
+Define Taxonomy of Defect
+Explain Defect Life Cycle

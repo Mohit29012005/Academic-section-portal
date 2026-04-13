@@ -1,0 +1,64 @@
+Write a sentence using a collocation :cyber security Do as directed: He 'make') She consult a doctor as her condition is worsening
+Discuss the boredom factors in presentation skills
+has, had / What do you mean by Group Discussion? explain its types
+What do you mean by memorandum?
+Explain various traits of it
+What is a press release?
+How to write an effective press release?
+Explain its advantages
+List out types of network model and discuss its
+Explain TCP/IP model in detail
+Discuss various issues in designing of layers in layered reference models
+Write a short note on NIC card
+Write a short note on Router and switch
+Discuss lCMP and IGMP protocol
+Explain different classes of IP addresses. .(Any One) Explain Line configuration in detail
+What is topology?
+List out various topology and Discuss Tree and star topology. .(Any Two) Give the difference between TCP/IP Vs OSI Model
+Give the difference between connection oriented and Connection less network Write a short note on ATM. question.(Any Two) Explain Intranet and Extranet Network
+Discuss Bridge and Repeater in details
+Explain SNMP and SMTP protocol
+List out and cxplain new features of HTML5 B) Explain new Ínput types in HTML
+Write steps and code to cmbed audio in HTMIL5 1. 2
+Explain any one with example
+What is Jquery?
+Explain with features of Jquery
+Explain Cache Manifest with example
+Explain Geolocation API with example. [ (Any Two) Explain how to style table with psuedoclasses with example
+Explain how to create multi column Layout with example
+List out types of 2D Transforms in HTML.Explain any one with example
+Explain how to modify content using Set Method in Jquery
+What is Type Casting?
+Explain it with example
+What is Constructor?
+Explain its types with suitable example
+Describe the Interface with implementation example
+List out the Operators and Explain Relational Operators and Logical Write the short note on StringBuffer class
+Write a short note on Method Overloading
+Explain try, catch and finally block in Exception
+Explain the following terms: (ANY 1) Write a short note on JVM, JDK and JRE in details
+Describe the Data Types in detail
+Explain Method Overriding with example
+Explain the types of inheritance
+Answer the followving: (ANY 1) What is use of wrapper class?
+Define the Vector class
+Explain any four methods of Vector class
+Define Autoboxing and Unboxing
+What is Exception?
+Explain types of error with example
+Explain Role of DBA
+Describe various benefits of database
+Explain ACID properties of transactions What is constraint?
+Explain types of constraint
+What is BCNF?
+Explain BCNF normal form with suitable example
+Explain any two types of JOIN in detail
+What is use of GRANT and REVOKE statement in SOL?
+Explain SUB QUERY with example
+Describe any seven Codd's Rules for RDBMS
+Describe SQL data types in detail
+Explain types of recovery methods in detail
+Define normalization?
+Explain first and second normal form in brief
+Explain GROUP BY and HAVING clause with suitable example
+Explain different type of SET operators in detail

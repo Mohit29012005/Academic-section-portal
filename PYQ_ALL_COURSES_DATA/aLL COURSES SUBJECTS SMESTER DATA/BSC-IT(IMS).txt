@@ -1,0 +1,66 @@
+BSC-IT(IMS)
+
+sem 1
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Introduction to Data Analysis And Data Management	Core	U41A2DADM	4		Read More
+Algorithm Development and Introduction to Programming –I	Core	U41A1ADP1	4		Read More
+Introduction to Web Development – I	Core	U41B3IWD1	4		Read More
+Multimedia and Animation	Core	U41B3MA	4		Read More
+System Administration and Maintenances	Core	U41C4SAM	4		Read More
+Communication Skills - I	Core	U41D5CS 1	2		Read More
+Information Technology And System Maintenance	Core	U41E6ITS	2		Read More
+Environmental Studies	Core	U41F7ES	2		Read More
+
+
+sem 2
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Algorithm Development and Introduction to Programming –II	Core	U42A1ADP2	4		Read More
+Fundamentals operating system - I	Core	U42A2FOS1	4		Read More
+Introduction to web development – II	Core	U42B3WD2	4		Read More
+Microprocessor Programming	Core	U42B3MP	4		Read More
+Computer Applications and Hardware Troubleshooting	Core	U42C4CHT	4		Read More
+Read More
+Communication Skill-II	Core	U42D5CS2	2		Read More
+Basic of Computer Network	Core	U42E6BCN	2		Read More
+Indian Values and Ethics	Core	U42G7IVE	2		Read More
+
+
+sem 3
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Internetwork Implementation & Maintenance	Core	U43A1IIM	4		Read More
+Server Network Infrastructure Management -I	Open	U43A2SNM1	4		Read More
+Fundamentals of Linux and Shell Scripting	Open	U43B3FLS	2		Read More
+Introduction to Python Programming	Open	U43C4IPP	4		Read More
+Employability Skills-I	Open	U43D5ES1	2		Read More
+Introduction to Wireless Technology	Open	U43E6IWT	2		Read More
+Principles of Management -Bhagavad Gita	Open	U43G7PMB	2		Read More
+
+
+sem 4
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Fundamentals Enterprise Routing	Open	U44A1FER	4		Read More
+Server Network Infrastructure Management - II	Open	U44A2SNM2	4		Read More
+Introduction to Java Programming	Open	U44B3IJP	4		Read More
+Introduction to Artificial Intelligence	Open	U44C4IAI	4		Read More
+Employability Skills-II	Open	U44D5ES2	2		Read More
+Introduction to IoT Scripting	Open	U44E6IOT	2		Read More
+Entrepreneurship	Open	U44F7ES	2		Read More
+
+
+sem 5
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+VIRTUALIZATION TECHNOLOGIES	Core	U45A1VT	3		Read More
+NETWORK FIREWALL ADMINISTRATION	Core	U45A2NFA	3		Read More
+INTRODUCTION TO MACHINE LEARNING	Core	U45A3IML	4		Read More
+FUNDAMENTALS OF PYTHON NETWORKING	Core	U45A4FPN	4		Read More
+ADVANCED WEB TECHNOLOGY-III	Core	U45A5AWT3	4		Read More
+DATABASE MANAGEMENT	Core	U45A6DM	2		Read More
+
+sem 6
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Industrial Project - II	Core	U46A1IP3	24		Read More

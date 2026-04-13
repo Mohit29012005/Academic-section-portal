@@ -1,0 +1,80 @@
+Define about the type casting and Explain it with example
+Explain the use of getchar() and putchar() with example
+Explain the use of switch statement with example
+Discuss about break and continue statement with Example
+Write the short note on arrays of structures
+Explain the Basic Structure of the C Language. 2
+Define variable
+How to use of variable?
+Write the short note on operator precedence and associativity
+Give the difference between Entry Controlled Loop and Exit Controlled Loop? 3
+Write a short note on for loop
+Discuss the recursion with suitable example
+Give the differences between Array and Structure
+Write a short note on E-Mail. 2
+Discuss FTP, Remote Login, Ecommerce, E-learning and E- banking @ 3
+Define the term HTML and explain basic tags. 4
+Define HTML
+Why it is required?
+Discuss spanning Rows and Columns. 7
+Define JavaScript .Write a code for simple Java Script. 8 List out control statement and explain anyone
+Write a short note on Internet. 2
+Discuss Types of network. & Q-3
+Define the term loops explain it. 2
+List out Operators and explain it
+Write a short note on List tags. 2
+Write a short note on Formatting tags
+Any One) (08) 1 Define table?
+Explain <TABLE? tag with suitable example. g and <TEXTAREA?> tag in details. 2
+Explain <INPUT> tai — END oF PAFER —— GANPAT UNNIVERSITY B.Sc
+Any Five) (30) How to creating a new presentation? and write down its step
+Discuss the Components of Open Office in details
+What is database?
+How to create database?
+List out Advantages of open office base?
+Write a short note on Working with Documents with figure
+How do user add Watermark in background in OpenOffice? "ma Yk YD Q2
+Write a short note on Macro. . 2
+Define the term Tables
+Write down its steps to create it. 3
+What is an Open Source Software?
+Describe the advantages of Open Source Software
+Write a short note on spread sheets? 2
+Write a short note on mail merge with its advantage. 3
+Explain List out types of Chart and write down to steps to creating chart
+Any Five) What is Software?
+Explain two main types of software in brief
+What is Hard Drive?
+Describe HDD and SSD in brief
+Give the full form of these keywords: ALU, USB, CD-ROM, DVD, OCR
+Discuss in brief: Cache Memory, Backup and Recovery. vk yvener What is NIC?
+Where is a network card located in a computer?
+How does a computer with a network card connect to a network? a What is Booting?
+Describe Boot Sequence in brief
+Explain Machine Language with its advantages and disadvantages
+What is Assembly Language?
+List out its advantages and disadvantages
+Discuss block diagram of computer in brief
+What is ISA?
+List out its. examples
+What is Printer?
+Describe the types of printers. 2
+What is Modem?
+Explain the working of modem?
+What is OMR?
+Describe its pros and cons in brief
+Write a short-note on Disc Management. 2, Discuss Defragmentation in brief. 3
+Define these keywords: Boot Loader, Boot Devices, Virus, Antivirus
+What is communication?
+Define the model of process of communication
+What is the different type of tenses?
+Explain any four with example and sentence type
+Explain the suggestions for improving comprehension skill
+What are the general traits of a good listener?
+Explain them in details
+What is reading skill?
+What are the types of reading?
+H. — What is sentence?
+What are the various functional types of sentences? 2
+Describe the methods of communication
+Explain communication barriers with remedies to overcome. 3

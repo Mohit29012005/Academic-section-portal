@@ -1,0 +1,71 @@
+How JIT works?
+Exptain CTS in short' C,.statethereturntypeofConsote'Read()andConsole.Readl,ine()methods?
+D" What is use of destructor?
+Explain .net framework architecture with figure' b
+ExPlain iunrp statements of C#' c
+What is an array'i E'xplain two dinrensional array with exarnple' Write down syntax for foreach loop' Answerihe following: (AnY Two) a
+ExPlain access modifier of C#' b
+What is polymorphism?
+Explain method overloading in detail'(1) (I0) Explain vb'riorrs clauses of LINQ quer)'' Write down syntax for defining property'(l) U S}ICTIO}{-II (8i At
+What are advantages of ASP'NE'f?
+Explain DropDownlist control' D
+ExPlain Chart control in shotl' A Answer the follorving: (AnY I'wo) a
+Explain any three validatiorr controls' What is site maP?
+Explain GrirlView control in detait' b
+Explain SqlDataReader ancl SqlCommand classes in brief' What is LINQ to SQL entities?ffi-(l 0) 5
+B A(1) (10) (1) G&TSPAT UruX\fER.SITY il\4,C-4, 5EM ESTER"-TE[ EXAMINATEOF{ P13A23P3. :,Iava FrograrnrnEng I Nov- Dee ?018 [T*ta!
+Give very small demo
+Explain "catch" and "finally" keywords with example' (6) (Any Two) (11) ffi; exampf e of mttirod overriding and constructor overloading
+Wtrrt is mlrltilevel inheritance?
+Draw the sketch and write suitable code with exPlanation
+Sf'o* the use o.f "isAt.iveQ" and "joinO" methods' (Any Two) (11) Cioe syntax and use oistring searching methods' 'nunO6*" and "Vector" clasies of java' Give examples' Give all use cases of "statici' keyword'?(1) (2) (3) r1'l (2) (3) $ECTION-IT 4"tA) 4.(B)What do You mean bY "Sockets"? ..BufferedlnpUtStream" and "FileWriter". 'Explain with suitable demo
+AnY Two) Explain aPPlets in detail' e'J;;.#'ple 9f event handling with check boxes' How to create PoPuP menus?
+What is comUo'-boxi-tt'ow-to toiO your data into that control?
+Short note on "LaYout Managers"' Wflut is "Resultset"?
+How to create it?(z) (6) (1) {2) (3) (1) (2) (3)(r1) ./. ,A -*r O*l^O€tP*€ txu Elnrolirnent No' {}ANI}AT TJNIVIiRSITY M.c.A. sENI-[fi EXAMINATIO]{ (cBcs) P13A3WD2' Y!P. qsgs!${G - II Nev- Pry-z-011 Figules to the rigltt indicate full marl<s Each section should be written in a separate answer book Ee precise and to the point in your answer['I'otai N'trer]is: 60 (t!8,} {11)Q-l.'Iirne: 3 Hoursl fi-'l\{&
+Q-s.SBCTION.I L What is CSS responsive?
+Explain the viewport in brief' U
+What ls Angutarls?
+Discuss features of AngularJS' (AnY Two) I
+Explain rnedia query with suitable example' ILDefinetypesofeverrtsinhtrnl5.Explainarrytwoeventswithitsatftibutes. ilI.Listoutngwseffianticeletnents.Explainanytworvitl.iproperexampie
+Discuss MVC architecture in AngularJS with figure' IlI.ListouttypesoffiltersinAngularJS.Explairranytwowithexample
+SECTION.II L Explain slide effects in JQuery with suitable exampie" IL What is tsootstrap?
+Explain advantages of Bootstrap' Ansrver the fotlowing: (AnY Two) I
+What is JQuery?
+Discuss features of JQuery' u-DefineJQr,reryUI?ExplainanytwoJQtierylnteracticlnswithsrritable examPle. ., r :.^ ArA. nI. what is AJAX?
+Be precise and to the polnt in your answer SECTTON-I Answer the fotlowing' Define: Software List or.rt phases in generlc view of softwane engineering" What is software myths?
+List out types of Practitioner's fllyths
+Writedownamodelwhichprovidesshortdevelopment cycle with advantages and disadvantages' List sut types of Evolutionary Process Models" Answer ttre foltowEng (AnY Two) Explain *,e moiJi;htfi *av b* usable program but not Expla!n p*.**potition Technique using LOC Based Estimation examPle' Discuss MakelBuY Decision Tree' l-ist out WebAPP Design QualitY'T" {1) (2) (3) (4) 2"(A) ( i.) {2} (3) 2.(B) 3"(A)(i) (2) (r] 3,(B)(o8) (10) (o1) (ro) (ou SECTION.IT 4, T{\\ r., t2) (3) (4) s.tA) (1) (2) (3) 5,{B} 6"(A) (1) {7\Anrswer the folilowing Differentiate Reaciiv* r6t*ut Prsactive ris[< strategies' Define: Nlavigation Testing What is Software QualitY Assurance?
+Define white box and black box testing' A*t*ut ttte followEng (AnY Two) Exptain clifferent types of risks' -WhatisprojectschedulinE?ExplainbasicPrinciplesof project scheduling
+W[at nLtrrL-rer shoLrld come next?1. 2
+Find out Wronq Pattern
+Zru, WE !E HW ?
+Find out odd man out Series. 64,Jl,80,91. 104, 1 19, 135, 155 A. 71 B. 80 E. 135C
+How marry will be examine to pro.iect?
+If 6;-eals ago, the elder one be 3 times as old as the yotttrger one. flnd their preselrt ages' The population of a torvn is 1,76,400 . lf it increases at the rate of 5% per annurn, what will be its population 2 years hence?
+What was it 2 years ago?il
+Q-s.tBl 4210 38 35 33 31 A ){ ?') B. 2623 E. 262226 24 25 23(01) (08)Q-3. t.-\l Ansu,er the lbllox,ing: (Any l.rvo) (10)I' Rajeev's age after l5 years will be 5 tirres his age 5 years back
+What is the Present age ofRajeev?
+Find trre gairr earrred b.v hirn at the tr,r,o transaction
+Firrd the average of flrst 40 natural nLrrrbers?Il
+Find the simple interest on Rs.68,000 at l6 213%o per allnLl1l.l for g rronths.III
+Find the value of (i) 60pl (ii) ap+ tB] What is Pernrutatiorrs?(01) lAl Ansrver the follon,ing: (Anv'fwo) I
+How rnany minutes does Aditya take to cover a runs at a speed of 20 l<m/hr?
+Find the probability that they are of same colour.III
+I-{orv lorrg rvould it take nre to ricle both wa1,5'l tBl What is Sinrple Interest?
+Define Presentation
+What is Impromptu Mode?
+Discuss the objectives of Group Discussion
+Define Interview. 2
+What is the difference between Extemporaneous mode and Manuscript mode of speaking?
+What is group discussion?
+Why is a goup discussion conducted?
+What is Post ScriPt?(08) (1 1)).(2) What is Inside Address?
+Draw a sample
+Define Resume
+Discuss Draft a Resume to register your candidature against the vacancy fol the post of a Progtammer in a reputed IT company
+What is Research?
+Explain Title and Abstract as essential parts of a research paper
+What is Resume?
+Discuss different types of Resume
+What are the various core components of Proposal?6.(1) (2) (3) (1) Q) (3)(1 1)

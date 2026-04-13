@@ -1,0 +1,29 @@
+What is OHA?
+Describe the advantages of android. 2
+Describe the Androidmanifest.XML file in detail. 3
+Explain Spinner and Date Picker control with suitable example. 4
+How to use Alert Dialog in android app? 5
+Write a short note on List View. 6
+What is Shared Preference?
+How to read and write in Shared Preference? 7
+What is reverse engineering?
+How to extract APK file’?
+Describe the architecture of android operating system. 2
+Explain the activity lifecycle in detail. 3
+How to use various types of text fields?
+What is Layout?
+Describe linear layout with all attributes. 2
+Write a short note on Grid View. 3
+Create a program to insert and update the record in Student.DB SQLite
+Answer the following: (Any Five) (30) a) Explain protected members of a class in PHP with example. b) Write a short note on PHP - Class Constants. c) Discuss object Serialization in PHP with example. d) Discuss object cloning using clone keyword. e) How to delete data from MySQL Table using PDO?
+Discuss it with example. f) What is WordPress Post?
+How to create and publish WordPress Post? g) Discuss WordPress Plugins in brief
+Any Two) (12) a) Write an example to view all records from MySQL Table Using PDO. b) What is CMS?
+Any One) (06) a) How to add comment in WordPress?
+Discuss it. b) Explain various user roles available in WordPress
+Answer the following: (Any Hive out of Seven) (30) 1) What is Software?
+Discuss Feature of Software. 2) Write ashort note on Layered technology of Software Engineering. 3) Write ashort note on The Waterfall Model. 4) Discuss The Spiral Model. 5) Describe Business Process Engineering, 6) Explain the Concepts of Data Modeling. 7) Discuss Approaches to Sofiware Testing. "TION-H 2
+Answer the following: (Any Two) (12) 1) What is Analysis Model?
+Define Elements of Analysis Model. 2) Discuss Flow Oriented Modeling Strategies. 3) Explain Computer Based System. 4
+Answer the following: (Any One) (06) 1) Discuss the Design Model Elements, 2) What is Software Testing?
+Discuss Validation Testing

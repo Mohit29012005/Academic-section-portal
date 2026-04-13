@@ -1,0 +1,51 @@
+MSC(It) 
+
+sem 1 
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Artificial Intelligence	Core	P41A1AI	3		Read More
+Web Designing - I	Core	P41A2WD1	5		Read More
+Advance Web Programming - I	Core	P41A3AWP1	5		Read More
+Elective-1) Java Programming Techniques-I	Core	P41A4JP1	5		Read More
+(Elective-1) Advance Technology – I (.Net)	Core	P41A4AT1	5		Read More
+Introduction to Data Analytics	Core	P41A4IDA	5		Read More
+
+
+sem 2 
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+Unified Modeling Language	Core	P42A1UML	3		Read More
+Web Designing-II	Core	P42A2WD2	5		Read More
+(Elective-II) Data Analytics Using Tools	Core	P42A3DAT	5		Read More
+Advance Web Programming – II	Core	P42A3WP2	5		Read More
+(Elective-II) Advance Technology II(.Net)	Core	P42A3AT2	5		Read More
+(Elective-II) Java Programming Techniques -II	Core	P42A3JP2	5		Read More
+(Elective-II) Cyber Security	Core	P42A3CS	5		Read More
+(Elective-III) Data Analysis And Visualization	Core	P42A4DAV	5		Read More
+(Elective-III) Digital Media Marketing	Core	P42A4DMM	4		Read More
+Elective-III) Ecommerce Technology	Core	P42A4EC	5		Read More
+(Elective-III) Android Application Development	Core	P42A4AAD	5		Read More
+(Elective-III) IPhone Application Development	Core	P42A4IAD	5		Read More
+Elective-III) Cyber Security-I	Core	P42A4CS1	5		Read More
+
+
+sem 3 Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+(Elective-IV) Advance Technology-III	Core	P43A1AT3	5		Read More
+" Elective-IV) Advance IPhone Application Development"	Core	P43A1AIAD	5		Read More
+(Elective-IV) Big Data Analytics	Open	P43A1BDA	5		Read More
+Elective-IV) Cyber Security-II	Core	P43A1CS2	5		Read More
+Elective-IV) Java Programming Techniques -III	Core	P43A1JP3	5		Read More
+(Elective-V) Advance Android Application Development	Core	P43A2AAAD	5		Read More
+(Elective-V) Advance Web Programming – III	Core	P43A2WP3	5		Read More
+(Elective-V) Introduction to Cloud Infrastructure Technologies	Core	P43A2ICIT	5		Read More
+(Elective-V) Introduction to Search Engine Optimization	Core	P43A2SEO	5		Read More
+(Elective-V) Internet of Things (IOT)	Core	P43A2IOT	5		Read More
+(Elective-V) Network Programming	Core	P43A2NTP	5		Read More
+Career & Personality Development	Open	P43B3CPD	2		Read More
+PROJECT DISSERTATION	Core	P43A4PRD	5		Read More
+
+
+sem 4
+
+Subject Name	Subject Type	Subject Code	Subject Credit	Subject Comment	Attachments
+INDUSTRIAL PROJECT	Core	P44A1PRJ	24		Read More

@@ -1,0 +1,40 @@
+AnY Five) Wh"t it "" algorithm?
+Write down rules and steps to develop an algorithm. algorithm and draw a flowchart to Write down an algorithm and draw a calculate the area ofcircle
+Discuss the features of C language. @e of relational, logical and increment/decrement operators with example. ffi and continue statement with respect to loop?
+Explain the use of it with example
+What is an An.ay?
+How do you declare aryay language?
+Explain the concept of array overflow underflow. @ and draw a flowchart to check whether the given number is odd or even
+Also, state the difference between variable and constant.06co1BTLZ, BTL4 aJWrite a short note on C tokens. 06co1 BTL4 Q-3 (Any Two) t2 1Explain the use of switch statement with example. 06co4 BTL3 2What is the requirement of loop in programming language?
+Explain the use of any one loop with suitable example.06co4 BTL4 JWhat is the use of printf0 and scanf0 functions?
+Explain different format specifiers with example.06co1 BTL1, BTL3 Q-4 (Any One) 06 1Explain different string handling functions with example. 06co3 BTL3 2What is string?
+How one can declare and assign string variable in C language?
+Discuss with suitable example.06co3 BTL5 ** End of the Paper **I --l- B.Sc
+Wtui is System Call?
+Explain type of system call
+Write a short note on Active Directory.1 Section - I Q-1Marks 30COBloom's Taxonomy Pattern 106co1 BTL3 206col BTL3 J06coz BTL3 406co3BTL3 506co3BTL4 606co4BTL3 706co5BTL4 '- Section - II ffiTwo) M""k i12 IcolBloom's Taxonomy PatternQ-2 06co1 BTL4 1write down steps to contigure N!1ilo5:9'-""t'"'" Qx rcf am 06co1 BTL3 2BTL3ffimmandswithoPtions: (I) ping (II) pathping( IID tracert (IV) netdiag (V) ipconfrg (VI) netstat /\/TT\ aertnac (VITD nslookuo OX) netsh06coz J \tulEv nv Two) t2 Q.3+t o fnllnwino: (AAlrS 06co3 BTL4 1Wite a short note on device pertonnance ano nealul' 06co4 BTL3 2\r/*ira o chnrf nnte on Process Uontfol I,IOoK \r\-Dl' gorithm and ExPlain anY one from it
+Explain its types. 06co1BTLl JCompare DOS attacks with DDOS attacks. 06co3 BTL4 4How phishing attacks are used by hackers?
+Explain the types of phishine attacks.06co3 BTL3 5Wt "t it A"tnentication?
+Explain different Authentication methods with relevant examPle.06co5 BTL2 6.Wt ut i. t uthing?
+How it helps in information security and dieital forensic?06co4 BTL6 7E"ptr- Firewall in brief
+How it helps to improve information security?06coz BTL3 2Differentiate between MIS, DSS and TPS with example. 06co1 BTL4 Oon? d Ob- * ** End of the Paper ** ?"J- L otr{-,JHow can you use SQL injection attacks for unauthorize data access?06c02 BTL6 Q.3 (Any Two) 12 1Explain the following cryptography terms: Plain tex1, Cipher text, Encryption, Decryption06co4 BTL2 2Define asymmetric k"y cryptography
+Justify that the asymmetric key cryptography is better than Symmetric key.06c04 BTL5 aJExplain any 4 Network protocols in brief. 06co5BTLl Q.4 (Any One) 06 1What is VPN?
+How it works? 06co5 BTL2 2Explain Intrusion Detection and Prevention systems
+Give the difference between them.06cos BTL4
+Invertible matrix (B)Diagonal matrix (c) Onto function (d) Identity function (e) One-One function (f) Constant functioncol co2Bloom's Taxonomy Pattern BTL1, BTLZ, BTL6 BTL4 & BTL5 & BTL6 CO3 BTLI, BTLZ,, BTL6 4 21 [o s 4l [r 4 6l :, :)"' =li : :].'=L:, i :] COz BTL2 &BTL3 (a)Describe G formally i1, frnd the set V (G) of ,"tti""t of G and the set E(G) of edges of G' ttl fi"a the degree of ea& vertex and veriff the sum of d"gt"" is twice the number of edges' riia tne number n of distinct permutations that can be iormed from all the letters of each word: (a) THOSE; (b) APPLE; (c) ALLAHABAD'Define Inverse Function' Also (a) If f:N +N and f(x):x+l' Does /-t exist ? why?
+Find the number of people who read at least one of the three magazines
+Find the number of peopleMarks CO 12 co1Bloom's Taxonomy Pattern BTL1, BTLZ, BTL6 BTLZ &BTL3 &BTL5 co1BTLl, BTL2, BTL6 CO3 BTL4 & BTLs & BTL6 COz BTLI & BTL2 CO4 BTL1 & BTLzwho read exactly one magazine
+Show that A.Br B.A. l+ 3 21.1 [olr 2 3 4l lrA=l l& B:ll-s -3 2 sl l-2 [r 2 I s] [-:For -3 2 aJ aJmatrixthe -3 -313 4l4 -1 I -4 4] t2 06Q.3 I (Any Two) Define: Range of the function
+Find fog,foh,fo(goh), gog and hoh Define one-one and Onto function
+Also if 06 f : R ->R,g : R + .R & h : R -+R be a firnctions define as f(x)=5x/3, g(x):4x andh(x):7x-2 then findthe value of (i) (fog)oh (ii)fo(goh) F,Z Q.4 1ATKHsTVX Which of the above graphs are isomorphic?
+Find 06 Co4 BTL3, the number n of ways to: BTL4, (a) Select a 4-member committee from the students
+How paralinguistic features are important for speaking skills?
+Explain the kinds of nonverbal communication with example
+What are the types of sentence construction?
+Discuss the difference between Electronic and Visual communication
+ExPlain communication with diagram'. the process of 1af ) D:na 2 aJClassify the principles of communication
+clean/cleans) Have you watched new movie?
+a/the) you often in ahurry?
+Discuss the Characteristics of an erudite speaker
+What is reading?
+Define the purpose of it

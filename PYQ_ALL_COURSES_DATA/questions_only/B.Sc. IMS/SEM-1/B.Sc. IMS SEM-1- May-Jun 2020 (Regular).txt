@@ -1,0 +1,50 @@
+List out C Token and explain any four in detail
+List out Arithmetic operator and explain any four
+Explain Increment and Decrement operator with example Explain the do...while loop with proper example
+Explain two dimensional Array with proper example
+Explain break and continue statement with Example?
+Give the differences of break and continue statement What is function?
+Explain the structure of function
+Any Two) (06) What is variable?
+Explain Rules to declare Variable in detail
+Discuss the Data Type in C language
+What is Procedure oriented language?
+Explain the important of C language
+List out the mathematical function and explain any four in two in detail Explain getchar() and putchar() Answer the following Questions
+Discuss the for...loop with proper example
+Explain Go. ..To statements with ‘example
+Give difference between call by value and call by reference in function arguments
+Explain one dimensional Array with example
+Any One) (04) What is structure ? explain the syntax of structure
+Write a short note on VPN
+Explain <FRAMESET> tag with suitable example
+Discuss LAN , MAN , WAN in detail
+Define table?
+Explain <TABLE> tag with suitable example
+Explain arithmetic operator in java script
+Explain the basic structure of HTML
+Discuss the <OL> with its attribute
+Discuss remote login in detail
+Write a short note on ISP in detail. ® Nu wNe Answer the following Questions
+Discuss any four formatting tag with example
+Explain <img> and <a> in detail. wna w Q-4 Answer the following Questions
+Discuss the <FORM> with example
+Discuss <audio> and <video> in html
+Discuss the else ...if in java script
+What is JavaScript?
+B. | What is Regular Expression?
+Explain Sequence character of Regular Expression using example
+S What is Artificial intelligence?
+Explain its importance and applications. ~- E
+What is workspace and workflow?
+Explain in detail. 2 Answer the following: (ANY ONE) (4) \ A. — Explain file handling in Python
+Give the purpose and syntax of the io following: open(), close(), read() and write() B
+Howto handle binary files in python? 3
+Write a python statement to do the following: Assume that CUSTOMER.CSV file contains ( custid, name, city, gender, r ) income)
+Create a data frame from customer.csv file. ¢ Retrieve last 3 rows from dataframe ¢ Finding maximum value from income column
+What is data visualization?
+Explain the importance of bar graph, hist » histogram and line graph
+How does machine learning work?
+Explain the architecture of Neural Network. 5
+Define node
+Discuss the various types of nodes in detail

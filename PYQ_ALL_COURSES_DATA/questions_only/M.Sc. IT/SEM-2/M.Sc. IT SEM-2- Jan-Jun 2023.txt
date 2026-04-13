@@ -1,0 +1,84 @@
+What is MongoDB?
+Discuss the advantages of MongoDB in brief
+How to Insert and Delete Document in MongoDB explain with example
+Explain the aggregate() method in MongoDB with example
+Explain the Heatmaps and Scatter Charts in brief
+Discuss the MongoDB Database References in detail with example
+Explain Auto-Increment Sequence in MongoDB with example
+Explain Line and Area Charts in MongoDB
+What is NoSQL?
+Discuss the Types of NoSQL databases
+How to Create and Drop Collection in MongoDB explain with example
+Explain MapReduce in MongoDB with example
+Write a short note on Objectld in MongoDB, C Explain Regular Expression in MongoDB with example
+Beprecise and to the point in your answer Lach scction should be written in a scparatc answer book (Any Five) What is servlet?
+Discuss life cvcle of servlet
+Write a short note on standard actions
+Discuss different types of JSF Hml tags in detail
+Write a JSP program for insert and select operation
+Explain architecture ofHibernate
+Discuss tvpes of hibernate annotation
+List out the methods used for reading form data
+Explain it with cxamplc
+Explain any one with example
+Discuss RequestDispatcher in detail
+What is the use of scripting elements?
+Explain example. 2
+What is JSP?
+Write down advantages over Servlet
+Explain different phases of JSF life cycle. 1
+List out different types of events in JSE
+Explain any one in detail
+What is navigation?
+Explain anyonc
+Write a short note on ORM. | 2
+Write a hibernate program for insert operation
+Explain the MVC architecture of Angular/S with an appropriate example
+What is $rootscope and how do we use it?
+Discuss AngularJS CSS in bricf
+Explain the ng-repeat directive
+How many types of data binding are there in AngularJS?
+Discuss the Events: ng-Click, Mouse with suitable example
+Explain the differences between one-way binding and two-way binding
+Discuss AngularJS Array with appropriate example
+What is AngularJS Module?
+Explain how to create a Module?
+Define the term controller
+Explain it with example in brief
+Explain AngularJS Form Validation with appropriate example
+Explain the built-in filters with suitable examples
+How can you integrate AngularJS with HTML?
+What is Angular JS animation?
+Explain step by step how to Animate an HTML element?
+Explain Collaboration diagram in detail vith suitable example
+What is UML?
+Explain Generalization Relationship with suitable example
+Explain lnterface, type and role with suitable example
+What is forking and joining? explain it with suitable example
+Explain Behavioral things in Basic Building blocks
+Explain multiplicity with example
+Which are basic building blocks?
+Explain Structural things in Detail
+ANY TWO) What is association class?
+Explain with example
+What is class?
+How to give name, attribute and operations with class in detail?
+Explain Has-a" kind of relationship with suitable example
+ANY TWO) Create a class Diagram for Online exanination [ What is Package?
+How can assign name and ovwncd elements in package
+Explain Importing and exporting in package
+Explain Sequence diagram in detail and with example
+What is usecase diagram?
+Explain it in detail also explain the components of use case diagram Explain activity diagram in detail with suitable example
+Explain the filter pipclne in detail
+How you can consume WEBAPI using JQucry ajax
+Explain the layout and vicwimport vicws with cxamples
+What is routing?
+Explain types of routing in detail
+Explain the return types of an ActionMethod using an example
+Explain the code first and database first approach in detail
+II What is a filter?
+Explain the types of filters in detail
+What is JSON?
+Explain in detail with examples
+Write a code to create WEBAPI that generates any single random number between I and 100 and compares it with the parameter passed by the user to the action method

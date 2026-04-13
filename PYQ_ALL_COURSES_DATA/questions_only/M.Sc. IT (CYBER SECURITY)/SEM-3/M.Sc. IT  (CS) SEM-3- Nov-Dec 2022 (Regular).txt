@@ -1,0 +1,50 @@
+Discuss about goal of Malware Analysis and write down thumb rules for Malware Analysis?
+What is Packed and Obfuscated Malware? 3
+Explain the Structure of Virtual Machine with figure
+Discuss about advantages of using Virtual Machine for Malware Analysis. 4
+Write a short note on Wireshark and InetSim
+Write a short note on Keystroke Logging. 6
+What is Malware Analysis?
+Explain various techniques of Malware Analysis. 7
+Explain various tools used for malware analysis
+Explain Antivirus Scanning and Hashing and its importance to Malware Analysis
+What is Malware?
+Discuss about various types of Malware
+Differentiate Static, Runtime and Dynamic Linking. oh Answer the following: (Any Two) (12) 1
+What is snapshot?
+What is the advantage to take snapshot during malware analysis?
+Write down steps to take snapshot in VM?
+Write a short note on AndroidManifest.XML file in detail
+Why ADB is important in Android?
+How to analyze active and passive analysis in android app?
+How to use AFLogical to extract contacts and text messages?
+Describe Android filesystem partition
+Write a short note on Edit Text with all types
+Answer the following: (Any Two) What is reverse engineering?
+How to reverse an Android application using APKTool?
+Write a short note on Content Provider Leakage. 7 What is HTTPS Proxy interception?
+Answer the following: (Any One) How to extract sensitive files with packet capture?
+Describe logeat in Android with detail
+Discuss the pcapng dump file format
+Explain the network forensic process models
+What is the Steganography? discuss any tool in brief
+Explain the honeynet-based frameworks in brief
+Explain the distributed systems-based framework. 2
+Discuss the data mining-based framework in brief. 3
+Compare Network Security and Network Forensics. 3s Answer the following: (Any Two) (12) 1
+Describe the features of NetworkMiner. 2
+Explain any one network Sniffing and Packet analyzing tool. ..3....Write the short note on Xplico, i a . <a 4, Answer the following: (Any One) (06) 1
+Discuss the packet capture format. 2
+Discuss the TCP/IP protocol suite in brief
+Explain benefits of ISMS in detail
+Discuss various Key contexts of ISO 27001
+Explain Internal organization of information security in detail
+Discuss PCI DSS with all benefits
+Discuss classification of information in brief. an 2 SS NY Explain ISO 27001 certification process in brief SECTION-IL ai Answer the following: (Any Two) (12) 1
+Discuss various needs for information security in brief. 2
+Discuss various stage of PDCA cycle in brief. 3
+Discuss Network security management in brief. 2
+Discuss Internal ISMS audits in brief
+Write a short note on HIPAA. 4, Answer the following: (Any one) (06) 1
+What is Intellectual Property Rights?
+Explain advantages of IPR 2

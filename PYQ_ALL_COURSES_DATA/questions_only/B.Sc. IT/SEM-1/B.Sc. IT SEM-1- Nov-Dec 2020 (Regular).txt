@@ -1,0 +1,100 @@
+Explain formatting documents with figure in detail
+What is mail merge?
+Write down its steps with all options
+Write down any five date & time function
+List out types of charts
+Write down the steps for creating charts. —E
+Discuss the menus of math with figure
+Write down the steps to create new database
+What is IMPRESS?
+Write down the advantages of IMPRESS
+Write a short note on Master Templates. 2
+What is Style?
+Describe different styles available in writer
+Write a short note on printing documents
+Write a short note on drawing tools. . 3
+Describe how to work with multiple sheets?
+Write a short note on formula editor in math. c
+Explain the toolbars of math in detail. 4
+What is Database?
+List out the advantages of DATABASE
+Define the term Tables
+Write down its steps to create it. 5
+What is presentation?
+Write down the steps to create new presentation
+Write a short note on re-usability in Impress
+List out types of number systems
+Explain octal number system in brief
+What is parity bit?
+Explain checksum method in brief. iI
+What is universal gate?
+Explain all universal gates in details
+State and prove the Demorgan’s theorems. y
+Discuss 4 to 1 multiplexer in brief. vil
+Explain ring counter in details
+Write a short note on types of RAM in brief
+Discuss error correcting code (Hamming code) method in brief
+Explain odd and even parity code methods with suitable example
+IL. [A] (5431s > (216 — [B] (127.5625) > (? 2 Q-3
+What is logic gate?
+Explain all basic gates in brief
+Implement basic gates using any one universal gate
+Explain full adder with its diagram
+Discuss 4 to 16 Decoder in brief
+List out the types of ROM
+Explain ROM in details
+Write a short note on NAND latch
+Explain shift left register in brief
+Write a short note on ripple counter
+Answer the following: (ANY SIX OUT OF EIGHT) (30) A. ‘What is Linear Data Structures?
+Explain with figure
+Whats difference between primitive and Non primitive Data Structures? eo C
+Write an algorithm for the operations on stack
+Define a linked list
+Write the advantage and disadvantage of lined list?
+Define a circular linked list?
+Write an algorithm to invert a circular linked list
+What is tree?
+Explain the following terms in tree terminology: a Leaf node b
+Write the brief note on AVL Tree
+Define a Data Structure?
+Explain types of data structures. | B. | What is Non-Linear Data Structures?
+Explain with figure. i 3
+Write an algorithm for operations of Queue
+What is Sparse Matrix?
+Explain the Breadth-First Search Traversal Algorithms also write the algorithms
+Define a graph and explain its operations
+Answer the following: (ANY SIX OUT OF EIGHT) (30) What is Magento?
+Explain Customer Journey for any ecommerce website
+Explain in brief : Admin Store Panel List out types of products in magento and explain any 2 in details
+Explain Catalog Price Rules with suitable example
+Explain Free shipping and Flat rate shipping method in detail
+Explain Marketing Reports and Review Reports in brief
+Write a Sort note on : Widgets 9 2
+Explain Website, Store and Store View in brief
+Answer the following: (ANY TWO) (08) A. — What is Attribute Set?
+How to add attributes in attribute set?
+Explain Up-sell, Cross-sell and Related products in Magento
+How to Manage Advance Pricing in Magento?
+Write a short note on: Invoices | B
+Define the term: Shipping Label \ Answer the following: (ANY ONE) A. — Write a short note on : Themes OR A
+Discuss time sharing operating system
+Discuss virtual machine architecture along with their advantages and disadvantages
+Discuss deadlock and necessary conditions for deadlock occurrence. is) E. _ Discuss shortest job first process scheduling algorithm with suitable . example
+Discuss critical section problem and how can we handle it with semaphores synchronization mechanism
+Discuss segmentation in memory management
+Discuss monolithic kernel system architecture
+What A * are advanta ithi architecture over other architectures. ges of monolithic 2
+Discuss buffering and SPOOLING concepts
+Discuss interrupt, its functions and interrupt handling mechanisms
+Discuss Direct Memory Access (DMA) architecture, E
+Discuss hierarchical i ical memory architecture and advantages of caching in a computer system. 3
+Discuss different states of a process?
+Describe them with suitable diagram B
+Discuss Process control block and its different attributes. ributes
+Discuss deadlock avoidance with Banker’s algorithm. 4
+Discuss logical and physical address space
+Discuss concept of swapping in memory management. c
+Discuss concept of internal and external fragmentation. 5
+Describe grep command
+Describe difference between pipe and redirection directives

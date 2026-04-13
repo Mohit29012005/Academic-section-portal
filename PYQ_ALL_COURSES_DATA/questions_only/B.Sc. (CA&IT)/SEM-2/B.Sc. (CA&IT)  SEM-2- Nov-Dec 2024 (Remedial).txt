@@ -1,0 +1,18 @@
+With 06 Cco2 BTL-3 example. 3 | Explain advantages and disadvantages of responsive web 06 Co4 BTL-4 design. 4 | What is an AJAX?
+Discuss various technologies involved 06 Cco2 BTL-5 in AJAX. 5 | Write a short note on followings. 06 col BTL-2 a.) Offline Web Applications Co2 b.) This Keyword CO3 c.) event handling in jQuery COS d.) jQuery Plugins e.) animation with CSS3 f) What is the feature of Bootstrap? 6 | What is media-query?
+Discuss any four utility 06 Cco2 BTL-6 functions with proper example. 2 | Different Between cookies, session storage and local storage. 06 col BTL-4 3 | What is an XMLHttpRequest?
+Describe the life cycle of 06 co2 BTL-6 XMLHttpRequest with figure
+Write a short note on followings. 06 COS BTL-3 a
+Analyze the methods of Keeping Accounts. 06 col BTL4 3 | Evaluate the Rectification of Errors in details. 06 Cco2 BTLS Demonstrate the different between creditors and debtor’s 06 Cco3 BTL3 ratio. 5 | What is Accounting Ratio?
+Explain advantages and 06 CO3 | BTL2/BTL4 disadvantages of Accounting Ratio. 6 | From the following information. 06 Cco4 BTL6 + Variable Costs per Unit is Rs.100 * Selling price per Unit is Rs.400 + Fixed costs are Rs.20000 + Total Sales of Units: 300 Unit
+Find out BEP (in unit) and BEP (in rupees) 7 | What is voucher?
+Explain objectives of Final 06 CO2 | BTL2/BTL4 Account. 3 | Compare Trial Balance and Balance sheet. 06 Cco2 BTL5S Q.3_ | Answer the following: (Any Two) 12 1 | Write a short on Break Even point. 06 CcO4 BTL5 2| What is Marginal costing?
+Dann t aL?
+Gross profit Ratio (b) Net Profit Ratio (c) Stock Turnover Ratio 06 CO3 BTL6 Q4 Answer the following: (Any One) 06 Write down the step to create/alter company in Tally. 06 COS BTL3 ie) What is Tally?
+Explain all. 06 CO3 BTL-4 4 | 1
+Write a short answer following question: 06 COs BTL-2 a.) List the allowed register pairs of 8085. b.) What is an opcode? c.) List few applications of microprocessor-based system. d.) What is the function of IO/M signal in the 8085?
+Define the Troubleshooting tools
+Explain all in briefly. 06 co2 BTL-3 6 | Differentiate between a MUX and a DEMUX
+Define Key Features 06 col BTL-3 of Operating System. 2 | Explain how you would troubleshoot network 06 COo2 BTL-3 connectivity problems on a computer. 3 | Describe the purpose and functionality of disk 06 Cco2 BTL-4 management tools like Disk Management (Windows), Disk Utility (macOS), and fdisk (Linux)
+Explain 3-to-8-line decoder in details. 06 co4 BI Ls 2 | State and prove the following Laws: “06 CO3 BTL6 a) Commutative Law b) Associative Law ¢) De-Morgan’s theorem Ist and 2nd with logic gates. 3 | What is flip-flop?
+Mention the application of flip-flop. 06 Cco4 BTL-4 Q.4 | Answer the following: (Any One) 06 1 | What is microprocessor 8085?

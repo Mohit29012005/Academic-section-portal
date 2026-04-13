@@ -1,0 +1,56 @@
+What is Open source technology?
+Explain the processing of PHP' (i1) Explain any four shing functions with suitable example' (A) (i) (ii) (ii')4
+AnY Two) Explain Super global variables with suitable example' Write short note on Session and oookies in PHP' Explain advantages and disadvantages ofPHP' (AnY Two) what is caastructor?
+Explain how constructor can be created in class also explain how parent constractor can be called in case of inheritance' What is PDO?
+Explain how database connection oan be done by PDO' Also explain CRIID operations by using PDO with suitable example' Explain PHP associative arfily in detail with suitable example' Also explain important array functions. sECTIoN_rI {AnY Two) What is Laravel?
+Discuss the advantages of using Laravel' What is XML?
+What are the features of XML?
+Explain how we 6an create an XML document using PHP? ffi#;Hp d"t; ;1 fime tunctions with suitable example
+AnY Two) What is MVC?
+Explain in brief: PHP MVC framework' Explain the difference between HTML and XML' Exolain how file can be uploaded using.PHP' Write a PHP script to upload a ;,iJfiil* rii*;fil"rhat wourd Jlo* ur., to select a file to upload on server.(8) 1
+What are advantages of MVC?
+State folder structure of ASP.NET MVC project
+How to create Partial view?
+AnY Two) A" What is software design pattern?
+Explain MVC design pattern
+Explain purpose of viewBag, viewData and TempData in brief, C
+Explain RenderBody0, RenderPage0 and RenderSection0 methods in brief. -{lis\}et' the fuilurr irrg: lAl" T* o) Expiain anr three strongh' t;'pe helpers n'ith exatnple' H,:*,tc perform r,aiidaiion in ASP.NET l,,M?
+Explain with example.1. 2
+Explain Razor code expression in brief. - SreTl6N:i, - A
+What is scaffolding?
+How to verify and prevent cross site scripting attack in controller?
+What is routing?
+Horv to define route?
+How to triggering Ajax Calls using jQuery?
+Explain different retum types of action method' B.WritedownstepstoperformCRUDoperationbyusingcodeflrstapproach and explain with examPle. c. what is role of area in ASP.NET MVC application?
+How to create area in aPPlication?
+What is filter?
+Explain authorization filter' . ^-J ^-*Ii^-+i^a rrariqhlec irr hrief(1 1)(8) +. 6"(1 1)I , M.C.A
+Any Two) What is session?
+How can you handle iffiGive MVC example with ,,RequestDispatcher
+Give example of database "preparedstatement,, with yourown query.(1 1) 4.(A) 4.(B) 5.SECTTON-II List out JSF Bean Scopes
+Give any basic example of database operation in JSF
+List out selection tags and give example of any three
+Discuss template setting in JSF
+Explain built in support of converter or validator in JSF.Explain any event handling technique with suitable example.(2) (6) ( 11) ( 1r)6,(1) (2) (3) (1) (2) (3) -"---x--- ---X----- I
+Data Cleaning (2) Types of SamPling (3) Define Concept Hierarchy with example (4) Data Mart 2.(A) Questions.(Any Two)' fil What is Data Warehouse?
+Explain its Characteristics' (2) Explain the three tier Data warehouse Architecture' (3) What is OLAP?
+How OLAP is differ from OLTP' 3.(A) Answerthefollox'ingQuesiions.(An1'Two) (1) Explain Data Cube aggregation with example
+What is Noise?
+Explain Binning method with example' (3) Describe Attribute oriented Induction steps with proper example.Aprif Jlne 2019 [ (08) (1 1) (11) SECTION.II 4.(A) Do as Directed' (1) Data Mining @ Define : suPPort and confidence (3) FP-growth method (4) List out types of data used with Data mining Questions'(Any Two) Short note : Decision Tree Induction Discuss Apriori algorithm in detail with example' Explain any two types of Data Mining patterns' 6.(A) Questions'(Any Two) (1) Discuss lF-THiN R;Tt ior classification with example' A) How Data Mining useful for the Retail Industry' (3) Role of Data Mining for Inhusion Detection and Prevention's.(A) (1) (2) (3)(08) (1 1) (1 1) GAzupAT uNrvE*srTy Enro*ment M"C"A" SEMESTER-IV EXNMINATTON BI4AS$ESI DATA ENCRYPTION AND DAYA SECUR,ITYNo
+Explain in short with figure.(1) counrer Nlode icinj "r oi*uuon(Z) Active Security'Ati_iL* ffi.squerade and Replay (3) Man in the rniddte riii.t'rio etino artack (4) structure or puuiiclrl, in.ryouon Answer ilre foltowing {ANy TWO) (1) Exprain Advanced E'iirvptili, standard (AES) argorirhm with stePs and figure vl,rr..roru (F\trs, i {2) Exptain H,vxiq Atgorithm with steps and figure
+i Exptain secure d.rh;t;.;oirr?r*o) w*h sreps and fisure.2. 3.{1 r) l"iy, :'" :l.j:l t -oy,n g
+Explain ]VRes of Firewallr'fi itt, ;o;;",Exptain Secure Socket fuy"i fSiii'with its protocots
+List out Management leYels' m
+Give the full form:[i] TPS liil ESS W
+Define the term: M-commerce' (AnY Two) I
+What is IIT? f[
+Define the term: Business Process Reengineering trI
+Give the full form:[i] SCM [ii] ERP IV
+What is the role of Vendors?
+Explain any one ERP imSlementation methodology
+Discuss the beneflts of ERP
+Explain ERP M1ths
+Explain Business module rn an ERP package
+Describe Sales a:rd Disn-ibution module ia detail. m
+Explain Enterprise letegration Applications

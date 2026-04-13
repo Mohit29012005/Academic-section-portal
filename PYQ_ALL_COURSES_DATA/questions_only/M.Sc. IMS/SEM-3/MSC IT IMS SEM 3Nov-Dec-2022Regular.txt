@@ -1,0 +1,82 @@
+Any Five) (15) What is virtualization?
+Explain in brief
+Describe Cloud Monitoring Capabilities in brief
+Explain Desktop Virtualization in brief
+What is pub/ sub?
+Describe the core concept of pub/ sub
+Write a short-note on Server Virtualization
+What is Cloud Computing?
+Write a short-note on testing
+Describe the components of the vCenter server? 2
+Write a short-note on Network Virtualization
+Describe Cloud Computing architecture. 2
+Write a short note on Infrastructure-as-a-Service
+What is Cloud Storage?
+How Does Cloud Storage Work? 2
+Describe the benefits of cloud storage
+Explain App Engine Standard Environment in brief. 2
+What does Run Time Environment mean?
+State the difference between ITIL and ITSM. 2
+Explain organization structure of a company. 3
+Write a short note on the level of the service life-cycle decision. 4
+List out the key components of the Demand management. 5
+What is process?
+Explain the characteristics of it. 6
+Describe the goal of Problem Manager. 7
+Describe the History of the ITIL. 8
+Write a short note on Financial Management
+Describe Service strategy Lifecycle stage in brief. 2
+Write a short-note on Service Portfolio Management Process
+Describe the role of Service Design Manager Role. 2
+Write a short-note on service Portfolio in Service Design
+Write a short note on DIK W Model
+Describe the goals and objective of service asset and configuration management. 2
+Write a short note on Risk Management
+Describe the objectives of continual service improvement. 2
+Explain Continual Service Improvement in brief
+Describe SSL in brief. 2
+Discuss Cloud Firewall in brief. 3
+What is IP Security?
+Explain in brief. 4
+What is Network Security?
+Describe in brief. 5
+Write a short note on IPS. 6
+Write a short note on Packet-filtering Firewall. 7
+What is a network operations center?
+How NOCs work?
+Why is Network Security Important? 2
+Describe security services in brief
+Write a short note on firewall. 2
+How firewall works?
+What is VPN?
+How VPN works? 2
+Explain Intrusion Detection System in brief
+Discuss the Case Study I - Kuwait Government IDS Survey. e@ 2
+Discuss the Case study — Infosys Data Center
+Describe the types of Dial Peer
+What is VoIP?
+Explain the use VoIP
+Write a short note on post dial delay
+Explain DOS Attack in brief
+State the difference between Latency and Jitter
+What is Codec?
+Describe supported Codec for VoIP
+Answer the following: (ANY ONE) (04) Describe ephone-dn in brief?
+Explain Component of VoIP
+State the difference between FXS and FXO
+What is WLAN?
+Describe its advantages and disadvantages
+Describe Wireless Security Vulnerabilities in brief
+Answer the following: (ANY FIVE) (15) What is shell?
+Explain the types of shell
+Why we use Linux?
+Write a short note on kick start file in Linux
+Describe the network types in Linux System
+Write a short note on IMAP
+Write a short note on FTP
+QAR S Aw Pp What is FHS?
+Describe Linux file system and directory structure. 2
+Define the keywords: Linux boot loader, LILO. 4
+Answer the following: (ANY ONE) (04) A. — What is SAMBA?
+Write a short note on NFS. 5
+Answer the following: (ANY ONE) (04) A. — What is Webmin in Linux?

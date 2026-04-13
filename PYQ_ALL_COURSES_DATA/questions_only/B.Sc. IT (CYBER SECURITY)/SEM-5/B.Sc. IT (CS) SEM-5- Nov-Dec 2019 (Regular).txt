@@ -1,0 +1,58 @@
+What is PHP?
+Explain usefulness of and advantages of PHP 2
+List out datatypes of PHP and explain usefulness of any four datatypes with example
+What is MySQL and why it is used?
+Write down steps of PHP and MySQL database integration
+What is exception?
+Explain exception handling is PHP
+What is function?
+Explain how to create user define function in PHP NN Mw Pw Explain use of HTML <form> tag with attributes
+What is CMS?
+Explain benefits of WordPress, What is Joomla?
+Explain Joomla architecture with diagram
+Explain any three file or filesystem related function of PHP with example 3
+Answer in brief : (Any six) What is a Cookie?
+What is a Session?
+What is PHP Framework? 4
+State the difference : GET and POST What is the difference between a sub-query and a join?
+Under what circumstances would you not be able to use a sub-query? 6
+Write a query to find total number of records stored in employee table 7
+What are the advantages of SQL? 4
+What is looping structure?
+SECTION-I Answer the following: (Any 5) What is Process?
+Explain Process State Diagram in detail
+List out Types of Operating System and explain any one Operating System
+Explain Critical Section Problem in detail
+What is Deadlock?
+Explain Deadlock Characterization
+Discuss Swapping
+Write a short note on Paging
+Explain Features of Unix
+Discuss Reader-Writer Problem in detail
+List out Process Scheduling Algorithm and Explain any one Scheduling Algorithm
+Explain Deadlock Recovery
+Define Segmentation
+Explain ls Command and we Command with Example
+Write the short note on VLAN
+Explain active directory service with its features in brief
+Explain the virtualization with its types
+Discuss the firewall in brief. ee Short note on the RIP
+Explain Intra domain routing and Inter domain routing in brief
+Define: (A) Domains (B) Forests Q-4
+Explain stakeholder identification techniques in brief
+Explain interview technique of data collection in detail
+What is stakeholder?
+Explain different types of stakeholders
+What is primary data’?
+How does it differ from secondary data?
+Why quality of data is important for any business organization?
+Discuss
+Explain data visualization techniques
+What is CATWOE analysis?
+How does it help in business analysis and decision making?
+Explain the business analysis process flow
+Explain scenario and prototyping techniques in brief. 3
+How does rich picture and context diagram techniques are useful to document the findings afier investigation?
+Discuss both techniques in brief. is) Answer the following: (Any One) Explain various tools for business analytics
+What is data validation?
+Write down the steps to solve data validation problems using Excel

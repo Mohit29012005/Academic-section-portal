@@ -1,0 +1,64 @@
+What is clifference between managed code and unmanaged code? ts
+What is CLS?
+Explain use of foreach loop rvith example
+Explain Arraylist collection in short
+Explain .net framework architecture with figure. b
+Explain switch statement with example and compare with if statement. c
+Wlrat is an array?
+Explain jagged array with example
+What is use of "continue" statement in C# program?
+Explain method overriding in details. b
+What is "delegat6s"?
+Explain LINQ query syntax and its clauses in brief
+Explain cooi<ie in short
+Explain Style sheets and themes in brief' what is state management?
+Explain server side state management with example
+Explain c ompareYalidator and RegularExpressionvalidator controls' what is difference between LinkButton and Hyperlink controls?
+Ansrver the following: (AnY Two) what is Data bound controls?
+Explain Gridview control with column field t1';es in brief
+Explain various sections of Crystal Report' Writs only C# code to insert and update record from database table using LINQ to Sql
+MobileTbl(1\4-Id, ModelName, CompanyName, LaulchDate' Sp"cifica$bns) WhatisuseofCommandTypepropertyofSqiCommandclass?
+Be precise and to the point in ycur answer SECTION.I What does isAliveO method return?
+What is the use of new oPerator?
+Give small example of constructor
+Give all possible uses of static keyword
+Explain String Buffer class in detail with syntax
+Give example of Vector class with three methods
+Give one use of J0ptionPane, Write code to display records of database table
+Give example of FilelnputStream and FileoutputStream
+SE&{-UI EXAMTNATrON (CBCS) P13A3WD2: WEB BESIGNII{G - II Nov- Dec 20X?
+What is HTML5?
+Explain video element with proper example
+U, What is AngularJS?
+Explain features of AngularJS
+Discuss media query in depths
+Define types of FORM validation attributes in HTMLS
+Discuss it with suitable exarnple.Q-2.(1 t) Q-3
+Explain lvlVC architecture in AhgularJS, H
+Explain any three with suitable example, ()-5.SECTION.II L Define the term JQuery
+Explain different {batures of JQuery
+What is Bootstrap?
+Explain advantages of Bootstrap
+Discuss fade efftcts in JQuery with proper exarnple
+What is JQuery UI?
+Explain JQuery Interactions r,vith suitable example" III
+Explain AJAX Get() and Post$ methods in JQuery
+Discuss different table class in Bootstrap
+Be precise and to the point i* vour answer Z\ Khe(va //; SECTT'N-, .-\--_;-t.-u'o ot"atrcr llre follorving (1) n.tl"" Software and list its characteristics' (2) State t.lre Urnbrella Activities rle than other.(3) Desci.ibe u ,..rr*io *t "re use of prototype model is most suitab i;i ii., u,ry for-rr indirect rneasures of software product' 2.(A) Ansrver thc l'oltowirrq (AIIY TYO.I(1) What is Softvuare eog'i*tti"g?
+Explain it as layered Technology' @ Describe CIvIivlI in detail' i:1 Explain Waterfall Model with advantages and limitations' 2
+List I'r'ccess Patterns' 3
+Ansrvcr the follorving - - ( I ) Describe Reactive VsI Proactive Risk Strategies' iZ> ExPlain EVA in detail' 5.(A) (ANY TWO ) (1) Describe RN{irfM Plan' iz) Expiain Softr'vale Quality Assurance' i3i iVfrot or. basic principlei of project scheduling? 5.(lJ) Define Risk' 6.(A) Auswt-r the follorving (AryY TYO I- iii Describe characteristics of testable software' iri Explain testing process for fVebApl' , --G) Describe Busitttss Process lteengmeenng' 6.di What is White-box Testing? -----x-----x----- gN3 6F f 't+ff rL({}8) (1CI) {s1} (10) (01) (10) (01i (10) ({}1)(us) 5"ofI Hnrollmenl No
+GANPAT {JNIVERSITY lu.c.A. sE&{-IIr EXAMTNATION (CBCS) P13A5QAI., ; QIJANTIT,{TIVE AFTITUNE AND LOGICAL REASOIqING loursl Nov- Dec 201? tTota! vlarks: 60 Instruc[ions: ,2<".*,';, '
+Explain ry*pes of numbers system' il
+Find his gain Yo' tAl (AnY Two) L Which of the following are prime numbers?
+Find the sum of all odd numbers upto 100' lII.Gl-- Evaluate: \2.+8 + v'51 + {169 [Bl rino the value of:./e+P tAI (AnY Two) I. 20 Paulson spends 75a/o of his income
+Find the gain percent
+If the second discount is 12.55, find the first discount' [B] 2 is what Percent of 50?(10)f}-z
+Find the simple interest on Rs. 68.000 at 16 zi3s/, per annum for 9 months
+Any Two) Nine persons went to a hotel fortaking rheir *ears g of them spent Rs.12each on their rnears 3d -t!." ninth Jpent Rs.g rnore than tire averageexpenditure of arl trre nine. what was thl totar mone1, .p.r,i'ty them?
+F{ow many words can. i:e fornied by using ail retters of the word'DAUGFITER, so ihat the vowels atwajs come together?
+A and E together can complete a piece eornplete the same work in 12 d,ays, comptrete that work?c-Yr. { /sar t" ff. ruI.(10) (01) (10) (sr.lof r,vork in 4 days. if A alerne canin horv many days can B aione Q-s
+Explain any two
+Explain group discussion strategies.A) B) A) B) c){1 1) (1 x)1 Fage I of Z1
+Discuss irorrr to wr.ite an effective job application.4
+Discuss cjifferent rypes of proposals

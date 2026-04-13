@@ -1,0 +1,48 @@
+SECTION-I Answer the following: (Any Five out of Seven) What do you understand by ASP.NET ?
+Explain its advantages
+Explain ASP.NET application life cycle in detail
+List out validation controls
+Explain any two in detail with example
+Explain fileupload control with example
+Can you explain the use of caching?
+Describe its types
+Answer the following: (any two) What do you understand by resources and resource management?
+Explain any five basic controls with properties, methods and events
+Answer the following: (any two) What do you understand by web service?
+Discuss its implementation in ASP.NET
+What is AJAX?
+Explain the basic control of AJAX
+Justify the use of store procedure with example
+Discuss its types
+Write ASP.NET application that shows the use of any two state management techniques
+Justify that PHP is server-side scripting language. : How can you pass information between pages in PHP?
+Explain with example
+Explain di ferent file reading and writing functions of PHP. on
+How sessions are handled in PHP?
+What is MySQL?
+How can you connect PHP with MySQL?
+How can you customize site in WordPress?
+What is Joomla?
+How it is different from WordPress?
+Explain features of Joomla
+What is cookie?
+How can you create and manage cookie in PHP?
+How PHP handles errors and exceptions?
+Explain WordPress users
+Explain different user groups of Joomla
+List out Type of Operating System and Explain any one in detail
+What is Process?
+Explain Process State Diagram in detail
+Discuss Bounded-Buffer Problem in detail
+Write a short note on Safe State Diagram
+Define Swapping in detail
+Discuss Features of UNIX
+Explain Critical Section Problem in detail
+Explain FCFS Scheduling Algorithm with Example
+Answer the following: (Any Two) What is Deadlock?
+Explain Deadlock Characterization
+Differentiate Logical and Physical Address
+Explain While Loop with example
+Write down steps to configure VLAN in Packet Tracer. 3 Write a short note on BGP. 4 Explain Active directory lightweight services in brief. 5 Explain RIP with limitations. 6 Discuss the firewall in brief. 7 Explain the virtualization with its types
+Explain Intra domain routing and Inter domain routing in brief
+Explain VPN in detail

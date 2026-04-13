@@ -1,0 +1,66 @@
+List out Types of Algorithm
+Discuss any one in detail with example. 13) i] (5) 2
+What is Flowchart?
+Discuss various Flowchart symbols
+Discuss Basic Structure of C Program with example. [6] 2] it} [5] 4, Write a short note on C Tokens. 4] [2] fl 15] 5
+Explain Increment and Decrement operators with example. 13] 13] 1] (5] 6
+What is looping?
+Explain For loop with proper example
+Define Array
+Differentiate Algorithm Vs
+Write a short note on Constants. [4] [2] iil 3] 10
+Explain Conditional or Ternary Operator with example. 16} [3] 0 13] Que-3 Answer the following
+Discuss type conversion in ‘C’ language with example
+Write short note on Input/output functions with example. printf() ,scanf(), getchar(),putchar(). 13] GB) 0 15] [3] [3] 0 [4] 13
+Explain do ...... while loop with example. 13] [4] iil [4] [3] [4] 0 [4] 14
+Discuss break statement with example
+Write a c program to perform addition of two matrix
+What is String?
+Describe strcat function in brief. 16) 5] it} 13] 17
+Explain the structure of operating system in brief
+Describe network troubleshooting with any five commands to resolve network problem. ul (2) 0 (5) 3
+Discuss the purpose of paging in windows. [2] {5} 0 15) 6
+Differentiate NTFS and FAT32 file system
+Create a simple batch file in Windows and explain the basic commands used in it. 16] (2) u [5] Que-Z Answer the following
+Justify the concept of malware with its prevention process. 15] (3) a 13] 9
+Show the knowledge of system calls with its types. 13] {4} 0 G) 10. plain the use of active directory in Windows, [6] 15] u (31 Que-3 Answer the following. 11
+Differentiate the logical and physical address. 4] 15] Ul 15] Que-4 Answer the following
+List out the different process states in windows
+Define following commands
+Discuss the Web Designing Principles in brief
+What is CSS?
+Describe the types of CSS
+Discuss the arithmetic operator and comparison operator
+How do you add text and shadows to a <canvas> in HTMLS?
+Discuss with an example. 16] 13] Ul {s] 7
+What is JavaScript?
+Why is it important for web development?
+Define JavaScript function with an example
+Define Terms: HTTP, ISP RI et) u [3] Que-3 Answer the following. 11
+State the difference between Internet, Intranet & Extranet
+Discuss the regular expression in JavaScript. 5] IS] Ul [4] 14
+Describe the World Wide Web. 16, Discuss the Table tag with all its elements. 17, State the difference between Block and Inline elements
+State the 16 sutras of Vedic Mathematics with their meaning. i it]
+Explain the historical background of Vedic Mathematics
+Find the square roots of the following numbers: 1.8836 2.8281 16
+Explain the various modes of communication. 22] ul it} [5] 2
+Give Synonym for: Brave 3
+Give meaning of the Eponym: Fahrenheit 5
+Discuss the types of listening with suitable example. [4] 13] Ul 15] 6
+How the barriers affect the listening process. 13] BI] i [5] Que-4 Answer the following
+How the reading strate - [5] [4] 8
+Explain the purpose of reading
+What is a Computer Network?
+How Does a Computer Network Work? 13] 1) i 15] 2
+Explain the operating system with its function. [4] [2] i 15] Que-2 Answer the following
+Discuss the common software issues and its solution. ‘ 2 6
+Describe the steps for Safe software installation and uninstallation procedure
+Explain the features of anti-malware software in brief
+Discuss the system optimization techniques in brief
+How can the teachings of the Bhag efficiency?
+OR How can the principles of the Bhagavad Gita be used to gain better control over the mind? u) 21 ul 15] Que-3 Answer the following
+How can one become an effective leader by applying the teachings of the Shrimad Bhagavad Gita?
+Any One) 4, How does the Shrimad Bhagavad Gita address ethical decision-making in the context of life’s dilemmas and challenges?
+OR How does the Shrimad Bhagavad Git from the Gita illustrate principles of clear and purposeful communication? ‘a emphasize the importance of effective communication?
+What examples [4] i] U 15] Que-5 Answer the following
+How does the Bhagavad Gita provide value education for young leaders?

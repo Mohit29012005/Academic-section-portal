@@ -1,0 +1,87 @@
+Explain string handling functions with example
+What is UDI?
+List out category of UDF and Discuss any one category with example, Discuss structure in detail with proper example
+What is pointer?
+How to declare and initialize pointer?
+Discuss it with example
+Discuss fopenQ and felosc() functions with example
+Explain syntax error, run time error, logical error and latent error
+What is recursion?
+Explain it with proper example
+Write a C program for addition of two matrix
+Explain the concept of call by value and call by reference with example
+Discuss fiellQ), fseek() and rewind() functions with proper example
+Answer the following : (Any One) is macro substitution’?
+List out macro substitution and explain any one in Define following functions: () malloc) (Decalloc() (ID free) 130] [12] [12] [06] , B.Se
+Write a short note on ‘Two-Dimensional Array. 2, List out various category of UDE, Discuss any one category with 3. iate structure V/S union, Write a short note on Union. 4
+Mow to declare and initi ze pointer?
+Discuss it with example. 5
+Discuss fopen() and felose() function with example. 6
+Explain Scope, Visibility and Lifetime of variables with example
+Discuss compile time initialization of one dimensional array with example. 2
+What is Recursion?
+Explain it with proper example. 3
+Explain getchar(), gets(), putchar( ), and puts() functions. 3
+Discuss array of structure with example. nN What is the difference between call by value and call by reference?
+Discuss it with example. ; 3
+How to use command line argument in file I/O operation?
+Discuss it. 4
+Any Two) [A] What is color space?
+Explain types of color space. |B] Describe any three menus of Photoshop. [C] | Write a short note on HSB (Hue, Saturation and Brightness)
+SECTION-I Answer the following: (Any Five) (30) IA] [B] IC] [D] [E] IF] IG] IA] [B] Ic] [A] [B] What is accounting?
+Explain advantages and disadvantages of accounting
+Write a short note on types of account with an example
+Write a short note on trading account and profit & loss account
+Write a short note on branches of account
+What is accounting ratio?
+Explain classification of accounting ratio
+What is marginal costing?
+List out advantages and limitations of marginal costing
+Any Two) (12) What is subsidiary book?
+Explain types of subsidiary book
+What is final account?
+Explain objectives of final account
+Find out BEP (in unit) and BEP (in rupees) Answer the following
+Any One) What is Tally?
+Define features of tally?
+Write short note on voucher
+Write a short note on Grey Code with an example
+What are Number Systems? illustrate decimal number system in brief
+Explain the Following terms in brief
+Explain Pipelining Parallelism in brief. 5
+What is Microprocessor 8085?
+Explain its features in details. 6
+Convert the following terms: (1) (10110)2 = (?)10 (2) (16290)10 = (2)16 - Explain the Error correction codes in details with an example. 3
+State the difference between RISC and CISC architecture, 3
+What is Addressing Techniques?
+Explain in details
+Explain ASCII and EBCDC Alphanumeric codes in brief with an example. 4, Answer the following: (Any One) (06) I
+Explain different types of operating systems
+Explain different types of registers in processor
+Draw the block diagram of microprocessor and explain its components
+Write a short note on plug and play feature
+What is the use of programming language?
+Explain different categories of programming languages and compare them
+Explain disk mirroring with its advantages
+What different types of functions an operating system can perform?
+Discuss
+Write a short note: OS registry Explain computer booting process
+Explain system software, application software and utility software
+Write a short note on multicore technology
+Answer the following: (Any One) (06) What is file compression?
+How does it work?
+What are the different types of data storage solutions available?
+SECTION-I Attempt any FIVE out of SEVEN: Write your expressions for the following situations: (i) Expressing gratitude, (ii) introducing yourself and (iii) congratulating people on their success Explain the following terms: (i) Synonyms (ii) Antonyms (iii) Prefixes What do you mean by presentation?
+Discuss various attention grabbers for effective presentation skills
+What are the different types of a formal letter?
+Discuss various Email Etiquettes?
+What are the characteristics of writing a formal NOTICE?
+What is an advertisement?
+Discuss classified text and display ads with examples
+Use the prefix ‘ir-? and make two words
+Give Synonyms for the word, ‘TOXIC’
+Give Antonyms for the word, ‘MATURE’
+Identify error in the sentence) What are the characteristics of a good speaker?
+Discuss various types of modal auxiliary verbs
+Attempt Any ONE: (06) What do you mean by Group Discussion?
+Discuss various types of GD

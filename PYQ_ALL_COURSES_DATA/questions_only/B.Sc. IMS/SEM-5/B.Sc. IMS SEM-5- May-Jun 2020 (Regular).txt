@@ -1,0 +1,18 @@
+What is use of File Upload Control?
+Explain with property. b
+Culture name having how many parts?
+Explain with example. c
+Explain property of LoginStatus control with possible and default value. d
+What is use of MultiView control?
+Explain with commands. e
+Explain ChangePassword control with Properties. f
+Write down the step to Data Bindings Between Controls and the LINQ to SQL Classes g
+Explain using example how to register User control in Web-Config file. 2
+Answer the following: (Any One) (04) What is use of Calendar control?
+Explain with property
+Explain <%@ Register %> directive with three attributes. 3
+How you can set UICulture and Culture properties in web configuration » file. 4
+Write Down the step to create LINQ to SQL Classes
+What is the use of Validate(), EndEdit(),SubmitChanges() methods in LINO to SQL? 5
+What is WCF?
+Explain WCF Components

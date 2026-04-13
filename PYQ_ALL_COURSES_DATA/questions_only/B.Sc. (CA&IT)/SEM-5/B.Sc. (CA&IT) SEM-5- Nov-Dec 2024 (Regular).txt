@@ -1,0 +1,10 @@
+Also list the name of | 06 Col BTL4 different web servers and browsers. 2 | What is variable?
+How to declare variable in PHP?
+Discuss the features and advantages of | 06 col BTL4 PHP
+What is file?
+Summarize the file functions with example. 06 co2 BTL4 3 | How to create and delete cookie with example? 06 Cco2 BTLS 12 Q.3_| Answer the following: (Any Two) 06 Cco4 BTL2 1} Describe the steps to download, install, and set up WordPress on a local server, highlighting any challenges in the process. 2 | Describe the steps to establish a PHP/MySQL connection | 06 Co3 and outline the function used to handle errors in the connection
+Explain the different types of 06 C04 BTLI,2 System Calls. = Q.3 | Answer the following: (Any Two) 12 1 | Explain Deadlock Prevention in detail. 06 CcO2 BIL 1,2 2 | What is Deadlock?
+Explain Deadlock Characterization. 06 CO?
+And 06 co2 BTL4 Discuss its types. 3 | Explain the concept of a firewall and describe its various 06 col BTL3 types. i Q.3 | Answer the following: (Any Two) 12 1 | Explain DHCP transition Diagram. 06 Co3 BTLS 2 | Explain Active Directory Federation Services. 06 Cco4 BTL4 3 | What is virtualization?
+Discuss the different types of 06 Cco4 BTL3 virtualization?
+Explain various types of 06 CO2 | BTL2/BTL4 stakeholders. 3 | Analyze stackholder analysis methods in details. 06 Cco2 BTL4 Q.3 | Answer the following: (Any Two) 12 1 | Explain the Interview Stakeholder techniques in detail. 06 CO3 BTL4 2 | Write a short note on Data Classification. 06 CcO4 BTL4 3 | How to apply to deal with missing data? 06 Cco4 BTL3 Q4 | Answer the following: (Any One) 06 1 | Evaluate all summary statistic measurements. 06 COS BTLS 2 | Apply data visualization techniques. 06 CO5 BTL3 ** End of the Paper **

@@ -1,0 +1,54 @@
+Why is it so popular?
+List out various types of NoSQL databases
+Explain any 2 of them in brief
+How can you use various logical and comparison operators in MongoDB?
+Explain the concept of Data Modeling in MongoDB?
+How can you manage embedded documents in MongoDB?
+How can you update the record in MongoDB?
+Explain different field operators available in update method
+Explain steps to connect Node.js with MongoDB
+What are the different ways to take backup and restore in MongoDB?
+What are the key features of MongoDB?
+How can you create database and collections into it?
+Explain with proper example
+Explain various datatypes supported in MongoDB with relevant example
+Answer the following: (Any Two) What is indexing?
+How can you manage indexing in MongoDB?
+Explain the concept of aggregation in MongoDB
+Differentiate between Redis Vs MongoDB NoSQL databases
+SECTION-I 1 Answer the following: (30) A Do as directed (Any Three) 1 Python provides a standard GUI framework ____ which is used to develop fast and easy GUI applications 2 is the error raised when a built-in function is inputted with invalid data type values 3 What is the correct keyword for creating an alias for a module? 4 If you do not know the number of keyword arguments that will be passed into your function, there is a prefix you can add in the function definition, which prefix?
+B Do as directed (Any Three) | is the correct comparison operator to check if 5 is not equal to 10 2 statement is used to stop a loop 3 ____ collection does not allow duplicate members 4 In Python, ‘Hello’, is the same as "Hello" True or False Cc Do as directed (Any Three) Which symbol is used to insert COMMENTS in Python code?
+Discuss the Scope in Python?
+STION-L 1 Answer the following: (Any Five out of Seven) [A] What is framework?
+Explain MVC Framework in detail. [B] tecture of Code-Igniter framework with figure. [C] Discuss the various frameworks available in PHP. [D] Explain Form validation in Codelgniter. [E] Discuss about application structure of Laravel. {F] Explain the role of middleware in detail. [G] What is Blade Templates?
+Describe various directives of Blade Templates, SECTION-II 2
+B] Explain directory structure of Codelgnit nework, C] What is Query Builder class in Codelgniter?
+Describe any five function of Query Builder class. 3
+Describe session helper in codeigniter
+C] How does validation works in Laravel? 4
+What will be the number of pages in the book?
+What amount was paid to Amir?
+How many for to A vendor bough s gain 20%?
+B)4 cys ” _ and C can do a piece of work in 20, 30 and 60 days emai " - wn s can A do the work if he is assisted by B and C on every third day?
+How much is to be paid to C?
+B) 10 C) 12 D) 13 id, "He is the son of the only daughter of the father of my brother." How Bajpai is related to the m an in the photograph?
+What number should come next?
+What is the probability that the ticket drawn has a number which is a multiple of 3 or 5?
+What is the probability that none of the balls drawn is bluc?
+B) 11/21 C) 2/7 D) 5/7 120,99,80,63,48,?
+B)38 C) 39 D) 40 In the series 2, 6, 18, 54, ...... what will be the 8th term ?
+B) 4374 C) 7443 D) 7434 125,80,45,20,?
+If Vishal's shadow was exactly to the left of Udai, which direction was Udai facing?
+If P is in the South of Z, then in which direction of Y, is P?
+Arrange the words in ¢ ‘ § Which clement is 3rd to the right of Sth AP%SGH&SY63NM*!ILS8 Which cle % from left?
+AV& B)Ss C)6 D)3 » YW@LECN3ZPLBOF=D*E2ZLMVB7#4FGS If the numbers immediately preceding the symbols are attached to the value double their numerical value, then what will be the sum of the values of all sum numbers?
+What was the total of their ages three years ago ?
+years B) 72 years C) 74 years D) 77 years a meaningful sequence I.Key 2.Door 3.lock 4.Room 5.Switch on C) 1,3,2,4,5 D) 1,2,3,5,4 Arrange the words in meaningful sequence 1.Police 2.P 4.Judge 5.Judgement A) 3,1,2,4,5 B) 1,2,4.3,5 unishment 3.Crime ‘aningful sequence 1.Leaf 2.Fruit 3.Stem 4.Root 5.Flower A) 3.4,5,1,2 B) 4,3,1,5,2 C) 4,1,3,5,2 D) 4,3,1,2,5 If A is the brother of B; B is the sister of C; 3 and C is the father of D; how D is related to A?
+Introducing a boy, a girl said, "He is the son of the daughter of the father of my uncle.” How is the boy related to the girl?
+How will you th A) remove(var-name); B) free(var-name): C) delete(var-name); > the allocated memory?
+True B) False 32. valid keyword in java?
+Java programs are er than others A)F B) Platform independent C) Not reusable A) C Programming language B) PERAL C) COBOL D) Oak programming language — Which data structure allows deleting data elements from front and inserting at toa on rear?
+Output-restricted deque C) Priority queues D) None of above tricted deque te x « Which of the following data structure is non-linear type?
+Which of the following data structure is linear-type?
+When is the object created with a new keyword?
+Atrun time B) At Compile time C) Depends on the code D) None Which of the following function displays information about PHP and its configuration?

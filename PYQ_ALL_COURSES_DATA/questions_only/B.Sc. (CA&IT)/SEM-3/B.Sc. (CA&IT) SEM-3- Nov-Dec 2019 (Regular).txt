@@ -1,0 +1,71 @@
+SECTION-1I Answer the following: (Any Five) (30) What is data structure?
+Explain the types of it
+Write down algorithm for Deque insert and delete operations
+Explain different tree traversal method with example Give the difference between SMA and DMA
+Write down the algorithms for all stack operations
+Explain binary search with example
+Explain selection sort with suitable example
+Write down algorithm to insert a node at the beginning of the single link list
+Explain Threaded tree What is sequential search?
+Explain with example and algorithm, Answer the following: (Any One) (06) Explain bubble sort with example
+SECTION-I Answer the following: (Any Five) (30) What are the differences between CUI and GUI?
+Describe DIR command with all attributes
+What is mail merge?
+Write down steps for mail merge
+Discuss importance of Freeze Panes and Drawing Tools in Excel
+What is Excel?
+Define features of Excel
+Discuss features of PowerPoint
+Discuss Data types of Microsoft Access
+What are the difference between internal Vs. external Command
+Explain Microsoft word’s features in detail
+Discuss Mathematical functions of Excel
+Discuss the Find and Replace Text function of Excel, Answer the following: (Any One) (06) Describe steps to creating Database in Microsoft Access
+Discuss different elements of Microsoft Access, ad
+Define System and Characteristic of a System
+Explain Need for System Development, List out various Fact finding techniques and describe any one in brief. 2. 3 4
+Explain various level of Testing in detail. 5
+Explain testing process in brief
+Explain Decision Table in detail
+What is DFD?
+Describe Symbols Used in DED with Example. 2
+Write down Difference between Physical and Logical DFD. 3
+What is System Analyst?
+Explain Role of System Analyst. 3
+Explain various types of codes in brief. 2
+Explain data validation in detail. 3
+Explain white box and black box testing in detail. 4, Answer the following: (Any One) (06) 1
+Draw Case Study for Hospital Management System, 2
+Draw case study for Railway Reservation system
+Explain various data types in Oracle
+Discuss aggregate functions
+Discuss GRANT and REVOKE statement in detail
+Explain Advantages of DBMS. 2
+Write short note on Join Dependencies. 3
+Explain Primary key and Foreign key with an example 2
+Discuss DDL commands we Explain various types of joins. 4
+Explain Index in detail. 2
+Discuss Sequence syntax with an example
+Explain Features of OOP. 2
+How StringBuffer class is different from String class?
+Discuss any two methods that is not available in String class
+What is Throwable?
+Explain try, catch finally, throw and throws
+What is method overloading?
+Explain with example Explain with example Vector class
+S 2: S = What is the use of Lambda expression?
+In Which Version of ‘jdk Oracle introduced this features?
+Explain in brief block lambda expression. 7
+Explain phaser in detail
+Why java is platform independent language?
+Explain JDK,JRE, JRE, JIT 2
+Which are the ways to implements thread in java?
+Explain with example. 3
+Explain access specifier in java. 3s Answer the following: (Any Two) (12) 1
+How to create object of Calendar class?
+List out any six constants of Calendar. 2
+Explain method reference in lambda expression, 3
+Differentiate HashTable and Vector
+Explain HashTable in detail 4, Answer the following: (Any One) (06) 1
+Discuss fork/join framework 2
+Explain executer in detail

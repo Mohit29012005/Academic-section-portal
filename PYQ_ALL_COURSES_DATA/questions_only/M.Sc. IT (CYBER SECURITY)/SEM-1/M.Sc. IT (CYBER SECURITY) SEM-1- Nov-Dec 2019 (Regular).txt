@@ -1,0 +1,40 @@
+Which are the ways to secure cloud storage?
+Explain in detail i2p
+Discuss cryptography functions
+Explain Digital Signature in detail
+Discuss digital evidence collection procedure. 9) RN se i Explain mobile forensics in details
+Explain malware, phishing and rootkits in detail. 2
+Discuss web browser privacy configuration. 3
+Explain VPN in detail. 3 Answer the following: (Any Two) (12) 1
+Discuss tool Gpg4win in brief. 2
+Explain mail bombs and exploitation in detail. 3
+Explain face, iris and fingerprint recognition. 2
+Discuss cloud forensics in detail
+State the difference between Act, Bill, Ordinance and Laws
+Discuss the Indian evidence Act in details
+Explain the importance of cyber contracts in details
+Describe the IT audit standards in details
+Explain the Cyber laws Legal Issues and Challenges in India
+Describe the UNCITRAL model law in brief
+Explain the Digital evidence handling procedure in details
+Explain the Software piracy issues in current scenario
+Explain the backup and disaster recovery in cyber security
+Write a short note on Net neutrality
+Write a short note on the log files
+Explain the user administration with its commands
+Discuss the Linux Distribution in brief
+SECTION-I Answer the following: (Any Five out of Seven) How Banner Grabbing useful in information gathering?
+Write a short note on Footprinting
+Discuss Reverse Proxy and Load Balancer
+Explain Authentication in details also discuss its countermeasure
+Explain HTTP header in detail
+What is SQL Injection?
+Discuss about various types of SQL injections
+Explain Cross-Site Scripting in detail
+Discuss five commands of nmap tool for gathering information form target
+What is scanning?
+Discuss about types of Scanning
+Any Two) How Metaspoit is useful in windows OS hacking?
+Discuss XPATH injection and its countermeasure in detail
+Write a short note on types of penetration testing
+Discuss about Gmail phishing attack and protection against it

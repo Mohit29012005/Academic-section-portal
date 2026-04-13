@@ -1,0 +1,76 @@
+Examples and logic may different SECTION-L Answer the following: (Any Five) (30) What is Flowchart?
+Discuss various Flowchart Symbols. is Variable?
+How to declare Variable?
+Discuss various Variable nage
+Discuss data types with storage rang in detail with example. if we don’t use break in switch what is the effect of it?
+Explain Switch with example in C Language
+Discuss nested IF-ELSE with example in C Language
+Explain Entry Control Loop with example in C Language
+How it is useful in C Language? sm & Flowchart to generate first 25 Prime number
+List out Structure of Operating System and explain any one in detail. 2
+Write a short note on NTFS
+Write down steps to avoid Malware. a Explain DIR command with all option
+Write a short note on Process Control Block (PCB)
+List out Process Scheduling Algorithm and Explain any one from it
+List out Types of Operating System and explain any one in detail. 2
+Describe History of Windows Operating System. 3
+Discuss following Commands: (D Ipconfig (Il) PathPing (IID) Copy 3
+What is process?
+Explain Process State Diagram in detail. 2
+Discuss Following Privacy Protecting Options: (I) Location (II) Microphone 3
+What is System Call?
+Explain type of System Call. 4, Answer the following: (Any One) 1
+What is Deadlock?
+Discuss Deadlock Characterization, 2
+Differentiate Logical and Physical Address
+SECTION-I i Answer the following: (Any Five) (30) What is Javascript?
+Discuss its advantages and disadvantages
+What is HTML?
+Explain HTML document structure
+Discuss web designing principles in brief
+Explain each of one by giving an example
+Explain <a> and <img> with example. wv 6
+Discuss in brief: 1) internet 2) intranet 3)extranet 7
+Explain <audio>, <video> and <embed> tags with example
+Write an HTML code to design a following registration form
+Bsc.IT(cyber Security)-I Answer the following: (Any Two) (12) What is CSS selector?
+Explain any five of it with example
+Explain graphics elements of HTMLS
+Explain new form input types in HTMLS, Answer the following: (Any One) (06) Discuss Alert, Confirm and Prompt dialog boxes of JavaScript
+What is Javascript?
+Discuss its advantages and disadvantages. 2
+Explain HTML document structure. 3
+Discuss web designing principles in brief. 4
+Explain each of one by giving an example. 5
+Explain <a> and <img> with example. 6
+Discuss in brief: 1) internet 2) intranet 3)extranet 7, Explain <audio>, <video> and <embed> tags with example
+What is Computer Network Topology?
+Explain its types in brief
+Discuss the Cipher methods in detail
+Explain the security in Emails in detail
+Write down the short note on Firewalls. aa Explain the concept of Encryption and Decryption in brief
+What is the Symmetric and Asymmetric key cryptography?
+Write the short note on Password
+Define the following term with suitable figure : (A) Finite Graph (B) Trivial Graph 2
+State De-Morgan’s law: (A U By’ = A'O B’ 4
+Write a short note on One to One Function cannot. cu| 974 | 1036] “loa | 5
+Define the term with suitable example : (1) Equal matrix (2) Diagonal Matrix 6
+Find the value of the Permutation. 1) oPs 2) sP3 3) isP3 7
+Explain Isomorphic Graphs
+How many like both coffee and tea?
+Answer the following: (Any Two) (12) What is Graph?
+Write a short note on Simple Graph with example
+What is function?
+Explain Domain and Range of function with example
+Explain the Regular Graphs
+Explain Permutations with example
+SECTION-I Answer the following: (Any Five) What is communication?
+Explain the process of communication with proper diagram. “Language is an effective tool to shape our experiences.”- Discuss in detail
+What is a conjunction?
+Explain any five conjunctions with example
+Define ‘Listening’ and explain the process of listening in detail
+What are the main techniques for effective reading and comprehension?- Discuss in details
+What are the guiding principles of professional writing?
+What is Speaking Skill?
+What are the qualities of a good speaker?
+Explain the flows of communication with appropriate diagram

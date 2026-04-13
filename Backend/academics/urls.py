@@ -74,4 +74,5 @@ urlpatterns = [
         views.get_timetable_by_room,
         name="get_timetable_by_room",
     ),
+    path("pyq/search/", views.pyq_search, name="pyq_search"),
 ]

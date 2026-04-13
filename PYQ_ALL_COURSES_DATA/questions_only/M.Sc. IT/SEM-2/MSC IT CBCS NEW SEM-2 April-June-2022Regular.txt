@@ -1,0 +1,58 @@
+Answer the following: (ANY SIX FROM EIGHT) (30) What is machine learning?
+Explain supervised machine learning in detail
+Explain the steps of ML framework for developing model. os fp What is linear regression?
+Explain linear regression in detail. ao Explain the various terms of confusion matrix in brief
+What is LASSO?
+Explain LASSO regularization technique in detail
+What is research?
+Explain the importance of research in detail
+Explain decision tree algorithm in detail. rom Hy o What is classification?
+List down the classification algorithms in ML
+Answer the following: (ANY ONE) ; (06) Explain the python libraries for data analysis in brief. b What is data analytics?
+Explain variance and bias in brief. 3
+Answer the following: (ANY TWo) (09) How to build logistic regression model?
+Explain in brief. b Explain ROC curve and AUC in detail, c What is chart?
+Explain Gain chart in detail
+Answer the following: (ANY ONE) (06) Explain polynomial regression in detail with suitable example. b What is regression?
+Explain multi linear regression in detail. 5
+Answer the following: (ANY TWO) (09) What is KNN?
+Explain KNN in detail with proper example. rt vector machine algorithm in detail. b_ Explain suppo: . jem?
+What is use of File?
+Explain different file operation mode
+Write in detail about Regular Expressions
+How to create dataframe using cgy_ dictionary and list of tuples?
+How to draw bar and line graph using matplotlib?
+Explain using example
+Write down python script to insert employee records to the database
+How to send a mail using SMTP jn python?
+Explain in detail about Tkinter of python
+Explain XML Processing using python module in detail
+Explain text and binary type Of files in python, II
+Explain use *, +, and ? character in repytay expression with example
+Explain search () and match () of re module with example
+Explain head(), tail(, describe(). columns, ang shape of pandas module with example
+How to draw pie and histo graph using ™atplotlib?
+How to access MySQL database using phpmyadmin?
+Explain in brief
+Write down python soript ° select employee records from database
+Using which function you c” call stoFed procedure from python script?
+Discuss following Widgets of TkInter using example
+Write down any two advantages of GU] Programming?
+Explain agent in Ay, List out the various types of Agent and explain any one with suitable diagram
+Explain minimax @lgorithm of adversarial search in detail
+Explain A* search algorithm in detail
+Explain Approaches to knowledge representation in detail
+Explain First order predicate catoutys (FOPL) with example. . 2D; What is expert sySteM?
+Explain problem solving agent
+Explain Hill climbing search jn detail Answer the following: (ANy TWo) Explain Knowledge-Based Agent jn detail Write a note on conceptual dependency Of strong slot and filler structure
+Discuss Pivot table with example
+Write a short note on regression
+What is node?
+Discuss different types of nodes in Knime, Write down the steps to create bar chart in Knime
+What is preprocessing
+Discuss it with example using weka
+Discuss association rules With example in weka, Answer the following: (Any One) (06) Explain Knowledge Discovery Process in detail
+Discuss various types of 4#ta formats
+Answer the following: (Any Two) : (09) What is the use of charts?
+Explain any two'excel charts in detail
+Explain what if analysis with “xample, n detail. g: (Any One) (06) Discuss correlation !

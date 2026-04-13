@@ -1,0 +1,81 @@
+Explain if...else statement with example
+What is variable?
+Explain declaration and initialization of a variable
+Explain all arithmetic operators with proper example
+Write the short note on “Define Symbolic Constants” Explain break and continue statement with example
+Explain Basic Structure of ‘C’ language
+What are the importance of C language?
+Explain it B. — What is type casting?
+Explain it with example
+Write a C program to find the area of circle
+Explain all the relational operators
+Why we use switch case statement?
+Explain for loop with proper example
+Answer the following: (ANY ONE) (06) What is an array?
+Explain Declaration and Initialization of one dimensional array with example
+What is function?
+Explain categories of function
+Answer the following: (ANY ONE) ‘ What is structure?
+Write the syntax of structure and explain it with example
+Explain “arrays of structure” with example
+Answer the following: (Any Six) Which are the Universal Gate?
+Explain it
+Explain De Morgan’s theorem
+Draw and explain 1 of 4 Decoder
+Explain Full adder
+Explain NOR Latch
+Explain Shift Left Register
+Explain Binary Number System with an example
+Convert (1010111.110)2 =(?)10 (b) Convert (434753.1357)8 = (?)16 Answer the following: (Any Two) Explain Hexadecimal Number system with an example
+Explain Hamming Code with an example
+Answer the following: (Any Two) Which are basic Gates?
+Explain EX-OR and EX-NOR Gate
+Draw and Explain 4 to 1 Multiplexer
+Explain RAM in detail
+Explain Buffer Register. [ (30) (8) (8) (6) (4) 4)
+Define Mail Merge
+Write down its steps with all option. b
+Define Watermark
+Write down its steps with all option. c
+List out types of charts
+Write down steps to Creating Charts. d
+Discuss the Menus of Open Office-Math with figure
+Write a short note on Slide Transition. f
+Define the term Tables
+Write down its steps to create it. 2 g
+List out Logical Function
+Explain any three with Syntax and Example. 2. [Al Answer the following: (ANY TWO) (08) a Define Drop cap
+Write down its steps
+How to select the application package?
+Write down its steps. c Write a short note on Working with Documents with figure. [B] ___is the extensions file are saved in impress
+List out Date Time functions
+Explain any three function with example. c List out Mathematical Functions
+Explain any three in detail. [B] Which shortcut key will be used for Style and Formatting, (01) 4
+How to creating a New Database?
+Write down its steps. b
+List out advantages of OPEN OFFICE -BASE. 5
+Write a short note on Re-usability in open office-impress
+Discuss machine language in depth
+Explain Key-board with figure
+Discuss Disk Management in depth
+List out the characteristics of computer and explain it in details
+Write a short note on Software
+Explain CD-ROM in brief
+Write a short note on Data and Information
+Define the term Compiler and Interpreter
+Explain processor architecture with figure
+Write a short note on assembly language. 3
+Discuss MODEM in brief
+Answer the following: (ANY ONE) (06) A. — Howto securing our system from virus and unauthorized user?
+Write a short note on Backup and Restore
+Answer the following: (ANY SIX OUT OF EIGHT) (30) Explain in detail the stages in the process of Communication. ‘What are the different tenses in the English Language?
+Explain any Four tenses with its forms, uses and examples
+What are the various modes of listening with examples?
+What is Reading?
+Explain the various types of reading with examples
+Explain the flow and methods of communication
+What are the tips for effective reading?
+Explain in brief. ‘What are the various parts of speech?
+Explain any two of them with necessary examples
+What are the characteristics of a good listener?
+Write in detail: Listening v/s Hearing

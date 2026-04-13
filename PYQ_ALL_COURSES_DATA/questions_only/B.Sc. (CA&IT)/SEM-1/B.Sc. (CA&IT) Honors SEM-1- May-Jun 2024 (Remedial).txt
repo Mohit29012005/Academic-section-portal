@@ -1,0 +1,16 @@
+Demonstrate various Flowchart 06 col BTL3 Symbols. 3 | Summarize Basic Structure of C Program with example. 06 CO2 BTL2 4 | Illustrate Features of C Language. 06 Cco2 BTL4 5 | Explain Increment-Decrement and Relational Operators 06 Cco2 BTL2 with example. 6 | What is looping?
+List out rules for preparing Algorithm 06 Col BTL1 with example. 2 | Explain the rules to define Symbolic Constants. 06 Cco2 BTL6 3 | Discuss Data Types of C Language. 06 CO2 BTL2 Q.3_ | Answer the following: (Any Two) 12 1 | Explain explicit type casting with example. 06 Cco3 BTL2 2 | Compare break and continue statement with example. 06 C04 BTLS 3 | Demonstrate else.....if ladder with example. 06 Co3 BTL3 Q.4 | Answer the following: (Any One) 06 1 Explain Tun time initialization of one dimensional array | 06 CO3 BTL2 with example. 2 | What is Array?
+Illustrate types of array. 06 co2 BTL4 ** End of the Paper **
+Explain its features. 06 CO2 BTL4 Q.3_| Answer the following: (Any Two) 12 _ 1 | Elaborate on the database function in MS Excel and 06 CO3 BTL3 compare it with other spreadsheet software. — 2 | Describe MS PowerPoint and illustrate its key features. 06 Cco4 BTLS 3 | Write a short note describing the concept of Custom 06 Co4 BTL4 Animation
+Classify the generations of computers in detail. 06 co2 BTL4 3 | Illustrate the input device with example. 06 Cco2 BTL3 Q.3_ | Answer the following: (Any Two) 12 1|How does the installation of drivers impact the 06 Co3 BTL4 performance of hardware components? 2 | What is programmed I/O, and what role does it play in data 06 Cco4 BTL2, transfer operations?
+Also Iff:RoR,g:R> R&h:ROR 06 co2 BTL4 & isdefine as f(x) =x? +x,g(x) = 9° -1&AG)= 4x?
+Find the degree of each vertex and verify the sum of degree is twice the number of edges. 7 Find the number n of distinct permutations that can be 06 C02 BTL3, formed from all the letters of each word: (a) THOSE; (b) BTIL4, BTL6 UNUSUAL; (c) SOCIOLOGICAL
+Find the number of people who read at least one of the three magazines
+Find the number of people who read exactly one magazine
+One-One function (B) Onto function (c) equal function (d) Identity function (e) diagonal matrix (f) Constant function Ps) S TVX Zz Which of the above graphs are isomorphic?
+Describe techniques 06 CO4 = BTL2,3 for improving reading comprehension. 5 Describe tone, stress, voice modulations, and paralinguistic 06 COS BTLI1,2 features in oral communication
+Explain the equation E=A+1 in terms of letter writing. 06 CO4 BTL2,6 Define coherence and cohesion in writing
+Which of the following sentences uses the correct article? a) I need the pen to write. b) I need a pen to write. c) I need pen to write. d) I need an pen to write
+Describe the communication process and its sequential flow in 06 CO2 the communication cycle
+Discuss the importance of possessing effective interpersonal oral conversation skills
+Write a job application letter to a software development company expressing your interest in a software designer position advertised by them

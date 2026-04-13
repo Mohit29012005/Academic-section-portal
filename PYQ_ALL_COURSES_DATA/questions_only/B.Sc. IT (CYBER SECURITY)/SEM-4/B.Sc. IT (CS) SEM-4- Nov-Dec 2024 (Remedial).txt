@@ -1,0 +1,13 @@
+Explain ACID Properties of 06 col BTLI transaction. 2 | What is PL/SQL?
+Discuss the benefits of PL/SQL over 06 Cco2 BTL1 SQL. 3 | Give the difference between procedure and function. 06 Cco3 BTL4 4 | Explain the General Architecture of Moving Data. 06 co4 BTL2 5 | Explain the use of SQL* Loader with any five parameters. 06 COs BTL2 6 | What is Concurrency control?
+Which are the types of cursor?
+Explain 06 co2 BTL1 with suitable example
+Answer the following: (Any Two) 12 T | Describe in brief: Package and its components. 06 CO3 BTL2 2 | What is trigger?
+How to Create and Delete Trigger. 06 co4 BTL1 3 | Discuss data pump export and import utilities in detail. 06 CcO4 BTL6 Q.4 | Answer the following: (Any One) 06 1 | Explain SQL*Loader Datatypes. 06 COS BTL2 2| Discuss the use of Bad file and Discard file with SQL| 06 COs BTL6 , B
+Explain the features and advantages of 06 CO2 | BTL2/BTL4 PHP. 3 | What is array?
+Categorize the types of arrays in PHP. 06 CO2 | BTL2/BTL4 Q.3_ | Answer the following: (Any Two) 12 — 1 | Apply to handle error reporting in php? 06 CO3 B ue) 2 | Analyze the fetch types of mysqli in details. 06 CO4 : BTL4 - 3 | What is mysqli?
+Explain type with advantages and Dis- 06 Cco2 BTL4 | | advantages. _ | | 3 | Write a short note on DNS. 06 CO3 BTL4 4 | Discuss backup and recovery in Windows 2019 server. | 06 CO4 BTL5 i 5 | Write note on Mobile IP addressing. 06 CO5 BTIL4 | 6 | Explain Telnet
+How it works?
+List out different types! 06 | CO1 | BTL6 \ of firewall and explain types. _ | | j 2 | Describe Proxy server and its types. 7 06 co2 BIL2 ! ” Differentiate Work group model and Domain model. 06 =| COl BTLS5 Q.3_ | Answer the following: (Any Two) 12 (1 | Write a shortnote on DHCP _ | 06 [cos | Bra | | 2 | Describe Server virtualization. - 7 | 06 | CO4 | BTL2 i 3 | Explain Active Directory Lightweight Directory Services. | 06 C04 BTL4 Q.4 | Answer the following: (Any One) - 06 1 | Define VPN with its types. 06 | COS | BTL2 2 | What is NAT?
+Describe different types | 06 cos BTL4 i NAT. ** End of the Paper **
+Describe image ad, video ad,| 06 | CO3 | BTL2 i _shoppable ad i . i What is for {06 | CO3 BIL! | 06 co4 BTL6 1 . a _| Answer thre followt 06 1 | What is fraudulent en 06 cos BIL2 s techniques io id _ — 0 the techniques for creating strong passwords and | 06 COS BTL6 _| social media Jogins in details. ** End of the Paper **

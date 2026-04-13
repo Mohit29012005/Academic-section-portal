@@ -1,0 +1,7 @@
+Explain the Pros and Cons of taking 06 CO3 BTL3 Snapshot during Malware Analysis Process ? 4 | Explain Antivirus Scanning and Hashing and its 06 Cco2 BTL4 importance for,Malware Analysis. 5 | Explain how Procmon (Process Monitor) is used in 06 CO4 BTLS malware analysis
+Answer the following: (Any One) 06 1 | Explain Backdoors and Write a short note on Reverse 06 cos BTL3 Shell. 2 | Discuss how credential stealers operate within malware. 06 COs BTLS What methods do they use to capture sensitive information, and what can be done to mitigate these risks?
+Describe the resources in detail. 06 1 BTL-3 3 | What is ADB?
+Explain its commands. 06 2 BTL-5 Q.3_ | Answer the following: (Any Two) 12 1 | Define reverse engineering
+How to do it for android app? 06 3 BTL-5 2 | Describe the passive analysis in detail. 06 4 BTL-4 ‘3 | What is proxy interception?
+Describe the steps in detail. 06 4 BTL-4 Q.4 | Answer the following: (Any One) 06 Elaborate the types of forensic. 06 5 BTL-4 Write a short note on the android filesystem partition. 06 5 BTL-4 ** End of the Paper **
+Answer the following: (Any One) 06 1 | Discuss the importance of ethics in Information Security. 06 CO2 | BTLS 2 | How does IPR differ between India and other countries, 06 Cco3 | BTL4 and why is it important for businesses? ** End of the Paper **
