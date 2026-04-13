@@ -40,6 +40,8 @@ const FacultyPYQs = () => {
   const [error, setError] = useState("");
   const paperRef = useRef(null);
 
+  const [subjectSearch, setSubjectSearch] = useState("");
+
   // Fetch courses on mount
   useEffect(() => {
     const fetchCourses = async () => {
@@ -67,6 +69,7 @@ const FacultyPYQs = () => {
       fetchSubjects();
     } else {
       setSubjects([]);
+      setSubjectId("");
     }
   }, [course, semester]);
 
@@ -74,12 +77,18 @@ const FacultyPYQs = () => {
     setCourse(e.target.value);
     setSemester("");
     setSubjectId("");
+    setSubjects([]); // Force clear
   };
 
   const handleSemesterChange = (e) => {
     setSemester(e.target.value);
     setSubjectId("");
   };
+
+  const filteredSubjects = subjects.filter(s => 
+    s.name.toLowerCase().includes(subjectSearch.toLowerCase()) || 
+    s.code.toLowerCase().includes(subjectSearch.toLowerCase())
+  );
 
   const handleGenerate = async () => {
     if (!course || !semester || !subjectId) {
@@ -378,19 +387,30 @@ const FacultyPYQs = () => {
             <div className="mb-8">
                <div className="space-y-2">
                   <label className="text-[10px] uppercase tracking-widest text-white/50">Subject Selection</label>
-                  <select 
-                    value={subjectId} 
-                    onChange={(e) => setSubjectId(e.target.value)} 
-                    disabled={!semester} 
-                    className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none disabled:opacity-30"
-                  >
-                    <option value="">Select Subject...</option>
-                    {subjects.map((s) => (
-                      <option key={`sub-${s.subject_id}`} value={s.subject_id}>
-                        {s.code} - {s.name}
-                      </option>
-                    ))}
-                  </select>
+                  <div className="space-y-3">
+                    {semester && (
+                      <input 
+                        type="text" 
+                        placeholder="Type to filter subjects..." 
+                        className="w-full bg-black/40 border border-white/10 p-3 rounded text-sm focus:border-[var(--gu-gold)] outline-none"
+                        value={subjectSearch}
+                        onChange={(e) => setSubjectSearch(e.target.value)}
+                      />
+                    )}
+                    <select 
+                      value={subjectId} 
+                      onChange={(e) => setSubjectId(e.target.value)} 
+                      disabled={!semester} 
+                      className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none disabled:opacity-30"
+                    >
+                      <option value="">Select Subject...</option>
+                      {filteredSubjects.map((s) => (
+                        <option key={`sub-${s.subject_id}`} value={s.subject_id}>
+                          {s.code} - {s.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                </div>
             </div>
 
