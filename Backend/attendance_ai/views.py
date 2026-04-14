@@ -1175,31 +1175,41 @@ def admin_student_face_status(request):
 
     from users.models import Student
 
-    students = Student.objects.select_related("user").order_by("name")
+    # Fetch students with necessary related data
+    students = Student.objects.select_related("user", "course").order_by("name")
 
+    # Apply filters
     program_filter = request.GET.get("program")
     semester_filter = request.GET.get("semester")
-    status_filter = request.GET.get(
-        "status"
-    )  # 'registered'|'pending'|'details_missing'
+    status_filter = request.GET.get("status")  # 'registered'|'pending'|'details_missing'
 
     if program_filter:
         students = students.filter(course__name__icontains=program_filter)
     if semester_filter:
         students = students.filter(current_semester=semester_filter)
 
+    # Use a faster lookup by getting all profiles once
+    # Index by user_id which is the UUID value
+    profiles = {p.user_id: p for p in StudentProfile.objects.all()}
+
     result = []
     for stu in students:
-        try:
-            ai_profile = StudentProfile.objects.get(user=stu.user)
-            is_face = ai_profile.is_face_registered
-            is_details = ai_profile.is_details_filled
-            face_at = ai_profile.face_registered_at
-        except StudentProfile.DoesNotExist:
-            is_face = False
-            is_details = False
-            face_at = None
+        # Check profile using stu.user_id (the UUID stored in Student model)
+        profile = profiles.get(stu.user_id)
+        
+        is_face = profile.is_face_registered if profile else False
+        is_details = profile.is_details_filled if profile else False
+        face_at = profile.face_registered_at if profile else None
+        
+        # Build photo URL safely
+        photo_url = None
+        if profile and profile.registered_face_photo:
+            try:
+                photo_url = request.build_absolute_uri(profile.registered_face_photo.url)
+            except Exception:
+                photo_url = None
 
+        # Filter by status in memory (after profile lookup)
         if status_filter == "registered" and not is_face:
             continue
         if status_filter == "pending" and (is_face or not is_details):
@@ -1210,31 +1220,31 @@ def admin_student_face_status(request):
         result.append(
             {
                 "student_id": str(stu.student_id),
-                "user_id": str(stu.user.user_id),
+                "user_id": str(stu.user_id),
                 "name": stu.name,
                 "enrollment_no": stu.enrollment_no,
-                "program": stu.course.name if stu.course else "",
+                "program": stu.course.code if stu.course else "N/A",
                 "semester": stu.current_semester,
                 "is_details_filled": is_details,
                 "is_face_registered": is_face,
                 "face_registered_at": face_at,
+                "face_photo_url": photo_url,
             }
         )
 
     # Summary stats
-    total = len(result)
-    registered = sum(1 for r in result if r["is_face_registered"])
-    pending = total - registered
-
+    full_count = Student.objects.count()
+    total_reg = StudentProfile.objects.filter(is_face_registered=True).count()
+    
     return Response(
         {
             "students": result,
             "stats": {
-                "total": total,
-                "registered": registered,
-                "pending": pending,
-                "registration_pct": round((registered / total * 100), 1)
-                if total > 0
+                "total": full_count,
+                "registered": total_reg,
+                "pending": full_count - total_reg,
+                "registration_pct": round((total_reg / full_count * 100), 1)
+                if full_count > 0
                 else 0,
             },
         }

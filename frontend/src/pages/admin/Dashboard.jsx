@@ -213,23 +213,8 @@ const AdminDashboard = () => {
               <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[var(--gu-gold)]/5 rounded-full blur-3xl pointer-events-none"></div>
             </div>
 
-            {/* Critical Alert Segment */}
-            <div className="bg-red-500/10 border border-red-500/20 rounded-3xl p-8 flex items-start gap-5 shadow-2xl relative overflow-hidden group">
-              <div className="p-3 bg-red-500/20 rounded-2xl group-hover:scale-110 transition-transform duration-500">
-                <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0" />
-              </div>
-              <div>
-                <h3 className="text-red-500 font-black text-[10px] uppercase tracking-[0.3em] mb-2">Priority Conflict</h3>
-                <p className="text-red-300 text-xs leading-relaxed font-bold opacity-80">
-                  Semester 6 registration window closure in <span className="text-red-500 underline underline-offset-4 decoration-2">48:00:00</span>. Major document missing-vector detected.
-                </p>
-              </div>
-              <div className="absolute top-0 right-0 w-24 h-24 bg-red-500/5 rounded-full blur-2xl group-hover:bg-red-500/10 transition-colors"></div>
-            </div>
-
           </div>
         </div>
-
       </div>
     </AdminLayout>
   );
