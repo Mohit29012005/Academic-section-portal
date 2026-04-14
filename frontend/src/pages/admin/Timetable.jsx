@@ -83,6 +83,7 @@ const Timetable = () => {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [pdfGenerating, setPDFGenerating] = useState(false);
+  const [generatingAI, setGeneratingAI] = useState(false);
 
   // Slot selection for adding
   const [activeSlot, setActiveSlot] = useState(null); // { day, slotIndex }
@@ -155,6 +156,21 @@ const Timetable = () => {
       setTimetableSlots([]);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleGenerateTimetable = async () => {
+    if (!window.confirm("Initialize AI Timetable Generator? This will clear unstructured slots and automatically allocate an optimal class schedule without clashes.")) return;
+    setGeneratingAI(true);
+    try {
+      const res = await academicsAPI.generateTimetable("Ahmedabad", true);
+      alert(res.data.message || "AI Timetable Generation Successful!");
+      fetchTimetable();
+    } catch (err) {
+      console.error(err);
+      alert(err.response?.data?.error || "Error generating AI timetable.");
+    } finally {
+      setGeneratingAI(false);
     }
   };
 
@@ -315,12 +331,21 @@ const Timetable = () => {
               </select>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4 mt-4 md:mt-0">
+              <button
+                onClick={handleGenerateTimetable}
+                disabled={generatingAI}
+                className="bg-black border border-[var(--gu-gold)] text-[var(--gu-gold)] px-6 py-2.5 rounded text-xs font-black uppercase tracking-widest hover:bg-[var(--gu-gold)] hover:text-black transition-all shadow-[0_0_10px_rgba(212,175,55,0.2)] flex items-center gap-2 disabled:opacity-50"
+              >
+                {generatingAI ? <Loader2 className="w-4 h-4 animate-spin" /> : '✨'}
+                AI Auto-Generate
+              </button>
+
               <button
                 onClick={fetchTimetable}
                 className="bg-[var(--gu-gold)] text-[var(--gu-red-deep)] px-6 py-2.5 rounded text-xs font-black uppercase tracking-widest hover:bg-yellow-500 transition-all shadow-md flex items-center gap-2"
               >
-                <Loader2 className={`w-4 h-4 ${loading ? 'animate-spin inline-block' : 'hidden'}`} />
+                <Loader2 className={`w-4 h-4 ${loading && !generatingAI ? 'animate-spin inline-block' : 'hidden'}`} />
                 Sync Matrix
               </button>
               
