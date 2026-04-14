@@ -140,6 +140,9 @@ export const facultyAPI = {
   profile: () => api.get('/faculty/profile/'),
   updateProfile: (data) => api.put('/faculty/profile/', data),
   timetable: () => api.get('/academics/faculty/timetable/'),
+  // Grading (Class Teachers)
+  gradingStudents: () => api.get('/faculty/grading/students/'),
+  gradingSubmit: (data) => api.post('/faculty/grading/submit/', data),
 };
 
 // Admin API
@@ -165,6 +168,9 @@ export const adminAPI = {
   holidays: () => api.get('/admin/holidays/'),
   createHoliday: (data) => api.post('/admin/holidays/', data),
   deleteHoliday: (holidayId) => api.delete(`/admin/holidays/${holidayId}/`),
+  // Semester Config
+  semesterConfig: () => api.get('/super-admin/semester-config/'),
+  toggleSemester: (data) => api.post('/super-admin/semester-config/toggle/', data),
 };
 
 // Academics API

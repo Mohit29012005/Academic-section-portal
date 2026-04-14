@@ -13,6 +13,7 @@ urlpatterns = [
     path('exam-paper/', include('AI_Powered_Exam_Paper_Generator.urls')),
     path('api/career/', include('ai_career.urls')),
     path('api/attendance-ai/', include('attendance_ai.urls')),  # AI Attendance System
+    path('accounts/', include('allauth.urls')),
 ]
 
 if settings.DEBUG:

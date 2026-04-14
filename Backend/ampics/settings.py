@@ -30,7 +30,29 @@ INSTALLED_APPS = [
     "AI_Powered_Exam_Paper_Generator",
     "ai_career",  # AI Career Guidance
     "attendance_ai",  # AI Attendance System
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.google",
 ]
+
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+
+SOCIALACCOUNT_PROVIDERS = {
+    "google": {
+        "APP": {
+            "client_id": config("GOOGLE_OAUTH_CLIENT_ID", default=""),
+            "secret": config("GOOGLE_OAUTH_CLIENT_SECRET", default=""),
+            "key": ""
+        }
+    }
+}
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -41,6 +63,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "ampics.urls"
@@ -155,9 +178,13 @@ for directory in [
 ]:
     os.makedirs(os.path.join(MEDIA_ROOT, directory), exist_ok=True)
 
-# Email Configuration (Console Backend for Development)
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-EMAIL_HOST_USER = "no-reply@gnu.ac.in"
+# Email Configuration
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "23032431034@gnu.ac.in"
+EMAIL_HOST_PASSWORD = "ymlm cqri uzfb dcyu"
 
 # ── Celery Configuration ─────────────────────────────────────────────────────
 CELERY_BROKER_URL = config("CELERY_BROKER_URL", default="redis://localhost:6379/0")

@@ -77,11 +77,14 @@ const FacultyLayout = ({ children }) => {
     navigate('/login', { replace: true });
   };
 
+  const isClassTeacher = profile?.is_class_teacher === true;
+
   const navItems = [
     { name: "Dashboard", icon: LayoutDashboard, path: "/faculty/dashboard" },
     { name: "AI Attendance", icon: Camera, path: "/faculty/attendance" },
     { name: "Timetable", icon: Calendar, path: "/faculty/timetable" },
-    { name: "PYQs", icon: FileText, path: "/faculty/pyqs" },
+    { name: "Exam Paper Generator", icon: FileText, path: "/faculty/pyqs" },
+    ...(isClassTeacher ? [{ name: "Grading", icon: ShieldCheck, path: "/faculty/grading" }] : []),
     { name: "Profile", icon: User, path: "/faculty/profile" },
   ];
 

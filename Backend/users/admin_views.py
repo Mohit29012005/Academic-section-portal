@@ -1,9 +1,11 @@
 import json
 from datetime import datetime, timedelta
 from django.db.models import Count, Q
-from django.db import connection
+from django.db import connection, IntegrityError
 from django.utils import timezone
 from django.contrib.auth.hashers import make_password
+from django.core.mail import send_mail
+from django.conf import settings
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
@@ -11,7 +13,7 @@ from rest_framework import status as http_status
 from users.models import User, Student, Faculty, Admin, AdminActivityLog, Notification
 from users.permissions import IsSuperAdmin, IsAdminOrSuperAdmin
 from users.serializers import StudentSerializer, FacultySerializer
-from academics.models import Course, Subject, TimetableSlot, TimeSlot, Room
+from academics.models import Course, Subject, TimetableSlot, TimeSlot, Room, SemesterConfig
 from academics.serializers import CourseSerializer, SubjectSerializer
 
 
@@ -203,79 +205,242 @@ def admin_list_users(request):
 @api_view(["POST"])
 @permission_classes([IsAuthenticated, IsSuperAdmin])
 def admin_create_user(request):
-    """Create any type of user."""
+    """Create any type of user with auto-generation of IDs, emails, and credentials."""
     try:
         data = request.data
         role = data.get("role", "student")
-        email = data.get("email")
+        personal_email = data.get("email")
         password = data.get("password", "Guni@2026")
         name = data.get("name", "")
 
-        if not email:
+        if not personal_email:
             return Response(
                 {"error": "Email is required"}, status=http_status.HTTP_400_BAD_REQUEST
             )
 
-        if User.objects.filter(email=email).exists():
-            return Response(
-                {"error": "User with this email already exists"},
-                status=http_status.HTTP_400_BAD_REQUEST,
-            )
-
-        user = User.objects.create(
-            email=email, role=role, password=make_password(password)
-        )
-
+        # ── ADMISSION WINDOW: Students only April-June ──
         if role == "student":
-            Student.objects.create(
-                user=user,
-                name=name or email.split("@")[0],
-                email=email,
-                enrollment_no=data.get(
-                    "enrollment_no", f"ENR{user.user_id.hex[:10].upper()}"
-                ),
-                course_id=data.get("course_id"),
-                current_semester=data.get("semester", 1),
-                batch=data.get("batch"),
+            current_month = timezone.now().month
+            if current_month < 4 or current_month > 6:
+                return Response(
+                    {"error": "Student admissions are only open from April 1 to June 1."},
+                    status=http_status.HTTP_403_FORBIDDEN,
+                )
+
+        # ── AUTO-GENERATE: Student Enrollment + University Email ──
+        if role == "student":
+            course_id = data.get("course_id")
+            course = None
+            if course_id:
+                try:
+                    course = Course.objects.get(course_id=course_id)
+                except Course.DoesNotExist:
+                    return Response(
+                        {"error": "Invalid course_id"},
+                        status=http_status.HTTP_400_BAD_REQUEST,
+                    )
+
+            # Build enrollment: YY + CourseCode(4) + Seq(3)
+            year_code = str(timezone.now().year)[-2:]
+            course_code = (course.code[:4] if course else "GNRL").upper()
+            # Find next sequence for this prefix
+            prefix = f"{year_code}{course_code}"
+            existing_count = Student.objects.filter(
+                enrollment_no__startswith=prefix
+            ).count()
+            seq = str(existing_count + 1).zfill(3)
+            enrollment_no = data.get("enrollment_no") or f"{prefix}{seq}"
+
+            # University email from enrollment
+            uni_email = f"{enrollment_no.lower()}@gnu.ac.in"
+
+            # Check if User email already taken — use uni_email for auth
+            if User.objects.filter(email=uni_email).exists():
+                # Try next seq
+                seq = str(existing_count + 2).zfill(3)
+                enrollment_no = f"{prefix}{seq}"
+                uni_email = f"{enrollment_no.lower()}@gnu.ac.in"
+
+            user = User.objects.create(
+                email=uni_email, role="student", password=make_password(password)
             )
-        elif role == "faculty":
-            Faculty.objects.create(
+
+            student = Student.objects.create(
                 user=user,
-                name=name or email.split("@")[0],
-                email=email,
-                employee_id=data.get(
-                    "employee_id", f"EMP{user.user_id.hex[:8].upper()}"
-                ),
+                name=name or personal_email.split("@")[0],
+                email=personal_email,
+                enrollment_no=enrollment_no,
+                course=course,
+                current_semester=int(data.get("semester", 1)),
+                batch=data.get("batch", str(timezone.now().year)),
+                admission_year=timezone.now().year,
+            )
+
+            # Send credentials to personal email
+            try:
+                send_mail(
+                    subject="GUNI - Your Student Portal Credentials",
+                    message=(
+                        f"Dear {name},\n\n"
+                        f"Welcome to Ganpat University!\n\n"
+                        f"Your portal credentials:\n"
+                        f"  Enrollment No: {enrollment_no}\n"
+                        f"  University Email: {uni_email}\n"
+                        f"  Password: {password}\n\n"
+                        f"You can login using either your Enrollment No or University Email.\n\n"
+                        f"Regards,\nGUNI Academic Portal"
+                    ),
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=[personal_email],
+                    fail_silently=True,
+                )
+            except Exception:
+                pass  # Don't fail user creation if email fails
+
+            log_admin_action(
+                request.user, "CREATE", "Student", user.user_id, uni_email,
+                {"role": role, "enrollment_no": enrollment_no}, request,
+            )
+
+            return Response(
+                {
+                    "success": True,
+                    "user_id": str(user.user_id),
+                    "email": uni_email,
+                    "personal_email": personal_email,
+                    "enrollment_no": enrollment_no,
+                    "role": role,
+                    "message": f"Student created. Credentials sent to {personal_email}",
+                },
+                status=http_status.HTTP_201_CREATED,
+            )
+
+        # ── AUTO-GENERATE: Faculty Employee ID + University Email ──
+        elif role == "faculty":
+            # Build employee ID
+            fac_count = Faculty.objects.count()
+            employee_id = data.get("employee_id") or f"EMP{timezone.now().year}{str(fac_count + 1).zfill(3)}"
+            uni_email = f"{employee_id.lower()}@gnu.ac.in"
+
+            if User.objects.filter(email=uni_email).exists():
+                employee_id = f"EMP{timezone.now().year}{str(fac_count + 2).zfill(3)}"
+                uni_email = f"{employee_id.lower()}@gnu.ac.in"
+
+            user = User.objects.create(
+                email=uni_email, role="faculty", password=make_password(password)
+            )
+
+            faculty = Faculty.objects.create(
+                user=user,
+                name=name or personal_email.split("@")[0],
+                email=personal_email,
+                employee_id=employee_id,
                 department=data.get("department", "Computer Applications"),
             )
+
+            # Optional: assign subject
+            subject_id = data.get("subject_id")
+            if subject_id:
+                try:
+                    subject = Subject.objects.get(subject_id=subject_id)
+                    faculty.subjects.add(subject)
+                except Subject.DoesNotExist:
+                    pass
+
+            # Optional: assign as class teacher
+            class_course_id = data.get("class_course_id")
+            if class_course_id:
+                try:
+                    class_course = Course.objects.get(course_id=class_course_id)
+                    faculty.is_class_teacher = True
+                    faculty.class_course = class_course
+                    faculty.save(update_fields=["is_class_teacher", "class_course"])
+                except Course.DoesNotExist:
+                    pass
+
+            # Send credentials
+            try:
+                send_mail(
+                    subject="GUNI - Your Faculty Portal Credentials",
+                    message=(
+                        f"Dear {name},\n\n"
+                        f"Welcome to Ganpat University!\n\n"
+                        f"Your portal credentials:\n"
+                        f"  Employee ID: {employee_id}\n"
+                        f"  University Email: {uni_email}\n"
+                        f"  Password: {password}\n\n"
+                        f"You can login using either your Employee ID or University Email.\n\n"
+                        f"Regards,\nGUNI Academic Portal"
+                    ),
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=[personal_email],
+                    fail_silently=True,
+                )
+            except Exception:
+                pass
+
+            log_admin_action(
+                request.user, "CREATE", "Faculty", user.user_id, uni_email,
+                {"role": role, "employee_id": employee_id}, request,
+            )
+
+            return Response(
+                {
+                    "success": True,
+                    "user_id": str(user.user_id),
+                    "email": uni_email,
+                    "personal_email": personal_email,
+                    "employee_id": employee_id,
+                    "role": role,
+                    "message": f"Faculty created. Credentials sent to {personal_email}",
+                },
+                status=http_status.HTTP_201_CREATED,
+            )
+
+        # ── ADMIN CREATION ──
         elif role in ["admin", "super_admin"]:
+            if User.objects.filter(email=personal_email).exists():
+                return Response(
+                    {"error": "User with this email already exists"},
+                    status=http_status.HTTP_400_BAD_REQUEST,
+                )
+            user = User.objects.create(
+                email=personal_email, role=role, password=make_password(password)
+            )
             Admin.objects.create(
                 user=user,
-                name=name or email.split("@")[0],
-                email=email,
+                name=name or personal_email.split("@")[0],
+                email=personal_email,
                 admin_id=data.get("admin_id", f"ADM{user.user_id.hex[:8].upper()}"),
             )
 
-        log_admin_action(
-            request.user,
-            "CREATE",
-            "User",
-            user.user_id,
-            email,
-            {"role": role, "email": email},
-            request,
-        )
+            log_admin_action(
+                request.user, "CREATE", "Admin", user.user_id, personal_email,
+                {"role": role}, request,
+            )
+
+            return Response(
+                {
+                    "success": True,
+                    "user_id": str(user.user_id),
+                    "email": personal_email,
+                    "role": role,
+                },
+                status=http_status.HTTP_201_CREATED,
+            )
 
         return Response(
-            {
-                "success": True,
-                "user_id": str(user.user_id),
-                "email": email,
-                "role": role,
-            },
-            status=http_status.HTTP_201_CREATED,
+            {"error": f"Unknown role: {role}"},
+            status=http_status.HTTP_400_BAD_REQUEST,
+        )
+    except IntegrityError as e:
+        return Response(
+            {"error": f"Database error - duplicate entry: {str(e)}"},
+            status=http_status.HTTP_409_CONFLICT,
         )
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         return Response(
             {"error": str(e)}, status=http_status.HTTP_500_INTERNAL_SERVER_ERROR
         )
@@ -2000,3 +2165,123 @@ def db_table_record_detail(request, table_name, record_id):
             return Response({"success": True})
         except Exception as e:
             return Response({"error": str(e)}, status=400)
+
+
+# =============================================================================
+# SEMESTER CONFIG — ODD / EVEN TOGGLE
+# =============================================================================
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated, IsSuperAdmin])
+def admin_semester_config(request):
+    """Get current semester config state."""
+    try:
+        config = SemesterConfig.get_active()
+        now = timezone.now()
+        current_month = now.month
+
+        return Response({
+            "config_id": str(config.config_id),
+            "current_parity": config.current_parity,
+            "timetable_generated": config.timetable_generated,
+            "last_toggled_at": config.last_toggled_at.isoformat() if config.last_toggled_at else None,
+            "toggled_by": config.toggled_by.email if config.toggled_by else None,
+            "can_toggle_to_even": config.current_parity == "ODD" and current_month == 1,
+            "can_toggle_to_odd": config.current_parity == "EVEN" and current_month == 7,
+            "current_month": current_month,
+        })
+    except Exception as e:
+        return Response(
+            {"error": str(e)}, status=http_status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated, IsSuperAdmin])
+def admin_toggle_semester(request):
+    """Toggle semester parity ODD<->EVEN. Auto-increments all student semesters."""
+    try:
+        config = SemesterConfig.get_active()
+        now = timezone.now()
+        current_month = now.month
+        target_parity = request.data.get("target_parity")
+
+        # Validate toggle direction
+        if target_parity == "EVEN" and config.current_parity != "ODD":
+            return Response(
+                {"error": "Can only toggle to EVEN from ODD"},
+                status=http_status.HTTP_400_BAD_REQUEST,
+            )
+        if target_parity == "ODD" and config.current_parity != "EVEN":
+            return Response(
+                {"error": "Can only toggle to ODD from EVEN"},
+                status=http_status.HTTP_400_BAD_REQUEST,
+            )
+
+        # Month restriction (January for EVEN, July for ODD)
+        if target_parity == "EVEN" and current_month != 1:
+            return Response(
+                {"error": "Can only toggle to EVEN semester in January"},
+                status=http_status.HTTP_400_BAD_REQUEST,
+            )
+        if target_parity == "ODD" and current_month != 7:
+            return Response(
+                {"error": "Can only toggle to ODD semester in July"},
+                status=http_status.HTTP_400_BAD_REQUEST,
+            )
+
+        # ── Auto-increment all student semesters ──
+        students = Student.objects.filter(status="Active").select_related("course")
+        incremented = 0
+        graduated = 0
+
+        for student in students:
+            max_sem = student.course.total_semesters if student.course else 8
+            new_sem = (student.current_semester or 1) + 1
+
+            if new_sem > max_sem:
+                # Graduate this student
+                student.status = "Graduated"
+                student.save(update_fields=["status"])
+                if student.user:
+                    student.user.is_active = False
+                    student.user.save(update_fields=["is_active"])
+                graduated += 1
+            else:
+                student.current_semester = new_sem
+                student.save(update_fields=["current_semester"])
+                incremented += 1
+
+        # ── Update config ──
+        config.current_parity = target_parity
+        config.last_toggled_at = now
+        config.toggled_by = request.user
+        config.timetable_generated = False  # Reset — enables re-generation
+        config.save()
+
+        log_admin_action(
+            request.user,
+            "TOGGLE_SEMESTER",
+            "SemesterConfig",
+            config.config_id,
+            f"Toggled to {target_parity}",
+            {
+                "target_parity": target_parity,
+                "students_incremented": incremented,
+                "students_graduated": graduated,
+            },
+            request,
+        )
+
+        return Response({
+            "success": True,
+            "current_parity": target_parity,
+            "students_incremented": incremented,
+            "students_graduated": graduated,
+            "timetable_generated": False,
+        })
+    except Exception as e:
+        return Response(
+            {"error": str(e)}, status=http_status.HTTP_500_INTERNAL_SERVER_ERROR
+        )

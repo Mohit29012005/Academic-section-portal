@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate
 from django.db.models import Avg, Count, Q
 from django.db import models, IntegrityError
 from django.utils import timezone
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 from .models import User, Student, Faculty, Admin
 from .serializers import (
@@ -51,21 +51,47 @@ def login_view(request):
 
     user = None
     if "@" in login_id:
+        # Try direct authenticate with email
         user = authenticate(request, email=login_id, password=password)
+        # Fallback: check if it's a student/faculty personal email mapped to a User
+        if user is None:
+            try:
+                student = Student.objects.get(email=login_id)
+                if student.user:
+                    user = authenticate(request, email=student.user.email, password=password)
+            except Student.DoesNotExist:
+                pass
+        if user is None:
+            try:
+                fac = Faculty.objects.get(email=login_id)
+                if fac.user:
+                    user = authenticate(request, email=fac.user.email, password=password)
+            except Faculty.DoesNotExist:
+                pass
     else:
+        # Try enrollment_no -> student
         try:
             student = Student.objects.get(enrollment_no=login_id)
-            user = authenticate(request, email=student.email, password=password)
+            user_email = student.user.email if student.user else student.email
+            user = authenticate(request, email=user_email, password=password)
         except Student.DoesNotExist:
+            pass
+        # Try employee_id -> faculty
+        if user is None:
             try:
                 faculty = Faculty.objects.get(employee_id=login_id)
-                user = authenticate(request, email=faculty.email, password=password)
+                user_email = faculty.user.email if faculty.user else faculty.email
+                user = authenticate(request, email=user_email, password=password)
             except Faculty.DoesNotExist:
-                try:
-                    admin = Admin.objects.get(admin_id=login_id)
-                    user = authenticate(request, email=admin.email, password=password)
-                except Admin.DoesNotExist:
-                    pass
+                pass
+        # Try admin_id -> admin
+        if user is None:
+            try:
+                admin = Admin.objects.get(admin_id=login_id)
+                user_email = admin.user.email if admin.user else admin.email
+                user = authenticate(request, email=user_email, password=password)
+            except Admin.DoesNotExist:
+                pass
 
     if user is None:
         return Response(
@@ -194,7 +220,7 @@ def student_dashboard(request):
 
     # Latest grade from semester results
     latest_result = (
-        SemesterResult.objects.filter(student=student, status="completed")
+        SemesterResult.objects.filter(student=student)
         .order_by("-semester")
         .first()
     )
@@ -224,13 +250,55 @@ def student_results(request):
             {"error": "Student profile not found"}, status=status.HTTP_404_NOT_FOUND
         )
 
+    current_sem = student.current_semester or 1
     results = SemesterResult.objects.filter(student=student).order_by("semester")
+
+    # Build detailed semester data with nested subject results
+    semesters_data = []
+    for result in results:
+        subject_results = []
+        for sr in result.subject_results.select_related("subject").all():
+            subject_results.append({
+                "subject_result_id": str(sr.subject_result_id),
+                "subject_code": sr.subject.code,
+                "subject_name": sr.subject.name,
+                "internal_marks": sr.internal_marks,
+                "external_marks": sr.external_marks,
+                "practical_marks": sr.practical_marks,
+                "total_marks": sr.total_marks,
+                "passing_marks": sr.passing_marks,
+                "is_passed": sr.is_passed,
+                "grade": sr.grade or "-",
+            })
+
+        semesters_data.append({
+            "result_id": str(result.result_id),
+            "semester": result.semester,
+            "sgpa": float(result.sgpa) if result.sgpa else 0.0,
+            "total_marks": result.total_marks,
+            "obtained_marks": result.obtained_marks,
+            "percentage": float(result.percentage) if result.percentage else 0.0,
+            "grade": result.grade or "-",
+            "status": result.status,
+            "year": result.year,
+            "exam_type": result.exam_type,
+            "remarks": result.remarks,
+            "subject_results": subject_results,
+        })
+
+    # Dropdown: semesters 1 to (current_sem - 1) for SGPA history
+    dropdown_semesters = list(range(1, current_sem))
+
     return Response(
         {
-            "cgpa": float(student.cgpa),
-            "current_semester": student.current_semester,
-            "total_semesters": student.total_semesters,
-            "semesters": SemesterResultSerializer(results, many=True).data,
+            "cgpa": float(student.cgpa) if student.cgpa else 0.0,
+            "current_semester": current_sem,
+            "total_semesters": student.course.total_semesters if student.course else 8,
+            "course_name": student.course.name if student.course else "N/A",
+            "enrollment_no": student.enrollment_no,
+            "student_name": student.name,
+            "dropdown_semesters": dropdown_semesters,
+            "semesters": semesters_data,
         }
     )
 
@@ -660,7 +728,7 @@ def admin_create_user(request):
     # Role-specific logic
     try:
         if role == "student":
-            password = "amaterasu123"
+            password = "Guni@2026"
             course_id = data.get("course_id")
             if not course_id:
                 return Response(
@@ -1327,3 +1395,197 @@ def admin_delete_academic_term(request, term_id):
         return Response({"message": "Term deleted successfully"})
     except AcademicTerm.DoesNotExist:
         return Response({"error": "Term not found"}, status=404)
+
+
+# =============================================================================
+# FACULTY GRADING (Class Teachers Only)
+# =============================================================================
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def faculty_grading_students(request):
+    """Get all students for the class teacher's assigned course."""
+    try:
+        faculty = request.user.faculty_profile
+    except Faculty.DoesNotExist:
+        return Response({"error": "Faculty profile not found"}, status=404)
+
+    if not faculty.is_class_teacher or not faculty.class_course:
+        return Response(
+            {"error": "Only class teachers can access grading."},
+            status=status.HTTP_403_FORBIDDEN,
+        )
+
+    course = faculty.class_course
+    assigned_sem = faculty.class_semester
+    students = (
+        Student.objects.filter(course=course, status="Active", current_semester=assigned_sem)
+        .select_related("user")
+        .order_by("enrollment_no")
+    )
+
+    # Students for assigned semester only
+    student_list = []
+    for s in students:
+        student_list.append({
+            "student_id": str(s.student_id),
+            "name": s.name,
+            "enrollment_no": s.enrollment_no,
+            "email": s.email,
+            "current_semester": assigned_sem,
+        })
+
+    semesters = {assigned_sem: student_list}
+
+    # Get subjects for the assigned semester only
+    subjects_by_sem = {}
+    for sub in Subject.objects.filter(course=course, semester=assigned_sem).order_by("name"):
+        sem = sub.semester
+        if sem not in subjects_by_sem:
+            subjects_by_sem[sem] = []
+        subjects_by_sem[sem].append({
+            "subject_id": str(sub.subject_id),
+            "code": sub.code,
+            "name": sub.name,
+            "credits": sub.credits,
+        })
+
+    return Response({
+        "course_id": str(course.course_id),
+        "course_name": course.name,
+        "course_code": course.code,
+        "assigned_semester": assigned_sem,
+        "total_semesters": course.total_semesters,
+        "faculty_name": faculty.name,
+        "semesters": semesters,
+        "subjects_by_semester": subjects_by_sem,
+    })
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def faculty_grading_submit(request):
+    """Submit grades for students. Only class teachers can submit."""
+    try:
+        faculty = request.user.faculty_profile
+    except Faculty.DoesNotExist:
+        return Response({"error": "Faculty profile not found"}, status=404)
+
+    if not faculty.is_class_teacher or not faculty.class_course:
+        return Response(
+            {"error": "Only class teachers can submit grades."},
+            status=status.HTTP_403_FORBIDDEN,
+        )
+
+    data = request.data
+    semester = data.get("semester")
+    sgpa = data.get("sgpa")
+    student_id = data.get("student_id")
+    subjects = data.get("subjects", [])
+
+    if not semester or not student_id:
+        return Response(
+            {"error": "semester and student_id are required"},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    try:
+        student = Student.objects.get(student_id=student_id)
+    except Student.DoesNotExist:
+        return Response({"error": "Student not found"}, status=404)
+
+    # Verify student belongs to class teacher's course
+    if str(student.course_id) != str(faculty.class_course_id):
+        return Response(
+            {"error": "Student does not belong to your assigned course."},
+            status=status.HTTP_403_FORBIDDEN,
+        )
+
+    # Create or update SemesterResult
+    sem_result, created = SemesterResult.objects.update_or_create(
+        student=student,
+        semester=semester,
+        defaults={
+            "sgpa": sgpa or 0,
+            "status": "completed",
+            "year": timezone.now().year,
+            "exam_type": "Regular",
+        },
+    )
+
+    # Process subject marks
+    total_marks = 0
+    obtained_marks = 0
+    from academics.models import SubjectResult
+
+    for sub_data in subjects:
+        subject_id = sub_data.get("subject_id")
+        internal = int(sub_data.get("internal_marks", 0))
+        external = int(sub_data.get("external_marks", 0))
+        practical = int(sub_data.get("practical_marks", 0))
+        sub_total = internal + external + practical
+        passing = int(sub_data.get("passing_marks", 35))
+        is_passed = sub_total >= passing
+
+        # Grade calculation
+        pct = (sub_total / max(passing * 3, 1)) * 100
+        if pct >= 90:
+            grade = "O"
+        elif pct >= 80:
+            grade = "A+"
+        elif pct >= 70:
+            grade = "A"
+        elif pct >= 60:
+            grade = "B+"
+        elif pct >= 50:
+            grade = "B"
+        elif pct >= 40:
+            grade = "C"
+        elif pct >= 35:
+            grade = "P"
+        else:
+            grade = "F"
+
+        SubjectResult.objects.update_or_create(
+            semester_result=sem_result,
+            subject_id=subject_id,
+            defaults={
+                "internal_marks": internal,
+                "external_marks": external,
+                "practical_marks": practical,
+                "total_marks": sub_total,
+                "passing_marks": passing,
+                "is_passed": is_passed,
+                "grade": grade,
+            },
+        )
+        total_marks += passing * 3  # max possible per subject
+        obtained_marks += sub_total
+
+    # Update semester result totals
+    sem_result.total_marks = total_marks
+    sem_result.obtained_marks = obtained_marks
+    if total_marks > 0:
+        sem_result.percentage = round((obtained_marks / total_marks) * 100, 2)
+    sem_result.grade = sem_result.calculate_grade()
+    sem_result.save()
+
+    # Update student CGPA (average of all SGPAs)
+    all_results = SemesterResult.objects.filter(
+        student=student, status="completed"
+    )
+    if all_results.exists():
+        avg_sgpa = all_results.aggregate(avg=Avg("sgpa"))["avg"] or 0
+        student.cgpa = round(avg_sgpa, 2)
+        student.save(update_fields=["cgpa"])
+
+    return Response({
+        "success": True,
+        "result_id": str(sem_result.result_id),
+        "semester": semester,
+        "sgpa": float(sem_result.sgpa) if sem_result.sgpa else 0,
+        "grade": sem_result.grade,
+        "percentage": float(sem_result.percentage),
+    })
+

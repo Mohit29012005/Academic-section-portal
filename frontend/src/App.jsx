@@ -33,6 +33,7 @@ import FacultyTimetable from './pages/faculty/Timetable';
 import FacultyProfile from './pages/faculty/Profile';
 import FacultySchedule from './pages/faculty/Schedule';
 import AIAttendanceHub from './pages/faculty/AIAttendanceHub';
+import FacultyGrading from './pages/faculty/Grading';
 
 import StudentFaceStatus from './pages/admin/StudentFaceStatus';
 
@@ -92,6 +93,7 @@ function App() {
           <Route path="/faculty/pyqs" element={<FacultyPYQs />} />
           <Route path="/faculty/timetable" element={<FacultyTimetable />} />
           <Route path="/faculty/schedule" element={<FacultySchedule />} />
+          <Route path="/faculty/grading" element={<FacultyGrading />} />
           <Route path="/faculty/profile" element={<FacultyProfile />} />
 
           {/* 404 Fallback */}

@@ -70,6 +70,9 @@ class StudentProfileUpdateSerializer(serializers.ModelSerializer):
 class FacultySerializer(serializers.ModelSerializer):
     subjects_list = serializers.SerializerMethodField()
     subjects_count = serializers.SerializerMethodField()
+    class_course_name = serializers.CharField(
+        source="class_course.name", read_only=True, allow_null=True, default=None
+    )
 
     class Meta:
         model = Faculty
@@ -84,6 +87,10 @@ class FacultySerializer(serializers.ModelSerializer):
             "subjects",
             "subjects_list",
             "subjects_count",
+            "is_class_teacher",
+            "class_course",
+            "class_course_name",
+            "class_semester",
             "working_shift",
             "avatar",
             "gender",
@@ -141,8 +148,8 @@ class AdminSerializer(serializers.ModelSerializer):
 
 
 class CreateUserSerializer(serializers.Serializer):
-    email = serializers.EmailField()
-    password = serializers.CharField(write_only=True)
+    email = serializers.CharField()  # Personal email
+    password = serializers.CharField(write_only=True, required=False, default="Guni@2026")
     role = serializers.ChoiceField(choices=["student", "faculty", "admin"])
     name = serializers.CharField()
     phone = serializers.CharField(required=False, allow_blank=True)
@@ -150,9 +157,12 @@ class CreateUserSerializer(serializers.Serializer):
     enrollment_no = serializers.CharField(required=False)
     course_id = serializers.UUIDField(required=False)
     semester = serializers.IntegerField(required=False, default=1)
+    batch = serializers.CharField(required=False)
     # Faculty fields
     employee_id = serializers.CharField(required=False)
     department = serializers.CharField(required=False)
+    subject_id = serializers.UUIDField(required=False)
+    class_course_id = serializers.UUIDField(required=False)
     # Admin fields
     admin_id = serializers.CharField(required=False)
 

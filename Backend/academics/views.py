@@ -15,6 +15,7 @@ from .models import (
     ExamResult,
     SubjectResult,
     Room,
+    SemesterConfig,
 )
 from users.models import Faculty
 from .serializers import (
@@ -137,14 +138,12 @@ def subject_list(request):
 
     subjects = Subject.objects.all()
     if course_id:
-        # Check if course_id is a UUID or a name
-        from django.core.exceptions import ValidationError
-        try:
-            # Try UUID match
+        # Check if course_id is likely a UUID
+        if len(str(course_id)) > 30 and '-' in str(course_id):
             subjects = subjects.filter(course_id=course_id)
-        except (ValidationError, ValueError):
-            # Fallback to name match
-            subjects = subjects.filter(course__name=course_id)
+        else:
+            # Fallback to name match or code match
+            subjects = subjects.filter(Q(course__name__icontains=course_id) | Q(course__code=course_id))
 
     if semester:
         try:
@@ -152,7 +151,7 @@ def subject_list(request):
         except (ValueError, TypeError):
             pass
 
-    return Response(SubjectSerializer(subjects.select_related("course"), many=True).data)
+    return Response(SubjectSerializer(subjects.select_related("course").order_by('name'), many=True).data)
 
 
 @api_view(["GET", "POST"])
@@ -540,6 +539,17 @@ def admin_generate_timetable(request):
     branch = request.data.get("branch", "Ahmedabad")
     clear = request.data.get("clear", True)
 
+    # Check if timetable already generated this semester
+    try:
+        sem_config = SemesterConfig.objects.first()
+        if sem_config and sem_config.timetable_generated:
+            return Response(
+                {"error": "Timetable already generated for this semester. Wait for semester toggle to re-enable."},
+                status=status.HTTP_409_CONFLICT,
+            )
+    except Exception:
+        pass
+
     try:
         from academics.management.commands.generate_timetable import (
             Command as TimetableCommand,
@@ -575,6 +585,14 @@ def admin_generate_timetable(request):
 
         total_slots = TimetableSlot.objects.count()
         auto_slots = TimetableSlot.objects.filter(is_auto_generated=True).count()
+
+        # Mark timetable as generated in SemesterConfig
+        try:
+            sem_config, _ = SemesterConfig.objects.get_or_create(pk=1)
+            sem_config.timetable_generated = True
+            sem_config.save(update_fields=["timetable_generated"])
+        except Exception:
+            pass
 
         return Response(
             {

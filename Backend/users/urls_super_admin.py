@@ -134,4 +134,8 @@ urlpatterns = [
     path("system/health/", admin_views.admin_system_health, name="super_system_health"),
     path("system/logs/", admin_views.admin_activity_logs, name="super_activity_logs"),
     path("bulk-import/", admin_views.admin_bulk_import, name="super_bulk_import"),
+    # Semester Config
+    path("semester-config/", admin_views.admin_semester_config, name="super_semester_config"),
+    path("semester-config/toggle/", admin_views.admin_toggle_semester, name="super_toggle_semester"),
 ]
+

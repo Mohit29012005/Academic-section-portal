@@ -34,6 +34,7 @@ const FacultyPYQs = () => {
   const [course, setCourse] = useState("");
   const [semester, setSemester] = useState("");
   const [subjectId, setSubjectId] = useState("");
+  const [fetchingSubjects, setFetchingSubjects] = useState(false);
   const [examType, setExamType] = useState("external");
   const [generatedPaper, setGeneratedPaper] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -59,11 +60,15 @@ const FacultyPYQs = () => {
   useEffect(() => {
     if (course && semester) {
       const fetchSubjects = async () => {
+        setFetchingSubjects(true);
         try {
           const response = await academicsAPI.subjects({ course_id: course, semester });
           setSubjects(Array.isArray(response.data) ? response.data : []);
         } catch (err) {
           console.error("Failed to fetch subjects:", err);
+          setSubjects([]);
+        } finally {
+          setFetchingSubjects(false);
         }
       };
       fetchSubjects();
@@ -351,7 +356,7 @@ const FacultyPYQs = () => {
     <FacultyLayout>
       <div className="max-w-4xl mx-auto p-6 text-white min-h-screen">
         <div className="border-b border-[var(--gu-gold)] pb-6 mb-8">
-            <h1 className="text-3xl font-serif">PYQ Synthesis Console</h1>
+            <h1 className="text-3xl font-serif">Exam Paper Generator</h1>
             <p className="text-[var(--gu-gold)] text-sm tracking-widest mt-2 uppercase">GUNI Academic Records</p>
         </div>
 
@@ -375,7 +380,7 @@ const FacultyPYQs = () => {
                   <label className="text-[10px] uppercase tracking-widest text-white/50">Semester</label>
                   <select value={semester} onChange={handleSemesterChange} disabled={!course} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none disabled:opacity-30">
                     <option value="">Select Sem...</option>
-                    {Array.from({ length: Math.max(0, (courses.find(c => c.course_id === course)?.total_semesters || 10) - 1) }, (_, i) => i + 1).map((s) => (
+                    {Array.from({ length: courses.find(c => c.course_id === course)?.total_semesters || 8 }, (_, i) => i + 1).map((s) => (
                       <option key={`sem-${s}`} value={s}>
                         Semester {s}
                       </option>
@@ -403,12 +408,14 @@ const FacultyPYQs = () => {
                       disabled={!semester} 
                       className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none disabled:opacity-30"
                     >
-                      <option value="">Select Subject...</option>
-                      {filteredSubjects.map((s) => (
-                        <option key={`sub-${s.subject_id}`} value={s.subject_id}>
-                          {s.code} - {s.name}
+                        <option value="">
+                          {fetchingSubjects ? "Loading subjects..." : "Select Subject..."}
                         </option>
-                      ))}
+                        {filteredSubjects.map((s) => (
+                          <option key={`sub-${s.subject_id}`} value={s.subject_id}>
+                            {s.code} - {s.name}
+                          </option>
+                        ))}
                     </select>
                   </div>
                </div>
@@ -430,7 +437,7 @@ const FacultyPYQs = () => {
               className="w-full bg-[var(--gu-gold)] text-black py-4 rounded font-bold uppercase tracking-widest hover:brightness-110 transition-all disabled:opacity-30 flex items-center justify-center gap-3"
             >
               {loading ? <Loader2 className="animate-spin" /> : <Sparkles size={18} />}
-              {loading ? 'Processing...' : 'Generate PYQ Paper'}
+              {loading ? 'Processing...' : 'Generate Exam Paper'}
             </button>
           </div>
         ) : (

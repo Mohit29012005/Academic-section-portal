@@ -185,14 +185,32 @@ const Students = () => {
                             <span>Global Directory</span>
                         </div>
                     </div>
-                    <button 
-                        onClick={() => setShowAddModal(true)}
-                        className="group relative bg-[var(--gu-gold)] text-black px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all flex items-center gap-2 overflow-hidden"
-                    >
-                        <Plus className="w-4 h-4" /> 
-                        <span className="relative z-10">Add Student</span>
-                        <div className="absolute inset-0 bg-white/40 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                    </button>
+                    {(() => {
+                        const currentMonth = new Date().getMonth() + 1; // 1-indexed
+                        const isAdmissionOpen = currentMonth >= 4 && currentMonth <= 6;
+                        return (
+                            <div className="relative group">
+                                <button 
+                                    onClick={() => isAdmissionOpen && setShowAddModal(true)}
+                                    disabled={!isAdmissionOpen}
+                                    className={`relative px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all flex items-center gap-2 overflow-hidden ${
+                                        isAdmissionOpen
+                                            ? 'bg-[var(--gu-gold)] text-black hover:bg-white cursor-pointer'
+                                            : 'bg-white/10 text-white/30 cursor-not-allowed border border-white/10'
+                                    }`}
+                                >
+                                    <Plus className="w-4 h-4" /> 
+                                    <span className="relative z-10">{isAdmissionOpen ? 'Add Student' : 'Admissions Closed'}</span>
+                                    {isAdmissionOpen && <div className="absolute inset-0 bg-white/40 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>}
+                                </button>
+                                {!isAdmissionOpen && (
+                                    <div className="absolute right-0 top-full mt-2 bg-[#2D0A0A] border border-amber-500/20 text-amber-300 text-[9px] uppercase tracking-widest font-bold px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity z-50 shadow-xl">
+                                        Admission Window: April 1 - June 1
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })()}
                 </div>
 
                 {/* Intelligent Filters Console */}

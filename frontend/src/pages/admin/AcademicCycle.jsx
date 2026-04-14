@@ -14,6 +14,8 @@ const AcademicCycle = () => {
     const [termForm, setTermForm] = useState({ name: "", start: "", end: "" });
     const [holidayForm, setHolidayForm] = useState({ date: "", name: "", type: "National" });
 
+
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -30,6 +32,8 @@ const AcademicCycle = () => {
                 console.error("Failed to fetch academic cycle data", error);
                 setCurrentTerm("Error loading backend context");
             }
+
+
         };
         fetchData();
     }, []);
@@ -88,6 +92,7 @@ const AcademicCycle = () => {
         } catch (error) { alert("Error deleting holiday"); }
     };
 
+
     return (
         <AdminLayout>
             <div className="animate-fade-in max-w-7xl mx-auto">
@@ -99,6 +104,8 @@ const AcademicCycle = () => {
                         </p>
                     </div>
                 </div>
+
+
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Semester Management Panel */}

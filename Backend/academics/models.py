@@ -779,3 +779,48 @@ class StudentAnswer(models.Model):
 
     def __str__(self):
         return f"{self.exam_result.student.name} - Q{self.question.order}"
+
+
+class SemesterConfig(models.Model):
+    """Global singleton config tracking current semester parity (Odd/Even)."""
+
+    PARITY_CHOICES = [
+        ("ODD", "Odd Semester"),
+        ("EVEN", "Even Semester"),
+    ]
+    config_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    current_parity = models.CharField(
+        max_length=4, choices=PARITY_CHOICES, default="ODD"
+    )
+    is_odd_enabled = models.BooleanField(default=True)
+    is_even_enabled = models.BooleanField(default=False)
+    last_toggled_at = models.DateTimeField(null=True, blank=True)
+    toggled_by = models.ForeignKey(
+        "users.User",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="semester_toggles",
+    )
+    timetable_generated = models.BooleanField(
+        default=False,
+        help_text="Set to True after AI timetable generation. Resets on semester toggle.",
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "semester_config"
+        verbose_name = "Semester Config"
+        verbose_name_plural = "Semester Configs"
+
+    def __str__(self):
+        return f"Semester Config: {self.current_parity} (Generated: {self.timetable_generated})"
+
+    @classmethod
+    def get_active(cls):
+        """Get or create the singleton config."""
+        config, _ = cls.objects.get_or_create(
+            defaults={"current_parity": "ODD"}
+        )
+        return config

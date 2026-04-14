@@ -12,4 +12,7 @@ urlpatterns = [
     path('exams/generate-questions/', views.faculty_generate_questions, name='faculty_generate_questions'),
     path('schedule/', views.faculty_schedule, name='faculty_schedule'),
     path('profile/', views.faculty_profile, name='faculty_profile'),
+    # Grading (Class Teachers Only)
+    path('grading/students/', views.faculty_grading_students, name='faculty_grading_students'),
+    path('grading/submit/', views.faculty_grading_submit, name='faculty_grading_submit'),
 ]

@@ -142,6 +142,20 @@ const Timetable = () => {
       console.error("Error fetching subjects", err);
     }
   };
+  const [timetableGenerated, setTimetableGenerated] = useState(false);
+
+  // Fetch semester config on mount to check timetable flag
+  useEffect(() => {
+    const fetchSemConfig = async () => {
+      try {
+        const res = await adminAPI.semesterConfig();
+        setTimetableGenerated(res.data.timetable_generated || false);
+      } catch (err) {
+        console.warn("Could not fetch semester config", err);
+      }
+    };
+    fetchSemConfig();
+  }, []);
 
   const fetchTimetable = async () => {
     setLoading(true);
@@ -160,11 +174,16 @@ const Timetable = () => {
   };
 
   const handleGenerateTimetable = async () => {
+    if (timetableGenerated) {
+      alert("Timetable has already been generated for this semester. It will be re-enabled after the next Semester Config toggle.");
+      return;
+    }
     if (!window.confirm("Initialize AI Timetable Generator? This will clear unstructured slots and automatically allocate an optimal class schedule without clashes.")) return;
     setGeneratingAI(true);
     try {
       const res = await academicsAPI.generateTimetable("Ahmedabad", true);
       alert(res.data.message || "AI Timetable Generation Successful!");
+      setTimetableGenerated(true);
       fetchTimetable();
     } catch (err) {
       console.error(err);
@@ -332,14 +351,25 @@ const Timetable = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 mt-4 md:mt-0">
-              <button
-                onClick={handleGenerateTimetable}
-                disabled={generatingAI}
-                className="bg-black border border-[var(--gu-gold)] text-[var(--gu-gold)] px-6 py-2.5 rounded text-xs font-black uppercase tracking-widest hover:bg-[var(--gu-gold)] hover:text-black transition-all shadow-[0_0_10px_rgba(212,175,55,0.2)] flex items-center gap-2 disabled:opacity-50"
-              >
-                {generatingAI ? <Loader2 className="w-4 h-4 animate-spin" /> : '✨'}
-                AI Auto-Generate
-              </button>
+              <div className="relative group">
+                <button
+                  onClick={handleGenerateTimetable}
+                  disabled={generatingAI || timetableGenerated}
+                  className={`px-6 py-2.5 rounded text-xs font-black uppercase tracking-widest transition-all shadow-[0_0_10px_rgba(212,175,55,0.2)] flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed border ${
+                    timetableGenerated
+                      ? 'bg-white/5 border-white/10 text-white/30'
+                      : 'bg-black border-[var(--gu-gold)] text-[var(--gu-gold)] hover:bg-[var(--gu-gold)] hover:text-black'
+                  }`}
+                >
+                  {generatingAI ? <Loader2 className="w-4 h-4 animate-spin" /> : timetableGenerated ? '🔒' : '✨'}
+                  {timetableGenerated ? 'Already Generated' : 'AI Auto-Generate'}
+                </button>
+                {timetableGenerated && (
+                  <div className="absolute left-0 top-full mt-2 bg-[#2D0A0A] border border-amber-500/20 text-amber-300 text-[9px] uppercase tracking-widest font-bold px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity z-50 shadow-xl">
+                    Re-enabled after Semester Config toggle
+                  </div>
+                )}
+              </div>
 
               <button
                 onClick={fetchTimetable}

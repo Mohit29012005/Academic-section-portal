@@ -69,7 +69,7 @@ const AdminLayout = ({ children }) => {
     { name: "Curriculum Mgt", icon: BookOpen, path: "/admin/courses" },
     { name: "Timetable Mgt", icon: Calendar, path: "/admin/timetable" },
     { name: "Academic Cycle", icon: Server, path: "/admin/academic-cycle" },
-    { name: "PYQs", icon: FileText, path: "/admin/pyqs" },
+
     { name: "System Broadcasts", icon: Bell, path: "/admin/notifications" },
   ];
 
