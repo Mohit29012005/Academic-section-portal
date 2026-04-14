@@ -1,0 +1,291 @@
+<mxfile host="65bd71144e">
+    <diagram id="R2lEEEUBhBx0_NHV1-ZV" name="ER Diagram - Chen Notation">
+        <mxGraphModel dx="936" dy="444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="legend1" value="CHEN NOTATION ER DIAGRAM" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="20" y="20" width="1160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend2" value="■ = Entity (Rectangle)  ◊ = Relationship (Diamond)  ○ = Attribute (Oval)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="20" y="50" width="1160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_user" value="USER" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#E1D5E7" parent="1" vertex="1">
+                    <mxGeometry x="60" y="40" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_user_id" value="user_id (PK)" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="20" y="180" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_user_email" value="email" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry y="300" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_user_role" value="role" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="170" y="150" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_user_id" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_user" target="a_user_id" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_user_email" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_user" target="a_user_email" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_user_role" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_user" target="a_user_role" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_student" value="STUDENT" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#D5E8D4" parent="1" vertex="1">
+                    <mxGeometry x="100" y="340" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_student_id" value="student_id (PK)" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="40" y="440" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_student_enroll" value="enrollment_no" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="130" y="440" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_student_cgpa" value="cgpa" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="220" y="440" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_student_id" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_student" target="a_student_id" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_student_enroll" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_student" target="a_student_enroll" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_student_cgpa" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_student" target="a_student_cgpa" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_faculty" value="FACULTY" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#D5E8D4" parent="1" vertex="1">
+                    <mxGeometry x="320" y="340" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_faculty_id" value="faculty_id (PK)" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="260" y="440" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_faculty_emp" value="employee_id" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="350" y="440" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_faculty_dept" value="department" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="440" y="440" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_faculty_id" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_faculty" target="a_faculty_id" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_faculty_emp" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_faculty" target="a_faculty_emp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_faculty_dept" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_faculty" target="a_faculty_dept" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r_has_student" value="Has (1:1)" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#FFE6E6" parent="1" vertex="1">
+                    <mxGeometry x="110" y="240" width="60" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_user_has" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_user" target="r_has_student" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_has_student" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="r_has_student" target="e_student" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" style="edgeStyle=none;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="r_has_faculty">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="300" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r_has_faculty" value="Has (1:1)" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#FFE6E6" parent="1" vertex="1">
+                    <mxGeometry x="330" y="110" width="60" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_user_has_fac" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_user" target="r_has_faculty" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_has_faculty" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="r_has_faculty" target="e_faculty" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_course" value="COURSE" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#E1D5E7" parent="1" vertex="1">
+                    <mxGeometry x="600" y="120" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_course_id" value="course_id (PK)" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="540" y="220" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_course_code" value="code" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="630" y="220" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_course_name" value="name" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="710" y="220" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_course_id" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_course" target="a_course_id" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_course_code" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_course" target="a_course_code" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_course_name" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_course" target="a_course_name" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_subject" value="SUBJECT" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#D5E8D4" parent="1" vertex="1">
+                    <mxGeometry x="600" y="340" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_subject_id" value="subject_id (PK)" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="540" y="440" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_subject_code" value="code" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="630" y="440" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_subject_sem" value="semester" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="710" y="440" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_subject_id" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_subject" target="a_subject_id" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_subject_code" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_subject" target="a_subject_code" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_subject_sem" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_subject" target="a_subject_sem" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r_contains" value="Contains&#xa;(1:N)" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#FFE6E6" parent="1" vertex="1">
+                    <mxGeometry x="610" y="260" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_course_contains" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_course" target="r_contains" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_contains_subject" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="r_contains" target="e_subject" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_room" value="ROOM" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#D5E8D4" parent="1" vertex="1">
+                    <mxGeometry x="800" y="120" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_room_id" value="room_id (PK)" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="740" y="220" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_room_num" value="room_number" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="830" y="220" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_room_cap" value="capacity" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="920" y="220" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_room_id" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_room" target="a_room_id" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_room_num" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_room" target="a_room_num" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_room_cap" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_room" target="a_room_cap" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_semresult" value="SEMESTER&#xa;RESULT" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#D5E8D4" parent="1" vertex="1">
+                    <mxGeometry x="100" y="570" width="100" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_semres_id" value="result_id (PK)" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="30" y="680" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_semres_sgpa" value="sgpa" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="120" y="680" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_semres_grade" value="grade" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="200" y="680" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_semres_id" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_semresult" target="a_semres_id" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_semres_sgpa" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_semresult" target="a_semres_sgpa" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_semres_grade" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_semresult" target="a_semres_grade" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r_earns" value="Earns&#xa;(1:N)" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#FFE6E6" parent="1" vertex="1">
+                    <mxGeometry x="100" y="480" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_student_earns" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_student" target="r_earns" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_earns_semres" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="r_earns" target="e_semresult" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_subjresult" value="SUBJECT&#xa;RESULT" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#D5E8D4" parent="1" vertex="1">
+                    <mxGeometry x="280" y="560" width="100" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_subjres_id" value="subject_result_id (PK)" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="200" y="680" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_subjres_marks" value="total_marks" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="310" y="680" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_subjres_id" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_subjresult" target="a_subjres_id" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_subjres_marks" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_subjresult" target="a_subjres_marks" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r_contains2" value="Contains&#xa;(1:N)" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#FFE6E6" parent="1" vertex="1">
+                    <mxGeometry x="180" y="480" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_semres_contains" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_semresult" target="r_contains2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_contains_subjres" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="r_contains2" target="e_subjresult" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_lecture" value="LECTURE&#xa;SESSION" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#E1D5E7" parent="1" vertex="1">
+                    <mxGeometry x="570" y="580" width="100" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_lec_date" value="date" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="540" y="680" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_lec_type" value="session_type" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="630" y="680" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_lec_qr" value="qr_token" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="720" y="680" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_lec_date" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_lecture" target="a_lec_date" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_lec_type" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_lecture" target="a_lec_type" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_lec_qr" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_lecture" target="a_lec_qr" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r_teaches" value="Teaches&#xa;(1:N)" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#FFE6E6" parent="1" vertex="1">
+                    <mxGeometry x="610" y="490" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_subject_teaches" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="e_subject" target="r_teaches" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_teaches_lec" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor=#000000;strokeWidth=1" parent="1" source="r_teaches" target="e_lecture" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_attend" value="ATTENDANCE&#xa;RECORD" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#D5E8D4" parent="1" vertex="1">
+                    <mxGeometry x="820" y="540" width="100" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_attend_status" value="status" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="780" y="650" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_attend_via" value="marked_via" style="ellipse;whiteSpace=wrap;html=1;strokeColor:#000000;strokeWidth=1;fillColor=#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="860" y="680" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_attend_conf" value="confidence_score" style="ellipse;whiteSpace=wrap;html=1;strokeColor:#000000;strokeWidth=1;fillColor:#FFE6CC" parent="1" vertex="1">
+                    <mxGeometry x="980" y="670" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_attend_status" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor:#000000;strokeWidth=1" parent="1" source="e_attend" target="a_attend_status" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_attend_via" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor:#000000;strokeWidth=1" parent="1" source="e_attend" target="a_attend_via" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_attend_conf" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor:#000000;strokeWidth=1" parent="1" source="e_attend" target="a_attend_conf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r_records" value="Records&#xa;(1:N)" style="rhombus;whiteSpace=wrap;html=1;strokeColor:#000000;strokeWidth=2;fillColor:#FFE6E6" parent="1" vertex="1">
+                    <mxGeometry x="710" y="480" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_lec_records" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor:#000000;strokeWidth=1" parent="1" source="e_lecture" target="r_records" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_records_attend" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=0;jettySize=auto;html=1;curved=0;strokeColor:#000000;strokeWidth=1" parent="1" source="r_records" target="e_attend" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend3" value="PK = Primary Key | FK = Foreign Key | 1:1 = One-to-One | 1:N = One-to-Many | M:N = Many-to-Many (if any)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10" parent="1" vertex="1">
+                    <mxGeometry x="20" y="1540" width="1160" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
