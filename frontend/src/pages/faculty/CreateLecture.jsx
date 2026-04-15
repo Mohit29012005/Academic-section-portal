@@ -244,7 +244,7 @@ export default function CreateLecture() {
           <CheckCircle className="w-10 h-10 text-[var(--gu-red)]" />
         </div>
         <h2 className="text-2xl font-serif font-semibold text-[var(--gu-red-dark)] mb-2">Session Ended</h2>
-        <p className="text-gray-500 mb-6">Anomaly detection has been triggered for all students.</p>
+        <p className="text-gray-500 mb-6">Attendance has been processed for all students.</p>
         {!endResult.error ? (
           <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm text-left space-y-3 mb-6">
             {[

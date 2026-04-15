@@ -12,7 +12,6 @@ import { attendanceAI } from '../../services/api';
 const TABS = [
   { id: 'create', label: 'Create Lecture', icon: QrCode, color: 'from-amber-500 to-orange-600' },
   { id: 'live', label: 'Live Face Scan', icon: Camera, color: 'from-emerald-500 to-teal-600' },
-  { id: 'anomalies', label: 'Anomalies', icon: AlertTriangle, color: 'from-rose-500 to-red-600' },
 ];
 
 const SESSION_TYPES = [
@@ -26,13 +25,6 @@ const SEVERITY_STYLES = {
   medium:   { badge: 'bg-yellow-900/40 text-yellow-300 border border-yellow-500/30', dot: 'bg-yellow-400' },
   high:     { badge: 'bg-orange-900/40 text-orange-300 border border-orange-500/30', dot: 'bg-orange-400' },
   critical: { badge: 'bg-red-900/40 text-red-300 border border-red-500/30', dot: 'bg-red-400' },
-};
-
-const ANOMALY_LABELS = {
-  low_percentage: 'Low Attendance %',
-  consecutive_absent: 'Consecutive Absences',
-  irregular_pattern: 'Irregular Pattern',
-  sudden_drop: 'Sudden Drop',
 };
 
 export default function AIAttendanceHub() {
@@ -83,7 +75,6 @@ export default function AIAttendanceHub() {
         <div className="animate-slide-up" key={activeTab}>
           {activeTab === 'create' && <CreateLectureTab />}
           {activeTab === 'live' && <LiveFaceTab />}
-          {activeTab === 'anomalies' && <AnomaliesTab />}
         </div>
       </div>
     </FacultyLayout>
@@ -242,7 +233,7 @@ function CreateLectureTab() {
           <CheckCircle className="w-10 h-10 text-[var(--gu-gold)]" />
         </div>
         <h2 className="text-2xl font-serif text-white mb-2">Session Ended</h2>
-        <p className="text-white/50 mb-6">Anomaly detection has been triggered.</p>
+        <p className="text-white/50 mb-6">Attendance has been processed.</p>
         {!endResult.error ? (
           <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-lg p-6 text-left space-y-3 mb-6">
             {[['Present', endResult.present_count, 'text-green-400'], ['Absent', endResult.absent_count, 'text-red-400'], ['Total', endResult.total_students, 'text-white'], ['Percentage', `${endResult.percentage}%`, 'text-[var(--gu-gold)]']].map(([k, v, cls]) => (
@@ -598,112 +589,3 @@ function LiveFaceTab() {
   );
 }
 
-/* ═══════════════════════════════════════════════════════════════════
-   TAB 3: ANOMALIES
-   ═══════════════════════════════════════════════════════════════════ */
-function AnomaliesTab() {
-  const [anomalies, setAnomalies] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
-  const [severityFilter, setSeverityFilter] = useState('');
-  const [subjectFilter, setSubjectFilter] = useState('');
-  const [expanded, setExpanded] = useState(new Set());
-  const [resolvingId, setResolvingId] = useState(null);
-
-  useEffect(() => { fetchAnomalies(); }, [severityFilter, subjectFilter]);
-
-  const fetchAnomalies = async () => {
-    setLoading(true); setError('');
-    try {
-      const params = {};
-      if (severityFilter) params.severity = severityFilter;
-      if (subjectFilter) params.subject_id = subjectFilter;
-      const res = await attendanceAI.getAnomalies(params);
-      setAnomalies(Array.isArray(res.data) ? res.data : []);
-    } catch { setError('Failed to load anomalies.'); } finally { setLoading(false); }
-  };
-
-  const toggleExpand = (id) => { setExpanded(prev => { const n = new Set(prev); if (n.has(id)) n.delete(id); else n.add(id); return n; }); };
-  const handleResolve = async (anomalyId) => { setResolvingId(anomalyId); try { await attendanceAI.resolveAnomaly(anomalyId); setAnomalies(prev => prev.filter(a => a.id !== anomalyId)); } catch {} finally { setResolvingId(null); } };
-
-  const uniqueSubjects = [...new Set(anomalies.map(a => a.subject_code + '|' + a.subject_name))];
-
-  return (
-    <div className="space-y-6 animate-fade-in">
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <div className="flex flex-wrap gap-3 items-center">
-          <Filter className="w-4 h-4 text-white/40" />
-          <div className="relative">
-            <select value={severityFilter} onChange={e => setSeverityFilter(e.target.value)}
-              className="appearance-none pl-4 pr-9 py-2 border border-[var(--gu-border)] rounded-lg text-sm text-white bg-[#3D0F0F] focus:outline-none focus:border-[var(--gu-gold)]">
-              <option value="">All Severities</option><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option><option value="critical">Critical</option>
-            </select>
-            <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-white/40 pointer-events-none" />
-          </div>
-          {uniqueSubjects.length > 1 && (
-            <div className="relative">
-              <select value={subjectFilter} onChange={e => setSubjectFilter(e.target.value)}
-                className="appearance-none pl-4 pr-9 py-2 border border-[var(--gu-border)] rounded-lg text-sm text-white bg-[#3D0F0F] focus:outline-none focus:border-[var(--gu-gold)]">
-                <option value="">All Subjects</option>
-                {uniqueSubjects.map(s => { const [code, name] = s.split('|'); return <option key={s} value={code}>{code} — {name}</option>; })}
-              </select>
-              <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-white/40 pointer-events-none" />
-            </div>
-          )}
-          {(severityFilter || subjectFilter) && (
-            <button onClick={() => { setSeverityFilter(''); setSubjectFilter(''); }} className="text-xs text-[var(--gu-gold)] font-semibold hover:underline">Clear Filters</button>
-          )}
-        </div>
-        {anomalies.length > 0 && (
-          <span className="bg-red-900/40 text-red-300 border border-red-500/30 text-sm font-bold px-3 py-1.5 rounded-full">
-            {anomalies.length} Active Alert{anomalies.length !== 1 ? 's' : ''}
-          </span>
-        )}
-      </div>
-
-      {error && <div className="flex items-center gap-2 p-3 bg-red-900/30 border border-red-500/30 rounded-lg"><AlertCircle className="w-4 h-4 text-red-400 shrink-0" /><p className="text-red-300 text-sm">{error}</p></div>}
-
-      {loading ? (
-        <div className="text-center py-16"><Loader2 className="w-8 h-8 animate-spin text-[var(--gu-gold)] mx-auto mb-3" /><p className="text-white/40 text-sm">Loading anomalies...</p></div>
-      ) : anomalies.length === 0 ? (
-        <div className="text-center py-16 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-lg">
-          <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-3" />
-          <h3 className="font-serif text-lg text-white mb-1">No Active Anomalies</h3>
-          <p className="text-white/40 text-sm">All attendance patterns look healthy.</p>
-        </div>
-      ) : (
-        <div className="space-y-3">
-          {anomalies.map(a => {
-            const sev = SEVERITY_STYLES[a.severity] || SEVERITY_STYLES.low;
-            const isOpen = expanded.has(a.id);
-            const short = a.description ? a.description.slice(0, 80) : null;
-            const isTruncated = a.description?.length > 80;
-            return (
-              <div key={a.id} className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-lg p-4 md:p-5 hover:border-[var(--gu-gold)]/30 transition-all">
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
-                  <div className="md:col-span-3"><p className="text-sm font-semibold text-white">{a.student_name}</p><p className="text-xs text-white/40 font-mono">{a.student_email}</p></div>
-                  <div className="md:col-span-2"><div className="flex items-center gap-1.5"><BookOpen className="w-3.5 h-3.5 text-[var(--gu-gold)]" /><div><p className="text-xs font-semibold text-white/80">{a.subject_code}</p><p className="text-[10px] text-white/40">{a.subject_name}</p></div></div></div>
-                  <div className="md:col-span-2"><span className="text-xs text-white/60 font-medium">{ANOMALY_LABELS[a.anomaly_type] || a.anomaly_type}</span><p className="text-[10px] text-white/40 mt-0.5">{new Date(a.detected_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}</p></div>
-                  <div className="md:col-span-1"><span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full capitalize ${sev.badge}`}><span className={`w-1.5 h-1.5 rounded-full ${sev.dot}`} />{a.severity}</span></div>
-                  <div className="md:col-span-3">
-                    {a.description ? (
-                      <div><p className="text-xs text-white/60 leading-relaxed">{isOpen ? a.description : (short + (isTruncated ? '...' : ''))}</p>
-                        {isTruncated && <button onClick={() => toggleExpand(a.id)} className="flex items-center gap-1 text-[10px] text-[var(--gu-gold)] font-semibold mt-1 hover:underline">{isOpen ? <><ChevronUp className="w-3 h-3" /> Less</> : <><ChevronDown className="w-3 h-3" /> More</>}</button>}
-                      </div>
-                    ) : (<div className="flex items-center gap-1.5 text-white/40"><Loader2 className="w-3 h-3 animate-spin" /><span className="text-xs">AI generating...</span></div>)}
-                  </div>
-                  <div className="md:col-span-1">
-                    <button onClick={() => handleResolve(a.id)} disabled={resolvingId === a.id}
-                      className="flex items-center gap-1 text-xs font-semibold bg-green-900/30 text-green-300 border border-green-500/20 px-2.5 py-1.5 rounded-lg hover:bg-green-900/50 disabled:opacity-50 transition-colors whitespace-nowrap">
-                      {resolvingId === a.id ? <Loader2 className="w-3 h-3 animate-spin" /> : <><CheckCircle className="w-3 h-3" /> Resolve</>}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      )}
-    </div>
-  );
-}

@@ -110,6 +110,14 @@ const StudentTimetable = () => {
                         <div className="flex justify-center items-center h-64">
                             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--gu-gold)]"></div>
                         </div>
+                    ) : timetableSlots.length === 0 ? (
+                        <div className="bg-black/40 border border-[var(--gu-gold)]/20 p-12 flex flex-col items-center justify-center rounded-lg backdrop-blur-sm shadow-2xl">
+                            <Calendar className="w-16 h-16 text-[var(--gu-gold)]/50 mb-4" />
+                            <h2 className="text-2xl font-serif text-white mb-2">No Schedule Found</h2>
+                            <p className="text-white/60 text-center max-w-md">
+                                Your timetable is currently empty. This typically occurs because your admin hasn't generated the schedule yet, or you are currently in your final Industry Project / Internship semester which has no active lectures.
+                            </p>
+                        </div>
                     ) : (
                         <>
                             <div className="overflow-x-auto bg-[var(--gu-red-card)] border border-[var(--gu-gold)]/40 shadow-xl rounded-md">

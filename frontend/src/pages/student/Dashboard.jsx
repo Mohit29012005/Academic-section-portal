@@ -83,7 +83,7 @@ const Dashboard = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-[var(--gu-red-deep)]/40 p-8 rounded-2xl border border-[var(--gu-gold)]/10 backdrop-blur-sm shadow-2xl">
           <div>
             <h1 className="font-serif text-4xl md:text-5xl text-white mb-2 tracking-tight">
-              Astraea Student Portal
+              Student Portal
             </h1>
             <div className="flex flex-wrap items-center gap-3 text-[var(--gu-gold)] text-[10px] uppercase font-black tracking-[0.3em] opacity-80">
               <span>{data.student?.name || "Student Core"}</span>

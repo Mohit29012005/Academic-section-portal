@@ -402,8 +402,14 @@ def faculty_dashboard(request):
             {"error": "Faculty profile not found"}, status=status.HTTP_404_NOT_FOUND
         )
 
-    # Get ONLY assigned subjects (directly assigned to this faculty via M2M)
-    assigned_subjects = faculty.subjects.select_related("course").all()
+    # First get assigned subjects (directly assigned to this faculty via M2M)
+    assigned_subjects = list(faculty.subjects.select_related("course").all())
+
+    # If no explicitly assigned subjects, derive from timetable slots
+    if not assigned_subjects:
+        from academics.models import TimetableSlot, Subject
+        subject_ids = TimetableSlot.objects.filter(faculty=faculty).values_list("subject_id", flat=True)
+        assigned_subjects = list(Subject.objects.filter(subject_id__in=subject_ids).select_related("course"))
 
     subjects_data = []
     course_ids = set()
@@ -424,6 +430,24 @@ def faculty_dashboard(request):
                 "campus_branch": s.campus_branch,
             }
         )
+
+    # Get "today's classes" from Timetable
+    from academics.models import TimetableSlot
+    from datetime import datetime
+    today = datetime.now().strftime("%A")
+    today_slots = TimetableSlot.objects.filter(faculty=faculty, day_of_week=today).select_related('subject', 'room').order_by('start_time')
+    
+    today_classes_data = []
+    for slot in today_slots:
+        today_classes_data.append({
+            "subject_name": slot.subject.name,
+            "subject_code": slot.subject.code,
+            "time": slot.start_time.strftime("%H:%M:%S") if slot.start_time else None,
+            "end_time": slot.end_time.strftime("%H:%M:%S") if slot.end_time else None,
+            "section": slot.section,
+            "room": slot.room.room_number if slot.room else slot.room_name,
+            "attendance_marked": False
+        })
 
     # If faculty is class teacher, also get students from their class
     class_student_count = 0
@@ -448,8 +472,8 @@ def faculty_dashboard(request):
     return Response(
         {
             "faculty": FacultySerializer(faculty).data,
-            "today_classes": [],
-            "today_classes_count": 0,
+            "today_classes": today_classes_data,
+            "today_classes_count": len(today_classes_data),
             "subjects": subjects_data,
             "total_students": total_students,
             "class_teacher_info": {

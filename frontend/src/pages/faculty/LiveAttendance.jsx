@@ -315,7 +315,7 @@ export default function LiveAttendance() {
           <div className="max-w-xl mx-auto bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-xl p-8 text-center">
             <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
             <h2 className="text-white font-serif text-2xl mb-2">Session Ended</h2>
-            <p className="text-white/50 text-sm mb-6">Anomaly detection triggered for all students</p>
+            <p className="text-white/50 text-sm mb-6">Attendance has been processed for all students</p>
             <div className="grid grid-cols-3 gap-4 mb-6">
               {[
                 { label: 'Present', value: summary.present_count, color: 'text-green-400' },
