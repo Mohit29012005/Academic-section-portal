@@ -57,9 +57,23 @@ from .serializers import (
     AttendanceAnomalySerializer,
     AttendanceNotificationSerializer,
 )
-from .face_engine import register_face as engine_register_face, recognize_face
+from .face_engine import register_face as engine_register_face, recognize_face, recognize_multi_faces
 
 FACE_RECOGNITION_AVAILABLE = True
+
+# Liveness & proxy detection (graceful imports)
+try:
+    from .liveness import check_liveness_single, check_liveness_multi_frame
+    LIVENESS_AVAILABLE = True
+except ImportError:
+    LIVENESS_AVAILABLE = False
+
+try:
+    from .anomaly import determine_attendance_status, check_proxy_attendance, log_proxy_anomaly
+    ANOMALY_DETECTION_AVAILABLE = True
+except ImportError:
+    ANOMALY_DETECTION_AVAILABLE = False
+
 from .utils import generate_qr_code
 
 logger = logging.getLogger(__name__)
@@ -460,15 +474,30 @@ def mark_attendance_qr(request):
         )
 
     ip_address = request.META.get("REMOTE_ADDR", "")
+
+    # Late detection — check if student is arriving after threshold
+    attendance_status = "present"
+    if ANOMALY_DETECTION_AVAILABLE:
+        attendance_status = determine_attendance_status(session)
+
     record = AttendanceRecord.objects.create(
         session=session,
         student=request.user,
-        status="present",
+        status=attendance_status,
         marked_via="qr_link",
         ip_address=ip_address,
         confidence_score=confidence,
         snapshot_path=snapshot_path,
     )
+
+    # Proxy detection
+    if ANOMALY_DETECTION_AVAILABLE:
+        proxy_check = check_proxy_attendance(request.user, session, confidence)
+        if proxy_check["is_suspicious"]:
+            log_proxy_anomaly(
+                request.user, session,
+                proxy_check["reasons"], proxy_check["severity"]
+            )
 
     try:
         student_name = request.user.student_profile.name
@@ -517,13 +546,30 @@ def create_lecture(request):
     if request.user.role != "admin":
         try:
             faculty = Faculty.objects.get(user=request.user)
-            # Check if subject is assigned to this faculty
-            assigned_subject_ids = faculty.subjects.values_list("subject_id", flat=True)
-            if str(subject_id) not in [str(sid) for sid in assigned_subject_ids]:
-                return Response(
-                    {"error": "You can only create lectures for assigned subjects."},
-                    status=403,
-                )
+            # Check M2M subjects first, then fallback to timetable slots
+            has_via_m2m = faculty.subjects.filter(subject_id=subject_id).exists()
+            if not has_via_m2m:
+                from academics.models import TimetableSlot as TS
+                has_via_timetable = TS.objects.filter(
+                    faculty=faculty, subject_id=subject_id
+                ).exists()
+                if has_via_timetable:
+                    # Auto-sync: add the missing M2M link
+                    from academics.models import Subject as Subj
+                    try:
+                        faculty.subjects.add(Subj.objects.get(subject_id=subject_id))
+                    except Subj.DoesNotExist:
+                        pass
+                else:
+                    assigned = list(
+                        faculty.subjects.values_list("code", flat=True)
+                    ) or ["(none)"]
+                    return Response(
+                        {
+                            "error": f"This subject is not assigned to you. Your assigned subjects: {', '.join(assigned)}"
+                        },
+                        status=403,
+                    )
         except Faculty.DoesNotExist:
             return Response({"error": "Faculty profile not found."}, status=404)
 
@@ -604,6 +650,9 @@ def create_lecture(request):
             "total_students": session.total_students,
             "expires_at": session.qr_expires_at,
             "subject": subject.name,
+            "subject_code": subject.code,
+            "course_code": subject.course.code,
+            "course_name": subject.course.name,
             "date": str(session.date),
         }
     )
@@ -629,6 +678,18 @@ def lecture_status(request, session_id):
 
     records = AttendanceRecord.objects.filter(session=session).select_related("student")
     present_count = records.filter(status__in=["present", "late"]).count()
+
+    # Auto-calculate total_students from enrolled if not set
+    if session.total_students == 0:
+        from users.models import Student
+        try:
+            enrolled_count = Student.objects.filter(course=session.subject.course).count()
+            if enrolled_count > 0:
+                session.total_students = enrolled_count
+                session.save(update_fields=["total_students"])
+        except Exception:
+            pass
+
     absent_count = session.total_students - present_count
 
     students_data = []
@@ -747,6 +808,13 @@ def end_lecture(request, session_id):
     for stu in enrolled_students:
         detect_anomalies.delay(str(stu.user.user_id), str(session.subject.subject_id))
 
+    # Auto-calculate total_students from enrolled if not set
+    if session.total_students == 0 and enrolled_students:
+        count = enrolled_students.count() if hasattr(enrolled_students, 'count') else len(enrolled_students)
+        if count > 0:
+            session.total_students = count
+            session.save(update_fields=["total_students"])
+
     present_count = AttendanceRecord.objects.filter(
         session=session, status__in=["present", "late"]
     ).count()
@@ -817,23 +885,24 @@ def mark_manual(request, session_id):
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def mark_attendance_face(request):
-    """POST /mark-attendance-face/ — faculty sends webcam frame, backend matches face."""
+    """POST /mark-attendance-face/ — faculty sends webcam frame, backend matches face.
+    Supports both single-face and multi-face modes.
+    Integrates late marking and proxy detection.
+    """
     err = _require_role(request, "faculty")
     if err:
         return err
 
     session_id = request.data.get("session_id")
     frame_b64 = request.data.get("frame")
+    multi_mode = request.data.get("multi_face", False)  # Enable multi-face scanning
 
     if not session_id or not frame_b64:
         return Response({"error": "session_id and frame are required."}, status=400)
 
     if not FACE_RECOGNITION_AVAILABLE:
         return Response(
-            {
-                "recognized": False,
-                "message": "Face engine is unavailable on server. Contact admin.",
-            },
+            {"recognized": False, "message": "Face engine unavailable. Contact admin."},
             status=503,
         )
 
@@ -844,18 +913,14 @@ def mark_attendance_face(request):
     except LectureSession.DoesNotExist:
         return Response({"error": "Active session not found."}, status=404)
 
-    # Verify faculty ownership
     if session.faculty_id != request.user.id:
         return Response({"error": "Access denied to this session."}, status=403)
 
-    # Load all face encodings for this subject's students
+    # Build encodings map for this subject's students
     from users.models import Student
-
     encodings_map = {}
     try:
-        students = Student.objects.filter(course=session.subject.course).select_related(
-            "user"
-        )
+        students = Student.objects.filter(course=session.subject.course).select_related("user")
         for stu in students:
             try:
                 fe = FaceEncoding.objects.get(student=stu.user)
@@ -870,14 +935,74 @@ def mark_attendance_face(request):
     except Exception as e:
         logger.error(f"Loading encodings failed: {e}")
 
+    # ── Multi-face mode: detect ALL faces in frame ──
+    if multi_mode:
+        multi_result = recognize_multi_faces(frame_b64, session_id)
+        newly_marked = []
+        already_marked_list = []
+
+        for face in multi_result.get("recognized", []):
+            matched_user_id = face["student_id"]
+            confidence = face.get("confidence", 0)
+
+            # Resolve user
+            if matched_user_id in encodings_map:
+                matched_user = encodings_map[matched_user_id]["user"]
+                matched_name = encodings_map[matched_user_id]["name"]
+                matched_roll = encodings_map[matched_user_id]["roll_no"]
+            else:
+                from django.contrib.auth import get_user_model
+                User = get_user_model()
+                try:
+                    matched_user = User.objects.get(user_id=matched_user_id)
+                    matched_name = getattr(getattr(matched_user, 'student_profile', None), 'name', matched_user.email)
+                    matched_roll = getattr(getattr(matched_user, 'student_profile', None), 'enrollment_no', '')
+                except Exception:
+                    continue
+
+            already = AttendanceRecord.objects.filter(session=session, student=matched_user).exists()
+            if already:
+                already_marked_list.append({"student_name": matched_name, "roll_no": matched_roll})
+                continue
+
+            # Late detection
+            attendance_status = "present"
+            if ANOMALY_DETECTION_AVAILABLE:
+                attendance_status = determine_attendance_status(session)
+
+            AttendanceRecord.objects.create(
+                session=session, student=matched_user,
+                status=attendance_status, marked_via="face_recognition",
+                confidence_score=confidence,
+            )
+
+            # Proxy detection
+            if ANOMALY_DETECTION_AVAILABLE:
+                proxy_check = check_proxy_attendance(matched_user, session, confidence)
+                if proxy_check["is_suspicious"]:
+                    log_proxy_anomaly(matched_user, session, proxy_check["reasons"], proxy_check["severity"])
+
+            newly_marked.append({
+                "student_name": matched_name,
+                "roll_no": matched_roll,
+                "confidence_score": round(confidence, 1),
+                "status": attendance_status,
+            })
+
+        return Response({
+            "multi_face": True,
+            "faces_detected": multi_result.get("faces_detected", 0),
+            "newly_marked": newly_marked,
+            "already_marked": already_marked_list,
+            "unknown_count": multi_result.get("unknown_count", 0),
+        })
+
+    # ── Single-face mode (default) ──
     result = recognize_face(frame_b64, session_id)
 
     if not result.get("recognized"):
         return Response(
-            {
-                "recognized": False,
-                "message": result.get("message", "Face not recognized."),
-            }
+            {"recognized": False, "message": result.get("message", "Face not recognized.")}
         )
 
     matched_user_id = result["student_id"]
@@ -887,72 +1012,126 @@ def mark_attendance_face(request):
         matched_roll = encodings_map[matched_user_id]["roll_no"]
     except KeyError:
         from django.contrib.auth import get_user_model
-
         User = get_user_model()
         try:
             matched_user = User.objects.get(user_id=matched_user_id)
-            matched_name = (
-                matched_user.student_profile.name
-                if hasattr(matched_user, "student_profile")
-                else matched_user.email
-            )
-            matched_roll = (
-                matched_user.student_profile.enrollment_no
-                if hasattr(matched_user, "student_profile")
-                else ""
-            )
+            matched_name = getattr(getattr(matched_user, 'student_profile', None), 'name', matched_user.email)
+            matched_roll = getattr(getattr(matched_user, 'student_profile', None), 'enrollment_no', '')
         except Exception:
-            return Response(
-                {
-                    "recognized": False,
-                    "message": "Recognized unregistered student in DB.",
-                }
-            )
+            return Response({"recognized": False, "message": "Recognized unregistered student in DB."})
 
     confidence = result.get("confidence", 0)
-    already_marked = AttendanceRecord.objects.filter(
-        session=session, student=matched_user
-    ).exists()
+    already_marked = AttendanceRecord.objects.filter(session=session, student=matched_user).exists()
 
     snapshot_path = ""
     if not already_marked:
-        # Save snapshot
-        snap_dir = os.path.join(
-            settings.MEDIA_ROOT, "attendance_snapshots", str(date.today())
-        )
+        snap_dir = os.path.join(settings.MEDIA_ROOT, "attendance_snapshots", str(date.today()))
         os.makedirs(snap_dir, exist_ok=True)
         snap_file = os.path.join(snap_dir, f"{matched_user_id}.jpg")
         try:
-            import base64
-            from PIL import Image
+            import base64 as b64_mod
+            from PIL import Image as PILImage
             import io
-
-            img_data = base64.b64decode(frame_b64.split(",")[-1])
-            img = Image.open(io.BytesIO(img_data))
+            img_data = b64_mod.b64decode(frame_b64.split(",")[-1])
+            img = PILImage.open(io.BytesIO(img_data))
             img.save(snap_file)
             snapshot_path = f"attendance_snapshots/{date.today()}/{matched_user_id}.jpg"
         except Exception:
             pass
 
+        # Late detection
+        attendance_status = "present"
+        if ANOMALY_DETECTION_AVAILABLE:
+            attendance_status = determine_attendance_status(session)
+
         AttendanceRecord.objects.create(
-            session=session,
-            student=matched_user,
-            status="present",
-            marked_via="face_recognition",
-            confidence_score=confidence,
-            snapshot_path=snapshot_path,
+            session=session, student=matched_user,
+            status=attendance_status, marked_via="face_recognition",
+            confidence_score=confidence, snapshot_path=snapshot_path,
         )
 
-    return Response(
-        {
-            "recognized": True,
-            "student_name": matched_name,
-            "roll_no": matched_roll,
-            "confidence_score": round(confidence, 1),
-            "snapshot_path": snapshot_path,
-            "already_marked": already_marked,
-        }
-    )
+        # Proxy detection
+        if ANOMALY_DETECTION_AVAILABLE:
+            proxy_check = check_proxy_attendance(matched_user, session, confidence)
+            if proxy_check["is_suspicious"]:
+                log_proxy_anomaly(matched_user, session, proxy_check["reasons"], proxy_check["severity"])
+
+    return Response({
+        "recognized": True,
+        "student_name": matched_name,
+        "roll_no": matched_roll,
+        "confidence_score": round(confidence, 1),
+        "snapshot_path": snapshot_path,
+        "already_marked": already_marked,
+        "status": attendance_status if not already_marked else None,
+    })
+
+
+# ─── Liveness Check ───────────────────────────────────────────────────────────
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def check_liveness(request):
+    """POST /check-liveness/ — verify face is live (not a photo/screen).
+    
+    Accepts:
+      - frames: list of 3-5 base64 images captured over ~3 seconds
+      - OR frame: single base64 image for quick check
+    
+    Returns liveness score and pass/fail.
+    """
+    if not LIVENESS_AVAILABLE:
+        return Response(
+            {"error": "Liveness detection is not available on this server."},
+            status=503,
+        )
+
+    frames_b64 = request.data.get("frames", [])
+    single_frame = request.data.get("frame")
+
+    if single_frame and not frames_b64:
+        # Single-frame quick check
+        from .face_engine import decode_base64_image
+        rgb = decode_base64_image(single_frame)
+        if rgb is None:
+            return Response({"error": "Cannot decode image."}, status=400)
+        result = check_liveness_single(rgb)
+        return Response(result)
+
+    if not frames_b64 or len(frames_b64) < 2:
+        return Response(
+            {"error": "Provide at least 2 frames for reliable liveness detection."},
+            status=400,
+        )
+
+    from .face_engine import decode_base64_image
+    rgb_frames = []
+    for b64 in frames_b64:
+        rgb = decode_base64_image(b64)
+        if rgb is not None:
+            rgb_frames.append(rgb)
+
+    if len(rgb_frames) < 2:
+        return Response(
+            {"error": "Could not decode enough valid frames."}, status=400
+        )
+
+    result = check_liveness_multi_frame(rgb_frames)
+    return Response(result)
+
+
+# ─── Faculty: Multi-Face Attendance (batch endpoint) ─────────────────────────
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def mark_attendance_multi_face(request):
+    """POST /mark-attendance-multi-face/ — detect ALL faces in one frame.
+    Convenience wrapper that calls mark_attendance_face with multi_face=True.
+    """
+    request.data["multi_face"] = True
+    return mark_attendance_face(request)
 
 
 # ─── Student/Faculty: Attendance Report ──────────────────────────────────────
@@ -1302,3 +1481,214 @@ def bulk_remind(request):
         )
         count += 1
     return Response({"success": True, "reminded": count})
+
+
+# ─── Admin: Face Management ───────────────────────────────────────────────────
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def delete_student_face(request, student_id):
+    """POST /admin/student/<student_id>/delete-face/ — reset face registration."""
+    err = _require_role(request, "admin")
+    if err:
+        return err
+
+    from users.models import Student
+    try:
+        stu = Student.objects.get(student_id=student_id)
+    except Student.DoesNotExist:
+        return Response({"error": "Student not found."}, status=404)
+
+    # Delete face encoding file
+    try:
+        fe = FaceEncoding.objects.get(student=stu.user)
+        if fe.encoding_path:
+            abs_path = os.path.join(settings.MEDIA_ROOT, fe.encoding_path)
+            if os.path.exists(abs_path):
+                os.remove(abs_path)
+        fe.delete()
+    except FaceEncoding.DoesNotExist:
+        pass
+
+    # Reset profile flags
+    try:
+        profile = StudentProfile.objects.get(user=stu.user)
+        profile.is_face_registered = False
+        profile.face_registered_at = None
+        if profile.registered_face_photo:
+            profile.registered_face_photo.delete(save=False)
+            profile.registered_face_photo = None
+        profile.save(update_fields=["is_face_registered", "face_registered_at", "registered_face_photo"])
+    except StudentProfile.DoesNotExist:
+        pass
+
+    return Response({"success": True, "message": "Face data deleted successfully."})
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def upload_student_photo(request, student_id):
+    """POST /admin/student/<student_id>/upload-photo/ — upload a face photo for a student."""
+    err = _require_role(request, "admin")
+    if err:
+        return err
+
+    from users.models import Student
+    try:
+        stu = Student.objects.get(student_id=student_id)
+    except Student.DoesNotExist:
+        return Response({"error": "Student not found."}, status=404)
+
+    photo = request.FILES.get("photo")
+    if not photo:
+        return Response({"error": "photo file required."}, status=400)
+
+    profile, _ = StudentProfile.objects.get_or_create(user=stu.user)
+    profile.registered_face_photo = photo
+    profile.save(update_fields=["registered_face_photo"])
+
+    photo_url = None
+    try:
+        photo_url = request.build_absolute_uri(profile.registered_face_photo.url)
+    except Exception:
+        pass
+
+    return Response({"success": True, "photo_url": photo_url})
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def student_attendance_stats(request, student_id):
+    """GET /admin/student/<student_id>/attendance-stats/ — overall + subject-wise stats."""
+    err = _require_role(request, "admin")
+    if err:
+        return err
+
+    from users.models import Student
+    from academics.models import Subject
+
+    try:
+        stu = Student.objects.select_related("user", "course").get(student_id=student_id)
+    except Student.DoesNotExist:
+        return Response({"error": "Student not found."}, status=404)
+
+    # Overall attendance
+    all_records = AttendanceRecord.objects.filter(student=stu.user)
+    total = all_records.count()
+    present = all_records.filter(status__in=["present", "late"]).count()
+    overall_pct = round((present / total * 100), 1) if total > 0 else 0
+
+    # Per-subject breakdown
+    subjects = Subject.objects.filter(
+        id__in=all_records.values_list("session__subject_id", flat=True).distinct()
+    )
+    subject_breakdown = []
+    for sub in subjects:
+        sub_records = all_records.filter(session__subject=sub)
+        sub_total = sub_records.count()
+        sub_present = sub_records.filter(status__in=["present", "late"]).count()
+        sub_pct = round((sub_present / sub_total * 100), 1) if sub_total > 0 else 0
+        subject_breakdown.append({
+            "subject_code": sub.code,
+            "subject_name": sub.name,
+            "total": sub_total,
+            "present": sub_present,
+            "percentage": sub_pct,
+        })
+
+    return Response({
+        "student_id": str(stu.student_id),
+        "name": stu.name,
+        "enrollment_no": stu.enrollment_no,
+        "overall": {
+            "total": total,
+            "present": present,
+            "percentage": overall_pct,
+        },
+        "subjects": sorted(subject_breakdown, key=lambda x: x["subject_code"]),
+    })
+
+
+# ─── Export: Google Sheets & CSV ─────────────────────────────────────────────
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def export_to_sheets(request):
+    """POST /export-to-sheets/ — export a session's attendance to Google Sheets."""
+    err = _require_role(request, "faculty", "admin")
+    if err:
+        return err
+
+    session_id = request.data.get("session_id")
+    spreadsheet_id = request.data.get("spreadsheet_id")
+
+    if not session_id:
+        return Response({"error": "session_id is required."}, status=400)
+
+    try:
+        session = LectureSession.objects.get(id=session_id)
+    except LectureSession.DoesNotExist:
+        return Response({"error": "Session not found."}, status=404)
+
+    if request.user.role == "faculty" and session.faculty_id != request.user.id:
+        return Response({"error": "Access denied."}, status=403)
+
+    from .sheets_export import export_session_to_sheet
+    result = export_session_to_sheet(session_id, spreadsheet_id)
+    status_code = 200 if result.get("success") else 500
+    return Response(result, status=status_code)
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def export_cumulative_sheets(request):
+    """POST /export-cumulative/ — export cumulative subject attendance."""
+    err = _require_role(request, "faculty", "admin")
+    if err:
+        return err
+
+    subject_id = request.data.get("subject_id")
+    date_from = request.data.get("date_from")
+    date_to = request.data.get("date_to")
+
+    if not subject_id:
+        return Response({"error": "subject_id is required."}, status=400)
+
+    from .sheets_export import export_subject_cumulative
+    result = export_subject_cumulative(subject_id, date_from, date_to)
+    status_code = 200 if result.get("success") else 500
+    return Response(result, status=status_code)
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def download_csv(request, session_id):
+    """GET /download-csv/<session_id>/ — download attendance as CSV file."""
+    err = _require_role(request, "faculty", "admin")
+    if err:
+        return err
+
+    try:
+        session = LectureSession.objects.get(id=session_id)
+    except LectureSession.DoesNotExist:
+        return Response({"error": "Session not found."}, status=404)
+
+    if request.user.role == "faculty" and session.faculty_id != request.user.id:
+        return Response({"error": "Access denied."}, status=403)
+
+    from .sheets_export import _generate_csv_fallback
+    result = _generate_csv_fallback(session)
+
+    if result.get("csv_path"):
+        from django.http import FileResponse
+        filepath = os.path.join(settings.MEDIA_ROOT, result["csv_path"])
+        if os.path.exists(filepath):
+            return FileResponse(
+                open(filepath, 'rb'),
+                content_type='text/csv',
+                as_attachment=True,
+                filename=os.path.basename(filepath),
+            )
+    return Response({"error": "CSV generation failed."}, status=500)

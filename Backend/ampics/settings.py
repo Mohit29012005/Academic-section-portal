@@ -53,6 +53,22 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+SOCIALACCOUNT_LOGIN_ON_GET = True
+
+# Allauth settings
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_VERIFICATION = "none" # Skip email verification for simplicity
+
+LOGIN_REDIRECT_URL = "/api/auth/social/success/"
+
+# Restricted Social Login config
+ACCOUNT_ADAPTER = "users.adapters.RestrictedAccountAdapter"
+SOCIALACCOUNT_ADAPTER = "users.adapters.RestrictSocialLoginAdapter"
+SOCIALACCOUNT_AUTO_SIGNUP = False
+SOCIALACCOUNT_EMAIL_AUTHENTICATION = True
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -183,8 +199,8 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "23032431034@gnu.ac.in"
-EMAIL_HOST_PASSWORD = "ymlm cqri uzfb dcyu"
+EMAIL_HOST_USER = config("EMAIL_HOST_USER", default="")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default="")
 
 # ── Celery Configuration ─────────────────────────────────────────────────────
 CELERY_BROKER_URL = config("CELERY_BROKER_URL", default="redis://localhost:6379/0")

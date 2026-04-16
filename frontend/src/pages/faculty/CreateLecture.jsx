@@ -43,7 +43,7 @@ export default function CreateLecture() {
 
   const fetchSubjects = async () => {
     try {
-      const res = await attendanceAI.getFacultySubjects();
+      const res = await attendanceAI.getFacultySubjects({ assigned_only: true });
       setSubjects(res.data || []);
       if (res.data?.length > 0) setForm(f => ({ ...f, subject_id: String(res.data[0].subject_id) }));
     } catch {
@@ -128,7 +128,7 @@ export default function CreateLecture() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-serif font-semibold text-[var(--gu-red-dark)]">Live Session</h1>
-            <p className="text-gray-500 text-sm">{session.subject} · {session.date}</p>
+            <p className="text-gray-500 text-sm">{session.course_code} | {session.subject_code} – {session.subject} · {session.date}</p>
           </div>
           <span className="flex items-center gap-1.5 bg-green-100 text-green-700 text-sm font-semibold px-3 py-1.5 rounded-full">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -193,7 +193,8 @@ export default function CreateLecture() {
             {/* Session info */}
             <div className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm space-y-3">
               {[
-                ['Subject', session.subject],
+                ['Course', session.course_name],
+                ['Subject', `${session.subject_code} – ${session.subject}`],
                 ['Date', session.date],
                 ['Time', `${form.start_time} – ${form.end_time}`],
                 ['Total Students', total],
@@ -293,7 +294,9 @@ export default function CreateLecture() {
                 className="w-full appearance-none px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[var(--gu-red)] bg-white">
                 {subjects.length === 0 && <option value="">No subjects assigned</option>}
                 {subjects.map(s => (
-                  <option key={s.subject_id} value={String(s.subject_id)}>{s.code} – {s.name}</option>
+                  <option key={s.subject_id} value={String(s.subject_id)}>
+                    {s.course_code} | {s.code} – {s.name}
+                  </option>
                 ))}
               </select>
               <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />

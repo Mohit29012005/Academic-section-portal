@@ -261,11 +261,21 @@ export const attendanceAI = {
   markAttendanceFace: (sessionId, frame) =>
     api.post('/attendance-ai/mark-attendance-face/', { session_id: sessionId, frame }),
 
+  markAttendanceMultiFace: (sessionId, frame) =>
+    api.post('/attendance-ai/mark-attendance-multi-face/', { session_id: sessionId, frame }),
+
+  // ── Liveness Detection ──────────────────────────────────────────────────────
+  checkLiveness: (frames) =>
+    api.post('/attendance-ai/check-liveness/', { frames }),
+
+  checkLivenessSingle: (frame) =>
+    api.post('/attendance-ai/check-liveness/', { frame }),
+
   getFacultySessions: () =>
     api.get('/attendance-ai/faculty/sessions/'),
 
-  getFacultySubjects: () =>
-    api.get('/academics/subjects/'),
+  getFacultySubjects: (params) =>
+    api.get('/academics/subjects/', { params }),
 
   // ── Reports ──────────────────────────────────────────────────────────────────
   getStudentReport: (studentId) =>
@@ -299,4 +309,37 @@ export const attendanceAI = {
 
   bulkRemind: () =>
     api.post('/attendance-ai/admin/bulk-remind/'),
+
+  // ── Export: Google Sheets & CSV ────────────────────────────────────────────
+  exportToSheets: (sessionId, spreadsheetId = null) =>
+    api.post('/attendance-ai/export-to-sheets/', {
+      session_id: sessionId,
+      spreadsheet_id: spreadsheetId,
+    }),
+
+  exportCumulative: (subjectId, dateFrom = null, dateTo = null) =>
+    api.post('/attendance-ai/export-cumulative/', {
+      subject_id: subjectId,
+      date_from: dateFrom,
+      date_to: dateTo,
+    }),
+
+  downloadCSV: (sessionId) =>
+    api.get(`/attendance-ai/download-csv/${sessionId}/`, { responseType: 'blob' }),
+
+  // ── Admin: Face Management ────────────────────────────────────────────────
+  deleteStudentFace: (studentId) =>
+    api.post(`/attendance-ai/admin/student/${studentId}/delete-face/`),
+
+  uploadStudentPhoto: (studentId, formData) =>
+    api.post(`/attendance-ai/admin/student/${studentId}/upload-photo/`, formData, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    }),
+
+  getStudentAttendanceStats: (studentId) =>
+    api.get(`/attendance-ai/admin/student/${studentId}/attendance-stats/`),
+
+  // ── Faculty: Attendance Reports ───────────────────────────────────────────
+  getAttendanceReport: (params) =>
+    api.get('/attendance-ai/faculty/sessions/', { params }),
 };

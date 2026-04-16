@@ -46,6 +46,33 @@ const Login = () => {
     return () => stopCamera();
   }, []);
 
+  // ── Social Login Handler ─────────────────────────────────────────────
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("social_login") === "success") {
+      try {
+        const rawData = params.get("data");
+        const authData = JSON.parse(rawData);
+        const redirectPath = params.get("redirect") || "/student/dashboard";
+
+        // Store tokens
+        localStorage.setItem("access_token", authData.access);
+        localStorage.setItem("refresh_token", authData.refresh);
+        localStorage.setItem("user", JSON.stringify(authData.user));
+        localStorage.setItem("profile", JSON.stringify(authData.profile));
+
+        // Clear URL params and navigate
+        navigate(redirectPath, { replace: true });
+      } catch (err) {
+        setMessage("Social login failed to process. Please try again.");
+      }
+    } else if (params.get("error")) {
+      setMessage(params.get("error"));
+      // Clean query params
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }, [navigate]);
+
   // ── STEP 1: Credential Login ─────────────────────────────────────────
   const handleLogin = async (e) => {
     e.preventDefault();

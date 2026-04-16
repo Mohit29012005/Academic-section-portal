@@ -13,6 +13,9 @@ urlpatterns = [
     # ── Student: Mark via QR (second login) ──
     path('mark-attendance-qr/',             views.mark_attendance_qr,        name='ai-mark-qr'),
 
+    # ── Liveness Detection ──
+    path('check-liveness/',                 views.check_liveness,            name='ai-check-liveness'),
+
     # ── Faculty: Session Management ──
     path('lecture/create/',                  views.create_lecture,            name='ai-create-lecture'),
     path('lecture/<int:session_id>/status/', views.lecture_status,            name='ai-lecture-status'),
@@ -21,6 +24,7 @@ urlpatterns = [
 
     # ── Faculty: Face Recognition ──
     path('mark-attendance-face/',            views.mark_attendance_face,      name='ai-mark-face'),
+    path('mark-attendance-multi-face/',      views.mark_attendance_multi_face, name='ai-mark-multi-face'),
     path('faculty/sessions/',               views.faculty_sessions,           name='ai-faculty-sessions'),
 
     # ── Reports & Anomalies ──
@@ -37,4 +41,13 @@ urlpatterns = [
     path('admin/student-face-status/',       views.admin_student_face_status, name='ai-admin-face-status'),
     path('admin/send-reminder/<str:student_id>/', views.send_face_reminder,  name='ai-send-reminder'),
     path('admin/bulk-remind/',               views.bulk_remind,               name='ai-bulk-remind'),
+    path('admin/student/<str:student_id>/delete-face/', views.delete_student_face, name='ai-admin-delete-face'),
+    path('admin/student/<str:student_id>/upload-photo/', views.upload_student_photo, name='ai-admin-upload-photo'),
+    path('admin/student/<str:student_id>/attendance-stats/', views.student_attendance_stats, name='ai-admin-attendance-stats'),
+
+    # ── Export: Google Sheets & CSV ──
+    path('export-to-sheets/',                views.export_to_sheets,          name='ai-export-sheets'),
+    path('export-cumulative/',               views.export_cumulative_sheets,  name='ai-export-cumulative'),
+    path('download-csv/<int:session_id>/',   views.download_csv,             name='ai-download-csv'),
 ]
+

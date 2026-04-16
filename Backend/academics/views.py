@@ -135,15 +135,27 @@ def rooms_list(request):
 def subject_list(request):
     course_id = request.query_params.get("course_id")
     semester = request.query_params.get("semester")
+    assigned_only = request.query_params.get("assigned_only") == "true"
 
     subjects = Subject.objects.all()
+
+    # If faculty is logged in and assigned_only is passed, filter by their assignments
+    if assigned_only and request.user.role == "faculty":
+        try:
+            faculty = request.user.faculty_profile
+            subjects = subjects.filter(faculty_members=faculty)
+        except Exception:
+            pass
+
     if course_id:
         # Check if course_id is likely a UUID
-        if len(str(course_id)) > 30 and '-' in str(course_id):
+        if len(str(course_id)) > 30 and "-" in str(course_id):
             subjects = subjects.filter(course_id=course_id)
         else:
             # Fallback to name match or code match
-            subjects = subjects.filter(Q(course__name__icontains=course_id) | Q(course__code=course_id))
+            subjects = subjects.filter(
+                Q(course__name__icontains=course_id) | Q(course__code=course_id)
+            )
 
     if semester:
         try:
@@ -151,7 +163,11 @@ def subject_list(request):
         except (ValueError, TypeError):
             pass
 
-    return Response(SubjectSerializer(subjects.select_related("course").order_by('name'), many=True).data)
+    return Response(
+        SubjectSerializer(
+            subjects.select_related("course").order_by("name"), many=True
+        ).data
+    )
 
 
 @api_view(["GET", "POST"])

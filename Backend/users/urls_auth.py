@@ -7,4 +7,5 @@ urlpatterns = [
     path('refresh/', views.refresh_token_view, name='token_refresh'),
     path('password/reset/', views.password_reset_view, name='password_reset'),
     path('notifications/', views.user_notifications, name='user_notifications'),
+    path('social/success/', views.social_login_success, name='social_login_success'),
 ]

@@ -157,6 +157,71 @@ def logout_view(request):
     return Response({"message": "Logged out successfully"})
 
 
+from django.shortcuts import redirect
+import json
+from django.utils.http import urlencode
+
+def social_login_success(request):
+    """
+    Handle successful social login and redirect back to frontend with tokens.
+    """
+    if not request.user.is_authenticated:
+        return redirect('http://localhost:5173/login?error=not_authenticated')
+
+    user = request.user
+    refresh = RefreshToken.for_user(user)
+
+    # ── Auto-link Profile if missing ──────────────────────────────────
+    if user.role == "student" and not hasattr(user, "student_profile"):
+        from .models import Student
+        student = Student.objects.filter(email=user.email, user__isnull=True).first()
+        if student:
+            student.user = user
+            student.save()
+            
+    elif user.role == "faculty" and not hasattr(user, "faculty_profile"):
+        from .models import Faculty
+        faculty = Faculty.objects.filter(email=user.email, user__isnull=True).first()
+        if faculty:
+            faculty.user = user
+            faculty.save()
+
+    # Get profile data based on role
+    profile_data = {}
+    if user.role == "student" and hasattr(user, "student_profile"):
+        profile_data = StudentSerializer(user.student_profile).data
+    elif user.role == "faculty" and hasattr(user, "faculty_profile"):
+        profile_data = FacultySerializer(user.faculty_profile).data
+    elif user.role == "admin" and hasattr(user, "admin_profile"):
+        profile_data = AdminSerializer(user.admin_profile).data
+
+    # Prepare data for frontend
+    data = {
+        "access": str(refresh.access_token),
+        "refresh": str(refresh),
+        "user": UserSerializer(user).data,
+        "profile": profile_data
+    }
+
+    # Build redirect URL with tokens in query string (encoded as JSON)
+    from django.core.serializers.json import DjangoJSONEncoder
+    params = {
+        "social_login": "success",
+        "data": json.dumps(data, cls=DjangoJSONEncoder)
+    }
+    
+    # Also determine dashboard redirect
+    target_dashboard = "/student/dashboard"
+    if user.role == "faculty":
+        target_dashboard = "/faculty/dashboard"
+    elif user.role == "admin":
+        target_dashboard = "/admin/dashboard"
+        
+    params["redirect"] = target_dashboard
+
+    return redirect(f"http://localhost:5173/login?{urlencode(params)}")
+
+
 @api_view(["POST"])
 @permission_classes([AllowAny])
 def password_reset_view(request):
@@ -207,8 +272,18 @@ def student_dashboard(request):
             {"error": "Student profile not found"}, status=status.HTTP_404_NOT_FOUND
         )
 
-    # Attendance percentage - attendance module removed
+    # Attendance percentage from attendance_ai module
     attendance_pct = 0
+    try:
+        from attendance_ai.models import AttendanceRecord
+        total_records = AttendanceRecord.objects.filter(student=request.user).count()
+        present_records = AttendanceRecord.objects.filter(
+            student=request.user, status__in=["present", "late"]
+        ).count()
+        if total_records > 0:
+            attendance_pct = round((present_records / total_records * 100), 1)
+    except Exception:
+        pass
 
     # Upcoming exams
     upcoming_exams_count = 0
@@ -312,15 +387,103 @@ def student_attendance(request):
             {"error": "Student profile not found"}, status=status.HTTP_404_NOT_FOUND
         )
 
-    # Attendance module removed - returning empty data
+    # Query real attendance data from attendance_ai module
+    from attendance_ai.models import AttendanceRecord, LectureSession
+
+    user = request.user
+    records = AttendanceRecord.objects.filter(student=user).select_related(
+        "session", "session__subject"
+    )
+
+    total_classes = records.count()
+    present = records.filter(status__in=["present", "late"]).count()
+    absent = records.filter(status="absent").count()
+    percentage = round((present / total_classes * 100), 1) if total_classes > 0 else 0
+
+    # Build subject-wise breakdown
+    subject_map = {}
+    for rec in records:
+        subj = rec.session.subject
+        key = str(subj.subject_id)
+        if key not in subject_map:
+            subject_map[key] = {
+                "subject": f"{subj.name} ({subj.code})",
+                "total": 0,
+                "present": 0,
+                "absent": 0,
+            }
+        subject_map[key]["total"] += 1
+        if rec.status in ["present", "late"]:
+            subject_map[key]["present"] += 1
+        elif rec.status == "absent":
+            subject_map[key]["absent"] += 1
+
+    subject_breakdown = []
+    for data in subject_map.values():
+        data["percentage"] = (
+            round((data["present"] / data["total"] * 100), 1)
+            if data["total"] > 0
+            else 0
+        )
+        subject_breakdown.append(data)
+
+    # Also include subjects where student has sessions but no record yet
+    # (sessions from the student's course that ended)
+    if student.course:
+        ended_sessions = LectureSession.objects.filter(
+            subject__course=student.course, is_active=False
+        ).exclude(
+            records__student=user
+        ).select_related("subject")
+
+        for session in ended_sessions:
+            key = str(session.subject.subject_id)
+            if key not in subject_map:
+                subject_map[key] = {
+                    "subject": f"{session.subject.name} ({session.subject.code})",
+                    "total": 0,
+                    "present": 0,
+                    "absent": 0,
+                }
+            subject_map[key]["total"] += 1
+            subject_map[key]["absent"] += 1
+            total_classes += 1
+            absent += 1
+
+        # Recalculate overall percentage with missed sessions included
+        percentage = (
+            round((present / total_classes * 100), 1) if total_classes > 0 else 0
+        )
+
+        # Rebuild subject_breakdown with updated data
+        subject_breakdown = []
+        for data in subject_map.values():
+            data["percentage"] = (
+                round((data["present"] / data["total"] * 100), 1)
+                if data["total"] > 0
+                else 0
+            )
+            subject_breakdown.append(data)
+
+    # Build recent records list
+    recent_records = []
+    for rec in records.order_by("-marked_at")[:20]:
+        recent_records.append({
+            "subject": rec.session.subject.name,
+            "date": str(rec.session.date),
+            "status": rec.status,
+            "marked_via": rec.marked_via,
+            "marked_at": rec.marked_at,
+        })
+
     return Response(
         {
-            "total_classes": 0,
-            "present": 0,
-            "absent": 0,
-            "percentage": 0,
-            "subject_breakdown": [],
-            "records": [],
+            "total_classes": total_classes,
+            "present": present,
+            "absent": absent,
+            "percentage": percentage,
+            "subject_breakdown": subject_breakdown,
+            "records": recent_records,
         }
     )
 

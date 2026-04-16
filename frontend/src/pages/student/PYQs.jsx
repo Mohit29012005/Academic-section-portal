@@ -3,6 +3,21 @@ import StudentLayout from "../../components/StudentLayout";
 import { FileText, Download, Loader2, AlertCircle, Sparkles } from "lucide-react";
 import { academicsAPI } from "../../services/api";
 
+const fallbackQuestions = {
+  general: [
+    "Explain the fundamental concepts of this subject.",
+    "What are the key applications in real-world scenarios?",
+    "Differentiate between theoretical and practical approaches.",
+    "Write short notes on recent advancements in this field.",
+    "Explain the architecture and components involved.",
+    "What are the advantages and limitations?",
+    "Describe the step-by-step implementation process.",
+    "Explain with suitable diagrams and examples.",
+    "Compare different methodologies and techniques.",
+    "What are the future trends and developments?",
+  ]
+};
+
 const shuffleArray = (array) => {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -77,7 +92,13 @@ const PYQs = () => {
       const courseObj = courses.find(c => c.course_id === course);
       
       const response = await academicsAPI.pyqSearch({ subject_id: subjectId });
-      const dbQuestions = response.data;
+      console.log("PYQ Response:", response);
+      
+      if (response.success === false) {
+        throw new Error(response.error || "Failed to fetch questions");
+      }
+      
+      const dbQuestions = response.data || [];
       
       const processRawText = (text) => {
           if (!text) return [];
@@ -140,7 +161,8 @@ const PYQs = () => {
 
       setGeneratedPaper(paper);
     } catch (err) {
-      setError("Failed to generate paper.");
+      console.error("Generate paper error:", err);
+      setError(err.message || "Failed to generate paper. Please check if subject has PYQ data.");
     } finally {
       setLoading(false);
     }
