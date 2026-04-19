@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import StudentLayout from "../../components/StudentLayout";
-import { CheckCircle, AlertTriangle, XCircle, Loader2, Inbox } from "lucide-react";
+import { CheckCircle, AlertTriangle, XCircle, Loader2, Inbox, Activity, BarChart2 } from "lucide-react";
 import { studentAPI } from "../../services/api";
 
 const Attendance = () => {
@@ -102,35 +102,39 @@ const Attendance = () => {
           </div>
 
           {/* Top Summary Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm box-border overflow-hidden">
-              <span className="block text-white opacity-70 text-xs uppercase tracking-spaced font-semibold mb-2">
-                Overall
-              </span>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm box-border overflow-hidden relative group hover:border-[var(--gu-gold)]/40 transition-colors">
+              <div className="flex justify-between items-start mb-2">
+                <span className="block text-white opacity-70 text-[10px] uppercase tracking-widest font-bold">Overall</span>
+                <Activity size={16} className={`${percentColor} opacity-50`} />
+              </div>
               <div className={`font-serif text-3xl md:text-4xl font-bold ${percentColor}`}>
                 {summary.percentage}%
               </div>
             </div>
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm box-border overflow-hidden">
-              <span className="block text-white opacity-70 text-xs uppercase tracking-spaced font-semibold mb-2">
-                Classes Attended
-              </span>
+            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm box-border overflow-hidden relative group hover:border-[var(--gu-gold)]/40 transition-colors">
+              <div className="flex justify-between items-start mb-2">
+                <span className="block text-white opacity-70 text-[10px] uppercase tracking-widest font-bold">Present</span>
+                <CheckCircle size={16} className="text-[var(--gu-gold)] opacity-50" />
+              </div>
               <div className="font-serif text-3xl md:text-4xl text-[var(--gu-gold)] font-bold">
                 {summary.present}
               </div>
             </div>
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm box-border overflow-hidden">
-              <span className="block text-white opacity-70 text-xs uppercase tracking-spaced font-semibold mb-2">
-                Classes Missed
-              </span>
+            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm box-border overflow-hidden relative group hover:border-[var(--gu-gold)]/40 transition-colors">
+              <div className="flex justify-between items-start mb-2">
+                <span className="block text-white opacity-70 text-[10px] uppercase tracking-widest font-bold">Missed</span>
+                <XCircle size={16} className="text-[#f87171] opacity-50" />
+              </div>
               <div className="font-serif text-3xl md:text-4xl text-[#f87171] font-bold">
                 {summary.absent}
               </div>
             </div>
-            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm box-border overflow-hidden">
-              <span className="block text-white opacity-70 text-xs uppercase tracking-spaced font-semibold mb-2">
-                Total Sessions
-              </span>
+            <div className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] p-4 md:p-6 rounded-sm box-border overflow-hidden relative group hover:border-[var(--gu-gold)]/40 transition-colors">
+              <div className="flex justify-between items-start mb-2">
+                <span className="block text-white opacity-70 text-[10px] uppercase tracking-widest font-bold">Total</span>
+                <BarChart2 size={16} className="text-white opacity-30" />
+              </div>
               <div className="font-serif text-3xl md:text-4xl text-white font-bold">
                 {summary.total}
               </div>
@@ -149,7 +153,7 @@ const Attendance = () => {
 
           {/* No Data State */}
           {!hasData && (
-            <div className="bg-white/5 border border-white/10 p-8 rounded-xl flex flex-col items-center justify-center gap-4 mb-8">
+            <div className="bg-white/5 border border-white/10 p-8 rounded-sm flex flex-col items-center justify-center gap-4 mb-8">
               <Inbox className="w-12 h-12 text-white/30" />
               <p className="text-white/50 text-center font-serif text-lg">
                 No attendance records found yet.

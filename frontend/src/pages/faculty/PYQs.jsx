@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import FacultyLayout from "../../components/FacultyLayout";
-import { FileText, Download, Loader2, AlertCircle, Sparkles } from "lucide-react";
+import { FileText, Download, Loader2, AlertCircle, Sparkles, BookOpen, Calendar, Server, Activity } from "lucide-react";
 import { academicsAPI } from "../../services/api";
 
 // Fallback Question Bank (in case DB is empty)
@@ -366,7 +366,9 @@ const FacultyPYQs = () => {
           <div className="bg-[#2D0A0A] p-8 rounded-xl border border-white/10 shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-white/50">Course Track</label>
+                  <label className="text-[10px] uppercase tracking-widest text-white/50 flex items-center gap-2">
+                    <BookOpen size={12} className="text-[var(--gu-gold)]" /> Course Track
+                  </label>
                   <select value={course} onChange={handleCourseChange} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none">
                     <option value="">Select Course...</option>
                     {courses.map((c) => (
@@ -377,7 +379,9 @@ const FacultyPYQs = () => {
                   </select>
                </div>
                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-white/50">Semester</label>
+                  <label className="text-[10px] uppercase tracking-widest text-white/50 flex items-center gap-2">
+                    <Calendar size={12} className="text-[var(--gu-gold)]" /> Semester
+                  </label>
                   <select value={semester} onChange={handleSemesterChange} disabled={!course} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none disabled:opacity-30">
                     <option value="">Select Sem...</option>
                     {Array.from({ length: courses.find(c => c.course_id === course)?.total_semesters || 8 }, (_, i) => i + 1).map((s) => (
@@ -391,7 +395,9 @@ const FacultyPYQs = () => {
 
             <div className="mb-8">
                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-white/50">Subject Selection</label>
+                  <label className="text-[10px] uppercase tracking-widest text-white/50 flex items-center gap-2">
+                    <Server size={12} className="text-[var(--gu-gold)]" /> Subject Selection
+                  </label>
                   <div className="space-y-3">
                     {semester && (
                       <input 
@@ -422,8 +428,10 @@ const FacultyPYQs = () => {
             </div>
 
             <div className="mb-8">
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-white/50">Exam Mode</label>
+                 <div className="space-y-2">
+                  <label className="text-[10px] uppercase tracking-widest text-white/50 flex items-center gap-2">
+                    <Activity size={12} className="text-[var(--gu-gold)]" /> Exam Mode
+                  </label>
                   <select value={examType} onChange={(e) => setExamType(e.target.value)} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm focus:border-[var(--gu-gold)] outline-none">
                     <option value="external">External (60 Marks)</option>
                     <option value="internal">Internal (30 Marks)</option>

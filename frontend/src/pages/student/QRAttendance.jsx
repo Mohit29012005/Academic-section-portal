@@ -231,7 +231,7 @@ export default function QRAttendance() {
       <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
         <div className="w-full max-w-lg">
           {/* Main Card */}
-          <div className="bg-white rounded-2xl shadow-2xl shadow-black overflow-hidden border border-[rgba(185,28,28,0.2)]">
+          <div className="bg-white rounded-sm shadow-2xl shadow-black overflow-hidden border border-[rgba(185,28,28,0.2)]">
             
             {/* Card Header - Centered Logo & Title */}
             <div className="bg-red-800 py-3 px-4 text-center">
@@ -262,7 +262,7 @@ export default function QRAttendance() {
                   <h2 className="text-lg font-bold text-red-800 mb-2">Session Unavailable</h2>
                   <p className="text-red-600 text-sm mb-4">{errorMsg}</p>
                   <button onClick={() => navigate('/login')}
-                    className="w-full bg-red-700 text-white font-bold py-3 rounded-xl hover:bg-red-800 transition-all">
+                    className="w-full bg-red-700 text-white font-bold py-3 rounded-sm hover:bg-red-800 transition-all">
                     Go to Login Page
                   </button>
                 </div>
@@ -276,13 +276,13 @@ export default function QRAttendance() {
                   <h2 className="text-xl font-bold text-green-600 mb-1">Attendance Marked!</h2>
                   <p className="text-red-600 text-sm mb-4">Your attendance has been recorded.</p>
                   
-                  <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-4 mb-4 text-left border border-red-200">
+                  <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-sm p-4 mb-4 text-left border border-red-200">
                     <p className="text-sm text-red-700 mb-1"><BookOpen className="w-4 h-4 inline mr-2" />{sessionInfo?.subject_name}</p>
                     <p className="text-sm text-red-700"><Clock className="w-4 h-4 inline mr-2" />{new Date().toLocaleTimeString()}</p>
                   </div>
                   
                   <button onClick={() => navigate('/student/dashboard')}
-                    className="w-full bg-red-700 text-white font-bold py-3 rounded-xl hover:bg-red-800 transition-all">
+                    className="w-full bg-red-700 text-white font-bold py-3 rounded-sm hover:bg-red-800 transition-all">
                     Go to Dashboard
                   </button>
                 </div>
@@ -296,7 +296,7 @@ export default function QRAttendance() {
                   <h2 className="text-lg font-bold text-yellow-600 mb-2">Already Marked</h2>
                   <p className="text-red-600 text-sm mb-4">You have already marked your attendance for this session.</p>
                   <button onClick={() => navigate('/student/dashboard')}
-                    className="w-full bg-gradient-to-r from-amber-400 to-amber-500 text-red-900 font-bold py-3 rounded-xl hover:from-amber-500 hover:to-amber-600 transition-all">
+                    className="w-full bg-gradient-to-r from-amber-400 to-amber-500 text-red-900 font-bold py-3 rounded-sm hover:from-amber-500 hover:to-amber-600 transition-all">
                     Go to Dashboard
                   </button>
                 </div>
@@ -315,7 +315,7 @@ export default function QRAttendance() {
                   </div>
 
                   {sessionInfo && (
-                    <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-3 mb-4 border border-red-200">
+                    <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-sm p-3 mb-4 border border-red-200">
                       <p className="text-sm font-bold text-red-800"><BookOpen className="w-4 h-4 inline mr-2" />{sessionInfo.subject_name}</p>
                       <p className="text-xs text-red-600"><User className="w-3 h-3 inline mr-1" />{sessionInfo.faculty_name} · <Clock className="w-3 h-3 inline mr-1" />{sessionInfo.start_time} - {sessionInfo.end_time}</p>
                     </div>
@@ -325,25 +325,25 @@ export default function QRAttendance() {
                     <div>
                       <input type="text" value={enrollment} onChange={e => setEnrollment(e.target.value)}
                         placeholder="Email / Enrollment"
-                        className="w-full px-4 py-3 border-2 border-red-200 rounded-xl text-sm focus:outline-none focus:border-red-500 transition-colors"
+                        className="w-full px-4 py-3 border-2 border-red-200 rounded-sm text-sm focus:outline-none focus:border-red-500 transition-colors"
                         required />
                     </div>
                     <div>
                       <input type="password" value={password} onChange={e => setPassword(e.target.value)}
                         placeholder="Password"
-                        className="w-full px-4 py-3 border-2 border-red-200 rounded-xl text-sm focus:outline-none focus:border-red-500 transition-colors"
+                        className="w-full px-4 py-3 border-2 border-red-200 rounded-sm text-sm focus:outline-none focus:border-red-500 transition-colors"
                         required />
                     </div>
 
                     {loginError && (
-                      <div className="p-3 bg-red-50 border border-red-200 rounded-xl flex items-center gap-2">
+                      <div className="p-3 bg-red-50 border border-red-200 rounded-sm flex items-center gap-2">
                         <AlertCircle className="w-4 h-4 text-red-500 shrink-0" />
                         <p className="text-red-600 text-sm">{loginError}</p>
                       </div>
                     )}
 
                     <button type="submit" disabled={loginLoading}
-                      className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-red-700 to-red-800 text-white font-bold py-3 rounded-xl hover:from-red-800 hover:to-red-900 disabled:opacity-60 transition-all">
+                      className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-red-700 to-red-800 text-white font-bold py-3 rounded-sm hover:from-red-800 hover:to-red-900 disabled:opacity-60 transition-all">
                       {loginLoading ? (
                         <><Loader2 className="w-4 h-4 animate-spin" /> Logging in...</>
                       ) : (
@@ -379,7 +379,7 @@ export default function QRAttendance() {
                     <p className="text-red-600 text-xs">Look directly at the camera</p>
                   </div>
 
-                  <div className="relative aspect-video bg-gradient-to-br from-red-900 to-red-950 rounded-xl overflow-hidden mb-4 border-2 border-red-200 shadow-inner">
+                  <div className="relative aspect-video bg-gradient-to-br from-red-900 to-red-950 rounded-sm overflow-hidden mb-4 border-2 border-red-200 shadow-inner">
                     <video 
                       ref={videoRef} 
                       autoPlay 
@@ -442,7 +442,7 @@ export default function QRAttendance() {
                     {!cameraActive && !cameraLoading && (
                       <button 
                         onClick={startCamera}
-                        className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-red-700 to-red-800 text-white font-bold py-3 rounded-xl hover:from-red-800 hover:to-red-900 transition-all"
+                        className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-red-700 to-red-800 text-white font-bold py-3 rounded-sm hover:from-red-800 hover:to-red-900 transition-all"
                       >
                         <Camera className="w-4 h-4" /> Start Camera
                       </button>
@@ -453,7 +453,7 @@ export default function QRAttendance() {
                         <button 
                           onClick={handleMarkAttendance} 
                           disabled={submitting}
-                          className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold py-3 rounded-xl hover:from-green-700 hover:to-green-800 disabled:opacity-60 transition-all"
+                          className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold py-3 rounded-sm hover:from-green-700 hover:to-green-800 disabled:opacity-60 transition-all"
                         >
                           {submitting ? (
                             <><Loader2 className="w-4 h-4 animate-spin" /> Verifying...</>
@@ -463,7 +463,7 @@ export default function QRAttendance() {
                         </button>
                         <button 
                           onClick={stopCamera}
-                          className="px-4 border border-red-200 text-red-700 font-semibold py-3 rounded-xl hover:bg-red-50 transition-all text-sm"
+                          className="px-4 border border-red-200 text-red-700 font-semibold py-3 rounded-sm hover:bg-red-50 transition-all text-sm"
                         >
                           <VideoOff className="w-4 h-4" />
                         </button>

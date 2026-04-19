@@ -52,7 +52,7 @@ export default function AIAttendancePage() {
           {/* Page Header */}
           <div className="border-b border-[var(--gu-gold)]/30 pb-6">
             <div className="flex items-center gap-3 mb-1">
-              <div className="w-10 h-10 bg-[var(--gu-gold)]/10 rounded-xl flex items-center justify-center border border-[var(--gu-gold)]/20">
+              <div className="w-10 h-10 bg-[var(--gu-gold)]/10 rounded-sm flex items-center justify-center border border-[var(--gu-gold)]/20">
                 <Zap className="w-5 h-5 text-[var(--gu-gold)]" />
               </div>
               <div>
@@ -66,7 +66,7 @@ export default function AIAttendancePage() {
 
           {/* Registration status banner */}
           {!statusLoading && status && !status.profile_complete && activeTab === 'report' && (
-            <div className="flex items-center gap-3 p-4 bg-amber-900/20 border border-amber-500/30 rounded-xl backdrop-blur-sm">
+            <div className="flex items-center gap-3 p-4 bg-amber-900/20 border border-amber-500/30 rounded-sm ">
               <AlertCircle className="w-5 h-5 text-amber-400 shrink-0" />
               <div>
                 <p className="text-amber-300 text-sm font-semibold">AI Setup Incomplete</p>
@@ -83,7 +83,7 @@ export default function AIAttendancePage() {
               const isActive = activeTab === tab.id;
               return (
                 <button key={tab.id} onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold uppercase tracking-wider transition-all border ${
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-sm text-sm font-bold uppercase tracking-wider transition-all border ${
                     isActive
                       ? 'bg-[var(--gu-gold)] text-[var(--gu-red-deep)] border-[var(--gu-gold)] shadow-[0_0_20px_rgba(212,175,55,0.2)]'
                       : 'bg-white/5 text-white/50 border-white/10 hover:border-[var(--gu-gold)]/40 hover:text-white hover:bg-white/10'
@@ -130,7 +130,7 @@ function StepIndicator({ currentStep }) {
         const active = i === currentIndex;
         return (
           <div key={i} className="flex items-center gap-2">
-            <div className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl text-sm font-bold transition-all border ${
+            <div className={`flex items-center gap-2.5 px-5 py-3 rounded-sm text-sm font-bold transition-all border ${
               done 
                 ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' 
                 : active 
@@ -280,14 +280,14 @@ function SetupTab({ status, statusLoading, onComplete }) {
   if (step === 'complete') {
     return (
       <div className="max-w-3xl mx-auto animate-scale-in">
-        <div className="glass-panel rounded-3xl overflow-hidden">
+        <div className=" rounded-sm overflow-hidden">
           {/* Success Banner */}
           <div className="bg-gradient-to-r from-emerald-900/40 via-emerald-800/20 to-transparent p-8 border-b border-emerald-500/20">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* Ref Photo */}
               <div className="shrink-0">
                 <div className="relative group">
-                  <div className="w-36 h-36 rounded-2xl overflow-hidden border-4 border-emerald-500/30 shadow-[0_0_40px_rgba(16,185,129,0.15)] bg-black">
+                  <div className="w-36 h-36 rounded-sm overflow-hidden border-4 border-emerald-500/30 shadow-[0_0_40px_rgba(16,185,129,0.15)] bg-black">
                     {status?.registered_face_photo ? (
                       <img src={status.registered_face_photo} alt="Registered Face" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     ) : (
@@ -308,18 +308,18 @@ function SetupTab({ status, statusLoading, onComplete }) {
                 <p className="text-white/40 text-sm mb-6">Your biometric identity is securely stored. AI attendance marking is now active for all sessions.</p>
                 
                 <div className="grid grid-cols-2 gap-3 mb-5">
-                  <div className="bg-white/5 border border-emerald-500/10 rounded-xl p-3 text-center">
+                  <div className="bg-white/5 border border-emerald-500/10 rounded-sm p-3 text-center">
                     <p className="text-[9px] text-white/30 uppercase tracking-wider mb-1">Status</p>
                     <p className="text-sm font-bold text-emerald-400">✓ Verified</p>
                   </div>
-                  <div className="bg-white/5 border border-white/5 rounded-xl p-3 text-center">
+                  <div className="bg-white/5 border border-[var(--gu-border)] rounded-sm p-3 text-center">
                     <p className="text-[9px] text-white/30 uppercase tracking-wider mb-1">Samples</p>
                     <p className="text-sm font-bold text-white">{status?.face_encoding_count || 5} Photos</p>
                   </div>
                 </div>
 
                 <button onClick={async () => { setStep('face'); setCaptures([]); await startCamera(); }}
-                  className="flex items-center justify-center gap-2 w-full md:w-auto border border-[var(--gu-gold)]/30 text-[var(--gu-gold)] font-bold py-2.5 px-6 rounded-xl hover:bg-[var(--gu-gold)]/10 transition-all text-sm">
+                  className="flex items-center justify-center gap-2 w-full md:w-auto border border-[var(--gu-gold)]/30 text-[var(--gu-gold)] font-bold py-2.5 px-6 rounded-sm hover:bg-[var(--gu-gold)]/10 transition-all text-sm">
                   <RefreshCw className="w-4 h-4" /> Re-register Face
                 </button>
               </div>
@@ -333,7 +333,7 @@ function SetupTab({ status, statusLoading, onComplete }) {
               { label: 'Parent Contact', value: status?.details?.parent_phone || 'Not set', icon: Phone },
               { label: 'Official Email', value: status?.details?.email || 'Not set', icon: Mail },
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white/[0.03] p-3 rounded-xl border border-white/5">
+              <div key={i} className="flex items-center gap-3 bg-white/[0.03] p-3 rounded-sm border border-[var(--gu-border)]">
                 <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
                   <item.icon className="w-4 h-4 text-white/30" />
                 </div>
@@ -354,10 +354,10 @@ function SetupTab({ status, statusLoading, onComplete }) {
     return (
       <div className="max-w-lg mx-auto animate-slide-up">
         <StepIndicator currentStep="details" />
-        <div className="glass-panel rounded-3xl overflow-hidden">
+        <div className=" rounded-sm overflow-hidden">
           <div className="p-8">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-[var(--gu-gold)]/10 rounded-2xl flex items-center justify-center border border-[var(--gu-gold)]/20">
+              <div className="w-12 h-12 bg-[var(--gu-gold)]/10 rounded-sm flex items-center justify-center border border-[var(--gu-gold)]/20">
                 <User className="w-5 h-5 text-[var(--gu-gold)]" />
               </div>
               <div>
@@ -382,17 +382,17 @@ function SetupTab({ status, statusLoading, onComplete }) {
                   <div className="relative group">
                     <Icon className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20 group-focus-within:text-[var(--gu-gold)] transition-colors" />
                     <input type={type} value={value} onChange={e => setter(e.target.value)} placeholder={placeholder}
-                      className="w-full pl-12 pr-4 py-3.5 border border-white/10 rounded-xl text-sm text-white bg-white/5 focus:outline-none focus:border-[var(--gu-gold)]/50 focus:bg-white/[0.08] placeholder:text-white/15 transition-all" required />
+                      className="w-full pl-12 pr-4 py-3.5 border border-white/10 rounded-sm text-sm text-white bg-white/5 focus:outline-none focus:border-[var(--gu-gold)]/50 focus:bg-white/[0.08] placeholder:text-white/15 transition-all" required />
                   </div>
                 </div>
               ))}
               {detailsError && (
-                <div className="flex items-center gap-2 p-3 bg-red-900/20 border border-red-500/20 rounded-xl">
+                <div className="flex items-center gap-2 p-3 bg-red-900/20 border border-red-500/20 rounded-sm">
                   <AlertCircle className="w-4 h-4 text-red-400 shrink-0" /><p className="text-red-300 text-sm">{detailsError}</p>
                 </div>
               )}
               <button type="submit" disabled={detailsSubmitting}
-                className="w-full flex items-center justify-center gap-2 bg-[var(--gu-gold)] text-[var(--gu-red-deep)] font-bold py-3.5 rounded-xl hover:shadow-[0_0_30px_rgba(212,175,55,0.2)] disabled:opacity-50 transition-all text-sm">
+                className="w-full flex items-center justify-center gap-2 bg-[var(--gu-gold)] text-[var(--gu-red-deep)] font-bold py-3.5 rounded-sm hover:shadow-[0_0_30px_rgba(212,175,55,0.2)] disabled:opacity-50 transition-all text-sm">
                 {detailsSubmitting ? <><Loader2 className="w-4 h-4 animate-spin" /> Saving...</> : <>Save & Continue <ChevronRight className="w-4 h-4" /></>}
               </button>
             </form>
@@ -411,11 +411,11 @@ function SetupTab({ status, statusLoading, onComplete }) {
         
         {/* Left Column: Camera Feed */}
         <div className="lg:col-span-7 space-y-4">
-          <div className="glass-panel rounded-3xl overflow-hidden">
+          <div className=" rounded-sm overflow-hidden">
             {/* Camera Header */}
-            <div className="p-5 border-b border-white/5 flex items-center justify-between">
+            <div className="p-5 border-b border-[var(--gu-border)] flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[var(--gu-gold)]/10 rounded-xl flex items-center justify-center border border-[var(--gu-gold)]/20">
+                <div className="w-10 h-10 bg-[var(--gu-gold)]/10 rounded-sm flex items-center justify-center border border-[var(--gu-gold)]/20">
                   <ScanFace className="w-5 h-5 text-[var(--gu-gold)]" />
                 </div>
                 <div>
@@ -450,7 +450,7 @@ function SetupTab({ status, statusLoading, onComplete }) {
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-[var(--gu-gold)] rounded-br-lg" />
                   </div>
                   <div className="absolute bottom-4 left-0 right-0 text-center">
-                    <span className="text-[var(--gu-gold)]/80 text-xs bg-black/60 px-3 py-1 rounded-full backdrop-blur-sm border border-[var(--gu-gold)]/20">
+                    <span className="text-[var(--gu-gold)]/80 text-xs bg-black/60 px-3 py-1 rounded-full  border border-[var(--gu-gold)]/20">
                       Align your face within the oval
                     </span>
                   </div>
@@ -459,7 +459,7 @@ function SetupTab({ status, statusLoading, onComplete }) {
               
               {/* Capturing Overlay */}
               {capturing && (
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center backdrop-blur-sm">
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center ">
                   <div className="text-center">
                     <div className="relative w-20 h-20 mx-auto mb-3">
                       <svg className="w-20 h-20 -rotate-90" viewBox="0 0 80 80">
@@ -494,14 +494,14 @@ function SetupTab({ status, statusLoading, onComplete }) {
               )}
               
               {faceError && (
-                <div className="mb-4 flex items-center gap-2 p-3 bg-red-900/20 border border-red-500/20 rounded-xl">
+                <div className="mb-4 flex items-center gap-2 p-3 bg-red-900/20 border border-red-500/20 rounded-sm">
                   <AlertCircle className="w-4 h-4 text-red-400 shrink-0" /><p className="text-red-300 text-sm">{faceError}</p>
                 </div>
               )}
               
               {captures.length < TOTAL_CAPTURES ? (
                 <button onClick={startCapture} disabled={!cameraReady || capturing}
-                  className="w-full flex items-center justify-center gap-2 bg-[var(--gu-gold)] text-[var(--gu-red-deep)] font-bold py-3.5 rounded-xl disabled:opacity-50 transition-all hover:shadow-[0_0_30px_rgba(212,175,55,0.2)] text-sm">
+                  className="w-full flex items-center justify-center gap-2 bg-[var(--gu-gold)] text-[var(--gu-red-deep)] font-bold py-3.5 rounded-sm disabled:opacity-50 transition-all hover:shadow-[0_0_30px_rgba(212,175,55,0.2)] text-sm">
                   {capturing 
                     ? <><Loader2 className="w-4 h-4 animate-spin" /> Capturing {captureIndex}/{TOTAL_CAPTURES}...</>
                     : <><Camera className="w-4 h-4" /> Start Capture</>
@@ -509,7 +509,7 @@ function SetupTab({ status, statusLoading, onComplete }) {
                 </button>
               ) : (
                 <button onClick={handleFaceSubmit} disabled={faceSubmitting}
-                  className="w-full flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold py-3.5 rounded-xl hover:bg-emerald-500 disabled:opacity-50 transition-all shadow-[0_0_20px_rgba(16,185,129,0.15)] text-sm">
+                  className="w-full flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold py-3.5 rounded-sm hover:bg-emerald-500 disabled:opacity-50 transition-all shadow-[0_0_20px_rgba(16,185,129,0.15)] text-sm">
                   {faceSubmitting 
                     ? <><Loader2 className="w-4 h-4 animate-spin" /> Registering...</>
                     : <><Upload className="w-4 h-4" /> Register Face</>
@@ -524,7 +524,7 @@ function SetupTab({ status, statusLoading, onComplete }) {
         <div className="lg:col-span-5 space-y-5">
           
           {/* Tips Card */}
-          <div className="glass-panel rounded-2xl p-6">
+          <div className=" rounded-sm p-6">
             <h3 className="font-serif text-base text-white mb-4 flex items-center gap-2">
               <Sun className="w-4 h-4 text-[var(--gu-gold)]" />
               Tips for Best Results
@@ -532,7 +532,7 @@ function SetupTab({ status, statusLoading, onComplete }) {
             <div className="space-y-3">
               {tips.map(({ icon: Icon, text, color }, i) => (
                 <div key={i} className="flex items-center gap-3 group">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-all group-hover:scale-110" 
+                  <div className="w-9 h-9 rounded-sm flex items-center justify-center shrink-0 transition-all group-hover:scale-110" 
                     style={{ background: color + '15', border: `1px solid ${color}20` }}>
                     <Icon className="w-4 h-4" style={{ color }} />
                   </div>
@@ -543,7 +543,7 @@ function SetupTab({ status, statusLoading, onComplete }) {
           </div>
 
           {/* Captured Photos Grid */}
-          <div className="glass-panel rounded-2xl p-6">
+          <div className=" rounded-sm p-6">
             <h3 className="font-serif text-base text-white mb-4 flex items-center justify-between">
               <span className="flex items-center gap-2">
                 <Camera className="w-4 h-4 text-[var(--gu-gold)]" />
@@ -556,7 +556,7 @@ function SetupTab({ status, statusLoading, onComplete }) {
               {Array.from({ length: TOTAL_CAPTURES }).map((_, i) => {
                 const cap = captures[i];
                 return (
-                  <div key={i} className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all ${
+                  <div key={i} className={`relative aspect-square rounded-sm overflow-hidden border-2 transition-all ${
                     cap 
                       ? 'border-emerald-500/40 shadow-[0_0_10px_rgba(16,185,129,0.1)]' 
                       : 'border-dashed border-white/10 bg-white/[0.03]'
@@ -589,7 +589,7 @@ function SetupTab({ status, statusLoading, onComplete }) {
               {Array.from({ length: TOTAL_CAPTURES }).map((_, i) => {
                 const cap = captures[i];
                 return (
-                  <div key={i} className={`flex items-center gap-3 p-2 rounded-xl transition-all ${
+                  <div key={i} className={`flex items-center gap-3 p-2 rounded-sm transition-all ${
                     cap ? 'bg-emerald-500/5 border border-emerald-500/10' : 'border border-transparent'
                   }`}>
                     <div className={`w-2 h-2 rounded-full shrink-0 ${cap ? 'bg-emerald-400' : 'bg-white/10'}`} />
@@ -671,7 +671,7 @@ function ReportTab() {
 
   if (error) {
     return (
-      <div className="flex items-center gap-2 p-4 bg-red-900/20 border border-red-500/20 rounded-xl">
+      <div className="flex items-center gap-2 p-4 bg-red-900/20 border border-red-500/20 rounded-sm">
         <AlertCircle className="w-5 h-5 text-red-400 shrink-0" /><p className="text-red-300 text-sm">{error}</p>
       </div>
     );
@@ -683,7 +683,7 @@ function ReportTab() {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Overall Summary */}
-      <div className={`bg-gradient-to-r ${overallBg} border rounded-2xl p-6 md:p-8`}>
+      <div className={`bg-gradient-to-r ${overallBg} border rounded-sm p-6 md:p-8`}>
         <div className="flex flex-wrap items-center gap-6 md:gap-10">
           <div>
             <p className="text-white/40 text-[10px] uppercase tracking-[0.2em] font-black mb-2">Overall Attendance</p>
@@ -721,7 +721,7 @@ function ReportTab() {
       </h2>
 
       {report.length === 0 ? (
-        <div className="text-center py-16 glass-panel rounded-xl">
+        <div className="text-center py-16  rounded-sm">
           <BookOpen className="w-12 h-12 text-white/10 mx-auto mb-3" />
           <p className="text-white/30">No attendance records found yet.</p>
         </div>
@@ -736,7 +736,7 @@ function ReportTab() {
             const cardBorder = isGood ? 'border-emerald-500/10' : isWarning ? 'border-amber-500/10' : 'border-red-500/10';
 
             return (
-              <div key={i} className={`glass-panel border ${cardBorder} rounded-xl p-5 hover:border-[var(--gu-gold)]/20 transition-all animate-slide-up`}
+              <div key={i} className={` border ${cardBorder} rounded-sm p-5 hover:border-[var(--gu-gold)]/20 transition-all animate-slide-up`}
                 style={{ animationDelay: `${i * 0.05}s` }}>
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                   <div>

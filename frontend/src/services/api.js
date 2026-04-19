@@ -302,7 +302,7 @@ export const attendanceAI = {
 
   // ── Admin ─────────────────────────────────────────────────────────────────────
   getStudentFaceStatus: (params) =>
-    api.get('/attendance-ai/admin/student-face-status/', { params }),
+    api.get('/attendance-ai/admin/student-face-status/', { params: { ...params, _t: Date.now() } }),
 
   sendReminder: (studentId) =>
     api.post(`/attendance-ai/admin/send-reminder/${studentId}/`),

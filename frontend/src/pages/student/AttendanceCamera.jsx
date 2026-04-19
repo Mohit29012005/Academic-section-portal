@@ -279,7 +279,7 @@ export default function AttendanceCamera() {
   if (phase === 'error') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
-        <div className="bg-slate-800 rounded-2xl p-8 max-w-md w-full text-center">
+        <div className="bg-slate-800 rounded-sm p-8 max-w-md w-full text-center">
           <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <XCircle className="w-8 h-8 text-red-400" />
           </div>
@@ -287,7 +287,7 @@ export default function AttendanceCamera() {
           <p className="text-slate-400 mb-6">{cameraError}</p>
           <button
             onClick={() => window.location.reload()}
-            className="w-full bg-emerald-500 text-white font-semibold py-3 rounded-xl hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-emerald-500 text-white font-semibold py-3 rounded-sm hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2"
           >
             <RefreshCw className="w-4 h-4" /> Retry
           </button>
@@ -299,14 +299,14 @@ export default function AttendanceCamera() {
   if (phase === 'success') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
-        <div className="bg-slate-800 rounded-2xl p-8 max-w-md w-full text-center">
+        <div className="bg-slate-800 rounded-sm p-8 max-w-md w-full text-center">
           <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
             <CheckCircle className="w-10 h-10 text-emerald-400" />
           </div>
           <h2 className="text-2xl font-bold text-white mb-2">Attendance Marked!</h2>
           <p className="text-slate-400 mb-6">{submitResult?.message}</p>
           
-          <div className="bg-slate-700/50 rounded-xl p-4 mb-6 text-left">
+          <div className="bg-slate-700/50 rounded-sm p-4 mb-6 text-left">
             <div className="flex justify-between text-sm mb-2">
               <span className="text-slate-400">Student</span>
               <span className="text-white font-medium">{profile?.name || user?.name || 'Student'}</span>
@@ -327,7 +327,7 @@ export default function AttendanceCamera() {
           
           <button
             onClick={() => navigate('/student/dashboard')}
-            className="w-full bg-emerald-500 text-white font-semibold py-3 rounded-xl hover:bg-emerald-600 transition-colors"
+            className="w-full bg-emerald-500 text-white font-semibold py-3 rounded-sm hover:bg-emerald-600 transition-colors"
           >
             Go to Dashboard
           </button>
@@ -341,7 +341,7 @@ export default function AttendanceCamera() {
       <div className="max-w-2xl mx-auto p-4">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-emerald-500/20 rounded-sm flex items-center justify-center">
               <Camera className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
@@ -358,7 +358,7 @@ export default function AttendanceCamera() {
         </div>
 
         {activeSessions.length > 1 && (
-          <div className="bg-slate-800 rounded-xl p-4 mb-4">
+          <div className="bg-slate-800 rounded-sm p-4 mb-4">
             <label className="block text-sm text-slate-400 mb-2">Select Session</label>
             <select
               value={selectedSession?.session_id || ''}
@@ -379,7 +379,7 @@ export default function AttendanceCamera() {
         )}
 
         {selectedSession && (
-          <div className="bg-slate-800 rounded-xl p-4 mb-4">
+          <div className="bg-slate-800 rounded-sm p-4 mb-4">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
                 <Shield className="w-5 h-5 text-emerald-400" />
@@ -402,7 +402,7 @@ export default function AttendanceCamera() {
           </div>
         )}
 
-        <div className="bg-slate-800 rounded-2xl overflow-hidden mb-4">
+        <div className="bg-slate-800 rounded-sm overflow-hidden mb-4">
           <div className="relative aspect-[4/3] bg-black">
             <video
               ref={videoRef}
@@ -485,14 +485,14 @@ export default function AttendanceCamera() {
               <div className="flex gap-3">
                 <button
                   onClick={handleRetry}
-                  className="flex-1 bg-slate-700 text-white font-semibold py-3 rounded-xl hover:bg-slate-600 transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 bg-slate-700 text-white font-semibold py-3 rounded-sm hover:bg-slate-600 transition-colors flex items-center justify-center gap-2"
                 >
                   <RefreshCw className="w-4 h-4" /> Restart
                 </button>
                 <button
                   onClick={captureAndSubmit}
                   disabled={!selectedSession || isSubmitting}
-                  className="flex-[2] bg-emerald-500 text-white font-bold py-3 rounded-xl hover:bg-emerald-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="flex-[2] bg-emerald-500 text-white font-bold py-3 rounded-sm hover:bg-emerald-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <Camera className="w-5 h-5" />
                   Mark Attendance
@@ -502,7 +502,7 @@ export default function AttendanceCamera() {
           )}
         </div>
 
-        <div className="bg-slate-800/50 rounded-xl p-4">
+        <div className="bg-slate-800/50 rounded-sm p-4">
           <h3 className="text-white font-semibold mb-2 flex items-center gap-2">
             <AlertCircle className="w-4 h-4 text-emerald-400" />
             Tips for best results

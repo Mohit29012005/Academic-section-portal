@@ -10,7 +10,9 @@ import {
   Server,
   LogOut,
   ShieldCheck,
-  FileText
+  FileText,
+  Camera,
+  Shield
 } from "lucide-react";
 import Logo from "./Logo";
 import { authAPI } from "../services/api";
@@ -64,7 +66,7 @@ const AdminLayout = ({ children }) => {
   const navItems = [
     { name: "Dashboard Overview", icon: LayoutDashboard, path: "/admin/dashboard" },
     { name: "Student Lifecycle", icon: Users, path: "/admin/students" },
-    { name: "Biometric Status", icon: ShieldCheck, path: "/admin/student-face-status" },
+    { name: "Face Registration Status", icon: ShieldCheck, path: "/admin/student-face-status" },
     { name: "Faculty HR", icon: UserCheck, path: "/admin/faculty" },
     { name: "Curriculum Mgt", icon: BookOpen, path: "/admin/courses" },
     { name: "Timetable Mgt", icon: Calendar, path: "/admin/timetable" },
@@ -226,9 +228,9 @@ const AdminLayout = ({ children }) => {
                         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-[var(--gu-gold)] rounded-r-full shadow-[0_0_15px_rgba(212,175,55,0.8)]"></div>
                     )}
                     
-                    <Icon
-                      className={`w-4 h-4 mr-4 transition-all duration-500 ${isActive ? "text-[var(--gu-gold)] drop-shadow-[0_0_8px_rgba(212,175,55,0.4)]" : "group-hover:text-white"}`}
-                    />
+                    {Icon && <Icon
+                      className={`w-4 h-4 mr-4 flex-shrink-0 transition-all duration-500 ${isActive ? "ml-3 text-[var(--gu-gold)] drop-shadow-[0_0_8px_rgba(212,175,55,0.4)]" : "group-hover:text-white"}`}
+                    />}
                     <span className="text-[10px] font-black uppercase tracking-[0.2em] whitespace-nowrap">
                       {item.name}
                     </span>

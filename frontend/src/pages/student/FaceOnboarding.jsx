@@ -192,7 +192,7 @@ export default function FaceOnboarding() {
         {/* CENTER: Camera */}
         <div className="space-y-4">
           <h2 className="text-white font-serif text-xl">Capture Photos</h2>
-          <div className="relative aspect-[4/3] bg-black rounded-xl overflow-hidden border border-[#7B0D0D]/60">
+          <div className="relative aspect-[4/3] bg-black rounded-sm overflow-hidden border border-[#7B0D0D]/60">
             <video ref={videoRef} autoPlay muted playsInline className="w-full h-full object-cover scale-x-[-1]" />
             <canvas ref={canvasRef} className="hidden" />
             {cameraReady && (

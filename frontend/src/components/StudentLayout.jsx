@@ -91,9 +91,9 @@ const StudentLayout = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1F0808] flex flex-col font-sans selection:bg-[var(--gu-gold)]/30 selection:text-white">
+    <div className="min-h-screen bg-[#0a0a0a] flex flex-col font-sans selection:bg-[var(--gu-gold)]/40 selection:text-white">
       {/* Top Navbar */}
-      <header className="h-[72px] bg-[var(--gu-red-deep)]/80 backdrop-blur-2xl border-b border-white/5 fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 shadow-[0_10px_50px_rgba(0,0,0,0.5)]">
+      <header className="h-[76px] bg-[#141414] border-b border-white/10 fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
         <div className="flex items-center space-x-3 overflow-hidden group">
           <div className="hover:scale-105 transition-transform duration-500">
             <Logo size="md" />
@@ -106,12 +106,12 @@ const StudentLayout = ({ children }) => {
         </div>
 
         <div className="flex items-center gap-4 flex-shrink-0">
-          <div className="px-5 py-2.5 bg-[#450A0A]/40 rounded-full border border-white/5 hidden lg:flex items-center text-white/60 tracking-[0.2em] text-[10px] uppercase font-black shadow-inner">
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-3 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+          <div className="px-5 py-2.5 bg-[#1f1f1f] rounded-full border border-white/10 hidden lg:flex items-center text-white/80 tracking-[0.2em] text-[10px] uppercase font-bold shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 mr-3 animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
             Node Active: Gujarat_Main
           </div>
 
-          <div className="flex items-center bg-white/5 rounded-full p-1.5 border border-white/5">
+          <div className="flex items-center bg-[#1f1f1f] rounded-full p-1.5 border border-white/10 shadow-lg">
             <div className="relative" ref={notifRef}>
                 <button
                 onClick={() => setShowNotifications(!showNotifications)}
@@ -122,16 +122,16 @@ const StudentLayout = ({ children }) => {
                 </button>
 
                 {showNotifications && (
-                <div className="absolute right-0 mt-4 w-96 glass-panel border-white/10 shadow-2xl z-50 overflow-hidden animate-reveal-down origin-top-right">
-                    <div className="px-6 py-5 border-b border-white/5 flex justify-between items-center">
-                    <h3 className="font-serif text-white text-xl">Student Alerts</h3>
-                    <span className="text-[9px] font-black text-[var(--gu-gold)] uppercase tracking-widest">Recent Activity</span>
+                <div className="absolute right-0 mt-4 w-96 bg-[#1a1a1a] rounded-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.9)] z-50 overflow-hidden animate-reveal-down origin-top-right">
+                    <div className="px-6 py-5 border-b border-white/10 flex justify-between items-center bg-[#222]">
+                    <h3 className="font-sans font-bold text-white text-lg tracking-wide">Student Alerts</h3>
+                    <span className="text-[9px] font-black text-[var(--gu-gold)] uppercase tracking-widest bg-[var(--gu-gold)]/10 px-2 py-1 rounded-md">Recent Activity</span>
                     </div>
                     <div className="max-h-96 overflow-y-auto custom-scrollbar">
                     {notifications.length > 0 ? notifications.map((notif, i) => (
                         <div
                         key={i}
-                        className="px-6 py-4 border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors group"
+                        className="px-6 py-4 border-b border-white/5 last:border-0 hover:bg-[#2a2a2a] transition-colors group"
                         >
                             <div className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full mt-1.5 bg-[var(--gu-gold)]"></div>
@@ -179,10 +179,10 @@ const StudentLayout = ({ children }) => {
                     </div>
                 </button>
                 {showProfileMenu && (
-                    <div className="absolute right-0 mt-4 w-64 glass-panel border-white/10 shadow-2xl z-50 overflow-hidden animate-reveal-down origin-top-right">
-                        <div className="p-6 bg-white/5 border-b border-white/5">
-                            <p className="text-white font-serif text-lg">{userName}</p>
-                            <p className="text-[9px] font-black uppercase tracking-widest text-[var(--gu-gold)] mt-1">Enrolled Student</p>
+                    <div className="absolute right-0 mt-3 w-64 bg-[#1a1a1a] rounded-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.9)] z-50 overflow-hidden animate-reveal-down origin-top-right">
+                        <div className="p-6 bg-[#222] border-b border-white/10">
+                            <p className="text-white font-bold text-base tracking-wide truncate">{userName}</p>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--gu-gold)] mt-1.5 flex items-center gap-1.5"><Shield size={10}/> Enrolled Student</p>
                         </div>
                         <div className="p-2 space-y-1">
                             <Link
@@ -207,12 +207,12 @@ const StudentLayout = ({ children }) => {
         </div>
       </header>
 
-      <div className="flex flex-1 pt-[72px]">
+      <div className="flex flex-1 pt-[76px]">
         {/* Left Sidebar */}
-        <aside className="w-72 bg-[#220808]/90 backdrop-blur-3xl border-r border-white/5 fixed bottom-0 top-[72px] left-0 flex flex-col justify-between z-40 shadow-[20px_0_50px_rgba(0,0,0,0.3)]">
-          <div className="flex-1 overflow-y-auto custom-scrollbar px-6 py-10">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-[var(--gu-gold)] opacity-40 mb-10 pl-4">Navigation Resources</h2>
-            <nav className="space-y-3">
+        <aside className="w-72 bg-[#141414] border-r border-white/10 fixed bottom-0 top-[76px] left-0 flex flex-col justify-between z-40 shadow-[4px_0_30px_rgba(0,0,0,0.3)]">
+          <div className="flex-1 overflow-y-auto custom-scrollbar px-5 py-8">
+            <h2 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-8 pl-4">Navigation Resources</h2>
+            <nav className="space-y-2">
               {navItems.map((item, i) => {
                 const Icon = item.icon;
                 const isActive = location.pathname.startsWith(item.path);
@@ -220,15 +220,15 @@ const StudentLayout = ({ children }) => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`group flex items-center px-5 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden ${
+                    className={`group flex items-center px-4 py-3.5 rounded-xl transition-all duration-300 relative overflow-hidden ${
                         isActive
-                          ? "bg-[var(--gu-gold)]/5 text-[var(--gu-gold)] border border-[var(--gu-gold)]/20 shadow-[0_0_20px_rgba(212,175,55,0.05)]"
-                          : "text-white/30 hover:text-white hover:bg-white/5"
+                          ? "bg-[var(--gu-gold)]/10 text-[var(--gu-gold)] border border-[var(--gu-gold)]/30 shadow-[0_4px_15px_rgba(212,175,55,0.1)]"
+                          : "text-gray-400 hover:text-white hover:bg-[#252525] border border-transparent"
                       }`}
                   >
                     {/* Active Indicator Glow */}
                     {isActive && (
-                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-[var(--gu-gold)] rounded-r-full shadow-[0_0_15px_rgba(212,175,55,0.8)]"></div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-full bg-[var(--gu-gold)] shadow-[0_0_10px_rgba(212,175,55,0.8)]"></div>
                     )}
                     
                     <Icon
@@ -246,16 +246,15 @@ const StudentLayout = ({ children }) => {
             </nav>
           </div>
 
-          <div className="p-8 border-t border-white/5">
-             <div className="glass-panel p-5 bg-gradient-to-br from-[#450A0A]/40 to-transparent border-white/5">
-                <p className="text-[8px] font-black uppercase tracking-widest text-white/20 mb-3">Academic Terminal</p>
-                <div className="flex justify-between items-center">
+          <div className="p-6 border-t border-white/10 bg-[#121212]">
+             <div className="p-4 bg-[#202020] border border-white/10 rounded-xl shadow-inner">
+                <div className="flex justify-between items-center bg-[#181818] p-3 rounded-lg border border-white/5">
                     <div className="flex flex-col">
-                        <span className="text-[10px] text-white font-bold">GANPAT_CORE</span>
-                        <span className="text-[8px] text-[var(--gu-gold)] tracking-widest">SECURE_LINK</span>
+                        <span className="text-[11px] text-white font-bold tracking-wider">GANPAT_CORE</span>
+                        <span className="text-[9px] text-emerald-400 tracking-widest mt-0.5">SECURE_LINK</span>
                     </div>
-                    <div className="p-2 rounded-lg bg-[var(--gu-gold)]/5 border border-[var(--gu-gold)]/10">
-                        <ShieldCheck className="w-3 h-3 text-[var(--gu-gold)]" />
+                    <div className="p-2 rounded bg-emerald-500/10 border border-emerald-500/20">
+                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
                     </div>
                 </div>
              </div>
@@ -263,18 +262,19 @@ const StudentLayout = ({ children }) => {
         </aside>
 
         {/* Main Content Area */}
-        <main className="flex-1 ml-72 p-10 min-h-[calc(100vh-72px)] relative">
+        <main className="flex-1 ml-72 p-10 min-h-[calc(100vh-76px)] relative">
             <div
-                className="fixed inset-0 z-0 ml-72 mt-[72px] pointer-events-none opacity-20"
+                className="fixed inset-0 z-0 ml-72 mt-[76px] pointer-events-none opacity-[0.03]"
                 style={{
                     backgroundImage: "url(/maxresdefault.jpg)",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
+                    filter: "grayscale(100%)"
                 }}
             ></div>
-            {/* Overlay Glows */}
-            <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-[var(--gu-gold)]/5 rounded-full blur-[180px] -mr-80 -mt-80 pointer-events-none"></div>
-            <div className="fixed bottom-0 left-0 w-[600px] h-[600px] bg-[var(--gu-red-deep)]/10 rounded-full blur-[180px] ml-80 -mb-80 pointer-events-none"></div>
+            {/* Elegant glowing background meshes */}
+            <div className="fixed top-0 right-0 w-[800px] h-[800px] bg-[var(--gu-gold)]/5 rounded-full blur-[200px] -mr-96 -mt-96 pointer-events-none"></div>
+            <div className="fixed bottom-0 left-0 w-[800px] h-[800px] bg-[var(--gu-red-deep)]/10 rounded-full blur-[200px] ml-80 -mb-96 pointer-events-none"></div>
 
             <div className="relative z-10">{children}</div>
         </main>

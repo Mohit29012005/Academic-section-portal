@@ -1354,8 +1354,8 @@ def admin_student_face_status(request):
 
     from users.models import Student
 
-    # Fetch students with necessary related data
-    students = Student.objects.select_related("user", "course").order_by("name")
+    # Fetch students with necessary related data - distinct to avoid duplicates
+    students = Student.objects.select_related("user", "course").order_by("name").distinct()
 
     # Apply filters
     program_filter = request.GET.get("program")
@@ -1368,11 +1368,14 @@ def admin_student_face_status(request):
         students = students.filter(current_semester=semester_filter)
 
     # Use a faster lookup by getting all profiles once
-    # Index by user_id which is the UUID value
     profiles = {p.user_id: p for p in StudentProfile.objects.all()}
 
     result = []
+    seen_user_ids = set()  # Deduplicate by user_id
     for stu in students:
+        if stu.user_id in seen_user_ids:
+            continue
+        seen_user_ids.add(stu.user_id)
         # Check profile using stu.user_id (the UUID stored in Student model)
         profile = profiles.get(stu.user_id)
         

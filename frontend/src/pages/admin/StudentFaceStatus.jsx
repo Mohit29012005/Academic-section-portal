@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import {
   Users, CheckCircle, XCircle, AlertCircle, Search,
   Bell, BellRing, Loader2, Shield, ChevronDown, Camera, Eye, User,
-  X, Upload, Trash2, RotateCcw, BarChart2, BookOpen, ExternalLink
+  X, Upload, Trash2, RotateCcw, BarChart2, BookOpen, ExternalLink, Calendar, ChevronLeft, ChevronRight
 } from 'lucide-react';
 import { attendanceAI } from '../../services/api';
 import AdminLayout from '../../components/AdminLayout';
@@ -13,6 +13,8 @@ const STATUS_LABELS = {
   details_missing: 'Details Missing',
 };
 
+const ITEMS_PER_PAGE = 24;
+
 export default function StudentFaceStatus() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -22,6 +24,7 @@ export default function StudentFaceStatus() {
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [semesterFilter, setSemesterFilter] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   // Actions
   const [remindingId, setRemindingId] = useState(null);
@@ -49,7 +52,16 @@ export default function StudentFaceStatus() {
       if (statusFilter) params.status = statusFilter;
       if (semesterFilter) params.semester = semesterFilter;
       const res = await attendanceAI.getStudentFaceStatus(params);
-      setData(res.data);
+      // Deduplicate by user_id on frontend as safety net
+      const raw = res.data?.students || [];
+      const seen = new Set();
+      const unique = raw.filter(s => {
+        const key = s.user_id || s.student_id;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+      setData({ ...res.data, students: unique });
     } catch {
       setError('Failed to load student data.');
     } finally { setLoading(false); }
@@ -163,14 +175,25 @@ export default function StudentFaceStatus() {
     } finally { setDeleting(false); }
   };
 
-  // Filter + search
-  const filteredStudents = (data?.students || []).filter(stu => {
-    const matchSearch = !search || (
-      stu.name.toLowerCase().includes(search.toLowerCase()) ||
-      stu.enrollment_no.toLowerCase().includes(search.toLowerCase())
-    );
-    return matchSearch;
-  });
+  // Filter + search (memoized for performance)
+  const filteredStudents = useMemo(() => {
+    return (data?.students || []).filter(stu => {
+      const matchSearch = !search || (
+        stu.name.toLowerCase().includes(search.toLowerCase()) ||
+        stu.enrollment_no.toLowerCase().includes(search.toLowerCase())
+      );
+      return matchSearch;
+    });
+  }, [data, search]);
+
+  const totalPages = Math.ceil(filteredStudents.length / ITEMS_PER_PAGE);
+  const paginatedStudents = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredStudents.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredStudents, currentPage]);
+
+  // Reset to page 1 when filters/search change
+  useEffect(() => { setCurrentPage(1); }, [search, statusFilter, semesterFilter]);
 
   const stats = data?.stats ?? { total: 0, registered: 0, pending: 0, registration_pct: 0 };
 
@@ -184,7 +207,7 @@ export default function StudentFaceStatus() {
               <div className="w-9 h-9 bg-[var(--gu-gold)]/10 rounded-lg flex items-center justify-center">
                 <Shield className="w-5 h-5 text-[var(--gu-gold)]" />
               </div>
-              <h1 className="text-2xl font-serif text-white">Biometric Registration Status</h1>
+              <h1 className="text-2xl font-serif text-white">Face Registration Status</h1>
             </div>
             <p className="text-white/50 text-sm">Monitor and manage student face registration for AI attendance.</p>
           </div>
@@ -263,7 +286,7 @@ export default function StudentFaceStatus() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-            {filteredStudents.map((stu) => {
+            {paginatedStudents.map((stu) => {
               const st = getStudentStatus(stu);
               const reminded = remindedIds.has(stu.student_id);
               const statusBg = { registered: 'border-green-500/30', pending: 'border-red-500/30', details_missing: 'border-orange-500/30' };
@@ -297,21 +320,28 @@ export default function StudentFaceStatus() {
                     </div>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-white/10 space-y-2">
-                    <div className="flex justify-between text-xs">
-                      <span className="text-white/40">Details</span>
-                      <span className={stu.is_details_filled ? 'text-green-400 font-semibold' : 'text-orange-400 font-semibold'}>
-                        {stu.is_details_filled ? '✓ Filled' : '⚠ Missing'}
+                  <div className="mt-4 pt-4 border-t border-white/10 space-y-3">
+                    <div className="flex justify-between items-center text-xs">
+                      <span className="text-white/40 uppercase tracking-widest text-[9px] font-bold">Details</span>
+                      <span className={`flex items-center gap-1.5 font-bold ${stu.is_details_filled ? 'text-green-400' : 'text-orange-400'}`}>
+                        {stu.is_details_filled ? <CheckCircle size={12} /> : <AlertCircle size={12} />}
+                        {stu.is_details_filled ? 'Filled' : 'Missing'}
                       </span>
                     </div>
-                    <div className="flex justify-between text-xs">
-                      <span className="text-white/40">Face Status</span>
-                      <span className={`font-semibold ${statusText[st]}`}>{STATUS_LABELS[st]}</span>
+                    <div className="flex justify-between items-center text-xs">
+                      <span className="text-white/40 uppercase tracking-widest text-[9px] font-bold">Face Status</span>
+                      <span className={`flex items-center gap-1.5 font-bold ${statusText[st]}`}>
+                         {st === 'registered' ? <CheckCircle size={12} /> : st === 'pending' ? <XCircle size={12} /> : <AlertCircle size={12} />}
+                         {STATUS_LABELS[st]}
+                      </span>
                     </div>
                     {stu.face_registered_at && (
-                      <div className="flex justify-between text-xs">
-                        <span className="text-white/40">Registered On</span>
-                        <span className="text-white/70">{new Date(stu.face_registered_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: '2-digit' })}</span>
+                      <div className="flex justify-between items-center text-xs">
+                        <span className="text-white/40 uppercase tracking-widest text-[9px] font-bold">Registered On</span>
+                        <span className="text-white/70 flex items-center gap-1.5 font-mono">
+                          <Calendar size={12} className="opacity-40" />
+                          {new Date(stu.face_registered_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: '2-digit' })}
+                        </span>
                       </div>
                     )}
                   </div>
@@ -339,6 +369,56 @@ export default function StudentFaceStatus() {
                 </div>
               );
             })}
+          </div>
+        )}
+
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/5">
+            <span className="text-white/30 text-[10px] font-bold uppercase tracking-widest">
+              Showing {((currentPage - 1) * ITEMS_PER_PAGE) + 1}–{Math.min(currentPage * ITEMS_PER_PAGE, filteredStudents.length)} of {filteredStudents.length}
+            </span>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/40 hover:text-white hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1)
+                .filter(p => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 1)
+                .reduce((acc, p, idx, arr) => {
+                  if (idx > 0 && arr[idx - 1] !== p - 1) acc.push('...');
+                  acc.push(p);
+                  return acc;
+                }, [])
+                .map((item, idx) =>
+                  item === '...' ? (
+                    <span key={`ellipsis-${idx}`} className="text-white/20 px-1 text-xs">…</span>
+                  ) : (
+                    <button
+                      key={item}
+                      onClick={() => setCurrentPage(item)}
+                      className={`w-8 h-8 flex items-center justify-center rounded-lg text-[10px] font-black transition-all ${
+                        currentPage === item
+                          ? 'bg-[var(--gu-gold)] text-black'
+                          : 'bg-white/5 border border-white/10 text-white/40 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      {item}
+                    </button>
+                  )
+                )
+              }
+              <button
+                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/40 hover:text-white hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         )}
       </div>

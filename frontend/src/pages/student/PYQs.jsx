@@ -129,16 +129,53 @@ const PYQs = () => {
           return subQuestions.filter(q => q.length > 20 && !q.match(/^Any [a-zA-Z]+$/i));
       };
       
-      let questions = [];
+      let rawQuestions = [];
       if (Array.isArray(dbQuestions) && dbQuestions.length > 0) {
-        questions = dbQuestions.flatMap(q => processRawText(q.question_text));
+        rawQuestions = dbQuestions.flatMap(q => processRawText(q.question_text));
       } else {
-        questions = fallbackQuestions.general;
+        rawQuestions = fallbackQuestions.general;
       }
-      questions = [...new Set(questions)];
-      if (questions.length < 5) questions = [...questions, ...fallbackQuestions.general];
 
-      const shuffled = shuffleArray(questions);
+      const frequencies = {};
+      rawQuestions.forEach(q => {
+          const norm = q.trim().toLowerCase();
+          frequencies[norm] = (frequencies[norm] || 0) + 1;
+      });
+
+      let uniqueQs = [...new Set(rawQuestions)];
+      if (uniqueQs.length < 5) {
+          const added = fallbackQuestions.general.filter(fq => !uniqueQs.includes(fq));
+          uniqueQs = [...uniqueQs, ...added];
+      }
+
+      const structuredQs = uniqueQs.map(q => {
+          const norm = q.trim().toLowerCase();
+          return {
+              text: q,
+              isImp: (frequencies[norm] || 0) > 1,
+          };
+      });
+
+      // Ensure at least 60% of the questions are marked as IMP for high visibility
+      let impCount = structuredQs.filter(q => q.isImp).length;
+      const targetImpCount = Math.max(
+          Math.ceil(structuredQs.length * 0.60), 
+          impCount
+      );
+
+      if (impCount < targetImpCount) {
+          const needed = targetImpCount - impCount;
+          let added = 0;
+          for (let i = 0; i < structuredQs.length; i++) {
+             if (!structuredQs[i].isImp) {
+                 structuredQs[i].isImp = true;
+                 added++;
+                 if (added >= needed) break;
+             }
+          }
+      }
+
+      const shuffled = shuffleArray(structuredQs);
 
       const paper = {
         course: courseObj?.name || "Academic Track",
@@ -149,14 +186,15 @@ const PYQs = () => {
         total_marks: examType === "external" ? 60 : 30,
         time: examType === "external" ? "3 Hours" : "1.5 Hours",
         section1: shuffled.slice(0, 9).map((q, i) => ({
-          question: q,
+          question: q.text,
+          isImp: q.isImp,
           importance: i < 3 ? "HIGH" : i < 6 ? "MEDIUM" : "NORMAL",
         })),
-        q2a: (shuffled.length > 11 ? shuffled.slice(9, 11) : shuffled.slice(0, 2)).map((q) => ({ question: q })),
-        q2b: (shuffled.length > 13 ? shuffled.slice(11, 13) : shuffled.slice(2, 4)).map((q) => ({ question: q })),
-        q3: (shuffled.length > 15 ? shuffled.slice(13, 15) : shuffled.slice(4, 6)).map((q) => ({ question: q })),
-        q4: (shuffled.length > 18 ? shuffled.slice(15, 18) : shuffled.slice(6, 9)).map((q) => ({ question: q })),
-        q5: (shuffled.length > 20 ? shuffled.slice(18, 20) : shuffled.slice(0, 2)).map((q) => ({ question: q })),
+        q2a: (shuffled.length > 11 ? shuffled.slice(9, 11) : shuffled.slice(0, 2)).map((q) => ({ question: q.text, isImp: q.isImp })),
+        q2b: (shuffled.length > 13 ? shuffled.slice(11, 13) : shuffled.slice(2, 4)).map((q) => ({ question: q.text, isImp: q.isImp })),
+        q3: (shuffled.length > 15 ? shuffled.slice(13, 15) : shuffled.slice(4, 6)).map((q) => ({ question: q.text, isImp: q.isImp })),
+        q4: (shuffled.length > 18 ? shuffled.slice(15, 18) : shuffled.slice(6, 9)).map((q) => ({ question: q.text, isImp: q.isImp })),
+        q5: (shuffled.length > 20 ? shuffled.slice(18, 20) : shuffled.slice(0, 2)).map((q) => ({ question: q.text, isImp: q.isImp })),
       };
 
       setGeneratedPaper(paper);
@@ -245,7 +283,7 @@ const PYQs = () => {
                 ${generatedPaper.section1.map((q, i) => `
                 <tr>
                     <td class="center">${i+1}</td>
-                    <td>${q.question}</td>
+                    <td>${q.question} ${q.isImp ? '<span style="color:red; font-weight:bold; font-size:12px; margin-left:6px;">[IMP]</span>' : ''}</td>
                     <td class="center">06</td>
                     <td class="center">CO${(i % 4) + 1}</td>
                     <td class="center">BTL${(i % 5) + 1}</td>
@@ -266,7 +304,7 @@ const PYQs = () => {
                 ${generatedPaper.q2a.map((q, i) => `
                 <tr>
                     <td class="center">${i+1}</td>
-                    <td>${q.question}</td>
+                    <td>${q.question} ${q.isImp ? '<span style="color:red; font-weight:bold; font-size:12px; margin-left:6px;">[IMP]</span>' : ''}</td>
                     <td class="center">06</td>
                     <td class="center">CO${(i % 4) + 1}</td>
                     <td class="center">BTL${(i % 5) + 1}</td>
@@ -283,7 +321,7 @@ const PYQs = () => {
                 ${generatedPaper.q3.map((q, i) => `
                 <tr>
                     <td class="center">${i+1}</td>
-                    <td>${q.question}</td>
+                    <td>${q.question} ${q.isImp ? '<span style="color:red; font-weight:bold; font-size:12px; margin-left:6px;">[IMP]</span>' : ''}</td>
                     <td class="center">06</td>
                     <td class="center">CO${(i % 4) + 1}</td>
                     <td class="center">BTL${(i % 5) + 1}</td>
@@ -300,7 +338,7 @@ const PYQs = () => {
                 ${generatedPaper.q4.map((q, i) => `
                 <tr>
                     <td class="center">${i+1}</td>
-                    <td>${q.question}</td>
+                    <td>${q.question} ${q.isImp ? '<span style="color:red; font-weight:bold; font-size:12px; margin-left:6px;">[IMP]</span>' : ''}</td>
                     <td class="center">06</td>
                     <td class="center">CO${(i % 4) + 1}</td>
                     <td class="center">BTL${(i % 5) + 1}</td>
@@ -329,25 +367,26 @@ const PYQs = () => {
         </div>
 
         {!generatedPaper ? (
-          <div className="bg-[#2D0A0A] p-8 rounded border border-white/10">
+          <div className="relative bg-[var(--gu-red-card)] p-8 rounded-sm border border-[var(--gu-border)] xl:max-w-3xl mx-auto box-border">
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                <div className="space-y-2">
-                  <label className="text-[10px] uppercase text-white/50">Select Course</label>
-                  <select value={course} onChange={handleCourseChange} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm outline-none">
-                    <option value="">Select...</option>
+                  <label className="text-xs uppercase tracking-wider text-white/70 font-medium pb-1.5 block">Select Course</label>
+                  <select value={course} onChange={handleCourseChange} className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] p-3 rounded-sm text-sm outline-none focus:border-[var(--gu-gold)] transition-colors text-white">
+                    <option value="" className="bg-[#3D0F0F]">Select...</option>
                     {courses.map((c) => (
-                      <option key={`stu-course-${c.course_id}`} value={c.course_id}>
+                      <option key={`stu-course-${c.course_id}`} value={c.course_id} className="bg-[#3D0F0F]">
                         {c.name}
                       </option>
                     ))}
                   </select>
                </div>
                <div className="space-y-2">
-                  <label className="text-[10px] uppercase text-white/50">Semester</label>
-                  <select value={semester} onChange={handleSemesterChange} disabled={!course} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm outline-none disabled:opacity-30">
-                    <option value="">Select...</option>
+                  <label className="text-xs uppercase tracking-wider text-white/70 font-medium pb-1.5 block">Semester</label>
+                  <select value={semester} onChange={handleSemesterChange} disabled={!course} className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] p-3 rounded-sm text-sm outline-none disabled:opacity-30 focus:border-[var(--gu-gold)] transition-colors text-white">
+                    <option value="" className="bg-[#3D0F0F]">Select...</option>
                     {Array.from({ length: Math.max(0, (courses.find(c => c.course_id === course)?.total_semesters || 8) - 1) }, (_, i) => i + 1).map((s) => (
-                      <option key={`stu-sem-${s}`} value={s}>
+                      <option key={`stu-sem-${s}`} value={s} className="bg-[#3D0F0F]">
                         Semester {s}
                       </option>
                     ))}
@@ -357,16 +396,16 @@ const PYQs = () => {
 
             <div className="mb-8">
                <div className="space-y-2">
-                  <label className="text-[10px] uppercase text-white/50">Subject Selection</label>
+                  <label className="text-xs uppercase tracking-wider text-white/70 font-medium pb-1.5 block">Subject Selection</label>
                   <select 
                     value={subjectId} 
                     onChange={(e) => setSubjectId(e.target.value)} 
                     disabled={!semester} 
-                    className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm outline-none disabled:opacity-30"
+                    className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] p-3 rounded-sm text-sm outline-none disabled:opacity-30 focus:border-[var(--gu-gold)] transition-colors text-white"
                   >
-                    <option value="">Select Subject...</option>
+                    <option value="" className="bg-[#3D0F0F]">Select Subject...</option>
                     {subjects.map((s) => (
-                      <option key={`stu-sub-${s.subject_id}`} value={s.subject_id}>
+                      <option key={`stu-sub-${s.subject_id}`} value={s.subject_id} className="bg-[#3D0F0F]">
                         {s.code} - {s.name}
                       </option>
                     ))}
@@ -376,21 +415,31 @@ const PYQs = () => {
 
             <div className="mb-8">
                 <div className="space-y-2">
-                  <label className="text-[10px] uppercase text-white/50">Exam Mode</label>
-                  <select value={examType} onChange={(e) => setExamType(e.target.value)} className="w-full bg-black/40 border border-white/10 p-4 rounded text-sm outline-none">
-                    <option value="external">External (60 Marks)</option>
-                    <option value="internal">Internal (30 Marks)</option>
+                  <label className="text-xs uppercase tracking-wider text-white/70 font-medium pb-1.5 block">Exam Mode</label>
+                  <select value={examType} onChange={(e) => setExamType(e.target.value)} className="w-full bg-[#3D0F0F] border border-[var(--gu-border)] p-3 rounded-sm text-sm outline-none focus:border-[var(--gu-gold)] transition-colors text-white">
+                    <option value="external" className="bg-[#3D0F0F]">External (60 Marks)</option>
+                    <option value="internal" className="bg-[#3D0F0F]">Internal (30 Marks)</option>
                   </select>
                 </div>
             </div>
 
-            <button onClick={handleGenerate} disabled={!subjectId || loading} className="w-full bg-[var(--gu-gold)] text-black py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-3">
+            <button onClick={handleGenerate} disabled={!subjectId || loading} className="w-full bg-[var(--gu-gold)] text-black font-bold uppercase tracking-widest py-3 rounded-sm flex items-center justify-center gap-3 hover:bg-yellow-500 transition-colors disabled:opacity-50">
               {loading ? <Loader2 className="animate-spin" /> : <FileText size={18} />}
               Generate Paper
             </button>
           </div>
         ) : (
-          <div className="bg-[#fdfdfd] text-black p-12 rounded shadow-2xl mx-auto max-w-[210mm] min-h-[297mm] font-serif mb-8 border border-gray-300">
+          <div className="flex flex-col items-center">
+             <div className="w-full max-w-[210mm] flex justify-between items-center mb-6 bg-[var(--gu-red-card)] p-4 rounded-sm border border-[var(--gu-border)]">
+               <button onClick={resetForm} className="text-white/70 hover:text-white text-sm font-medium transition-colors flex items-center gap-2 uppercase tracking-wide">
+                  <AlertCircle size={16} /> Discard Paper
+               </button>
+               <button onClick={handleDownloadPDF} className="bg-[var(--gu-gold)] text-[var(--gu-red-card)] px-4 py-2 rounded-sm font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:bg-yellow-500 transition-colors">
+                  <Download size={16} /> Download PDF
+               </button>
+            </div>
+            
+            <div className="bg-[#fdfdfd] text-black p-12 rounded shadow-2xl w-full max-w-[210mm] min-h-[297mm] font-serif mb-8 border border-gray-300 relative before:content-[''] before:absolute before:inset-0 before:pointer-events-none before:border-[1px] before:border-gray-200 before:m-2">
              <div className="text-right text-sm mb-4">
                  Enrollment No. <span className="inline-block w-48 border-b border-black"></span>
              </div>
@@ -435,7 +484,14 @@ const PYQs = () => {
                         {generatedPaper.section1.map((q, i) => (
                           <tr key={`stu-q1-${i}`}>
                               <td className="border border-black p-2 text-center">{i+1}</td>
-                              <td className="border border-black p-2 whitespace-pre-line text-justify">{q.question}</td>
+                                   <td className="border border-black p-2 whitespace-pre-line text-justify">
+                                     {q.question}
+                                     {q.isImp && (
+                                        <span className="ml-2 inline-flex items-center gap-1 bg-red-100 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-red-200">
+                                           <Sparkles size={10} /> IMP
+                                        </span>
+                                     )}
+                                   </td>
                               <td className="border border-black p-2 text-center">06</td>
                               <td className="border border-black p-2 text-center">CO{(i % 4) + 1}</td>
                               <td className="border border-black p-2 text-center">BTL{(i % 5) + 1}</td>
@@ -457,7 +513,14 @@ const PYQs = () => {
                              {generatedPaper.q2a.map((q, i) => (
                                <tr key={`stu-q2a-${i}`}>
                                    <td className="border border-black p-2 text-center">{i+1}</td>
-                                   <td className="border border-black p-2 whitespace-pre-line text-justify">{q.question}</td>
+                                        <td className="border border-black p-2 whitespace-pre-line text-justify">
+                                     {q.question}
+                                     {q.isImp && (
+                                        <span className="ml-2 inline-flex items-center gap-1 bg-red-100 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-red-200">
+                                           <Sparkles size={10} /> IMP
+                                        </span>
+                                     )}
+                                   </td>
                                    <td className="border border-black p-2 text-center">06</td>
                                    <td className="border border-black p-2 text-center">CO{(i % 4) + 1}</td>
                                    <td className="border border-black p-2 text-center">BTL{(i % 5) + 1}</td>
@@ -474,7 +537,14 @@ const PYQs = () => {
                              {generatedPaper.q3.map((q, i) => (
                                <tr key={`stu-q3-${i}`}>
                                    <td className="border border-black p-2 text-center">{i+1}</td>
-                                   <td className="border border-black p-2 whitespace-pre-line text-justify">{q.question}</td>
+                                        <td className="border border-black p-2 whitespace-pre-line text-justify">
+                                     {q.question}
+                                     {q.isImp && (
+                                        <span className="ml-2 inline-flex items-center gap-1 bg-red-100 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-red-200">
+                                           <Sparkles size={10} /> IMP
+                                        </span>
+                                     )}
+                                   </td>
                                    <td className="border border-black p-2 text-center">06</td>
                                    <td className="border border-black p-2 text-center">CO{(i % 4) + 1}</td>
                                    <td className="border border-black p-2 text-center">BTL{(i % 5) + 1}</td>
@@ -491,7 +561,14 @@ const PYQs = () => {
                              {generatedPaper.q4.map((q, i) => (
                                <tr key={`stu-q4-${i}`}>
                                    <td className="border border-black p-2 text-center">{i+1}</td>
-                                   <td className="border border-black p-2 whitespace-pre-line text-justify">{q.question}</td>
+                                        <td className="border border-black p-2 whitespace-pre-line text-justify">
+                                     {q.question}
+                                     {q.isImp && (
+                                        <span className="ml-2 inline-flex items-center gap-1 bg-red-100 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-red-200">
+                                           <Sparkles size={10} /> IMP
+                                        </span>
+                                     )}
+                                   </td>
                                    <td className="border border-black p-2 text-center">06</td>
                                    <td className="border border-black p-2 text-center">CO{(i % 4) + 1}</td>
                                    <td className="border border-black p-2 text-center">BTL{(i % 5) + 1}</td>
@@ -504,6 +581,7 @@ const PYQs = () => {
              </div>
              
              <p className="text-center mt-12 font-bold opacity-80 text-lg">** End of the Paper **</p>
+          </div>
           </div>
         )}
       </div>

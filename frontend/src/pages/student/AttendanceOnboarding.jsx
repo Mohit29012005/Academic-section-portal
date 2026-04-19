@@ -234,7 +234,7 @@ export default function AttendanceOnboarding() {
 
       {/* ── Step 1: Personal Details ── */}
       {step === 'details' && (
-        <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm max-w-lg">
+        <div className="bg-white border border-gray-200 rounded-sm p-8 shadow-sm max-w-lg">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-[rgba(185,28,28,0.08)] rounded-full flex items-center justify-center">
               <User className="w-5 h-5 text-[var(--gu-red)]" />
@@ -259,7 +259,7 @@ export default function AttendanceOnboarding() {
                 <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input type="tel" value={phone} onChange={e => setPhone(e.target.value)}
                   placeholder="+91 98765 43210"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-[var(--gu-red)] text-sm"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-sm focus:outline-none focus:border-[var(--gu-red)] text-sm"
                   required />
               </div>
             </div>
@@ -271,7 +271,7 @@ export default function AttendanceOnboarding() {
                 <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input type="tel" value={parentPhone} onChange={e => setParentPhone(e.target.value)}
                   placeholder="+91 98765 43210"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-[var(--gu-red)] text-sm"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-sm focus:outline-none focus:border-[var(--gu-red)] text-sm"
                   required />
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function AttendanceOnboarding() {
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input type="email" value={email} onChange={e => setEmail(e.target.value)}
                   placeholder="your.email@example.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-[var(--gu-red)] text-sm"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-sm focus:outline-none focus:border-[var(--gu-red)] text-sm"
                   required />
               </div>
             </div>
@@ -296,7 +296,7 @@ export default function AttendanceOnboarding() {
             )}
 
             <button id="btn-save-details" type="submit" disabled={detailsSubmitting}
-              className="w-full flex items-center justify-center gap-2 bg-[var(--gu-red)] text-white font-bold py-3 rounded-xl hover:bg-[var(--gu-red-hover)] transition-colors disabled:opacity-50">
+              className="w-full flex items-center justify-center gap-2 bg-[var(--gu-red)] text-white font-bold py-3 rounded-sm hover:bg-[var(--gu-red-hover)] transition-colors disabled:opacity-50">
               {detailsSubmitting ? <><Loader2 className="w-4 h-4 animate-spin" /> Saving...</> : <>Save &amp; Continue <ChevronRight className="w-4 h-4" /></>}
             </button>
           </form>
@@ -308,7 +308,7 @@ export default function AttendanceOnboarding() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Left: Tips */}
           <div className="space-y-4">
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div className="bg-white border border-gray-200 rounded-sm p-6 shadow-sm">
               <h3 className="font-serif text-lg font-semibold text-[var(--gu-red-dark)] mb-4">Tips for Best Results</h3>
               <div className="space-y-3">
                 {tips.map(({ icon: Icon, text, color }, i) => (
@@ -323,7 +323,7 @@ export default function AttendanceOnboarding() {
               </div>
             </div>
             {/* Live preview mini */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm text-center">
+            <div className="bg-white border border-gray-200 rounded-sm p-4 shadow-sm text-center">
               <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Live Preview</p>
               <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--gu-red)]/30 bg-black mx-auto">
                 <video ref={videoRef} autoPlay muted playsInline className="w-full h-full object-cover scale-x-[-1]" />
@@ -337,7 +337,7 @@ export default function AttendanceOnboarding() {
 
           {/* Center: Camera + Capture */}
           <div className="space-y-4">
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div className="bg-white border border-gray-200 rounded-sm p-6 shadow-sm">
               <h3 className="font-serif text-lg font-semibold text-[var(--gu-red-dark)] mb-4">
                 Step 2 of 2 — Face Registration
               </h3>
@@ -347,7 +347,7 @@ export default function AttendanceOnboarding() {
                   style={{ width: '100%' }} />
               </div>
 
-              <div className="relative aspect-[4/3] bg-black rounded-xl overflow-hidden border border-gray-200">
+              <div className="relative aspect-[4/3] bg-black rounded-sm overflow-hidden border border-gray-200">
                 <video ref={videoRef} autoPlay muted playsInline className="w-full h-full object-cover scale-x-[-1]" />
                 {cameraReady && (
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -391,14 +391,14 @@ export default function AttendanceOnboarding() {
               <div className="mt-4">
                 {captures.length < TOTAL_CAPTURES ? (
                   <button id="btn-start-capture" onClick={startCapture} disabled={!cameraReady || capturing}
-                    className="w-full flex items-center justify-center gap-2 bg-[var(--gu-red)] text-white font-bold py-3 rounded-xl hover:bg-[var(--gu-red-hover)] disabled:opacity-50 transition-colors">
+                    className="w-full flex items-center justify-center gap-2 bg-[var(--gu-red)] text-white font-bold py-3 rounded-sm hover:bg-[var(--gu-red-hover)] disabled:opacity-50 transition-colors">
                     {capturing
                       ? <><Loader2 className="w-4 h-4 animate-spin" /> Capturing {captureIndex}/{TOTAL_CAPTURES}...</>
                       : <><Camera className="w-4 h-4" /> Start Capture</>}
                   </button>
                 ) : (
                   <button id="btn-submit-face" onClick={handleFaceSubmit} disabled={faceSubmitting}
-                    className="w-full flex items-center justify-center gap-2 bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-500 disabled:opacity-50 transition-colors">
+                    className="w-full flex items-center justify-center gap-2 bg-green-600 text-white font-bold py-3 rounded-sm hover:bg-green-500 disabled:opacity-50 transition-colors">
                     {faceSubmitting
                       ? <><Loader2 className="w-4 h-4 animate-spin" /> Registering...</>
                       : <><Upload className="w-4 h-4" /> Register Face</>}
@@ -409,13 +409,13 @@ export default function AttendanceOnboarding() {
           </div>
 
           {/* Right: Photo thumbnails */}
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-sm p-6 shadow-sm">
             <h3 className="font-serif text-lg font-semibold text-[var(--gu-red-dark)] mb-4">Capture Quality</h3>
             <div className="space-y-3">
               {Array.from({ length: TOTAL_CAPTURES }).map((_, i) => {
                 const cap = captures[i];
                 return (
-                  <div key={i} className={`flex items-center gap-3 p-2 rounded-xl border ${
+                  <div key={i} className={`flex items-center gap-3 p-2 rounded-sm border ${
                     cap ? 'border-green-200 bg-green-50' : 'border-dashed border-gray-200 bg-gray-50'
                   }`}>
                     <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-200 shrink-0">
@@ -450,13 +450,13 @@ export default function AttendanceOnboarding() {
       {/* ── Complete State ── */}
       {step === 'complete' && (
         <div className="max-w-lg mx-auto">
-          <div className="bg-white border border-gray-200 rounded-2xl p-10 shadow-sm text-center">
+          <div className="bg-white border border-gray-200 rounded-sm p-10 shadow-sm text-center">
             <div className="w-24 h-24 bg-green-100 border-4 border-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
               <Shield className="w-12 h-12 text-green-500" />
             </div>
             <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-2">Face Verified ✓</h2>
             <p className="text-gray-500 mb-6">Your face is registered for AI-powered attendance. You are all set!</p>
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-left space-y-2 mb-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-sm p-4 text-left space-y-2 mb-6">
               <div className="flex justify-between text-sm">
                 <span className="text-gray-500">Status</span>
                 <span className="text-green-600 font-semibold">Active ✓</span>
@@ -475,7 +475,7 @@ export default function AttendanceOnboarding() {
               </div>
             </div>
             <button id="btn-reregister" onClick={async () => { setStep('face'); setCaptures([]); await startCamera(); }}
-              className="w-full border border-[var(--gu-red)] text-[var(--gu-red)] font-semibold py-2.5 rounded-xl hover:bg-[rgba(185,28,28,0.05)] transition-colors text-sm">
+              className="w-full border border-[var(--gu-red)] text-[var(--gu-red)] font-semibold py-2.5 rounded-sm hover:bg-[rgba(185,28,28,0.05)] transition-colors text-sm">
               Re-register Face
             </button>
           </div>
