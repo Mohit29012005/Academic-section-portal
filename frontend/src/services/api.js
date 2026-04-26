@@ -1,8 +1,37 @@
 import axios from 'axios';
 
 // Get API URLs from environment variables with fallbacks
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
-const EXAM_PAPER_BASE = import.meta.env.VITE_EXAM_PAPER_BASE || 'http://localhost:8000/exam-paper';
+// Priority: VITE_API_URL env var > localhost:8000 > tunnel URL
+const getAPIBaseURL = () => {
+  if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
+  // Check if running locally
+  if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+    return 'http://localhost:8000/api';
+  }
+  // Fall back to tunnel URL
+  return 'https://tdw0jf3f-8000.inc1.devtunnels.ms/api';
+};
+
+const getExamPaperBase = () => {
+  if (import.meta.env.VITE_EXAM_PAPER_BASE) return import.meta.env.VITE_EXAM_PAPER_BASE;
+  // Check if running locally
+  if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+    return 'http://localhost:8000/exam-paper';
+  }
+  // Fall back to tunnel URL
+  return 'https://tdw0jf3f-8000.inc1.devtunnels.ms/exam-paper';
+};
+
+const API_BASE_URL = getAPIBaseURL();
+const EXAM_PAPER_BASE = getExamPaperBase();
+
+// Debug: Log which API URL is being used
+console.log('🔗 API Config:', {
+  hostname: typeof window !== 'undefined' ? window.location.hostname : 'N/A',
+  API_BASE_URL,
+  EXAM_PAPER_BASE,
+  env: import.meta.env.VITE_API_URL ? 'from env' : 'auto-detected'
+});
 
 const api = axios.create({
   baseURL: API_BASE_URL,

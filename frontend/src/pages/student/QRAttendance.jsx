@@ -45,7 +45,9 @@ export default function QRAttendance() {
   const verifySession = async () => {
     setPhase('verifying');
     try {
+      console.log('Verifying session with token:', qr_token);
       const res = await attendanceAI.verifySession(qr_token);
+      console.log('Verify session response:', res.data);
       if (res.data.valid) {
         setSessionInfo(res.data);
         setPhase('login');
@@ -53,8 +55,10 @@ export default function QRAttendance() {
         setErrorMsg(res.data.message || 'This QR code has expired or is invalid.');
         setPhase('error');
       }
-    } catch {
-      setErrorMsg('Unable to verify this session. Please check your connection.');
+    } catch (err) {
+      console.error('Verify session error:', err);
+      const errMsg = err?.response?.data?.message || err?.message || 'Unable to verify this session. Please check your connection.';
+      setErrorMsg(errMsg);
       setPhase('error');
     }
   };

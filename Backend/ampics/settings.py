@@ -164,6 +164,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:8001",  # Evolvex-AI FastAPI backend
     "http://127.0.0.1:8001",
+    "https://tdw0jf3f-5173.inc1.devtunnels.ms"
 ]
 CORS_ALLOW_CREDENTIALS = True
 

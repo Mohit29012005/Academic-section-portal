@@ -742,23 +742,24 @@ def create_lecture(request):
         qr_expires_at=qr_expires_at,
     )
 
-    # Generate QR code with the same frontend host/port currently in use.
-    frontend_base_url = _frontend_base_url_from_request(request)
+    # Generate QR code using SITE_DOMAIN for external sharing (not request origin)
     domain = getattr(settings, "SITE_DOMAIN", "localhost:5173")
     fallback_qr_image_url = ""
     try:
+        # For QR codes meant to be shared, use SITE_DOMAIN directly
+        # Don't use request origin - that's only for local dev
         rel_path, attendance_url = generate_qr_code(
             session.id,
             str(session.qr_token),
             domain=domain,
-            frontend_base_url=frontend_base_url,
+            frontend_base_url=None,  # Always use domain, not request origin
         )
         session.qr_image_path = rel_path
         session.save(update_fields=["qr_image_path"])
     except Exception as e:
         logger.error(f"QR generation failed: {e}")
         attendance_url = (
-            f"{frontend_base_url}/student/mark-attendance/{session.qr_token}/"
+            f"http://{domain}/student/mark-attendance/{session.qr_token}/"
         )
         rel_path = ""
         fallback_qr_image_url = f"https://api.qrserver.com/v1/create-qr-code/?size=320x320&data={quote_plus(attendance_url)}"
@@ -1934,12 +1935,13 @@ def refresh_qr(request, session_id):
     session.qr_expires_at = now() + timedelta(seconds=session.qr_refresh_secs)
     session.save(update_fields=["qr_token", "qr_expires_at"])
 
-    frontend_base_url = _frontend_base_url_from_request(request)
+    domain = getattr(settings, "SITE_DOMAIN", "localhost:5173")
     try:
         rel_path, attendance_url = generate_qr_code(
             session.id,
             str(session.qr_token),
-            frontend_base_url=frontend_base_url,
+            domain=domain,
+            frontend_base_url=None,  # Always use SITE_DOMAIN for shareable links
         )
         session.qr_image_path = rel_path
         session.save(update_fields=["qr_image_path"])
@@ -1947,7 +1949,7 @@ def refresh_qr(request, session_id):
     except Exception as exc:
         logger.error(f"refresh_qr: QR generation failed: {exc}")
         attendance_url = (
-            f"{frontend_base_url}/student/mark-attendance/{session.qr_token}/"
+            f"http://{domain}/student/mark-attendance/{session.qr_token}/"
         )
         qr_image_url = ""
 
