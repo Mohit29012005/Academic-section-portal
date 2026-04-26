@@ -9,6 +9,7 @@ urlpatterns = [
     path('api/student/', include('users.urls_student')),
     path('api/faculty/', include('users.urls_faculty')),
     path('api/admin/', include('users.urls_admin')),
+    path('api/super-admin/', include('users.urls_super_admin')),
     path('api/academics/', include('academics.urls')),
     path('exam-paper/', include('AI_Powered_Exam_Paper_Generator.urls')),
     path('api/career/', include('ai_career.urls')),

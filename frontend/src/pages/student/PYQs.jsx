@@ -95,7 +95,7 @@ const PYQs = () => {
       // Build structured list — DB duplicates = IMP, rest based on position
       const structured = pool.map((q, i) => ({
         text: q,
-        isImp: (seen[q.toLowerCase()] || 0) > 1 || i < Math.ceil(pool.length * 0.4),
+        isImp: (seen[q.toLowerCase()] || 0) > 1 || i < Math.ceil(pool.length * 0.6),
       }));
 
       // Real GU paper structure:
@@ -110,10 +110,10 @@ const PYQs = () => {
         exam_type: isExt ? "External" : "Internal",
         total_marks: isExt ? 60 : 30,
         time: isExt ? "3 Hours" : "1.5 Hours",
-        section1: structured.slice(0, isExt ? 7 : 5).map(q => ({ question: q.text })),
-        q2a:      structured.slice(isExt ? 7 : 5, isExt ? 10 : 8).map(q => ({ question: q.text })),
-        q3:       structured.slice(isExt ? 10 : 8, isExt ? 13 : 11).map(q => ({ question: q.text })),
-        q4:       structured.slice(isExt ? 13 : 11, isExt ? 15 : 13).map(q => ({ question: q.text })),
+        section1: structured.slice(0, isExt ? 7 : 5).map(q => ({ question: q.text, isImp: q.isImp })),
+        q2a:      structured.slice(isExt ? 7 : 5, isExt ? 10 : 8).map(q => ({ question: q.text, isImp: q.isImp })),
+        q3:       structured.slice(isExt ? 10 : 8, isExt ? 13 : 11).map(q => ({ question: q.text, isImp: q.isImp })),
+        q4:       structured.slice(isExt ? 13 : 11, isExt ? 15 : 13).map(q => ({ question: q.text, isImp: q.isImp })),
       });
     } catch (err) {
       setError(err.message || "Failed to generate paper.");
@@ -198,7 +198,7 @@ const PYQs = () => {
                 ${generatedPaper.section1.map((q, i) => `
                 <tr>
                     <td class="center">${i+1}</td>
-                    <td>${q.question}</td>
+                    <td>${q.question} ${q.isImp ? `<span style="margin-left:8px; font-size:11px; font-weight:bold; border:1px solid #b91c1c; color:#b91c1c; padding:2px 4px; border-radius:3px; background-color:#fee2e2;">IMP</span>` : ''}</td>
                     <td class="center">06</td>
                     <td class="center">CO${(i % 4) + 1}</td>
                     <td class="center">BTL${(i % 5) + 1}</td>
@@ -219,7 +219,7 @@ const PYQs = () => {
                 ${generatedPaper.q2a.map((q, i) => `
                 <tr>
                     <td class="center">${i+1}</td>
-                    <td>${q.question}</td>
+                    <td>${q.question} ${q.isImp ? `<span style="margin-left:8px; font-size:11px; font-weight:bold; border:1px solid #b91c1c; color:#b91c1c; padding:2px 4px; border-radius:3px; background-color:#fee2e2;">IMP</span>` : ''}</td>
                     <td class="center">06</td>
                     <td class="center">CO${(i % 4) + 1}</td>
                     <td class="center">BTL${(i % 5) + 1}</td>
@@ -236,7 +236,7 @@ const PYQs = () => {
                 ${generatedPaper.q3.map((q, i) => `
                 <tr>
                     <td class="center">${i+1}</td>
-                    <td>${q.question}</td>
+                    <td>${q.question} ${q.isImp ? `<span style="margin-left:8px; font-size:11px; font-weight:bold; border:1px solid #b91c1c; color:#b91c1c; padding:2px 4px; border-radius:3px; background-color:#fee2e2;">IMP</span>` : ''}</td>
                     <td class="center">06</td>
                     <td class="center">CO${(i % 4) + 1}</td>
                     <td class="center">BTL${(i % 5) + 1}</td>
@@ -253,7 +253,7 @@ const PYQs = () => {
                 ${generatedPaper.q4.map((q, i) => `
                 <tr>
                     <td class="center">${i+1}</td>
-                    <td>${q.question}</td>
+                    <td>${q.question} ${q.isImp ? `<span style="margin-left:8px; font-size:11px; font-weight:bold; border:1px solid #b91c1c; color:#b91c1c; padding:2px 4px; border-radius:3px; background-color:#fee2e2;">IMP</span>` : ''}</td>
                     <td class="center">06</td>
                     <td class="center">CO${(i % 4) + 1}</td>
                     <td class="center">BTL${(i % 5) + 1}</td>
@@ -407,7 +407,10 @@ const PYQs = () => {
                       {generatedPaper.section1.map((q, i) => (
                         <tr key={`q1-${i}`}>
                           <td className="border border-black p-2 text-center">{i+1}</td>
-                          <td className="border border-black p-2 whitespace-pre-line text-justify">{q.question}</td>
+                          <td className="border border-black p-2 whitespace-pre-line text-justify">
+                            {q.question}
+                            {q.isImp && <span className="ml-2 px-1.5 py-0.5 bg-red-100 text-red-800 text-[10px] font-bold border border-red-300 rounded">IMP</span>}
+                          </td>
                           <td className="border border-black p-2 text-center">06</td>
                           <td className="border border-black p-2 text-center">CO{(i % 4) + 1}</td>
                           <td className="border border-black p-2 text-center">BTL{(i % 5) + 1}</td>
@@ -429,7 +432,10 @@ const PYQs = () => {
                           {generatedPaper.q2a.map((q, i) => (
                             <tr key={`q2a-${i}`}>
                               <td className="border border-black p-2 text-center">{i+1}</td>
-                              <td className="border border-black p-2 whitespace-pre-line text-justify">{q.question}</td>
+                              <td className="border border-black p-2 whitespace-pre-line text-justify">
+                                {q.question}
+                                {q.isImp && <span className="ml-2 px-1.5 py-0.5 bg-red-100 text-red-800 text-[10px] font-bold border border-red-300 rounded">IMP</span>}
+                              </td>
                               <td className="border border-black p-2 text-center">06</td>
                               <td className="border border-black p-2 text-center">CO{(i % 4) + 1}</td>
                               <td className="border border-black p-2 text-center">BTL{(i % 5) + 1}</td>
@@ -446,7 +452,10 @@ const PYQs = () => {
                           {generatedPaper.q3.map((q, i) => (
                             <tr key={`q3-${i}`}>
                               <td className="border border-black p-2 text-center">{i+1}</td>
-                              <td className="border border-black p-2 whitespace-pre-line text-justify">{q.question}</td>
+                              <td className="border border-black p-2 whitespace-pre-line text-justify">
+                                {q.question}
+                                {q.isImp && <span className="ml-2 px-1.5 py-0.5 bg-red-100 text-red-800 text-[10px] font-bold border border-red-300 rounded">IMP</span>}
+                              </td>
                               <td className="border border-black p-2 text-center">06</td>
                               <td className="border border-black p-2 text-center">CO{(i % 4) + 1}</td>
                               <td className="border border-black p-2 text-center">BTL{(i % 5) + 1}</td>
@@ -463,7 +472,10 @@ const PYQs = () => {
                           {generatedPaper.q4.map((q, i) => (
                             <tr key={`q4-${i}`}>
                               <td className="border border-black p-2 text-center">{i+1}</td>
-                              <td className="border border-black p-2 whitespace-pre-line text-justify">{q.question}</td>
+                              <td className="border border-black p-2 whitespace-pre-line text-justify">
+                                {q.question}
+                                {q.isImp && <span className="ml-2 px-1.5 py-0.5 bg-red-100 text-red-800 text-[10px] font-bold border border-red-300 rounded">IMP</span>}
+                              </td>
                               <td className="border border-black p-2 text-center">06</td>
                               <td className="border border-black p-2 text-center">CO{(i % 4) + 1}</td>
                               <td className="border border-black p-2 text-center">BTL{(i % 5) + 1}</td>

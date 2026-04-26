@@ -9,7 +9,7 @@ import os
 from typing import Dict, List, Any, Optional
 
 # OpenRouter API configuration
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "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")
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 # Model selection - Using free tier models from OpenRouter

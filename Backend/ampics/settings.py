@@ -55,7 +55,9 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 SOCIALACCOUNT_LOGIN_ON_GET = True
 
-# Allauth settings
+# Allauth settings  
+# Note: Some settings are deprecated in Django 5.2+ but still functional
+# Will upgrade to new format in future version
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
@@ -212,6 +214,10 @@ CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TIMEZONE = TIME_ZONE
+
+# Eager mode for local development (Runs tasks synchronously without Redis)
+CELERY_TASK_ALWAYS_EAGER = True
+CELERY_TASK_EAGER_PROPAGATES = True
 
 # ── AI / LLM Keys ────────────────────────────────────────────────────────────
 OPENROUTER_API_KEY = config("OPENROUTER_API_KEY", default="")

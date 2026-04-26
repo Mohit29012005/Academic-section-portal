@@ -4,13 +4,173 @@ import {
   Briefcase, Brain, Target, BookOpen, Award, FileText,
   TrendingUp, CheckCircle, XCircle, Download, Search,
   Zap, Lightbulb, ChevronRight, Sparkles, GraduationCap,
-  Upload, File, Briefcase as BriefcaseIcon, Activity, Star, Rocket, ExternalLink
+  Upload, File, Briefcase as BriefcaseIcon, Activity, Star, Rocket, ExternalLink,
+  User, Mail, Phone, Linkedin, Eye
 } from "lucide-react";
 
 import { studentAPI } from "../../services/api";
 import { careerData } from "./career_data";
 
 const Career_Guidance = () => {
+  const getTemplatePreviewHtml = (template) => {
+    const hasData = builderData.name || builderData.email || builderData.skills || builderData.objective;
+    
+    const resumeData = hasData ? builderData : {
+      name: "John Doe",
+      email: "john.doe@example.com",
+      phone: "+1 234 567 890",
+      linkedin: "linkedin.com/in/johndoe",
+      objective: "Passionate software engineer with 5+ years of experience in building scalable web applications using React, Node.js, and cloud technologies.",
+      skills: "React, Node.js, Python, AWS, Docker",
+      education: "B.Tech in CSE, Ganpat University (2017 - 2021)",
+      experience: "Senior Developer at TechCorp (2021 - Present)\n- Led a team of 5 developers to migrate legacy systems.\n- Improved application performance by 40%.",
+      projects: "AI Attendance System - Biometric student tracker built with React and Python."
+    };
+
+    const skillList = resumeData.skills ? resumeData.skills.split(',').map(s => s.trim()).filter(Boolean) : [];
+
+    const styles = template === 'infographic' 
+      ? `
+          body { font-family: 'Segoe UI', Tahoma, sans-serif; color: #333; padding: 20px; margin: 0; background: white; }
+          .resume-container { display: flex; gap: 20px; }
+          .left-col { flex: 6.5; }
+          .right-col { flex: 3.5; background: #f8fafc; padding: 15px; border-radius: 8px; }
+          .header-section { margin-bottom: 20px; border-bottom: 2px solid #3b82f6; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;}
+          h1 { font-size: 24px; color: #1e293b; margin: 0; font-weight: 800; text-transform: uppercase; }
+          .title { font-size: 12px; color: #3b82f6; font-weight: 600; margin-top: 5px; }
+          .contact-info { font-size: 10px; color: #64748b; margin-top: 5px; line-height: 1.4; }
+          h2 { font-size: 13px; color: #1e293b; text-transform: uppercase; border-bottom: 2px solid #1e293b; padding-bottom: 5px; margin-top: 15px; font-weight: 700; }
+          .content { font-size: 11px; white-space: pre-wrap; margin-bottom: 12px; line-height: 1.4; color: #334155; }
+          .skill-tag { background: #3b82f6; color: white; padding: 2px 6px; border-radius: 4px; font-size: 9px; display: inline-block; margin: 2px; }
+        `
+      : template === 'elegant'
+      ? `
+          body { font-family: 'Georgia', serif; color: #111; padding: 25px; margin: 0; background: white; line-height: 1.4; }
+          .header { text-align: center; margin-bottom: 20px; }
+          h1 { font-size: 24px; font-weight: normal; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 5px 0; }
+          .contact { font-size: 10px; font-style: italic; color: #555; margin-bottom: 10px; letter-spacing: 1px; }
+          h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; text-align: center; border-bottom: 1px solid #222; border-top: 1px solid #222; padding: 3px 0; margin-top: 15px; margin-bottom: 8px; font-weight: bold; }
+          .content { font-size: 11px; white-space: pre-wrap; margin-bottom: 12px; text-align: justify; color: #222; }
+        `
+      : `
+          body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #334155; padding: 20px; margin: 0; background: white; }
+          .header { margin-bottom: 20px; border-left: 5px solid #1e3a8a; padding-left: 12px; }
+          h1 { font-size: 26px; color: #1e3a8a; margin: 0; font-weight: 700; text-transform: uppercase; }
+          .title { font-size: 14px; color: #ca8a04; font-weight: 600; margin-top: 4px; }
+          .contact { font-size: 11px; color: #64748b; margin-top: 4px; }
+          h2 { font-size: 13px; color: #1e3a8a; text-transform: uppercase; margin-top: 20px; margin-bottom: 8px; font-weight: 700; border-bottom: 2px solid #f1f5f9; padding-bottom: 4px; }
+          .timeline-container { position: relative; padding-left: 15px; border-left: 2px solid #e2e8f0; }
+          .timeline-item { position: relative; margin-bottom: 15px; }
+          .timeline-item::before { content: ''; position: absolute; left: -21px; top: 4px; width: 6px; height: 6px; border-radius: 50%; background: #ca8a04; border: 2px solid white; }
+          .content { font-size: 11px; white-space: pre-wrap; line-height: 1.4; }
+        `;
+
+    const body = template === 'infographic'
+      ? `
+          <div class="header-section">
+            <div>
+              <h1>${resumeData.name || 'Your Name'}</h1>
+              <div class="title">Applicant Profile</div>
+              <div class="contact-info">
+                ✉️ ${resumeData.email || 'Email'} <br>
+                📞 ${resumeData.phone || 'Phone'} <br>
+                🔗 ${resumeData.linkedin || 'LinkedIn'}
+              </div>
+            </div>
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; color: #64748b;">
+              ${(resumeData.name || 'Y').charAt(0)}
+            </div>
+          </div>
+          <div class="resume-container">
+            <div class="left-col">
+              ${resumeData.objective ? `<h2>Profile Summary</h2><div class="content">${resumeData.objective}</div>` : ''}
+              ${resumeData.experience ? `<h2>Professional Experience</h2><div class="content">${resumeData.experience}</div>` : ''}
+              ${resumeData.projects ? `<h2>Projects</h2><div class="content">${resumeData.projects}</div>` : ''}
+            </div>
+            <div class="right-col">
+              <h2>Core Skills</h2>
+              <div class="content">
+                ${skillList.length > 0 ? skillList.map(skill => `<span class="skill-tag">${skill}</span>`).join('') : 'No skills listed'}
+              </div>
+              ${resumeData.education ? `<h2>Education</h2><div class="content">${resumeData.education}</div>` : ''}
+            </div>
+          </div>
+        `
+      : template === 'elegant'
+      ? `
+          <div class="header">
+            <h1>${resumeData.name || 'Your Name'}</h1>
+            <div class="contact">
+              ${resumeData.email || 'Email'} &nbsp;&bull;&nbsp; ${resumeData.phone || 'Phone'} &nbsp;&bull;&nbsp; ${resumeData.linkedin || 'LinkedIn'}
+            </div>
+          </div>
+          ${resumeData.objective ? `<div class="content" style="text-align: center; font-style: italic;">${resumeData.objective}</div>` : ''}
+          
+          ${resumeData.education ? `<h2>Education</h2><div class="content">${resumeData.education}</div>` : ''}
+          
+          <h2>Skills & Expertise</h2>
+          <div class="content" style="text-align: center;">
+            ${skillList.length > 0 ? skillList.join(' &nbsp;&bull;&nbsp; ') : 'No skills listed'}
+          </div>
+          
+          ${resumeData.experience ? `<h2>Professional Experience</h2><div class="content">${resumeData.experience}</div>` : ''}
+          ${resumeData.projects ? `<h2>Selected Projects</h2><div class="content">${resumeData.projects}</div>` : ''}
+        `
+      : `
+          <div class="header">
+            <h1>${resumeData.name || 'Your Name'}</h1>
+            <div class="title">Applicant Profile</div>
+            <div class="contact">
+              ✉️ ${resumeData.email || 'Email'} &nbsp;&nbsp;|&nbsp;&nbsp; 📞 ${resumeData.phone || 'Phone'} &nbsp;&nbsp;|&nbsp;&nbsp; 🔗 ${resumeData.linkedin || 'LinkedIn'}
+            </div>
+          </div>
+          
+          ${resumeData.objective ? `<h2>Professional Summary</h2><div class="content">${resumeData.objective}</div>` : ''}
+          
+          ${resumeData.experience ? `
+            <h2>Work History</h2>
+            <div class="timeline-container">
+              <div class="timeline-item">
+                <div class="content">${resumeData.experience}</div>
+              </div>
+            </div>
+          ` : ''}
+          
+          ${resumeData.education ? `
+            <h2>Education Background</h2>
+            <div class="timeline-container">
+              <div class="timeline-item">
+                <div class="content">${resumeData.education}</div>
+              </div>
+            </div>
+          ` : ''}
+          
+          ${resumeData.projects ? `
+            <h2>Key Projects</h2>
+            <div class="timeline-container">
+              <div class="timeline-item">
+                <div class="content">${resumeData.projects}</div>
+              </div>
+            </div>
+          ` : ''}
+
+          <h2>Skills Matrix</h2>
+          <div class="content">${resumeData.skills || 'No skills listed'}</div>
+        `;
+
+    return `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <style>${styles}</style>
+      </head>
+      <body style="padding: 10px;">
+        ${body}
+      </body>
+      </html>
+    `;
+  };
+
   // ═══════════════════════════════════════════════════════════════
   //   STATE MANAGEMENT
   // ═══════════════════════════════════════════════════════════════
@@ -61,7 +221,15 @@ const Career_Guidance = () => {
     experience: "",
     projects: ""
   });
-  const [resumeTemplate, setResumeTemplate] = useState('modern'); // 'modern', 'classic', 'minimalist'
+  const [resumeTemplate, setResumeTemplate] = useState('infographic'); // 'infographic', 'elegant', 'timeline'
+  const [previewTemplate, setPreviewTemplate] = useState(null);
+
+  const handleBuilderChange = (field, value) => {
+    setBuilderData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
 
   // Internships state
   const [internshipField, setInternshipField] = useState("software development");
@@ -334,10 +502,6 @@ const Career_Guidance = () => {
     }, 600);
   };
 
-  const handleBuilderChange = (field, value) => {
-    setBuilderData(prev => ({...prev, [field]: value}));
-  };
-
   const generateResumePDF = () => {
     let css = "";
     let htmlContent = "";
@@ -383,6 +547,100 @@ const Career_Guidance = () => {
         ${builderData.skills ? `<h2>Expertise</h2><div class="content">${builderData.skills}</div>` : ''}
         ${builderData.experience ? `<h2>Experience</h2><div class="content">${builderData.experience}</div>` : ''}
         ${builderData.projects ? `<h2>Selected Works</h2><div class="content">${builderData.projects}</div>` : ''}
+       `;
+    } else if (resumeTemplate === 'infographic') {
+       css = `
+          body { font-family: 'Segoe UI', Tahoma, sans-serif; color: #333; padding: 40px; max-width: 850px; margin: 0 auto; background: white; }
+          .resume-container { display: flex; gap: 30px; }
+          .left-col { flex: 6.5; }
+          .right-col { flex: 3.5; background: #f8fafc; padding: 20px; border-radius: 8px; }
+          .header-section { margin-bottom: 30px; border-bottom: 2px solid #3b82f6; padding-bottom: 15px; display: flex; justify-content: space-between; align-items: center;}
+          h1 { font-size: 32px; color: #1e293b; margin: 0; font-weight: 800; text-transform: uppercase; }
+          .title { font-size: 16px; color: #3b82f6; font-weight: 600; margin-top: 5px; }
+          .contact-info { font-size: 12px; color: #64748b; margin-top: 10px; line-height: 1.5; }
+          h2 { font-size: 16px; color: #1e293b; text-transform: uppercase; border-bottom: 2px solid #1e293b; padding-bottom: 5px; margin-top: 25px; font-weight: 700; }
+          .content { font-size: 13.5px; white-space: pre-wrap; margin-bottom: 20px; line-height: 1.6; color: #334155; }
+          .skill-tag { background: #3b82f6; color: white; padding: 4px 10px; border-radius: 20px; font-size: 12px; display: inline-block; margin: 3px; }
+       `;
+       htmlContent = `
+        <div class="header-section">
+          <div>
+            <h1>${builderData.name || 'YOUR NAME'}</h1>
+            <div class="title">PROFESSIONAL BLUEPRINT</div>
+            <div class="contact-info">
+              ${builderData.email ? `✉️ ${builderData.email} <br>` : ''}
+              ${builderData.phone ? `📞 ${builderData.phone} <br>` : ''}
+              ${builderData.linkedin ? `🔗 ${builderData.linkedin}` : ''}
+            </div>
+          </div>
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; color: #64748b;">
+            ${builderData.name ? builderData.name.charAt(0) : 'U'}
+          </div>
+        </div>
+        <div class="resume-container">
+          <div class="left-col">
+            ${builderData.objective ? `<h2>Profile Summary</h2><div class="content">${builderData.objective}</div>` : ''}
+            ${builderData.experience ? `<h2>Professional Experience</h2><div class="content">${builderData.experience}</div>` : ''}
+            ${builderData.education ? `<h2>Education</h2><div class="content">${builderData.education}</div>` : ''}
+          </div>
+          <div class="right-col">
+            ${builderData.skills ? `<h2>Core Skills</h2><div class="content">${builderData.skills.split(',').map(s => `<span class="skill-tag">${s.trim()}</span>`).join('')}</div>` : ''}
+            ${builderData.projects ? `<h2>Key Projects</h2><div class="content">${builderData.projects}</div>` : ''}
+          </div>
+        </div>
+       `;
+    } else if (resumeTemplate === 'elegant') {
+       css = `
+          body { font-family: 'Georgia', serif; color: #111; padding: 50px; max-width: 800px; margin: 0 auto; background: white; line-height: 1.6; }
+          .header { text-align: center; margin-bottom: 40px; }
+          h1 { font-size: 34px; font-weight: normal; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 10px 0; }
+          .contact { font-size: 13px; font-style: italic; color: #555; margin-bottom: 20px; letter-spacing: 1px; }
+          h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 2px; text-align: center; border-bottom: 1px solid #222; border-top: 1px solid #222; padding: 5px 0; margin-top: 30px; margin-bottom: 15px; font-weight: bold; }
+          .content { font-size: 13px; white-space: pre-wrap; margin-bottom: 20px; text-align: justify; color: #222; }
+       `;
+       htmlContent = `
+        <div class="header">
+          <h1>${builderData.name || 'YOUR NAME'}</h1>
+          <div class="contact">
+            ${builderData.email ? `${builderData.email} &nbsp;&bull;&nbsp; ` : ''}
+            ${builderData.phone ? `${builderData.phone} &nbsp;&bull;&nbsp; ` : ''}
+            ${builderData.linkedin ? `${builderData.linkedin}` : ''}
+          </div>
+        </div>
+        ${builderData.objective ? `<div class="content" style="text-align: center; font-style: italic;">${builderData.objective}</div>` : ''}
+        ${builderData.education ? `<h2>Education</h2><div class="content">${builderData.education}</div>` : ''}
+        ${builderData.skills ? `<h2>Expertise</h2><div class="content">${builderData.skills}</div>` : ''}
+        ${builderData.experience ? `<h2>Professional Experience</h2><div class="content">${builderData.experience}</div>` : ''}
+        ${builderData.projects ? `<h2>Selected Projects</h2><div class="content">${builderData.projects}</div>` : ''}
+       `;
+    } else if (resumeTemplate === 'timeline') {
+       css = `
+          body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #334155; padding: 40px; max-width: 800px; margin: 0 auto; background: white; }
+          .header { margin-bottom: 40px; border-left: 6px solid #1e3a8a; padding-left: 20px; }
+          h1 { font-size: 36px; color: #1e3a8a; margin: 0; font-weight: 700; text-transform: uppercase; }
+          .title { font-size: 18px; color: #ca8a04; font-weight: 600; margin-top: 5px; }
+          .contact { font-size: 13px; color: #64748b; margin-top: 10px; }
+          h2 { font-size: 16px; color: #1e3a8a; text-transform: uppercase; margin-top: 30px; margin-bottom: 15px; font-weight: 700; border-bottom: 2px solid #f1f5f9; padding-bottom: 5px; }
+          .timeline-container { position: relative; padding-left: 30px; border-left: 2px solid #e2e8f0; }
+          .timeline-item { position: relative; margin-bottom: 25px; }
+          .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #ca8a04; border: 2px solid white; }
+          .content { font-size: 13.5px; white-space: pre-wrap; line-height: 1.6; }
+       `;
+       htmlContent = `
+        <div class="header">
+          <h1>${builderData.name || 'YOUR NAME'}</h1>
+          <div class="title">Career Journey</div>
+          <div class="contact">
+            ${builderData.email ? `✉️ ${builderData.email} &nbsp;&nbsp;|&nbsp;&nbsp; ` : ''}
+            ${builderData.phone ? `📞 ${builderData.phone} &nbsp;&nbsp;|&nbsp;&nbsp; ` : ''}
+            ${builderData.linkedin ? `🔗 ${builderData.linkedin}` : ''}
+          </div>
+        </div>
+        ${builderData.objective ? `<h2>Professional Summary</h2><div class="content">${builderData.objective}</div>` : ''}
+        ${builderData.experience ? `<h2>Work History</h2><div class="timeline-container"><div class="timeline-item"><div class="content">${builderData.experience}</div></div></div>` : ''}
+        ${builderData.education ? `<h2>Education</h2><div class="timeline-container"><div class="timeline-item"><div class="content">${builderData.education}</div></div></div>` : ''}
+        ${builderData.skills ? `<h2>Skills Matrix</h2><div class="content">${builderData.skills}</div>` : ''}
+        ${builderData.projects ? `<h2>Notable Projects</h2><div class="content">${builderData.projects}</div>` : ''}
        `;
     } else {
        // Modern
@@ -770,86 +1028,175 @@ const Career_Guidance = () => {
 
           {/* 1.5 RESUME BUILDER */}
           {activeTab === "builder" && (
-            <div className="space-y-6">
-              <div className=" p-8 relative overflow-hidden group border-t-2 border-[var(--gu-gold)]/50">
-                <div className="absolute top-0 right-0 p-8 opacity-5">
-                  <File className="w-48 h-48 text-[var(--gu-gold)]" />
-                </div>
+            <div className="grid grid-cols-1 xl:grid-cols-5 gap-8 items-start animate-fade-in">
+              
+              {/* LEFT: BUILDER FORM */}
+              <div className="xl:col-span-3 space-y-6">
                 
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3 relative z-10 border-l-4 border-[var(--gu-gold)] pl-4">
-                  <FileText className="text-[var(--gu-gold)] animate-pulse" />
-                  Construct Professional Resume
-                </h2>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 mb-6">
-                  <div>
-                    <label className="block text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Full Name</label>
-                    <input type="text" placeholder="John Doe" value={builderData.name} onChange={(e) => handleBuilderChange('name', e.target.value)} className="w-full px-4 py-3 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm text-white placeholder:text-gray-600 focus:border-[var(--gu-gold)] focus:ring-1 focus:ring-[var(--gu-gold)] focus:outline-none transition-all" />
+                {/* Personal Information */}
+                <div className="glass-card p-6 relative overflow-hidden group border-t-2 border-[var(--gu-gold)]">
+                  <div className="absolute top-0 right-0 p-6 opacity-5 pointer-events-none">
+                    <User className="w-32 h-32 text-[var(--gu-gold)]" />
                   </div>
-                  <div>
-                    <label className="block text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Email Address</label>
-                    <input type="email" placeholder="john@example.com" value={builderData.email} onChange={(e) => handleBuilderChange('email', e.target.value)} className="w-full px-4 py-3 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm text-white placeholder:text-gray-600 focus:border-[var(--gu-gold)] focus:ring-1 focus:ring-[var(--gu-gold)] focus:outline-none transition-all" />
-                  </div>
-                  <div>
-                    <label className="block text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Phone Number</label>
-                    <input type="text" placeholder="+1 234 567 890" value={builderData.phone} onChange={(e) => handleBuilderChange('phone', e.target.value)} className="w-full px-4 py-3 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm text-white placeholder:text-gray-600 focus:border-[var(--gu-gold)] focus:ring-1 focus:ring-[var(--gu-gold)] focus:outline-none transition-all" />
-                  </div>
-                  <div>
-                    <label className="block text-white/60 text-xs font-bold uppercase tracking-wider mb-2">LinkedIn URL</label>
-                    <input type="text" placeholder="linkedin.com/in/johndoe" value={builderData.linkedin} onChange={(e) => handleBuilderChange('linkedin', e.target.value)} className="w-full px-4 py-3 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm text-white placeholder:text-gray-600 focus:border-[var(--gu-gold)] focus:ring-1 focus:ring-[var(--gu-gold)] focus:outline-none transition-all" />
-                  </div>
-                </div>
-
-                <div className="space-y-6 relative z-10 mb-8">
-                  <div>
-                    <label className="block text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Professional Objective / Summary</label>
-                    <textarea placeholder="A highly motivated developer looking for..." rows="3" value={builderData.objective} onChange={(e) => handleBuilderChange('objective', e.target.value)} className="w-full px-4 py-3 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm text-white placeholder:text-gray-600 focus:border-[var(--gu-gold)] focus:ring-1 focus:ring-[var(--gu-gold)] focus:outline-none transition-all resize-none custom-scrollbar" />
-                  </div>
-                  <div>
-                    <label className="block text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Core Skills</label>
-                    <textarea placeholder="E.g., Python, React, Data Analysis" rows="2" value={builderData.skills} onChange={(e) => handleBuilderChange('skills', e.target.value)} className="w-full px-4 py-3 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm text-white placeholder:text-gray-600 focus:border-[var(--gu-gold)] focus:ring-1 focus:ring-[var(--gu-gold)] focus:outline-none transition-all resize-none custom-scrollbar" />
-                  </div>
-                  <div>
-                    <label className="block text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Education Background</label>
-                    <textarea placeholder="- B.Tech in CSE, Ganpat University (2020-2024)\n- High School..." rows="3" value={builderData.education} onChange={(e) => handleBuilderChange('education', e.target.value)} className="w-full px-4 py-3 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm text-white placeholder:text-gray-600 focus:border-[var(--gu-gold)] focus:ring-1 focus:ring-[var(--gu-gold)] focus:outline-none transition-all resize-none custom-scrollbar" />
-                  </div>
-                  <div>
-                    <label className="block text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Experience Matrix</label>
-                    <textarea placeholder="- Frontend Developer at TechCorp (Jun 2023 - Present)" rows="4" value={builderData.experience} onChange={(e) => handleBuilderChange('experience', e.target.value)} className="w-full px-4 py-3 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm text-white placeholder:text-gray-600 focus:border-[var(--gu-gold)] focus:ring-1 focus:ring-[var(--gu-gold)] focus:outline-none transition-all resize-none custom-scrollbar" />
-                  </div>
-                  <div>
-                    <label className="block text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Academic & Personal Projects</label>
-                    <textarea placeholder="- AI Attendance System: Built using React & Django" rows="4" value={builderData.projects} onChange={(e) => handleBuilderChange('projects', e.target.value)} className="w-full px-4 py-3 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm text-white placeholder:text-gray-600 focus:border-[var(--gu-gold)] focus:ring-1 focus:ring-[var(--gu-gold)] focus:outline-none transition-all resize-none custom-scrollbar" />
+                  <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3 border-l-4 border-[var(--gu-gold)] pl-3">
+                    <User className="text-[var(--gu-gold)]" size={20} />
+                    Personal Blueprint
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="flex items-center gap-2 text-white/70 text-xs font-bold uppercase tracking-wider mb-2">
+                        <User size={12} className="text-[var(--gu-gold)]" /> Full Name
+                      </label>
+                      <input type="text" placeholder="e.g. John Doe" value={builderData.name} onChange={(e) => handleBuilderChange('name', e.target.value)} className="w-full px-4 py-3 bg-black/40 border border-white/10 focus:border-[var(--gu-gold)] rounded-lg text-white placeholder:text-white/30 focus:ring-1 focus:ring-[var(--gu-gold)]/30 focus:outline-none transition-all duration-300" />
+                    </div>
+                    <div>
+                      <label className="flex items-center gap-2 text-white/70 text-xs font-bold uppercase tracking-wider mb-2">
+                        <Mail size={12} className="text-[var(--gu-gold)]" /> Email Address
+                      </label>
+                      <input type="email" placeholder="e.g. john@example.com" value={builderData.email} onChange={(e) => handleBuilderChange('email', e.target.value)} className="w-full px-4 py-3 bg-black/40 border border-white/10 focus:border-[var(--gu-gold)] rounded-lg text-white placeholder:text-white/30 focus:ring-1 focus:ring-[var(--gu-gold)]/30 focus:outline-none transition-all duration-300" />
+                    </div>
+                    <div>
+                      <label className="flex items-center gap-2 text-white/70 text-xs font-bold uppercase tracking-wider mb-2">
+                        <Phone size={12} className="text-[var(--gu-gold)]" /> Phone Number
+                      </label>
+                      <input type="text" placeholder="e.g. +1 234 567 890" value={builderData.phone} onChange={(e) => handleBuilderChange('phone', e.target.value)} className="w-full px-4 py-3 bg-black/40 border border-white/10 focus:border-[var(--gu-gold)] rounded-lg text-white placeholder:text-white/30 focus:ring-1 focus:ring-[var(--gu-gold)]/30 focus:outline-none transition-all duration-300" />
+                    </div>
+                    <div>
+                      <label className="flex items-center gap-2 text-white/70 text-xs font-bold uppercase tracking-wider mb-2">
+                        <Linkedin size={12} className="text-[var(--gu-gold)]" /> LinkedIn URL
+                      </label>
+                      <input type="text" placeholder="e.g. linkedin.com/in/johndoe" value={builderData.linkedin} onChange={(e) => handleBuilderChange('linkedin', e.target.value)} className="w-full px-4 py-3 bg-black/40 border border-white/10 focus:border-[var(--gu-gold)] rounded-lg text-white placeholder:text-white/30 focus:ring-1 focus:ring-[var(--gu-gold)]/30 focus:outline-none transition-all duration-300" />
+                    </div>
                   </div>
                 </div>
 
-                <div className="mb-8 relative z-10  p-6 bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-sm">
+                {/* Core Details */}
+                <div className="glass-card p-6 space-y-6 border-t-2 border-[var(--gu-gold)]">
+                  <div>
+                    <label className="flex items-center gap-2 text-white/70 text-xs font-bold uppercase tracking-wider mb-2">
+                      <Target size={14} className="text-[var(--gu-gold)]" /> Professional Objective / Summary
+                    </label>
+                    <textarea placeholder="State your career goals and expertise briefly..." rows="3" value={builderData.objective} onChange={(e) => handleBuilderChange('objective', e.target.value)} className="w-full px-4 py-3 bg-black/40 border border-white/10 focus:border-[var(--gu-gold)] rounded-lg text-white placeholder:text-white/30 focus:ring-1 focus:ring-[var(--gu-gold)]/30 focus:outline-none transition-all duration-300 resize-none custom-scrollbar" />
+                  </div>
+
+                  <div>
+                    <label className="flex items-center gap-2 text-white/70 text-xs font-bold uppercase tracking-wider mb-2">
+                      <Award size={14} className="text-[var(--gu-gold)]" /> Core Skills (Comma Separated)
+                    </label>
+                    <textarea placeholder="React, Node.js, Python, Docker, AWS, SQL..." rows="2" value={builderData.skills} onChange={(e) => handleBuilderChange('skills', e.target.value)} className="w-full px-4 py-3 bg-black/40 border border-white/10 focus:border-[var(--gu-gold)] rounded-lg text-white placeholder:text-white/30 focus:ring-1 focus:ring-[var(--gu-gold)]/30 focus:outline-none transition-all duration-300 resize-none custom-scrollbar" />
+                  </div>
+
+                  <div>
+                    <label className="flex items-center gap-2 text-white/70 text-xs font-bold uppercase tracking-wider mb-2">
+                      <BookOpen size={14} className="text-[var(--gu-gold)]" /> Education Background
+                    </label>
+                    <textarea placeholder="e.g. B.Tech in CSE, Ganpat University (2020-2024)" rows="3" value={builderData.education} onChange={(e) => handleBuilderChange('education', e.target.value)} className="w-full px-4 py-3 bg-black/40 border border-white/10 focus:border-[var(--gu-gold)] rounded-lg text-white placeholder:text-white/30 focus:ring-1 focus:ring-[var(--gu-gold)]/30 focus:outline-none transition-all duration-300 resize-none custom-scrollbar" />
+                  </div>
+
+                  <div>
+                    <label className="flex items-center gap-2 text-white/70 text-xs font-bold uppercase tracking-wider mb-2">
+                      <Briefcase size={14} className="text-[var(--gu-gold)]" /> Experience Matrix
+                    </label>
+                    <textarea placeholder="e.g. Software Intern at TechLabs (Jan 2023 - Present)&#10;- Developed full-stack portals." rows="4" value={builderData.experience} onChange={(e) => handleBuilderChange('experience', e.target.value)} className="w-full px-4 py-3 bg-black/40 border border-white/10 focus:border-[var(--gu-gold)] rounded-lg text-white placeholder:text-white/30 focus:ring-1 focus:ring-[var(--gu-gold)]/30 focus:outline-none transition-all duration-300 resize-none custom-scrollbar" />
+                  </div>
+
+                  <div>
+                    <label className="flex items-center gap-2 text-white/70 text-xs font-bold uppercase tracking-wider mb-2">
+                      <Zap size={14} className="text-[var(--gu-gold)]" /> Projects Portfolio
+                    </label>
+                    <textarea placeholder="e.g. AI Attendance Tracker (2023)&#10;- Python face detection models." rows="4" value={builderData.projects} onChange={(e) => handleBuilderChange('projects', e.target.value)} className="w-full px-4 py-3 bg-black/40 border border-white/10 focus:border-[var(--gu-gold)] rounded-lg text-white placeholder:text-white/30 focus:ring-1 focus:ring-[var(--gu-gold)]/30 focus:outline-none transition-all duration-300 resize-none custom-scrollbar" />
+                  </div>
+                </div>
+
+                {/* Theme Selection */}
+                <div className="glass-card p-6 border-t-2 border-[var(--gu-gold)]">
                   <h3 className="text-white font-bold mb-4 flex items-center gap-2">
-                    <Sparkles size={16} className="text-[var(--gu-gold)]" /> Theme Selection Matrix
+                    <Sparkles size={16} className="text-[var(--gu-gold)]" /> Select Aesthetic Theme
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div onClick={() => setResumeTemplate('modern')} className={`p-4 rounded-sm cursor-pointer border-2 transition-all group ${resumeTemplate === 'modern' ? 'border-[var(--gu-gold)] bg-[var(--gu-gold)]/10 shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)]' : 'border-white/10 hover:border-[var(--gu-gold)]/50 hover:bg-black/40 '}`}>
-                      <h4 className="text-white font-bold group-hover:text-[var(--gu-gold)] transition-colors">Modern Professional</h4>
-                      <p className="text-white/60 text-xs mt-1 leading-relaxed">Clean layout with a dark contrasted header to make details pop immediately.</p>
-                    </div>
-                    <div onClick={() => setResumeTemplate('classic')} className={`p-4 rounded-sm cursor-pointer border-2 transition-all group ${resumeTemplate === 'classic' ? 'border-[var(--gu-gold)] bg-[var(--gu-gold)]/10 shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)]' : 'border-white/10 hover:border-[var(--gu-gold)]/50 hover:bg-black/40 '}`}>
-                      <h4 className="text-white font-bold group-hover:text-[var(--gu-gold)] transition-colors">Classic Serif</h4>
-                      <p className="text-white/60 text-xs mt-1 leading-relaxed">Traditional, universally accepted Times New Roman style for formal fields.</p>
-                    </div>
-                    <div onClick={() => setResumeTemplate('minimalist')} className={`p-4 rounded-sm cursor-pointer border-2 transition-all group ${resumeTemplate === 'minimalist' ? 'border-[var(--gu-gold)] bg-[var(--gu-gold)]/10 shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)]' : 'border-white/10 hover:border-[var(--gu-gold)]/50 hover:bg-black/40 '}`}>
-                      <h4 className="text-white font-bold group-hover:text-[var(--gu-gold)] transition-colors">Minimalist Vector</h4>
-                      <p className="text-white/60 text-xs mt-1 leading-relaxed">Spacious, lightweight Sans-Serif aesthetics focusing heavily on elegance.</p>
-                    </div>
+                    {['infographic', 'elegant', 'timeline'].map((theme) => (
+                      <div 
+                        key={theme}
+                        onClick={() => setResumeTemplate(theme)} 
+                        className={`p-4 rounded-xl cursor-pointer border-2 transition-all duration-300 relative ${resumeTemplate === theme ? 'border-[var(--gu-gold)] bg-[var(--gu-gold)]/10 shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)]' : 'border-white/10 bg-black/20 hover:border-[var(--gu-gold)]/50 hover:bg-black/40'}`}
+                      >
+                        <div className="flex justify-between items-center mb-2">
+                          <h4 className="text-white font-bold capitalize text-sm">{theme}</h4>
+                          <button 
+                            onClick={(e) => { e.stopPropagation(); setPreviewTemplate(theme); }} 
+                            className="text-[10px] px-2 py-1 bg-black/50 border border-white/20 rounded text-white/80 hover:bg-[var(--gu-gold)] hover:text-white hover:border-[var(--gu-gold)] flex items-center gap-1 transition-all"
+                          >
+                            <Eye size={10}/> View
+                          </button>
+                        </div>
+                        <p className="text-white/60 text-[11px] leading-relaxed">
+                          {theme === 'infographic' && 'Vibrant visual badges and two-column profile.'}
+                          {theme === 'elegant' && 'Clean centered typography for structured elegance.'}
+                          {theme === 'timeline' && 'Milestones connected via linear timeline.'}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <div className="flex justify-center relative z-20">
-                  <button onClick={generateResumePDF} className="bg-gradient-to-r from-[var(--gu-gold)] to-[var(--gu-gold)] text-white px-10 py-4 rounded-full font-bold text-lg flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(var(--primary-rgb),0.3)] hover:shadow-[0_15px_40px_rgba(var(--primary-rgb),0.5)] border-2 border-white/20">
-                    <Download size={24} />
+                {/* Actions */}
+                <div className="flex justify-center pt-4">
+                  <button onClick={generateResumePDF} className="bg-gradient-to-r from-[var(--gu-gold)] to-[var(--gu-gold)] text-white px-8 py-4 rounded-full font-bold text-md flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-[0_10px_20px_rgba(var(--primary-rgb),0.2)] border border-white/10">
+                    <Download size={20} />
                     GENERATE & EXPORT RESUME
                   </button>
                 </div>
+
               </div>
+
+              {/* RIGHT: LIVE PREVIEW */}
+              <div className="xl:col-span-2 sticky top-24 h-[75vh] bg-white rounded-2xl border border-white/10 shadow-2xl hidden xl:flex flex-col overflow-hidden animate-slide-up">
+                <div className="p-4 bg-black/95 border-b border-white/10 flex justify-between items-center">
+                  <h4 className="text-white text-xs font-bold tracking-wider uppercase flex items-center gap-2">
+                    <Eye size={14} className="text-[var(--gu-gold)]" /> Live Render Preview
+                  </h4>
+                  <span className="text-[10px] text-white/40 px-2 py-1 bg-white/5 rounded-md border border-white/10 capitalize">
+                    Template: {resumeTemplate}
+                  </span>
+                </div>
+                <div className="flex-1 bg-white overflow-hidden">
+                  <iframe 
+                    key={`${resumeTemplate}-${builderData.name}-${builderData.skills}`} 
+                    title="Live Resume Preview"
+                    className="w-full h-full border-0 scale-90 origin-top"
+                    srcDoc={getTemplatePreviewHtml(resumeTemplate)}
+                  />
+                </div>
+              </div>
+
+              {/* PREVIEW MODAL for small screens / deep inspection */}
+              {previewTemplate && (
+                <div className="fixed inset-0 bg-black/80 z-[999] flex items-center justify-center p-4 animate-fade-in">
+                  <div className="bg-[#0f172a] border border-white/10 rounded-xl w-full max-w-3xl h-[85vh] flex flex-col relative overflow-hidden shadow-2xl">
+                    <div className="p-4 border-b border-white/10 flex justify-between items-center bg-black/30">
+                      <h3 className="text-white font-bold flex items-center gap-2">
+                        <Sparkles className="text-[var(--gu-gold)]" size={16} />
+                        Template Preview: {previewTemplate.toUpperCase()}
+                      </h3>
+                      <button 
+                        onClick={() => setPreviewTemplate(null)} 
+                        className="text-white/60 hover:text-white px-3 py-1 rounded bg-white/5 hover:bg-white/10 border border-white/10 transition-all"
+                      >
+                        ✕ Close
+                      </button>
+                    </div>
+                    
+                    <div className="flex-1 bg-white overflow-auto p-4">
+                      <iframe 
+                        title="Resume Preview"
+                        className="w-full h-full border-0"
+                        srcDoc={getTemplatePreviewHtml(previewTemplate)}
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
             </div>
           )}
 

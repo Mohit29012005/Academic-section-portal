@@ -17,7 +17,14 @@ from .models import (
     CareerSession, FitAnalysis, CareerRecommendation,
     QuizAttempt, LearningResource, InternshipSearch, ResumeBuild
 )
-from .serializers import *
+from .serializers import (
+    CareerSessionSerializer, FitAnalysisSerializer, FitAnalysisRequestSerializer,
+    CareerRecommendationSerializer, CareerRecommendationRequestSerializer,
+    QuizAttemptSerializer, QuizRequestSerializer, QuizSubmissionSerializer,
+    LearningResourceSerializer, LearningResourceRequestSerializer,
+    InternshipSearchSerializer, InternshipSearchRequestSerializer,
+    ResumeBuildSerializer, ResumeBuildRequestSerializer
+)
 
 
 # ═══════════════════════════════════════════════════════════════

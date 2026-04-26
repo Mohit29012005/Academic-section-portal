@@ -162,14 +162,48 @@ const Faculty = () => {
                             <span>Personnel Directory</span>
                         </div>
                     </div>
-                    <button 
-                        onClick={() => setShowAddModal(true)}
-                        className="group relative bg-[var(--gu-gold)] text-black px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all flex items-center gap-2 overflow-hidden shadow-[0_0_20px_rgba(212,175,55,0.2)]"
-                    >
-                        <Plus className="w-4 h-4" /> 
-                        <span className="relative z-10">Onboard Faculty</span>
-                        <div className="absolute inset-0 bg-white/40 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                    </button>
+                    <div className="flex gap-4">
+                        <button 
+                            onClick={() => {
+                                const headers = ['Employee ID', 'Name', 'Department', 'Role', 'Status', 'Assigned Load (Subject | Course)'];
+                                const rows = facultyData.map(f => [
+                                    f.employee_id,
+                                    f.name,
+                                    f.department,
+                                    f.designation || 'Faculty',
+                                    f.status,
+                                    (f.subjects_list || []).map(s => `${s.code} (${s.name}) [Course: ${s.course || 'N/A'}]`).join('; ')
+                                ]);
+                                
+                                const csvContent = [
+                                    headers.join(','),
+                                    ...rows.map(r => r.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(','))
+                                ].join('\n');
+                                
+                                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                                const url = URL.createObjectURL(blob);
+                                const link = document.createElement('a');
+                                link.setAttribute('href', url);
+                                link.setAttribute('download', `Faculty_Workload_Report_${new Date().toISOString().split('T')[0]}.csv`);
+                                link.style.visibility = 'hidden';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
+                            className="group relative bg-white/5 text-white border border-white/10 px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-[var(--gu-gold)] hover:text-black hover:border-[var(--gu-gold)] transition-all flex items-center gap-2 overflow-hidden"
+                        >
+                            <FileMinus className="w-4 h-4 transition-transform group-hover:scale-110" /> 
+                            <span>Export Workload Report</span>
+                        </button>
+                        <button 
+                            onClick={() => setShowAddModal(true)}
+                            className="group relative bg-[var(--gu-gold)] text-black px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all flex items-center gap-2 overflow-hidden shadow-[0_0_20px_rgba(212,175,55,0.2)]"
+                        >
+                            <Plus className="w-4 h-4" /> 
+                            <span className="relative z-10">Onboard Faculty</span>
+                            <div className="absolute inset-0 bg-white/40 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                        </button>
+                    </div>
                 </div>
 
                 {/* Faculty Registry Table */}

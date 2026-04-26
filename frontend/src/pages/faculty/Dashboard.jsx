@@ -114,7 +114,6 @@ const Dashboard = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-slide-up">
                 {[
                     { label: "Assigned Modules", value: subjects.length, icon: BookOpen, color: "text-[var(--gu-gold)]" },
-                    { label: "Direct Student Load", value: data?.total_students || 0, icon: Users, color: "text-white" },
                     { label: "Curated Papers", value: data?.generated_papers_count || 0, icon: FileText, color: "text-[var(--gu-gold)]" },
                 ].map((stat, i) => (
                     <div key={i} className="glass-panel group p-8 rounded-2xl relative overflow-hidden flex flex-col justify-between h-40">

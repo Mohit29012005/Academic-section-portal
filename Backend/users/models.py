@@ -297,3 +297,64 @@ class PasswordResetOTP(models.Model):
 
     def __str__(self):
         return f"OTP for {self.user.email}"
+
+
+class AdminActivityLog(models.Model):
+    """Log for tracking admin activities."""
+    ACTION_CHOICES = [
+        ('create', 'Create'),
+        ('update', 'Update'),
+        ('delete', 'Delete'),
+        ('view', 'View'),
+        ('login', 'Login'),
+        ('logout', 'Logout'),
+    ]
+    
+    admin = models.ForeignKey(Admin, on_delete=models.CASCADE, related_name='activity_logs', null=True, blank=True)
+    action = models.CharField(max_length=50, choices=ACTION_CHOICES)
+    target_model = models.CharField(max_length=100)
+    target_id = models.CharField(max_length=100, null=True, blank=True)
+    target_name = models.CharField(max_length=255, null=True, blank=True)
+    details = models.JSONField(default=dict, blank=True)
+    ip_address = models.GenericIPAddressField(null=True, blank=True)
+    user_agent = models.TextField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        db_table = "admin_activity_logs"
+        verbose_name = "Admin Activity Log"
+        verbose_name_plural = "Admin Activity Logs"
+        ordering = ["-created_at"]
+        indexes = [
+            models.Index(fields=['admin', '-created_at']),
+            models.Index(fields=['action', '-created_at']),
+        ]
+    
+    def __str__(self):
+        return f"{self.admin} - {self.action} on {self.target_model}"
+    
+    @staticmethod
+    def log(admin=None, action='view', target_model='', target_id=None, target_name='', details=None, request=None):
+        """Log an admin activity."""
+        ip_address = None
+        user_agent = None
+        
+        if request:
+            # Get client IP
+            x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+            if x_forwarded_for:
+                ip_address = x_forwarded_for.split(',')[0].strip()
+            else:
+                ip_address = request.META.get('REMOTE_ADDR')
+            user_agent = request.META.get('HTTP_USER_AGENT', '')
+        
+        return AdminActivityLog.objects.create(
+            admin=admin,
+            action=action,
+            target_model=target_model,
+            target_id=target_id,
+            target_name=target_name,
+            details=details or {},
+            ip_address=ip_address,
+            user_agent=user_agent,
+        )

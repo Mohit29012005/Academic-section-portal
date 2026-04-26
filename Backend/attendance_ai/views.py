@@ -1124,6 +1124,7 @@ def mark_attendance_face(request):
             "newly_marked": newly_marked,
             "already_marked": already_marked_list,
             "unknown_count": multi_result.get("unknown_count", 0),
+            "bounding_boxes": multi_result.get("bounding_boxes", []),
         })
 
     # ── Single-face mode (default) ──
@@ -1152,6 +1153,11 @@ def mark_attendance_face(request):
     confidence = result.get("confidence", 0)
     already_marked = AttendanceRecord.objects.filter(session=session, student=matched_user).exists()
 
+    # Default status
+    attendance_status = "present"
+    if ANOMALY_DETECTION_AVAILABLE:
+        attendance_status = determine_attendance_status(session)
+
     snapshot_path = ""
     if not already_marked:
         snap_dir = os.path.join(settings.MEDIA_ROOT, "attendance_snapshots", str(date.today()))
@@ -1167,11 +1173,6 @@ def mark_attendance_face(request):
             snapshot_path = f"attendance_snapshots/{date.today()}/{matched_user_id}.jpg"
         except Exception:
             pass
-
-        # Late detection
-        attendance_status = "present"
-        if ANOMALY_DETECTION_AVAILABLE:
-            attendance_status = determine_attendance_status(session)
 
         AttendanceRecord.objects.create(
             session=session, student=matched_user,
@@ -1192,7 +1193,7 @@ def mark_attendance_face(request):
         "confidence_score": round(confidence, 1),
         "snapshot_path": snapshot_path,
         "already_marked": already_marked,
-        "status": attendance_status if not already_marked else None,
+        "status": attendance_status,
     })
 
 

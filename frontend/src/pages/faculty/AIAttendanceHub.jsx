@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import FacultyLayout from '../../components/FacultyLayout';
 import {
   QrCode, Clock, Users, ChevronDown, Loader2, AlertCircle,
@@ -7,7 +7,7 @@ import {
   BookOpen, Zap, FileSpreadsheet, FileDown,
   ExternalLink, ScanFace, BarChart2, TrendingUp
 } from 'lucide-react';
-import { attendanceAI } from '../../services/api';
+import { attendanceAI, facultyAPI } from '../../services/api';
 
 export default function AIAttendanceHub() {
   const [activeTab, setActiveTab] = useState('create');
@@ -75,6 +75,29 @@ function CreateLectureTab() {
   const [allSubjects, setAllSubjects] = useState([]);
   const [courses, setCourses] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState('');
+  const [selectedSemester, setSelectedSemester] = useState('');
+  const [students, setStudents] = useState([]);
+  const [studentsLoading, setStudentsLoading] = useState(false);
+  const [showStudentsModal, setShowStudentsModal] = useState(false);
+
+  // Get unique semesters for selected course
+  const availableSemesters = useMemo(() => {
+    if (!selectedCourse) return [];
+    const sems = allSubjects
+      .filter(s => String(s.course) === selectedCourse && s.semester)
+      .map(s => String(s.semester));
+    return [...new Set(sems)].sort((a, b) => Number(a) - Number(b));
+  }, [selectedCourse, allSubjects]);
+
+  // Auto-select first available semester when course changes
+  useEffect(() => {
+    if (availableSemesters.length > 0) {
+      setSelectedSemester(availableSemesters[0]);
+    } else {
+      setSelectedSemester('');
+    }
+  }, [availableSemesters]);
+
   const [filteredSubjects, setFilteredSubjects] = useState([]);
   const [subjectsLoading, setSubjectsLoading] = useState(true);
   const [form, setForm] = useState({
@@ -92,36 +115,65 @@ function CreateLectureTab() {
   const [exportResult, setExportResult] = useState(null);
   const pollRef = useRef(null);
 
-  // â”€â”€ Face scan from create-lecture â”€â”€
+  // ——— Face scan from create-lecture ———
   const [faceScanMode, setFaceScanMode] = useState(false);
   const videoRef = useRef(null);
-  const canvasRef = useRef(null);
+  const canvasRef = useRef(null);           // capture canvas (hidden)
+  const overlayCanvasRef = useRef(null);    // bounding-box overlay (visible)
   const streamRef = useRef(null);
   const scanIntervalRef = useRef(null);
   const [cameraActive, setCameraActive] = useState(false);
   const [scanning, setScanning] = useState(false);
   const [scanLog, setScanLog] = useState([]);
+  const [boundingBoxes, setBoundingBoxes] = useState([]);
   const scanSessionRef = useRef(null);  // track which session we're scanning for
 
   useEffect(() => { fetchSubjects(); return () => { stopPolling(); stopFaceScanning(); stopFaceCamera(); }; }, []);
 
-  // When course selection changes, filter subjects
+  // When course or semester changes, filter subjects
   useEffect(() => {
-    if (!selectedCourse) {
-      setFilteredSubjects(allSubjects);
+    setFilteredSubjects(
+      allSubjects.filter(s => {
+        const matchCourse = !selectedCourse || String(s.course) === selectedCourse;
+        const matchSem = !selectedSemester || String(s.semester) === selectedSemester;
+        return matchCourse && matchSem;
+      })
+    );
+  }, [selectedCourse, selectedSemester, allSubjects]);
+
+  // Fetch students dynamically on course and semester change
+  useEffect(() => {
+    if (selectedCourse && selectedSemester) {
+      fetchStudentsCount(selectedCourse, selectedSemester);
     } else {
-      setFilteredSubjects(allSubjects.filter(s => String(s.course) === selectedCourse));
+      setStudents([]);
     }
-  }, [selectedCourse, allSubjects]);
+  }, [selectedCourse, selectedSemester]);
+
+  const fetchStudentsCount = async (courseId, sem) => {
+    setStudentsLoading(true);
+    try {
+      const res = await facultyAPI.students({ course_id: courseId, semester: sem });
+      setStudents(res.data || []);
+    } catch (err) {
+      console.error("Failed to fetch students", err);
+      setStudents([]);
+    } finally {
+      setStudentsLoading(false);
+    }
+  };
 
   // When filtered subjects change, auto-select first
   useEffect(() => {
     if (filteredSubjects.length > 0) {
-      setForm(f => ({ ...f, subject_id: String(filteredSubjects[0].subject_id) }));
+      const exists = filteredSubjects.some(s => String(s.subject_id) === String(form.subject_id));
+      if (!exists) {
+        setForm(f => ({ ...f, subject_id: String(filteredSubjects[0].subject_id) }));
+      }
     } else {
       setForm(f => ({ ...f, subject_id: '' }));
     }
-  }, [filteredSubjects]);
+  }, [filteredSubjects, form.subject_id]);
 
   const fetchSubjects = async () => {
     try {
@@ -155,7 +207,7 @@ function CreateLectureTab() {
     if (!form.subject_id || !form.date || !form.start_time || !form.end_time) { setFormError('All fields are required.'); return; }
     setCreating(true); setFormError('');
     try {
-      const payload = { ...form, total_students: 0 };
+      const payload = { ...form, total_students: students.length || 0 };
       const res = await attendanceAI.createLecture(payload);
       setSession(res.data);
       startPolling(res.data.session_id);
@@ -164,7 +216,7 @@ function CreateLectureTab() {
     finally { setCreating(false); }
   };
 
-  // â”€â”€ Quick Face Scan: auto-create session + start scanning â”€â”€
+  // ——— Quick Face Scan: auto-create session + start scanning ———
   const handleQuickFaceScan = async () => {
     if (!form.subject_id || !form.date || !form.start_time || !form.end_time) {
       setFormError('Please fill Course, Subject, Date, and Time before starting face scan.');
@@ -172,7 +224,7 @@ function CreateLectureTab() {
     }
     setCreating(true); setFormError('');
     try {
-      const payload = { ...form, total_students: 0 };
+      const payload = { ...form, total_students: students.length || 0 };
       const res = await attendanceAI.createLecture(payload);
       setSession(res.data);
       scanSessionRef.current = res.data.session_id;
@@ -197,7 +249,7 @@ function CreateLectureTab() {
     finally { setEnding(false); }
   };
 
-  // â”€â”€ Face Camera + Auto-Scan (for Create Lecture tab) â”€â”€
+  // ——— Face Camera + Auto-Scan (for Create Lecture tab) ———
   const startFaceCamera = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 640, height: 480, facingMode: 'user' } });
@@ -229,6 +281,38 @@ function CreateLectureTab() {
     return canvas.toDataURL('image/jpeg', 0.8);
   }, []);
 
+  // Draw bounding boxes on overlay canvas
+  const drawBoundingBoxes = useCallback((boxes) => {
+    const overlay = overlayCanvasRef.current;
+    const video = videoRef.current;
+    if (!overlay || !video) return;
+    overlay.width = video.videoWidth || 640;
+    overlay.height = video.videoHeight || 480;
+    const ctx = overlay.getContext('2d');
+    ctx.clearRect(0, 0, overlay.width, overlay.height);
+
+    boxes.forEach(box => {
+      // Mirror x because video is mirrored (scale-x-[-1])
+      const mirroredX = overlay.width - box.x - box.w;
+      const color = box.recognized ? '#22c55e' : '#ef4444';
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2.5;
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 8;
+      ctx.strokeRect(mirroredX, box.y, box.w, box.h);
+
+      // Label background
+      const label = box.recognized ? `${box.label} ${box.confidence}%` : `Unknown`;
+      ctx.font = 'bold 11px Inter, sans-serif';
+      const textW = ctx.measureText(label).width + 8;
+      ctx.fillStyle = box.recognized ? 'rgba(34,197,94,0.85)' : 'rgba(239,68,68,0.85)';
+      ctx.fillRect(mirroredX, box.y - 20, textW, 20);
+      ctx.fillStyle = '#fff';
+      ctx.shadowBlur = 0;
+      ctx.fillText(label, mirroredX + 4, box.y - 5);
+    });
+  }, []);
+
   const startFaceScanning = useCallback(() => {
     const sid = scanSessionRef.current || session?.session_id;
     if (!sid) return;
@@ -240,7 +324,19 @@ function CreateLectureTab() {
       try {
         const res = await attendanceAI.markAttendanceMultiFace(sid, frame);
         const data = res.data;
-        // Multi-face response
+
+        // Draw bounding boxes from YOLO detections
+        if (data.bounding_boxes?.length > 0) {
+          setBoundingBoxes(data.bounding_boxes);
+          drawBoundingBoxes(data.bounding_boxes);
+        } else if (data.faces_detected === 0) {
+          // Clear if no faces
+          setBoundingBoxes([]);
+          const overlay = overlayCanvasRef.current;
+          if (overlay) overlay.getContext('2d').clearRect(0, 0, overlay.width, overlay.height);
+        }
+
+        // Multi-face response — update log
         if (data.multi_face && data.newly_marked?.length > 0) {
           const newEntries = data.newly_marked.map(s => ({
             student_name: s.student_name,
@@ -338,12 +434,23 @@ function CreateLectureTab() {
             <div className="relative aspect-[4/3] bg-black rounded-lg overflow-hidden">
               <video ref={videoRef} autoPlay muted playsInline className="w-full h-full object-cover scale-x-[-1]" />
               <canvas ref={canvasRef} className="hidden" />
+              {/* Bounding box overlay — sits on top of mirrored video */}
+              <canvas
+                ref={overlayCanvasRef}
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                style={{ mixBlendMode: 'normal' }}
+              />
               {scanning && (
                 <div className="absolute inset-0 border-2 border-emerald-500/70 rounded-lg pointer-events-none">
                   <div className="absolute top-2 left-2 flex items-center gap-1.5 bg-black/60 px-2 py-1 rounded-full">
                     <Wifi className="w-3 h-3 text-emerald-400 animate-pulse" />
-                    <span className="text-emerald-400 text-xs font-semibold">Auto-scanning every 2s...</span>
+                    <span className="text-emerald-400 text-xs font-semibold">YOLO scanning every 2s...</span>
                   </div>
+                  {boundingBoxes.length > 0 && (
+                    <div className="absolute top-2 right-2 bg-black/60 px-2 py-1 rounded-full text-xs text-white">
+                      {boundingBoxes.filter(b => b.recognized).length} / {boundingBoxes.length} recognized
+                    </div>
+                  )}
                 </div>
               )}
               {!cameraActive && (
@@ -604,30 +711,51 @@ function CreateLectureTab() {
     <div className="max-w-2xl mx-auto animate-fade-in">
       <form onSubmit={handleCreate} className="bg-[var(--gu-red-card)] border border-[var(--gu-border)] rounded-lg p-7 space-y-5">
 
-        {/* Course Selector */}
-        <div>
-          <label className="block text-xs font-semibold text-[var(--gu-gold)] uppercase tracking-wider mb-1.5">
-            <BookOpen className="w-3.5 h-3.5 inline mr-1 -mt-0.5" />Course
-          </label>
-          {subjectsLoading ? (
-            <div className="flex items-center gap-2 h-11 px-3 border border-[var(--gu-border)] rounded-lg bg-[#3D0F0F]">
-              <Loader2 className="w-4 h-4 animate-spin text-white/40" /><span className="text-white/40 text-sm">Loading...</span>
-            </div>
-          ) : courses.length === 0 ? (
-            <div className="flex items-center gap-2 h-11 px-3 border border-red-500/30 rounded-lg bg-red-900/20">
-              <AlertCircle className="w-4 h-4 text-red-400" /><span className="text-red-300 text-sm">No courses assigned to you</span>
-            </div>
-          ) : (
+        {/* Course & Semester */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Course Selector */}
+          <div>
+            <label className="block text-xs font-semibold text-[var(--gu-gold)] uppercase tracking-wider mb-1.5">
+              <BookOpen className="w-3.5 h-3.5 inline mr-1 -mt-0.5" />Course
+            </label>
+            {subjectsLoading ? (
+              <div className="flex items-center gap-2 h-11 px-3 border border-[var(--gu-border)] rounded-lg bg-[#3D0F0F]">
+                <Loader2 className="w-4 h-4 animate-spin text-white/40" /><span className="text-white/40 text-sm">Loading...</span>
+              </div>
+            ) : courses.length === 0 ? (
+              <div className="flex items-center gap-2 h-11 px-3 border border-red-500/30 rounded-lg bg-red-900/20">
+                <AlertCircle className="w-4 h-4 text-red-400" /><span className="text-red-300 text-sm">No courses assigned to you</span>
+              </div>
+            ) : (
+              <div className="relative">
+                <select value={selectedCourse} onChange={e => setSelectedCourse(e.target.value)}
+                  className="w-full appearance-none px-4 py-3 border border-[var(--gu-border)] rounded-lg text-sm text-white bg-[#3D0F0F] focus:outline-none focus:border-[var(--gu-gold)]">
+                  <option value="">Select Course</option>
+                  {courses.map(c => (
+                    <option key={c.id} value={c.id}>{c.code} – {c.name}</option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 pointer-events-none" />
+              </div>
+            )}
+          </div>
+
+          {/* Semester Selector */}
+          <div>
+            <label className="block text-xs font-semibold text-[var(--gu-gold)] uppercase tracking-wider mb-1.5">
+              <Clock className="w-3.5 h-3.5 inline mr-1 -mt-0.5" />Semester
+            </label>
             <div className="relative">
-              <select value={selectedCourse} onChange={e => setSelectedCourse(e.target.value)}
+              <select value={selectedSemester} onChange={e => setSelectedSemester(e.target.value)}
                 className="w-full appearance-none px-4 py-3 border border-[var(--gu-border)] rounded-lg text-sm text-white bg-[#3D0F0F] focus:outline-none focus:border-[var(--gu-gold)]">
-                {courses.map(c => (
-                  <option key={c.id} value={c.id}>{c.code} â€“ {c.name}</option>
+                <option value="">Select Semester</option>
+                {availableSemesters.map(sem => (
+                  <option key={sem} value={String(sem)}>Semester {sem}</option>
                 ))}
               </select>
               <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 pointer-events-none" />
             </div>
-          )}
+          </div>
         </div>
 
         {/* Subject Selector (filtered by course) */}
@@ -643,10 +771,10 @@ function CreateLectureTab() {
             <div className="relative">
               <select value={form.subject_id} onChange={e => setForm(f => ({ ...f, subject_id: e.target.value }))}
                 className="w-full appearance-none px-4 py-3 border border-[var(--gu-border)] rounded-lg text-sm text-white bg-[#3D0F0F] focus:outline-none focus:border-[var(--gu-gold)]">
-                {filteredSubjects.length === 0 && <option value="">No subjects for this course</option>}
+                {filteredSubjects.length === 0 && <option value="">No subjects matching selected criteria</option>}
                 {filteredSubjects.map(s => (
                   <option key={s.subject_id} value={String(s.subject_id)}>
-                    {s.code} â€“ {s.name} (Sem {s.semester})
+                    {s.code} – {s.name} (Sem {s.semester})
                   </option>
                 ))}
               </select>
@@ -654,9 +782,11 @@ function CreateLectureTab() {
             </div>
           )}
           {filteredSubjects.length > 0 && (
-            <p className="text-[11px] text-white/30 mt-1">{filteredSubjects.length} subject{filteredSubjects.length > 1 ? 's' : ''} assigned to you in this course</p>
+            <p className="text-[11px] text-white/30 mt-1">{filteredSubjects.length} subject{filteredSubjects.length > 1 ? 's' : ''} assigned to you matching criteria</p>
           )}
         </div>
+
+
 
         {/* Date */}
         <div>
@@ -706,6 +836,51 @@ function CreateLectureTab() {
           </button>
         </div>
       </form>
+
+      {/* Student Modal */}
+      {showStudentsModal && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-[var(--gu-red-card)] rounded-xl shadow-2xl w-full max-w-md border border-[var(--gu-border)] overflow-hidden flex flex-col max-h-[70vh] animate-in fade-in zoom-in-95 duration-200 text-white">
+            <div className="p-4 border-b border-[var(--gu-border)] flex justify-between items-center bg-[#2A0A0A]">
+              <div>
+                <h3 className="font-serif text-base text-[var(--gu-gold)] flex items-center gap-2">
+                  <Users className="w-4 h-4" /> Class Roster
+                </h3>
+                <p className="text-[10px] text-white/50 mt-0.5">{students.length} students enrolled</p>
+              </div>
+              <button onClick={() => setShowStudentsModal(false)}
+                className="p-1 hover:bg-white/10 rounded text-white/40 hover:text-white transition-colors">
+                <XCircle className="w-5 h-5" />
+              </button>
+            </div>
+            
+            <div className="overflow-y-auto flex-1 p-4 bg-[#1A0303]/40">
+              <div className="divide-y divide-[var(--gu-border)] border border-[var(--gu-border)] rounded-lg overflow-hidden bg-[#2A0A0A]/50">
+                {students.length === 0 ? (
+                  <div className="px-4 py-8 text-center text-white/40 text-xs">
+                    No students mapped to this class roster.
+                  </div>
+                ) : students.map((s, i) => (
+                  <div key={s.student_id || i} className="px-4 py-2.5 flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <div>
+                      <p className="text-xs font-semibold text-white">{s.name}</p>
+                      <p className="text-[10px] font-mono text-white/40">{s.enrollment_no || s.roll_no || 'N/A'}</p>
+                    </div>
+                    {s.email && <p className="text-[10px] text-white/50">{s.email}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="p-3 border-t border-[var(--gu-border)] bg-[#2A0A0A] flex justify-end">
+              <button onClick={() => setShowStudentsModal(false)}
+                className="px-4 py-2 bg-[var(--gu-border)] hover:bg-[var(--gu-border)]/80 text-white rounded text-xs font-bold uppercase tracking-wide transition-all">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

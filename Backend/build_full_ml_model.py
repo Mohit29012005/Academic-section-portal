@@ -291,16 +291,6 @@ def train_ml_model(questions_data):
 
     with open(MODEL_FILE, "wb") as f:
         pickle.dump(model, f)
-
-model = {
-        "model_data": model_data,
-        "questions": questions_data,
-        "summary": training_summary,
-        "version": "ML_v1.0",
-    }
-
-    with open(MODEL_FILE, "wb") as f:
-        pickle.dump(model, f)
     
     print(f"\n[OK] ML Model Trained!")
     print(f"  Total Subjects: {len(model_data)}")

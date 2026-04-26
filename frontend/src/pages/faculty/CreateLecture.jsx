@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import {
   QrCode, Clock, Users, ChevronDown, Loader2, AlertCircle,
   Copy, Download, CheckCircle, XCircle, RefreshCw, Calendar
 } from 'lucide-react';
-import { attendanceAI } from '../../services/api';
+import { attendanceAI, academicsAPI, facultyAPI } from '../../services/api';
 
 const SESSION_TYPES = [
   { value: 'lecture', label: 'Lecture' },
@@ -15,8 +15,15 @@ export default function CreateLecture() {
   const [subjects, setSubjects] = useState([]);
   const [subjectsLoading, setSubjectsLoading] = useState(true);
 
+  const [courses, setCourses] = useState([]);
+  const [students, setStudents] = useState([]);
+  const [studentsLoading, setStudentsLoading] = useState(false);
+  const [showStudentsModal, setShowStudentsModal] = useState(false);
+
   // Form state
   const [form, setForm] = useState({
+    course_id: '',
+    semester: '',
     subject_id: '',
     date: new Date().toISOString().slice(0, 10),
     start_time: '',
@@ -38,6 +45,7 @@ export default function CreateLecture() {
 
   useEffect(() => {
     fetchSubjects();
+    fetchCourses();
     return () => stopPolling();
   }, []);
 
@@ -45,13 +53,68 @@ export default function CreateLecture() {
     try {
       const res = await attendanceAI.getFacultySubjects({ assigned_only: true });
       setSubjects(res.data || []);
-      if (res.data?.length > 0) setForm(f => ({ ...f, subject_id: String(res.data[0].subject_id) }));
+      if (res.data?.length > 0) {
+        if (!form.course_id && !form.semester) {
+          setForm(f => ({ ...f, subject_id: String(res.data[0].subject_id) }));
+        }
+      }
     } catch {
       setSubjects([]);
     } finally {
       setSubjectsLoading(false);
     }
   };
+
+  const fetchCourses = async () => {
+    try {
+      const res = await academicsAPI.courses();
+      setCourses(res.data || []);
+    } catch (err) {
+      console.error("Failed to fetch courses", err);
+    }
+  };
+
+  useEffect(() => {
+    if (form.course_id && form.semester) {
+      fetchStudents(form.course_id, form.semester);
+    } else {
+      setStudents([]);
+      setForm(f => ({ ...f, total_students: '' }));
+    }
+  }, [form.course_id, form.semester]);
+
+  const fetchStudents = async (courseId, sem) => {
+    setStudentsLoading(true);
+    try {
+      const res = await facultyAPI.students({ course_id: courseId, semester: sem });
+      setStudents(res.data || []);
+      setForm(f => ({ ...f, total_students: res.data ? res.data.length.toString() : '0' }));
+    } catch (err) {
+      setStudents([]);
+      setForm(f => ({ ...f, total_students: '0' }));
+    } finally {
+      setStudentsLoading(false);
+    }
+  };
+
+  const filteredSubjects = useMemo(() => {
+    return subjects.filter(s => {
+      const matchCourse = !form.course_id || String(s.course) === String(form.course_id);
+      const matchSem = !form.semester || String(s.semester) === String(form.semester);
+      return matchCourse && matchSem;
+    });
+  }, [subjects, form.course_id, form.semester]);
+
+  useEffect(() => {
+    if (filteredSubjects.length > 0) {
+      const exists = filteredSubjects.some(s => String(s.subject_id) === String(form.subject_id));
+      if (!exists) {
+        setForm(f => ({ ...f, subject_id: String(filteredSubjects[0].subject_id) }));
+      }
+    } else {
+      setForm(f => ({ ...f, subject_id: '' }));
+    }
+  }, [filteredSubjects, form.subject_id]);
 
   const startPolling = (sessionId) => {
     stopPolling();
@@ -79,7 +142,8 @@ export default function CreateLecture() {
     setCreating(true);
     setFormError('');
     try {
-      const res = await attendanceAI.createLecture(form);
+      const { course_id, semester, ...payload } = form;
+      const res = await attendanceAI.createLecture(payload);
       setSession(res.data);
       startPolling(res.data.session_id);
     } catch (err) {
@@ -280,6 +344,40 @@ export default function CreateLecture() {
       </div>
 
       <form onSubmit={handleCreate} className="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm space-y-5">
+        {/* Course & Semester */}
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Course</label>
+            <div className="relative">
+              <select value={form.course_id} onChange={e => setForm(f => ({ ...f, course_id: e.target.value }))}
+                className="w-full appearance-none px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[var(--gu-red)] bg-white">
+                <option value="">Select Course</option>
+                {courses.map(c => (
+                  <option key={c.course_id} value={String(c.course_id)}>
+                    {c.name} ({c.code})
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            </div>
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Semester</label>
+            <div className="relative">
+              <select value={form.semester} onChange={e => setForm(f => ({ ...f, semester: e.target.value }))}
+                className="w-full appearance-none px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[var(--gu-red)] bg-white">
+                <option value="">Select Semester</option>
+                {[1, 2, 3, 4, 5, 6, 7, 8].map(sem => (
+                  <option key={sem} value={String(sem)}>
+                    Semester {sem}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            </div>
+          </div>
+        </div>
+
         {/* Subject */}
         <div>
           <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Subject</label>
@@ -292,8 +390,8 @@ export default function CreateLecture() {
             <div className="relative">
               <select value={form.subject_id} onChange={e => setForm(f => ({ ...f, subject_id: e.target.value }))}
                 className="w-full appearance-none px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[var(--gu-red)] bg-white">
-                {subjects.length === 0 && <option value="">No subjects assigned</option>}
-                {subjects.map(s => (
+                {filteredSubjects.length === 0 && <option value="">No subjects matching selected course/semester</option>}
+                {filteredSubjects.map(s => (
                   <option key={s.subject_id} value={String(s.subject_id)}>
                     {s.course_code} | {s.code} – {s.name}
                   </option>
@@ -355,14 +453,22 @@ export default function CreateLecture() {
         {/* Total Students */}
         <div>
           <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Total Students</label>
-          <div className="relative">
-            <Users className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-            <input type="number" min="1" value={form.total_students}
-              onChange={e => setForm(f => ({ ...f, total_students: e.target.value }))}
-              placeholder="Enter number of students in this class"
-              className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[var(--gu-red)]" />
+          <div className="flex gap-2 items-center">
+            <div className="relative flex-1">
+              <Users className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <input type="number" min="1" value={form.total_students} readOnly
+                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[var(--gu-red)] bg-gray-50 cursor-not-allowed" 
+                placeholder="Total students auto-filled" />
+            </div>
+            {students.length > 0 && (
+              <button type="button" onClick={() => setShowStudentsModal(true)}
+                className="px-4 py-3 border border-gray-200/80 bg-white hover:bg-gray-50 text-gray-700 rounded-xl text-sm font-semibold transition-colors flex items-center gap-2 shadow-sm">
+                View List ({students.length})
+              </button>
+            )}
           </div>
-          <p className="text-xs text-gray-400 mt-1">Enter the total number of students enrolled in this class.</p>
+          {studentsLoading && <p className="text-xs text-[var(--gu-red)] mt-1 flex items-center gap-1"><Loader2 className="w-3 h-3 animate-spin" /> Loading students...</p>}
+          <p className="text-xs text-gray-400 mt-1">Number of students dynamically loaded for chosen course &amp; semester.</p>
         </div>
 
         {formError && (
@@ -379,6 +485,45 @@ export default function CreateLecture() {
             : <><QrCode className="w-4 h-4" /> Create Session &amp; Generate QR</>}
         </button>
       </form>
+
+      {/* Student Modal */}
+      {showStudentsModal && (
+        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg border border-gray-200 overflow-hidden flex flex-col max-h-[80vh] animate-in fade-in zoom-in-95 duration-200">
+            <div className="p-5 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+              <div>
+                <h3 className="font-semibold text-gray-800">Enrolled Students</h3>
+                <p className="text-xs text-gray-500 mt-0.5">{students.length} students found</p>
+              </div>
+              <button onClick={() => setShowStudentsModal(false)}
+                className="p-1.5 hover:bg-gray-200 rounded-lg text-gray-400 hover:text-gray-600 transition-colors">
+                <XCircle className="w-5 h-5" />
+              </button>
+            </div>
+            
+            <div className="overflow-y-auto flex-1 p-4">
+              <div className="divide-y divide-gray-100 border border-gray-100 rounded-xl overflow-hidden bg-gray-50">
+                {students.map((s) => (
+                  <div key={s.student_id} className="px-4 py-3 flex items-center justify-between bg-white hover:bg-gray-50/50 transition-colors">
+                    <div>
+                      <p className="text-sm font-medium text-gray-700">{s.name}</p>
+                      <p className="text-xs font-mono text-gray-400">{s.enrollment_no}</p>
+                    </div>
+                    {s.email && <p className="text-xs text-gray-500">{s.email}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="p-4 border-t border-gray-100 bg-gray-50 flex justify-end">
+              <button onClick={() => setShowStudentsModal(false)}
+                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-xl text-sm font-semibold transition-colors">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
