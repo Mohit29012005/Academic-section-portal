@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import FacultyLayout from '../../components/FacultyLayout';
 import {
   QrCode, Clock, Users, ChevronDown, Loader2, AlertCircle,
@@ -280,13 +280,35 @@ function CreateLectureTab() {
     if (!session?.session_id) return;
     try {
       const res = await attendanceAI.downloadCSV(session.session_id);
+      
+      if (res.data && res.data.type === 'application/json') {
+        const text = await res.data.text();
+        const json = JSON.parse(text);
+        setExportResult({ success: false, message: json.error || 'Failed to download CSV' });
+        return;
+      }
+
       const url = window.URL.createObjectURL(new Blob([res.data]));
       const a = document.createElement('a');
       a.href = url;
       a.download = `attendance_${session.subject_code || 'session'}_${session.date}.csv`;
       document.body.appendChild(a); a.click(); a.remove();
       window.URL.revokeObjectURL(url);
-    } catch { /* silent */ }
+      setExportResult({ success: true, message: 'CSV downloaded successfully.' });
+    } catch (err) {
+      if (err.response && err.response.data instanceof Blob && err.response.data.type === 'application/json') {
+        err.response.data.text().then(text => {
+          try {
+            const errorData = JSON.parse(text);
+            setExportResult({ success: false, message: errorData.error || 'Failed to download CSV' });
+          } catch (e) {
+            setExportResult({ success: false, message: 'Failed to download CSV' });
+          }
+        });
+      } else {
+        setExportResult({ success: false, message: 'Failed to download CSV' });
+      }
+    }
   };
 
   // â”€â”€ Session ACTIVE: Face Scan Mode â”€â”€
@@ -736,14 +758,37 @@ function AttendanceReportTab() {
     setDownloading(prev => ({ ...prev, [sessionId]: true }));
     try {
       const res = await attendanceAI.downloadCSV(sessionId);
+      
+      if (res.data && res.data.type === 'application/json') {
+        const text = await res.data.text();
+        const json = JSON.parse(text);
+        setExportResults(prev => ({ ...prev, [sessionId]: { success: false, message: json.error || 'Failed to download CSV' } }));
+        setDownloading(prev => ({ ...prev, [sessionId]: false }));
+        return;
+      }
+
       const url = window.URL.createObjectURL(new Blob([res.data]));
       const a = document.createElement('a');
       a.href = url;
       a.download = `attendance_${subjectCode || 'session'}_${sessionDate || sessionId}.csv`;
       document.body.appendChild(a); a.click(); a.remove();
       window.URL.revokeObjectURL(url);
-    } catch { /* silent */ }
-    finally { setDownloading(prev => ({ ...prev, [sessionId]: false })); }
+    } catch (err) {
+      if (err.response && err.response.data instanceof Blob && err.response.data.type === 'application/json') {
+        err.response.data.text().then(text => {
+          try {
+            const errorData = JSON.parse(text);
+            setExportResults(prev => ({ ...prev, [sessionId]: { success: false, message: errorData.error || 'Failed to download CSV' } }));
+          } catch (e) {
+            setExportResults(prev => ({ ...prev, [sessionId]: { success: false, message: 'Failed to download CSV' } }));
+          }
+        });
+      } else {
+        setExportResults(prev => ({ ...prev, [sessionId]: { success: false, message: 'Failed to download CSV' } }));
+      }
+    } finally { 
+      setDownloading(prev => ({ ...prev, [sessionId]: false })); 
+    }
   };
 
   const getPctColor = (pct) => {

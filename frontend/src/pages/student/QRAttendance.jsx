@@ -2,9 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
   Camera, CheckCircle, XCircle, AlertCircle, Loader2,
-  User, BookOpen, Clock, LogIn, Video, VideoOff
+  User, BookOpen, Clock, LogIn, Video, VideoOff, MapPin, Smartphone
 } from 'lucide-react';
 import { attendanceAI, authAPI } from '../../services/api';
+import { getDeviceId, collectGPS } from '../../utils/deviceFingerprint';
+
 
 export default function QRAttendance() {
   const { qr_token } = useParams();
@@ -181,12 +183,34 @@ export default function QRAttendance() {
       setCameraError('Could not capture image. Make sure camera is working and try again.');
       return;
     }
-    
+
     setSubmitting(true);
     setCameraError('');
-    
+
     try {
-      const res = await attendanceAI.markAttendanceQR(qr_token, frame);
+      // ── Security: collect liveness frames (3 frames ~500ms apart) ──
+      const livenessFrames = [];
+      livenessFrames.push(frame); // frame 1
+      await new Promise(r => setTimeout(r, 500));
+      const f2 = captureFrame(); if (f2) livenessFrames.push(f2);
+      await new Promise(r => setTimeout(r, 500));
+      const f3 = captureFrame(); if (f3) livenessFrames.push(f3);
+
+      // ── Security: collect GPS + device fingerprint ──
+      const [{ lat, lng }, deviceId] = await Promise.all([
+        collectGPS(6000),
+        Promise.resolve(getDeviceId()),
+      ]);
+
+      const res = await attendanceAI.markAttendanceQR(
+        qr_token,
+        frame,
+        livenessFrames,
+        lat,
+        lng,
+        deviceId,
+      );
+
       if (res.data.success) {
         setSubmitSuccess(true);
         setPhase('success');

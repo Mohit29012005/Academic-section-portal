@@ -94,8 +94,14 @@ export const authAPI = {
     const refresh = localStorage.getItem('refresh_token');
     return api.post('/auth/refresh/', { refresh });
   },
-  resetPassword: (email, newPassword) =>
-    api.post('/auth/password/reset/', { email, new_password: newPassword }),
+  resetPasswordRequest: (loginId) =>
+    api.post('/auth/password/reset/request/', { login_id: loginId }),
+  resetPasswordVerify: (loginId, otp, newPassword) =>
+    api.post('/auth/password/reset/verify/', { login_id: loginId, otp, new_password: newPassword }),
+  requestEmailChange: (newEmail) =>
+    api.post('/auth/email/change/request/', { new_email: newEmail }),
+  verifyEmailChange: (otp) =>
+    api.post('/auth/email/change/verify/', { otp }),
   getNotifications: () => api.get('/auth/notifications/'),
 };
 
@@ -241,8 +247,15 @@ export const attendanceAI = {
   verifySession: (qrToken) =>
     api.get(`/attendance-ai/verify-session/${qrToken}/`),
 
-  markAttendanceQR: (qrToken, frame = null) =>
-    api.post('/attendance-ai/mark-attendance-qr/', { qr_token: qrToken, frame }),
+  markAttendanceQR: (qrToken, frame = null, livenessFrames = [], lat = null, lng = null, deviceId = '') =>
+    api.post('/attendance-ai/mark-attendance-qr/', {
+      qr_token: qrToken,
+      frame,
+      liveness_frames: livenessFrames,
+      latitude: lat,
+      longitude: lng,
+      device_id: deviceId,
+    }),
 
   // ── Faculty: Session CRUD ───────────────────────────────────────────────────
   createLecture: (data) =>
@@ -342,4 +355,21 @@ export const attendanceAI = {
   // ── Faculty: Attendance Reports ───────────────────────────────────────────
   getAttendanceReport: (params) =>
     api.get('/attendance-ai/faculty/sessions/', { params }),
+
+  // ── NEW: Security Endpoints ───────────────────────────────────────────────
+  /** Faculty: Set GPS anchor + geofence radius for a session. */
+  setSessionLocation: (sessionId, lat, lng, radius = 50) =>
+    api.post(`/attendance-ai/lecture/${sessionId}/set-location/`, {
+      latitude: lat,
+      longitude: lng,
+      radius,
+    }),
+
+  /** Faculty: Rotate QR token (call every qr_refresh_secs seconds). */
+  refreshQR: (sessionId) =>
+    api.post(`/attendance-ai/lecture/${sessionId}/refresh-qr/`),
+
+  /** Admin: Reset device binding for a student. */
+  resetStudentDevice: (studentId) =>
+    api.post(`/attendance-ai/admin/student/${studentId}/reset-device/`),
 };

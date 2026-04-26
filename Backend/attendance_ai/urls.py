@@ -10,7 +10,8 @@ urlpatterns = [
     # ── Public: QR Verification ──
     path('verify-session/<str:qr_token>/',  views.verify_session,            name='ai-verify-session'),
 
-    # ── Student: Mark via QR (second login) ──
+    # ── Student: Mark via QR & Active Sessions ──
+    path('student/active-sessions/',        views.student_active_sessions,   name='ai-active-sessions'),
     path('mark-attendance-qr/',             views.mark_attendance_qr,        name='ai-mark-qr'),
 
     # ── Liveness Detection ──
@@ -49,5 +50,10 @@ urlpatterns = [
     path('export-to-sheets/',                views.export_to_sheets,          name='ai-export-sheets'),
     path('export-cumulative/',               views.export_cumulative_sheets,  name='ai-export-cumulative'),
     path('download-csv/<int:session_id>/',   views.download_csv,             name='ai-download-csv'),
+
+    # ── NEW: Security endpoints ──────────────────────────────────────────────
+    path('lecture/<int:session_id>/set-location/',  views.set_session_location, name='ai-set-location'),
+    path('lecture/<int:session_id>/refresh-qr/',    views.refresh_qr,           name='ai-refresh-qr'),
+    path('admin/student/<str:student_id>/reset-device/', views.admin_reset_device, name='ai-reset-device'),
 ]
 

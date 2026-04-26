@@ -360,6 +360,53 @@ def verify_session(request, qr_token):
     )
 
 
+# ─── Student: Active Sessions ──────────────────────────────────────────────────
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def student_active_sessions(request):
+    """GET /student/active-sessions/ — Get active sessions for the student."""
+    err = _require_role(request, "student")
+    if err:
+        return err
+
+    try:
+        student_course = request.user.student_profile.course
+        active_sessions = LectureSession.objects.filter(
+            is_active=True,
+            subject__course=student_course,
+            date=now().date()
+        ).select_related('subject', 'faculty')
+    except Exception:
+        active_sessions = LectureSession.objects.filter(
+            is_active=True,
+            date=now().date()
+        ).select_related('subject', 'faculty')
+
+    sessions_data = []
+    for session in active_sessions:
+        try:
+            faculty_name = session.faculty.faculty_profile.name
+        except Exception:
+            faculty_name = session.faculty.email
+
+        sessions_data.append({
+            "session_id": session.id,
+            "subject_name": session.subject.name,
+            "subject_code": session.subject.code,
+            "faculty_name": faculty_name,
+            "date": str(session.date),
+            "start_time": str(session.start_time),
+            "end_time": str(session.end_time),
+        })
+
+    return Response({
+        "success": True,
+        "sessions": sessions_data
+    })
+
+
 # ─── Student: Mark Attendance via QR ─────────────────────────────────────────
 
 
@@ -418,6 +465,63 @@ def mark_attendance_qr(request):
             status=400,
         )
 
+    # ── SECURITY LAYER 1: GPS Geofencing ─────────────────────────────────────
+    gps_lat, gps_lng, gps_verified = None, None, False
+    if session.classroom_lat and session.classroom_lng:
+        from .security.geofence import validate_location
+        raw_lat = request.data.get("latitude")
+        raw_lng = request.data.get("longitude")
+        try:
+            gps_lat = float(raw_lat)
+            gps_lng = float(raw_lng)
+        except (TypeError, ValueError):
+            return Response(
+                {"success": False,
+                 "message": "This session requires GPS. Please enable location access."},
+                status=400,
+            )
+        geo = validate_location(
+            gps_lat, gps_lng,
+            session.classroom_lat, session.classroom_lng,
+            radius_m=session.geofence_radius,
+        )
+        if not geo["valid"]:
+            return Response(
+                {"success": False, "message": geo["message"]},
+                status=403,
+            )
+        gps_verified = True
+
+    # ── SECURITY LAYER 2: Device Binding ─────────────────────────────────────
+    from .security.device import get_or_register_device
+    device_id_val = request.data.get("device_id", "").strip()
+    user_agent_val = request.META.get("HTTP_USER_AGENT", "")
+    dev_check = get_or_register_device(request.user, device_id_val, user_agent_val)
+    if not dev_check["valid"]:
+        return Response(
+            {"success": False, "message": dev_check["message"]},
+            status=403,
+        )
+
+    # ── SECURITY LAYER 3: Liveness (multi-frame) ──────────────────────────────
+    liveness_passed_val = False
+    liveness_score_val = None
+    liveness_frames_b64 = request.data.get("liveness_frames", [])
+    if LIVENESS_AVAILABLE and liveness_frames_b64 and isinstance(liveness_frames_b64, list):
+        from .face_engine import decode_base64_image
+        rgb_frames = [decode_base64_image(f) for f in liveness_frames_b64 if f]
+        rgb_frames = [f for f in rgb_frames if f is not None]
+        if rgb_frames:
+            liveness_result = check_liveness_multi_frame(rgb_frames)
+            liveness_passed_val = liveness_result.get("is_live", False)
+            liveness_score_val = liveness_result.get("liveness_score")
+            if not liveness_passed_val:
+                return Response(
+                    {"success": False,
+                     "message": liveness_result.get("message", "Liveness check failed. Please blink naturally.")},
+                    status=403,
+                )
+
     # Face verification is mandatory for QR attendance marking.
     confidence = None
     snapshot_path = ""
@@ -475,6 +579,21 @@ def mark_attendance_qr(request):
 
     ip_address = request.META.get("REMOTE_ADDR", "")
 
+    # ── Composite Security Score (0-100) ─────────────────────────────────────
+    # Each component contributes a weighted portion.
+    # Used for audit/reporting — does NOT block attendance.
+    def _compute_security_score(confidence, gps_ok, device_ok, liveness_ok):
+        score = 0.0
+        if confidence:       score += min(confidence, 100) * 0.40  # 40% face confidence
+        if gps_ok:           score += 20.0                         # 20% GPS in range
+        if device_ok:        score += 20.0                         # 20% device match
+        if liveness_ok:      score += 20.0                         # 20% liveness
+        return round(score, 1)
+
+    composite_score = _compute_security_score(
+        confidence, gps_verified, dev_check["valid"], liveness_passed_val
+    )
+
     # Late detection — check if student is arriving after threshold
     attendance_status = "present"
     if ANOMALY_DETECTION_AVAILABLE:
@@ -488,6 +607,15 @@ def mark_attendance_qr(request):
         ip_address=ip_address,
         confidence_score=confidence,
         snapshot_path=snapshot_path,
+        # ── NEW security fields ──
+        latitude=gps_lat,
+        longitude=gps_lng,
+        gps_verified=gps_verified,
+        device_id=device_id_val,
+        device_verified=dev_check["valid"],
+        liveness_passed=liveness_passed_val,
+        liveness_score=liveness_score_val,
+        security_score=composite_score,
     )
 
     # Proxy detection
@@ -1620,6 +1748,9 @@ def student_attendance_stats(request, student_id):
 @permission_classes([IsAuthenticated])
 def export_to_sheets(request):
     """POST /export-to-sheets/ — export a session's attendance to Google Sheets."""
+    import logging
+    logger = logging.getLogger(__name__)
+    
     err = _require_role(request, "faculty", "admin")
     if err:
         return err
@@ -1628,26 +1759,39 @@ def export_to_sheets(request):
     spreadsheet_id = request.data.get("spreadsheet_id")
 
     if not session_id:
-        return Response({"error": "session_id is required."}, status=400)
+        return Response({"success": False, "error": "session_id is required."}, status=400)
 
     try:
         session = LectureSession.objects.get(id=session_id)
     except LectureSession.DoesNotExist:
-        return Response({"error": "Session not found."}, status=404)
+        return Response({"success": False, "error": "Session not found."}, status=404)
 
-    if request.user.role == "faculty" and session.faculty_id != request.user.id:
-        return Response({"error": "Access denied."}, status=403)
+    if request.user.role == "faculty" and session.faculty_id != request.user.user_id:
+        return Response({"success": False, "error": "Access denied."}, status=403)
 
-    from .sheets_export import export_session_to_sheet
-    result = export_session_to_sheet(session_id, spreadsheet_id)
-    status_code = 200 if result.get("success") else 500
-    return Response(result, status=status_code)
+    try:
+        from .sheets_export import export_session_to_sheet
+        result = export_session_to_sheet(session_id, spreadsheet_id)
+        status_code = 200 if result.get("success") else 500
+        return Response(result, status=status_code)
+    except Exception as e:
+        logger.error(f"Error in export_to_sheets: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return Response({
+            "success": False,
+            "error": f"Internal Server Error during Google Sheets export: {str(e)}",
+            "message": "Export failed."
+        }, status=500)
 
 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def export_cumulative_sheets(request):
     """POST /export-cumulative/ — export cumulative subject attendance."""
+    import logging
+    logger = logging.getLogger(__name__)
+    
     err = _require_role(request, "faculty", "admin")
     if err:
         return err
@@ -1657,18 +1801,75 @@ def export_cumulative_sheets(request):
     date_to = request.data.get("date_to")
 
     if not subject_id:
-        return Response({"error": "subject_id is required."}, status=400)
+        return Response({"success": False, "error": "subject_id is required."}, status=400)
 
-    from .sheets_export import export_subject_cumulative
-    result = export_subject_cumulative(subject_id, date_from, date_to)
-    status_code = 200 if result.get("success") else 500
-    return Response(result, status=status_code)
+    try:
+        from .sheets_export import export_subject_cumulative
+        result = export_subject_cumulative(subject_id, date_from, date_to)
+        status_code = 200 if result.get("success") else 500
+        return Response(result, status=status_code)
+    except Exception as e:
+        logger.error(f"Error in export_cumulative_sheets: {str(e)}")
+        return Response({
+            "success": False,
+            "error": f"Internal Server Error during cumulative export: {str(e)}",
+            "message": "Export failed."
+        }, status=500)
 
 
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def download_csv(request, session_id):
     """GET /download-csv/<session_id>/ — download attendance as CSV file."""
+    import logging
+    logger = logging.getLogger(__name__)
+    
+    err = _require_role(request, "faculty", "admin")
+    if err:
+        return err
+
+    try:
+        session = LectureSession.objects.get(id=session_id)
+    except LectureSession.DoesNotExist:
+        return Response({"success": False, "error": "Session not found."}, status=404)
+
+    if request.user.role == "faculty" and session.faculty_id != request.user.user_id:
+        return Response({"success": False, "error": "Access denied."}, status=403)
+
+    try:
+        from .sheets_export import _generate_csv_fallback
+        result = _generate_csv_fallback(session)
+
+        if result.get("csv_path"):
+            from django.http import FileResponse
+            filepath = os.path.join(settings.MEDIA_ROOT, result["csv_path"])
+            if os.path.exists(filepath):
+                response = FileResponse(
+                    open(filepath, 'rb'),
+                    content_type='text/csv',
+                    as_attachment=True,
+                    filename=os.path.basename(filepath),
+                )
+                return response
+        return Response({"success": False, "error": "CSV file could not be generated or located."}, status=500)
+    except Exception as e:
+        logger.error(f"Error in download_csv: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return Response({"success": False, "error": f"Exception generating CSV: {str(e)}"}, status=500)
+
+
+# ─── NEW: Faculty — Set Session Geofence ─────────────────────────────────────
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def set_session_location(request, session_id):
+    """
+    POST /lecture/<session_id>/set-location/
+    Faculty sets GPS anchor + radius for a session.
+    Students must be within geofence_radius metres of this point.
+    """
     err = _require_role(request, "faculty", "admin")
     if err:
         return err
@@ -1681,17 +1882,115 @@ def download_csv(request, session_id):
     if request.user.role == "faculty" and session.faculty_id != request.user.id:
         return Response({"error": "Access denied."}, status=403)
 
-    from .sheets_export import _generate_csv_fallback
-    result = _generate_csv_fallback(session)
+    raw_lat = request.data.get("latitude")
+    raw_lng = request.data.get("longitude")
+    radius  = request.data.get("radius", 50)
 
-    if result.get("csv_path"):
-        from django.http import FileResponse
-        filepath = os.path.join(settings.MEDIA_ROOT, result["csv_path"])
-        if os.path.exists(filepath):
-            return FileResponse(
-                open(filepath, 'rb'),
-                content_type='text/csv',
-                as_attachment=True,
-                filename=os.path.basename(filepath),
-            )
-    return Response({"error": "CSV generation failed."}, status=500)
+    try:
+        session.classroom_lat   = float(raw_lat)
+        session.classroom_lng   = float(raw_lng)
+        session.geofence_radius = int(radius)
+        session.save(update_fields=["classroom_lat", "classroom_lng", "geofence_radius"])
+    except (TypeError, ValueError):
+        return Response({"error": "Invalid coordinates or radius."}, status=400)
+
+    return Response({
+        "success": True,
+        "message": (
+            f"Geofence set: {radius}m radius at "
+            f"({session.classroom_lat:.5f}, {session.classroom_lng:.5f})."
+        ),
+    })
+
+
+# ─── NEW: Faculty — Rotate QR Token ─────────────────────────────────────────
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def refresh_qr(request, session_id):
+    """
+    POST /lecture/<session_id>/refresh-qr/
+    Generates a fresh QR token and image for the active session.
+    Call every qr_refresh_secs seconds from the faculty frontend.
+    Old token is immediately invalidated (new UUID replaces it).
+    """
+    err = _require_role(request, "faculty", "admin")
+    if err:
+        return err
+
+    try:
+        session = LectureSession.objects.get(id=session_id, is_active=True)
+    except LectureSession.DoesNotExist:
+        return Response({"error": "Active session not found."}, status=404)
+
+    if request.user.role == "faculty" and session.faculty_id != request.user.id:
+        return Response({"error": "Access denied."}, status=403)
+
+    import uuid as _uuid
+    from datetime import timedelta
+
+    session.qr_token      = _uuid.uuid4()
+    session.qr_expires_at = now() + timedelta(seconds=session.qr_refresh_secs)
+    session.save(update_fields=["qr_token", "qr_expires_at"])
+
+    frontend_base_url = _frontend_base_url_from_request(request)
+    try:
+        rel_path, attendance_url = generate_qr_code(
+            session.id,
+            str(session.qr_token),
+            frontend_base_url=frontend_base_url,
+        )
+        session.qr_image_path = rel_path
+        session.save(update_fields=["qr_image_path"])
+        qr_image_url = request.build_absolute_uri(f"{settings.MEDIA_URL}{rel_path}")
+    except Exception as exc:
+        logger.error(f"refresh_qr: QR generation failed: {exc}")
+        attendance_url = (
+            f"{frontend_base_url}/student/mark-attendance/{session.qr_token}/"
+        )
+        qr_image_url = ""
+
+    return Response({
+        "success": True,
+        "qr_token":      str(session.qr_token),
+        "qr_image_url":  qr_image_url,
+        "attendance_link": attendance_url,
+        "expires_at":    session.qr_expires_at,
+        "refresh_in_secs": session.qr_refresh_secs,
+    })
+
+
+# ─── NEW: Admin — Reset Student Device Binding ────────────────────────────────
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def admin_reset_device(request, student_id):
+    """
+    POST /admin/student/<student_id>/reset-device/
+    Admin removes all trusted device bindings for a student.
+    Use when a student legitimately changes their phone/device.
+    """
+    err = _require_role(request, "admin")
+    if err:
+        return err
+
+    from django.contrib.auth import get_user_model
+    from .security.device import reset_student_device
+
+    User = get_user_model()
+    try:
+        student_user = User.objects.get(user_id=student_id)
+    except User.DoesNotExist:
+        return Response({"error": "Student not found."}, status=404)
+
+    count = reset_student_device(student_user)
+    return Response({
+        "success": True,
+        "removed": count,
+        "message": (
+            f"Cleared {count} device binding(s) for {student_user.email}. "
+            "Their next attendance scan will register a new device."
+        ),
+    })

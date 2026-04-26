@@ -4,8 +4,9 @@ import {
   Briefcase, Brain, Target, BookOpen, Award, FileText,
   TrendingUp, CheckCircle, XCircle, Download, Search,
   Zap, Lightbulb, ChevronRight, Sparkles, GraduationCap,
-  Upload, File, Briefcase as BriefcaseIcon, Activity, Star, Rocket
+  Upload, File, Briefcase as BriefcaseIcon, Activity, Star, Rocket, ExternalLink
 } from "lucide-react";
+
 import { studentAPI } from "../../services/api";
 import { careerData } from "./career_data";
 
@@ -1230,6 +1231,33 @@ const Career_Guidance = () => {
                     {loading ? "SCANNING..." : "SCAN NETWORK"}
                   </button>
                 </div>
+                
+                <div className="flex flex-wrap gap-4 justify-center xl:justify-start relative z-10 mt-[-1rem] mb-8">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const query = `${internshipField} internship ${internshipLocation}`.trim().replace(/\s+/g, '+');
+                      window.open(`https://internshala.com/internships/keywords-${query}`, '_blank');
+                    }}
+                    className="px-6 py-3 rounded-sm bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 font-bold text-sm flex items-center gap-2 transition-all shadow-[0_0_15px_rgba(16,185,129,0.1)] hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    <ExternalLink size={16} />
+                    SEARCH LIVE ON INTERNSHALA
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const query = `${internshipField} internship ${internshipLocation}`.trim().replace(/\s+/g, '+');
+                      window.open(`https://www.linkedin.com/jobs/search/?keywords=${query}`, '_blank');
+                    }}
+                    className="px-6 py-3 rounded-sm bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-bold text-sm flex items-center gap-2 transition-all shadow-[0_0_15px_rgba(59,130,246,0.1)] hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    <ExternalLink size={16} />
+                    SEARCH LIVE ON LINKEDIN
+                  </button>
+                </div>
+
 
                 {internships.length > 0 && (
                   <div className="grid grid-cols-1 gap-6 relative z-10 animate-slide-up">

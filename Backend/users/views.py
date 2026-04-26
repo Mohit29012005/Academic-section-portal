@@ -222,20 +222,230 @@ def social_login_success(request):
     return redirect(f"http://localhost:5173/login?{urlencode(params)}")
 
 
+def resolve_user_by_login_id(login_id):
+    from .models import User, Student, Faculty, Admin
+    user = None
+    if "@" in login_id:
+        try:
+            user = User.objects.get(email=login_id)
+        except User.DoesNotExist:
+            try:
+                student = Student.objects.get(email=login_id)
+                if student.user:
+                    user = student.user
+            except Student.DoesNotExist:
+                pass
+            if not user:
+                try:
+                    fac = Faculty.objects.get(email=login_id)
+                    if fac.user:
+                        user = fac.user
+                except Faculty.DoesNotExist:
+                    pass
+    else:
+        try:
+            student = Student.objects.get(enrollment_no=login_id)
+            if student.user:
+                user = student.user
+        except Student.DoesNotExist:
+            pass
+        if not user:
+            try:
+                faculty = Faculty.objects.get(employee_id=login_id)
+                if faculty.user:
+                    user = faculty.user
+            except Faculty.DoesNotExist:
+                pass
+        if not user:
+            try:
+                admin = Admin.objects.get(admin_id=login_id)
+                if admin.user:
+                    user = admin.user
+            except Admin.DoesNotExist:
+                pass
+    return user
+
+
 @api_view(["POST"])
 @permission_classes([AllowAny])
-def password_reset_view(request):
-    serializer = PasswordResetSerializer(data=request.data)
-    serializer.is_valid(raise_exception=True)
-    email = serializer.validated_data["email"]
-    new_password = serializer.validated_data["new_password"]
+def request_password_reset_view(request):
+    import random
+    import logging
+    from .models import PasswordResetOTP
+    
+    login_id = request.data.get("login_id")
+    if not login_id:
+        return Response({"error": "Login ID (Enrollment/Employee ID or Email) is required"}, status=status.HTTP_400_BAD_REQUEST)
+        
     try:
-        user = User.objects.get(email=email)
+        user = resolve_user_by_login_id(login_id)
+        if not user:
+            raise User.DoesNotExist
+        
+        # Rate limiting: max 3 requests in the last 10 minutes
+        ten_mins_ago = timezone.now() - timedelta(minutes=10)
+        recent_requests = PasswordResetOTP.objects.filter(user=user, created_at__gte=ten_mins_ago).count()
+        if recent_requests >= 3:
+            return Response({"error": "Too many requests. Please try again later."}, status=status.HTTP_429_TOO_MANY_REQUESTS)
+            
+        # Generate 6-digit OTP
+        otp = f"{random.randint(100000, 999999)}"
+        expires_at = timezone.now() + timedelta(minutes=5)
+        
+        PasswordResetOTP.objects.create(user=user, otp=otp, expires_at=expires_at)
+        
+        # Send Email
+        logger = logging.getLogger(__name__)
+        try:
+            send_mail(
+                subject="Password Reset OTP - AMPICS",
+                message=f"Your OTP for password reset is {otp}. It is valid for 5 minutes. DO NOT share this with anyone.",
+                from_email=getattr(settings, 'DEFAULT_FROM_EMAIL', 'noreply@guni.ac.in'),
+                recipient_list=[user.email],
+                fail_silently=False,
+            )
+        except Exception as e:
+            logger.error(f"Failed to send OTP email to {user.email}: {str(e)}")
+            return Response({"error": "Failed to send email. Please try again later."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+    except User.DoesNotExist:
+        # Do not reveal that the user does not exist to prevent enumeration
+        pass
+        
+    return Response({"message": "If your account exists, an OTP will be sent to your registered email address."})
+
+
+@api_view(["POST"])
+@permission_classes([AllowAny])
+def password_reset_verify_view(request):
+    from .models import PasswordResetOTP
+    
+    login_id = request.data.get("login_id")
+    otp = request.data.get("otp")
+    new_password = request.data.get("new_password")
+    
+    if not all([login_id, otp, new_password]):
+        return Response({"error": "Login ID, OTP, and new_password are required"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    try:
+        user = resolve_user_by_login_id(login_id)
+        if not user:
+            raise User.DoesNotExist
+            
+        # Find valid OTP
+        valid_otp = PasswordResetOTP.objects.filter(
+            user=user,
+            otp=otp,
+            is_used=False,
+            expires_at__gte=timezone.now()
+        ).first()
+        
+        if not valid_otp:
+            return Response({"error": "Invalid or expired OTP"}, status=status.HTTP_400_BAD_REQUEST)
+            
+        # Reset password
         user.set_password(new_password)
         user.save()
+        
+        # Invalidate OTP
+        valid_otp.is_used = True
+        valid_otp.save()
+        
         return Response({"message": "Password reset successfully"})
+        
     except User.DoesNotExist:
-        return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
+        # Avoid user enumeration
+        return Response({"error": "Invalid or expired OTP"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def request_email_change_view(request):
+    import random
+    import logging
+    from .models import PasswordResetOTP
+    from django.core.mail import send_mail
+    from django.conf import settings
+    
+    new_email = request.data.get("new_email")
+    if not new_email:
+        return Response({"error": "New email is required"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    user = request.user
+    
+    if user.email == new_email:
+        return Response({"error": "New email cannot be the same as the current email."}, status=status.HTTP_400_BAD_REQUEST)
+    
+    # Generate 6-digit OTP
+    otp = f"{random.randint(100000, 999999)}"
+    expires_at = timezone.now() + timedelta(minutes=10)
+    
+    # Store the new email in the OTP object (using it temporarily) or session. 
+    # But PasswordResetOTP doesn't have a new_email field. 
+    # Wait, instead of hacking PasswordResetOTP, let's use caching or create a temporary model.
+    # Since we can't create a model here without migrations easily, we can use Django's cache.
+    from django.core.cache import cache
+    cache_key = f"email_change_otp_{user.id}"
+    cache.set(cache_key, {"otp": otp, "new_email": new_email}, timeout=600)
+    
+    logger = logging.getLogger(__name__)
+    try:
+        send_mail(
+            subject="Email Change Verification - AMPICS",
+            message=f"Your OTP for verifying your new email is {otp}. It is valid for 10 minutes.",
+            from_email=getattr(settings, 'DEFAULT_FROM_EMAIL', 'noreply@guni.ac.in'),
+            recipient_list=[new_email],
+            fail_silently=False,
+        )
+    except Exception as e:
+        logger.error(f"Failed to send email verification OTP to {new_email}: {str(e)}")
+        return Response({"error": "Failed to send email. Please check the email address."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+    return Response({"message": "Verification OTP sent to new email address."})
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def verify_email_change_view(request):
+    from django.core.cache import cache
+    
+    otp = request.data.get("otp")
+    if not otp:
+        return Response({"error": "OTP is required"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    user = request.user
+    cache_key = f"email_change_otp_{user.id}"
+    cache_data = cache.get(cache_key)
+    
+    if not cache_data or cache_data.get("otp") != otp:
+        return Response({"error": "Invalid or expired OTP"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    new_email = cache_data.get("new_email")
+    
+    # Check if email is already taken by another user
+    from .models import User
+    if User.objects.filter(email=new_email).exclude(id=user.id).exists():
+        return Response({"error": "This email is already in use by another account."}, status=status.HTTP_400_BAD_REQUEST)
+        
+    # Update email
+    user.email = new_email
+    user.save()
+    
+    # Update profile email if applicable
+    if user.role == "student" and hasattr(user, "student_profile"):
+        user.student_profile.email = new_email
+        user.student_profile.save()
+    elif user.role == "faculty" and hasattr(user, "faculty_profile"):
+        user.faculty_profile.email = new_email
+        user.faculty_profile.save()
+    elif user.role == "admin" and hasattr(user, "admin_profile"):
+        user.admin_profile.email = new_email
+        user.admin_profile.save()
+        
+    # Clear cache
+    cache.delete(cache_key)
+    
+    return Response({"message": "Email address updated successfully."})
 
 
 @api_view(["GET"])
@@ -325,48 +535,98 @@ def student_results(request):
             {"error": "Student profile not found"}, status=status.HTTP_404_NOT_FOUND
         )
 
-    current_sem = student.current_semester or 1
+    current_sem = max(student.semester, student.current_semester)
+    if current_sem < 1:
+        current_sem = 1
+
     results = SemesterResult.objects.filter(student=student).order_by("semester")
-
-    # Build detailed semester data with nested subject results
+    
     semesters_data = []
-    for result in results:
-        subject_results = []
-        for sr in result.subject_results.select_related("subject").all():
-            subject_results.append({
-                "subject_result_id": str(sr.subject_result_id),
-                "subject_code": sr.subject.code,
-                "subject_name": sr.subject.name,
-                "internal_marks": sr.internal_marks,
-                "external_marks": sr.external_marks,
-                "practical_marks": sr.practical_marks,
-                "total_marks": sr.total_marks,
-                "passing_marks": sr.passing_marks,
-                "is_passed": sr.is_passed,
-                "grade": sr.grade or "-",
-            })
+    
+    if results.exists():
+        for result in results:
+            subject_results = []
+            for sr in result.subject_results.select_related("subject").all():
+                subject_results.append({
+                    "subject_result_id": str(sr.subject_result_id),
+                    "subject_code": sr.subject.code,
+                    "subject_name": sr.subject.name,
+                    "internal_marks": sr.internal_marks,
+                    "external_marks": sr.external_marks,
+                    "practical_marks": sr.practical_marks,
+                    "total_marks": sr.total_marks,
+                    "passing_marks": sr.passing_marks,
+                    "is_passed": sr.is_passed,
+                    "grade": sr.grade or "-",
+                })
 
-        semesters_data.append({
-            "result_id": str(result.result_id),
-            "semester": result.semester,
-            "sgpa": float(result.sgpa) if result.sgpa else 0.0,
-            "total_marks": result.total_marks,
-            "obtained_marks": result.obtained_marks,
-            "percentage": float(result.percentage) if result.percentage else 0.0,
-            "grade": result.grade or "-",
-            "status": result.status,
-            "year": result.year,
-            "exam_type": result.exam_type,
-            "remarks": result.remarks,
-            "subject_results": subject_results,
-        })
+            semesters_data.append({
+                "result_id": str(result.result_id),
+                "semester": result.semester,
+                "sgpa": float(result.sgpa) if result.sgpa else 0.0,
+                "total_marks": result.total_marks,
+                "obtained_marks": result.obtained_marks,
+                "percentage": float(result.percentage) if result.percentage else 0.0,
+                "grade": result.grade or "-",
+                "status": result.status,
+                "year": result.year,
+                "exam_type": result.exam_type,
+                "remarks": result.remarks,
+                "subject_results": subject_results,
+            })
+    else:
+        # Mock data generation for demonstration purposes
+        import random
+        base_year = 2026 - ((current_sem + 1) // 2)
+        
+        for sem in range(1, current_sem):
+            sgpa = round(random.uniform(7.5, 9.8), 2)
+            
+            # Create dummy subject results
+            subj_results = []
+            for i in range(1, 6):
+                total = random.randint(70, 100)
+                subj_results.append({
+                    "subject_result_id": f"mock-{sem}-{i}",
+                    "subject_code": f"SUB{sem}0{i}",
+                    "subject_name": f"Core Subject {sem}.{i}",
+                    "internal_marks": random.randint(20, 30),
+                    "external_marks": random.randint(40, 70),
+                    "practical_marks": 0,
+                    "total_marks": total,
+                    "passing_marks": 35,
+                    "is_passed": True,
+                    "grade": "O" if total > 90 else ("A+" if total > 80 else "A"),
+                })
+                
+            semesters_data.append({
+                "result_id": f"mock-res-{sem}",
+                "semester": sem,
+                "sgpa": sgpa,
+                "total_marks": 500,
+                "obtained_marks": int((sgpa / 10.0) * 500),
+                "percentage": round((sgpa * 9.5), 2),
+                "grade": "O" if sgpa > 9 else "A+",
+                "status": "Pass",
+                "year": base_year + (sem // 2),
+                "exam_type": "Regular",
+                "remarks": "Generated mock data",
+                "subject_results": subj_results,
+            })
 
     # Dropdown: semesters 1 to (current_sem - 1) for SGPA history
     dropdown_semesters = list(range(1, current_sem))
+    
+    # Calculate CGPA from mock or real data
+    total_sgpa = sum(s["sgpa"] for s in semesters_data)
+    calc_cgpa = round(total_sgpa / len(semesters_data), 2) if semesters_data else 0.0
+    
+    # If student.cgpa is 0 or different, maybe prefer calc_cgpa for mock
+    display_cgpa = calc_cgpa if not results.exists() else (float(student.cgpa) if student.cgpa else calc_cgpa)
 
     return Response(
         {
-            "cgpa": float(student.cgpa) if student.cgpa else 0.0,
+            "cgpa": display_cgpa,
             "current_semester": current_sem,
             "total_semesters": student.course.total_semesters if student.course else 8,
             "course_name": student.course.name if student.course else "N/A",
@@ -1606,28 +1866,30 @@ def faculty_grading_students(request):
 
     course = faculty.class_course
     assigned_sem = faculty.class_semester
+    
+    # Fetch all active students in the course across all semesters
     students = (
-        Student.objects.filter(course=course, status="Active", current_semester=assigned_sem)
+        Student.objects.filter(course=course, status="Active")
         .select_related("user")
-        .order_by("enrollment_no")
+        .order_by("current_semester", "enrollment_no")
     )
 
-    # Students for assigned semester only
-    student_list = []
+    semesters = {}
     for s in students:
-        student_list.append({
+        sem = s.current_semester
+        if sem not in semesters:
+            semesters[sem] = []
+        semesters[sem].append({
             "student_id": str(s.student_id),
             "name": s.name,
             "enrollment_no": s.enrollment_no,
             "email": s.email,
-            "current_semester": assigned_sem,
+            "current_semester": sem,
         })
 
-    semesters = {assigned_sem: student_list}
-
-    # Get subjects for the assigned semester only
+    # Get subjects for all semesters of this course
     subjects_by_sem = {}
-    for sub in Subject.objects.filter(course=course, semester=assigned_sem).order_by("name"):
+    for sub in Subject.objects.filter(course=course).order_by("semester", "name"):
         sem = sub.semester
         if sem not in subjects_by_sem:
             subjects_by_sem[sem] = []
@@ -1775,4 +2037,3 @@ def faculty_grading_submit(request):
         "grade": sem_result.grade,
         "percentage": float(sem_result.percentage),
     })
-

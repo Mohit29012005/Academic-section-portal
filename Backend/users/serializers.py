@@ -22,6 +22,7 @@ class StudentSerializer(serializers.ModelSerializer):
         source="course.name", read_only=True, allow_null=True
     )
     course_id = serializers.SerializerMethodField()
+    current_semester = serializers.SerializerMethodField()
 
     class Meta:
         model = Student
@@ -56,6 +57,10 @@ class StudentSerializer(serializers.ModelSerializer):
 
     def get_course_id(self, obj):
         return str(obj.course.course_id) if obj.course else None
+
+    def get_current_semester(self, obj):
+        # Fix for some students having current_semester stuck at 1 while semester is > 1
+        return max(obj.semester, obj.current_semester)
 
 
 class StudentProfileUpdateSerializer(serializers.ModelSerializer):

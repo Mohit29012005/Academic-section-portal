@@ -633,12 +633,79 @@ def admin_generate_timetable(request):
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def pyq_search(request):
+    """
+    Returns shuffled, subject-specific questions for paper generation.
+    Priority order:
+      1. Trained ML model clusters (from real past papers)
+      2. DB questions (entered by faculty)
+      3. Topic-keyword question bank (fallback)
+    """
+    import random
+    from pyqs.apps import PyqsConfig
+    from pyqs.question_bank import generate_questions_for_subject
+
     subject_id = request.query_params.get('subject_id')
     if not subject_id:
         return Response({"error": "subject_id is required"}, status=400)
-    
-    questions = Question.objects.filter(exam__subject_id=subject_id).values('question_id', 'question_text', 'marks', 'exam__title')
-    return Response(list(questions))
+
+    try:
+        subject = Subject.objects.get(subject_id=subject_id)
+        subject_name = subject.name
+        subject_code = subject.code.upper()
+        semester     = subject.semester or 1
+    except Subject.DoesNotExist:
+        return Response({"error": "Subject not found"}, status=404)
+
+    all_questions = []
+    seen = set()
+
+    def add(q):
+        k = q.strip().lower()
+        if k not in seen and len(k) > 15:
+            seen.add(k)
+            all_questions.append(q.strip())
+
+    # ── 1. ML model clusters (real past-paper questions) ──────────────────
+    model_key = f"{semester}_{subject_code}"
+    clusters  = PyqsConfig.clusters.get(model_key, {})
+
+    # Also try fuzzy semester match (subject may exist in multiple semesters)
+    if not clusters:
+        for key in PyqsConfig.clusters:
+            if key.endswith(f"_{subject_code}"):
+                clusters = PyqsConfig.clusters[key]
+                break
+
+    # Sort by frequency score (most-repeated questions first)
+    ranked = sorted(
+        clusters.values(),
+        key=lambda c: (c.get("year_count", 1), c.get("count", 1)),
+        reverse=True,
+    )
+    for c in ranked:
+        add(c.get("representative", ""))
+
+    # ── 2. DB questions from faculty-entered exams ─────────────────────────
+    db_qs = (
+        Question.objects.filter(exam__subject_id=subject_id)
+        .values_list("question_text", flat=True)
+        .distinct()
+    )
+    for q in db_qs:
+        add(q)
+
+    # ── 3. Topic-keyword bank (fallback if model has < 15 questions) ───────
+    if len(all_questions) < 15:
+        for item in generate_questions_for_subject(subject_name, count=30):
+            add(item["question"])
+
+    # Shuffle so repeated calls return different order
+    random.shuffle(all_questions)
+
+    result = [{"question_id": i, "question_text": q}
+              for i, q in enumerate(all_questions)]
+    return Response(result)
+
 
 
 @api_view(["GET"])

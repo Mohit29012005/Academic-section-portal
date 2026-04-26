@@ -282,3 +282,18 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"[{self.priority}] {self.title} -> {self.target}"
+
+class PasswordResetOTP(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reset_otps')
+    otp = models.CharField(max_length=6)
+    created_at = models.DateTimeField(auto_now_add=True)
+    expires_at = models.DateTimeField()
+    is_used = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = "password_reset_otps"
+        verbose_name = "Password Reset OTP"
+        verbose_name_plural = "Password Reset OTPs"
+
+    def __str__(self):
+        return f"OTP for {self.user.email}"

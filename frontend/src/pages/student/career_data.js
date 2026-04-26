@@ -2,21084 +2,4284 @@ export const careerData = {
   "quizzes": {
     "python_beginner": [
       {
-        "q": "Lambda function?",
+        "q": "Which of the following is an anonymous function in Python?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "def",
+          "lambda",
+          "func",
+          "inline"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "What is the output of 3 * 1 ** 3?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "27",
+          "9",
+          "3",
+          "1"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which keyword is used for handling exceptions?",
+        "options": [
+          "catch",
+          "except",
+          "try",
+          "throw"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "What data structure is defined by using square brackets []?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "Tuple",
+          "Set",
+          "List",
+          "Dictionary"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you insert an element at the end of a list?",
+        "options": [
+          "insert()",
+          "push()",
+          "add()",
+          "append()"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "Which statement terminates the current loop?",
+        "options": [
+          "continue",
+          "break",
+          "stop",
+          "exit"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "What is the default return value of a function without a return statement?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "0",
+          "None",
+          "False",
+          "null"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "Which module is used for generating random numbers?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "math",
+          "random",
+          "os",
+          "sys"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "How do you start a multiline comment in Python?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "/* ... */",
+          "// ...",
+          "\"\"\" ... \"\"\"",
+          "# ..."
         ],
-        "answer": 1
+        "answer": 2
       },
       {
-        "q": "Lambda function?",
+        "q": "What is used to map keys to values in Python?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "Array",
+          "Dictionary",
+          "Queue",
+          "List"
         ],
         "answer": 1
       }
     ],
     "python_intermediate": [
       {
-        "q": "Lambda function?",
+        "q": "Which of the following is an anonymous function in Python?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "def",
+          "lambda",
+          "func",
+          "inline"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "What is the output of 3 * 1 ** 3?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "27",
+          "9",
+          "3",
+          "1"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which keyword is used for handling exceptions?",
+        "options": [
+          "catch",
+          "except",
+          "try",
+          "throw"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "What data structure is defined by using square brackets []?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "Tuple",
+          "Set",
+          "List",
+          "Dictionary"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you insert an element at the end of a list?",
+        "options": [
+          "insert()",
+          "push()",
+          "add()",
+          "append()"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "Which statement terminates the current loop?",
+        "options": [
+          "continue",
+          "break",
+          "stop",
+          "exit"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "What is the default return value of a function without a return statement?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "0",
+          "None",
+          "False",
+          "null"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "Which module is used for generating random numbers?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "math",
+          "random",
+          "os",
+          "sys"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "How do you start a multiline comment in Python?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "/* ... */",
+          "// ...",
+          "\"\"\" ... \"\"\"",
+          "# ..."
         ],
-        "answer": 1
+        "answer": 2
       },
       {
-        "q": "Lambda function?",
+        "q": "What is used to map keys to values in Python?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "Array",
+          "Dictionary",
+          "Queue",
+          "List"
         ],
         "answer": 1
       }
     ],
     "python_advanced": [
       {
-        "q": "Lambda function?",
+        "q": "Which of the following is an anonymous function in Python?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "def",
+          "lambda",
+          "func",
+          "inline"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "What is the output of 3 * 1 ** 3?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "27",
+          "9",
+          "3",
+          "1"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which keyword is used for handling exceptions?",
+        "options": [
+          "catch",
+          "except",
+          "try",
+          "throw"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "What data structure is defined by using square brackets []?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "Tuple",
+          "Set",
+          "List",
+          "Dictionary"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you insert an element at the end of a list?",
+        "options": [
+          "insert()",
+          "push()",
+          "add()",
+          "append()"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "Which statement terminates the current loop?",
+        "options": [
+          "continue",
+          "break",
+          "stop",
+          "exit"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "What is the default return value of a function without a return statement?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "0",
+          "None",
+          "False",
+          "null"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "Which module is used for generating random numbers?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "math",
+          "random",
+          "os",
+          "sys"
         ],
         "answer": 1
       },
       {
-        "q": "Lambda function?",
+        "q": "How do you start a multiline comment in Python?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "/* ... */",
+          "// ...",
+          "\"\"\" ... \"\"\"",
+          "# ..."
         ],
-        "answer": 1
+        "answer": 2
       },
       {
-        "q": "Lambda function?",
+        "q": "What is used to map keys to values in Python?",
         "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "Lambda function?",
-        "options": [
-          "Type",
-          "Anonymous Func",
-          "Framework",
-          "Loop"
+          "Array",
+          "Dictionary",
+          "Queue",
+          "List"
         ],
         "answer": 1
       }
     ],
     "javascript_beginner": [
       {
-        "q": "typeof null?",
+        "q": "What will `typeof null` return?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "\"null\"",
+          "\"object\"",
+          "\"undefined\"",
+          "\"string\""
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "Which operator is used to compare both value and type?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "==",
+          "===",
+          "=",
+          "!="
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "How do you declare a constant variable in JS?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "var",
+          "let",
+          "const",
+          "constant"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the output of `\"2\" + 2`?",
+        "options": [
+          "4",
+          "\"22\"",
+          "NaN",
+          "Error"
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "Which method removes the last element from an array?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "pop()",
+          "shift()",
+          "splice()",
+          "remove()"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How can you log a message to the console?",
+        "options": [
+          "print()",
+          "log()",
+          "console.log()",
+          "System.out.print()"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which of the following is a JS framework?",
+        "options": [
+          "Django",
+          "Laravel",
+          "React",
+          "Flask"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What does DOM stand for?",
+        "options": [
+          "Data Object Model",
+          "Document Object Model",
+          "Design Object Model",
+          "None"
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "Which event occurs when the user clicks on an HTML element?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "onmouseover",
+          "onchange",
+          "onclick",
+          "onmouseclick"
         ],
-        "answer": 1
+        "answer": 2
       },
       {
-        "q": "typeof null?",
+        "q": "What is the correct syntax to create an arrow function?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "() => {}",
+          "function() => {}",
+          "() -> {}",
+          "None"
         ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
+        "answer": 0
       }
     ],
     "javascript_intermediate": [
       {
-        "q": "typeof null?",
+        "q": "What will `typeof null` return?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "\"null\"",
+          "\"object\"",
+          "\"undefined\"",
+          "\"string\""
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "Which operator is used to compare both value and type?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "==",
+          "===",
+          "=",
+          "!="
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "How do you declare a constant variable in JS?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "var",
+          "let",
+          "const",
+          "constant"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the output of `\"2\" + 2`?",
+        "options": [
+          "4",
+          "\"22\"",
+          "NaN",
+          "Error"
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "Which method removes the last element from an array?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "pop()",
+          "shift()",
+          "splice()",
+          "remove()"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How can you log a message to the console?",
+        "options": [
+          "print()",
+          "log()",
+          "console.log()",
+          "System.out.print()"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which of the following is a JS framework?",
+        "options": [
+          "Django",
+          "Laravel",
+          "React",
+          "Flask"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What does DOM stand for?",
+        "options": [
+          "Data Object Model",
+          "Document Object Model",
+          "Design Object Model",
+          "None"
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "Which event occurs when the user clicks on an HTML element?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "onmouseover",
+          "onchange",
+          "onclick",
+          "onmouseclick"
         ],
-        "answer": 1
+        "answer": 2
       },
       {
-        "q": "typeof null?",
+        "q": "What is the correct syntax to create an arrow function?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "() => {}",
+          "function() => {}",
+          "() -> {}",
+          "None"
         ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
+        "answer": 0
       }
     ],
     "javascript_advanced": [
       {
-        "q": "typeof null?",
+        "q": "What will `typeof null` return?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "\"null\"",
+          "\"object\"",
+          "\"undefined\"",
+          "\"string\""
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "Which operator is used to compare both value and type?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "==",
+          "===",
+          "=",
+          "!="
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "How do you declare a constant variable in JS?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "var",
+          "let",
+          "const",
+          "constant"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the output of `\"2\" + 2`?",
+        "options": [
+          "4",
+          "\"22\"",
+          "NaN",
+          "Error"
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "Which method removes the last element from an array?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "pop()",
+          "shift()",
+          "splice()",
+          "remove()"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How can you log a message to the console?",
+        "options": [
+          "print()",
+          "log()",
+          "console.log()",
+          "System.out.print()"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which of the following is a JS framework?",
+        "options": [
+          "Django",
+          "Laravel",
+          "React",
+          "Flask"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What does DOM stand for?",
+        "options": [
+          "Data Object Model",
+          "Document Object Model",
+          "Design Object Model",
+          "None"
         ],
         "answer": 1
       },
       {
-        "q": "typeof null?",
+        "q": "Which event occurs when the user clicks on an HTML element?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "onmouseover",
+          "onchange",
+          "onclick",
+          "onmouseclick"
         ],
-        "answer": 1
+        "answer": 2
       },
       {
-        "q": "typeof null?",
+        "q": "What is the correct syntax to create an arrow function?",
         "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
+          "() => {}",
+          "function() => {}",
+          "() -> {}",
+          "None"
         ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
-      },
-      {
-        "q": "typeof null?",
-        "options": [
-          "null",
-          "object",
-          "undefined",
-          "string"
-        ],
-        "answer": 1
+        "answer": 0
       }
     ],
     "java_beginner": [
       {
-        "q": "Base java?",
+        "q": "Which data type is used to create a single character in Java?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "String",
+          "char",
+          "Character",
+          "chr"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the size of an int in Java?",
+        "options": [
+          "16-bit",
+          "32-bit",
+          "64-bit",
+          "8-bit"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which keyword is used to inherit a class in Java?",
+        "options": [
+          "implements",
+          "inherits",
+          "extends",
+          "base"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the default value of a boolean variable in Java?",
+        "options": [
+          "true",
+          "false",
+          "null",
+          "0"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which of these is NOT a Java access modifier?",
+        "options": [
+          "public",
+          "protected",
+          "private",
+          "internal"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "What is the entry point of a Java program?",
+        "options": [
+          "main()",
+          "start()",
+          "run()",
+          "init()"
         ],
         "answer": 0
       },
       {
-        "q": "Base java?",
+        "q": "Which collection does not allow duplicate values?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "ArrayList",
+          "LinkedList",
+          "HashSet",
+          "Vector"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base java?",
+        "q": "Which keyword creates an object in Java?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "create",
+          "make",
+          "new",
+          "instantiate"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base java?",
+        "q": "Which class is the root of all Java classes?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Base",
+          "Object",
+          "Root",
+          "System"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base java?",
+        "q": "How do you get the length of a string `str` in Java?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "str.length()",
+          "str.size()",
+          "str.length",
+          "str.count()"
         ],
         "answer": 0
       }
     ],
     "java_intermediate": [
       {
-        "q": "Base java?",
+        "q": "Which data type is used to create a single character in Java?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "String",
+          "char",
+          "Character",
+          "chr"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the size of an int in Java?",
+        "options": [
+          "16-bit",
+          "32-bit",
+          "64-bit",
+          "8-bit"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which keyword is used to inherit a class in Java?",
+        "options": [
+          "implements",
+          "inherits",
+          "extends",
+          "base"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the default value of a boolean variable in Java?",
+        "options": [
+          "true",
+          "false",
+          "null",
+          "0"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which of these is NOT a Java access modifier?",
+        "options": [
+          "public",
+          "protected",
+          "private",
+          "internal"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "What is the entry point of a Java program?",
+        "options": [
+          "main()",
+          "start()",
+          "run()",
+          "init()"
         ],
         "answer": 0
       },
       {
-        "q": "Base java?",
+        "q": "Which collection does not allow duplicate values?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "ArrayList",
+          "LinkedList",
+          "HashSet",
+          "Vector"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base java?",
+        "q": "Which keyword creates an object in Java?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "create",
+          "make",
+          "new",
+          "instantiate"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base java?",
+        "q": "Which class is the root of all Java classes?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Base",
+          "Object",
+          "Root",
+          "System"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base java?",
+        "q": "How do you get the length of a string `str` in Java?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "str.length()",
+          "str.size()",
+          "str.length",
+          "str.count()"
         ],
         "answer": 0
       }
     ],
     "java_advanced": [
       {
-        "q": "Base java?",
+        "q": "Which data type is used to create a single character in Java?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "String",
+          "char",
+          "Character",
+          "chr"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the size of an int in Java?",
+        "options": [
+          "16-bit",
+          "32-bit",
+          "64-bit",
+          "8-bit"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which keyword is used to inherit a class in Java?",
+        "options": [
+          "implements",
+          "inherits",
+          "extends",
+          "base"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the default value of a boolean variable in Java?",
+        "options": [
+          "true",
+          "false",
+          "null",
+          "0"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which of these is NOT a Java access modifier?",
+        "options": [
+          "public",
+          "protected",
+          "private",
+          "internal"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "What is the entry point of a Java program?",
+        "options": [
+          "main()",
+          "start()",
+          "run()",
+          "init()"
         ],
         "answer": 0
       },
       {
-        "q": "Base java?",
+        "q": "Which collection does not allow duplicate values?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "ArrayList",
+          "LinkedList",
+          "HashSet",
+          "Vector"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base java?",
+        "q": "Which keyword creates an object in Java?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "create",
+          "make",
+          "new",
+          "instantiate"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base java?",
+        "q": "Which class is the root of all Java classes?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Base",
+          "Object",
+          "Root",
+          "System"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base java?",
+        "q": "How do you get the length of a string `str` in Java?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base java?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "str.length()",
+          "str.size()",
+          "str.length",
+          "str.count()"
         ],
         "answer": 0
       }
     ],
     "cpp_beginner": [
       {
-        "q": "Base cpp?",
+        "q": "Which operator is used to allocate memory dynamically in C++?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "malloc",
+          "calloc",
+          "new",
+          "alloc"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What does STL stand for?",
+        "options": [
+          "Standard Template Library",
+          "Simple Template Library",
+          "Standard Type Library",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base cpp?",
+        "q": "Which of the following is used for output in C++?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "cin",
+          "cout",
+          "printf",
+          "print"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does the `virtual` keyword do?",
+        "options": [
+          "Optimizes code",
+          "Enables polymorphism",
+          "Protects data",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which header file is required for `cin` and `cout`?",
+        "options": [
+          "<stdio.h>",
+          "<iostream>",
+          "<string>",
+          "<stdlib.h>"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you free memory allocated with `new`?",
+        "options": [
+          "free()",
+          "release()",
+          "delete",
+          "remove"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the size of `char` in C++?",
+        "options": [
+          "1 byte",
+          "2 bytes",
+          "4 bytes",
+          "8 bytes"
         ],
         "answer": 0
       },
       {
-        "q": "Base cpp?",
+        "q": "Which loop is executed at least once?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "for",
+          "while",
+          "do-while",
+          "None"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base cpp?",
+        "q": "Which operator accesses a member using an object pointer?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          ".",
+          "::",
+          "->",
+          "*"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base cpp?",
+        "q": "What does the keyword `break` do?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Exits loop",
+          "Skips iteration",
+          "Exits program",
+          "None"
         ],
         "answer": 0
       }
     ],
     "cpp_intermediate": [
       {
-        "q": "Base cpp?",
+        "q": "Which operator is used to allocate memory dynamically in C++?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "malloc",
+          "calloc",
+          "new",
+          "alloc"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What does STL stand for?",
+        "options": [
+          "Standard Template Library",
+          "Simple Template Library",
+          "Standard Type Library",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base cpp?",
+        "q": "Which of the following is used for output in C++?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "cin",
+          "cout",
+          "printf",
+          "print"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does the `virtual` keyword do?",
+        "options": [
+          "Optimizes code",
+          "Enables polymorphism",
+          "Protects data",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which header file is required for `cin` and `cout`?",
+        "options": [
+          "<stdio.h>",
+          "<iostream>",
+          "<string>",
+          "<stdlib.h>"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you free memory allocated with `new`?",
+        "options": [
+          "free()",
+          "release()",
+          "delete",
+          "remove"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the size of `char` in C++?",
+        "options": [
+          "1 byte",
+          "2 bytes",
+          "4 bytes",
+          "8 bytes"
         ],
         "answer": 0
       },
       {
-        "q": "Base cpp?",
+        "q": "Which loop is executed at least once?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "for",
+          "while",
+          "do-while",
+          "None"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base cpp?",
+        "q": "Which operator accesses a member using an object pointer?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          ".",
+          "::",
+          "->",
+          "*"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base cpp?",
+        "q": "What does the keyword `break` do?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Exits loop",
+          "Skips iteration",
+          "Exits program",
+          "None"
         ],
         "answer": 0
       }
     ],
     "cpp_advanced": [
       {
-        "q": "Base cpp?",
+        "q": "Which operator is used to allocate memory dynamically in C++?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "malloc",
+          "calloc",
+          "new",
+          "alloc"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What does STL stand for?",
+        "options": [
+          "Standard Template Library",
+          "Simple Template Library",
+          "Standard Type Library",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base cpp?",
+        "q": "Which of the following is used for output in C++?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "cin",
+          "cout",
+          "printf",
+          "print"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does the `virtual` keyword do?",
+        "options": [
+          "Optimizes code",
+          "Enables polymorphism",
+          "Protects data",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which header file is required for `cin` and `cout`?",
+        "options": [
+          "<stdio.h>",
+          "<iostream>",
+          "<string>",
+          "<stdlib.h>"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you free memory allocated with `new`?",
+        "options": [
+          "free()",
+          "release()",
+          "delete",
+          "remove"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the size of `char` in C++?",
+        "options": [
+          "1 byte",
+          "2 bytes",
+          "4 bytes",
+          "8 bytes"
         ],
         "answer": 0
       },
       {
-        "q": "Base cpp?",
+        "q": "Which loop is executed at least once?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "for",
+          "while",
+          "do-while",
+          "None"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base cpp?",
+        "q": "Which operator accesses a member using an object pointer?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          ".",
+          "::",
+          "->",
+          "*"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base cpp?",
+        "q": "What does the keyword `break` do?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base cpp?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Exits loop",
+          "Skips iteration",
+          "Exits program",
+          "None"
         ],
         "answer": 0
       }
     ],
     "react_beginner": [
       {
-        "q": "Base react?",
+        "q": "What is the default port for a React app?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "8080",
+          "5000",
+          "3000",
+          "8000"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What hook is used to manage state?",
+        "options": [
+          "useEffect",
+          "useContext",
+          "useState",
+          "useReducer"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is JSX?",
+        "options": [
+          "JavaScript XML",
+          "JavaScript Extension",
+          "Java Syntax",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base react?",
+        "q": "How do you pass data to components?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "State",
+          "Props",
+          "Params",
+          "Signals"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What hook handles side effects?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "useState",
+          "useEffect",
+          "useRef",
+          "useMemo"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What is the virtual DOM?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "A backup DOM",
+          "A lightweight copy of the DOM",
+          "A faster browser DOM",
+          "None"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What is the purpose of keys in lists?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "To encrypt items",
+          "To track component state",
+          "To identify changes efficiently",
+          "None"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base react?",
+        "q": "How do you access state via hooks?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Directly",
+          "Using standard getters",
+          "Using the set function",
+          "None"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base react?",
+        "q": "Which hook stores a mutable reference?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "useMemo",
+          "useRef",
+          "useCallback",
+          "useReducer"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What is a Higher-Order Component?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "A stateful component",
+          "A component that renders another",
+          "A function that returns a component",
+          "None"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "react_intermediate": [
       {
-        "q": "Base react?",
+        "q": "What is the default port for a React app?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "8080",
+          "5000",
+          "3000",
+          "8000"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What hook is used to manage state?",
+        "options": [
+          "useEffect",
+          "useContext",
+          "useState",
+          "useReducer"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is JSX?",
+        "options": [
+          "JavaScript XML",
+          "JavaScript Extension",
+          "Java Syntax",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base react?",
+        "q": "How do you pass data to components?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "State",
+          "Props",
+          "Params",
+          "Signals"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What hook handles side effects?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "useState",
+          "useEffect",
+          "useRef",
+          "useMemo"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What is the virtual DOM?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "A backup DOM",
+          "A lightweight copy of the DOM",
+          "A faster browser DOM",
+          "None"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What is the purpose of keys in lists?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "To encrypt items",
+          "To track component state",
+          "To identify changes efficiently",
+          "None"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base react?",
+        "q": "How do you access state via hooks?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Directly",
+          "Using standard getters",
+          "Using the set function",
+          "None"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base react?",
+        "q": "Which hook stores a mutable reference?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "useMemo",
+          "useRef",
+          "useCallback",
+          "useReducer"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What is a Higher-Order Component?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "A stateful component",
+          "A component that renders another",
+          "A function that returns a component",
+          "None"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "react_advanced": [
       {
-        "q": "Base react?",
+        "q": "What is the default port for a React app?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "8080",
+          "5000",
+          "3000",
+          "8000"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What hook is used to manage state?",
+        "options": [
+          "useEffect",
+          "useContext",
+          "useState",
+          "useReducer"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is JSX?",
+        "options": [
+          "JavaScript XML",
+          "JavaScript Extension",
+          "Java Syntax",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base react?",
+        "q": "How do you pass data to components?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "State",
+          "Props",
+          "Params",
+          "Signals"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What hook handles side effects?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "useState",
+          "useEffect",
+          "useRef",
+          "useMemo"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What is the virtual DOM?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "A backup DOM",
+          "A lightweight copy of the DOM",
+          "A faster browser DOM",
+          "None"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What is the purpose of keys in lists?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "To encrypt items",
+          "To track component state",
+          "To identify changes efficiently",
+          "None"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base react?",
+        "q": "How do you access state via hooks?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Directly",
+          "Using standard getters",
+          "Using the set function",
+          "None"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base react?",
+        "q": "Which hook stores a mutable reference?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "useMemo",
+          "useRef",
+          "useCallback",
+          "useReducer"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base react?",
+        "q": "What is a Higher-Order Component?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "A stateful component",
+          "A component that renders another",
+          "A function that returns a component",
+          "None"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base react?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "node_beginner": [
       {
-        "q": "Base node?",
+        "q": "Which module is used to start a web server?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "http",
+          "fs",
+          "url",
+          "path"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "How do you import modules in Node.js?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "import",
+          "require",
+          "include",
+          "load"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What executes JavaScript outside the browser?",
+        "options": [
+          "NPM",
+          "Node.js runtime",
+          "V8 engine",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What command initializes a package.json?",
+        "options": [
+          "npm init",
+          "npm start",
+          "npm install",
+          "npm new"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "Which framework is commonly used with Node?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Django",
+          "Express",
+          "Flask",
+          "Spring"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the default file for Node apps?",
+        "options": [
+          "index.html",
+          "server.js/index.js",
+          "main.cpp",
+          "app.java"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does NPM stand for?",
+        "options": [
+          "Node Package Manager",
+          "Node Project Maker",
+          "New Package Manager",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "Which of these is built-in?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "axios",
+          "lodash",
+          "path",
+          "chalk"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you read environment variables?",
+        "options": [
+          "process.env",
+          "process.argv",
+          "os.env",
+          "env.get()"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "Which statement describes Node.js?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Multi-threaded",
+          "Synchronous",
+          "Single-threaded event loop",
+          "Browser-based"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "node_intermediate": [
       {
-        "q": "Base node?",
+        "q": "Which module is used to start a web server?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "http",
+          "fs",
+          "url",
+          "path"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "How do you import modules in Node.js?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "import",
+          "require",
+          "include",
+          "load"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What executes JavaScript outside the browser?",
+        "options": [
+          "NPM",
+          "Node.js runtime",
+          "V8 engine",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What command initializes a package.json?",
+        "options": [
+          "npm init",
+          "npm start",
+          "npm install",
+          "npm new"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "Which framework is commonly used with Node?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Django",
+          "Express",
+          "Flask",
+          "Spring"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the default file for Node apps?",
+        "options": [
+          "index.html",
+          "server.js/index.js",
+          "main.cpp",
+          "app.java"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does NPM stand for?",
+        "options": [
+          "Node Package Manager",
+          "Node Project Maker",
+          "New Package Manager",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "Which of these is built-in?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "axios",
+          "lodash",
+          "path",
+          "chalk"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you read environment variables?",
+        "options": [
+          "process.env",
+          "process.argv",
+          "os.env",
+          "env.get()"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "Which statement describes Node.js?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Multi-threaded",
+          "Synchronous",
+          "Single-threaded event loop",
+          "Browser-based"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "node_advanced": [
       {
-        "q": "Base node?",
+        "q": "Which module is used to start a web server?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "http",
+          "fs",
+          "url",
+          "path"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "How do you import modules in Node.js?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "import",
+          "require",
+          "include",
+          "load"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What executes JavaScript outside the browser?",
+        "options": [
+          "NPM",
+          "Node.js runtime",
+          "V8 engine",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What command initializes a package.json?",
+        "options": [
+          "npm init",
+          "npm start",
+          "npm install",
+          "npm new"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "Which framework is commonly used with Node?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Django",
+          "Express",
+          "Flask",
+          "Spring"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the default file for Node apps?",
+        "options": [
+          "index.html",
+          "server.js/index.js",
+          "main.cpp",
+          "app.java"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does NPM stand for?",
+        "options": [
+          "Node Package Manager",
+          "Node Project Maker",
+          "New Package Manager",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "Which of these is built-in?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "axios",
+          "lodash",
+          "path",
+          "chalk"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you read environment variables?",
+        "options": [
+          "process.env",
+          "process.argv",
+          "os.env",
+          "env.get()"
         ],
         "answer": 0
       },
       {
-        "q": "Base node?",
+        "q": "Which statement describes Node.js?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Multi-threaded",
+          "Synchronous",
+          "Single-threaded event loop",
+          "Browser-based"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base node?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "sql_beginner": [
       {
-        "q": "Base sql?",
+        "q": "Which clause filters records after grouping?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "WHERE",
+          "HAVING",
+          "GROUP BY",
+          "ORDER BY"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you select all columns from a table?",
+        "options": [
+          "SELECT ALL",
+          "SELECT *",
+          "SELECT columns",
+          "SELECT * FROM"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What constraint ensures unique values?",
+        "options": [
+          "DEFAULT",
+          "UNIQUE",
+          "CHECK",
+          "NOT NULL"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which join returns records with matches in both tables?",
+        "options": [
+          "LEFT JOIN",
+          "RIGHT JOIN",
+          "INNER JOIN",
+          "FULL JOIN"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What keyword sorts results?",
+        "options": [
+          "SORT",
+          "ORDER BY",
+          "GROUP BY",
+          "FILTER"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you remove a table?",
+        "options": [
+          "DELETE TABLE",
+          "DROP TABLE",
+          "REMOVE TABLE",
+          "TRUNCATE"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is a primary key?",
+        "options": [
+          "A key that locks tables",
+          "A unique identifier",
+          "A common join key",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which function counts records?",
+        "options": [
+          "SUM()",
+          "COUNT()",
+          "AVG()",
+          "TOTAL()"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does DDL stand for?",
+        "options": [
+          "Data Definition Language",
+          "Data Description Language",
+          "Dynamic Data Language",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base sql?",
+        "q": "How do you add a row?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "ADD ROW",
+          "INSERT INTO",
+          "UPDATE",
+          "CREATE"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "sql_intermediate": [
       {
-        "q": "Base sql?",
+        "q": "Which clause filters records after grouping?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "WHERE",
+          "HAVING",
+          "GROUP BY",
+          "ORDER BY"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you select all columns from a table?",
+        "options": [
+          "SELECT ALL",
+          "SELECT *",
+          "SELECT columns",
+          "SELECT * FROM"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What constraint ensures unique values?",
+        "options": [
+          "DEFAULT",
+          "UNIQUE",
+          "CHECK",
+          "NOT NULL"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which join returns records with matches in both tables?",
+        "options": [
+          "LEFT JOIN",
+          "RIGHT JOIN",
+          "INNER JOIN",
+          "FULL JOIN"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What keyword sorts results?",
+        "options": [
+          "SORT",
+          "ORDER BY",
+          "GROUP BY",
+          "FILTER"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you remove a table?",
+        "options": [
+          "DELETE TABLE",
+          "DROP TABLE",
+          "REMOVE TABLE",
+          "TRUNCATE"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is a primary key?",
+        "options": [
+          "A key that locks tables",
+          "A unique identifier",
+          "A common join key",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which function counts records?",
+        "options": [
+          "SUM()",
+          "COUNT()",
+          "AVG()",
+          "TOTAL()"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does DDL stand for?",
+        "options": [
+          "Data Definition Language",
+          "Data Description Language",
+          "Dynamic Data Language",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base sql?",
+        "q": "How do you add a row?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "ADD ROW",
+          "INSERT INTO",
+          "UPDATE",
+          "CREATE"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "sql_advanced": [
       {
-        "q": "Base sql?",
+        "q": "Which clause filters records after grouping?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "WHERE",
+          "HAVING",
+          "GROUP BY",
+          "ORDER BY"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you select all columns from a table?",
+        "options": [
+          "SELECT ALL",
+          "SELECT *",
+          "SELECT columns",
+          "SELECT * FROM"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What constraint ensures unique values?",
+        "options": [
+          "DEFAULT",
+          "UNIQUE",
+          "CHECK",
+          "NOT NULL"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which join returns records with matches in both tables?",
+        "options": [
+          "LEFT JOIN",
+          "RIGHT JOIN",
+          "INNER JOIN",
+          "FULL JOIN"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What keyword sorts results?",
+        "options": [
+          "SORT",
+          "ORDER BY",
+          "GROUP BY",
+          "FILTER"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you remove a table?",
+        "options": [
+          "DELETE TABLE",
+          "DROP TABLE",
+          "REMOVE TABLE",
+          "TRUNCATE"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is a primary key?",
+        "options": [
+          "A key that locks tables",
+          "A unique identifier",
+          "A common join key",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which function counts records?",
+        "options": [
+          "SUM()",
+          "COUNT()",
+          "AVG()",
+          "TOTAL()"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does DDL stand for?",
+        "options": [
+          "Data Definition Language",
+          "Data Description Language",
+          "Dynamic Data Language",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base sql?",
+        "q": "How do you add a row?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "ADD ROW",
+          "INSERT INTO",
+          "UPDATE",
+          "CREATE"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base sql?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "machine-learning_beginner": [
       {
-        "q": "Base machine-learning?",
+        "q": "What type of learning uses labeled data?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Supervised",
+          "Unsupervised",
+          "Reinforcement",
+          "Semi-supervised"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "Which algorithm is used for classification?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Linear Regression",
+          "K-Means",
+          "Logistic Regression",
+          "PCA"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is overfitting?",
+        "options": [
+          "Model performs well on training but poorly on test data",
+          "Model is too simple",
+          "Model is trained too fast",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What does CNN stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Computer Network Node",
+          "Convolutional Neural Network",
+          "Complex Neural Network",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which library is popular for ML?",
+        "options": [
+          "Scikit-learn",
+          "React",
+          "Express",
+          "Django"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What is the target of unsupervised learning?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Finding hidden patterns",
+          "Predicting labels",
+          "Maximizing rewards",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What evaluates classification models?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "MSE",
+          "R-squared",
+          "Confusion Matrix",
+          "MAE"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which method scales features?",
+        "options": [
+          "Standardization",
+          "Regularization",
+          "Tokenization",
+          "Bagging"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What is K in K-Means?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Iterations",
+          "Clusters",
+          "Data points",
+          "Features"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What does NLP stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Natural Language Processing",
+          "Neural Link Protocol",
+          "Network Layer Parser",
+          "None"
         ],
         "answer": 0
       }
     ],
     "machine-learning_intermediate": [
       {
-        "q": "Base machine-learning?",
+        "q": "What type of learning uses labeled data?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Supervised",
+          "Unsupervised",
+          "Reinforcement",
+          "Semi-supervised"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "Which algorithm is used for classification?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Linear Regression",
+          "K-Means",
+          "Logistic Regression",
+          "PCA"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is overfitting?",
+        "options": [
+          "Model performs well on training but poorly on test data",
+          "Model is too simple",
+          "Model is trained too fast",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What does CNN stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Computer Network Node",
+          "Convolutional Neural Network",
+          "Complex Neural Network",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which library is popular for ML?",
+        "options": [
+          "Scikit-learn",
+          "React",
+          "Express",
+          "Django"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What is the target of unsupervised learning?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Finding hidden patterns",
+          "Predicting labels",
+          "Maximizing rewards",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What evaluates classification models?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "MSE",
+          "R-squared",
+          "Confusion Matrix",
+          "MAE"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which method scales features?",
+        "options": [
+          "Standardization",
+          "Regularization",
+          "Tokenization",
+          "Bagging"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What is K in K-Means?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Iterations",
+          "Clusters",
+          "Data points",
+          "Features"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What does NLP stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Natural Language Processing",
+          "Neural Link Protocol",
+          "Network Layer Parser",
+          "None"
         ],
         "answer": 0
       }
     ],
     "machine-learning_advanced": [
       {
-        "q": "Base machine-learning?",
+        "q": "What type of learning uses labeled data?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Supervised",
+          "Unsupervised",
+          "Reinforcement",
+          "Semi-supervised"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "Which algorithm is used for classification?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Linear Regression",
+          "K-Means",
+          "Logistic Regression",
+          "PCA"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is overfitting?",
+        "options": [
+          "Model performs well on training but poorly on test data",
+          "Model is too simple",
+          "Model is trained too fast",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What does CNN stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Computer Network Node",
+          "Convolutional Neural Network",
+          "Complex Neural Network",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which library is popular for ML?",
+        "options": [
+          "Scikit-learn",
+          "React",
+          "Express",
+          "Django"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What is the target of unsupervised learning?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Finding hidden patterns",
+          "Predicting labels",
+          "Maximizing rewards",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What evaluates classification models?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "MSE",
+          "R-squared",
+          "Confusion Matrix",
+          "MAE"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which method scales features?",
+        "options": [
+          "Standardization",
+          "Regularization",
+          "Tokenization",
+          "Bagging"
         ],
         "answer": 0
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What is K in K-Means?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Iterations",
+          "Clusters",
+          "Data points",
+          "Features"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base machine-learning?",
+        "q": "What does NLP stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base machine-learning?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Natural Language Processing",
+          "Neural Link Protocol",
+          "Network Layer Parser",
+          "None"
         ],
         "answer": 0
       }
     ],
     "aws_beginner": [
       {
-        "q": "Base aws?",
+        "q": "What does EC2 stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Elastic Compute Cloud",
+          "Elastic Cloud Compute",
+          "Easy Compute Cloud",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "Which service stores files?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "RDS",
+          "S3",
+          "EC2",
+          "IAM"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the serverless computing service?",
+        "options": [
+          "Lambda",
+          "Fargate",
+          "Beanstalk",
+          "App Runner"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "Which AWS database is NoSQL?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "RDS",
+          "DynamoDB",
+          "Aurora",
+          "Redshift"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What controls user access?",
+        "options": [
+          "VPC",
+          "CloudWatch",
+          "IAM",
+          "Route 53"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which service distributes incoming traffic?",
+        "options": [
+          "ELB",
+          "Auto Scaling",
+          "CloudFront",
+          "Route 53"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "What is a VPC?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Virtual Private Cloud",
+          "Virtual Protocol Center",
+          "Variable Power Core",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "Which service deploys code automatically?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "CodeDeploy",
+          "EC2",
+          "SNS",
+          "SQS"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "What sends SMS/Email notifications?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "SQS",
+          "SNS",
+          "SES",
+          "IAM"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base aws?",
+        "q": "What monitors cloud resources?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "CloudTrail",
+          "CloudWatch",
+          "Inspector",
+          "Config"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "aws_intermediate": [
       {
-        "q": "Base aws?",
+        "q": "What does EC2 stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Elastic Compute Cloud",
+          "Elastic Cloud Compute",
+          "Easy Compute Cloud",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "Which service stores files?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "RDS",
+          "S3",
+          "EC2",
+          "IAM"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the serverless computing service?",
+        "options": [
+          "Lambda",
+          "Fargate",
+          "Beanstalk",
+          "App Runner"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "Which AWS database is NoSQL?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "RDS",
+          "DynamoDB",
+          "Aurora",
+          "Redshift"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What controls user access?",
+        "options": [
+          "VPC",
+          "CloudWatch",
+          "IAM",
+          "Route 53"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which service distributes incoming traffic?",
+        "options": [
+          "ELB",
+          "Auto Scaling",
+          "CloudFront",
+          "Route 53"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "What is a VPC?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Virtual Private Cloud",
+          "Virtual Protocol Center",
+          "Variable Power Core",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "Which service deploys code automatically?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "CodeDeploy",
+          "EC2",
+          "SNS",
+          "SQS"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "What sends SMS/Email notifications?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "SQS",
+          "SNS",
+          "SES",
+          "IAM"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base aws?",
+        "q": "What monitors cloud resources?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "CloudTrail",
+          "CloudWatch",
+          "Inspector",
+          "Config"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "aws_advanced": [
       {
-        "q": "Base aws?",
+        "q": "What does EC2 stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Elastic Compute Cloud",
+          "Elastic Cloud Compute",
+          "Easy Compute Cloud",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "Which service stores files?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "RDS",
+          "S3",
+          "EC2",
+          "IAM"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the serverless computing service?",
+        "options": [
+          "Lambda",
+          "Fargate",
+          "Beanstalk",
+          "App Runner"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "Which AWS database is NoSQL?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "RDS",
+          "DynamoDB",
+          "Aurora",
+          "Redshift"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What controls user access?",
+        "options": [
+          "VPC",
+          "CloudWatch",
+          "IAM",
+          "Route 53"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which service distributes incoming traffic?",
+        "options": [
+          "ELB",
+          "Auto Scaling",
+          "CloudFront",
+          "Route 53"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "What is a VPC?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Virtual Private Cloud",
+          "Virtual Protocol Center",
+          "Variable Power Core",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "Which service deploys code automatically?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "CodeDeploy",
+          "EC2",
+          "SNS",
+          "SQS"
         ],
         "answer": 0
       },
       {
-        "q": "Base aws?",
+        "q": "What sends SMS/Email notifications?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "SQS",
+          "SNS",
+          "SES",
+          "IAM"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base aws?",
+        "q": "What monitors cloud resources?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "CloudTrail",
+          "CloudWatch",
+          "Inspector",
+          "Config"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base aws?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "docker_beginner": [
       {
-        "q": "Base docker?",
+        "q": "What defines steps to build a Docker image?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Docker-compose",
+          "Dockerfile",
+          "Docker Hub",
+          "Docker daemon"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you start a container?",
+        "options": [
+          "docker build",
+          "docker run",
+          "docker start",
+          "docker create"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which command lists running containers?",
+        "options": [
+          "docker images",
+          "docker ps",
+          "docker run",
+          "docker status"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What separates containers from the host?",
+        "options": [
+          "Namespaces/cgroups",
+          "Hypervisors",
+          "Virtual Machines",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base docker?",
+        "q": "What stores Docker images publicly?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Docker Cloud",
+          "Docker Hub",
+          "GitHub",
+          "Docker Registry"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you clean unused images?",
+        "options": [
+          "docker prune",
+          "docker clean",
+          "docker remove",
+          "docker clear"
         ],
         "answer": 0
       },
       {
-        "q": "Base docker?",
+        "q": "Which tool runs multi-container setups?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Swarm",
+          "Compose",
+          "Kubernetes",
+          "Machine"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base docker?",
+        "q": "What is a persistent data storage in Docker?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Layer",
+          "Cache",
+          "Volume",
+          "Image"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base docker?",
+        "q": "What runs inside a Docker image?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "A full OS",
+          "Applications and dependencies",
+          "Only code",
+          "None"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base docker?",
+        "q": "How do you view logs of a container?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "docker show",
+          "docker logs",
+          "docker view",
+          "docker print"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "docker_intermediate": [
       {
-        "q": "Base docker?",
+        "q": "What defines steps to build a Docker image?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Docker-compose",
+          "Dockerfile",
+          "Docker Hub",
+          "Docker daemon"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you start a container?",
+        "options": [
+          "docker build",
+          "docker run",
+          "docker start",
+          "docker create"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which command lists running containers?",
+        "options": [
+          "docker images",
+          "docker ps",
+          "docker run",
+          "docker status"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What separates containers from the host?",
+        "options": [
+          "Namespaces/cgroups",
+          "Hypervisors",
+          "Virtual Machines",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base docker?",
+        "q": "What stores Docker images publicly?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Docker Cloud",
+          "Docker Hub",
+          "GitHub",
+          "Docker Registry"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you clean unused images?",
+        "options": [
+          "docker prune",
+          "docker clean",
+          "docker remove",
+          "docker clear"
         ],
         "answer": 0
       },
       {
-        "q": "Base docker?",
+        "q": "Which tool runs multi-container setups?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Swarm",
+          "Compose",
+          "Kubernetes",
+          "Machine"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base docker?",
+        "q": "What is a persistent data storage in Docker?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Layer",
+          "Cache",
+          "Volume",
+          "Image"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base docker?",
+        "q": "What runs inside a Docker image?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "A full OS",
+          "Applications and dependencies",
+          "Only code",
+          "None"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base docker?",
+        "q": "How do you view logs of a container?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "docker show",
+          "docker logs",
+          "docker view",
+          "docker print"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "docker_advanced": [
       {
-        "q": "Base docker?",
+        "q": "What defines steps to build a Docker image?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Docker-compose",
+          "Dockerfile",
+          "Docker Hub",
+          "Docker daemon"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you start a container?",
+        "options": [
+          "docker build",
+          "docker run",
+          "docker start",
+          "docker create"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which command lists running containers?",
+        "options": [
+          "docker images",
+          "docker ps",
+          "docker run",
+          "docker status"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What separates containers from the host?",
+        "options": [
+          "Namespaces/cgroups",
+          "Hypervisors",
+          "Virtual Machines",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base docker?",
+        "q": "What stores Docker images publicly?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Docker Cloud",
+          "Docker Hub",
+          "GitHub",
+          "Docker Registry"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you clean unused images?",
+        "options": [
+          "docker prune",
+          "docker clean",
+          "docker remove",
+          "docker clear"
         ],
         "answer": 0
       },
       {
-        "q": "Base docker?",
+        "q": "Which tool runs multi-container setups?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Swarm",
+          "Compose",
+          "Kubernetes",
+          "Machine"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base docker?",
+        "q": "What is a persistent data storage in Docker?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Layer",
+          "Cache",
+          "Volume",
+          "Image"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base docker?",
+        "q": "What runs inside a Docker image?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "A full OS",
+          "Applications and dependencies",
+          "Only code",
+          "None"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base docker?",
+        "q": "How do you view logs of a container?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "docker show",
+          "docker logs",
+          "docker view",
+          "docker print"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base docker?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "css_beginner": [
       {
-        "q": "Base css?",
+        "q": "What does CSS stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Cascading Style Sheets",
+          "Computer Style Sheets",
+          "Creative Style Sheets",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base css?",
+        "q": "Which property changes text color?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "background-color",
+          "text-color",
+          "color",
+          "font-color"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you select an ID?",
+        "options": [
+          ".",
+          "#",
+          "*",
+          "::"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which display allows flexbox?",
+        "options": [
+          "display: flex",
+          "display: box",
+          "display: block",
+          "display: grid"
         ],
         "answer": 0
       },
       {
-        "q": "Base css?",
+        "q": "What specifies space outside margins?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "padding",
+          "margin",
+          "border",
+          "spacing"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which property makes text bold?",
+        "options": [
+          "font-weight",
+          "font-style",
+          "text-weight",
+          "font-size"
         ],
         "answer": 0
       },
       {
-        "q": "Base css?",
+        "q": "How do you center text?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "align: center",
+          "text-align: center",
+          "vertical-align: middle",
+          "justify-content: center"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base css?",
+        "q": "What creates space inside elements?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "margin",
+          "padding",
+          "border",
+          "gap"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base css?",
+        "q": "Which position is fixed relative to viewport?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "absolute",
+          "relative",
+          "fixed",
+          "static"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base css?",
+        "q": "How do you apply styles to hover states?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          ":active",
+          ":focus",
+          ":hover",
+          ":visited"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "css_intermediate": [
       {
-        "q": "Base css?",
+        "q": "What does CSS stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Cascading Style Sheets",
+          "Computer Style Sheets",
+          "Creative Style Sheets",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base css?",
+        "q": "Which property changes text color?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "background-color",
+          "text-color",
+          "color",
+          "font-color"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you select an ID?",
+        "options": [
+          ".",
+          "#",
+          "*",
+          "::"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which display allows flexbox?",
+        "options": [
+          "display: flex",
+          "display: box",
+          "display: block",
+          "display: grid"
         ],
         "answer": 0
       },
       {
-        "q": "Base css?",
+        "q": "What specifies space outside margins?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "padding",
+          "margin",
+          "border",
+          "spacing"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which property makes text bold?",
+        "options": [
+          "font-weight",
+          "font-style",
+          "text-weight",
+          "font-size"
         ],
         "answer": 0
       },
       {
-        "q": "Base css?",
+        "q": "How do you center text?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "align: center",
+          "text-align: center",
+          "vertical-align: middle",
+          "justify-content: center"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base css?",
+        "q": "What creates space inside elements?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "margin",
+          "padding",
+          "border",
+          "gap"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base css?",
+        "q": "Which position is fixed relative to viewport?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "absolute",
+          "relative",
+          "fixed",
+          "static"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base css?",
+        "q": "How do you apply styles to hover states?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          ":active",
+          ":focus",
+          ":hover",
+          ":visited"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "css_advanced": [
       {
-        "q": "Base css?",
+        "q": "What does CSS stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Cascading Style Sheets",
+          "Computer Style Sheets",
+          "Creative Style Sheets",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base css?",
+        "q": "Which property changes text color?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "background-color",
+          "text-color",
+          "color",
+          "font-color"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you select an ID?",
+        "options": [
+          ".",
+          "#",
+          "*",
+          "::"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which display allows flexbox?",
+        "options": [
+          "display: flex",
+          "display: box",
+          "display: block",
+          "display: grid"
         ],
         "answer": 0
       },
       {
-        "q": "Base css?",
+        "q": "What specifies space outside margins?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "padding",
+          "margin",
+          "border",
+          "spacing"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which property makes text bold?",
+        "options": [
+          "font-weight",
+          "font-style",
+          "text-weight",
+          "font-size"
         ],
         "answer": 0
       },
       {
-        "q": "Base css?",
+        "q": "How do you center text?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "align: center",
+          "text-align: center",
+          "vertical-align: middle",
+          "justify-content: center"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base css?",
+        "q": "What creates space inside elements?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "margin",
+          "padding",
+          "border",
+          "gap"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base css?",
+        "q": "Which position is fixed relative to viewport?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "absolute",
+          "relative",
+          "fixed",
+          "static"
         ],
-        "answer": 0
+        "answer": 2
       },
       {
-        "q": "Base css?",
+        "q": "How do you apply styles to hover states?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          ":active",
+          ":focus",
+          ":hover",
+          ":visited"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base css?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 2
       }
     ],
     "html_beginner": [
       {
-        "q": "Base html?",
+        "q": "What does HTML stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Hyper Text Markup Language",
+          "Hyperlinks and Text Markup",
+          "Home Tool Markup Language",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base html?",
+        "q": "Which tag defines the largest heading?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "<h6>",
+          "<heading>",
+          "<h1>",
+          "<head>"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you insert a line break?",
+        "options": [
+          "<lb>",
+          "<br>",
+          "<break>",
+          "<newline>"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the tag for a hyperlink?",
+        "options": [
+          "<a>",
+          "<link>",
+          "<href>",
+          "<url>"
         ],
         "answer": 0
       },
       {
-        "q": "Base html?",
+        "q": "Which attribute specifies an image source?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "href",
+          "src",
+          "alt",
+          "source"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What creates a checkbox?",
+        "options": [
+          "<checkbox>",
+          "<input type=\"checkbox\">",
+          "<input type=\"check\">",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which tag defines a table row?",
+        "options": [
+          "<td>",
+          "<th>",
+          "<tr>",
+          "<table>"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you make an ordered list?",
+        "options": [
+          "<ul>",
+          "<ol>",
+          "<li>",
+          "<list>"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which tag holds metadata?",
+        "options": [
+          "<head>",
+          "<body>",
+          "<title>",
+          "<meta>"
         ],
         "answer": 0
       },
       {
-        "q": "Base html?",
+        "q": "Which HTML5 element plays video?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "<media>",
+          "<video>",
+          "<movie>",
+          "<source>"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "html_intermediate": [
       {
-        "q": "Base html?",
+        "q": "What does HTML stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Hyper Text Markup Language",
+          "Hyperlinks and Text Markup",
+          "Home Tool Markup Language",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base html?",
+        "q": "Which tag defines the largest heading?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "<h6>",
+          "<heading>",
+          "<h1>",
+          "<head>"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you insert a line break?",
+        "options": [
+          "<lb>",
+          "<br>",
+          "<break>",
+          "<newline>"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the tag for a hyperlink?",
+        "options": [
+          "<a>",
+          "<link>",
+          "<href>",
+          "<url>"
         ],
         "answer": 0
       },
       {
-        "q": "Base html?",
+        "q": "Which attribute specifies an image source?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "href",
+          "src",
+          "alt",
+          "source"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What creates a checkbox?",
+        "options": [
+          "<checkbox>",
+          "<input type=\"checkbox\">",
+          "<input type=\"check\">",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which tag defines a table row?",
+        "options": [
+          "<td>",
+          "<th>",
+          "<tr>",
+          "<table>"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you make an ordered list?",
+        "options": [
+          "<ul>",
+          "<ol>",
+          "<li>",
+          "<list>"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which tag holds metadata?",
+        "options": [
+          "<head>",
+          "<body>",
+          "<title>",
+          "<meta>"
         ],
         "answer": 0
       },
       {
-        "q": "Base html?",
+        "q": "Which HTML5 element plays video?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "<media>",
+          "<video>",
+          "<movie>",
+          "<source>"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "html_advanced": [
       {
-        "q": "Base html?",
+        "q": "What does HTML stand for?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Hyper Text Markup Language",
+          "Hyperlinks and Text Markup",
+          "Home Tool Markup Language",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base html?",
+        "q": "Which tag defines the largest heading?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "<h6>",
+          "<heading>",
+          "<h1>",
+          "<head>"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you insert a line break?",
+        "options": [
+          "<lb>",
+          "<br>",
+          "<break>",
+          "<newline>"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the tag for a hyperlink?",
+        "options": [
+          "<a>",
+          "<link>",
+          "<href>",
+          "<url>"
         ],
         "answer": 0
       },
       {
-        "q": "Base html?",
+        "q": "Which attribute specifies an image source?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "href",
+          "src",
+          "alt",
+          "source"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What creates a checkbox?",
+        "options": [
+          "<checkbox>",
+          "<input type=\"checkbox\">",
+          "<input type=\"check\">",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which tag defines a table row?",
+        "options": [
+          "<td>",
+          "<th>",
+          "<tr>",
+          "<table>"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you make an ordered list?",
+        "options": [
+          "<ul>",
+          "<ol>",
+          "<li>",
+          "<list>"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which tag holds metadata?",
+        "options": [
+          "<head>",
+          "<body>",
+          "<title>",
+          "<meta>"
         ],
         "answer": 0
       },
       {
-        "q": "Base html?",
+        "q": "Which HTML5 element plays video?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "<media>",
+          "<video>",
+          "<movie>",
+          "<source>"
         ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base html?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
+        "answer": 1
       }
     ],
     "go_beginner": [
       {
-        "q": "Base go?",
+        "q": "How do you declare a variable in Go?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "var x int",
+          "x := 10",
+          "Both",
+          "None"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What concurrency feature does Go use?",
+        "options": [
+          "Threads",
+          "Coroutines",
+          "Goroutines",
+          "Promises"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you start a Goroutine?",
+        "options": [
+          "run",
+          "start",
+          "go",
+          "async"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which keyword handles multiple channel operations?",
+        "options": [
+          "switch",
+          "case",
+          "select",
+          "channel"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the default value of an uninitialized int?",
+        "options": [
+          "0",
+          "nil",
+          "-1",
+          "undefined"
         ],
         "answer": 0
       },
       {
-        "q": "Base go?",
+        "q": "Does Go have classes?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Yes",
+          "No, it uses structs",
+          "Yes, using class keyword",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which data type holds errors?",
+        "options": [
+          "error",
+          "Exception",
+          "Err",
+          "Throwable"
         ],
         "answer": 0
       },
       {
-        "q": "Base go?",
+        "q": "What accesses slice capacity?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "size()",
+          "len()",
+          "cap()",
+          "length()"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you import packages?",
+        "options": [
+          "import \"fmt\"",
+          "require \"fmt\"",
+          "include \"fmt\"",
+          "load \"fmt\""
         ],
         "answer": 0
       },
       {
-        "q": "Base go?",
+        "q": "Which command runs tests?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "go test",
+          "go run",
+          "go build",
+          "go check"
         ],
         "answer": 0
       }
     ],
     "go_intermediate": [
       {
-        "q": "Base go?",
+        "q": "How do you declare a variable in Go?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "var x int",
+          "x := 10",
+          "Both",
+          "None"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What concurrency feature does Go use?",
+        "options": [
+          "Threads",
+          "Coroutines",
+          "Goroutines",
+          "Promises"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you start a Goroutine?",
+        "options": [
+          "run",
+          "start",
+          "go",
+          "async"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which keyword handles multiple channel operations?",
+        "options": [
+          "switch",
+          "case",
+          "select",
+          "channel"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the default value of an uninitialized int?",
+        "options": [
+          "0",
+          "nil",
+          "-1",
+          "undefined"
         ],
         "answer": 0
       },
       {
-        "q": "Base go?",
+        "q": "Does Go have classes?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Yes",
+          "No, it uses structs",
+          "Yes, using class keyword",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which data type holds errors?",
+        "options": [
+          "error",
+          "Exception",
+          "Err",
+          "Throwable"
         ],
         "answer": 0
       },
       {
-        "q": "Base go?",
+        "q": "What accesses slice capacity?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "size()",
+          "len()",
+          "cap()",
+          "length()"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you import packages?",
+        "options": [
+          "import \"fmt\"",
+          "require \"fmt\"",
+          "include \"fmt\"",
+          "load \"fmt\""
         ],
         "answer": 0
       },
       {
-        "q": "Base go?",
+        "q": "Which command runs tests?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "go test",
+          "go run",
+          "go build",
+          "go check"
         ],
         "answer": 0
       }
     ],
     "go_advanced": [
       {
-        "q": "Base go?",
+        "q": "How do you declare a variable in Go?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "var x int",
+          "x := 10",
+          "Both",
+          "None"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What concurrency feature does Go use?",
+        "options": [
+          "Threads",
+          "Coroutines",
+          "Goroutines",
+          "Promises"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you start a Goroutine?",
+        "options": [
+          "run",
+          "start",
+          "go",
+          "async"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which keyword handles multiple channel operations?",
+        "options": [
+          "switch",
+          "case",
+          "select",
+          "channel"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What is the default value of an uninitialized int?",
+        "options": [
+          "0",
+          "nil",
+          "-1",
+          "undefined"
         ],
         "answer": 0
       },
       {
-        "q": "Base go?",
+        "q": "Does Go have classes?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Yes",
+          "No, it uses structs",
+          "Yes, using class keyword",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which data type holds errors?",
+        "options": [
+          "error",
+          "Exception",
+          "Err",
+          "Throwable"
         ],
         "answer": 0
       },
       {
-        "q": "Base go?",
+        "q": "What accesses slice capacity?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "size()",
+          "len()",
+          "cap()",
+          "length()"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you import packages?",
+        "options": [
+          "import \"fmt\"",
+          "require \"fmt\"",
+          "include \"fmt\"",
+          "load \"fmt\""
         ],
         "answer": 0
       },
       {
-        "q": "Base go?",
+        "q": "Which command runs tests?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base go?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "go test",
+          "go run",
+          "go build",
+          "go check"
         ],
         "answer": 0
       }
     ],
     "rust_beginner": [
       {
-        "q": "Base rust?",
+        "q": "What manages memory safety in Rust?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Garbage Collector",
+          "Ownership model",
+          "Reference counting",
+          "Manual free"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you declare a mutable variable?",
+        "options": [
+          "let mut x = 5;",
+          "let x = 5;",
+          "mut let x = 5;",
+          "var x = 5;"
         ],
         "answer": 0
       },
       {
-        "q": "Base rust?",
+        "q": "What is Rust's package manager?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "npm",
+          "cargo",
+          "pip",
+          "gem"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which macro prints text?",
+        "options": [
+          "println!()",
+          "print!()",
+          "printf!()",
+          "Both 1 & 2"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "What is the borrow checker?",
+        "options": [
+          "A tool that checks code out",
+          "Compiler pass ensuring safety",
+          "A memory allocator",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What defines shared behavior?",
+        "options": [
+          "Interfaces",
+          "Traits",
+          "Abstract classes",
+          "Mixins"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What handles optional values?",
+        "options": [
+          "Option<T>",
+          "Nullable<T>",
+          "Maybe<T>",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base rust?",
+        "q": "Is memory freed automatically?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Yes, via GC",
+          "Yes, when out of scope",
+          "No, manually",
+          "None"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base rust?",
+        "q": "What keyword defines a function?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "def",
+          "fn",
+          "func",
+          "function"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base rust?",
+        "q": "Which type handles runtime failure gracefully?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Result<T, E>",
+          "Exception",
+          "Error",
+          "Option"
         ],
         "answer": 0
       }
     ],
     "rust_intermediate": [
       {
-        "q": "Base rust?",
+        "q": "What manages memory safety in Rust?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Garbage Collector",
+          "Ownership model",
+          "Reference counting",
+          "Manual free"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you declare a mutable variable?",
+        "options": [
+          "let mut x = 5;",
+          "let x = 5;",
+          "mut let x = 5;",
+          "var x = 5;"
         ],
         "answer": 0
       },
       {
-        "q": "Base rust?",
+        "q": "What is Rust's package manager?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "npm",
+          "cargo",
+          "pip",
+          "gem"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which macro prints text?",
+        "options": [
+          "println!()",
+          "print!()",
+          "printf!()",
+          "Both 1 & 2"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "What is the borrow checker?",
+        "options": [
+          "A tool that checks code out",
+          "Compiler pass ensuring safety",
+          "A memory allocator",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What defines shared behavior?",
+        "options": [
+          "Interfaces",
+          "Traits",
+          "Abstract classes",
+          "Mixins"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What handles optional values?",
+        "options": [
+          "Option<T>",
+          "Nullable<T>",
+          "Maybe<T>",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base rust?",
+        "q": "Is memory freed automatically?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Yes, via GC",
+          "Yes, when out of scope",
+          "No, manually",
+          "None"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base rust?",
+        "q": "What keyword defines a function?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "def",
+          "fn",
+          "func",
+          "function"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base rust?",
+        "q": "Which type handles runtime failure gracefully?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Result<T, E>",
+          "Exception",
+          "Error",
+          "Option"
         ],
         "answer": 0
       }
     ],
     "rust_advanced": [
       {
-        "q": "Base rust?",
+        "q": "What manages memory safety in Rust?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Garbage Collector",
+          "Ownership model",
+          "Reference counting",
+          "Manual free"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you declare a mutable variable?",
+        "options": [
+          "let mut x = 5;",
+          "let x = 5;",
+          "mut let x = 5;",
+          "var x = 5;"
         ],
         "answer": 0
       },
       {
-        "q": "Base rust?",
+        "q": "What is Rust's package manager?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "npm",
+          "cargo",
+          "pip",
+          "gem"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which macro prints text?",
+        "options": [
+          "println!()",
+          "print!()",
+          "printf!()",
+          "Both 1 & 2"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "What is the borrow checker?",
+        "options": [
+          "A tool that checks code out",
+          "Compiler pass ensuring safety",
+          "A memory allocator",
+          "None"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What defines shared behavior?",
+        "options": [
+          "Interfaces",
+          "Traits",
+          "Abstract classes",
+          "Mixins"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What handles optional values?",
+        "options": [
+          "Option<T>",
+          "Nullable<T>",
+          "Maybe<T>",
+          "None"
         ],
         "answer": 0
       },
       {
-        "q": "Base rust?",
+        "q": "Is memory freed automatically?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Yes, via GC",
+          "Yes, when out of scope",
+          "No, manually",
+          "None"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base rust?",
+        "q": "What keyword defines a function?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "def",
+          "fn",
+          "func",
+          "function"
         ],
-        "answer": 0
+        "answer": 1
       },
       {
-        "q": "Base rust?",
+        "q": "Which type handles runtime failure gracefully?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "answer": 0
-      },
-      {
-        "q": "Base rust?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
+          "Result<T, E>",
+          "Exception",
+          "Error",
+          "Option"
         ],
         "answer": 0
       }
@@ -22126,3003 +5326,4518 @@ export const careerData = {
   "internships": [
     {
       "id": 1,
-      "title": "Junior AI/ML Research",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "6 Months",
+      "title": "Graduate Software Development Intern",
+      "company": "GitLab",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Junior+AI/ML+Research+internship+Microsoft+Hyderabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+GitLab+Remote"
     },
     {
       "id": 2,
-      "title": "Intern Backend",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Associate UI/UX Design Intern",
+      "company": "GitLab",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Intern+Backend+internship+Apple+Hyderabad"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+Intern+internship+GitLab+Remote"
     },
     {
       "id": 3,
-      "title": "Intern Mobile App Development",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
+      "title": "Graduate Cloud/DevOps Intern",
+      "company": "GitLab",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "3 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Wipro+Mumbai"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cloud/DevOps+Intern+internship+GitLab+Remote"
     },
     {
       "id": 4,
-      "title": "Intern Backend",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
+      "title": "Junior Frontend Intern",
+      "company": "GitLab",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Intern+Backend+internship+Apple+Hyderabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Junior+Frontend+Intern+internship+GitLab+Remote"
     },
     {
       "id": 5,
-      "title": "Junior UI/UX Design",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Backend Intern",
+      "company": "GitLab",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Remote",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+internship+Amazon+Remote"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Junior+Backend+Intern+internship+GitLab+Remote"
     },
     {
       "id": 6,
-      "title": "Junior Cybersecurity",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Graduate Full Stack Intern",
+      "company": "GitLab",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "cybersecurity",
-      "apply_link": "https://www.google.com/search?q=Junior+Cybersecurity+internship+Meta+Bangalore"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+GitLab+Remote"
     },
     {
       "id": 7,
-      "title": "Associate Backend",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Software Development Intern",
+      "company": "Zapier",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Associate+Backend+internship+Microsoft+Hyderabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Zapier+Remote"
     },
     {
       "id": 8,
-      "title": "Junior UI/UX Design",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
+      "title": "Junior UI/UX Design Intern",
+      "company": "Zapier",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "3 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
       "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+internship+Netflix+Ahmedabad"
+      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+Intern+internship+Zapier+Remote"
     },
     {
       "id": 9,
-      "title": "Associate Product Management",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "6 Months",
+      "title": "Associate Cloud/DevOps Intern",
+      "company": "Zapier",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+internship+Tesla+Ahmedabad"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+Intern+internship+Zapier+Remote"
     },
     {
       "id": 10,
-      "title": "Associate UI/UX Design",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Associate Frontend Intern",
+      "company": "Zapier",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+internship+Stripe+Hyderabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Associate+Frontend+Intern+internship+Zapier+Remote"
     },
     {
       "id": 11,
-      "title": "Junior Backend",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Associate Backend Intern",
+      "company": "Zapier",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Remote",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
       "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Junior+Backend+internship+Spotify+Remote"
+      "apply_link": "https://www.google.com/search?q=Associate+Backend+Intern+internship+Zapier+Remote"
     },
     {
       "id": 12,
-      "title": "Junior Product Management",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Graduate Full Stack Intern",
+      "company": "Zapier",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Junior+Product+Management+internship+Google+Pune"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+Zapier+Remote"
     },
     {
       "id": 13,
-      "title": "Junior UI/UX Design",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Graduate Software Development Intern",
+      "company": "Automattic",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+internship+Uber+Mumbai"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Automattic+Remote"
     },
     {
       "id": 14,
-      "title": "Intern UI/UX Design",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Junior UI/UX Design Intern",
+      "company": "Automattic",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
       "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Intern+UI/UX+Design+internship+TCS+Hyderabad"
+      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+Intern+internship+Automattic+Remote"
     },
     {
       "id": 15,
-      "title": "Junior Blockchain",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Cloud/DevOps Intern",
+      "company": "Automattic",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Remote",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Junior+Blockchain+internship+Apple+Remote"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Junior+Cloud/DevOps+Intern+internship+Automattic+Remote"
     },
     {
       "id": 16,
-      "title": "Intern Full Stack",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Graduate Frontend Intern",
+      "company": "Automattic",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "3 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Intern+Full+Stack+internship+Spotify+Mumbai"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Frontend+Intern+internship+Automattic+Remote"
     },
     {
       "id": 17,
-      "title": "Associate Blockchain",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
+      "title": "Junior Backend Intern",
+      "company": "Automattic",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "6 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Associate+Blockchain+internship+Amazon+Delhi+NCR"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Junior+Backend+Intern+internship+Automattic+Remote"
     },
     {
       "id": 18,
-      "title": "Associate Data Science",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
+      "title": "Junior Full Stack Intern",
+      "company": "Automattic",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+internship+Amazon+Mumbai"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+Intern+internship+Automattic+Remote"
     },
     {
       "id": 19,
-      "title": "Intern Data Science",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Associate Software Development Intern",
+      "company": "Stripe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Intern+Data+Science+internship+Infosys+Bangalore"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+Intern+internship+Stripe+Remote"
     },
     {
       "id": 20,
-      "title": "Intern Mobile App Development",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Junior UI/UX Design Intern",
+      "company": "Stripe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "3 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Apple+Hyderabad"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+Intern+internship+Stripe+Remote"
     },
     {
       "id": 21,
-      "title": "Junior Software Development",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Cloud/DevOps Intern",
+      "company": "Stripe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "6 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+internship+Microsoft+Bangalore"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cloud/DevOps+Intern+internship+Stripe+Remote"
     },
     {
       "id": 22,
-      "title": "Intern Cloud/DevOps",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Junior Frontend Intern",
+      "company": "Stripe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "6 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Intern+Cloud/DevOps+internship+Spotify+Hyderabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Junior+Frontend+Intern+internship+Stripe+Remote"
     },
     {
       "id": 23,
-      "title": "Intern Blockchain",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Associate Backend Intern",
+      "company": "Stripe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Remote",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Intern+Blockchain+internship+Tesla+Remote"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Associate+Backend+Intern+internship+Stripe+Remote"
     },
     {
       "id": 24,
-      "title": "Associate Product Management",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Associate Full Stack Intern",
+      "company": "Stripe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "6 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+internship+Tesla+Pune"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+Stripe+Remote"
     },
     {
       "id": 25,
-      "title": "Junior Full Stack",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Junior Software Development Intern",
+      "company": "Spotify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "Python",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+internship+Tesla+Pune"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+Spotify+Remote"
     },
     {
       "id": 26,
-      "title": "Junior UI/UX Design",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Junior UI/UX Design Intern",
+      "company": "Spotify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
       "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+internship+Netflix+Bangalore"
+      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+Intern+internship+Spotify+Remote"
     },
     {
       "id": 27,
-      "title": "Junior AI/ML Research",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Cloud/DevOps Intern",
+      "company": "Spotify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Remote",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Junior+AI/ML+Research+internship+Tesla+Remote"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cloud/DevOps+Intern+internship+Spotify+Remote"
     },
     {
       "id": 28,
-      "title": "Junior Full Stack",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
+      "title": "Associate Frontend Intern",
+      "company": "Spotify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+internship+Google+Ahmedabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Associate+Frontend+Intern+internship+Spotify+Remote"
     },
     {
       "id": 29,
-      "title": "Intern AI/ML Research",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Junior Backend Intern",
+      "company": "Spotify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Intern+AI/ML+Research+internship+Netflix+Bangalore"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Junior+Backend+Intern+internship+Spotify+Remote"
     },
     {
       "id": 30,
-      "title": "Associate Mobile App Development",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Associate Full Stack Intern",
+      "company": "Spotify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+internship+Amazon+Ahmedabad"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+Spotify+Remote"
     },
     {
       "id": 31,
-      "title": "Associate Game Development",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "3 Months",
+      "title": "Graduate Software Development Intern",
+      "company": "Shopify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
+      "duration": "6 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "game development",
-      "apply_link": "https://www.google.com/search?q=Associate+Game+Development+internship+Stripe+Delhi+NCR"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Shopify+Remote"
     },
     {
       "id": 32,
-      "title": "Associate Full Stack",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Graduate UI/UX Design Intern",
+      "company": "Shopify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+internship+TCS+Bangalore"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Graduate+UI/UX+Design+Intern+internship+Shopify+Remote"
     },
     {
       "id": 33,
-      "title": "Junior UI/UX Design",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Associate Cloud/DevOps Intern",
+      "company": "Shopify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Remote",
-      "duration": "3 Months",
+      "duration": "6 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+internship+Microsoft+Remote"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+Intern+internship+Shopify+Remote"
     },
     {
       "id": 34,
-      "title": "Associate UI/UX Design",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Junior Frontend Intern",
+      "company": "Shopify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+internship+Apple+Bangalore"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Junior+Frontend+Intern+internship+Shopify+Remote"
     },
     {
       "id": 35,
-      "title": "Intern Frontend",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Backend Intern",
+      "company": "Shopify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Remote",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Intern+Frontend+internship+Wipro+Remote"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+Shopify+Remote"
     },
     {
       "id": 36,
-      "title": "Intern Mobile App Development",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Junior Full Stack Intern",
+      "company": "Shopify",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Remote",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
+        "MERN Stack",
+        "PostgreSQL",
         "React"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Uber+Bangalore"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+Intern+internship+Shopify+Remote"
     },
     {
       "id": 37,
-      "title": "Intern Cybersecurity",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Software Development Intern",
+      "company": "Google",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "cybersecurity",
-      "apply_link": "https://www.google.com/search?q=Intern+Cybersecurity+internship+Meta+Ahmedabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Google+Bangalore"
     },
     {
       "id": 38,
-      "title": "Junior UI/UX Design",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Junior Data Science Intern",
+      "company": "Google",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Python",
+        "SQL",
+        "R"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+internship+Microsoft+Remote"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+Intern+internship+Google+Bangalore"
     },
     {
       "id": 39,
-      "title": "Associate Product Management",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Junior Cloud/DevOps Intern",
+      "company": "Google",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+internship+Meta+Mumbai"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Junior+Cloud/DevOps+Intern+internship+Google+Bangalore"
     },
     {
       "id": 40,
-      "title": "Associate Full Stack",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Cybersecurity Intern",
+      "company": "Google",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+internship+Wipro+Hyderabad"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cybersecurity+Intern+internship+Google+Bangalore"
     },
     {
       "id": 41,
-      "title": "Associate Blockchain",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate AI/ML Research Intern",
+      "company": "Google",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Python",
+        "PyTorch",
+        "TensorFlow"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Associate+Blockchain+internship+Infosys+Remote"
+      "requirements": [
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "field": "ai/ml research",
+      "apply_link": "https://www.google.com/search?q=Graduate+AI/ML+Research+Intern+internship+Google+Bangalore"
     },
     {
       "id": 42,
-      "title": "Associate Product Management",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Backend Intern",
+      "company": "Google",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Bangalore",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "duration": "6 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+internship+Netflix+Bangalore"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+Google+Bangalore"
     },
     {
       "id": 43,
-      "title": "Associate Cloud/DevOps",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Full Stack Intern",
+      "company": "Google",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+internship+Microsoft+Ahmedabad"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+Google+Bangalore"
     },
     {
       "id": 44,
-      "title": "Associate Backend",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Junior Software Development Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "React",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Associate+Backend+internship+Adobe+Delhi+NCR"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+Microsoft+Bangalore"
     },
     {
       "id": 45,
-      "title": "Intern Mobile App Development",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Associate Data Science Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "50,000 INR/mo",
       "skills": [
         "Python",
-        "Python"
+        "SQL",
+        "R"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Tesla+Pune"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+Microsoft+Bangalore"
     },
     {
       "id": 46,
-      "title": "Intern Mobile App Development",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
+      "title": "Associate Cloud/DevOps Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Wipro+Delhi+NCR"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+Intern+internship+Microsoft+Bangalore"
     },
     {
       "id": 47,
-      "title": "Associate UI/UX Design",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Cybersecurity Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+internship+Wipro+Mumbai"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cybersecurity+Intern+internship+Microsoft+Bangalore"
     },
     {
       "id": 48,
-      "title": "Intern Blockchain",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate AI/ML Research Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Bangalore",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "duration": "6 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
         "Python",
-        "React"
+        "PyTorch",
+        "TensorFlow"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Intern+Blockchain+internship+Spotify+Bangalore"
+      "requirements": [
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "field": "ai/ml research",
+      "apply_link": "https://www.google.com/search?q=Graduate+AI/ML+Research+Intern+internship+Microsoft+Bangalore"
     },
     {
       "id": 49,
-      "title": "Associate Frontend",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Backend Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Bangalore",
-      "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "duration": "6 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Associate+Frontend+internship+Tesla+Bangalore"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+Microsoft+Bangalore"
     },
     {
       "id": 50,
-      "title": "Associate Software Development",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Associate Full Stack Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Bangalore",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+internship+Meta+Bangalore"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+Microsoft+Bangalore"
     },
     {
       "id": 51,
-      "title": "Junior Cybersecurity",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
+      "title": "Graduate Software Development Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "cybersecurity",
-      "apply_link": "https://www.google.com/search?q=Junior+Cybersecurity+internship+Apple+Hyderabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Amazon+Bangalore"
     },
     {
       "id": 52,
-      "title": "Associate Frontend",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Associate Data Science Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
+        "Python",
         "SQL",
-        "Python"
+        "R"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Associate+Frontend+internship+Stripe+Ahmedabad"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+Amazon+Bangalore"
     },
     {
       "id": 53,
-      "title": "Junior Cloud/DevOps",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Associate Cloud/DevOps Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
       "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Junior+Cloud/DevOps+internship+Uber+Pune"
+      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+Intern+internship+Amazon+Bangalore"
     },
     {
       "id": 54,
-      "title": "Intern Product Management",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Associate Cybersecurity Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Intern+Product+Management+internship+Spotify+Delhi+NCR"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+Intern+internship+Amazon+Bangalore"
     },
     {
       "id": 55,
-      "title": "Intern Software Development",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
+      "title": "Junior AI/ML Research Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Python",
+        "PyTorch",
+        "TensorFlow"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Intern+Software+Development+internship+Google+Hyderabad"
+      "requirements": [
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "field": "ai/ml research",
+      "apply_link": "https://www.google.com/search?q=Junior+AI/ML+Research+Intern+internship+Amazon+Bangalore"
     },
     {
       "id": 56,
-      "title": "Junior Full Stack",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Associate Backend Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+internship+Google+Remote"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Associate+Backend+Intern+internship+Amazon+Bangalore"
     },
     {
       "id": 57,
-      "title": "Junior Product Management",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
+      "title": "Junior Full Stack Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Junior+Product+Management+internship+Infosys+Delhi+NCR"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+Intern+internship+Amazon+Bangalore"
     },
     {
       "id": 58,
-      "title": "Associate Mobile App Development",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Software Development Intern",
+      "company": "Meta",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+internship+Wipro+Ahmedabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Meta+Bangalore"
     },
     {
       "id": 59,
-      "title": "Intern Full Stack",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Junior Data Science Intern",
+      "company": "Meta",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
         "Python",
-        "SQL"
+        "SQL",
+        "R"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Intern+Full+Stack+internship+Infosys+Ahmedabad"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+Intern+internship+Meta+Bangalore"
     },
     {
       "id": 60,
-      "title": "Junior Backend",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Cloud/DevOps Intern",
+      "company": "Meta",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Junior+Backend+internship+Infosys+Delhi+NCR"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cloud/DevOps+Intern+internship+Meta+Bangalore"
     },
     {
       "id": 61,
-      "title": "Junior Software Development",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Cybersecurity Intern",
+      "company": "Meta",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+internship+TCS+Delhi+NCR"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cybersecurity+Intern+internship+Meta+Bangalore"
     },
     {
       "id": 62,
-      "title": "Intern Frontend",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate AI/ML Research Intern",
+      "company": "Meta",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Python",
+        "PyTorch",
+        "TensorFlow"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Intern+Frontend+internship+Infosys+Remote"
+      "requirements": [
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "field": "ai/ml research",
+      "apply_link": "https://www.google.com/search?q=Graduate+AI/ML+Research+Intern+internship+Meta+Bangalore"
     },
     {
       "id": 63,
-      "title": "Junior Data Science",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Associate Backend Intern",
+      "company": "Meta",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+internship+Infosys+Mumbai"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Associate+Backend+Intern+internship+Meta+Bangalore"
     },
     {
       "id": 64,
-      "title": "Intern Product Management",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Full Stack Intern",
+      "company": "Meta",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "Python",
+        "MERN Stack",
+        "PostgreSQL",
         "React"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Intern+Product+Management+internship+Apple+Remote"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+Meta+Bangalore"
     },
     {
       "id": 65,
-      "title": "Intern Product Management",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Junior Software Development Intern",
+      "company": "Uber",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Intern+Product+Management+internship+Stripe+Remote"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+Uber+Bangalore"
     },
     {
       "id": 66,
-      "title": "Junior Game Development",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Junior Data Science Intern",
+      "company": "Uber",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
+        "Python",
         "SQL",
-        "Python"
+        "R"
       ],
-      "field": "game development",
-      "apply_link": "https://www.google.com/search?q=Junior+Game+Development+internship+Apple+Mumbai"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+Intern+internship+Uber+Bangalore"
     },
     {
       "id": 67,
-      "title": "Junior UI/UX Design",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Cloud/DevOps Intern",
+      "company": "Uber",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Bangalore",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+internship+TCS+Bangalore"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Junior+Cloud/DevOps+Intern+internship+Uber+Bangalore"
     },
     {
       "id": 68,
-      "title": "Associate Full Stack",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Graduate Cybersecurity Intern",
+      "company": "Uber",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+internship+Amazon+Pune"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cybersecurity+Intern+internship+Uber+Bangalore"
     },
     {
       "id": 69,
-      "title": "Intern Product Management",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate AI/ML Research Intern",
+      "company": "Uber",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
         "Python",
-        "SQL"
+        "PyTorch",
+        "TensorFlow"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Intern+Product+Management+internship+Infosys+Mumbai"
+      "requirements": [
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "field": "ai/ml research",
+      "apply_link": "https://www.google.com/search?q=Graduate+AI/ML+Research+Intern+internship+Uber+Bangalore"
     },
     {
       "id": 70,
-      "title": "Junior Frontend",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Associate Backend Intern",
+      "company": "Uber",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Junior+Frontend+internship+Netflix+Ahmedabad"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Associate+Backend+Intern+internship+Uber+Bangalore"
     },
     {
       "id": 71,
-      "title": "Junior AI/ML Research",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Full Stack Intern",
+      "company": "Uber",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Bangalore",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Junior+AI/ML+Research+internship+Wipro+Bangalore"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+Uber+Bangalore"
     },
     {
       "id": 72,
-      "title": "Intern AI/ML Research",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Software Development Intern",
+      "company": "Flipkart",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Bangalore",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Intern+AI/ML+Research+internship+Wipro+Bangalore"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+Flipkart+Bangalore"
     },
     {
       "id": 73,
-      "title": "Intern Frontend",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Associate Data Science Intern",
+      "company": "Flipkart",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Python",
+        "SQL",
+        "R"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Intern+Frontend+internship+Adobe+Remote"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+Flipkart+Bangalore"
     },
     {
       "id": 74,
-      "title": "Associate Full Stack",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
+      "title": "Associate Cloud/DevOps Intern",
+      "company": "Flipkart",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "3 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+internship+Adobe+Ahmedabad"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+Intern+internship+Flipkart+Bangalore"
     },
     {
       "id": 75,
-      "title": "Associate Product Management",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Associate Cybersecurity Intern",
+      "company": "Flipkart",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+internship+Spotify+Mumbai"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+Intern+internship+Flipkart+Bangalore"
     },
     {
       "id": 76,
-      "title": "Intern UI/UX Design",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
+      "title": "Associate AI/ML Research Intern",
+      "company": "Flipkart",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
         "Python",
-        "SQL"
+        "PyTorch",
+        "TensorFlow"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Intern+UI/UX+Design+internship+Wipro+Hyderabad"
+      "requirements": [
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "field": "ai/ml research",
+      "apply_link": "https://www.google.com/search?q=Associate+AI/ML+Research+Intern+internship+Flipkart+Bangalore"
     },
     {
       "id": 77,
-      "title": "Junior Backend",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Associate Backend Intern",
+      "company": "Flipkart",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
       "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Junior+Backend+internship+Meta+Pune"
+      "apply_link": "https://www.google.com/search?q=Associate+Backend+Intern+internship+Flipkart+Bangalore"
     },
     {
       "id": 78,
-      "title": "Junior Blockchain",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
+      "title": "Associate Full Stack Intern",
+      "company": "Flipkart",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "Python",
+        "MERN Stack",
+        "PostgreSQL",
         "React"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Junior+Blockchain+internship+Uber+Delhi+NCR"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+Flipkart+Bangalore"
     },
     {
       "id": 79,
-      "title": "Associate Product Management",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
+      "title": "Associate Software Development Intern",
+      "company": "PhonePe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
+      "duration": "3 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+internship+Tesla+Delhi+NCR"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+Intern+internship+PhonePe+Bangalore"
     },
     {
       "id": 80,
-      "title": "Intern Frontend",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Associate Data Science Intern",
+      "company": "PhonePe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "25,000 INR/mo",
       "skills": [
+        "Python",
         "SQL",
-        "Python"
+        "R"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Intern+Frontend+internship+Stripe+Pune"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+PhonePe+Bangalore"
     },
     {
       "id": 81,
-      "title": "Intern Backend",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Associate Cloud/DevOps Intern",
+      "company": "PhonePe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Intern+Backend+internship+Netflix+Remote"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+Intern+internship+PhonePe+Bangalore"
     },
     {
       "id": 82,
-      "title": "Associate Software Development",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Junior Cybersecurity Intern",
+      "company": "PhonePe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+internship+Meta+Pune"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Junior+Cybersecurity+Intern+internship+PhonePe+Bangalore"
     },
     {
       "id": 83,
-      "title": "Associate Software Development",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
+      "title": "Graduate AI/ML Research Intern",
+      "company": "PhonePe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Python",
+        "PyTorch",
+        "TensorFlow"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+internship+Apple+Hyderabad"
+      "requirements": [
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "field": "ai/ml research",
+      "apply_link": "https://www.google.com/search?q=Graduate+AI/ML+Research+Intern+internship+PhonePe+Bangalore"
     },
     {
       "id": 84,
-      "title": "Associate UI/UX Design",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
+      "title": "Associate Backend Intern",
+      "company": "PhonePe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+internship+TCS+Ahmedabad"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Associate+Backend+Intern+internship+PhonePe+Bangalore"
     },
     {
       "id": 85,
-      "title": "Junior Backend",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
+      "title": "Junior Full Stack Intern",
+      "company": "PhonePe",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Bangalore",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Junior+Backend+internship+Apple+Delhi+NCR"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+Intern+internship+PhonePe+Bangalore"
     },
     {
       "id": 86,
-      "title": "Junior AI/ML Research",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Software Development Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "3 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Junior+AI/ML+Research+internship+Uber+Delhi+NCR"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Microsoft+Hyderabad"
     },
     {
       "id": 87,
-      "title": "Junior Data Science",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Cloud/DevOps Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Hyderabad",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+internship+Meta+Hyderabad"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Junior+Cloud/DevOps+Intern+internship+Microsoft+Hyderabad"
     },
     {
       "id": 88,
-      "title": "Associate Mobile App Development",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Associate Product Management Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "3 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+internship+Adobe+Bangalore"
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "field": "product management",
+      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+Intern+internship+Microsoft+Hyderabad"
     },
     {
       "id": 89,
-      "title": "Intern Software Development",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Graduate Backend Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
       "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Intern+Software+Development+internship+Uber+Pune"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+Microsoft+Hyderabad"
     },
     {
       "id": 90,
-      "title": "Associate AI/ML Research",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Associate Full Stack Intern",
+      "company": "Microsoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "Python",
+        "MERN Stack",
+        "PostgreSQL",
         "React"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Associate+AI/ML+Research+internship+TCS+Mumbai"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+Microsoft+Hyderabad"
     },
     {
       "id": 91,
-      "title": "Associate UI/UX Design",
+      "title": "Graduate Software Development Intern",
       "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "6 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "React",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+internship+Amazon+Ahmedabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Amazon+Hyderabad"
     },
     {
       "id": 92,
-      "title": "Associate Cloud/DevOps",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Graduate Cloud/DevOps Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
       "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
       "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+internship+Netflix+Mumbai"
+      "apply_link": "https://www.google.com/search?q=Graduate+Cloud/DevOps+Intern+internship+Amazon+Hyderabad"
     },
     {
       "id": 93,
-      "title": "Associate Software Development",
+      "title": "Junior Product Management Intern",
       "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "3 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+internship+Amazon+Delhi+NCR"
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "field": "product management",
+      "apply_link": "https://www.google.com/search?q=Junior+Product+Management+Intern+internship+Amazon+Hyderabad"
     },
     {
       "id": 94,
-      "title": "Associate Product Management",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Backend Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "3 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+internship+Infosys+Pune"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+Amazon+Hyderabad"
     },
     {
       "id": 95,
-      "title": "Associate Mobile App Development",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Full Stack Intern",
+      "company": "Amazon",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "3 Months",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+internship+Netflix+Bangalore"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+Amazon+Hyderabad"
     },
     {
       "id": 96,
-      "title": "Associate Mobile App Development",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
+      "title": "Associate Software Development Intern",
+      "company": "Oracle",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+internship+Google+Ahmedabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+Intern+internship+Oracle+Hyderabad"
     },
     {
       "id": 97,
-      "title": "Associate AI/ML Research",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Graduate Cloud/DevOps Intern",
+      "company": "Oracle",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Associate+AI/ML+Research+internship+Stripe+Remote"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cloud/DevOps+Intern+internship+Oracle+Hyderabad"
     },
     {
       "id": 98,
-      "title": "Associate Blockchain",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Junior Product Management Intern",
+      "company": "Oracle",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Associate+Blockchain+internship+Spotify+Mumbai"
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "field": "product management",
+      "apply_link": "https://www.google.com/search?q=Junior+Product+Management+Intern+internship+Oracle+Hyderabad"
     },
     {
       "id": 99,
-      "title": "Junior Cloud/DevOps",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Backend Intern",
+      "company": "Oracle",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Junior+Cloud/DevOps+internship+Wipro+Remote"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+Oracle+Hyderabad"
     },
     {
       "id": 100,
-      "title": "Associate UI/UX Design",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Associate Full Stack Intern",
+      "company": "Oracle",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+internship+Amazon+Remote"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+Oracle+Hyderabad"
     },
     {
       "id": 101,
-      "title": "Intern Backend",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Associate Software Development Intern",
+      "company": "Qualcomm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Hyderabad",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Intern+Backend+internship+Microsoft+Hyderabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+Intern+internship+Qualcomm+Hyderabad"
     },
     {
       "id": 102,
-      "title": "Intern AI/ML Research",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Junior Cloud/DevOps Intern",
+      "company": "Qualcomm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Intern+AI/ML+Research+internship+Spotify+Mumbai"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Junior+Cloud/DevOps+Intern+internship+Qualcomm+Hyderabad"
     },
     {
       "id": 103,
-      "title": "Intern Mobile App Development",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Junior Product Management Intern",
+      "company": "Qualcomm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Uber+Pune"
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "field": "product management",
+      "apply_link": "https://www.google.com/search?q=Junior+Product+Management+Intern+internship+Qualcomm+Hyderabad"
     },
     {
       "id": 104,
-      "title": "Associate Backend",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Backend Intern",
+      "company": "Qualcomm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Hyderabad",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
       "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Associate+Backend+internship+Apple+Hyderabad"
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+Qualcomm+Hyderabad"
     },
     {
       "id": 105,
-      "title": "Associate Frontend",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Associate Full Stack Intern",
+      "company": "Qualcomm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Hyderabad",
       "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Associate+Frontend+internship+Google+Hyderabad"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+Qualcomm+Hyderabad"
     },
     {
       "id": 106,
-      "title": "Junior Data Science",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Junior Software Development Intern",
+      "company": "ServiceNow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+internship+Wipro+Bangalore"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+ServiceNow+Hyderabad"
     },
     {
       "id": 107,
-      "title": "Intern Mobile App Development",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Cloud/DevOps Intern",
+      "company": "ServiceNow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Hyderabad",
-      "duration": "6 Months",
+      "duration": "3 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "AWS",
+        "Docker",
+        "Kubernetes"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Wipro+Hyderabad"
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "field": "cloud/devops",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cloud/DevOps+Intern+internship+ServiceNow+Hyderabad"
     },
     {
       "id": 108,
-      "title": "Junior Product Management",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Product Management Intern",
+      "company": "ServiceNow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "6 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
       "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Junior+Product+Management+internship+Stripe+Mumbai"
+      "apply_link": "https://www.google.com/search?q=Graduate+Product+Management+Intern+internship+ServiceNow+Hyderabad"
     },
     {
       "id": 109,
-      "title": "Associate Data Science",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Associate Backend Intern",
+      "company": "ServiceNow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
       "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+internship+Tesla+Remote"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Associate+Backend+Intern+internship+ServiceNow+Hyderabad"
     },
     {
       "id": 110,
-      "title": "Junior Frontend",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Full Stack Intern",
+      "company": "ServiceNow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Hyderabad",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
+        "MERN Stack",
+        "PostgreSQL",
         "React"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Junior+Frontend+internship+Uber+Mumbai"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+ServiceNow+Hyderabad"
     },
     {
       "id": 111,
-      "title": "Junior Frontend",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "6 Months",
+      "title": "Associate Software Development Intern",
+      "company": "Persistent Systems",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Junior+Frontend+internship+Google+Hyderabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+Intern+internship+Persistent+Systems+Pune"
     },
     {
       "id": 112,
-      "title": "Intern Data Science",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Associate Data Science Intern",
+      "company": "Persistent Systems",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Pune",
-      "duration": "3 Months",
+      "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
+        "Python",
         "SQL",
-        "Python"
+        "R"
+      ],
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
       ],
       "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Intern+Data+Science+internship+TCS+Pune"
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+Persistent+Systems+Pune"
     },
     {
       "id": 113,
-      "title": "Associate Software Development",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Associate Cybersecurity Intern",
+      "company": "Persistent Systems",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
       "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+internship+Tesla+Mumbai"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+Intern+internship+Persistent+Systems+Pune"
     },
     {
       "id": 114,
-      "title": "Junior Full Stack",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Frontend Intern",
+      "company": "Persistent Systems",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
         "React",
-        "Python"
+        "Vue",
+        "JavaScript"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+internship+Infosys+Mumbai"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Frontend+Intern+internship+Persistent+Systems+Pune"
     },
     {
       "id": 115,
-      "title": "Intern Software Development",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Junior Mobile App Development Intern",
+      "company": "Persistent Systems",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Intern+Software+Development+internship+Microsoft+Ahmedabad"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+Intern+internship+Persistent+Systems+Pune"
     },
     {
       "id": 116,
-      "title": "Associate Cloud/DevOps",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Junior Software Development Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+internship+Apple+Ahmedabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+TCS+Pune"
     },
     {
       "id": 117,
-      "title": "Junior Blockchain",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Associate Data Science Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
       "duration": "6 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
+        "Python",
         "SQL",
-        "Python"
+        "R"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Junior+Blockchain+internship+Netflix+Bangalore"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+TCS+Pune"
     },
     {
       "id": 118,
-      "title": "Intern Mobile App Development",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Associate Cybersecurity Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Amazon+Delhi+NCR"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+Intern+internship+TCS+Pune"
     },
     {
       "id": 119,
-      "title": "Intern Frontend",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Junior Frontend Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
       ],
       "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Intern+Frontend+internship+Infosys+Delhi+NCR"
+      "apply_link": "https://www.google.com/search?q=Junior+Frontend+Intern+internship+TCS+Pune"
     },
     {
       "id": 120,
-      "title": "Intern Full Stack",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Junior Mobile App Development Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
       "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Intern+Full+Stack+internship+Tesla+Bangalore"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+Intern+internship+TCS+Pune"
     },
     {
       "id": 121,
-      "title": "Associate Cloud/DevOps",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Software Development Intern",
+      "company": "Infosys",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+internship+Uber+Hyderabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Infosys+Pune"
     },
     {
       "id": 122,
-      "title": "Intern Backend",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Associate Data Science Intern",
+      "company": "Infosys",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
+        "Python",
         "SQL",
-        "React"
+        "R"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Intern+Backend+internship+TCS+Mumbai"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+Infosys+Pune"
     },
     {
       "id": 123,
-      "title": "Junior Mobile App Development",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Associate Cybersecurity Intern",
+      "company": "Infosys",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+internship+Tesla+Ahmedabad"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+Intern+internship+Infosys+Pune"
     },
     {
       "id": 124,
-      "title": "Intern UI/UX Design",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Junior Frontend Intern",
+      "company": "Infosys",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Intern+UI/UX+Design+internship+Stripe+Ahmedabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Junior+Frontend+Intern+internship+Infosys+Pune"
     },
     {
       "id": 125,
-      "title": "Associate Cloud/DevOps",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Mobile App Development Intern",
+      "company": "Infosys",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+internship+Amazon+Mumbai"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Mobile+App+Development+Intern+internship+Infosys+Pune"
     },
     {
       "id": 126,
-      "title": "Intern Backend",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
+      "title": "Junior Software Development Intern",
+      "company": "Wipro",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Intern+Backend+internship+Microsoft+Hyderabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+Wipro+Pune"
     },
     {
       "id": 127,
-      "title": "Associate Backend",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
+      "title": "Graduate Data Science Intern",
+      "company": "Wipro",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "Python",
+        "SQL",
+        "R"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Associate+Backend+internship+Tesla+Delhi+NCR"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Graduate+Data+Science+Intern+internship+Wipro+Pune"
     },
     {
       "id": 128,
-      "title": "Junior Full Stack",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
+      "title": "Associate Cybersecurity Intern",
+      "company": "Wipro",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
       "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+internship+Stripe+Ahmedabad"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+Intern+internship+Wipro+Pune"
     },
     {
       "id": 129,
-      "title": "Intern Cybersecurity",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Frontend Intern",
+      "company": "Wipro",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Pune",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "cybersecurity",
-      "apply_link": "https://www.google.com/search?q=Intern+Cybersecurity+internship+Uber+Pune"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Junior+Frontend+Intern+internship+Wipro+Pune"
     },
     {
       "id": 130,
-      "title": "Intern Data Science",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Associate Mobile App Development Intern",
+      "company": "Wipro",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Intern+Data+Science+internship+Tesla+Ahmedabad"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+Intern+internship+Wipro+Pune"
     },
     {
       "id": 131,
-      "title": "Junior Mobile App Development",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
+      "title": "Associate Software Development Intern",
+      "company": "Barclays",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "6 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+internship+Microsoft+Ahmedabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+Intern+internship+Barclays+Pune"
     },
     {
       "id": 132,
-      "title": "Junior AI/ML Research",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Data Science Intern",
+      "company": "Barclays",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Pune",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
+        "Python",
         "SQL",
-        "React"
+        "R"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Junior+AI/ML+Research+internship+Google+Pune"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+Intern+internship+Barclays+Pune"
     },
     {
       "id": 133,
-      "title": "Intern AI/ML Research",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Associate Cybersecurity Intern",
+      "company": "Barclays",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Intern+AI/ML+Research+internship+Google+Delhi+NCR"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+Intern+internship+Barclays+Pune"
     },
     {
       "id": 134,
-      "title": "Intern Backend",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Associate Frontend Intern",
+      "company": "Barclays",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Intern+Backend+internship+Amazon+Ahmedabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Associate+Frontend+Intern+internship+Barclays+Pune"
     },
     {
       "id": 135,
-      "title": "Associate Game Development",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
+      "title": "Graduate Mobile App Development Intern",
+      "company": "Barclays",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Pune",
+      "duration": "3 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "game development",
-      "apply_link": "https://www.google.com/search?q=Associate+Game+Development+internship+Tesla+Delhi+NCR"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Mobile+App+Development+Intern+internship+Barclays+Pune"
     },
     {
       "id": 136,
-      "title": "Associate AI/ML Research",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Graduate Software Development Intern",
+      "company": "Zomato",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Associate+AI/ML+Research+internship+Meta+Pune"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Zomato+Delhi+NCR"
     },
     {
       "id": 137,
-      "title": "Intern Frontend",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Junior UI/UX Design Intern",
+      "company": "Zomato",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
       "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Intern+Frontend+internship+Google+Remote"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+Intern+internship+Zomato+Delhi+NCR"
     },
     {
       "id": 138,
-      "title": "Junior Mobile App Development",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Associate Product Management Intern",
+      "company": "Zomato",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+internship+Meta+Bangalore"
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "field": "product management",
+      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+Intern+internship+Zomato+Delhi+NCR"
     },
     {
       "id": 139,
-      "title": "Intern Backend",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
+      "title": "Junior Mobile App Development Intern",
+      "company": "Zomato",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Intern+Backend+internship+Adobe+Ahmedabad"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+Intern+internship+Zomato+Delhi+NCR"
     },
     {
       "id": 140,
-      "title": "Associate Product Management",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Associate Frontend Intern",
+      "company": "Zomato",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+internship+Tesla+Ahmedabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Associate+Frontend+Intern+internship+Zomato+Delhi+NCR"
     },
     {
       "id": 141,
-      "title": "Intern Software Development",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Junior Software Development Intern",
+      "company": "Paytm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
       "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
       ],
       "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Intern+Software+Development+internship+Tesla+Pune"
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+Paytm+Delhi+NCR"
     },
     {
       "id": 142,
-      "title": "Junior Blockchain",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate UI/UX Design Intern",
+      "company": "Paytm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Junior+Blockchain+internship+Netflix+Remote"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Graduate+UI/UX+Design+Intern+internship+Paytm+Delhi+NCR"
     },
     {
       "id": 143,
-      "title": "Intern Blockchain",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Junior Product Management Intern",
+      "company": "Paytm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Intern+Blockchain+internship+Apple+Remote"
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "field": "product management",
+      "apply_link": "https://www.google.com/search?q=Junior+Product+Management+Intern+internship+Paytm+Delhi+NCR"
     },
     {
       "id": 144,
-      "title": "Intern Game Development",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Junior Mobile App Development Intern",
+      "company": "Paytm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "game development",
-      "apply_link": "https://www.google.com/search?q=Intern+Game+Development+internship+Stripe+Bangalore"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+Intern+internship+Paytm+Delhi+NCR"
     },
     {
       "id": 145,
-      "title": "Associate AI/ML Research",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Graduate Frontend Intern",
+      "company": "Paytm",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "6 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Associate+AI/ML+Research+internship+Infosys+Remote"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Frontend+Intern+internship+Paytm+Delhi+NCR"
     },
     {
       "id": 146,
-      "title": "Associate Cloud/DevOps",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Software Development Intern",
+      "company": "MakeMyTrip",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+internship+Adobe+Pune"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+MakeMyTrip+Delhi+NCR"
     },
     {
       "id": 147,
-      "title": "Associate Frontend",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Associate UI/UX Design Intern",
+      "company": "MakeMyTrip",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Associate+Frontend+internship+Netflix+Mumbai"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+Intern+internship+MakeMyTrip+Delhi+NCR"
     },
     {
       "id": 148,
-      "title": "Intern Cloud/DevOps",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Associate Product Management Intern",
+      "company": "MakeMyTrip",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Intern+Cloud/DevOps+internship+Uber+Hyderabad"
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "field": "product management",
+      "apply_link": "https://www.google.com/search?q=Associate+Product+Management+Intern+internship+MakeMyTrip+Delhi+NCR"
     },
     {
       "id": 149,
-      "title": "Intern AI/ML Research",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Associate Mobile App Development Intern",
+      "company": "MakeMyTrip",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
       "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Intern+AI/ML+Research+internship+Microsoft+Remote"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+Intern+internship+MakeMyTrip+Delhi+NCR"
     },
     {
       "id": 150,
-      "title": "Intern Cloud/DevOps",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Frontend Intern",
+      "company": "MakeMyTrip",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Intern+Cloud/DevOps+internship+Meta+Delhi+NCR"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Frontend+Intern+internship+MakeMyTrip+Delhi+NCR"
     },
     {
       "id": 151,
-      "title": "Intern Mobile App Development",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Associate Software Development Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
       "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Stripe+Mumbai"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+Intern+internship+TCS+Delhi+NCR"
     },
     {
       "id": 152,
-      "title": "Associate AI/ML Research",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Associate UI/UX Design Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
       "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Associate+AI/ML+Research+internship+Adobe+Mumbai"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+Intern+internship+TCS+Delhi+NCR"
     },
     {
       "id": 153,
-      "title": "Junior UI/UX Design",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
+      "title": "Graduate Product Management Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "6 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+internship+Stripe+Ahmedabad"
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "field": "product management",
+      "apply_link": "https://www.google.com/search?q=Graduate+Product+Management+Intern+internship+TCS+Delhi+NCR"
     },
     {
       "id": 154,
-      "title": "Intern Mobile App Development",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Mobile App Development Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Delhi NCR",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
       "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Adobe+Delhi+NCR"
+      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+Intern+internship+TCS+Delhi+NCR"
     },
     {
       "id": 155,
-      "title": "Intern Product Management",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "3 Months",
+      "title": "Graduate Frontend Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Intern+Product+Management+internship+Stripe+Mumbai"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Frontend+Intern+internship+TCS+Delhi+NCR"
     },
     {
       "id": 156,
-      "title": "Associate Blockchain",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Software Development Intern",
+      "company": "HCLTech",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "Python",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Associate+Blockchain+internship+Infosys+Hyderabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+HCLTech+Delhi+NCR"
     },
     {
       "id": 157,
-      "title": "Intern Software Development",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Associate UI/UX Design Intern",
+      "company": "HCLTech",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Intern+Software+Development+internship+Stripe+Mumbai"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+Intern+internship+HCLTech+Delhi+NCR"
     },
     {
       "id": 158,
-      "title": "Junior Data Science",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Product Management Intern",
+      "company": "HCLTech",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Agile",
+        "Jira",
+        "Analytics"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+internship+TCS+Delhi+NCR"
+      "requirements": [
+        "Agile",
+        "Jira",
+        "Analytics"
+      ],
+      "field": "product management",
+      "apply_link": "https://www.google.com/search?q=Graduate+Product+Management+Intern+internship+HCLTech+Delhi+NCR"
     },
     {
       "id": 159,
-      "title": "Intern Frontend",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "6 Months",
+      "title": "Junior Mobile App Development Intern",
+      "company": "HCLTech",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "frontend",
-      "apply_link": "https://www.google.com/search?q=Intern+Frontend+internship+Spotify+Remote"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+Intern+internship+HCLTech+Delhi+NCR"
     },
     {
       "id": 160,
-      "title": "Associate Mobile App Development",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Frontend Intern",
+      "company": "HCLTech",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Delhi NCR",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+internship+Microsoft+Ahmedabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Frontend+Intern+internship+HCLTech+Delhi+NCR"
     },
     {
       "id": 161,
-      "title": "Associate Game Development",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
+      "title": "Junior Software Development Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "game development",
-      "apply_link": "https://www.google.com/search?q=Associate+Game+Development+internship+Wipro+Delhi+NCR"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+TCS+Ahmedabad"
     },
     {
       "id": 162,
-      "title": "Intern Backend",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Junior UI/UX Design Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Intern+Backend+internship+Adobe+Pune"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+Intern+internship+TCS+Ahmedabad"
     },
     {
       "id": 163,
-      "title": "Intern Full Stack",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
+      "title": "Graduate Frontend Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Intern+Full+Stack+internship+Google+Hyderabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Frontend+Intern+internship+TCS+Ahmedabad"
     },
     {
       "id": 164,
-      "title": "Junior Software Development",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Backend Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+internship+Adobe+Remote"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+TCS+Ahmedabad"
     },
     {
       "id": 165,
-      "title": "Intern Product Management",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Graduate Mobile App Development Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Intern+Product+Management+internship+Stripe+Mumbai"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Mobile+App+Development+Intern+internship+TCS+Ahmedabad"
     },
     {
       "id": 166,
-      "title": "Intern Full Stack",
+      "title": "Junior Full Stack Intern",
       "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
       "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Intern+Full+Stack+internship+TCS+Ahmedabad"
+      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+Intern+internship+TCS+Ahmedabad"
     },
     {
       "id": 167,
-      "title": "Intern UI/UX Design",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Graduate Software Development Intern",
+      "company": "eInfochips",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "duration": "6 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "React",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Intern+UI/UX+Design+internship+Google+Ahmedabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+eInfochips+Ahmedabad"
     },
     {
       "id": 168,
-      "title": "Junior Mobile App Development",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Associate UI/UX Design Intern",
+      "company": "eInfochips",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+internship+Amazon+Bangalore"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+Intern+internship+eInfochips+Ahmedabad"
     },
     {
       "id": 169,
-      "title": "Junior Backend",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Associate Frontend Intern",
+      "company": "eInfochips",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
         "React",
-        "React"
+        "Vue",
+        "JavaScript"
       ],
-      "field": "backend",
-      "apply_link": "https://www.google.com/search?q=Junior+Backend+internship+Tesla+Bangalore"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Associate+Frontend+Intern+internship+eInfochips+Ahmedabad"
     },
     {
       "id": 170,
-      "title": "Associate Cybersecurity",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
-      "duration": "3 Months",
+      "title": "Graduate Backend Intern",
+      "company": "eInfochips",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "cybersecurity",
-      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+internship+Amazon+Remote"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+eInfochips+Ahmedabad"
     },
     {
       "id": 171,
-      "title": "Associate UI/UX Design",
-      "company": "Infosys",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "3 Months",
+      "title": "Associate Mobile App Development Intern",
+      "company": "eInfochips",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+internship+Infosys+Bangalore"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+Intern+internship+eInfochips+Ahmedabad"
     },
     {
       "id": 172,
-      "title": "Junior Product Management",
-      "company": "Adobe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "3 Months",
+      "title": "Associate Full Stack Intern",
+      "company": "eInfochips",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "6 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
+        "MERN Stack",
+        "PostgreSQL",
         "React"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Junior+Product+Management+internship+Adobe+Bangalore"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+eInfochips+Ahmedabad"
     },
     {
       "id": 173,
-      "title": "Intern UI/UX Design",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Software Development Intern",
+      "company": "TatvaSoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Ahmedabad",
       "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Intern+UI/UX+Design+internship+Google+Ahmedabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+TatvaSoft+Ahmedabad"
     },
     {
       "id": 174,
-      "title": "Junior Data Science",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior UI/UX Design Intern",
+      "company": "TatvaSoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "duration": "6 Months",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "SQL"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+internship+Microsoft+Ahmedabad"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+Intern+internship+TatvaSoft+Ahmedabad"
     },
     {
       "id": 175,
-      "title": "Intern Data Science",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
+      "title": "Associate Frontend Intern",
+      "company": "TatvaSoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "React"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Intern+Data+Science+internship+Stripe+Mumbai"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Associate+Frontend+Intern+internship+TatvaSoft+Ahmedabad"
     },
     {
       "id": 176,
-      "title": "Junior Data Science",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
+      "title": "Associate Backend Intern",
+      "company": "TatvaSoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Junior+Data+Science+internship+Netflix+Hyderabad"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Associate+Backend+Intern+internship+TatvaSoft+Ahmedabad"
     },
     {
       "id": 177,
-      "title": "Intern Data Science",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Mobile App Development Intern",
+      "company": "TatvaSoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Intern+Data+Science+internship+Netflix+Pune"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Mobile+App+Development+Intern+internship+TatvaSoft+Ahmedabad"
     },
     {
       "id": 178,
-      "title": "Junior AI/ML Research",
-      "company": "Spotify",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
+      "title": "Junior Full Stack Intern",
+      "company": "TatvaSoft",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "ai/ml research",
-      "apply_link": "https://www.google.com/search?q=Junior+AI/ML+Research+internship+Spotify+Hyderabad"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+Intern+internship+TatvaSoft+Ahmedabad"
     },
     {
       "id": 179,
-      "title": "Intern Game Development",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Software Development Intern",
+      "company": "Gateway Group",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Ahmedabad",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
+        "Java",
+        "C++",
         "Python"
       ],
-      "field": "game development",
-      "apply_link": "https://www.google.com/search?q=Intern+Game+Development+internship+TCS+Ahmedabad"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+Gateway+Group+Ahmedabad"
     },
     {
       "id": 180,
-      "title": "Junior Mobile App Development",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Mumbai",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Associate UI/UX Design Intern",
+      "company": "Gateway Group",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+internship+Wipro+Mumbai"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+Intern+internship+Gateway+Group+Ahmedabad"
     },
     {
       "id": 181,
-      "title": "Associate Mobile App Development",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Associate Frontend Intern",
+      "company": "Gateway Group",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Ahmedabad",
       "duration": "3 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+internship+Wipro+Ahmedabad"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Associate+Frontend+Intern+internship+Gateway+Group+Ahmedabad"
     },
     {
       "id": 182,
-      "title": "Junior Product Management",
-      "company": "Microsoft",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Graduate Backend Intern",
+      "company": "Gateway Group",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Junior+Product+Management+internship+Microsoft+Bangalore"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+Gateway+Group+Ahmedabad"
     },
     {
       "id": 183,
-      "title": "Associate Blockchain",
-      "company": "Tesla",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
+      "title": "Junior Mobile App Development Intern",
+      "company": "Gateway Group",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "location": "Ahmedabad",
       "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Associate+Blockchain+internship+Tesla+Ahmedabad"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Junior+Mobile+App+Development+Intern+internship+Gateway+Group+Ahmedabad"
     },
     {
       "id": 184,
-      "title": "Intern Product Management",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Junior Full Stack Intern",
+      "company": "Gateway Group",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "product management",
-      "apply_link": "https://www.google.com/search?q=Intern+Product+Management+internship+Stripe+Remote"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+Intern+internship+Gateway+Group+Ahmedabad"
     },
     {
       "id": 185,
-      "title": "Intern Software Development",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "title": "Associate Software Development Intern",
+      "company": "Indus Net Technologies",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
       ],
       "field": "software development",
-      "apply_link": "https://www.google.com/search?q=Intern+Software+Development+internship+Netflix+Hyderabad"
+      "apply_link": "https://www.google.com/search?q=Associate+Software+Development+Intern+internship+Indus+Net+Technologies+Ahmedabad"
     },
     {
       "id": 186,
-      "title": "Intern Cloud/DevOps",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "3 Months",
+      "title": "Junior UI/UX Design Intern",
+      "company": "Indus Net Technologies",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "6 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Intern+Cloud/DevOps+internship+Amazon+Hyderabad"
+      "requirements": [
+        "Figma",
+        "Adobe XD",
+        "HTML/CSS"
+      ],
+      "field": "ui/ux design",
+      "apply_link": "https://www.google.com/search?q=Junior+UI/UX+Design+Intern+internship+Indus+Net+Technologies+Ahmedabad"
     },
     {
       "id": 187,
-      "title": "Associate Mobile App Development",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Junior Frontend Intern",
+      "company": "Indus Net Technologies",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
       "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "Python"
+        "React",
+        "Vue",
+        "JavaScript"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Associate+Mobile+App+Development+internship+Stripe+Remote"
+      "requirements": [
+        "React",
+        "Vue",
+        "JavaScript"
+      ],
+      "field": "frontend",
+      "apply_link": "https://www.google.com/search?q=Junior+Frontend+Intern+internship+Indus+Net+Technologies+Ahmedabad"
     },
     {
       "id": 188,
-      "title": "Junior Cybersecurity",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Backend Intern",
+      "company": "Indus Net Technologies",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Node.js",
+        "Django",
+        "PostgreSQL"
       ],
-      "field": "cybersecurity",
-      "apply_link": "https://www.google.com/search?q=Junior+Cybersecurity+internship+Uber+Bangalore"
+      "requirements": [
+        "Node.js",
+        "Django",
+        "PostgreSQL"
+      ],
+      "field": "backend",
+      "apply_link": "https://www.google.com/search?q=Graduate+Backend+Intern+internship+Indus+Net+Technologies+Ahmedabad"
     },
     {
       "id": 189,
-      "title": "Associate UI/UX Design",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Mobile App Development Intern",
+      "company": "Indus Net Technologies",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "React",
-        "React"
+        "Flutter",
+        "React Native",
+        "Swift"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+internship+Google+Pune"
+      "requirements": [
+        "Flutter",
+        "React Native",
+        "Swift"
+      ],
+      "field": "mobile app development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Mobile+App+Development+Intern+internship+Indus+Net+Technologies+Ahmedabad"
     },
     {
       "id": 190,
-      "title": "Intern UI/UX Design",
-      "company": "TCS",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "6 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Full Stack Intern",
+      "company": "Indus Net Technologies",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Ahmedabad",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
       "skills": [
-        "SQL",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Intern+UI/UX+Design+internship+TCS+Bangalore"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+Indus+Net+Technologies+Ahmedabad"
     },
     {
       "id": 191,
-      "title": "Intern Blockchain",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
-      "duration": "6 Months",
-      "stipend": "40,000 INR/mo",
+      "title": "Graduate Software Development Intern",
+      "company": "JPMorgan Chase",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "45,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Intern+Blockchain+internship+Meta+Delhi+NCR"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+JPMorgan+Chase+Mumbai"
     },
     {
       "id": 192,
-      "title": "Intern Cloud/DevOps",
-      "company": "Apple",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Associate Data Science Intern",
+      "company": "JPMorgan Chase",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
       "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
+      "stipend": "60,000 INR/mo",
       "skills": [
         "Python",
-        "SQL"
+        "SQL",
+        "R"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Intern+Cloud/DevOps+internship+Apple+Pune"
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+JPMorgan+Chase+Mumbai"
     },
     {
       "id": 193,
-      "title": "Intern Data Science",
-      "company": "Meta",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Delhi NCR",
+      "title": "Associate Cybersecurity Intern",
+      "company": "JPMorgan Chase",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
       "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "Python",
-        "SQL"
+        "Linux",
+        "Wireshark",
+        "Network Security"
       ],
-      "field": "data science",
-      "apply_link": "https://www.google.com/search?q=Intern+Data+Science+internship+Meta+Delhi+NCR"
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+Intern+internship+JPMorgan+Chase+Mumbai"
     },
     {
       "id": 194,
-      "title": "Intern Mobile App Development",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Ahmedabad",
-      "duration": "3 Months",
-      "stipend": "15,000 INR/mo",
+      "title": "Graduate Blockchain Intern",
+      "company": "JPMorgan Chase",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "6 Months",
+      "stipend": "50,000 INR/mo",
       "skills": [
-        "Python",
-        "React"
+        "Solidity",
+        "Ethereum",
+        "Rust"
       ],
-      "field": "mobile app development",
-      "apply_link": "https://www.google.com/search?q=Intern+Mobile+App+Development+internship+Netflix+Ahmedabad"
+      "requirements": [
+        "Solidity",
+        "Ethereum",
+        "Rust"
+      ],
+      "field": "blockchain",
+      "apply_link": "https://www.google.com/search?q=Graduate+Blockchain+Intern+internship+JPMorgan+Chase+Mumbai"
     },
     {
       "id": 195,
-      "title": "Associate Cloud/DevOps",
-      "company": "Netflix",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
+      "title": "Junior Full Stack Intern",
+      "company": "JPMorgan Chase",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
       "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
+      "stipend": "60,000 INR/mo",
       "skills": [
-        "React",
-        "Python"
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
-      "field": "cloud/devops",
-      "apply_link": "https://www.google.com/search?q=Associate+Cloud/DevOps+internship+Netflix+Pune"
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+Intern+internship+JPMorgan+Chase+Mumbai"
     },
     {
       "id": 196,
-      "title": "Junior Full Stack",
-      "company": "Uber",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
+      "title": "Graduate Software Development Intern",
+      "company": "Morgan Stanley",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
       "duration": "6 Months",
       "stipend": "25,000 INR/mo",
       "skills": [
-        "React",
-        "SQL"
+        "Java",
+        "C++",
+        "Python"
       ],
-      "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Junior+Full+Stack+internship+Uber+Bangalore"
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+Morgan+Stanley+Mumbai"
     },
     {
       "id": 197,
-      "title": "Intern Full Stack",
-      "company": "Amazon",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Remote",
+      "title": "Graduate Data Science Intern",
+      "company": "Morgan Stanley",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
+      "skills": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Graduate+Data+Science+Intern+internship+Morgan+Stanley+Mumbai"
+    },
+    {
+      "id": 198,
+      "title": "Graduate Cybersecurity Intern",
+      "company": "Morgan Stanley",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
+      "skills": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Graduate+Cybersecurity+Intern+internship+Morgan+Stanley+Mumbai"
+    },
+    {
+      "id": 199,
+      "title": "Junior Blockchain Intern",
+      "company": "Morgan Stanley",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
+      "skills": [
+        "Solidity",
+        "Ethereum",
+        "Rust"
+      ],
+      "requirements": [
+        "Solidity",
+        "Ethereum",
+        "Rust"
+      ],
+      "field": "blockchain",
+      "apply_link": "https://www.google.com/search?q=Junior+Blockchain+Intern+internship+Morgan+Stanley+Mumbai"
+    },
+    {
+      "id": 200,
+      "title": "Graduate Full Stack Intern",
+      "company": "Morgan Stanley",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
+      "skills": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+Morgan+Stanley+Mumbai"
+    },
+    {
+      "id": 201,
+      "title": "Graduate Software Development Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "6 Months",
+      "stipend": "15,000 INR/mo",
+      "skills": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+TCS+Mumbai"
+    },
+    {
+      "id": 202,
+      "title": "Associate Data Science Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
+      "skills": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+TCS+Mumbai"
+    },
+    {
+      "id": 203,
+      "title": "Junior Cybersecurity Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
+      "skills": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Junior+Cybersecurity+Intern+internship+TCS+Mumbai"
+    },
+    {
+      "id": 204,
+      "title": "Graduate Blockchain Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
+      "skills": [
+        "Solidity",
+        "Ethereum",
+        "Rust"
+      ],
+      "requirements": [
+        "Solidity",
+        "Ethereum",
+        "Rust"
+      ],
+      "field": "blockchain",
+      "apply_link": "https://www.google.com/search?q=Graduate+Blockchain+Intern+internship+TCS+Mumbai"
+    },
+    {
+      "id": 205,
+      "title": "Graduate Full Stack Intern",
+      "company": "TCS",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
+      "skills": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Graduate+Full+Stack+Intern+internship+TCS+Mumbai"
+    },
+    {
+      "id": 206,
+      "title": "Junior Software Development Intern",
+      "company": "Reliance Jio",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
+      "skills": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Junior+Software+Development+Intern+internship+Reliance+Jio+Mumbai"
+    },
+    {
+      "id": 207,
+      "title": "Graduate Data Science Intern",
+      "company": "Reliance Jio",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "6 Months",
+      "stipend": "25,000 INR/mo",
+      "skills": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Graduate+Data+Science+Intern+internship+Reliance+Jio+Mumbai"
+    },
+    {
+      "id": 208,
+      "title": "Junior Cybersecurity Intern",
+      "company": "Reliance Jio",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "20,000 INR/mo",
+      "skills": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Junior+Cybersecurity+Intern+internship+Reliance+Jio+Mumbai"
+    },
+    {
+      "id": 209,
+      "title": "Junior Blockchain Intern",
+      "company": "Reliance Jio",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "6 Months",
+      "stipend": "15,000 INR/mo",
+      "skills": [
+        "Solidity",
+        "Ethereum",
+        "Rust"
+      ],
+      "requirements": [
+        "Solidity",
+        "Ethereum",
+        "Rust"
+      ],
+      "field": "blockchain",
+      "apply_link": "https://www.google.com/search?q=Junior+Blockchain+Intern+internship+Reliance+Jio+Mumbai"
+    },
+    {
+      "id": 210,
+      "title": "Associate Full Stack Intern",
+      "company": "Reliance Jio",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "6 Months",
+      "stipend": "20,000 INR/mo",
+      "skills": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "field": "full stack",
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+Reliance+Jio+Mumbai"
+    },
+    {
+      "id": 211,
+      "title": "Graduate Software Development Intern",
+      "company": "BookMyShow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
+      "skills": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "requirements": [
+        "Java",
+        "C++",
+        "Python"
+      ],
+      "field": "software development",
+      "apply_link": "https://www.google.com/search?q=Graduate+Software+Development+Intern+internship+BookMyShow+Mumbai"
+    },
+    {
+      "id": 212,
+      "title": "Associate Data Science Intern",
+      "company": "BookMyShow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
       "duration": "6 Months",
       "stipend": "15,000 INR/mo",
       "skills": [
         "Python",
-        "Python"
+        "SQL",
+        "R"
+      ],
+      "requirements": [
+        "Python",
+        "SQL",
+        "R"
+      ],
+      "field": "data science",
+      "apply_link": "https://www.google.com/search?q=Associate+Data+Science+Intern+internship+BookMyShow+Mumbai"
+    },
+    {
+      "id": 213,
+      "title": "Associate Cybersecurity Intern",
+      "company": "BookMyShow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "25,000 INR/mo",
+      "skills": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "requirements": [
+        "Linux",
+        "Wireshark",
+        "Network Security"
+      ],
+      "field": "cybersecurity",
+      "apply_link": "https://www.google.com/search?q=Associate+Cybersecurity+Intern+internship+BookMyShow+Mumbai"
+    },
+    {
+      "id": 214,
+      "title": "Junior Blockchain Intern",
+      "company": "BookMyShow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
+      "skills": [
+        "Solidity",
+        "Ethereum",
+        "Rust"
+      ],
+      "requirements": [
+        "Solidity",
+        "Ethereum",
+        "Rust"
+      ],
+      "field": "blockchain",
+      "apply_link": "https://www.google.com/search?q=Junior+Blockchain+Intern+internship+BookMyShow+Mumbai"
+    },
+    {
+      "id": 215,
+      "title": "Associate Full Stack Intern",
+      "company": "BookMyShow",
+      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#8B0000\"/><path d=\"M12 20h16M20 12v16\" stroke=\"#D4AF37\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+      "location": "Mumbai",
+      "duration": "3 Months",
+      "stipend": "15,000 INR/mo",
+      "skills": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
+      ],
+      "requirements": [
+        "MERN Stack",
+        "PostgreSQL",
+        "React"
       ],
       "field": "full stack",
-      "apply_link": "https://www.google.com/search?q=Intern+Full+Stack+internship+Amazon+Remote"
-    },
-    {
-      "id": 198,
-      "title": "Intern Blockchain",
-      "company": "Wipro",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Pune",
-      "duration": "3 Months",
-      "stipend": "40,000 INR/mo",
-      "skills": [
-        "SQL",
-        "React"
-      ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Intern+Blockchain+internship+Wipro+Pune"
-    },
-    {
-      "id": 199,
-      "title": "Associate UI/UX Design",
-      "company": "Stripe",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Hyderabad",
-      "duration": "6 Months",
-      "stipend": "25,000 INR/mo",
-      "skills": [
-        "SQL",
-        "React"
-      ],
-      "field": "ui/ux design",
-      "apply_link": "https://www.google.com/search?q=Associate+UI/UX+Design+internship+Stripe+Hyderabad"
-    },
-    {
-      "id": 200,
-      "title": "Junior Blockchain",
-      "company": "Google",
-      "logo": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"40\" height=\"40\" rx=\"4\" fill=\"#D4AF37\"/><rect x=\"10\" y=\"10\" width=\"20\" height=\"20\" fill=\"black\" opacity=\"0.3\"/></svg>",
-      "location": "Bangalore",
-      "duration": "3 Months",
-      "stipend": "25,000 INR/mo",
-      "skills": [
-        "React",
-        "Python"
-      ],
-      "field": "blockchain",
-      "apply_link": "https://www.google.com/search?q=Junior+Blockchain+internship+Google+Bangalore"
+      "apply_link": "https://www.google.com/search?q=Associate+Full+Stack+Intern+internship+BookMyShow+Mumbai"
     }
   ],
   "recommendations": [

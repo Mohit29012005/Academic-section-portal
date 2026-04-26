@@ -92,6 +92,11 @@ class LectureSession(models.Model):
     qr_expires_at = models.DateTimeField(null=True, blank=True)
     qr_image_path = models.CharField(max_length=500, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    # ── NEW: Geofencing fields (added for GPS anti-remote-attendance) ──
+    classroom_lat    = models.FloatField(null=True, blank=True, help_text="Classroom GPS latitude")
+    classroom_lng    = models.FloatField(null=True, blank=True, help_text="Classroom GPS longitude")
+    geofence_radius  = models.IntegerField(default=50, help_text="Allowed radius in metres")
+    qr_refresh_secs  = models.IntegerField(default=60, help_text="QR token rotation interval (seconds)")
 
     class Meta:
         db_table = 'ai_lecture_sessions'
@@ -113,6 +118,15 @@ class AttendanceRecord(models.Model):
     snapshot_path = models.CharField(max_length=500, blank=True, null=True)
     marked_at = models.DateTimeField(auto_now_add=True)
     ip_address = models.CharField(max_length=45, blank=True, help_text="Student IP logged on QR mark")
+    # ── NEW: Security metadata fields (GPS + device + liveness audit trail) ──
+    latitude         = models.FloatField(null=True, blank=True, help_text="Student GPS lat at mark time")
+    longitude        = models.FloatField(null=True, blank=True, help_text="Student GPS lng at mark time")
+    gps_verified     = models.BooleanField(default=False, help_text="True if GPS passed geofence check")
+    device_id        = models.CharField(max_length=200, blank=True, help_text="Browser device fingerprint")
+    device_verified  = models.BooleanField(default=False, help_text="True if device matched binding")
+    liveness_passed  = models.BooleanField(default=False, help_text="True if liveness check passed")
+    liveness_score   = models.FloatField(null=True, blank=True, help_text="Liveness score 0.0-1.0")
+    security_score   = models.FloatField(null=True, blank=True, help_text="Composite security score 0-100")
 
     class Meta:
         db_table = 'ai_attendance_records'
@@ -163,3 +177,29 @@ class AttendanceNotification(models.Model):
 
     def __str__(self):
         return f"Notif → {self.recipient.email} ({self.notification_type})"
+
+
+# ── NEW: Student Device Binding ───────────────────────────────────────────────
+class StudentDevice(models.Model):
+    """
+    Trusted device fingerprint per student.
+    Enforces 'one student = one device' anti-proxy policy.
+    Admin resets via /admin/student/reset-device/<student_id>/ API.
+    """
+    student       = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='trusted_devices',
+    )
+    device_id     = models.CharField(max_length=200, help_text="Browser UUID from localStorage")
+    device_ua     = models.CharField(max_length=500, blank=True, help_text="User-Agent at registration")
+    registered_at = models.DateTimeField(auto_now_add=True)
+    is_active     = models.BooleanField(default=True)
+
+    class Meta:
+        db_table        = 'ai_student_devices'
+        unique_together = ('student', 'device_id')
+        ordering        = ['-registered_at']
+
+    def __str__(self):
+        return f"Device – {self.student.email} [{self.device_id[:16]}...]"

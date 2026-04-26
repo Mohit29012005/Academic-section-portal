@@ -1,311 +1,346 @@
 import React, { useState, useEffect } from 'react';
 import StudentLayout from '../../components/StudentLayout';
-import { Award, ChevronDown, BookOpen, TrendingUp, Loader, AlertTriangle, ChevronRight } from 'lucide-react';
+import {
+  Award, BookOpen, TrendingUp, Loader, AlertTriangle,
+  ChevronRight, BarChart2, Target, GraduationCap, Star,
+  CheckCircle, XCircle, ChevronDown, ChevronUp
+} from 'lucide-react';
 import { studentAPI } from '../../services/api';
 
+const gradeColor = (grade) => {
+  const map = {
+    'O': 'text-emerald-400',
+    'A+': 'text-green-400',
+    'A': 'text-blue-400',
+    'B+': 'text-cyan-400',
+    'B': 'text-yellow-400',
+    'C': 'text-orange-400',
+    'P': 'text-amber-500',
+    'F': 'text-red-500',
+  };
+  return map[grade] || 'text-white/40';
+};
+
+const gradeBg = (grade) => {
+  const map = {
+    'O': 'bg-emerald-500/15 border-emerald-500/30',
+    'A+': 'bg-green-500/15 border-green-500/30',
+    'A': 'bg-blue-500/15 border-blue-500/30',
+    'B+': 'bg-cyan-500/15 border-cyan-500/30',
+    'B': 'bg-yellow-500/15 border-yellow-500/30',
+    'C': 'bg-orange-500/15 border-orange-500/30',
+    'F': 'bg-red-500/15 border-red-500/30',
+  };
+  return map[grade] || 'bg-white/5 border-white/10';
+};
+
+const sgpaToWidth = (sgpa) => `${Math.min((sgpa / 10) * 100, 100)}%`;
+
 const Results = () => {
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [selectedSemester, setSelectedSemester] = useState(null);
-    const [expandedSem, setExpandedSem] = useState(null);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [selectedSemester, setSelectedSemester] = useState(null);
+  const [expandedSem, setExpandedSem] = useState(null);
 
-    useEffect(() => {
-        const fetchResults = async () => {
-            try {
-                setLoading(true);
-                const res = await studentAPI.results();
-                setData(res.data);
-            } catch (err) {
-                console.error("Failed to load results", err);
-                setError("Failed to load result data from server.");
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchResults();
-    }, []);
-
-    const getSemesterData = (sem) => data?.semesters?.find(s => s.semester === sem);
-    const currentSemResult = selectedSemester ? getSemesterData(selectedSemester) : null;
-
-    // Get all semesters up to selected for history view
-    const getHistorySemesters = () => {
-        if (!selectedSemester || !data?.semesters) return [];
-        return data.semesters.filter(s => s.semester <= selectedSemester).sort((a, b) => b.semester - a.semester);
+  useEffect(() => {
+    const fetchResults = async () => {
+      try {
+        setLoading(true);
+        const res = await studentAPI.results();
+        setData(res.data);
+      } catch (err) {
+        console.error("Failed to load results", err);
+        setError("Failed to load result data from server.");
+      } finally {
+        setLoading(false);
+      }
     };
+    fetchResults();
+  }, []);
 
-    const gradeColor = (grade) => {
-        const map = { 'O': 'text-emerald-400', 'A+': 'text-emerald-400', 'A': 'text-blue-400', 'B+': 'text-cyan-400', 'B': 'text-yellow-400', 'C': 'text-orange-400', 'P': 'text-amber-500', 'F': 'text-red-500' };
-        return map[grade] || 'text-white/40';
-    };
+  const getSemesterData = (sem) => data?.semesters?.find(s => s.semester === sem);
+  const getHistorySemesters = () => {
+    if (!selectedSemester || !data?.semesters) return [];
+    return data.semesters.filter(s => s.semester <= selectedSemester).sort((a, b) => b.semester - a.semester);
+  };
 
-    if (loading) {
-        return (
-            <StudentLayout>
-                <div className="flex items-center justify-center min-h-[60vh]">
-                    <div className="flex flex-col items-center gap-4">
-                        <Loader className="w-10 h-10 animate-spin text-[var(--gu-gold)]" />
-                        <span className="text-[10px] font-black uppercase tracking-widest text-white/30">Loading Academic Records...</span>
-                    </div>
-                </div>
-            </StudentLayout>
-        );
-    }
-
-    if (error) {
-        return (
-            <StudentLayout>
-                <div className="flex items-center justify-center min-h-[60vh]">
-                    <div className="flex flex-col items-center gap-4 text-center">
-                        <AlertTriangle className="w-10 h-10 text-red-400" />
-                        <p className="text-white/60 text-sm">{error}</p>
-                    </div>
-                </div>
-            </StudentLayout>
-        );
-    }
-
+  if (loading) {
     return (
-        <StudentLayout>
-            <div className="animate-fade-in max-w-6xl mx-auto space-y-8 px-4">
-                {/* Header */}
-                <div className="border-b border-[var(--gu-gold)] pb-6 mb-8 mt-4">
-                    <h1 className="font-serif text-3xl text-white mb-2 tracking-tight">Academic Results</h1>
-                    <div className="flex flex-wrap items-center gap-3 text-[var(--gu-gold)] text-[10px] uppercase font-bold tracking-widest opacity-80">
-                        <span>{data?.student_name || 'Student'}</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]"></span>
-                        <span>{data?.enrollment_no}</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--gu-gold)]"></span>
-                        <span>{data?.course_name}</span>
-                    </div>
-                </div>
-
-                {/* Stats Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-[var(--gu-red-card)] p-6 rounded-sm border border-[var(--gu-border)]">
-                        <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-sm border border-[var(--gu-gold)]/30 bg-[var(--gu-gold)]/10 flex items-center justify-center">
-                                <TrendingUp className="w-5 h-5 text-[var(--gu-gold)]" />
-                            </div>
-                            <div>
-                                <p className="text-[10px] font-bold uppercase tracking-widest text-white/50">Overall CGPA</p>
-                                <p className="text-white text-2xl font-bold">{data?.cgpa?.toFixed(2) || '0.00'}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-[var(--gu-red-card)] p-6 rounded-sm border border-[var(--gu-border)]">
-                        <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-sm border border-blue-500/30 bg-blue-500/10 flex items-center justify-center">
-                                <BookOpen className="w-5 h-5 text-blue-400" />
-                            </div>
-                            <div>
-                                <p className="text-[10px] font-bold uppercase tracking-widest text-white/50">Current Semester</p>
-                                <p className="text-white text-2xl font-bold">{data?.current_semester || '-'}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-[var(--gu-red-card)] p-6 rounded-sm border border-[var(--gu-border)]">
-                        <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-sm border border-emerald-500/30 bg-emerald-500/10 flex items-center justify-center">
-                                <Award className="w-5 h-5 text-emerald-400" />
-                            </div>
-                            <div>
-                                <p className="text-[10px] font-bold uppercase tracking-widest text-white/50">Completed Semesters</p>
-                                <p className="text-white text-2xl font-bold">{data?.dropdown_semesters?.length || 0}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* SGPA Dropdown Selector */}
-                <div className="bg-[var(--gu-red-card)] p-8 rounded-sm border border-[var(--gu-border)]">
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="w-1 h-5 bg-[var(--gu-gold)]"></div>
-                        <h2 className="text-[10px] font-bold uppercase tracking-widest text-white/70">Semester-wise SGPA History</h2>
-                    </div>
-
-                    {data?.current_semester === 1 ? (
-                        <div className="text-center py-12 text-white/20">
-                            <BookOpen className="w-12 h-12 mx-auto mb-4 opacity-30" />
-                            <p className="text-sm font-semibold">First semester in progress</p>
-                            <p className="text-[10px] uppercase tracking-widest mt-1">Results will appear after your first semester is completed</p>
-                        </div>
-                    ) : (
-                        <>
-                            {/* Dropdown */}
-                            <div className="relative mb-8">
-                                <label className="block text-[10px] font-bold uppercase tracking-widest text-white/50 mb-3 ml-1">Select Semester to View</label>
-                                <div className="relative">
-                                    <select
-                                        value={selectedSemester || ''}
-                                        onChange={(e) => {
-                                            const val = e.target.value ? parseInt(e.target.value) : null;
-                                            setSelectedSemester(val);
-                                            setExpandedSem(val);
-                                        }}
-                                        className="w-full md:w-80 bg-[#3D0F0F] border border-[var(--gu-border)] text-white px-4 py-3 rounded-sm text-sm focus:border-[var(--gu-gold)] outline-none appearance-none transition-colors cursor-pointer"
-                                    >
-                                        <option value="" className="bg-[#3D0F0F]">-- Choose Semester --</option>
-                                        {data?.dropdown_semesters?.map(sem => {
-                                            const semData = getSemesterData(sem);
-                                            return (
-                                                <option key={sem} value={sem} className="bg-[#3D0F0F]">
-                                                    Semester {sem} {semData ? `— SGPA: ${semData.sgpa?.toFixed(2) || 'N/A'}` : '— No Result'}
-                                                </option>
-                                            );
-                                        })}
-                                    </select>
-                                    <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 pointer-events-none" />
-                                </div>
-                            </div>
-
-                            {/* SGPA Cards Grid */}
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-6">
-                                {data?.dropdown_semesters?.map(sem => {
-                                    const semData = getSemesterData(sem);
-                                    const isSelected = selectedSemester === sem;
-                                    return (
-                                        <button
-                                            key={sem}
-                                            onClick={() => { setSelectedSemester(sem); setExpandedSem(sem); }}
-                                            className={`p-4 rounded-sm border transition-colors text-left group ${
-                                                isSelected
-                                                    ? 'bg-[var(--gu-gold)] text-[var(--gu-red-card)] border-[var(--gu-gold)]'
-                                                    : 'bg-[#3D0F0F] border-[var(--gu-border)] hover:bg-[#4d1313]'
-                                            }`}
-                                        >
-                                            <p className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${isSelected ? 'text-[var(--gu-red-card)]/80' : 'text-white/50'}`}>
-                                                Sem {sem}
-                                            </p>
-                                            <p className={`text-xl font-bold ${isSelected ? 'text-black' : 'text-white'}`}>
-                                                {semData ? (semData.sgpa?.toFixed(2) || '0.00') : '—'}
-                                            </p>
-                                            {semData && (
-                                                <p className={`text-[9px] font-bold mt-1 ${gradeColor(semData.grade)}`}>
-                                                    Grade: {semData.grade || '-'}
-                                                </p>
-                                            )}
-                                        </button>
-                                    );
-                                })}
-                            </div>
-                        </>
-                    )}
-                </div>
-
-                {/* Detailed Results View */}
-                {selectedSemester && (
-                    <div className="space-y-4 animate-fade-in">
-                        {getHistorySemesters().map(semResult => (
-                            <div key={semResult.semester} className="bg-[var(--gu-red-card)] rounded-sm border border-[var(--gu-border)] overflow-hidden">
-                                {/* Semester Header */}
-                                <button
-                                    onClick={() => setExpandedSem(expandedSem === semResult.semester ? null : semResult.semester)}
-                                    className="w-full p-4 flex items-center justify-between hover:bg-[#4d1313] transition-colors"
-                                >
-                                    <div className="flex items-center gap-4">
-                                        <div className={`w-10 h-10 rounded-sm flex items-center justify-center font-bold text-lg border ${
-                                            semResult.semester === selectedSemester
-                                                ? 'bg-[var(--gu-gold)]/10 text-[var(--gu-gold)] border-[var(--gu-gold)]/30'
-                                                : 'bg-[#3D0F0F] text-white/60 border-[var(--gu-border)]'
-                                        }`}>
-                                            {semResult.semester}
-                                        </div>
-                                        <div className="text-left">
-                                            <h3 className="text-white font-bold text-sm">Semester {semResult.semester}</h3>
-                                            <div className="flex items-center gap-3 mt-1">
-                                                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">
-                                                    SGPA: <span className="text-[var(--gu-gold)]">{semResult.sgpa?.toFixed(2)}</span>
-                                                </span>
-                                                <span className="w-1 h-1 rounded-full bg-white/20"></span>
-                                                <span className={`text-[10px] font-bold uppercase tracking-widest ${gradeColor(semResult.grade)}`}>
-                                                    {semResult.grade}
-                                                </span>
-                                                <span className="w-1 h-1 rounded-full bg-white/20"></span>
-                                                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">
-                                                    {semResult.percentage?.toFixed(1)}%
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ChevronRight className={`w-5 h-5 text-white/40 transition-transform duration-300 ${expandedSem === semResult.semester ? 'rotate-90' : ''}`} />
-                                </button>
-
-                                {/* Subject Details */}
-                                {expandedSem === semResult.semester && (
-                                    <div className="border-t border-[var(--gu-border)]">
-                                        <div className="overflow-x-auto">
-                                            <table className="w-full text-left min-w-[700px]">
-                                                <thead>
-                                                    <tr className="bg-[#3D0F0F]">
-                                                        {['Subject', 'Code', 'Internal', 'External', 'Practical', 'Total', 'Grade', 'Status'].map(h => (
-                                                            <th key={h} className="py-4 px-6 text-[10px] font-bold uppercase tracking-widest text-white/50">{h}</th>
-                                                        ))}
-                                                    </tr>
-                                                </thead>
-                                                <tbody className="divide-y divide-[var(--gu-border)]">
-                                                    {semResult.subject_results && semResult.subject_results.length > 0 ? (
-                                                        semResult.subject_results.map((sr, i) => (
-                                                            <tr key={i} className="hover:bg-[#4d1313] transition-colors">
-                                                                <td className="py-4 px-6 text-white text-xs font-semibold">{sr.subject_name}</td>
-                                                                <td className="py-4 px-6 text-white/40 text-xs font-mono">{sr.subject_code}</td>
-                                                                <td className="py-4 px-6 text-white/60 text-xs">{sr.internal_marks}</td>
-                                                                <td className="py-4 px-6 text-white/60 text-xs">{sr.external_marks}</td>
-                                                                <td className="py-4 px-6 text-white/60 text-xs">{sr.practical_marks}</td>
-                                                                <td className="py-4 px-6 text-white font-bold text-xs">{sr.total_marks}</td>
-                                                                <td className={`py-4 px-6 text-xs font-black ${gradeColor(sr.grade)}`}>{sr.grade}</td>
-                                                                <td className="py-4 px-6">
-                                                                    <span className={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-sm border ${
-                                                                        sr.is_passed
-                                                                            ? 'text-[#10b981] bg-[#10b981]/10 border-[#10b981]'
-                                                                            : 'text-red-400 bg-red-500/10 border-red-500/30'
-                                                                    }`}>
-                                                                        {sr.is_passed ? 'Pass' : 'Fail'}
-                                                                    </span>
-                                                                </td>
-                                                            </tr>
-                                                        ))
-                                                    ) : (
-                                                        <tr>
-                                                            <td colSpan="8" className="py-8 text-center text-white/20 text-sm italic">
-                                                                No subject results available for this semester
-                                                            </td>
-                                                        </tr>
-                                                    )}
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        {/* Semester Summary Footer */}
-                                        <div className="px-6 py-4 bg-[#3D0F0F] border-t border-[var(--gu-border)] flex flex-wrap items-center gap-6">
-                                            <div>
-                                                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">Total: </span>
-                                                <span className="text-white font-bold text-xs">{semResult.obtained_marks}/{semResult.total_marks}</span>
-                                            </div>
-                                            <div>
-                                                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">Percentage: </span>
-                                                <span className="text-white font-bold text-xs">{semResult.percentage?.toFixed(2)}%</span>
-                                            </div>
-                                            <div>
-                                                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">SGPA: </span>
-                                                <span className="text-[var(--gu-gold)] font-bold text-xs">{semResult.sgpa?.toFixed(2)}</span>
-                                            </div>
-                                            {semResult.exam_type && (
-                                                <div>
-                                                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">Type: </span>
-                                                    <span className="text-white/60 text-xs">{semResult.exam_type}</span>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                )}
+      <StudentLayout>
+        <div className="flex items-center justify-center min-h-[70vh]">
+          <div className="text-center">
+            <div className="relative w-16 h-16 mx-auto mb-5">
+              <div className="absolute inset-0 rounded-full border-2 border-[var(--gu-gold)]/20 animate-ping"></div>
+              <div className="absolute inset-0 rounded-full border-t-2 border-[var(--gu-gold)] animate-spin"></div>
+              <div className="absolute inset-3 rounded-full border-r-2 border-red-400/60 animate-spin" style={{animationDirection:'reverse',animationDuration:'0.8s'}}></div>
             </div>
-        </StudentLayout>
+            <p className="text-white/40 text-[11px] font-black uppercase tracking-widest">Loading Academic Records...</p>
+          </div>
+        </div>
+      </StudentLayout>
     );
+  }
+
+  if (error) {
+    return (
+      <StudentLayout>
+        <div className="flex items-center justify-center min-h-[70vh]">
+          <div className="flex flex-col items-center gap-4 text-center p-8 rounded-2xl border border-red-500/20 bg-red-500/5">
+            <AlertTriangle className="w-12 h-12 text-red-400" />
+            <p className="text-white/60">{error}</p>
+          </div>
+        </div>
+      </StudentLayout>
+    );
+  }
+
+  const cgpa = data?.cgpa || 0;
+  const completedSems = data?.dropdown_semesters?.length || 0;
+  const currentSem = data?.current_semester || 1;
+  const bestSem = data?.semesters?.reduce((best, s) => (!best || s.sgpa > best.sgpa) ? s : best, null);
+
+  return (
+    <StudentLayout>
+      <div className="relative min-h-screen pb-12">
+
+        {/* Background orbs */}
+        <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-[var(--gu-gold)]/5 rounded-full blur-[120px]"></div>
+          <div className="absolute top-1/2 -left-32 w-[350px] h-[350px] bg-purple-900/10 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-1">
+
+          {/* ── Page Header ─────────────────────────────────────── */}
+          <div className="mb-8 pt-2">
+            <p className="text-[var(--gu-gold)] text-[10px] uppercase font-black tracking-[0.3em] mb-1 flex items-center gap-2">
+              <Award className="w-3 h-3" /> Academic Records
+            </p>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-3">
+              <h1 className="font-serif text-3xl md:text-4xl text-white tracking-tight">Semester Results</h1>
+              <div className="flex items-center gap-2 text-white/40 text-xs">
+                <span className="font-bold text-white/60">{data?.student_name}</span>
+                <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                <span>{data?.enrollment_no}</span>
+                <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                <span>{data?.course_name}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Hero Stats Row ────────────────────────────────── */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {[
+              {
+                icon: <TrendingUp className="w-5 h-5" />,
+                label: "Overall CGPA",
+                val: cgpa.toFixed ? cgpa.toFixed(2) : cgpa,
+                sub: "Cumulative Grade",
+                color: "from-[var(--gu-gold)]/20 to-yellow-600/5",
+                border: "border-[var(--gu-gold)]/25",
+                iconColor: "text-[var(--gu-gold)]",
+              },
+              {
+                icon: <BookOpen className="w-5 h-5" />,
+                label: "Current Semester",
+                val: currentSem,
+                sub: `of ${data?.total_semesters || 8} total`,
+                color: "from-blue-500/20 to-blue-600/5",
+                border: "border-blue-500/25",
+                iconColor: "text-blue-400",
+              },
+              {
+                icon: <GraduationCap className="w-5 h-5" />,
+                label: "Semesters Done",
+                val: completedSems,
+                sub: "Results Available",
+                color: "from-emerald-500/20 to-green-600/5",
+                border: "border-emerald-500/25",
+                iconColor: "text-emerald-400",
+              },
+              {
+                icon: <Star className="w-5 h-5" />,
+                label: "Best SGPA",
+                val: bestSem ? bestSem.sgpa.toFixed(2) : "—",
+                sub: bestSem ? `Semester ${bestSem.semester}` : "No data yet",
+                color: "from-purple-500/20 to-purple-600/5",
+                border: "border-purple-500/25",
+                iconColor: "text-purple-400",
+              },
+            ].map((stat, i) => (
+              <div key={i} className={`relative overflow-hidden bg-gradient-to-br ${stat.color} border ${stat.border} rounded-2xl p-5 hover:-translate-y-0.5 transition-transform shadow-lg`}>
+                <div className={`${stat.iconColor} mb-3`}>{stat.icon}</div>
+                <p className="text-white/50 text-[10px] font-black uppercase tracking-widest mb-1">{stat.label}</p>
+                <p className="text-white text-3xl font-black mb-0.5">{stat.val}</p>
+                <p className="text-white/35 text-[10px] font-medium">{stat.sub}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* ── SGPA Progress Bars ───────────────────────────── */}
+          {data?.semesters && data.semesters.length > 0 && (
+            <div className="rounded-2xl border border-white/8 bg-gradient-to-br from-[#1e0505]/80 to-[#130303]/80 backdrop-blur-xl p-7 mb-6">
+              <div className="flex items-center gap-3 mb-6">
+                <BarChart2 className="w-5 h-5 text-[var(--gu-gold)]" />
+                <h2 className="text-white font-bold text-lg">SGPA Performance Track</h2>
+                <span className="ml-auto text-[10px] font-black uppercase tracking-widest text-white/30">/ 10.0</span>
+              </div>
+              <div className="space-y-4">
+                {[...data.semesters].sort((a,b) => a.semester - b.semester).map(sem => (
+                  <div key={sem.semester} className="flex items-center gap-4 group">
+                    <button
+                      onClick={() => { setSelectedSemester(sem.semester); setExpandedSem(sem.semester); }}
+                      className="flex-shrink-0 w-10 h-10 rounded-xl border border-white/8 bg-white/5 flex items-center justify-center text-xs font-black text-white/60 hover:bg-[var(--gu-gold)]/20 hover:border-[var(--gu-gold)]/30 hover:text-[var(--gu-gold)] transition-all"
+                    >
+                      S{sem.semester}
+                    </button>
+                    <div className="flex-1 relative">
+                      <div className="h-2 rounded-full bg-white/6 overflow-hidden">
+                        <div
+                          className="h-full rounded-full bg-gradient-to-r from-[var(--gu-gold)] to-yellow-400 transition-all duration-700 delay-75"
+                          style={{ width: sgpaToWidth(sem.sgpa) }}
+                        ></div>
+                      </div>
+                    </div>
+                    <div className="flex-shrink-0 text-right min-w-[80px]">
+                      <span className="text-white font-black text-sm">{sem.sgpa.toFixed(2)}</span>
+                      <span className={`ml-2 text-[10px] font-black px-1.5 py-0.5 rounded-md border ${gradeBg(sem.grade)} ${gradeColor(sem.grade)}`}>
+                        {sem.grade}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* ── Semester Selector ────────────────────────────── */}
+          <div className="rounded-2xl border border-white/8 bg-gradient-to-br from-[#1e0505]/80 to-[#130303]/80 backdrop-blur-xl p-7 mb-6">
+            <div className="flex items-center gap-3 mb-6">
+              <Target className="w-5 h-5 text-[var(--gu-gold)]" />
+              <h2 className="text-white font-bold text-lg">Detailed Results</h2>
+            </div>
+
+            {currentSem === 1 && completedSems === 0 ? (
+              <div className="text-center py-12">
+                <GraduationCap className="w-12 h-12 mx-auto mb-4 text-white/15" />
+                <p className="text-white/40 text-sm font-semibold">First semester in progress</p>
+                <p className="text-white/25 text-[10px] uppercase tracking-widest mt-1">Results will appear after your first semester</p>
+              </div>
+            ) : (
+              <>
+                {/* Semester pill buttons */}
+                <div className="flex flex-wrap gap-3 mb-8">
+                  {data?.dropdown_semesters?.map(sem => {
+                    const semData = getSemesterData(sem);
+                    const isSelected = selectedSemester === sem;
+                    return (
+                      <button
+                        key={sem}
+                        onClick={() => { setSelectedSemester(sem); setExpandedSem(sem); }}
+                        className={`px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wider border transition-all ${
+                          isSelected
+                            ? 'bg-[var(--gu-gold)] border-[var(--gu-gold)] text-black shadow-[0_0_15px_rgba(212,175,55,0.3)]'
+                            : 'bg-white/5 border-white/8 text-white/60 hover:bg-white/10 hover:border-white/15'
+                        }`}
+                      >
+                        Sem {sem}
+                        {semData && <span className={`ml-1.5 ${isSelected ? 'text-black/60' : gradeColor(semData.grade)}`}>{semData.sgpa?.toFixed(1)}</span>}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Detailed accordion */}
+                {selectedSemester && (
+                  <div className="space-y-3">
+                    {getHistorySemesters().map(semResult => {
+                      const isExpanded = expandedSem === semResult.semester;
+                      return (
+                        <div key={semResult.semester} className={`rounded-xl border overflow-hidden transition-all ${isExpanded ? 'border-[var(--gu-gold)]/30' : 'border-white/8'}`}>
+                          <button
+                            onClick={() => setExpandedSem(isExpanded ? null : semResult.semester)}
+                            className={`w-full p-5 flex items-center justify-between transition-colors ${isExpanded ? 'bg-[var(--gu-gold)]/8' : 'bg-white/3 hover:bg-white/5'}`}
+                          >
+                            <div className="flex items-center gap-4">
+                              <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black border transition-all ${
+                                isExpanded ? 'bg-[var(--gu-gold)]/20 border-[var(--gu-gold)]/40 text-[var(--gu-gold)]' : 'bg-white/5 border-white/10 text-white/60'
+                              }`}>
+                                {semResult.semester}
+                              </div>
+                              <div className="text-left">
+                                <h3 className="text-white font-bold text-sm">Semester {semResult.semester}</h3>
+                                <div className="flex items-center gap-3 mt-0.5">
+                                  <span className="text-[10px] text-white/40">SGPA: <span className="text-[var(--gu-gold)] font-black">{semResult.sgpa?.toFixed(2)}</span></span>
+                                  <span className={`text-[10px] font-black px-1.5 py-0.5 rounded border ${gradeBg(semResult.grade)} ${gradeColor(semResult.grade)}`}>{semResult.grade}</span>
+                                  <span className="text-[10px] text-white/30">{semResult.percentage?.toFixed(1)}%</span>
+                                </div>
+                              </div>
+                            </div>
+                            {isExpanded ? <ChevronUp className="w-4 h-4 text-[var(--gu-gold)]" /> : <ChevronDown className="w-4 h-4 text-white/30" />}
+                          </button>
+
+                          {isExpanded && (
+                            <div className="border-t border-[var(--gu-gold)]/15">
+                              {semResult.subject_results && semResult.subject_results.length > 0 ? (
+                                <div className="overflow-x-auto">
+                                  <table className="w-full min-w-[680px]">
+                                    <thead>
+                                      <tr className="bg-white/3">
+                                        {['Subject', 'Code', 'Internal', 'External', 'Practical', 'Total', 'Grade', 'Status'].map(h => (
+                                          <th key={h} className="py-3 px-5 text-left text-[10px] font-black uppercase tracking-widest text-white/35">{h}</th>
+                                        ))}
+                                      </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-white/4">
+                                      {semResult.subject_results.map((sr, i) => (
+                                        <tr key={i} className="hover:bg-white/3 transition-colors">
+                                          <td className="py-3.5 px-5 text-white text-xs font-semibold">{sr.subject_name}</td>
+                                          <td className="py-3.5 px-5 text-white/35 text-[10px] font-mono bg-white/2">{sr.subject_code}</td>
+                                          <td className="py-3.5 px-5 text-white/55 text-xs">{sr.internal_marks}</td>
+                                          <td className="py-3.5 px-5 text-white/55 text-xs">{sr.external_marks}</td>
+                                          <td className="py-3.5 px-5 text-white/55 text-xs">{sr.practical_marks || 0}</td>
+                                          <td className="py-3.5 px-5 text-white font-bold text-xs">{sr.total_marks}</td>
+                                          <td className={`py-3.5 px-5 text-xs font-black ${gradeColor(sr.grade)}`}>{sr.grade}</td>
+                                          <td className="py-3.5 px-5">
+                                            <span className={`inline-flex items-center gap-1 text-[10px] font-black px-2 py-0.5 rounded-full border ${
+                                              sr.is_passed ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' : 'bg-red-500/10 border-red-500/30 text-red-400'
+                                            }`}>
+                                              {sr.is_passed ? <CheckCircle className="w-3 h-3" /> : <XCircle className="w-3 h-3" />}
+                                              {sr.is_passed ? 'Pass' : 'Fail'}
+                                            </span>
+                                          </td>
+                                        </tr>
+                                      ))}
+                                    </tbody>
+                                  </table>
+                                </div>
+                              ) : (
+                                <p className="text-center py-8 text-white/25 text-sm italic">No subject data available</p>
+                              )}
+
+                              {/* Footer */}
+                              <div className="px-5 py-4 bg-white/2 border-t border-white/5 flex flex-wrap gap-6 text-xs">
+                                <span className="text-white/40">Marks: <strong className="text-white">{semResult.obtained_marks}/{semResult.total_marks}</strong></span>
+                                <span className="text-white/40">Percentage: <strong className="text-white">{semResult.percentage?.toFixed(2)}%</strong></span>
+                                <span className="text-white/40">SGPA: <strong className="text-[var(--gu-gold)]">{semResult.sgpa?.toFixed(2)}</strong></span>
+                                <span className="text-white/40">Exam: <strong className="text-white/60">{semResult.exam_type || 'Regular'}</strong></span>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </StudentLayout>
+  );
 };
 
 export default Results;

@@ -12,50 +12,57 @@ class PyqsConfig(AppConfig):
     subject_data = {}
     sem_subjects = {}
     model_loaded = False
+    _model_mtime = 0
 
     def ready(self):
-        """Load ML model on Django startup"""
-        if PyqsConfig.model_loaded:
+        """Load ML model on Django startup. Reloads if pkl file changed."""
+        MODEL_PATH = os.path.join(os.path.dirname(__file__), 'ml', 'exam_paper_model.pkl')
+        file_mtime = os.path.getmtime(MODEL_PATH) if os.path.exists(MODEL_PATH) else 0
+
+        # Skip if already loaded and file hasn't changed
+        if PyqsConfig.model_loaded and file_mtime <= PyqsConfig._model_mtime:
             return
-            
+
         try:
-            MODEL_PATH = os.path.join(os.path.dirname(__file__), 'ml', 'exam_paper_model.pkl')
-            
             if os.path.exists(MODEL_PATH):
                 with open(MODEL_PATH, 'rb') as f:
                     model_data = pickle.load(f)
-                
-                PyqsConfig.clusters = model_data.get('clusters', {})
+
+                PyqsConfig.clusters     = model_data.get('clusters', {})
                 PyqsConfig.sem_subjects = model_data.get('sem_subjects', {})
-                
-                # Convert subject_data to DataFrames
+
                 import pandas as pd
-                subject_data_raw = model_data.get('subject_data', {})
-                for k, v in subject_data_raw.items():
+                PyqsConfig.subject_data = {}
+                for k, v in model_data.get('subject_data', {}).items():
                     PyqsConfig.subject_data[k] = pd.DataFrame(v)
-                
+
                 PyqsConfig.model_loaded = True
-                print(f"[OK] PYQ ML Model loaded: {len(PyqsConfig.sem_subjects)} semesters, {len(PyqsConfig.clusters)} subjects")
+                PyqsConfig._model_mtime = file_mtime
+                print(
+                    f"[OK] PYQ ML Model loaded: "
+                    f"{len(PyqsConfig.sem_subjects)} semesters, "
+                    f"{len(PyqsConfig.clusters)} subjects"
+                )
             else:
                 self._load_fallback_data()
-                    
+
         except Exception as e:
             self._load_fallback_data()
             print(f"[WARNING] PYQ ML model load failed, using fallback: {e}")
-    
+
     def _load_fallback_data(self):
         """Fallback subjects when ML model unavailable"""
         import pandas as pd
-        
+
         PyqsConfig.sem_subjects = {
-            1: {'BCA101': 'Logic Development with Programming-I', 'BCA102': 'Office Automation Tools'},
-            2: {'BCA201': 'Logic Development with Programming-II', 'BCA202': 'Discrete Mathematics'},
-            3: {'BCA301': 'Object Oriented Programming', 'BCA302': 'Database Management System'},
-            4: {'BCA401': 'GUI Programming', 'BCA402': 'Software Engineering'},
-            5: {'BCA501': 'Advance Web Technology', 'BCA502': 'Operating System'},
-            6: {'BCA601': 'Mobile Application Development', 'BCA602': 'Project Management'},
+            '1': {'BCA101': 'Logic Development with Programming-I', 'BCA102': 'Office Automation Tools'},
+            '2': {'BCA201': 'Logic Development with Programming-II', 'BCA202': 'Discrete Mathematics'},
+            '3': {'BCA301': 'Object Oriented Programming', 'BCA302': 'Database Management System'},
+            '4': {'BCA401': 'GUI Programming', 'BCA402': 'Software Engineering'},
+            '5': {'BCA501': 'Advance Web Technology', 'BCA502': 'Operating System'},
+            '6': {'BCA601': 'Mobile Application Development', 'BCA602': 'Project Management'},
         }
-        
+
         for sem, subjects in PyqsConfig.sem_subjects.items():
             for code, name in subjects.items():
                 key = f"{sem}_{code}"
@@ -84,5 +91,5 @@ class PyqsConfig(AppConfig):
                     'Subject_Name': [name] * len(questions),
                     'Question': questions,
                 })
-        
+
         PyqsConfig.model_loaded = True

@@ -5,7 +5,7 @@ import Logo from "../components/Logo";
 import { authAPI, attendanceAI } from "../services/api";
 import {
   Camera, CheckCircle, AlertCircle, Loader2,
-  RefreshCw, Upload, ChevronRight
+  RefreshCw, Upload, ChevronRight, X, KeyRound
 } from "lucide-react";
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -45,6 +45,52 @@ const Login = () => {
   useEffect(() => {
     return () => stopCamera();
   }, []);
+
+  // ── Forgot Password State ──────────────────────────────────────────────
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
+  const [fpStep, setFpStep] = useState(1);
+  const [fpLoginId, setFpLoginId] = useState("");
+  const [fpOtp, setFpOtp] = useState("");
+  const [fpNewPassword, setFpNewPassword] = useState("");
+  const [fpMessage, setFpMessage] = useState({ type: "", text: "" });
+  const [fpLoading, setFpLoading] = useState(false);
+
+  const handleFpRequestOTP = async (e) => {
+    e.preventDefault();
+    setFpMessage({ type: "", text: "" });
+    setFpLoading(true);
+    try {
+      const res = await authAPI.resetPasswordRequest(fpLoginId);
+      setFpMessage({ type: "success", text: res.data.message });
+      setFpStep(2);
+    } catch (error) {
+      setFpMessage({ type: "error", text: error.response?.data?.error || "Failed to request OTP" });
+    } finally {
+      setFpLoading(false);
+    }
+  };
+
+  const handleFpVerifyReset = async (e) => {
+    e.preventDefault();
+    setFpMessage({ type: "", text: "" });
+    setFpLoading(true);
+    try {
+      const res = await authAPI.resetPasswordVerify(fpLoginId, fpOtp, fpNewPassword);
+      setFpMessage({ type: "success", text: res.data.message });
+      setTimeout(() => {
+        setShowForgotPassword(false);
+        setFpStep(1);
+        setFpLoginId("");
+        setFpOtp("");
+        setFpNewPassword("");
+        setFpMessage({ type: "", text: "" });
+      }, 2000);
+    } catch (error) {
+      setFpMessage({ type: "error", text: error.response?.data?.error || "Invalid or expired OTP" });
+    } finally {
+      setFpLoading(false);
+    }
+  };
 
   // ── Social Login Handler ─────────────────────────────────────────────
   useEffect(() => {
@@ -514,6 +560,15 @@ const Login = () => {
                   className="w-full px-3 py-3 bg-white border border-[rgba(185,28,28,0.3)] text-[var(--gu-text)] rounded-2xl focus:outline-none focus:border-[var(--gu-red)] focus:ring-[3px] focus:ring-[rgba(185,28,28,0.1)] transition-colors box-border font-sans text-sm"
                   required
                 />
+                <div className="flex justify-end mt-2">
+                  <button
+                    type="button"
+                    onClick={() => setShowForgotPassword(true)}
+                    className="text-xs text-[var(--gu-red)] font-semibold hover:underline"
+                  >
+                    Forgot Password?
+                  </button>
+                </div>
               </div>
 
               <button
@@ -570,6 +625,64 @@ const Login = () => {
           Secure single sign-on portal for Ganpat University ERP.
         </p>
       </div>
+
+      {/* ── Forgot Password Modal ────────────────────────────────────────────── */}
+      {showForgotPassword && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden relative animate-fade-in">
+            <div className="bg-[var(--gu-red-dark)] p-5 flex justify-between items-center text-white">
+              <div className="flex items-center gap-2">
+                <KeyRound className="w-5 h-5" />
+                <h3 className="font-semibold text-lg font-serif">Reset Password</h3>
+              </div>
+              <button onClick={() => setShowForgotPassword(false)} className="hover:bg-white/20 p-1 rounded-full transition-colors">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            
+            <div className="p-6">
+              {fpMessage.text && (
+                <div className={`mb-4 p-3 rounded-lg text-sm font-semibold border ${fpMessage.type === 'success' ? 'bg-green-50 text-green-700 border-green-200' : 'bg-red-50 text-red-700 border-red-200'}`}>
+                  {fpMessage.text}
+                </div>
+              )}
+
+              {fpStep === 1 ? (
+                <form onSubmit={handleFpRequestOTP} className="space-y-4">
+                  <p className="text-sm text-gray-600 mb-2">Enter your Login ID to receive a 6-digit OTP on your registered email.</p>
+                  <div>
+                    <label className="block text-xs font-semibold text-[var(--gu-red-dark)] uppercase tracking-wider mb-2">Enrollment No / Employee ID / Email</label>
+                    <input type="text" value={fpLoginId} onChange={(e) => setFpLoginId(e.target.value)} required className="w-full px-3 py-3 border border-gray-300 rounded-xl focus:border-[var(--gu-red)] focus:ring-[2px] focus:ring-[var(--gu-red)]/20 text-sm" placeholder="e.g. 23032432001" />
+                  </div>
+                  <button type="submit" disabled={fpLoading} className="w-full bg-[var(--gu-red)] hover:bg-[var(--gu-red-hover)] text-white font-bold py-3 rounded-xl transition-all flex justify-center items-center gap-2 disabled:opacity-60">
+                    {fpLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
+                    Send OTP
+                  </button>
+                </form>
+              ) : (
+                <form onSubmit={handleFpVerifyReset} className="space-y-4">
+                  <p className="text-sm text-gray-600 mb-2">An OTP has been sent to the registered email address for <strong>{fpLoginId}</strong>.</p>
+                  <div>
+                    <label className="block text-xs font-semibold text-[var(--gu-red-dark)] uppercase tracking-wider mb-2">6-Digit OTP</label>
+                    <input type="text" value={fpOtp} onChange={(e) => setFpOtp(e.target.value)} required maxLength={6} pattern="\d{6}" className="w-full px-3 py-3 border border-gray-300 rounded-xl focus:border-[var(--gu-red)] focus:ring-[2px] focus:ring-[var(--gu-red)]/20 text-sm tracking-widest text-center text-lg font-bold" placeholder="• • • • • •" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-[var(--gu-red-dark)] uppercase tracking-wider mb-2">New Password</label>
+                    <input type="password" value={fpNewPassword} onChange={(e) => setFpNewPassword(e.target.value)} required minLength={8} className="w-full px-3 py-3 border border-gray-300 rounded-xl focus:border-[var(--gu-red)] focus:ring-[2px] focus:ring-[var(--gu-red)]/20 text-sm" placeholder="Enter new secure password" />
+                  </div>
+                  <button type="submit" disabled={fpLoading} className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-all flex justify-center items-center gap-2 disabled:opacity-60">
+                    {fpLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
+                    Reset Password
+                  </button>
+                  <div className="text-center">
+                    <button type="button" onClick={() => {setFpStep(1); setFpMessage({type:"", text:""})}} className="text-xs text-gray-500 hover:underline">Change Login ID</button>
+                  </div>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 };
